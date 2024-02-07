@@ -1,38 +1,96 @@
-# How to Program From Ground Up
+# How to Program From The Ground Up with Minimal BS
 
 ## Introduction
   - Discussion from the fundamentals of physical logic representation to the high level programming languages.
-  - Everything in computing is REPRESENTING something "as" something else.
-  - Types of representations
-    - Knots on a string
+  - The goal is to understand more the "why" and "how" of programming, not just the "what" and "where"
+
+  - People used to do all computing by hand, and now we use various machines to do the same thing, 
+    in a much faster and more reliable way.
+    - When we use a machine to do computing, we are just using the machine to represent the problem and the 
+      solution in a different way.
+    - The machine knows nothing about the problem. it's only following orders created by clever humans using 
+      boolean logic to represent the problem and its sequence of actions to solve it.
+    - Each operation in the computer was once done by teams of people working in groups, logically delineated in 
+      nearly the same way as the computer's components are arranged.
+        - There were specialized roles for each person, for example, the "storage" would be a set of filing cabinets and a clerk to store and retrieve them.
+          - This is now done by the "hard drive" and the "file system" in the computer.
+        - The arithmetic would be done by a person called a "calculator" who would perform the operations and record the results.
+          - This is now done by the "Arithmetic Logic Unit" and the "Registers" in the computer.
+
+# The Essence of Computing — What are we Representing?
+  - Everything in computing is REPRESENTING digital information "as" something _else_.
+  - Kinds of representations through history:
+    
+    - Knots & Beads on a string
+      - [<img src="assets/beads_on_string.png" width="280">](https://www.peruforless.com/blog/quipu/)
+    
     - Physical indentations in clay
+      - [<img src="assets/cuneiform.png" width="280">](https://www.thoughtco.com/clay-tokens-mesopotamian-writing-171673)
+      - [<img src="assets/phyiscal_indentations.png" width="280">](https://www.thoughtco.com/clay-tokens-mesopotamian-writing-171673)
+    
     - Beads on an abacus
+      - [<img src="assets/abacus2.png" width="280">](https://en.wikipedia.org/wiki/Abacus) 
+    
     - Ink Marks on paper
-    - Punched Holes in a card
+        - [<img src="assets/paper_ledger.png" width="280">](https://www.moderntreasury.com/journal/history-of-ledgers)
+    
+    - Punched Holes in a paper card
+      - Vast improvement over the paper ledger
+      - Collection of data was standardized, fast and could be read by a machine
+      - Data collected from the 1890 US Census was the first large scale use of punched cards
+      - Allowed for the first "programmable" machines that could be used to perform relatively complex tasks 
+        like sorting and counting of specific data
+      - [<img src="assets/punched_card.png" width="280">](https://en.wikipedia.org/wiki/Punched_card)
+      - [<img src="hollerith_counter.png" width="280">](https://en.wikipedia.org/wiki/Hollerith_machine)
+    
     - Remnants of a photon strike on a piece of glass coated with a thin layer of phosphor
-    - Detectable polarization of spots on a sheet of metal via electronic means
+      - [<img src="assets/williams_tube.png" width="280">](https://en.wikipedia.org/wiki/Williams_tube)
+      - [<img src="assets/williams_tube2.png" width="280">](https://en.wikipedia.org/wiki/Williams_tube)
+      - [<img src="williams_tube3.png" width="280">](https://ub.fnwi.uva.nl/computermuseum/williamstube.html)
+      
+    - Magnetic polarization of specific areas on magnetic material, or the presence of a magnetic field in a specific area
+      - Core Memory
+        - [<img src="assets/core_memory.png" width="280">](https://en.wikipedia.org/wiki/Core_memory) 
+      - Magnetic Tape
+        - [<img src="assets/magnetic_viewer.png" width="280">](https://www.youtube.com/watch?v=aZOxn8ggX8w)
+      - Magnetic Disk
+      - [<img src="assets/10mb_hard_disk.png" width="280">](https://en.wikipedia.org/wiki/IBM_305_RAMAC)
+    
     - Detectable electrical capacitance in a tiny area of silicon
+      - [<img src="assets/DRAM.png" width="280">](https://en.wikipedia.org/wiki/Dynamic_random-access_memory)
+  
+  - Creating Machines to Use Boolean Logic Enables Complex Custom General Solutions to Certain Class of Problems
+    - By building up from the simple logic of "AND", "OR", and "NOT" operations, humans can create an 
+      arbitrarily complex sequence of logical operations
+    - These logical operations are sequenced in time to create "state machines" that can perform complex tasks 
+      and solve complex problems
+    - These logical operations are built up using patterns called "algorithms" grouped together in "programs" that
+      can be executed by a digital computer
+    - All of this is based on human ingenuity and cleverness, as the computer knows nothing about the problem. 
+    - It's just following the logical operations that humans have carefully designed to represent the problem and a solution.
 
 # Low Level Hardware Implementations
   
-  - ### The Wire & the Light Bulb & the Battery
+  - ## The Wire & the Light Bulb & the Battery
     - Represents Logic "state" - the most basic representation of a "state" in computing
     - Connected or not connected
     - Light on or off (1 or 0)
     - Even though the light has in reality many, many different states constantly 
       changing over time, we can still use it to represent a single state at time: Either on or off.
   
-  - ### The Simple Switch
+  - ## The Simple Switch
     - Easier to manipulate for humans than a bare wire
-    - Can be manipulated using electricity to change state with a magnet
-    - Logic States & Boolean Arithmetic
-      - switch in series represents logical AND operations
+    - Can be physically manipulated using electricity to change state using an electromagnet.
+    - Simple switches can be used to represent boolean logic operations
+    - These operations are called "gates", conceptually similar to someone following path crossing a fence through a gate
+    - Logical Operations & Boolean Arithmetic
+      - Two switches in series represents logical AND gate
         - AND ( the `&&` symbol )
           - 0 && 0 = 0
           - 0 && 1 = 0
           - 1 && 0 = 0
           - 1 && 1 = 1
-      - Switch in parallel represents logical OR operations
+      - Two switches in parallel represents logical OR gate
         - OR ( the `||` symbol) 
           - 0 || 0 = 0
           - 0 || 1 = 1
@@ -40,101 +98,125 @@
           - 1 || 1 = 1
       - Boolean logic requires one more operation to be complete: The logical NOT operation
   
-  - ### The Magnificent Magnet
+  - ## The Magnificent Magnet
     - Magnets can be electrically controlled to cause mechanical actions on certain metallic materials
     - Certain Metallic Materials can be "magnetized" and "polarized" using electricity to represent a "state"
       - Magnetized or not (1 or 0) 
       - North or South (1 or 0)
       - It's magnificent bc its so useful and versatile
+    - How To Make an Electromagnet 
+      - https://youtu.be/Vpb7IQ2Ib_Y
+    - Magnetic Viewing Film - How it Works/Demos 
+      - https://www.youtube.com/watch?v=slVL5nbTXd4
   
-  - ### The Raucous Relay
+  - ## The Raucous Relay
     - Uses an electromagnet to control a switch (or multiple switches)
-    - the first electrical computer were made of relays (extremely slow but faster than writing by hand)
-    - If relay is setup to turn OFF a switch, this creates a logical NOT gate, 
-      so using the relay allows us to represent any other logic gate.
+    - the first electrical computers were made of relays (extremely slow but faster than writing by hand!)
+    - If a circuit is designed to turn a switch OFF when the relay is electrified, this creates a logical NOT gate, 
+      so using a relay in this way allows us to represent any other logic gate.
     - NOT (!)
         - !0 = 1
         - !1 = 0
     - The relay can be used to represent any other logic gate
     - It's raucous because it makes a lot of noise
+    - AND OR NOT gates with Relays
+      - https://www.youtube.com/watch?v=FKub2SuugsQ
+    - Computers built using Relays
+      - https://youtu.be/e8DavnWmr1E?si=zTmgE0FgV0NcckZ7
+      - https://youtu.be/NXeBR-lbnjI
   
-  - ### The Voracious Vacuum Tube
-    - How Vacuum Tubes Work: https://www.youtube.com/watch?v=nA_tgIygvNo  
-    - Uses the unique behavior of electricity in a vacuum to represent a state, just like a mechanical switch
-    - Tube made for use in logic (Triode) consists of 3 parts:
-      - Cathode 
+  - ## The Voracious Vacuum Tube
+    - How Vacuum Tubes Work 
+      - https://www.youtube.com/watch?v=nA_tgIygvNo
+      - Note: While the actual flow direction of electrons is from the "negative" terminal to the "positive" terminal, 
+        the "conventional" flow direction of electricity is considered to go from the "positive" terminal to the 
+        "negative" terminal. 
+      - _Yes!_ this is somewhat confusing at first, and you can give thanks Ben Franklin for this technical debt we 
+        all have to deal with at the beginning of learning electronics.
+    - Electricity in a vacuum behaves differently than in normal atmosphere. Electrons can flow freely in a vacuum. 
+      - Tubes exploit this behavior of electrons in a vacuum to perform like a switch or an amplifiers.
+    - Tube made for use in logic (Triode) consists of three parts:
+      - **"Cathode"** 
         - Essentially a light bulb filament tied to the common "ground/negative" terminal of the power supply
-        - Used to "emit" electrons
-      - Anode (positive part of the tube hooked to the "load" and the positive terminal of the power supply)
-        - Used to "collect" electrons and powers the load to complete the circuit
-      - A "Grid" - this acts as a switch also called a "valve" when referring to tubes
-    - The Grid can be used to control the flow of electricity between the cathode and anode
-      - ie: when the grid is positively charged, the flow of electricity from cathode to the anode is allowed
-      - ie: when the grid is negatively charged, the flow of electricity from cathode to the anode is deterred
-      - This acts by default like a "NOT" gate
+        - Negative terminal of the tube it used to "emit" electrons to the anode and complete the circuit
+      - **"Anode"** 
+        - Positive terminal of the tube hooked to the "load" and the positive terminal of the power supply.)
+        - Used to "collect" electrons from the cathode and to indicate "state" and complete the circuit.
+      - **"Grid"** 
+        - this acts as a switch also called a "valve" when referring to tubes
+    - The Grid can be used to control the flow of electricity between the cathode and anode.
+      - ie: when the grid is positively charged, the flow of electricity from cathode to the anode is allowed.
+      - ie: when the grid is negatively charged, the flow of electricity from cathode to the anode is deterred.
+      - This acts by default like a logical "NOT" gate.
     - The tube can be used to represent any other logic gate
-    - The vacuum tube is voracious because it consumes a lot of power and generates a lot of heat
+    - The vacuum tube is voracious because it consumes a lot of power to heat the cathode and generates a lot of heat
   
-  - ### The Tiny Transistor
+  - ## The Tiny Transistor
     - Very similar behavior to the vacuum tube, but much smaller and faster
     - No vacuum required, just a the semiconductor materia
       - Uses photographic techniques to create the object, not regular metallic parts
-    - The transistor consists of 3 parts:
-      - drain 
-        - ("anode" in the vacuum tube) 
+    - The transistor consists of three parts:
+      - **"Drain"** 
+        - (the "anode" in the vacuum tube) 
         - also known as "collector" or "sink" often connected to "load" 
         - (not always "positive" in modern transistors, but usually is)
-      - source 
-        - ("cathode" in the vacuum tube) 
+      - **"Source"** 
+        - (the "cathode" in the vacuum tube) 
         - also known as "emitter" often connected to "ground" 
         - (not always "negative" in modern transistors, but usually is) 
-      - gate ("grid" in the vacuum tube) 
+      - **"Gate"** (the "Grid" in the vacuum tube) 
         - also known as "base" often connected to the "control" 
         - (not always "positive" in modern transistors, but usually is)  
     - The transistor can be used to represent any other logic gate and is the current basis for all modern computing
     - The transistor is tiny because it is very small and fast, bumping up against the limits of physics on how small it can be made
 
-  - ### How to Build Complex Logic Gates 
-    - Making logic gates from transistors 
-      - https://www.youtube.com/watch?v=sTu3LwpF6XI
-    - SR Latch 
-      - https://youtu.be/KM0DdEaY5sY
-    - 
-  
-  - ### The Interchangeable integrated Chip (groups of logic gates)
+    - ### How to Build Complex Logic Gates from Simple Transistors
+      - Making logic gates from transistors 
+        - https://www.youtube.com/watch?v=sTu3LwpF6XI
+      - How does memory work?
+        - SR Latch 
+        - https://youtu.be/KM0DdEaY5sY
+
+  - ## The Interchangeable Integrated Chip (IC - groups of logic gates packaged together to perform a specific purpose)
+  - ![img_1.png](the_ic.png)
     - the logic gate "package" (groups of transistors for a specific logic operation)
-      - OR, AND, NOT, NAND package (usually 2 in the same package)
+      - OR, AND, NOT, NAND package (usually 2-4 in the same package)
       - Why is NAND gates so special?
-        - most flexible, can be combined to create any other logic gates and more complex operations
-        - like tie inputs A & B together to create a NOT gate
-        - like tie inputs A & B together to create with a NOT gate to create an OR gate
-        - like normally and invert (NOT) the output to create an AND gate
-      - Flip-Flop (memory)
-      - Much can be done with just these 4 types of gates, many early digital electronic computers were made with just these
+        - It's the most flexible can be combined to create any other logic gate, ie: AND, OR, NOT, XOR, etc.
+          1) tie inputs A & B together to create a NOT gate
+          2) tie inputs A & B together combined with a NOT gate to create an OR gate
+          3) use normal A & B inputs and combine with a NOT to create an AND gate
+      - Everything in computers can be done with just these three types of gates
+      - Most early digital electronic calculators were made solely with many IC's of these gates
     
-  - ### The Mighty Microprocessor (groups of integrated chips -> all put on one chip)
+  - ## The Mighty Microprocessor (groups of integrated chips -> all put on one chip)
     - Contains a CPU (Central Processing Unit) and a small amount of ultra fast memory (called "Registers")
     - Has a "clock" to synchronize the operations of the CPU
     - Has a "program counter" to keep track of the current instruction in memory that the CPU is executing
     - Has an "ALU" (Arithmetic Logic Unit) to perform basic arithmetic and logical operations
+      - How does an ALU work? 
+        - Learn how computers add numbers and build a 4 bit adder circuit 
+        - https://youtu.be/wvJc9CZcvBc 
     - May contain a small amount of "cache" memory (very fast memory near the CPU circuits) to speed up access to main memory
     - CPU's are where the execution of each instruction happens
   
-  - ### The Configurable Computer
+  - ## The Configurable Computer
     - RAM (Random Access Memory) 
       - https://www.youtube.com/watch?v=uYXwCBo40iA
     - ROM (Read Only Memory - usually contains the basic software to start the computer, sometimes called "firmware")
       - https://www.youtube.com/watch?v=3l5q0xaQEf8
-    - IO & Peripherals & Removable Storage
+    - IO & Peripherals & Removable Storage & More
       - All just more variations of the same thing
+        - All built up from the same basic logic gates and transistors, or similar technology
+        - Even video cameras, microphones, radios and speakers are just variations of the same basic technology
       - using the same principles to represent logic states and perform logical operations
-      - Often electro-magnets to control mechanical devices or other machines
+      - Often electromagnets to control mechanical devices or other machines
         - The classic example is the "hard drive" which uses a spinning disk and a moving arm to read and write data
         - The "hard drive" is a "magnetic" storage device, and uses tiny spots of "magnetized" material to represent the "state" of the data
         - The arm is controlled by software and uses "magnets" to move the arm to the correct position to read and write the data
         - Some sort of electrified magnet is the usual way that computers interact physically with the world
 
-# Machine Code - The Binary Soft-Circuitry Keys of the CPU
+# Machine Code — The Microcode Soft-Circuitry Commands of the CPU
   - Machine Code is the "language" of logical operations that the computer can perform
     - It's really just human cleverness setting up problems in a way 
         that the machine can perform simple logical operations to give 
@@ -142,7 +224,7 @@
     - Anything the computer can do is just a combination of these simple logical operations, designed by people
       to represent the problem to be solved by a digital computer using a series of logical operations & states
     - The specific instructions for the CPU are called operation codes, or "opcodes", and are just strings of 
-      arbirary binary numbers like 1010101011010101 that represent the logical operations that the CPU can perform.
+      arbitrary binary numbers like 1010101011010101 that represent the logical operations that the CPU can perform.
     - The opcode values are completely dependent on the specific CPU, and are usually defined by the manufacturer of the CPU.
     - These numbers are usually represented in hexadecimal (base 16) to make them easier to read and write (as opposed to binary, base 2)
     - The opcodes are the most primitive logical operations that the CPU can perform
@@ -161,7 +243,7 @@
     - `0xCD: CMP` Compare the values in two registers and update the "flags" register with the result
     - `0xD0: BNE` If the "flags" register is not zero, start executing at a different location in main memory ie: "conditional branching"
   
-  - ### Clock - "The heart beat of the CPU"
+  - ### Clock — "The heart beat of the CPU"
     - Clock Circuit - Basically a emits a short pulse of electricity at a regular interval
       - a "tick" of the clock, like flashing a light to the beat
     - Used synchronizes the operations of the CPU
@@ -204,36 +286,40 @@
         - if the result of the last operation was negative, then the "negative" flag is set to 1; otherwise it's set to 0
         - if the result of the last operation had to "carry" a bit, then the "carry" flag is set to 1; otherwise it's set to 0
 
-# Assembly Language
+- # Assembly Language
   - Assembly Language is a "human-readable" representation of the "machine code" that the CPU can execute
-  - The "mnemonics" are translated into the binary opcodes by a "compiler" or "assembler" which is a program that 
-    translates the "assembly language" into "machine code" for a particular CPU
-  - Assembly Language is the most "primitive" language that a human can reasonably use to program a computer in a timely manner
+  - The "mnemonics" are translated into the binary opcodes by an "assembler" which is a program that 
+    translates the "assembly language mnemonics" nearly directly into "machine code" for a particular CPU.
+  - Assembly Language is the most "primitive" language that a human can reasonably use to program a computer in an efficient manner.
+  - It's totally possible to program a computer using just "machine code" (the binary opcodes), but it's very difficult and error-prone.
   - There is no "universal" assembly language, each CPU has it's own assembly language, so the assembly language is 
     completely dependent on the specific CPU and is usually defined by the manufacturer of the CPU
-  - The complexity of the assembly language is usually directly related to the complexity of the CPU
+  - The complexity of the assembly language is usually directly related to the complexity of the CPU & the number of 
+    different operations that the CPU can perform.
   
-  - ## Jump - Usually mnemonic `JMP`
+  - ## Common Assembly Language Operations
+
+  - ### Jump - Usually mnemonic `JMP`
     - The "goto" statement of machine code
     - Changes the program counter (PC) to point to a different location in memory
     - Also known a "branch" or "loop"
     - No limits to where the jump can go, it be anywhere in memory. If it's wrong, the machine will likely halt
       or do something unexpected, also called a "crash"
   
-  - ## Load - Usually mnemonic `LOAD`
+  - ### Load - Usually mnemonic `LOAD`
     - Copies a value from a location in memory into a "register" (a tiny bit of memory that is part of the CPU)
-  - ## Store - Usually mnemonic `STO`
+  - ### Store - Usually mnemonic `STO`
     - Copies a value from a "register" into a location in memory 
-  - ## Move - Usually mnemonic `MOV`
+  - ### Move — Usually mnemonic `MOV`
     - Copies a value from one "register" into another "register" 
-  - ## Add - Usually mnemonic `ADD`
+  - ### Add — Usually mnemonic `ADD`
     - Adds the values in two "registers" and stores the result in a third "register" 
-  - ## Subtract - Usually mnemonic `SUB`
+  - ### Subtract - Usually mnemonic `SUB`
     - Subtracts the values in two "registers" and stores the result in a third "register" 
-  - ## Compare - Usually mnemonic `CMP`
+  - ### Compare - Usually mnemonic `CMP`
     - Compares the values in two "registers" and updates the "flags" register 
 
-  - ## Conditional Jump - The Go-to of Machine Code
+  - ## Conditional Jump — The Go-to of Machine Code
     - Usually mnemonics: 
       - `JNZ` (Jump if Not Zero)
       - `JZ` (Jump if Zero)
@@ -261,7 +347,10 @@
     - Subroutines are the basis for all "structured" programming
 
 # Data Structures
-  - Data structures are just common ways humans have come up with to represent data in memory
+  - Data structures are names for common ways humans have come up with to represent and handle data, and predate computers.
+  - Data structures help represent real world items and concepts in a way that a computer can be programmed to manipulate to solve a problem.
+  - For example, a "list" is a common data structure that represents a series of items in a specific order, and 
+    can be used to represent a "list of orders to be shipped," "to-do list" or a "list of names"
 
   - ## Numbers or Individual Characters? Or something else?
     
@@ -284,7 +373,7 @@
         - 4 bytes (32 bits) can represent a floating point number
         - 8 bytes (64 bits) can represent a double precision floating point number
         - Floating point numbers will use a "mantissa" and an "exponent" to represent the number in scientific notation
-        - Due to the way floating point numbers are represented, they are not exact, and can have rounding errors!
+        - Due to the way floating point numbers are represented, they are not exact! And will have rounding errors!
         - Why Is This Happening?! Floating Point Approximation 
           - https://www.youtube.com/watch?v=2gIxbTn7GSc
     
@@ -295,35 +384,40 @@
     - ### Something else?
       - Numbers and Characters are the most common things to represent in memory, but anything can be represented in memory
       - Colors, Sounds, Images, Videos, Programs, Documents, etc.
-      - Anything that can be represented as a series of values can be represented in memory
+      - Anything that can be represented as a series of values can be represented in memory.
       - For example, images are usually represented as a series of "pixels" or "picture elements" which are a series of 
-        "colors" which are a series of "numbers" that represent the red, green, and blue values of the color
+        "colors" which are a series of "numbers" that represent the red, green, and blue values of the color.
+      - 01010101 could represents votes of 8 people, or 8 switch settings, or the connected status of 8 different sensors.
+      - The same 8 bits can represent many different things, it's just a matter of how humans want to interpret the meaning of the bits.
   
-  - ## Arrays
+- ## Commmon Data Structures
+  - ### Arrays
     - A way to represent a "list" of things in memory
     - The "things" can be anything, like numbers, letters, strings or even other arrays (multi-dimensional arrays)
     - The "things" are usually all the same size & type
     - The "things" are usually all stored in a contiguous block of memory
     - The "things" are usually accessed by an "index" which is a number that represents the position of the "thing" in the array
   
-  - ## Strings
+  - ### Strings
     - A way to represent a list of letters in memory, to represent words and sentences and paragraphs and documents
     - The "characters" are usually stored in a contiguous block of memory
     - The "characters" are sometimes terminated by a special "end of string" character, or have a length stored somewhere
     - The "characters" are usually accessed by an "index" which is a number that represents the position of the "characters" in the string
   
-  - ## Pointer
+  - ### Pointer
     - A number that represents the "address" of another location in memory
     - Diagram:
       - Address: Value 
       - 0x00000000: 0x00  `// 0x00000000 is the address, 0x00000004 is the value of this pointer, so it's pointing to address 0x00000004`
       - 0x00000001: 0x00  
       - 0x00000002: 0x00
-      - 0x00000002: 0x04  `// This is a pointer so it's 4 bytes long, and the value is 0x00000004`
-      - 0x00000004: 0x41  `// 0x00000004 is the address, 0x41 is character 'A' as ASCII, or 65 as unsigned byte integer`
-    - The pointer at 0x00000001 is pointing to the address 0x00000003, which contains the character 'A'
+      - 0x00000002: 0x04  `// This is a pointer's value is 0x00000004, so it's pointing to address 0x00000004`
+      - 0x00000004: 0x41  `// 0x00000004 is the address, 0x41 is character 'A' as ASCII, or 65 as an unsigned byte integer`
+    - The pointer stored at 0x00000000 has the value 0x00000004, so it's pointing to address 0x00000004
+    - Address 0x00000004 contains the value 0x41, which represents the character 'A' or the number 65 as an unsigned byte integer
+    - it's stored in "Little Endian" format, so the least significant bytes are stored first.
   
-  - ## Structures 
+  - ### Structures 
     - Known as "Records" or "Data Classes" 
       - also called as "structs", sometimes referred to as "classes" and "objects"
     - A way to represent a "structured data" in memory
@@ -337,38 +431,40 @@
     - The "fields" are usually stored in a contiguous block of memory
     - The "fields" are usually different types (like numbers, letters, strings, dates, times, arrays, and other Records)
   
-  - ## Stack
+  - ### Stack
     - A way to represent a "last in, first out" list of things in memory, similar to a stack of dinner plates
     - The "things" are usually all the same size & type
     - The "things" are usually all stored in a contiguous block of memory
     - The "things" are usually accessed by a "stack pointer" which is a number that represents the position of the top-most "thing" in the stack
     - Efficient for adding and removing items from the list, but not efficient for accessing items in the list
   
-  - ## Queue
+  - ### Queue
     - A way to represent a "first in, first out" list of things in memory, similar to a line of people waiting for a bus
     - The "things" are usually all the same size & type
     - The "things" are usually all stored in a contiguous block of memory
     - The "things" are usually accessed by a "head" and "tail" which are numbers that represent the position of the first and last "thing" in the queue
     - Efficient for adding and removing items from the list, but not efficient for accessing items in the list
   
-  - ## Linked List
+  - ### Linked List
     - A way to represent a "list" of things in memory, where each "thing" points ONLY to the next "thing" in the list
     - The "things" are usually all the same size & type
     - The "things" are NOT stored in a contiguous block of memory, which is the main difference between an array and a linked list
     - The "things" are usually accessed by a "pointer" which is a number that represents the location of the "thing" in memory
     - Used to represent a "dynamic" list, where the size of the list is not known ahead of time
     - Efficient for adding and removing items from the list, but not efficient for accessing items in the list
-  
-  - ## Tree
+
+  - ### Tree
     - A way to represent a "hierarchical" list of things in memory, where each "thing" points to one or MORE "things" in the list
     - The "things" are usually all the same size & type
     - The "things" are NOT stored in a contiguous block of memory, which is the main difference between an array and a tree
     - The "things" are usually accessed by a "pointer" which is a number that represents the location of the "thing" in memory
     - Used to represent a "hierarchical" list, like a family tree, or a company organization chart
     - Special Case of a tree is a "Binary Tree" where each "thing" points to only two "things" in the list
-      - Binary Trees are used to represent "sorted" lists, where each "thing" is greater than the "thing" to the left, and less than the "thing" to the right 
-  
-## High-Level Language Styles
+      - Binary Trees are used to represent "sorted" lists, where each "thing" is greater than the "thing" to the left, and less than the "thing" to the right
+      
+        ![tree.png](assets/tree.png)  
+
+# High-Level Language Styles
  - ### Procedural 50s-60s
    - First style of high level language after assembly language
    - Based on the idea of "subroutines" to deal with the use of "JMP/goto" statements which lead to confusing "spaghetti code"
@@ -396,7 +492,8 @@
 - ### Class Oriented Programming 70s-2010s
   - Usually called "Object Oriented Programming" but that's a misnomer, as objects are not the main focus, classes are.
   - Collected ideas around: 
-    - "Encapsulation" 
+    
+    - ### Encapsulation 
       - Data & code are "encapsulated," or enclosed into a "Class"
       - A "Class" is a template for creating an in-memory instance of the class called an "Object" which contains the 
         state and pointers to the "methods" (functions) of the class
@@ -411,21 +508,62 @@
       - The "methods" of the "class" are usually "public" and accessible by other "classes"
       - The "methods" of the "class" are usually "protected" and only accessible by "subclasses" of the "class"
       - There is a special modifier called "static" makes a variable or method accessible without needing an instance of the class (object)
-    - "Inheritance" 
+    
+    - ### Classes and Objects as Name Spaces
+      - In most COP languages, the "class" is used as a "namespace" to group together the "methods" and "variables" that 
+        are related to each other
+      - This often lead to "collections of static methods" in order to continue the "procedural" paradigm
+      - These were popularized by web frameworks such as Java's 
+    
+    - ### Inheritance 
       - Inheritance is the idea that a new "class" can inherit from another "class" all of it's methods and variables,
         and then add new methods and variables to the new "class" that will modify the behavior of the original "class"
       - Classes can inherit from other classes to reuse code and "state", and to create "subtypes/subclasses"
       - The class that is inherited from is called the "superclass" and the class that inherits is called the "subclass"
       - The "subclass" is also called a "derived class" and the "superclass" is also called a "base class"
-    - "Interfaces"
-    - "Abstract classes"
-    - "Polymorphism"
+    
+    - ### Interfaces
+      - An "interface" is a "contract" that a class can "implement" to define the "methods" that the class will have
+      - It's a way to tell the compiler and the programmer that the class must have certain "methods" and "variables" in it
+      - The "interface" is usually "implemented" by the class, and then the "methods" and "variables" are "defined" by the class
+        - ie: `Interface Document` - expects `open()` method
+        - `Class PDF implements Document` - implements `open()` method, opens a "PDF Viewer"
+        - `Class Email implements Document` - implements `open()` method, opens an "Email Client"
+      - Allows a developer to add multiple implementations of the same method by defining a new `class` that `implement`s 
+        the interface by defining the code for the methods from the `interface`
+        - This makes it easier to add new subclasses of the `interface` to the program without changing any existing code
+        - This also make it easier to write "testing" code that can be used to automatically verify the correctness of the methods 
+          of the `class` by using "testing" implementations of the `interface`
+      - The `interface` is `implemented` by a `class` and then the methods are defined by the `class`
+    
+    - ### Abstract Classes
+      - Very similar to "interfaces" but can have "methods" with "default" implementations of the "methods"
+      - The "abstract class" is usually "extended" by the "subclass" and then the "methods" are "overridden" by the "subclass"
+    
+    - ### Polymorphism
       - Polymorphism is the idea that a "method" can be called on an "object" and the "method" will behave differently
         based on the "type" of the "object" that the "method" is called on
-    - Controlled Mutability and Visibility of variables
-    - "Interfaces" and "Abstract Classes" to allow for "multiple inheritance" and "polymorphism" 
+        - Abstract Class Document - expects "open" method
+        - Class PDF extends Document - implements "open" method, opens a "PDF Viewer"
+        - Class Email extends Document - implements "open" method, opens an "Email Client"
+        - Class Song extends Document - implements "open" method, opens a "Music Player"
+        - Polymorphism is the idea that a "method" can be called on an object that is a subclass of Document and the method will behave differently depending on the type of the object
+          - ie: the "open" method will open a "PDF Viewer" if the object is a "PDF" and will open an "Email Client" if the object is an "Email" and will open a "Music Player" if the object is a "Song" 
+    
+    - ### Controlled Mutability and Visibility of variables
+      - Use of explicit "private" and "protected" and "public" to control the visibility of the variables and methods of the class
+      - Encouraged to use "getters" and "setters" to control the access to the variables of the class (which has since been shown to be a bad idea)
+    
+    - ### Issues from overuse of Inheritance and allowing for "multiple inheritance" in C++ 
+      - Lead to immense & unnecessary complexity to fit in the paradigm, as programmers tried to fit the "class" oriented paradigm into the "procedural" paradigm
       - bad ideas for many reasons, and overused beyond its original intent
-    - Examples of class oriented languages are "Simula" and "C++" and "Java"
+        - The hype around reusability was so strong that it was often used to justify the use of inheritance in places where it was not appropriate
+        - This lead to "fragile" and "rigid" code that was hard to understand and hard to modify, leading to a lot of waste and costs
+      - Banana, Monkey, Jungle Problem
+        - https://crystal-villanueva.medium.com/the-banana-and-the-gorilla-problem-92c9a4717fd6
+        
+        
+    - Examples of Class Oriented Programming languages are "Simula" and "C++" and "Java"
  
  - ### Object Oriented Programming 80s-2020's
    - Alan Kay Style 
