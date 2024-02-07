@@ -72,11 +72,14 @@
 # Low Level Hardware Implementations
   
   - ## The Wire & the Light Bulb & the Battery
-    - Represents Logic "state" - the most basic representation of a "state" in computing
-    - Connected or not connected
-    - Light on or off (1 or 0)
+    - We are using this arrangement to represent a logic "state" 
+      - This is the most basic representation of a "state" in computing
+    - Connected or not connected? (1 or 0)
+      - But we dont really know it's state until we measure it somehow (like with a voltmeter or a light bulb) 
+    - Add visual Feedback - Light on or off (1 or 0)
     - Even though the light has in reality many, many different states constantly 
       changing over time, we can still use it to represent a single state at time: Either on or off.
+    - In this way we can use the light to represent a "bit" of information, which is the most basic unit of information in computing.
   
   - ## The Simple Switch
     - Easier to manipulate for humans than a bare wire
