@@ -308,18 +308,18 @@
     - No limits to where the jump can go, it be anywhere in memory. If it's wrong, the machine will likely halt
       or do something unexpected, also called a "crash"
   
-  - ### Load - Usually mnemonic `LOAD`
-    - Copies a value from a location in memory into a "register" (a tiny bit of memory that is part of the CPU)
-  - ### Store - Usually mnemonic `STO`
-    - Copies a value from a "register" into a location in memory 
+  - ### Load — Usually mnemonic `LDX` where X is the register to load into
+    - Copies a value from a location in memory into a register (a tiny bit of memory that is part of the CPU)
+  - ### Store — Usually mnemonic `STX` where X is the register to store from
+    - Copies a value from a register into a location in memory 
   - ### Move — Usually mnemonic `MOV`
-    - Copies a value from one "register" into another "register" 
+    - Copies a value from one register into another register 
   - ### Add — Usually mnemonic `ADD`
-    - Adds the values in two "registers" and stores the result in a third "register" 
-  - ### Subtract - Usually mnemonic `SUB`
-    - Subtracts the values in two "registers" and stores the result in a third "register" 
-  - ### Compare - Usually mnemonic `CMP`
-    - Compares the values in two "registers" and updates the "flags" register 
+    - Adds the values in two registers and stores the result in a third register 
+  - ### Subtract — Usually mnemonic `SUB`
+    - Subtracts the values in two registers and stores the result in a third register 
+  - ### Compare — Usually mnemonic `CMP`
+    - Compares the values in two registers and updates the flag register 
 
   - ## Conditional Jump — The Go-to of Machine Code
     - Usually mnemonics: 
@@ -334,9 +334,14 @@
     - Also known as "branching" or "conditional jump" or "loop"
   
   - ## Variables
-    - Just named memory locations that are used to store data, sometimes called "fields" or "attributes" or "properties"
-    - The data is a representation of something else, like a number or a letter, or a color, or a sound, or an address
+    - Are just named memory locations that are used to store data, sometimes called "fields," "attributes," or "properties"
+    - The data is a representation of something else, like a number or a letter, or maybe a color, or an address for another location in memory
     - Variables are a convenient way to give a name to a location in memory
+    - The "name" of the variable is used to by the assembler to access the "value" of the variable, instead of the 
+      "address" of the variable in memory.
+    - The naming is solely for the convenience of the human programmer, the machine doesn't care what the variable is 
+      called or that it even has a name. This is just a way to reduce the complexity of the program for the 
+      human programmer.
   
   - ## Subroutines
     - Usually mnemonic CALL
@@ -349,10 +354,11 @@
     - Subroutines are the basis for all "structured" programming
 
 # Data Structures
-  - Data structures are names for common ways humans have come up with to represent and handle data, and predate computers.
-  - Data structures help represent real world items and concepts in a way that a computer can be programmed to manipulate to solve a problem.
-  - For example, a "list" is a common data structure that represents a series of items in a specific order, and 
-    can be used to represent a "list of orders to be shipped," "to-do list" or a "list of names"
+
+  - "Data structures" are named concepts for common ways humans have invented to represent data, and usually predate computing.
+  - They represent real world items and concepts in a way that a computer can be programmed to manipulate to solve a problem.
+  - For example, a "list" is a common data structure for a series of items in a specific order, and 
+    can be used to represent a "orders to be shipped," "to-do items" or a "names and addresses to send a letter to"
 
   - ## Numbers or Individual Characters? Or something else?
     
@@ -390,9 +396,10 @@
       - For example, images are usually represented as a series of "pixels" or "picture elements" which are a series of 
         "colors" which are a series of "numbers" that represent the red, green, and blue values of the color.
       - 01010101 could represents votes of 8 people, or 8 switch settings, or the connected status of 8 different sensors.
-      - The same 8 bits can represent many different things, it's just a matter of how humans want to interpret the meaning of the bits.
+      - The same eight bits can represent many different things, it's just a matter of how humans want to interpret the meaning of the bits.
   
-- ## Commmon Data Structures
+- ## Common Data Structures used in Programming
+  
   - ### Arrays
     - A way to represent a "list" of things in memory
     - The "things" can be anything, like numbers, letters, strings or even other arrays (multi-dimensional arrays)
@@ -406,7 +413,7 @@
     - The "characters" are sometimes terminated by a special "end of string" character, or have a length stored somewhere
     - The "characters" are usually accessed by an "index" which is a number that represents the position of the "characters" in the string
   
-  - ### Pointer
+  - ### Pointers
     - A number that represents the "address" of another location in memory
     - Diagram:
       - Address: Value 
@@ -568,19 +575,28 @@
     - Examples of Class Oriented Programming languages are "Simula" and "C++" and "Java"
  
  - ### Object Oriented Programming 80s-2020's
-   - Alan Kay Style 
+   - Alan Kay Style BOOP (Back-to-Object Oriented Programming)
      - Based on the idea of "messaging" between objects, VERY poorly named "object oriented programming" (admitted by Alan Kay) 
    - State is fully retained in the "object" and "methods" are used to send & receive messages to the "object" to change it's "state"
    - No "global" variables, only instance variables that are private to the object
    - 
  
  - ### Functional Programming 50s-2020's
-   - Main idea was to avoid "side effects" and "mutable state" of the program
-   - All functions return a value, and have no "side effects" on the "state" of the program that were not 
-     explicitly passed in as arguments
-   - The "state" of the program is usually "immutable" and "passed" as "arguments" to the "functions"
-   - The new "state" is returned as the "result" of the "function"
-   - The "functions" are usually "first class" and "higher order" and can be "passed" as "arguments" to other "functions"
+   - ## Immutability 
+     - Functional Programming's main idea is to avoid "side effects" and "shared mutable state" of the program
+   - All functions in the core of the application return a value and have no "side effects" on any other "state" of 
+     the program.
+   - The state of the program is immutable and passed as arguments to the functions
+   - A new state is returned as the result of the calls to the functions
+   - Functions are first class citizens and can be passed as arguments to other functions, just like normal variables and objects
+     - This allows customization of the functions by passing in any function as an argument to another function
+     - This allows the functions to be "composed" together to create new functions from existing functions
+     - These functions are called "lambdas" or "closures" or "anonymous functions" or "function literals"
+     - Example: 
+       - `Function add = (int a, int b) => a + b;`
+       - `Function multiply = (int a, int b) => a * b;`
+       - `Function addThenAnother = (Function first, Function second, int a, int b) => second(first(a, b), b);`
+       - `int result = addThenAnother(add, multiply, 2, 3); // result is 8, note: passing in the "add" function as the "first" argument and the "multiply" function as the "second" argument`
    - Examples of functional languages are "Lisp", "Clojure" and "F#" and "Kotlin"
 
 
