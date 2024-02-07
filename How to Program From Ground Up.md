@@ -179,6 +179,8 @@
 
   - ## The Interchangeable Integrated Chip (IC - groups of logic gates packaged together to perform a specific purpose)
   - ![img_1.png](the_ic.png)
+  - ![img_2.png](img_2.png)
+  - ![img_1.png](img_1.png)
     - the logic gate "package" (groups of transistors for a specific logic operation)
       - OR, AND, NOT, NAND package (usually 2-4 in the same package)
       - Why is NAND gates so special?
