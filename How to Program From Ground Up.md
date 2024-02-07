@@ -413,7 +413,7 @@
     - The "characters" are sometimes terminated by a special "end of string" character, or have a length stored somewhere
     - The "characters" are usually accessed by an "index" which is a number that represents the position of the "characters" in the string
   
-  - ### Pointers
+  - ### Pointe
     - A number that represents the "address" of another location in memory
     - Diagram:
       - Address: Value 
@@ -503,20 +503,25 @@
   - Collected ideas around: 
     
     - ### Encapsulation 
-      - Data & code are "encapsulated," or enclosed into a "Class"
-      - A "Class" is a template for creating an in-memory instance of the class called an "Object" which contains the 
-        state and pointers to the "methods" (functions) of the class
+      - Data & code are "encapsulated," (or enclosed) into a `class` (
+        - also called a "Template", it is similar to a blueprint for a house as it describes what will be created when the house is built)
+      - A `class` is a template for creating an in-memory instance of the class (called an "Object") which contains the 
+        state and pointers to the "methods" (functions) of the `class`
       - When a new Object is created from a class template, the Object is called an "instance" of the class.
-      - An "Object" is just a structure in memory that contains the values (or "state") of the variables from the class 
-        template and a pointer to the "Methods" of the class
-      - A "Method" is just a normal function in the class that operates on the data fields in the "class"
-        - The process of calling a "method" on an "object" is called "sending a message" to the "object" 
-        - (SO LAME! bc it's not a message! It's just calling a function!!!! THIS IS NOT MESSAGING!)
-      - The values of the variables ("state") of the object are usually not accessible from outside the class (ie: "private") 
-        and only accessible by the methods of the class, or the methods in the inhertited subclasses of the class.
-      - The "methods" of the "class" are usually "public" and accessible by other "classes"
-      - The "methods" of the "class" are usually "protected" and only accessible by "subclasses" of the "class"
-      - There is a special modifier called "static" makes a variable or method accessible without needing an instance of the class (object)
+      - An Object is just a structure in memory that contains the values (or "state") of the variables and pointers to 
+        the methods of the class
+      - A "Method" is just a normal function in the class that manipulates the variables in the object, 
+        or call other methods in the object or other objects
+        - The process of calling a method on an object is referred to as "sending a message" to the object 
+        - (TERRIBLE WORDING! bc it's not a message! It's just calling a function!!!! THIS IS NOT MESSAGING! AAAAHH!)
+      - The values of the variables ("state") of the object are often made inaccessible from outside the class (ie: "private") 
+        and only accessible by the methods of the class, or the methods in the inherited subclasses of the class.
+      - Methods of the class can be made `public` to be globally accessible by other classes to provide the functionality of the class.
+      - Some methods of the "class" can be labeled "protected" and only accessible by "subclasses" of the "class"
+      - There is a special modifier called `static` makes a variable or method accessible without needing an instance of the class (object)
+        - This loophole is the main reason why I call it "Class Oriented Programming" is not "object" oriented programming!
+        - It's a way to make the class act like a "namespace" to group together the "methods" and "variables" that are related to each other
+        - This was not the original intent of the "class" and "object" paradigm, but was a way to fit the "class" paradigm into the "procedural" paradigm.
     
     - ### Classes and Objects as Name Spaces
       - In most COP languages, the "class" is used as a "namespace" to group together the "methods" and "variables" that 
@@ -525,32 +530,63 @@
       - These were popularized by web frameworks such as Java's 
     
     - ### Inheritance 
-      - Inheritance is the idea that a new "class" can inherit from another "class" all of it's methods and variables,
+      - Inheritance is the idea that a new `class` can inherit from another `class` all of it's methods and variables,
         and then add new methods and variables to the new "class" that will modify the behavior of the original "class"
       - Classes can inherit from other classes to reuse code and "state", and to create "subtypes/subclasses"
       - The class that is inherited from is called the "superclass" and the class that inherits is called the "subclass"
       - The "subclass" is also called a "derived class" and the "superclass" is also called a "base class"
     
     - ### Interfaces
-      - An "interface" is a "contract" that a class can "implement" to define the "methods" that the class will have
-      - It's a way to tell the compiler and the programmer that the class must have certain "methods" and "variables" in it
-      - The "interface" is usually "implemented" by the class, and then the "methods" and "variables" are "defined" by the class
-        - ie: `Interface Document` - expects `open()` method
-        - `Class PDF implements Document` - implements `open()` method, opens a "PDF Viewer"
-        - `Class Email implements Document` - implements `open()` method, opens an "Email Client"
+      - An `interface` is an agreement or "contract" that the class will have certain defined methods & variables in the class.
+      - It's a way to tell the compiler AND the programmer that the class must have certain "methods" and "variables" in it to be considered a valid "subclass" of the interface
+      - The `interface` is implemented by the `class`, where the methods and variables are defined by the "concrete implementing" `class`
+        - Example (in pseudo code):
+          ```
+          interface Document { 
+            expects method open()  // this interface expects a method called "open" 
+          }  
+        
+          class PDF implements Document {
+              implements method open(): { 
+                 launch "PDF Viewer" // <-- the "implementation" of the "interface" 
+              } 
+          }
+          
+          class Email implements Document { 
+              implements method open(): { 
+                 launch "Email App" // <-- the "implementation" of the "interface" 
+              } 
+          }
+          
+          class Song implements Document { 
+              implements method open(): { 
+                   launch "Music Player" // <-- the "implementation" of the "interface" 
+              } 
+          }
+          
+          // Start of program
+          main() {
+              Document doc = new PDF();
+              doc.open();                // <-- will launch "PDF Viewer"
+              doc2 = new Email();
+              doc2.open();               // <-- will launch "Email App"
+              doc3 = new Song();
+              doc3.open();               // <-- will launch "Music Player"
+          }
+          ```
       - Allows a developer to add multiple implementations of the same method by defining a new `class` that `implement`s 
         the interface by defining the code for the methods from the `interface`
         - This makes it easier to add new subclasses of the `interface` to the program without changing any existing code
         - This also make it easier to write "testing" code that can be used to automatically verify the correctness of the methods 
           of the `class` by using "testing" implementations of the `interface`
-      - The `interface` is `implemented` by a `class` and then the methods are defined by the `class`
+      - The `interface` is `implement`ed by a `class` and then the methods are defined by the `class`
     
     - ### Abstract Classes
-      - Very similar to "interfaces" but can have "methods" with "default" implementations of the "methods"
+      - Very similar to interfaces but can have methods with default implementations of the methods
       - The "abstract class" is usually "extended" by the "subclass" and then the "methods" are "overridden" by the "subclass"
     
     - ### Polymorphism
-      - Polymorphism is the idea that a "method" can be called on an "object" and the "method" will behave differently
+      - Polymorphism is the idea that a method can be called on an object and the method will behave differently
         based on the "type" of the "object" that the "method" is called on
         - Abstract Class Document - expects "open" method
         - Class PDF extends Document - implements "open" method, opens a "PDF Viewer"
