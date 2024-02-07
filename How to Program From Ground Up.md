@@ -12,38 +12,43 @@
     - Remnants of a photon strike on a piece of glass coated with a thin layer of phosphor
     - Detectable polarization of spots on a sheet of metal via electronic means
     - Detectable electrical capacitance in a tiny area of silicon
-## Low Level
+
+# Low Level Hardware Implementations
+  
   - ### The Wire & the Light Bulb & the Battery
-    - Can Represents Logic "state"
+    - Represents Logic "state" - the most basic representation of a "state" in computing
     - Connected or not connected
     - Light on or off (1 or 0)
     - Even though the light has in reality many, many different states constantly 
       changing over time, we can still use it to represent a single state at time: Either on or off.
-  - ### The Simple switch
+  
+  - ### The Simple Switch
     - Easier to manipulate for humans than a bare wire
     - Can be manipulated using electricity to change state with a magnet
     - Logic States & Boolean Arithmetic
       - switch in series represents logical AND operations
-        - AND (&&)
+        - AND ( the `&&` symbol )
           - 0 && 0 = 0
           - 0 && 1 = 0
           - 1 && 0 = 0
           - 1 && 1 = 1
-      - switch in parallel represents logical OR operations
-        - OR (||) 
+      - Switch in parallel represents logical OR operations
+        - OR ( the `||` symbol) 
           - 0 || 0 = 0
           - 0 || 1 = 1
           - 1 || 0 = 1
           - 1 || 1 = 1
       - Boolean logic requires one more operation to be complete: The logical NOT operation
-  - ### The Magnificent magnet
+  
+  - ### The Magnificent Magnet
     - Magnets can be electrically controlled to cause mechanical actions on certain metallic materials
     - Certain Metallic Materials can be "magnetized" and "polarized" using electricity to represent a "state"
       - Magnetized or not (1 or 0) 
       - North or South (1 or 0)
       - It's magnificent bc its so useful and versatile
+  
   - ### The Raucous Relay
-    - uses electromagnet to control a switch (or multiple switches)
+    - Uses an electromagnet to control a switch (or multiple switches)
     - the first electrical computer were made of relays (extremely slow but faster than writing by hand)
     - If relay is setup to turn OFF a switch, this creates a logical NOT gate, 
       so using the relay allows us to represent any other logic gate.
@@ -52,7 +57,8 @@
         - !1 = 0
     - The relay can be used to represent any other logic gate
     - It's raucous because it makes a lot of noise
-  - ### the Voracious Vacuum Tube
+  
+  - ### The Voracious Vacuum Tube
     - How Vacuum Tubes Work: https://www.youtube.com/watch?v=nA_tgIygvNo  
     - Uses the unique behavior of electricity in a vacuum to represent a state, just like a mechanical switch
     - Tube made for use in logic (Triode) consists of 3 parts:
@@ -68,6 +74,7 @@
       - This acts by default like a "NOT" gate
     - The tube can be used to represent any other logic gate
     - The vacuum tube is voracious because it consumes a lot of power and generates a lot of heat
+  
   - ### The Tiny Transistor
     - Very similar behavior to the vacuum tube, but much smaller and faster
     - No vacuum required, just a the semiconductor materia
@@ -86,6 +93,14 @@
         - (not always "positive" in modern transistors, but usually is)  
     - The transistor can be used to represent any other logic gate and is the current basis for all modern computing
     - The transistor is tiny because it is very small and fast, bumping up against the limits of physics on how small it can be made
+
+  - ### How to Build Complex Logic Gates 
+    - Making logic gates from transistors 
+      - https://www.youtube.com/watch?v=sTu3LwpF6XI
+    - SR Latch 
+      - https://youtu.be/KM0DdEaY5sY
+    - 
+  
   - ### The Interchangeable integrated Chip (groups of logic gates)
     - the logic gate "package" (groups of transistors for a specific logic operation)
       - OR, AND, NOT, NAND package (usually 2 in the same package)
@@ -97,120 +112,217 @@
       - Flip-Flop (memory)
       - Much can be done with just these 4 types of gates, many early digital electronic computers were made with just these
     
-  - ### The Microprocessor (groups of integrated chips -> all put on one chip)
-    - Usually contains a CPU (Central Processing Unit) and a small amount of very fast memory (called "Registers") 
-  - ### The Computer
-    - RAM (Random Access Memory)
-    - ROM
-    - IO & Peripherals & Storage
-    - All just more variations of the same thing, using the same principles to represent logic states
+  - ### The Mighty Microprocessor (groups of integrated chips -> all put on one chip)
+    - Contains a CPU (Central Processing Unit) and a small amount of ultra fast memory (called "Registers")
+    - Has a "clock" to synchronize the operations of the CPU
+    - Has a "program counter" to keep track of the current instruction in memory that the CPU is executing
+    - Has an "ALU" (Arithmetic Logic Unit) to perform basic arithmetic and logical operations
+    - May contain a small amount of "cache" memory (very fast memory near the CPU circuits) to speed up access to main memory
+    - CPU's are where the execution of each instruction happens
+  
+  - ### The Configurable Computer
+    - RAM (Random Access Memory) 
+      - https://www.youtube.com/watch?v=uYXwCBo40iA
+    - ROM (Read Only Memory - usually contains the basic software to start the computer, sometimes called "firmware")
+      - https://www.youtube.com/watch?v=3l5q0xaQEf8
+    - IO & Peripherals & Removable Storage
+      - All just more variations of the same thing
+      - using the same principles to represent logic states and perform logical operations
+      - Often electro-magnets to control mechanical devices or other machines
+        - The classic example is the "hard drive" which uses a spinning disk and a moving arm to read and write data
+        - The "hard drive" is a "magnetic" storage device, and uses tiny spots of "magnetized" material to represent the "state" of the data
+        - The arm is controlled by software and uses "magnets" to move the arm to the correct position to read and write the data
+        - Some sort of electrified magnet is the usual way that computers interact physically with the world
 
-## Machine Code
+# Machine Code - The Binary Soft-Circuitry Keys of the CPU
   - Machine Code is the "language" of logical operations that the computer can perform
     - It's really just human cleverness setting up problems in a way 
         that the machine can perform simple logical operations to give 
         us a representation of the result of the problem
     - Anything the computer can do is just a combination of these simple logical operations, designed by people
-      to represent the problem space that can be solved by the computer using a series of logical operations.
-    - The specific instructions for the CPU are called "opcodes", and are just strings of binary numbers like 1010101011010101
+      to represent the problem to be solved by a digital computer using a series of logical operations & states
+    - The specific instructions for the CPU are called operation codes, or "opcodes", and are just strings of 
+      arbirary binary numbers like 1010101011010101 that represent the logical operations that the CPU can perform.
+    - The opcode values are completely dependent on the specific CPU, and are usually defined by the manufacturer of the CPU.
     - These numbers are usually represented in hexadecimal (base 16) to make them easier to read and write (as opposed to binary, base 2)
     - The opcodes are the most primitive logical operations that the CPU can perform
     - The opcodes are usually followed by "operands" which are the "arguments" to the operation
   - The Machine opcodes are unwieldy for humans to remember, so we use "mnemonics" to represent them
     - Mnemonics are just human-readable names for the opcodes, like "LOAD" or "STORE" or "ADD" or "SUBTRACT"
     - The mnemonics are then translated into the binary opcodes by a "compiler" or "assembler"
-  - The machine opcode instructions are basic operations like:
-    - LOAD (load a value from main memory into a register)
-    - MOV (move a value from one register to another)
-    - STO (store a value from a register into main memory)
-    - JMP (jump to a different location in main memory by updating the Program Counter)
-    - ADD (add the values in two registers and store the result in a third register)
-    - CMP (compare the values in two registers and update the "flags" register)
-    - JNZ (jump to a different location in main memory if the "flags" register is not zero)
-  - Clock
-    - Everything in the computer happens one step at a time, and the "clock" is the thing that makes the "ticks"
+  
+  - ### Common Machine Code Opcodes (actual opcode is for Motorola 6502 CPU)
+    - 0xA9 LDA (load a value from main memory into a register) 
+    - 0xA2 MOV (move a value from one register to another) 
+    - 0x8D STA (store a value from a register into main memory)
+    - 0x4C JMP (start executing next instruction at a different location in main memory by updating the Program Counter with a new value)
+    - 0x6D ADC (add the values in two registers and store the result in a third register and update the "flags" register if there is a "carry")
+    - 0xCD CMP (compare the values in two registers and update the "flags" register with the result)
+    - 0xD0 BNE (if the "flags" register is not zero, start executing at a different location in main memory ie: "conditional branching")
+  
+  - ### Clock - "Tick-tock you don't stop, the heart beat of the CPU"
+    - Clock Circuit - Basically a emits a short pulse of electricity at a regular interval
+      - a "tick" of the clock, like flashing a light to the beat
+    - Used synchronizes the operations of the CPU
+      - Example Implementation - Astable 555 timer - 8-bit computer clock - part 1
+      - https://www.youtube.com/watch?v=kRlSFm519Bo 
+    - Everything in the computer happens one step at a time, and the clock is the thing that makes the "steps"
     - Each "tick" of the clock is called a "cycle"
-  - Program Counter
+    - The cycle of the clock is not the same as the cycle of the CPU, but the CPU normally does one operation per cycle
+      but some operations may take more than one clock cycle to complete.
+  
+  - ### Program Counter - "Where is the current instruction to be executed?"
     - The "program counter" (PC) is a special register that keeps track of the current memory location of the
       current instruction that the CPU will execute/is executing
-  - Fetch-Decode-Execute Cycle
-    - Fetch means to get the next instruction from main memory and put it into the "instruction register"
-    - Decode means to figure out what the instruction is and what it means
-      - The instruction may require more than one cycle to complete
-      - The instruction may need to fetch more data from main memory
+    - Defaults to the first memory location(0x00000000), and then increments by 1 after each instruction is executed
+    - The "program counter" is updated by the "clock" at the end of each "cycle", or when a "jump" instruction is executed
+  
+  - ### Fetch-Decode-Execute Cycle of the CPU - "The Dumb Work of the CPU"
+    - Fetch means to get the next opcode instruction from main memory and put it into the "instruction register" on the CPU
+    - Decode means to figure out what the opcode operation is and what the operands are (if any)
+      - "Operands" are the "arguments" to the operation. ie: the "source" and "destination" of the operation 
+      - The operation may need to fetch more data from main memory or from a register to get the operands for the instruction
+      - The operation may take more than one cycle to prepare for execution
     - Execute means to actually perform the operation
+      - ie: add the values in two registers and store the result in a third register, 
+        then set a "flags register" if the result is zero, negative or had to "carry" a bit
       - The operation may require more than one cycle to complete
+      - The number of cycles is totally dependent on the specific CPU and the specific operation
       - The operation may need to store the result back into main memory or into one or more registers
-  - Registers
+  
+  - ### Registers - "The Tiny Superfast Memory of the CPU"
     - Registers are a small amount of very fast memory that is part of the CPU
     - The registers are used to store the results of the instructions, and current operands being executed
-    - The registers are used to store the "state" of the CPU
+    - The registers are used to store the current "state" of the CPU, like the "program counter" and the "flags" register
+      - Some registers store the values of the last arithmetic operation, like from an "ADD" or "SUBTRACT" 
+      - Some registers are a series of "status flags", single bits used to store the result of the last operation
+      - Status flags are used to control the "conditional jumps" in the program
+      - Flags such as "zero" or "carry" are used to indicate the results of the last operation
+      - For example: 
+        - if the result of the last operation was zero, then the "zero" flag is set to 1; otherwise it's set to 0
+        - if the result of the last operation was negative, then the "negative" flag is set to 1; otherwise it's set to 0
+        - if the result of the last operation had to "carry" a bit, then the "carry" flag is set to 1; otherwise it's set to 0
 
-## Assembly Language Basics
-  - Jump - Usually mnemonic JMP
+# Assembly Language
+  - Assembly Language is a "human-readable" representation of the "machine code" that the CPU can execute
+  - The "mnemonics" are translated into the binary opcodes by a "compiler" or "assembler" which is a program that 
+    translates the "assembly language" into "machine code" for a particular CPU
+  - Assembly Language is the most "primitive" language that a human can reasonably use to program a computer in a timely manner
+  - There is no "universal" assembly language, each CPU has it's own assembly language, so the assembly language is 
+    completely dependent on the specific CPU and is usually defined by the manufacturer of the CPU
+  - The complexity of the assembly language is usually directly related to the complexity of the CPU
+  
+  - ## Jump - Usually mnemonic `JMP`
     - The "goto" statement of machine code
     - Changes the program counter (PC) to point to a different location in memory
     - Also known a "branch" or "loop"
     - No limits to where the jump can go, it be anywhere in memory. If it's wrong, the machine will likely halt
       or do something unexpected, also called a "crash"
-  - Conditional Jump - Usually mnemonic JNZ (Jump if Not Zero)
-    - The "if" statement of machine code
+  
+  - ## Load - Usually mnemonic `LOAD`
+    - Copies a value from a location in memory into a "register" (a tiny bit of memory that is part of the CPU)
+  - ## Store - Usually mnemonic `STO`
+    - Copies a value from a "register" into a location in memory 
+  - ## Move - Usually mnemonic `MOV`
+    - Copies a value from one "register" into another "register" 
+  - ## Add - Usually mnemonic `ADD`
+    - Adds the values in two "registers" and stores the result in a third "register" 
+  - ## Subtract - Usually mnemonic `SUB`
+    - Subtracts the values in two "registers" and stores the result in a third "register" 
+  - ## Compare - Usually mnemonic `CMP`
+    - Compares the values in two "registers" and updates the "flags" register 
+
+  - ## Conditional Jump - The Go-to of Machine Code
+    - Usually mnemonics: 
+      - `JNZ` (Jump if Not Zero)
+      - `JZ` (Jump if Zero)
+      - `JG` (Jump if Greater)
+      - `JL` (Jump if Less)
+    - The "`if`" statement of machine code
     - Changes the program counter (PC) to point to a different location in memory based on the result of a previous operation
     - The results of the previous operation is kept in a "register" (a tiny bit of memory that is part of the CPU)
-    - Also known as "branch if" or "branch if not"
     - The "if" statement is the most important part of programming, it's the basis for all decision making
-  - Variables
-    - Just Memory locations that are used to store data
-    - The data is a representation of something else, like a number or a letter, or a color, or a sound, or computer code
+    - Also known as "branching" or "conditional jump" or "loop"
+  
+  - ## Variables
+    - Just named memory locations that are used to store data, sometimes called "fields" or "attributes" or "properties"
+    - The data is a representation of something else, like a number or a letter, or a color, or a sound, or an address
     - Variables are a convenient way to give a name to a location in memory
-  - Subroutines
-    - A way to "call" a "function" or "procedure" or "method" in machine code
-    - The "call" statement of machine code
-    - The "return" statement of machine code
+  
+  - ## Subroutines
+    - Usually mnemonic CALL
+      - Jumps to a location of a function in memory & preserve current state
+      - Pushes the current PC & Registers onto the stack, and then changes the PC to point to a different location in memory
+    - Usually mnemonic RETURN
+      - A way to return from a function in machine code 
     - The "call" statement changes the program counter (PC) to point to a different location in memory
     - The "return" statement changes the program counter (PC) back to where it was before the "call" statement
     - Subroutines are the basis for all "structured" programming
 
-## Data Structures
+# Data Structures
   - Data structures are just common ways humans have come up with to represent data in memory
-  - Numbers and Individual Characters
-    - Numbers are usually represented in binary (base 2)
+
+  - ## Numbers or Individual Characters? Or something else?
+    
+    - ### Numbers 
+      - are usually represented in binary (base 2)
       - Positive integers are usually represented in "unsigned" binary
-        - 1 byte (8 bits) can represent unsigned 0 to 255 (known as a "byte" or "octet" or "char")
+        - 1 byte (8 bits) can represent unsigned 0 to 255 (known as a "byte" or "octet" or "char" or "unsigned char" or "unsigned byte")
         - 2 bytes (16 bits) can represent unsigned 0 to 65535 (known as a "short", sometimes "word")
         - 4 bytes (32 bits) can represent unsigned 0 to 4294967295 (known as an "int", sometimes "long")
-      - Negative integers are usually represented in "signed" binary
-        - 1 byte (8 bits) can represent signed -128 to 127 
+      - Negative integers are usually represented in "signed" binary 
+        - 2's Complement is the most common way to represent negative numbers in binary
+        - 2's Complement is the "complement" of the number (flipping the bits) and then adding 1
+        - 2's Complement is used to represent negative numbers in binary because it makes the "addition" and "subtraction" of numbers easier
+        - Twos complement: Negative numbers in binary 
+          - https://www.youtube.com/watch?v=4qH4unVtJkE
+        - 1 byte (8 bits) can represent signed -128 to 127
+        - 2 bytes (16 bits) can represent signed -32768 to 32767
+        - 4 bytes (32 bits) can represent signed -2147483648 to 2147483647
       - Floating point numbers are usually represented in "IEEE 754" format
         - 4 bytes (32 bits) can represent a floating point number
         - 8 bytes (64 bits) can represent a double precision floating point number
         - Floating point numbers will use a "mantissa" and an "exponent" to represent the number in scientific notation
         - Due to the way floating point numbers are represented, they are not exact, and can have rounding errors!
-        - Why Is This Happening?! Floating Point Approximation https://www.youtube.com/watch?v=2gIxbTn7GSc
-    - Individual characters are usually represented in Ascii (1 byte) or Unicode(1 or more bytes)
+        - Why Is This Happening?! Floating Point Approximation 
+          - https://www.youtube.com/watch?v=2gIxbTn7GSc
+    
+    - ### Characters/Letters are usually represented in ASCII (1 byte) or Unicode(1 or more bytes)
       - Ascii is a 1 byte (8 bit) representation of the most common letters and symbols
       - Unicode is a 1 or more byte representation of all the letters and symbols in all the world's languages
-  - Arrays
+    
+    - ### Something else?
+      - Numbers and Characters are the most common things to represent in memory, but anything can be represented in memory
+      - Colors, Sounds, Images, Videos, Programs, Documents, etc.
+      - Anything that can be represented as a series of values can be represented in memory
+      - For example, images are usually represented as a series of "pixels" or "picture elements" which are a series of 
+        "colors" which are a series of "numbers" that represent the red, green, and blue values of the color
+  
+  - ## Arrays
     - A way to represent a "list" of things in memory
     - The "things" can be anything, like numbers, letters, strings or even other arrays (multi-dimensional arrays)
     - The "things" are usually all the same size & type
     - The "things" are usually all stored in a contiguous block of memory
     - The "things" are usually accessed by an "index" which is a number that represents the position of the "thing" in the array
-  - Strings
+  
+  - ## Strings
     - A way to represent a list of letters in memory, to represent words and sentences and paragraphs and documents
     - The "characters" are usually stored in a contiguous block of memory
     - The "characters" are sometimes terminated by a special "end of string" character, or have a length stored somewhere
     - The "characters" are usually accessed by an "index" which is a number that represents the position of the "characters" in the string
-  - Pointer
+  
+  - ## Pointer
     - A number that represents the "address" of another location in memory
     - Diagram:
       - Address: Value 
-      - 0x00000001: 0x00000003  `// 0x00000000 is the address, 0x00000003 is the value of the pointer, pointing to address 0x00000003`
-      - 0x00000001: 0x00000000  
-      - 0x00000002: 0x00000000
-      - 0x00000003: 0x00000041  `// 0x00000003 is the address, 0x00000041 is character 'A'`
+      - 0x00000000: 0x00  `// 0x00000000 is the address, 0x00000004 is the value of this pointer, so it's pointing to address 0x00000004`
+      - 0x00000001: 0x00  
+      - 0x00000002: 0x00
+      - 0x00000002: 0x04  `// This is a pointer so it's 4 bytes long, and the value is 0x00000004`
+      - 0x00000004: 0x41  `// 0x00000004 is the address, 0x41 is character 'A' as ASCII, or 65 as unsigned byte integer`
     - The pointer at 0x00000001 is pointing to the address 0x00000003, which contains the character 'A'
-  - Structures 
+  
+  - ## Structures 
     - Known as "Records" or "Data Classes" 
       - also called as "structs", sometimes referred to as "classes" and "objects"
     - A way to represent a "structured data" in memory
@@ -223,26 +335,30 @@
     - The "fields" are usually accessed by a "name" which is a human-readable label for the "field"
     - The "fields" are usually stored in a contiguous block of memory
     - The "fields" are usually different types (like numbers, letters, strings, dates, times, arrays, and other Records)
-  - Stack
+  
+  - ## Stack
     - A way to represent a "last in, first out" list of things in memory, similar to a stack of dinner plates
     - The "things" are usually all the same size & type
     - The "things" are usually all stored in a contiguous block of memory
     - The "things" are usually accessed by a "stack pointer" which is a number that represents the position of the top-most "thing" in the stack
     - Efficient for adding and removing items from the list, but not efficient for accessing items in the list
-  - Queue
+  
+  - ## Queue
     - A way to represent a "first in, first out" list of things in memory, similar to a line of people waiting for a bus
     - The "things" are usually all the same size & type
     - The "things" are usually all stored in a contiguous block of memory
     - The "things" are usually accessed by a "head" and "tail" which are numbers that represent the position of the first and last "thing" in the queue
     - Efficient for adding and removing items from the list, but not efficient for accessing items in the list
-  - Linked List
+  
+  - ## Linked List
     - A way to represent a "list" of things in memory, where each "thing" points ONLY to the next "thing" in the list
     - The "things" are usually all the same size & type
     - The "things" are NOT stored in a contiguous block of memory, which is the main difference between an array and a linked list
     - The "things" are usually accessed by a "pointer" which is a number that represents the location of the "thing" in memory
     - Used to represent a "dynamic" list, where the size of the list is not known ahead of time
     - Efficient for adding and removing items from the list, but not efficient for accessing items in the list
-  - Tree
+  
+  - ## Tree
     - A way to represent a "hierarchical" list of things in memory, where each "thing" points to one or MORE "things" in the list
     - The "things" are usually all the same size & type
     - The "things" are NOT stored in a contiguous block of memory, which is the main difference between an array and a tree
