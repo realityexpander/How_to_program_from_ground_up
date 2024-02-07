@@ -152,15 +152,16 @@
     - The mnemonics are then translated into the binary opcodes by a "compiler" or "assembler"
   
   - ### Common Machine Code Opcodes (actual opcode is for Motorola 6502 CPU)
-    - 0xA9 LDA (load a value from main memory into a register) 
-    - 0xA2 MOV (move a value from one register to another) 
-    - 0x8D STA (store a value from a register into main memory)
-    - 0x4C JMP (start executing next instruction at a different location in main memory by updating the Program Counter with a new value)
-    - 0x6D ADC (add the values in two registers and store the result in a third register and update the "flags" register if there is a "carry")
-    - 0xCD CMP (compare the values in two registers and update the "flags" register with the result)
-    - 0xD0 BNE (if the "flags" register is not zero, start executing at a different location in main memory ie: "conditional branching")
+    - `Hex: Opcode Mnemonic` 
+    - `0xA9: LDA` Load a value from main memory into a register 
+    - `0xA2: MOV` Move a value from one register to another 
+    - `0x8D: STA` Store a value from a register into main memory
+    - `0x4C: JMP` Start executing next instruction at a different location in main memory by updating the Program Counter with a new value
+    - `0x6D: ADC` Add the values in two registers and store the result in a third register and update the "flags" register if there is a "carry"
+    - `0xCD: CMP` Compare the values in two registers and update the "flags" register with the result
+    - `0xD0: BNE` If the "flags" register is not zero, start executing at a different location in main memory ie: "conditional branching"
   
-  - ### Clock - "Tick-tock you don't stop, the heart beat of the CPU"
+  - ### Clock - "The heart beat of the CPU"
     - Clock Circuit - Basically a emits a short pulse of electricity at a regular interval
       - a "tick" of the clock, like flashing a light to the beat
     - Used synchronizes the operations of the CPU
@@ -177,7 +178,7 @@
     - Defaults to the first memory location(0x00000000), and then increments by 1 after each instruction is executed
     - The "program counter" is updated by the "clock" at the end of each "cycle", or when a "jump" instruction is executed
   
-  - ### Fetch-Decode-Execute Cycle of the CPU - "The Dumb Work of the CPU"
+  - ### Fetch-Decode-Execute Cycle of the CPU — "The Dumb Quick Work of the CPU"
     - Fetch means to get the next opcode instruction from main memory and put it into the "instruction register" on the CPU
     - Decode means to figure out what the opcode operation is and what the operands are (if any)
       - "Operands" are the "arguments" to the operation. ie: the "source" and "destination" of the operation 
@@ -190,7 +191,7 @@
       - The number of cycles is totally dependent on the specific CPU and the specific operation
       - The operation may need to store the result back into main memory or into one or more registers
   
-  - ### Registers - "The Tiny Superfast Memory of the CPU"
+  - ### Registers — "The Tiny Superfast Memory of the CPU"
     - Registers are a small amount of very fast memory that is part of the CPU
     - The registers are used to store the results of the instructions, and current operands being executed
     - The registers are used to store the current "state" of the CPU, like the "program counter" and the "flags" register
