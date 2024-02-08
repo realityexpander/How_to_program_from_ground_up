@@ -10,7 +10,7 @@ class Page(  // <-- the "Page" class constructor, the "val" keyword means the va
 	}
 
 	fun updateContent(newContent: String): Page {
-		return Page(newContent)  // <-- the "updateContent" method is expected to return a new object with the new state.
+		return Page(newContent)  // <-- The "updateContent" method returns a new object with the new state.
 	}
 
 	fun inspectContent(): String {
@@ -24,31 +24,29 @@ class Book(
 ) {
 	fun view() {
 		println("Book: $title, # of Pages: ${pages.size}")
-		pages.forEach { it.view() }
+		pages.forEach { it.view() }  // <-- The "forEach" method is a higher order function that takes a lambda function
+                                   // `it` refers to the current element in the list, the `page` object.
 	}
 
-	fun updateName(newTitle: String): Book {
-		return Book(newTitle, pages)  // <-- the "updateName" method is expected to return a new object with the new state.
+	fun updateTitle(newTitle: String): Book {
+		return Book(newTitle, pages)  // <-- The "updateName" method returns a new object with the new state.
 	}
 
 	fun updatePages(newPages: List<Page>): Book {
-		return Book(
-			title,
-			newPages
-		)  // <-- the "updatePages" method is expected to return a new object with the new state.
+		return Book(title, newPages)  // <-- The "updatePages" method returns a new object with the new state.
 	}
 }
 
 class Application(
-	private val book: Book  // <-- the "Application" class, the "val" keyword means the variable is immutable.
+	val book: Book  // <-- The "Application" class, the "val" keyword means the variable is immutable.
 ) {
 	fun view() {
 		println("Application Viewing: ${book.title}")
 		book.view()
 	}
 
-	fun updateBook(newDocument: Book): Application {
-		return Application(newDocument)  // <-- the "updateDocument" method is expected to return a new object with the new state.
+	fun updateBook(newBook: Book): Application {
+		return Application(newBook)  // <-- The "updateBook" method returns a new object with the new state.
 	}
 }
 
@@ -63,7 +61,7 @@ fun main() {
 	val book = Book(
 		"MyDocument.txt",
 		pages
-	) // <-- the "val" keyword means the variable is immutable and can only be assigned once.
+	) // <-- The "val" keyword means the variable is immutable and can only be assigned once.
 	var app = Application(book) // <-- The "var" keyword means the variable is mutable,
 	//     `app` is a "var" because it's expected to change state.
 	// Every other variable is a "val" and is immutable.
@@ -90,12 +88,14 @@ fun main() {
 	// Page: Page 1 Content
 	// Page: Page 2 Content
 	// Page: Page 3 Content
-	// app.book = Book("NewBook.txt")  // <-- will not compile, as the variable `book` is immutable and cannot be changed.
+
+	// app.book = Book("NewBook.txt")  // <-- This will not compile,
+                                      //     as the variable `book` is immutable and cannot be changed.
 
 	// To change the state of the application, a whole new object must be created with the new state,
 	// usually based on a copy the old state, with modifications to reflect the new state.
 	val newPages = pages
-		.filter { page ->  // instead of using imperative "for" loops, "filter" internally uses a loop to create
+		.filter { page ->  // Instead of using imperative "for" loops, "filter" internally uses a loop to create
 			// a new list of pages.
 			page.inspectContent() != "Page 2 Content" // <-- removes the 2nd page from the list.
 		}
@@ -106,9 +106,12 @@ fun main() {
 			)
 		}
 		.toList()  // <-- converts the mutable list back to an immutable list.
-	app = app.updateBook(
-		Book("UpdatedBook.txt", newPages)
-	)
+
+   app = app.updateBook(
+      app.book // <-- Using the `book` from the current state of the application.
+         .updateTitle("UpdatedBook.txt") // <-- Creates a new book with the updated name and the same pages.
+         .updatePages(newPages)  // <-- Creates a new book with the updated pages and the same title.
+   )
 
 	app.view()  // <-- will print:
 	// Application Viewing: UpdatedBook.txt

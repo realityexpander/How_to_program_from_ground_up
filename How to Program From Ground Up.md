@@ -1137,25 +1137,25 @@
            pages.forEach { it.view() }
         }
 
-	    fun updateName(newTitle: String): Book {
-		   return Book(newTitle, pages)  // <-- the "updateName" method is expected to return a new object with the new state.
+	    fun updateTitle(newTitle: String): Book {
+		   return Book(newTitle, pages)  // <-- The "updateTitle" method returns a new object with the new state.
 	    }
 
 	    fun updatePages(newPages: List<Page>): Book {
-		    return Book(title, newPages)  // <-- the "updatePages" method is expected to return a new object with the new state.
+		    return Book(title, newPages)  // <-- The "updatePages" method returns a new object with the new state.
 	    }
      }
 
      class Application(
-        private val book: Book  // <-- the "Application" class, the "val" keyword means the variable is immutable.
+        private val book: Book  // <-- The "Application" class, the "val" keyword means the variable is immutable.
      ) {
         fun view() {
            println("Application Viewing: ${book.title}")
            book.view()
         }
 
-        fun updateBook(newDocument: Book): Application {
-		   return Application(newDocument)  // <-- the "updateDocument" method is expected to return a new object with the new state.
+        fun updateBook(newBook: Book): Application {
+		   return Application(newBook)  // <-- The "updateBook" method returns a new object with the new state.
 	    }
      }
      
@@ -1177,19 +1177,19 @@
                                     //     `app` is a "var" because it's expected to change state.
                                     // Every other variable is a "val" and is immutable.
 
-	    // The above code could be arranged in the functional style, where the state of the program is created in 
+        // The above code could be arranged in the functional style, where the state of the program is created in 
         // a single line!
-	    // This style is also known as "declarative" style, as opposed to the familiar "imperative" style.
-	    // Using declaritive style, the code is more about "what" is being done, rather than "how" it's being done.
-	    // You only see the high-level view, and the implementation details are hidden deeper in the code.
+        // This style is also known as "declarative" style, as opposed to the familiar "imperative" style.
+        // Using declaritive style, the code is more about "what" is being done, rather than "how" it's being done.
+        // You only see the high-level view, and the implementation details are hidden deeper in the code.
 	    app = Application(
 	    	Book(
-	    		title = "MyDocument.txt",
-	    		pages = listOf(
-	    			Page("Page 1 Content"),
-	    			Page("Page 2 Content"),
-	    			Page("Page 3 Content")
-	    		)
+	    	   title = "MyDocument.txt",
+	    	   pages = listOf(
+	    	      Page("Page 1 Content"),
+	    	      Page("Page 2 Content"),
+	    	      Page("Page 3 Content")
+	    	   )
 	    	)
 	    )
 
@@ -1215,9 +1215,13 @@
 	    		)
 	    	}
 	    	.toList()  // <-- converts the mutable list back to an immutable list.
-	    app = app.updateBook(
-	    	Book("UpdatedBook.txt", newPages)
-	    )
+	    
+        // The `updateBook` method is called to update the `book` which will create a `app` with the new state.
+        app = app.updateBook(
+           app.book // <-- Using the `book` from the current state of the application to copy the state of the `book`.
+              .updateTitle("UpdatedBook.txt") // <-- Creates a new book with the updated name and the same `pages`.
+              .updatePages(newPages)  // <-- Creates a new book with the updated `pages` and the same `title`.
+        )
         
 	    app.view()  // <-- will print:
 	                // Application Viewing: UpdatedBook.txt
@@ -1241,14 +1245,22 @@
      // Page: Page 3 Content
      // Page: New Page 4 Content
      
-     ``` 
+     ```
+   - Live Code Example: [BOOP example](src/main/kotlin/boopExample.kt)   
    - There are only a few BOOP languages, "Smalltalk" and, _incredibly_, "Javascript" are among the most popular ones.
  
  - ## Functional Programming 1950s-Present
-   - ### Main Idea: Immutability 
+   - ### Main Idea: Immutability & No Side Effects
      - Functional Programming's main idea is to avoid "side effects" and "shared mutable state" of the program
    - All functions in the core of the application return a value and have no "side effects" on any other "state" of 
      the program.
+   - It's more of a style of programming than a "paradigm" as it can be used in any language, but it's most effective 
+     in languages that are designed to be "functional" from the ground up.
+   - The reason for this is that the "state" of the program is "immutable" and passed as arguments to the functions, 
+     and a new state is returned as the result of the calls to the functions.
+   - This makes the program easier to understand and maintain, and allows for "parallel" and "concurrent" programming 
+     to be done more easily.
+   - It also eliminates whole classes of bugs that are caused by "side effects" and "shared mutable state" of the program.
    - The state of the program is immutable and passed as arguments to the functions
    - A new state is returned as the result of the calls to the functions
    - Functions are "first-class citizens" and can be passed as arguments to other functions, just like normal variables and objects
@@ -1256,7 +1268,7 @@
      - This allows the functions to be "composed" together to create new functions from existing functions
      - These functions are called "lambdas," "closures," "anonymous functions" or "function literals," 
        and "higher-order functions" all interchangeably. It's all just functions!
-   - Examples of functional languages are "Lisp", "Clojure" and "F#" and "Kotlin"
+   - Examples of functional languages are "Lisp", "Clojure" and "Javascript" and "Kotlin"
    - Example (Kotlin):
        ```Kotlin
        fun main() {
@@ -1267,13 +1279,11 @@
               second: (Int, Int) -> Int,  // <-- a lambda that takes 2 integers and returns an integer, it's executed second.
               a: Int, 
               b: Int -> 
-              
-              second(first(a, b), b)  // <-- calls the `first` lambda with the 2 integers (a & b), 
-                                      //     then calls the `second` lambda with the result of `first()` and the 2nd integer (b)
+                 second(first(a, b), b)  // <-- calls the `first` lambda with the 2 integers (a & b), 
+                                         //     then calls the `second` lambda with the result of `first()` and the 2nd integer (b)
           }              
-     
           
-          val result = addThenAnother(add, multiply, 10, 2) // <-- calls the lambda with the 2 functions and 2 integers 
+          val result = firstThenSecond(add, multiply, 10, 2) // <-- calls the lambda with the 2 functions and 2 integers 
           println(result) // result will be 24
        }
        
@@ -1282,7 +1292,7 @@
        // Output:
        // 24
      
-       ``` 
+   - ``` 
 
    
 
