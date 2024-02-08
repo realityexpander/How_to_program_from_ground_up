@@ -187,14 +187,14 @@
   - Groups of transistor logic gates packaged together to perform a specific task
   - Robert Noyce, inventor of first monolithic IC 
     
-    ![the_ic.png](the_ic.png)
+    ![the_ic.png](assets/the_ic.png)
   - Typical Early Logic Gate Package
     
-    ![logic-gate-package.png](logic-gate-package.png)
+    ![logic-gate-package.png](assets/logic-gate-package.png)
   
   - Close up of silicon wafer wired to package
     
-    ![chip-wired-to-package.png](chip-wired-to-package.png)
+    ![chip-wired-to-package.png](assets/chip-wired-to-package.png)
      
   - The logic gate "package" 
   - A Package is a group of transistors for a specific logic operation placed on a single chip contained in a plastic 
@@ -258,9 +258,9 @@
   - ## Representing Values in Memory 
     - ### Binary Counting
      
-      ![8-bit-binary.png](8-bit-binary.png)
+      ![8-bit-binary.png](assets/8-bit-binary.png)
     - ### Hexadecimal Counting
-      ![hexadecimal.png](hexadecimal.png)
+      ![hexadecimal.png](assets/hexadecimal.png)
       
     - ### ASCII Representation of Characters
       - ASCII is a 1 byte (8 bit) representation of the most common letters and symbols used in English
@@ -270,17 +270,17 @@
         The control codes are used to synchronize communication between devices, like "start of text" or "end of transmission"
       - Look at the numbers in the ASCII table and see if you can see the pattern
         - The Capital letters are 1 bit higher than the lowercase letters
-        ![ASCII-binary.png](ASCII-binary.png)
+        ![ASCII-binary.png](assets/ASCII-binary.png)
       
       - ASCII table using Hexadecimal - Easier to read by humans, much more compact than binary
       - 2 Hexadecimal Characters can represent 1 byte
-        ![ascii_hexadecimal.png](ascii_hexadecimal.png)
+        ![ascii_hexadecimal.png](assets/ascii_hexadecimal.png)
 
   - ### Computer Block Diagram
-    - ![img_3.png](img_3.png)
+    - ![img_3.png](assets/Computer_block_diagram.png)
 
     - The MPU (Microprocessor Unit) is the "brain" of the computer (CPU) 
-    - ![img_7.png](img_7.png)
+    - ![img_7.png](assets/MPU.png)
 
   - ### Clock — "The heart beat of the CPU to keep it all in sync"
     - Clock Circuit - Basically a emits a short pulse of electricity at a regular interval
@@ -510,20 +510,20 @@
     - The "things" are usually accessed by an "index" which is a number that represents the position of the "thing" in the array
     
     - 1D Arrays
-    ![array.png](arrays.png)
+    ![array.png](assets/arrays.png)
     
     - 2D Arrays
      ![2d_arrays.png](assets/2d_arrays.png)
     
     - 2D Arrays in Code (C) 
-    - ![2dArraysInC.png](2dArraysInC.png) 
+    - ![2dArraysInC.png](assets/2dArraysInC.png) 
   
   - ### Strings
     - A way to represent a list of letters in memory, to represent words and sentences and paragraphs and documents
     - The "characters" are usually stored in a contiguous block of memory
     - The "characters" are sometimes terminated by a special "end of string" character, or have a length stored somewhere
     - The "characters" are usually accessed by an "index" which is a number that represents the position of the "characters" in the string
-    ![strings.png](strings.png)
+    ![strings.png](assets/strings.png)
   
   
   - ### Pointer
@@ -541,7 +541,7 @@
     - Address 0x00000004 contains the value 0x41, which represents the character 'A' or the number 65 as an unsigned byte integer
     - it's stored in "Little Endian" format, so the least significant bytes are stored first.
   
-      ![img_8.png](img_8.png) 
+      ![img_8.png](assets/pointer.png) 
   
   - ### Structures 
     - Known as "Records" or "Data Classes" 
@@ -573,7 +573,7 @@
     - The "things" are usually all stored in a contiguous block of memory
     - The "things" are usually accessed by a "stack pointer" which is a number that represents the position of the top-most "thing" in the stack
     - Efficient for adding and removing items from the list, but not efficient for accessing items in the list
-      ![stack.png](stack.png)  
+      ![stack.png](assets/stack.png)  
 
   - ### Queue
     - A way to represent a "first in, first out" list of things in memory, similar to a line of people waiting for a bus
@@ -581,7 +581,7 @@
     - The "things" are usually all stored in a contiguous block of memory
     - The "things" are usually accessed by a "head" and "tail" which are numbers that represent the position of the first and last "thing" in the queue
     - Efficient for adding and removing items from the list, but not efficient for accessing items in the list
-      ![queue.png](queue.png)
+      ![queue.png](assets/queue.png)
   
   - ### Linked List
     - A way to represent a "list" of things in memory, where each "thing" points ONLY to the next "thing" in the list
@@ -590,7 +590,7 @@
     - The "things" are usually accessed by a "pointer" which is a number that represents the location of the "thing" in memory
     - Used to represent a "dynamic" list, where the size of the list is not known ahead of time
     - Efficient for adding and removing items from the list, but not efficient for accessing items in the list
-      ![linkedList.png](linkedList.png)
+      ![linkedList.png](assets/linkedList.png)
 
   - ### Tree
     - A way to represent a "hierarchical" list of things in memory, where each "thing" points to one or MORE "things" in the list
@@ -601,7 +601,7 @@
     - Special Case of a tree is a "Binary Tree" where each "thing" points to only two "things" in the list
       - Binary Trees are used to represent "sorted" lists, where each "thing" is greater than the "thing" to the left, and less than the "thing" to the right
       
-        ![tree.png](tree.png)
+        ![tree.png](assets/tree.png)
 
 # High-Level Language Styles
 
