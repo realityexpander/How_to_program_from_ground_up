@@ -21,20 +21,20 @@
   - Everything in computing is REPRESENTING digital information "as" something _else_.
   - Kinds of representations through history:
     
-    - Knots & Beads on a string
+    - Knots & Beads on a string - prehistoric, 6000 BC to 1500 AD
       - [<img src="assets/beads_on_string.png" width="280">](https://www.peruforless.com/blog/quipu/)
     
-    - Physical indentations in clay
+    - Physical indentations in clay - 8000 BC to 100 AD
       - [<img src="assets/cuneiform.png" width="280">](https://www.thoughtco.com/clay-tokens-mesopotamian-writing-171673)
       - [<img src="assets/phyiscal_indentations.png" width="280">](https://www.thoughtco.com/clay-tokens-mesopotamian-writing-171673)
     
-    - Beads on an abacus
+    - Beads on an abacus - 3000 BC to present
       - [<img src="assets/abacus2.png" width="280">](https://en.wikipedia.org/wiki/Abacus) 
     
-    - Ink Marks on paper
+    - Ink Marks on paper - 3000 BC to present
         - [<img src="assets/paper_ledger.png" width="280">](https://www.moderntreasury.com/journal/history-of-ledgers)
     
-    - Punched Holes in a paper card
+    - Punched Holes in a paper card - 1800s to 1970s
       - Vast improvement over the paper ledger
       - Collection of data was standardized, fast and could be read by a machine
       - Data collected from the 1890 US Census was the first large scale use of punched cards
@@ -43,12 +43,13 @@
       - [<img src="assets/punched_card.png" width="280">](https://en.wikipedia.org/wiki/Punched_card)
       - [<img src="hollerith_counter.png" width="280">](https://en.wikipedia.org/wiki/Hollerith_machine)
     
-    - Remnants of a photon strike on a piece of glass coated with a thin layer of phosphor
+    - Remnants of photons hitting a piece of glass coated with a thin layer of phosphor - 1940s to 1980s
       - [<img src="assets/williams_tube.png" width="280">](https://en.wikipedia.org/wiki/Williams_tube)
       - [<img src="assets/williams_tube2.png" width="280">](https://en.wikipedia.org/wiki/Williams_tube)
       - [<img src="williams_tube3.png" width="280">](https://ub.fnwi.uva.nl/computermuseum/williamstube.html)
       
-    - Magnetic polarization of specific areas on magnetic material, or the presence of a magnetic field in a specific area
+    - Magnetic Phenomenon - 1950s to present
+      - Electronically detectable areas on magnetizable material, or the presence of a magnetic field in a specific area
       - Core Memory
         - [<img src="assets/core_memory.png" width="280">](https://en.wikipedia.org/wiki/Core_memory) 
       - Magnetic Tape
@@ -56,7 +57,7 @@
       - Magnetic Disk
       - [<img src="assets/10mb_hard_disk.png" width="280">](https://en.wikipedia.org/wiki/IBM_305_RAMAC)
     
-    - Detectable electrical capacitance in a tiny area of silicon
+    - Detectable electrical capacitance in a tiny area of silicon - 1960s to present
       - [<img src="assets/DRAM.png" width="280">](https://en.wikipedia.org/wiki/Dynamic_random-access_memory)
   
   - Creating Machines to Use Boolean Logic Enables Complex Custom General Solutions to Certain Class of Problems
@@ -198,8 +199,10 @@
     
   - ## The Mighty Microprocessor (groups of integrated chips -> all put on one chip)
     - Contains a CPU (Central Processing Unit) and a small amount of ultra fast memory (called "Registers")
-    - Has a "clock" to synchronize the operations of the CPU
-    - Has a "program counter" to keep track of the current instruction in memory that the CPU is executing
+    - The CPU is just a clever and somewhat complex arrangement of logic gates that can perform a series of logical operations
+    - Each part of the CPU is made of millions of the same kinds of logic gates that we've already discussed
+    - The CPU has a "clock" to synchronize the operations of the CPU
+    - It also has a "program counter" to keep track of the current instruction in memory that the CPU is executing
     - Has an "ALU" (Arithmetic Logic Unit) to perform basic arithmetic and logical operations
       - How does an ALU work? 
         - Learn how computers add numbers and build a 4 bit adder circuit 
@@ -239,20 +242,39 @@
   - The Machine opcodes are unwieldy for humans to remember, so we use "mnemonics" to represent them
     - Mnemonics are just human-readable names for the opcodes, like "LOAD" or "STORE" or "ADD" or "SUBTRACT"
     - The mnemonics are then translated into the binary opcodes by a "compiler" or "assembler"
-  
-  - ### Common Machine Code Opcodes (actual opcode is for Motorola 6502 CPU)
-    - `Hex: Opcode Mnemonic` 
-    - `0xA9: LDA` Load a value from main memory into a register 
-    - `0xA2: MOV` Move a value from one register to another 
-    - `0x8D: STA` Store a value from a register into main memory
-    - `0x4C: JMP` Start executing next instruction at a different location in main memory by updating the Program Counter with a new value
-    - `0x6D: ADC` Add the values in two registers and store the result in a third register and update the "flags" register if there is a "carry"
-    - `0xCD: CMP` Compare the values in two registers and update the "flags" register with the result
-    - `0xD0: BNE` If the "flags" register is not zero, start executing at a different location in main memory ie: "conditional branching"
-  
-  - ### Clock — "The heart beat of the CPU to keep it in sync"
+
+  - ## Representing Values in Memory 
+    - ### Binary Counting
+     
+      ![8-bit-binary.png](8-bit-binary.png)
+    - ### Hexadecimal Counting
+      ![hexadecimal.png](hexadecimal.png)
+      
+    - ### ASCII Representation of Characters
+      - ASCII is a 1 byte (8 bit) representation of the most common letters and symbols used in English
+      - ASCII stands for "American Standard Code for Information Interchange"
+      - Note: The bits are used to categorize the characters into different groups & very intentionally designed
+      - The first 32 characters are "control characters" and are not printable. 
+        The control codes are used to synchronize communication between devices, like "start of text" or "end of transmission"
+      - Look at the numbers in the ASCII table and see if you can see the pattern
+        - The Capital letters are 1 bit higher than the lowercase letters
+        ![ASCII-binary.png](ASCII-binary.png)
+      
+      - ASCII table using Hexadecimal - Easier to read by humans, much more compact than binary
+      - 2 Hexadecimal Characters can represent 1 byte
+        ![ascii_hexadecimal.png](ascii_hexadecimal.png)
+
+  - ### Computer Block Diagram
+    - ![img_3.png](img_3.png)
+
+    - The MPU (Microprocessor Unit) is the "brain" of the computer (CPU) 
+    - ![img_7.png](img_7.png)
+
+  - ### Clock — "The heart beat of the CPU to keep it all in sync"
     - Clock Circuit - Basically a emits a short pulse of electricity at a regular interval
       - a "tick" of the clock, like flashing a light to the beat
+      - Often uses a quartz crystal (XTAL in schematic) and the piezoelectric effect to keep a steady beat, like a watch
+      - Can also use a 555 timer chip to generate a clock signal
     - Used synchronizes the operations of the CPU
       - Example Implementation - Astable 555 timer - 8-bit computer clock - part 1
       - https://www.youtube.com/watch?v=kRlSFm519Bo 
@@ -261,27 +283,42 @@
     - The cycle of the clock is not the same as the cycle of the CPU, but the CPU normally does one operation per cycle
       but some operations may take more than one clock cycle to complete.
   
-  - ### Program Counter - "Where in memory is the current instruction being executed?"
+  - ### Program Counter (PC) - "Where in memory is the current instruction being executed?"
     - The "program counter" (PC) is a special register that keeps track of the current memory location of the
       current instruction that the CPU will execute/is executing
+    - All instructions are processed one at a time per CPU, and never more than 1 instruction at a time.
     - Defaults to the first memory location(0x00000000), and then increments by 1 after each instruction is executed
     - The "program counter" is updated by the "clock" at the end of each "cycle", or when a "jump" instruction is executed
-  
-  - ### Fetch-Decode-Execute Cycle of the CPU — "The Dumb Quick Work of the CPU"
-    - Fetch means to get the next opcode instruction from main memory and put it into the "instruction register" on the CPU
+
+  - ### Common Machine Code Opcodes (actual opcode is for Motorola 6502 CPU)
+    - `Hex: Opcode Mnemonic`
+    - `0xA9: LDA` Load a value from main memory into a register
+    - `0xA2: MOV` Move a value from one register to another
+    - `0x8D: STA` Store a value from a register into main memory
+    - `0x4C: JMP` Start executing next instruction at a different location in main memory by updating the Program Counter with a new value
+    - `0x6D: ADC` Add the values in two registers and store the result in a third register and update the "carry flag" register if there is a "carry"
+    - `0xCD: CMP` Compare the values in two registers and update the "flags" register with the result
+    - `0xD0: BNE` If the "flags" register is not zero, start executing at a different location in main memory ie: "conditional branching"
+
+  - ### Fetch-Decode-Execute Cycle of the CPU — "The Dumb-Quick-Work of the CPU"
+    - Fetch means to get the next opcode instruction from main memory address in the PC and puts the opcode into 
+      the "Instruction register (IR)" on the CPU
     - Decode means to figure out what the opcode operation is and what the operands are (if any)
       - "Operands" are the "arguments" to the operation. ie: the "source" and "destination" of the operation 
       - The operation may need to fetch more data from main memory or from a register to get the operands for the instruction
       - The operation may take more than one cycle to prepare for execution
     - Execute means to actually perform the operation
-      - ie: add the values in two registers and store the result in a third register, 
-        then set a "flags register" if the result is zero, negative or had to "carry" a bit
-      - The operation may require more than one cycle to complete
+      - For example: opcode 0x6D means add the values in X & Y registers and store the result in the ACC register, 
+        then set a flags register if the result is negative or had to carry a bit
+      - The operation may require more than one cycle to complete (cpu-cycle)
       - The number of cycles is totally dependent on the specific CPU and the specific operation
       - The operation may need to store the result back into main memory or into one or more registers
+    - After the operation is complete, the program counter (PC) is updated with the address of the next instruction to 
+      be executed (or with a different location in memory if a "jump" instruction is executed)
+    - The "fetch-decode-execute" cycle is the basis for all computing, and is the most important part of the CPU
   
-  - ### Registers — "The Tiny Superfast Memory Closest to the CPU"
-    - Registers are a small amount of very fast memory that is part of the CPU
+  - ### Registers — "The Tiny Superfast Memory Nearest to the CPU & Keeps the State of the CPU"
+    - Registers are a small amount of super fast memory that is built into the CPU
     - The registers are used to store the results of the instructions, and current operands being executed
     - The registers are used to store the current "state" of the CPU, like the "program counter" and the "flags" register
       - Some registers store the values of the last arithmetic operation, like from an "ADD" or "SUBTRACT" 
@@ -293,9 +330,30 @@
         - if the result of the last operation was negative, then the "negative" flag is set to 1; otherwise it's set to 0
         - if the result of the last operation had to "carry" a bit, then the "carry" flag is set to 1; otherwise it's set to 0
 
-  - ### Example Machine Language Program (6502 — Add 2 numbers and store the result in memory)
-  - ```
-    Assembly   Opcode & Operand    
+  - ### Arithmetic Logic Unit (ALU) — "The Calculator of the CPU"
+    - The ALU is the part of the CPU that performs the basic arithmetic and logical operations
+    - The ALU is used to perform the "Add" and "Subtract" operations
+      - Stores the result of the operation in the "Accumulator" register  
+      - Sets the "carry" flag if the result of the operation had to "carry" a bit
+      - Sets the "negative" flag if the result of the operation was negative
+    - The ALU is used to perform the "Compare" operation, and all other logical operations operations
+        - Sets the "Zero" flag if the result of the operation was zero
+        - Sets the "Greater" flag if the result of the operation was greater than the other operand
+        - Sets the "Less" flag if the result of the operation was less than the other operand
+        - Sets the "Equal" flag if the result of the operation was equal to the other operand
+        
+  - ### Control Unit
+    - The "Control Unit" is the part of the CPU that controls the "fetch-decode-execute" cycle
+    - It synchronizes the operations of the CPU with the RAM, ROM, and other parts of the computer
+    - It keeps track of the internal cpu-cycles for each instruction (different than clock cycles, as some operations may take more than one clock cycle to complete)
+    - It updates the "program counter" with the next instruction to be executed, or with a different location in memory if a "jump" instruction is executed.
+
+  - ### Example Machine Language Program (Motorola 6502 CPU)
+    
+    ```
+    Add 2 numbers and store the result in memory)
+    
+    Mnemonic   Opcode & Operand    
     LDA #5     A905   // Load the value 5 into the "A" register, opcode: 0xA9 operand: 0x05
     STA 0x0000 8D0000 // Store the value in the "A" register into memory location 0x0000, opcode: 0x8D operands: 0x00 0x00
     LDA #7     A907   // Load the value 7 into the "A" register,  opcode: 0xA9 operand: 0x07                                            
@@ -307,55 +365,63 @@
     // Memory state after the program has executed:
     0x0000: 0x05
     0x0001: 0x07
-    0x0002: 0x0C
+    0x0002: 0x0C      // <-- The result of the addition of 5 and 7 = 12, which is 0x0C in hexadecimal
     
     // The result of the addition of 5 and 7 is 12, which is 0x0C in hexadecimal
     ```
 
 - # Assembly Language
-  - Assembly Language is a "human-readable" representation of the "machine code" that the CPU can execute
-  - The "mnemonics" are translated into the binary opcodes by an "assembler" which is a program that 
-    translates the "assembly language mnemonics" nearly directly into "machine code" for a particular CPU.
+  - Assembly Language is a "human-readable" mnemonic representation of the "machine code" that the CPU can executes directly
+  - The mnemonics are translated into the binary opcodes by an "Assembler"
+  - The assembler is a program that converts and expands the mnemonics into the specific particular binary opcodes. 
   - Assembly Language is the most "primitive" language that a human can reasonably use to program a computer in an efficient manner.
-  - It's totally possible to program a computer using just "machine code" (the binary opcodes), but it's very difficult and error-prone.
+  - It's totally possible to program a computer using just "machine code" (the binary opcodes), but it's challenging and error-prone.
   - There is no "universal" assembly language, each CPU has it's own assembly language, so the assembly language is 
-    completely dependent on the specific CPU and is usually defined by the manufacturer of the CPU
+    completely dependent on the specific CPU and is usually defined by the manufacturer of the CPU.
   - The complexity of the assembly language is usually directly related to the complexity of the CPU & the number of 
     different operations that the CPU can perform.
   
   - ## Common Assembly Language Operations
 
-  - ### Jump - Usually mnemonic `JMP`
+  - ### Jump 
     - The "goto" statement of machine code
     - Changes the program counter (PC) to point to a different location in memory
+    - Usually mnemonic `JMP`
     - Also known a "branch" or "loop"
     - No limits to where the jump can go, it be anywhere in memory. If it's wrong, the machine will likely halt
       or do something unexpected, also called a "crash"
   
-  - ### Load — Usually mnemonic `LDX` where X is the register to load into
+  - ### Load 
     - Copies a value from a location in memory into a register (a tiny bit of memory that is part of the CPU)
-  - ### Store — Usually mnemonic `STX` where X is the register to store from
+    - Usually mnemonic `LDX` where X is the register to load into
+  - ### Store 
     - Copies a value from a register into a location in memory 
-  - ### Move — Usually mnemonic `MOV`
+    - Usually mnemonic `STX` where X is the register to store from
+  - ### Move 
     - Copies a value from one register into another register 
-  - ### Add — Usually mnemonic `ADD`
+    - Usually mnemonic `MOV`
+  - ### Add 
     - Adds the values in two registers and stores the result in a third register 
-  - ### Subtract — Usually mnemonic `SUB`
+    - Usually mnemonic `ADD`
+  - ### Subtract 
     - Subtracts the values in two registers and stores the result in a third register 
-  - ### Compare — Usually mnemonic `CMP`
+    - Usually mnemonic `SUB`
+  - ### Compare 
     - Compares the values in two registers and updates the flag register 
+    - Usually mnemonic `CMP`
 
-  - ## Conditional Jump — The Go-to of Machine Code
-    - Usually mnemonics: 
-      - `JNZ` (Jump if Not Zero)
-      - `JZ` (Jump if Zero)
-      - `JG` (Jump if Greater)
-      - `JL` (Jump if Less)
-    - The "`if`" statement of machine code
+  - ## Conditional Jump
+    - The "`if`" statement of machine code, controls the flow of the program, branching execution to different 
+      locations in memory depending on the result of a previous operation
     - Changes the program counter (PC) to point to a different location in memory based on the result of a previous operation
     - The results of the previous operation is kept in a "register" (a tiny bit of memory that is part of the CPU)
     - The "if" statement is the most important part of programming, it's the basis for all decision making
-    - Also known as "branching" or "conditional jump" or "loop"
+    - Usually mnemonics: 
+      - `JNZ` (Jump if the register flag "Not Zero" is set)
+      - `JZ` (Jump if the register flag "Zero" is set)
+      - `JG` (Jump if the register flag "Greater" Flag is set)
+      - `JL` (Jump if the register flag "Less" is set)
+    - Also known as "branching" or "a conditional" or "loop"
   
   - ## Variables
     - Are just named memory locations that are used to store data, sometimes called "fields," "attributes," or "properties"
@@ -381,13 +447,13 @@
 
   - "Data structures" are named concepts for common ways humans have invented to represent data, and usually predate computing.
   - They represent real world items and concepts in a way that a computer can be programmed to manipulate to solve a problem.
-  - For example, a "list" is a common data structure for a series of items in a specific order, and 
-    can be used to represent a "orders to be shipped," "to-do items" or a "names and addresses to send a letter to"
+  - For example, a "list" is a common data structure for a series of items in a specific order.
+    - A list can be used to represent a "orders to be shipped," "to-do items" or a "names and addresses to send a letter to"
 
   - ## Numbers or Individual Characters? Or something else?
     
     - ### Numbers 
-      - are usually represented in binary (base 2)
+      - Are usually represented in binary (base 2, only 1 & 0)
       - Positive integers are usually represented in "unsigned" binary
         - 1 byte (8 bits) can represent unsigned 0 to 255 (known as a "byte" or "octet" or "char" or "unsigned char" or "unsigned byte")
         - 2 bytes (16 bits) can represent unsigned 0 to 65535 (known as a "short", sometimes "word")
@@ -440,12 +506,14 @@
   - ### Pointer
     - A number that represents the "address" of another location in memory
     - Diagram:
+      ``````
       - Address: Value 
-      - 0x00000000: 0x00  `// 0x00000000 is the address, 0x00000004 is the value of this pointer, so it's pointing to address 0x00000004`
+      - 0x00000000: 0x00  // 0x00000000 is the address, 0x00000004 is the value of this pointer, so it's pointing to address 0x00000004
       - 0x00000001: 0x00  
       - 0x00000002: 0x00
-      - 0x00000002: 0x04  `// This is a pointer's value is 0x00000004, so it's pointing to address 0x00000004`
-      - 0x00000004: 0x41  `// 0x00000004 is the address, 0x41 is character 'A' as ASCII, or 65 as an unsigned byte integer`
+      - 0x00000002: 0x04  // This is a pointer's value is 0x00000004, so it's pointing to address 0x00000004
+      - 0x00000004: 0x41  // 0x00000004 is the address, 0x41 is character 'A' as ASCII, or 65 as an unsigned byte integer
+      ```
     - The pointer stored at 0x00000000 has the value 0x00000004, so it's pointing to address 0x00000004
     - Address 0x00000004 contains the value 0x41, which represents the character 'A' or the number 65 as an unsigned byte integer
     - it's stored in "Little Endian" format, so the least significant bytes are stored first.
@@ -645,59 +713,145 @@
         - This was not the original intent of the "class" and "object" paradigm, but was a way to fit the COP 
           paradigm into the "procedural" paradigm.
     
-    - ### Classes and Objects as "Name Spaces"
-      - In COP languages, the `class` is used as a "namespace" to group together the methods and variables that 
-        are related to each other (known as "high cohesion") into a single object.
-      - All code must be inside an object or be declared as a `static` member of a class to be accessible without an object
+    - ### Classes and Objects as Static "Name Spaces" for Procedural-Style Code Implementations
+      - In COP languages, the `class` is used as a "namespace" to group together various methods and variables that 
+        are related to each other (known as "high cohesion") into a single class.
+      - All code must be inside an object OR be declared as a `static` member of a class to be accessible without an object
       - This often lead to "collections of static methods" that simply extended the "procedural" paradigm, except the
         code blocks now had a name (the name of the Class) and were grouped together instead of being globally accessible.
+      - The `static` methods were passed in data as parameters and returned data as a result, just like the "procedural" paradigm.
+        - When `static` is used this way, it completely breaks encapsulation. The objects are just bags to hold code, 
+        and the data is fully exposed to anyone who wants to access it, as it is not retained as state within the object.
+      - This `static` way of programming lead to the same exact problems as the "procedural" paradigm, but with the 
+        added complexity of the "class" and "object" paradigm.
       - These were popularized by web frameworks such as Java's Spring Boot and Many Others
         - The Pain of OOP, Lecture #2: Static methods and attributes are evil
         - https://www.youtube.com/watch?v=lELJSj9mWbI
     
     - ### Inheritance 
-      - Inheritance is the idea that a new `class` can inherit from another `class` all of it's methods and variables,
-        and then add new methods and variables to the new "class" that will modify the behavior of the original "class"
+      - Inheritance is the idea that a new `class` can inherit from another `class` all of its methods and variables,
+        and then add new methods or override methods in the subclass that will modify the behavior of the 
+        original `class`
       - Classes can inherit from other classes to reuse code and "state", and to create "subtypes/subclasses"
       - The class that is inherited from is called the "superclass" and the class that inherits is called the "subclass"
       - The "subclass" is also called a "derived class" and the "superclass" is also called a "base class"
+      - Example:
+      - ```
+        open class Media {   // <-- the "base class" or "superclass", `open` means it can be subclasses (extended/inherited) 
+          String name
+          open method Media(String name) { // <-- if no subclass overrides this method, it will be used as the default constructor
+            this.name = name
+          }
+          open method play() { 
+            print "Playing: " + this.name 
+          } 
+        }  
+        
+        class MP3 extends Media {   // <-- the "subclass" or "derived class"; it `extends` (inherits) from the superclass (Media).
+            // NOTICE: No constructor is defined, so the default constructor in the superclass will be used (Media(String name))
+        
+            override method play() { 
+               print "Playing MP3: " + this.name 
+            } 
+        }
+        
+        class Video extends Media { 
+            // NOTICE: No constructor is defined, so the default constructor in the superclass will be used (Media(String name))
+            
+            override method play() { 
+               print "Playing Video: " + this.name 
+            } 
+        }
+        
+        class ProtectedMP3 extends MP3 {
+            String password
+            Boolean authentcated = false
+        
+            ProtectedMP3(String name, String password) {  // <-- the constructor of this class, its called to initialize the object
+                super(name)  // <-- calls the constructor of the superclass (MP3)
+                this.password = password    // Sets the password for the password protected MP3
+            }
+        
+            method authenticate(String password) {
+                if (this.password == password) {
+                    this.authenticated = true
+                    print "Authenticated!"
+                }
+            } 
+            override method play() {
+               if (this.authenticated == true) {
+                    print "Playing Protected MP3: " + this.name 
+               } else {
+                    print "Not Authenticated!"
+               }
+            } 
+        }
+        
+        // Start of program
+        main() {
+            Media doc0 = new Media("MyMedia")  // Since the `Media` class is `open` and not `abstract`, an object can be created from it.
+            Media doc1 = new MP3("MyMP3.mp3")
+            Media doc2 = new Video("MyVideo.mp4")
+            Media doc3 = new ProtectedMP3("MyProtectedMP3.mp3", "MySecretPassword123")
+
+            function playMedia(Media media) {  // Note that the parameter is of type `Media` and not `MP3` or `Video` or `ProtectedMP3`
+                media.play()
+            }
+        
+            playMedia(doc0)            // <-- will print "Playing: MyMedia"
+            playMedia(doc)             // <-- will print "Playing MP3: MyMP3.mp3"
+            playMedia(doc2)            // <-- will print "Playing Video: MyVideo.mp4"
+        
+            playMedia(doc3)            // <-- will print "Not Authenticated!"
+            doc3.authenticate("MySecretPassword123")  // <-- will print "Authenticated!"
+            playMedia(doc3)            // <-- will print "Playing Protected MP3: MyProtectedMP3.mp3"
+        }
+        
+        // Output:
+        // Playing: MyMedia
+        // Playing MP3: MyMP3.mp3
+        // Playing Video: MyVideo.mp4
+        // Not Authenticated!
+        // Authenticated!
+        // Playing Protected MP3: MyProtectedMP3.mp3
+        ```
     
     - ### Interfaces
       - An `interface` is an agreement or "contract" that the class will have certain defined methods & variables in the class.
       - It's a way to tell the compiler AND the programmer that the class must have certain "methods" and "variables" in it to be considered a valid "subclass" of the interface
       - The `interface` is implemented by the `class`, where the methods and variables are defined by the "concrete implementing" `class`
-        - Example (in pseudo code):
+        - Example (in pseudo-code similar to common COP languages):
           ```
-          interface Document { 
-            expects method open()  // this interface expects a method called "open" 
+          interface Document {     // <-- interfaces only define the "signature" of the methods it expects to be in the subclass
+            expects method view()  // this interface expects a method called "view" 
           }  
         
           class PDF implements Document {
-              implements method open(): { 
-                 launch "PDF Viewer" // <-- the "implementation" of the "interface" 
+              override method view(): { // <-- the implementation of the interface (uses the "override" keyword) 
+                 launch "PDF Viewer"  
               } 
           }
           
           class Email implements Document { 
-              implements method open(): { 
-                 launch "Email App" // <-- the "implementation" of the "interface" 
+              override method view(): { // <-- the implementation of the interface (uses the "override" keyword)
+                 launch "Email App"  
               } 
           }
           
-          class Song implements Document { 
-              implements method open(): { 
-                   launch "Music Player" // <-- the "implementation" of the "interface" 
+          class Song implements Document { // <-- the implementation of the interface (uses the "override" keyword)
+              override method view(): { 
+                   launch "Music Player"  
               } 
           }
           
           // Start of program
           main() {
               Document doc = new PDF();
-              doc.open();                // <-- will launch "PDF Viewer"
-              doc2 = new Email();
-              doc2.open();               // <-- will launch "Email App"
-              doc3 = new Song();
-              doc3.open();               // <-- will launch "Music Player"
+              doc.view()                 // <-- will launch "PDF Viewer"
+              doc2 = new Email()  
+              doc2.view()                // <-- will launch "Email App"
+              doc3 = new Song() 
+              doc3.view()                // <-- will launch "Music Player"
           }
           ```
       - Allows a developer to add multiple implementations of the same method by defining a new `class` that `implement`s 
@@ -713,24 +867,24 @@
       - Example:
       - ```
         abstract class Document { 
-          String name;                // <-- abstract classes can have variables
-          expects method open(String name)  // this abstract class expects a method called "open"
-          expects method showName() {    // this abstract class expects a method called "close" and has a default implementation
-              print "Name: " + this.name // <-- the "default implementation" for any subclass that doesn't override the method
+          String name                    // <-- Abstract classes can have variables.
+          expects method view(String name)  // Expects a method called "view" and has no default implementation.
+          expects method showName() {    // Expects a method called "showName" and has a default implementation.
+              print "Name: " + this.name // <-- The "default implementation" for any subclass that doesn't override the method.
           } 
         }  
         
-        class PDF extends Document {
-            override method open(String name): {
-               this.name = name;
-               launchPDFViewer() // <-- the "implementation" of the "abstract class" 
+        class PDF extends Document {  // <-- PDF is a subclass of Document.
+            override method view(String name): { // <-- the implementation of the abstract class "view"
+               this.name = name
+               launchPDFViewer()  
             } 
         }
         
-        class Email extends Document { 
-            method open(String to, String from, String subject): {
-               this.name = to;
-               showName(to); // <-- calls the "default implementation" of the abstract superclass 
+        class Email extends Document { // <-- Email is a subclass of Document
+            override method view(String to, String from, String subject): {
+               this.name = to
+               showName(to)  // <-- calls the "default implementation" of the abstract superclass 
                launchEmailApp(to, from, subject) // <-- the implementation of the open method 
             }
             override method showName(): { // <-- overrides the "default implementation" of the abstract superclass
@@ -738,34 +892,29 @@
             } 
         }
         
-        class Song extends Document { 
-            override method open(String name): {
-                 this.name = name; 
-                 launchMusicPlayer(name) // <-- the "implementation" of the "abstract class" 
+        class Song extends Document { // <-- Song is a subclass of Document
+            override method view(String name): { // <-- the implementation of the abstract class "view"
+                 this.name = name
+                 launchMusicPlayer(name)  
             } 
         }
         
         // Start of program
         main() {
-            Document doc = new PDF("MyPDF.pdf");
-            doc.open();                // <-- will launch "PDF Viewer"
-            doc2 = new Email(to="Chris", from="from:Bob", subject="subject:Meeting");
-            doc2.open();               // <-- will launch "Email App"
-            doc3 = new Song();
-            doc3.open();               // <-- will launch "Music Player"
+            Document doc = new PDF("MyPDF.pdf")
+            doc.view()                 // <-- will launch "PDF Viewer"
+            doc2 = new Email(to="Chris", from="from:Bob", subject="subject:Meeting")
+            doc2.view()                // <-- will launch "Email App"
+            doc3 = new Song() 
+            doc3.view()                // <-- will launch "Music Player"
         }
         ```
     
     - ### Polymorphism
       - Polymorphism is the idea that a method can be called on an object and the method will behave differently
         based on the "type" of the "object" that the "method" is called on
-        - Abstract Class Document - expects "open" method
-        - Class PDF extends Document - implements "open" method, opens a "PDF Viewer"
-        - Class Email extends Document - implements "open" method, opens an "Email Client"
-        - Class Song extends Document - implements "open" method, opens a "Music Player"
-        - Polymorphism is the idea that a "method" can be called on an object that is a subclass of Document and the method will behave differently depending on the type of the object
-          - ie: the "open" method will open a "PDF Viewer" if the object is a "PDF" and will open an "Email Client" if the object is an "Email" and will open a "Music Player" if the object is a "Song" 
-    
+        - This is the basis for overriding methods in subclasses and `interfaces` and `abstract class`es
+ 
     - ### Controlled Mutability and Visibility of variables
       - Use of explicit "private" and "protected" and "public" to control the visibility of the variables and methods of the class
       - Encouraged to use "getters" and "setters" to control the access to the variables of the class (which has since been shown to be a bad idea)
