@@ -98,18 +98,20 @@
     - These operations are called "gates", conceptually similar to someone following path crossing a fence through a gate
     
     - ### Logical Operations & Boolean Arithmetic
+      - true = 1 = on = connected
+      - false = 0 = off = not connected
       - Two switches in series represent a Logical AND gate
         - `AND` ( the `&&` symbol )
-          - 0 && 0 = 0
-          - 0 && 1 = 0
-          - 1 && 0 = 0
-          - 1 && 1 = 1
+          - 0 && 0 => 0
+          - 0 && 1 => 0
+          - 1 && 0 => 0
+          - 1 && 1 => 1
       - Two switches in parallel represent a Logical OR gate
         - `OR` ( the `||` symbol) 
-          - 0 || 0 = 0
-          - 0 || 1 = 1
-          - 1 || 0 = 1
-          - 1 || 1 = 1
+          - 0 || 0 => 0
+          - 0 || 1 => 1
+          - 1 || 0 => 1
+          - 1 || 1 => 1
       - Boolean logic requires one more operation to be complete: The logical "NOT" operation...
 
     - Insight 1: Logic in Physical Form
