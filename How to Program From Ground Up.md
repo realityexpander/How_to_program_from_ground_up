@@ -490,18 +490,29 @@
   
 - ## Common Data Structures used in Programming
   
-  - ### Arrays
+  - ### Arrays (1D, 2D, 3D, etc.)
     - A way to represent a "list" of things in memory
     - The "things" can be anything, like numbers, letters, strings or even other arrays (multi-dimensional arrays)
     - The "things" are usually all the same size & type
     - The "things" are usually all stored in a contiguous block of memory
     - The "things" are usually accessed by an "index" which is a number that represents the position of the "thing" in the array
+    
+    - 1D Arrays
+    ![array.png](arrays.png)
+    
+    - 2D Arrays
+     ![2d_arrays.png](2d_arrays.png)
+    
+    - 2D Arrays in Code (C) 
+    - ![2dArraysInC.png](2dArraysInC.png) 
   
   - ### Strings
     - A way to represent a list of letters in memory, to represent words and sentences and paragraphs and documents
     - The "characters" are usually stored in a contiguous block of memory
     - The "characters" are sometimes terminated by a special "end of string" character, or have a length stored somewhere
     - The "characters" are usually accessed by an "index" which is a number that represents the position of the "characters" in the string
+    ![strings.png](strings.png)
+  
   
   - ### Pointer
     - A number that represents the "address" of another location in memory
@@ -518,6 +529,8 @@
     - Address 0x00000004 contains the value 0x41, which represents the character 'A' or the number 65 as an unsigned byte integer
     - it's stored in "Little Endian" format, so the least significant bytes are stored first.
   
+      ![img_8.png](img_8.png) 
+  
   - ### Structures 
     - Known as "Records" or "Data Classes" 
       - also called as "structs", sometimes referred to as "classes" and "objects"
@@ -531,6 +544,16 @@
     - The "fields" are usually accessed by a "name" which is a human-readable label for the "field"
     - The "fields" are usually stored in a contiguous block of memory
     - The "fields" are usually different types (like numbers, letters, strings, dates, times, arrays, and other Records)
+    
+    - Example of a "Person" structure (C)
+      ```C
+        struct Person {
+            char name[32];  // 32 characters to represent the name
+            int age;        // 4 bytes to represent the age
+            float height;   // 4 bytes to represent the height
+            float weight;   // 4 bytes to represent the weight
+        };
+      ```
   
   - ### Stack
     - A way to represent a "last in, first out" list of things in memory, similar to a stack of dinner plates
@@ -538,13 +561,15 @@
     - The "things" are usually all stored in a contiguous block of memory
     - The "things" are usually accessed by a "stack pointer" which is a number that represents the position of the top-most "thing" in the stack
     - Efficient for adding and removing items from the list, but not efficient for accessing items in the list
-  
+      ![stack.png](stack.png)  
+
   - ### Queue
     - A way to represent a "first in, first out" list of things in memory, similar to a line of people waiting for a bus
     - The "things" are usually all the same size & type
     - The "things" are usually all stored in a contiguous block of memory
     - The "things" are usually accessed by a "head" and "tail" which are numbers that represent the position of the first and last "thing" in the queue
     - Efficient for adding and removing items from the list, but not efficient for accessing items in the list
+      ![queue.png](queue.png)
   
   - ### Linked List
     - A way to represent a "list" of things in memory, where each "thing" points ONLY to the next "thing" in the list
@@ -553,6 +578,7 @@
     - The "things" are usually accessed by a "pointer" which is a number that represents the location of the "thing" in memory
     - Used to represent a "dynamic" list, where the size of the list is not known ahead of time
     - Efficient for adding and removing items from the list, but not efficient for accessing items in the list
+      ![linkedList.png](linkedList.png)
 
   - ### Tree
     - A way to represent a "hierarchical" list of things in memory, where each "thing" points to one or MORE "things" in the list
@@ -563,11 +589,11 @@
     - Special Case of a tree is a "Binary Tree" where each "thing" points to only two "things" in the list
       - Binary Trees are used to represent "sorted" lists, where each "thing" is greater than the "thing" to the left, and less than the "thing" to the right
       
-        ![tree.png](assets/tree.png)  
+        ![tree.png](tree.png)
 
 # High-Level Language Styles
 
- - ### Procedural 50s-60s
+ - ### Procedural 1950s-1990s
    - First style of high level language after assembly language
    - Considered "high level" because it was abstracted from the assembly language. The language was actually just 
      another program that translated the "high level" language into "machine code" for the CPU, usually at runtime.
@@ -591,16 +617,19 @@
      
      RUN
      
-     Output: 42
+     Output: 
+     42
      THIS GOTO STUFF CAN GET CONFUSING
      HOW DID I GET HERE?
      
      ```
  
-   - #### The Push for Subroutines
-   - Programmers were forced to use "subroutines" to deal with the overuse of "JMP/GOTO" statements which lead to 
-     extremely confusing "spaghetti code" which was unmaintainable and unreadable.
-   - The "subroutines" are usually called "functions" or "procedures"
+   - ### The Push for Subroutines
+   - Programmers were eventually forced into using "subroutines" to deal with extreme overuse of "JUMP/GOTO" 
+     statements common to programming at that time which lead to extremely confusing, unreadable and unmaintainable 
+     "spaghetti code", so named because of the way the "GOTO" statements would jump around the program and get mixed
+     up like a plate of spaghetti.
+   - These subroutines are referred to "functions," "procedures," and "methods" in modern programming languages.
    - The "subroutines" are usually called and returned using a "stack" to keep track of where the program left off, 
      instead of having to use "GOTO" statements
    - Variables were usually "global" and "mutable" which lead to "side effects" and hard to understand "state" of the program
@@ -616,19 +645,19 @@
      50 LET X = 110
      70 GOSUB 100
      80 PRINT "Output 2: "; Z
-     100 REM ADD 2 NUMBERS, RETURN IN Z  <-- start of a "subroutine", REM is a "remark" or "comment"
+     100 REM ADD 2 NUMBERS, RETURN IN Z  <-- This start of a "subroutine", REM is a "remark" or "comment" and is ignored by the program
      110 LET Z = X + Y 
      120 RETURN  <-- end of a "subroutine", return execution to the line after the "GOSUB" statement
      
      RUN
      
-     Output1: 42
-     Output2: 142
+     Output 1: 42
+     Output 2: 142
      
      ```
-   - Examples of procedural languages are "Fortran" and "BASIC" and "COBOL"
+   - Examples of Procedural languages are "Fortran" and "BASIC" and "COBOL"
  
- - ### Structured 60s-70s
+ - ### Structured 1960s-Present
    - No more "goto" statements, only subroutines and conditional branching were allowed
    - The concept of "scopes" (or "code blocks") to limit the use of "globally mutable" variables
      - This is the origin of "encapsulation" and first introduced to limit the visibility of the "local" variables 
@@ -636,22 +665,26 @@
      - This is also the reason for the "Structured Programming" paradigm, as it was the first time that the "state"
        of the program was "structured" and "encapsulated" into "scopes" or "code blocks"
      - Example of structured language (C): 
-       note: the `//` mean the rest of the line is comment. It is not part of the program, it's just for explanation
+       Note: The `//` symbols means the rest of the line is comment, it is not part of the program, 
+             it's just for explanation and is ignored by the compiler.
        ```
-       int main() { 
-         int y = 1;
-         int x = 5; 
+       int main() {  // <-- start of the program, int means the function returns an integer 
+         int y = 100;
+         int x = 10; 
          { // <-- start of a "scope" or "code block" or just "block"
-           int y = 6; // local to the "scope"
+           int y = 32; // local to the "scope"
            x = x + y; 
          } // <-- end of the "scope"
-         printf("%d", x); 
+         
+         printf("%d", x); // <-- print the value of x as a decimal number
+         printf("%c", x); // <-- print the value of y as a character (the ASCII value of x)
        }
        
-       main();
+       main();  // <-- call the "main" function, runs the program
        
-       // Output: 11 
-         
+       // Output: 
+       // 42
+       // *
        ```
    - The concept of "types" was introduced to define the size & purpose of certain "primitive" data types 
      like "int," "long," "float," "char," and "bool" and "structs" made up of these "primitive" data types
@@ -668,6 +701,7 @@
          float y = 6.0; 
          char z = 'A'; 
          struct Point p = { 10, 20, 'G' };
+         
          printf("Output: %d %f %c %d %d %d", x, y, z, p.x, p.y, p.colorId);
        }
        
@@ -676,8 +710,8 @@
        // Output: 5 6.000000 A 10 20 71
         
        ```
-   - Allowed more code reuse and easier to understand "state" of the program than procedural languages
-   - This allowed libraries and "modules" to be more easily produced to create standard "subroutines" and
+   - This allowed more code reuse and easier to understand "state" of the program than procedural languages
+   - This allowed libraries and "modules" to be easily produced to create standard "subroutines" and
      "data structures" into "packages" and "system utilities" and "frameworks" to be used by other programmers
      - Started the concept of "published interfaces" that could be imported into another program and used to 
        provide the functionality of the "library." 
@@ -688,9 +722,9 @@
      for the language.
 
 - ### Class Oriented Programming (COP) 70s-2010s
-  - Usually called "Object Oriented Programming" but that's a misnomer, as objects are not the main focus, classes are.
+  - Usually misnamed "Object Oriented Programming", as "Objects" are not the main focus, "Classes" are.
+  
   - Collected ideas around: 
-    
     - ### Encapsulation 
       - Data & code are "encapsulated," (or enclosed) into a `class` (
         - also called a "Template", it is similar to a blueprint for a house as it describes what will be created when the house is built)
@@ -717,6 +751,8 @@
       - In COP languages, the `class` is used as a "namespace" to group together various methods and variables that 
         are related to each other (known as "high cohesion") into a single class.
       - All code must be inside an object OR be declared as a `static` member of a class to be accessible without an object
+      
+      - #### Issues with Static Methods and Attributes
       - This often lead to "collections of static methods" that simply extended the "procedural" paradigm, except the
         code blocks now had a name (the name of the Class) and were grouped together instead of being globally accessible.
       - The `static` methods were passed in data as parameters and returned data as a result, just like the "procedural" paradigm.
@@ -727,7 +763,71 @@
       - These were popularized by web frameworks such as Java's Spring Boot and Many Others
         - The Pain of OOP, Lecture #2: Static methods and attributes are evil
         - https://www.youtube.com/watch?v=lELJSj9mWbI
+      - One of the main problems is that `static` methods and data lead to issues with "testing" the code, as the 
+        `static` methods and data are not "stateful" and are not "encapsulated" in the object, so they are not 
+        easily "mocked" or "stubbed" for testing purposes.
+      - Another side-effect of `static` methods and data is that they are not "thread-safe" and can lead to 
+        data corruption
+      - And the largest issue is that `static` is shared mutable state and is the root of all evil in programming as it
+        leads to "side effects" and tough to understand "state" of the program which leads to unnecessary complexity and bugs.
+      - What's Wrong About Utlity Classes? (webinar #6)
+        https://www.youtube.com/watch?v=psrp3TtaYYI
     
+    - ### Interfaces
+        - An `interface` is an agreement or "contract" that the class will have certain defined methods & variables in the class.
+        - It's a way to tell the compiler AND the programmer that the class must have certain "methods" and "variables" in it to be considered a valid "subclass" of the interface
+        - The `interface` is implemented by the `subclass`, where the methods and variables are defined by the "concrete implementing" `class`
+            - Example (in pseudo-code similar to common COP languages):
+              ```
+              interface Document {     // <-- interfaces only define the "signature" of the methods it expects to be in the subclass
+                expects method view()  // this interface expects a method called "view" 
+              }  
+            
+              // PDF is one "concrete implementing" class of the "Document" interface
+              class PDF implements Document { // PDF is a subclass of Document, and must implement the "view" method
+                  override method view(): { // <-- the implementation of the interface (uses the "override" keyword) 
+                     print "Launch PDF Viewer"  
+                  } 
+              }
+              
+              // Email is one "concrete implementing" class of the "Document" interface
+              class Email implements Document { // Email is a subclass of Document, and must implement the "view" method
+                  override method view(): { // <-- the implementation of the interface (uses the "override" keyword)
+                     print "Launch Email App"  
+                  } 
+              }
+              
+              // Song is one "concrete implementing" class of the "Document" interface
+              class Song implements Document { // <-- the implementation of the interface (uses the "override" keyword)
+                  override method view(): { 
+                     print "Launch Music Player"  
+                  } 
+              }
+              
+              // Start of program
+              main() {
+                  Document doc1 = new PDF();
+                  Email doc2 = new Email()  
+                  Song doc3 = new Song() 
+                 
+                  function viewDocument(Document doc) {  // Note that the parameter is of type `Document` and not `PDF` or `Email` or `Song` 
+                      doc.view() // Will call the appropriate "view" method of the subclass
+                  }
+                  
+                  viewDocument(doc1)  // <-- will print "Launch PDF Viewer"
+                  viewDocument(doc2)  // <-- will print "Launch Email App"
+                  viewDocument(doc3)  // <-- will print "Launch Music Player"
+              }
+              ```
+        - Interfaces allow a developer to add multiple different implementations of the same named method by defining a 
+          new `class` that `implement`s the superclass `interface` by defining code for the methods in the subclass
+            - This makes it easier to add new subclasses of the `interface` to the program without changing any existing code
+            - This also make it easier to write "testing" code that can be used to automatically verify the correctness of the methods
+              of the `class` by using "testing" implementations of the `interface`
+        - The `interface` is `implement`ed by a `class` and the methods are finished by the implementing `subclass` 
+          according to the method signatures in the `interface`
+        - "Subclassing" is also called "Subtyping" or "Inheritance" and is the basis for "Polymorphism" and "Dynamic Binding"
+
     - ### Inheritance 
       - Inheritance is the idea that a new `class` can inherit from another `class` all of its methods and variables,
         and then add new methods or override methods in the subclass that will modify the behavior of the 
@@ -739,6 +839,7 @@
       - ```
         open class Media {   // <-- the "base class" or "superclass", `open` means it can be subclasses (extended/inherited) 
           String name
+          
           open method Media(String name) { // <-- if no subclass overrides this method, it will be used as the default constructor
             this.name = name
           }
@@ -815,127 +916,121 @@
         // Authenticated!
         // Playing Protected MP3: MyProtectedMP3.mp3
         ```
-    
-    - ### Interfaces
-      - An `interface` is an agreement or "contract" that the class will have certain defined methods & variables in the class.
-      - It's a way to tell the compiler AND the programmer that the class must have certain "methods" and "variables" in it to be considered a valid "subclass" of the interface
-      - The `interface` is implemented by the `class`, where the methods and variables are defined by the "concrete implementing" `class`
-        - Example (in pseudo-code similar to common COP languages):
-          ```
-          interface Document {     // <-- interfaces only define the "signature" of the methods it expects to be in the subclass
-            expects method view()  // this interface expects a method called "view" 
-          }  
-        
-          class PDF implements Document {
-              override method view(): { // <-- the implementation of the interface (uses the "override" keyword) 
-                 launch "PDF Viewer"  
-              } 
-          }
-          
-          class Email implements Document { 
-              override method view(): { // <-- the implementation of the interface (uses the "override" keyword)
-                 launch "Email App"  
-              } 
-          }
-          
-          class Song implements Document { // <-- the implementation of the interface (uses the "override" keyword)
-              override method view(): { 
-                   launch "Music Player"  
-              } 
-          }
-          
-          // Start of program
-          main() {
-              Document doc = new PDF();
-              doc.view()                 // <-- will launch "PDF Viewer"
-              doc2 = new Email()  
-              doc2.view()                // <-- will launch "Email App"
-              doc3 = new Song() 
-              doc3.view()                // <-- will launch "Music Player"
-          }
-          ```
-      - Allows a developer to add multiple implementations of the same method by defining a new `class` that `implement`s 
-        the interface by defining the code for the methods from the `interface`
-        - This makes it easier to add new subclasses of the `interface` to the program without changing any existing code
-        - This also make it easier to write "testing" code that can be used to automatically verify the correctness of the methods 
-          of the `class` by using "testing" implementations of the `interface`
-      - The `interface` is `implement`ed by a `class` and then the methods are defined by the `class`
-    
     - ### Abstract Classes
       - Very similar to interfaces but can have default implementations of the methods & include variables
       - The `abstract class` is usually `extend`ed by the subclass and then the methods are overridden by the subclass
       - Example:
-      - ```
-        abstract class Document { 
-          String name                    // <-- Abstract classes can have variables.
-          expects method view(String name)  // Expects a method called "view" and has no default implementation.
-          expects method showName() {    // Expects a method called "showName" and has a default implementation.
-              print "Name: " + this.name // <-- The "default implementation" for any subclass that doesn't override the method.
+    - ```
+      abstract class Document { 
+        String name = ""                  // <-- Abstract classes can have variables.
+        
+        Document(String name) {           // <-- Abstract classes can have constructors.
+            this.name = name
+        }
+        expects method view()  // Expects a method called "view" and has no default implementation.
+        expects method showName() {    // Expects a method called "showName" and has a default implementation.
+            print "Document Name: " + this.name // <-- The "default implementation" for any subclass that doesn't override the method.
+        } 
+      }  
+        
+      class PDF extends Document {  // <-- PDF is a subclass of Document.
+          override method view(): { // <-- the implementation of the abstract class "view"
+             System.launchPDFViewer(name)  
           } 
-        }  
+      }
         
-        class PDF extends Document {  // <-- PDF is a subclass of Document.
-            override method view(String name): { // <-- the implementation of the abstract class "view"
+      class Email extends Document { // <-- Email is a subclass of Document
+          String to
+          String from
+          String subject
+          
+          override method view(): {
+             this.name = to
+             showName(to)  // <-- calls the "default implementation" of the abstract superclass 
+             launchEmailApp(to, from, subject) // <-- the implementation of the open method 
+          }
+          override method showName(): { // <-- overrides the "default implementation" of the abstract superclass
+             print "Email to: " + this.name  
+          } 
+      }
+        
+      class Song extends Document { // <-- Song is a subclass of Document
+          override method view(String name): { // <-- the implementation of the abstract class "view"
                this.name = name
-               launchPDFViewer()  
-            } 
-        }
+               launchMusicPlayer(name)  
+          } 
+      }
         
-        class Email extends Document { // <-- Email is a subclass of Document
-            override method view(String to, String from, String subject): {
-               this.name = to
-               showName(to)  // <-- calls the "default implementation" of the abstract superclass 
-               launchEmailApp(to, from, subject) // <-- the implementation of the open method 
-            }
-            override method showName(): { // <-- overrides the "default implementation" of the abstract superclass
-               print "Email to: " + this.name  
-            } 
-        }
+      // Start of program
+      main() {
+          Document doc1 = new PDF("MyPDF.pdf")
+          Document doc2 = new Email(to="Chris", from="from:Bob", subject="subject:Meeting")
+          Document doc3 = new Song("MySong.mp3")
         
-        class Song extends Document { // <-- Song is a subclass of Document
-            override method view(String name): { // <-- the implementation of the abstract class "view"
-                 this.name = name
-                 launchMusicPlayer(name)  
-            } 
-        }
+          function viewDocument(Document doc) {  // Note that the parameter is of type `Document` and not `PDF` or `Email` or `Song`
+              doc.view(name)
+          }
         
-        // Start of program
-        main() {
-            Document doc = new PDF("MyPDF.pdf")
-            doc.view()                 // <-- will launch "PDF Viewer"
-            doc2 = new Email(to="Chris", from="from:Bob", subject="subject:Meeting")
-            doc2.view()                // <-- will launch "Email App"
-            doc3 = new Song() 
-            doc3.view()                // <-- will launch "Music Player"
-        }
-        ```
+          viewDocument(doc)  // <-- will call the "view" method of the PDF class 
+      }
+      ```
     
     - ### Polymorphism
       - Polymorphism is the idea that a method can be called on an object and the method will behave differently
         based on the "type" of the "object" that the "method" is called on
         - This is the basis for overriding methods in subclasses and `interfaces` and `abstract class`es
+        - In the example above, the `viewDocument` function can be called with any `Document` object and the `view` method
+          will behave differently based on the "type" of the `Document` object that is passed in
  
     - ### Controlled Mutability and Visibility of variables
-      - Use of explicit "private" and "protected" and "public" to control the visibility of the variables and methods of the class
-      - Encouraged to use "getters" and "setters" to control the access to the variables of the class (which has since been shown to be a bad idea)
+      - Use of explicit `private` and `protected` and `public` to control the visibility of the variables and methods 
+        of the class
+      - Encouraged to use getters and setters to control the access to the variables of the class (which has since 
+        been shown to be a bad idea due to misuse and overuse of the pattern)
     
     - ### Issues from overuse of Inheritance and allowing for "multiple inheritance" in C++ 
-      - Lead to immense & unnecessary complexity to fit in the paradigm, as programmers tried to fit the "class" oriented paradigm into the "procedural" paradigm
-      - bad ideas for many reasons, and overused beyond its original intent
-        - The hype around reusability was so strong that it was often used to justify the use of inheritance in places where it was not appropriate
-        - This lead to "fragile" and "rigid" code that was hard to understand and hard to modify, leading to a lot of waste and costs
+      - Lead to immense & unnecessary complexity to fit in the paradigm, as programmers tried to fit the "class" 
+        oriented paradigm into the "procedural" paradigm
+      - Inheritance is a bad idea for many reasons, and overused beyond its original intent
+        - The hype around reusability was so strong that it was often used to justify the use of inheritance in places 
+          where it was not appropriate.
+        - This lead to "fragile" and "rigid" code that was hard to understand and hard to modify, leading to a lot 
+          of waste and costs. 
+        - The promise of "reusability" was not fulfilled by COP languages.
       - Banana, Monkey, Jungle Problem
         - https://crystal-villanueva.medium.com/the-banana-and-the-gorilla-problem-92c9a4717fd6
-        
-        
-    - Examples of Class Oriented Programming languages are "Simula" and "C++" and "Java"
+    
+    - Examples of Class Oriented Programming languages are "Simula," "C++" and "Java"
  
  - ### Object Oriented Programming 80s-2020's
    - Alan Kay Style BOOP (Back-to-Object Oriented Programming)
-     - Based on the idea of "messaging" between objects, VERY poorly named "object oriented programming" (admitted by Alan Kay) 
-   - State is fully retained in the "object" and "methods" are used to send & receive messages to the "object" to change it's "state"
-   - No "global" variables, only instance variables that are private to the object
-   - 
+     - Based on the idea of "messaging" between objects, VERY poorly named "object oriented programming" (admitted by Alan Kay)
+   
+   - What's Wrong With Object-Oriented Programming?
+     - https://www.youtube.com/watch?v=K_QEOtYVQ7A
+   - All state is fully retained in the "object" and "methods" are used to send & receive messages to the "object" to 
+     change its "state"
+   - Any state that needs to be exposed is only via "messages" to the object, and the object can choose to respond to 
+     the message or not.
+   - No `static` methods or variables, only instance variables that are private to the object.
+   - `protected` methods are allowed, but discouraged as they lead to "fragile" and "rigid" code.
+   - Use of inheritance is explicitly discouraged, and prefer composition over inheritance. Exceptions for shallow
+     hierarchies of 2-3 levels maximum meant to model the real world objects, not to create a "hierarchy of types."
+   - Use of interfaces is limited to Classes that require testing, and are not automatically added for every class.
+   - Use of `setters` and `getters` is specifically disallowed. Instead, the object is expected to respond to messages to change its 
+     state, and to respond to messages to get its state.
+   - Specific COP patterns are not permitted, such as:
+     - Factory Pattern
+     - Use of `null`
+     - Getters and Setters
+     - Reflection & Type Casting
+     - Inheritance
+     - Mutable State - All state in BOOP is immutable, and the object is expected to return a new object with the new state.
+     - 
+   - Amazingly, the dreaded Singleton Pattern is allowed to manage global state in BOOP.
+      
+ 
+   - There are only a few BOOP languages, "Smalltalk" and, _incredibly_, "Javascript" are among the most popular ones.
  
  - ### Functional Programming 50s-2020's
    - ## Immutability 
@@ -944,17 +1039,37 @@
      the program.
    - The state of the program is immutable and passed as arguments to the functions
    - A new state is returned as the result of the calls to the functions
-   - Functions are first class citizens and can be passed as arguments to other functions, just like normal variables and objects
+   - Functions are "first-class citizens" and can be passed as arguments to other functions, just like normal variables and objects
      - This allows customization of the functions by passing in any function as an argument to another function
      - This allows the functions to be "composed" together to create new functions from existing functions
-     - These functions are called "lambdas" or "closures" or "anonymous functions" or "function literals"
-     - Example: 
-       - `Function add = (int a, int b) => a + b;`
-       - `Function multiply = (int a, int b) => a * b;`
-       - `Function addThenAnother = (Function first, Function second, int a, int b) => second(first(a, b), b);`
-       - `int result = addThenAnother(add, multiply, 2, 3); // result is 8, note: passing in the "add" function as the "first" argument and the "multiply" function as the "second" argument`
+     - These functions are called "lambdas," "closures," "anonymous functions" or "function literals," all interchangeably.
    - Examples of functional languages are "Lisp", "Clojure" and "F#" and "Kotlin"
-
+   - Example (Kotlin):
+       ```
+       fun main() {
+          val add = { a: Int, b: Int -> a + b }  // <-- a lambda that takes 2 integers and returns the sum of the integers.
+          val multiply = { a: Int, b: Int -> a * b }  // <-- a lambda that takes 2 integers and returns the product of the integers.
+          val firstThenSecond = {  // <-- a lambda that takes 4 arguments, 2 functions and 2 integers, and returns the result of the 2 functions. 
+              first: (Int, Int) -> Int, // <-- a lambda that takes 2 integers and returns an integer, it's executed first.
+              second: (Int, Int) -> Int,  // <-- a lambda that takes 2 integers and returns an integer, it's executed second.
+              a: Int, 
+              b: Int -> 
+              
+              second(first(a, b), b)  // <-- calls the `first` lambda with the 2 integers (a & b), 
+                                      //     then calls the `second` lambda with the result of `first()` and the 2nd integer (b)
+          }              
+     
+          
+          val result = addThenAnother(add, multiply, 10, 2) // <-- calls the lambda with the 2 functions and 2 integers 
+          println(result) // result will be 24
+       }
+       
+       main()
+         
+       // Output:
+       // 24
+            
+       ``` 
 
 
 
