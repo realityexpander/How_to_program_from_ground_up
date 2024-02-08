@@ -42,31 +42,38 @@
         like sorting and counting of specific data
       - [<img src="assets/punched_card.png" width="280">](https://en.wikipedia.org/wiki/Punched_card)
       - [<img src="assets/hollerith_counter.png" width="280">](https://en.wikipedia.org/wiki/Hollerith_machine)
+      - 1889 Herman Hollerith Census Machine by TMC which became IBM
+        - https://www.youtube.com/watch?v=9HXjLW7v-II
     
     - Remnants of photons hitting a piece of glass coated with a thin layer of phosphor - 1940s to 1980s
       - [<img src="assets/williams_tube.png" width="280">](https://en.wikipedia.org/wiki/Williams_tube)
       - [<img src="assets/williams_tube2.png" width="280">](https://en.wikipedia.org/wiki/Williams_tube)
       - [<img src="assets/williams_tube3.png" width="280">](https://ub.fnwi.uva.nl/computermuseum/williamstube.html)
-      
+      - Manchester Baby and the birth of Computer Memory
+        - https://www.youtube.com/watch?v=SpqayTc_Gcw
+         
     - Magnetic Phenomenon - 1950s to present
       - Electronically detectable areas on magnetizable material, or the presence of a magnetic field in a specific area
-      - Core Memory
+      - Core Memory - 1955 to 1975
         - [<img src="assets/core_memory.png" width="280">](https://en.wikipedia.org/wiki/Core_memory) 
-      - Magnetic Tape
+      - Magnetic Tape - 1928 to present
         - [<img src="assets/magnetic_viewer.png" width="280">](https://www.youtube.com/watch?v=aZOxn8ggX8w)
-      - Magnetic Disk
+      - Magnetic Disk - 1956 to present
       - [<img src="assets/10mb_hard_disk.png" width="280">](https://en.wikipedia.org/wiki/IBM_305_RAMAC)
     
     - Detectable electrical capacitance in a tiny area of silicon - 1960s to present
       - [<img src="assets/DRAM.png" width="280">](https://en.wikipedia.org/wiki/Dynamic_random-access_memory)
   
-  - Creating Machines to Use Boolean Logic Enables Complex Custom General Solutions to Certain Class of Problems
-    - By building up from the simple logic of "AND", "OR", and "NOT" operations, humans can create an 
-      arbitrarily complex sequence of logical operations
-    - These logical operations are sequenced in time to create "state machines" that can perform complex tasks 
-      and solve complex problems
+  - Creating ANY machine capable of using boolean logic enables complex custom general solutions
+    - The problems must be able to be represented with binary information and the solution must be able to be 
+      represented with a series of logical operations.
+    - By building up from the simple logic of `AND`, `OR`, and `NOT` operations, humans can create an 
+      arbitrarily complex sequence of logical operations.
+    - These logical operations are sequenced in time to create "State Machines" that can perform complex tasks 
+      and solve complex problems. A state machine is simply a way of representing the problem that changes over time 
+      controlled by a series of logical operations & conditions that lead to certain states and available actions.
     - These logical operations are built up using patterns called "algorithms" grouped together in "programs" that
-      can be executed by a digital computer
+      can be executed by a digital computer.
     - All of this is based on human ingenuity and cleverness, as the computer knows nothing about the problem. 
     - It's just following the logical operations that humans have carefully designed to represent the problem and a solution.
 
@@ -90,13 +97,13 @@
     
     - ### Logical Operations & Boolean Arithmetic
       - Two switches in series represent a Logical AND gate
-        - AND ( the `&&` symbol )
+        - `AND` ( the `&&` symbol )
           - 0 && 0 = 0
           - 0 && 1 = 0
           - 1 && 0 = 0
           - 1 && 1 = 1
       - Two switches in parallel represent a Logical OR gate
-        - OR ( the `||` symbol) 
+        - `OR` ( the `||` symbol) 
           - 0 || 0 = 0
           - 0 || 1 = 1
           - 1 || 0 = 1
@@ -134,22 +141,22 @@
   - ## The Voracious Vacuum Tube
     - How Vacuum Tubes Work 
       - https://www.youtube.com/watch?v=nA_tgIygvNo
-      - Note: While the actual physical electron flow direction is from the "negative" terminal to the "positive" terminal, 
-        the "conventional" flow direction of electricity in schematics is considered to go from the "positive" terminal to the 
-        "negative" terminal. 
+      - Note: While the actual physical electron flow direction is from the "negative" terminal to the 
+        "positive" terminal, the "conventional" flow direction of electricity in schematics is considered to go 
+        from the "positive" terminal to the "negative" terminal. 
       - _Yes!_ this is rather confusing at first, and you can give thanks Ben Franklin for his technical debt we 
         all have to deal with at the beginning of learning electronics.
     - Electricity in a vacuum behaves differently than in normal atmosphere. Electrons can flow freely in a vacuum. 
       - Tubes exploit this behavior of electrons in a vacuum to perform like a switch or an amplifiers.
     - Tube made for use in logic (Triode) consists of three parts:
       - **"Cathode"** 
-        - Essentially a light bulb filament tied to the common "ground/negative" terminal of the power supply
-        - Negative terminal of the tube it used to "emit" electrons to the anode and complete the circuit
+        - Essentially a light bulb filament tied to the common "ground/negative" terminal of the power supply.
+        - Negative terminal of the tube it used to "emit" electrons to the anode and complete the circuit.
       - **"Anode"** 
         - Positive terminal of the tube hooked to the "load" and the positive terminal of the power supply.)
         - Used to "collect" electrons from the cathode and to indicate "state" and complete the circuit.
       - **"Grid"** 
-        - this acts as a switch also called a "valve" when referring to tubes
+        - this acts as a switch also called a "valve" when referring to tubes.
     - The Grid can be used to control the flow of electricity between the cathode and anode.
       - ie: when the grid is positively charged, the flow of electricity from cathode to the anode is allowed.
       - ie: when the grid is negatively charged, the flow of electricity from cathode to the anode is deterred.
@@ -159,24 +166,32 @@
   
   - ## The Tiny Transistor
     - Very similar behavior to the vacuum tube, but much smaller and faster
-    - No vacuum required, just a the semiconductor materia
-      - Uses photographic techniques to create the object, not regular metallic parts
+      - How a transistor works
+        - https://www.youtube.com/watch?v=DXvAlwMAxiA
+      
+    - No vacuum required, just a the semiconductor material.
+      - Uses photographic techniques to create the transistor, not regular metallic parts.
     - The transistor consists of three parts:
       - **"Drain"** 
-        - (the "anode" in the vacuum tube) 
-        - also known as "collector" or "sink" often connected to "load" 
-        - (not always "positive" in modern transistors, but usually is)
+        - (the "anode" in the vacuum tube.) 
+        - also known as "collector" or "sink" often connected to "load." 
+        - (not always "positive" in modern transistors, but usually is.)
       - **"Source"** 
         - (the "cathode" in the vacuum tube) 
-        - also known as "emitter" often connected to "ground" 
-        - (not always "negative" in modern transistors, but usually is) 
-      - **"Gate"** (the "Grid" in the vacuum tube) 
-        - also known as "base" often connected to the "control" 
-        - (not always "positive" in modern transistors, but usually is)  
-    - The transistor can be used to represent any other logic gate and is the current basis for all modern computing
-    - The transistor is tiny because it is very small and fast, bumping up against the limits of physics on how small it can be made
+        - also known as "emitter" often connected to "ground." 
+        - (not always "negative" in modern transistors, but usually is.) 
+      - **"Gate"** (the "Grid" in the vacuum tube.) 
+        - also known as "base" often connected to the "control." 
+        - (not always "positive" in modern transistors, but usually is.)  
+    - The transistor can be used to represent any other logic gate and is the current basis for all modern computing.
+    - The transistor is tiny because it is very small and fast, bumping up against the limits of physics on how 
+      small it can be made.
 
     - ### How to Build Complex Logic Gates from Simple Transistors
+      - Using a transistor to solve our problem - How transistors work as a switch
+        - https://www.youtube.com/watch?v=ks_VShSgPns
+      - Inverting the signal with a transistor (The `NOT` gate)
+        - https://www.youtube.com/watch?v=hYN8C769k8A
       - Making logic gates from transistors 
         - https://www.youtube.com/watch?v=sTu3LwpF6XI
       - How does memory work?
@@ -830,7 +845,7 @@
         data corruption
       - And the largest issue is that `static` is shared mutable state and is the root of all evil in programming as it
         leads to "side effects" and tough to understand "state" of the program which leads to unnecessary complexity and bugs.
-      - What's Wrong About Utlity Classes? (webinar #6)
+      - What's Wrong About Utility Classes? (webinar #6)
         https://www.youtube.com/watch?v=psrp3TtaYYI
     
     - ### Interfaces
