@@ -77,6 +77,8 @@
     - All of this is based on human ingenuity and cleverness, as the computer knows nothing about the problem. 
     - It's just following the logical operations that humans have carefully designed to represent the problem and a solution.
 
+# HARDWARE
+
 # Low Level Hardware Implementations
   
   - ## The Wire & the Light Bulb & the Battery
@@ -109,7 +111,9 @@
           - 1 || 0 = 1
           - 1 || 1 = 1
       - Boolean logic requires one more operation to be complete: The logical "NOT" operation...
-      - 
+
+    - Insight 1: Logic in Physical Form
+      - https://www.youtube.com/watch?v=txH3K3shIWs
   
   - ## The Magnificent Magnet
     - Magnets can be electrically controlled to cause mechanical actions on certain metallic materials
@@ -197,7 +201,9 @@
       - How does memory work?
         - SR Latch 
         - https://youtu.be/KM0DdEaY5sY
-
+      - Insight 2: The MOS Transistor
+        - https://www.youtube.com/watch?v=sshPV7BV0k0
+  
   - ## The Interchangeable Integrated Chip (IC) 
   - Groups of transistor logic gates packaged together to perform a specific task
   - Robert Noyce, inventor of first monolithic IC 
@@ -216,6 +222,8 @@
     or ceramic enclosure with metal pins to connect to the rest of the computer.
     - Basic functions consist of Logical OR, AND, NOT, NAND package (usually 2-4 gates in the same package)
     - Extremely complex functions are made by combining many of these packages together in clever ways
+    - “MY FIRST CHIP” - Carver Mead - 2017
+      - https://www.youtube.com/watch?v=F5P5SAlEbo4
   - Why is NAND gates so special?
     - It's the most flexible can be combined to create any other logic gate, ie: AND, OR, NOT, XOR, etc.
       1) tie inputs A & B together to create a NOT gate
@@ -227,6 +235,11 @@
   - ## The Mighty Microprocessor (groups of integrated chips -> all put on one chip)
     - Contains a CPU (Central Processing Unit) and a small amount of ultra fast memory (called "Registers")
     - The CPU is just a clever and somewhat complex arrangement of logic gates that can perform a series of logical operations
+      - An intuitive approach for understanding the CPU and RAM
+        - https://www.youtube.com/watch?v=-IyB8hBkA9w
+      - How a CPU Works
+        - https://www.youtube.com/watch?v=cNN_tTXABUA
+    
     - Each part of the CPU is made of millions of the same kinds of logic gates that we've already discussed
     - The CPU has a "clock" to synchronize the operations of the CPU
     - It also has a "program counter" to keep track of the current instruction in memory that the CPU is executing
@@ -236,12 +249,19 @@
         - https://youtu.be/wvJc9CZcvBc 
     - May contain a small amount of "cache" memory (very fast memory near the CPU circuits) to speed up access to main memory
     - CPU's are where the execution of each instruction happens
+
   
   - ## The Configurable Computer
+    - ROM (Read Only Memory 
+      - usually contains the basic software to start the computer, sometimes called "firmware")
+      - Not easy to change, but can be changed with special equipment.
+      - https://www.youtube.com/watch?v=3l5q0xaQEf8
     - RAM (Random Access Memory) 
       - https://www.youtube.com/watch?v=uYXwCBo40iA
-    - ROM (Read Only Memory - usually contains the basic software to start the computer, sometimes called "firmware")
-      - https://www.youtube.com/watch?v=3l5q0xaQEf8
+      - RAM - Random Access Memory - How does a RAM of PC store data?- Video IT
+        - https://www.youtube.com/watch?v=Kav6oOFDQSA
+      - Dynamic Random Access Memory (DRAM). Part 1: Memory Cell Arrays
+        - https://www.youtube.com/watch?v=I-9XWtdW_Co
     - IO & Peripherals & Removable Storage & More
       - All just more variations of the same thing
         - All built up from the same basic logic gates and transistors, or similar technology
@@ -252,6 +272,8 @@
         - The "hard drive" is a "magnetic" storage device, and uses tiny spots of "magnetized" material to represent the "state" of the data
         - The arm is controlled by software and uses "magnets" to move the arm to the correct position to read and write the data
         - Some sort of electrified magnet is the usual way that computers interact physically with the world
+
+# SOFTWARE
 
 # Machine Code — The Microcode Soft-Circuitry Commands of the CPU
   - Machine Code is the "language" of logical operations that the computer can perform
