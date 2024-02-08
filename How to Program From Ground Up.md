@@ -605,13 +605,14 @@
 
 # High-Level Language Styles
 
- - ## Procedural 1950s-1990s
+- ## Procedural Programming 1950s-Present (for amateurs, 1960s-1990s for professionals)
    - First style of high-level language after assembly language
    - Considered "high level" because it was abstracted from the assembly language. The language was actually just 
      another program that translated the "high level" language into "machine code" for the CPU, usually at runtime.
    - Procedural code is executed top to bottom, one line at a time. Control flow is done with "IF" and "GOTO" statements
    - GOTO was still commonly used, as most people didn't know how to use "subroutines" or "functions" yet and 
    - GOTO was easier to understand, at least first.
+   
    - Example of Procedural-Oriented Programming with GOTO's: BASIC (Beginner's All-purpose Symbolic Instruction Code)
      ```BASIC
      5 REM PROGRAM TO ADD 2 NUMBERS, PRINT RESULT <-- "REM" is a "remark" or "comment"
@@ -639,72 +640,72 @@
      
      ```
  
-   - ### The Push for Subroutines
-   - Programmers were eventually forced into using "subroutines" to deal with extreme overuse of "JUMP/GOTO" 
-     statements common to programming at that time which lead to extremely confusing, unreadable and unmaintainable 
-     "spaghetti code", so named because of the way the "GOTO" statements would jump around the program and get mixed
-     up like a plate of spaghetti.
-   - These subroutines are referred to "functions," "procedures," and "methods" in modern programming languages.
-   - The "subroutines" are usually called and returned using a "stack" to keep track of where the program left off, 
-     instead of having to use "GOTO" statements
-   - Variables were usually "global" and "mutable" which lead to "side effects" and hard to understand "state" of the program
-   - Each program was very "linear," "sequential," "imperative," and not portable or reusable, which lead to a lot of waste
-   - Data and Code were kept separate.
-     - Code was loaded into the computer, and then data was separately loaded and processed in "batches"
-   - Example of Procedural BASIC with Subroutines and GOSUB's (GOSUB is a "GOTO" to a "SUBroutine"):
-     ```BASIC
-     10 LET X = 10
-     20 LET Y = 32
-     30 GOSUB 100
-     40 PRINT "Output 1: "; Z
-     50 LET X = 110
-     70 GOSUB 100
-     80 PRINT "Output 2: "; Z
-     100 REM ADD 2 NUMBERS, RETURN IN Z  <-- This start of a "subroutine", REM is a "remark" or "comment" and is ignored by the program
-     110 LET Z = X + Y 
-     120 RETURN  <-- end of a "subroutine", return execution to the line after the "GOSUB" statement
+   - ### The Painful Push for Subroutines & Some Structure
+     - Programmers were eventually forced into using "subroutines" to deal with extreme overuse of "JUMP/GOTO" 
+       statements common to programming at that time which lead to extremely confusing, unreadable and unmaintainable 
+       "spaghetti code", so named because of the way the "GOTO" statements would jump around the program and get mixed
+       up like a plate of spaghetti.
+     - These subroutines are referred to "functions," "procedures," and "methods" in modern programming languages.
+     - The "subroutines" are usually called and returned using a "stack" to keep track of where the program left off, 
+       instead of having to use "GOTO" statements
+     - Variables were usually "global" and "mutable" which lead to "side effects" and hard to understand "state" of the program
+     - Each program was very "linear," "sequential," "imperative," and not portable or reusable, which lead to a lot of waste
+     - Data and Code were kept separate.
+       - Code was loaded into the computer, and then data was separately loaded and processed in "batches"
+     - Example of Procedural BASIC with Subroutines and `GOSUB`'s (the `GOSUB` command is a `GOTO` a "SUBroutine"):
+       ```BASIC
+       10 LET X = 10
+       20 LET Y = 32
+       30 GOSUB 100
+       40 PRINT "Output 1: "; Z
+       50 LET X = 110
+       70 GOSUB 100
+       80 PRINT "Output 2: "; Z
+       100 REM ADD 2 NUMBERS, RETURN IN Z  <-- This start of a "subroutine", REM is a "remark" or "comment" and is ignored by the program
+       110 LET Z = X + Y 
+       120 RETURN  <-- end of a "subroutine", return execution to the line after the "GOSUB" statement
      
-     RUN
+       RUN
      
-     Output 1: 42
-     Output 2: 142
+       Output 1: 42
+       Output 2: 142
      
-     ```
+       ```
      
    - ### Loops instead of GOTOs
-   - The FOR "loop" statement was introduced to replace the "GOTO" statement, as an attempt to make procedural 
-     code more "structured."
-   - The "loop" statement was used to repeat a block of code a certain number of times, or until a certain condition was met.
+     - The FOR "loop" statement was introduced to replace the "GOTO" statement, as an attempt to make procedural 
+       code more "structured."
+     - The "loop" statement was used to repeat a block of code a certain number of times, or until a certain condition was met.
    
-   - Example in BASIC:
-     ```BASIC
-     10 FOR A = 1 TO 10 STEP 1 <-- The "FOR" statement changes the value of "I" from 1 to 10, incrementing by 1 at each NEXT statement
-     15 GOSUB 100
-     20 PRINT A, B
-     30 NEXT A   <-- Execution continues at line after the "FOR" statement (15), unless "I" is 10, then it goes to next line (40) 
-     40 END
-     100 REM ADD A AND B, RETURN IN B
-     110 LET B = A + B
-     120 RETURN
+     - Example in BASIC:
+       ```BASIC
+       10 FOR A = 1 TO 10 STEP 1 <-- The "FOR" statement changes the value of "I" from 1 to 10, incrementing by 1 at each NEXT statement
+       15 GOSUB 100
+       20 PRINT A, B
+       30 NEXT A   <-- Execution continues at line after the "FOR" statement (15), unless "I" is 10, then it goes to next line (40) 
+       40 END
+       100 REM ADD A AND B, RETURN IN B
+       110 LET B = A + B
+       120 RETURN
      
-     RUN
+       RUN
      
-     Output:
-        1 1
-        2 3
-        3 6
-        4 10
-        5 15
-        6 21
-        7 28
-        8 36
-        9 45
-        10 55
-     ```
+       Output:
+          1 1
+          2 3
+          3 6
+          4 10
+          5 15
+          6 21
+          7 28
+          8 36
+          9 45
+          10 55
+       ```
  
    - Examples of Procedural languages are "Fortran" and "BASIC" and "COBOL"
  
- - ## Structured 1960s-Present
+ - ## Structured Programming 1960s-Present
    - No more "goto" statements, only subroutines and conditional branching were allowed
    - The concept of "scopes" (or "code blocks") to limit the use of "globally mutable" variables
      - This is the origin of "encapsulation" and first introduced to limit the visibility of the "local" variables 
@@ -770,7 +771,7 @@
      compiler for their particular machine, and then the same code could be run on any machine that had a compiler 
      for the language.
 
-- ## Class Oriented Programming (COP) 70s-2010s
+- ## Class Oriented Programming (COP) 1970s-Present
   - Usually misnamed "Object Oriented Programming," as "Objects" are _not_ the main focus, "Classes" are!
   
   - Collected ideas around: 
@@ -795,6 +796,8 @@
         - It's a way to make the class act like a "namespace" to group together the "methods" and "variables" that are related to each other
         - This was not the original intent of the "class" and "object" paradigm, but was a way to fit the COP 
           paradigm into the "procedural" paradigm.
+      - The use of the word "constructor" is a bit of a misnomer, as the memory space for the Object has been allocated 
+        and the `constructor` is called to set the initial values of the variables in the object ("initialize" the state.)
     
     - ### Classes and Objects as Static "Name Spaces" for Procedural-Style Code Implementations
       - In COP languages, the `class` is used as a "namespace" to group together various methods and variables that 
@@ -827,35 +830,35 @@
         - It's a way to tell the compiler AND the programmer that the class must have certain "methods" and "variables" in it to be considered a valid "subclass" of the interface
         - The `interface` is implemented by the `subclass`, where the methods and variables are defined by the "concrete implementing" `class`
             - Example (in pseudo-code similar to common COP languages):
-              ```OOP pseudo-code
+              ```OOP Pseduo-Code
               interface Document {     // <-- interfaces only define the "signature" of the methods it expects to be in the subclass
                 expects method view()  // this interface expects a method called "view" 
               }  
             
               // PDF is one "concrete implementing" class of the "Document" interface
               class PDF implements Document { // PDF is a subclass of Document, and must implement the "view" method
-                  override method view(): { // <-- the implementation of the interface (uses the "override" keyword) 
+                  override method view() { // <-- the implementation of the interface (uses the "override" keyword) 
                      print "Launch PDF Viewer"  
                   } 
               }
               
               // Email is one "concrete implementing" class of the "Document" interface
               class Email implements Document { // Email is a subclass of Document, and must implement the "view" method
-                  override method view(): { // <-- the implementation of the interface (uses the "override" keyword)
+                  override method view() { // <-- the implementation of the interface (uses the "override" keyword)
                      print "Launch Email App"  
                   } 
               }
               
               // Song is one "concrete implementing" class of the "Document" interface
               class Song implements Document { // <-- the implementation of the interface (uses the "override" keyword)
-                  override method view(): { 
+                  override method view() { 
                      print "Launch Music Player"  
                   } 
               }
               
               // Start of program
-              main() {
-                  Document doc1 = new PDF();
+              method main() {
+                  Document doc1 = new PDF()
                   Email doc2 = new Email()  
                   Song doc3 = new Song() 
                  
@@ -868,6 +871,7 @@
                   viewDocument(doc3)  // <-- will print "Launch Music Player"
               }
               ```
+              Live Code Example: [How Interfaces Work in Kotlin](src/main/kotlin/interfaceExample.kt)
         - Interfaces allow a developer to add multiple different implementations of the same named method by defining a 
           new `class` that `implement`s the superclass `interface` by defining code for the methods in the subclass
             - This makes it easier to add new subclasses of the `interface` to the program without changing any existing code
@@ -886,19 +890,16 @@
       - The "subclass" is also called a "derived class" and the "superclass" is also called a "base class"
       - Example:
       - ```OOP pseudo-code
-        open class Media {   // <-- the "base class" or "superclass", `open` means it can be subclasses (extended/inherited) 
-          String name
+        open class Media {   // <-- the "base class" or "superclass", `open` means it can be subclasses (extended/inherited)
+          // Note: there is no visible constructor, so the default constructor will be used -> Media(), which takes no parameters and does not initialize any variables.
           
-          open method Media(String name) { // <-- if no subclass overrides this method, it will be used as the default constructor
-            this.name = name
-          }
           open method play() { 
             print "Playing: " + this.name 
           } 
         }  
         
-        class MP3 extends Media {   // <-- the "subclass" or "derived class"; it `extends` (inherits) from the superclass (Media).
-            // NOTICE: No constructor is defined, so the default constructor in the superclass will be used (Media(String name))
+        open class MP3 extends Media {   // <-- the "subclass" or "derived class"; it `extends` (inherits) from the superclass (Media).
+            // NOTICE: No constructor is defined, so the default constructor in the superclass will be used -> Media()
         
             override method play() { 
                print "Playing MP3: " + this.name 
@@ -906,18 +907,18 @@
         }
         
         class Video extends Media { 
-            // NOTICE: No constructor is defined, so the default constructor in the superclass will be used (Media(String name))
+            // NOTICE: No constructor is defined, so the default constructor in the superclass will be used -> Media()
             
             override method play() { 
                print "Playing Video: " + this.name 
             } 
         }
         
-        class ProtectedMP3 extends MP3 {
+        class ProtectedMP3 extends MP3 {  // note: "Concrete Class" MP3 must be declared as `open` in order to be subclassed
             String password
-            Boolean authentcated = false
+            Boolean authenticated = false
         
-            ProtectedMP3(String name, String password) {  // <-- the constructor of this class, its called to initialize the object
+            constructor ProtectedMP3(String name, String password) {  // <-- the constructor of this class, its called to initialize the object
                 super(name)  // <-- calls the constructor of the superclass (MP3)
                 this.password = password    // Sets the password for the password protected MP3
             }
@@ -938,11 +939,11 @@
         }
         
         // Start of program
-        main() {
-            Media doc0 = new Media("MyMedia")  // Since the `Media` class is `open` and not `abstract`, an object can be created from it.
-            Media doc1 = new MP3("MyMP3.mp3")
-            Media doc2 = new Video("MyVideo.mp4")
-            Media doc3 = new ProtectedMP3("MyProtectedMP3.mp3", "MySecretPassword123")
+        method main() {
+            Media doc0        = new Media()  // Since the `Media` class is `open` and not `abstract`, an object can be created from it.
+            Media doc1        = new MP3()
+            Media doc2        = new Video()
+            ProtectedMP3 doc3 = new ProtectedMP3("MyProtectedMP3.mp3", "MySecretPassword123")  // note that the `ProtectedMP3` type is required to call the `authenticate` method
 
             function playMedia(Media media) {  // Note that the parameter is of type `Media` and not `MP3` or `Video` or `ProtectedMP3`
                 media.play()
@@ -965,65 +966,89 @@
         // Authenticated!
         // Playing Protected MP3: MyProtectedMP3.mp3
         ```
+        - Live Code Example: [How Inheritance Works in Kotlin](src/main/kotlin/inheritanceExample.kt)
+    
     - ### Abstract Classes
       - Very similar to interfaces but can have default implementations of the methods & include variables
       - The `abstract class` is usually `extend`ed by the subclass and then the methods are overridden by the subclass
       - Example:
-    - ```OOP pseudo-code
-      abstract class Document { 
-        String name = ""                  // <-- Abstract classes can have variables.
+        - ```OOP pseudo-code
+          abstract class Document1 { 
+            String name = ""                  // <-- Abstract classes can have variables.
         
-        Document(String name) {           // <-- Abstract classes can have constructors.
-            this.name = name
-        }
-        expects method view()  // Expects a method called "view" and has no default implementation.
-        expects method showName() {    // Expects a method called "showName" and has a default implementation.
-            print "Document Name: " + this.name // <-- The "default implementation" for any subclass that doesn't override the method.
-        } 
-      }  
+            Document1(String name) {           // <-- Abstract classes can have "default" constructors.
+                this.name = name
+            }
+            expects method view()          // Expects a method called "view" and has no default implementation.
+            expects method showName() {    // Expects a method called "showName" and has a default implementation.
+                print "Document Name: " + this.name // <-- The "default implementation" for any subclass that doesn't override the method.
+            } 
+          }  
         
-      class PDF extends Document {  // <-- PDF is a subclass of Document.
-          override method view(): { // <-- the implementation of the abstract class "view"
-             System.launchPDFViewer(name)  
-          } 
-      }
+          class PDF1 extends Document1 {  // <-- PDF1 is a subclass of Document1.
+              override method view() { // <-- the implementation of the abstract class "view".
+                 print "View PDF: " + this.name  
+              } 
+          }
         
-      class Email extends Document { // <-- Email is a subclass of Document
-          String to
-          String from
-          String subject
+          class Email1 extends Document1 { // <-- Email1 is a subclass of Document1.
+              String to
+              String from
+              String subject
+      
+              Email1(String to, String from, String subject) {  // <-- the custom constructor of this class, its called to 
+                                                                //     initialize the variables of the object.
+                  super("Email to:" + to)  // <-- calls the constructor of the superclass (Document1).
+                  this.to = to
+                  this.from = from
+                  this.subject = subject
+              }
           
-          override method view(): {
-             this.name = to
-             showName(to)  // <-- calls the "default implementation" of the abstract superclass 
-             launchEmailApp(to, from, subject) // <-- the implementation of the open method 
-          }
-          override method showName(): { // <-- overrides the "default implementation" of the abstract superclass
-             print "Email to: " + this.name  
-          } 
-      }
-        
-      class Song extends Document { // <-- Song is a subclass of Document
-          override method view(String name): { // <-- the implementation of the abstract class "view"
-               this.name = name
-               launchMusicPlayer(name)  
-          } 
-      }
-        
-      // Start of program
-      main() {
-          Document doc1 = new PDF("MyPDF.pdf")
-          Document doc2 = new Email(to="Chris", from="from:Bob", subject="subject:Meeting")
-          Document doc3 = new Song("MySong.mp3")
-        
-          function viewDocument(Document doc) {  // Note that the parameter is of type `Document` and not `PDF` or `Email` or `Song`
-              doc.view(name)
+              override method view() {  // <-- the implementation of the abstract class "view".
+                 super.showName(to)     // <-- Calls the "default implementation" of the abstract superclass.
+                                        // Note: Calls to the super class are not required, but can be used to call any 
+                                        // implementations of the superclass.
+             
+                 print "View Email: from= " + this.from + ", to= " + this.to + ", subject= " + this.subject 
+              }
+              override method showName() { // <-- overrides the "default implementation" of the abstract superclass.
+                 super.showName()    // <-- calls the "default implementation" of the abstract superclass. 
+                                     // note: What `name` represents depends on the context!
+              } 
           }
         
-          viewDocument(doc)  // <-- will call the "view" method of the PDF class 
-      }
-      ```
-    
+          class Song1 extends Document { // <-- Song is a subclass of Document
+              override method view() {  // <-- the implementation of the abstract class "view"
+                   print "Listen to Music Player: " + this.name
+              } 
+          }
+        
+          // Start of program
+          method main() {
+              // Document1 doc0 = new Document("MyDocument1")  // Since the `Document1` class is `abstract`, an object cannot be created from it. 
+                                                             // This will cause a compiler error.
+              Document1 doc1 = new PDF("MyPDF1.pdf")
+              Song1     doc2 = new Song("MySong1.mp3")
+              Email1    doc3 = new Email(to="Chris", from="Bob", subject="Meeting")
+        
+              function viewDocument(Document doc) {  // Note that the parameter `doc` is of type `Document` and not `PDF` or `Email` or `Song`.
+                  doc.view(name)
+              }
+        
+              viewDocument(doc1)  // <-- will call the "view" method of the PDF1 class
+              viewDocument(doc2)  // <-- will call the "view" method of the Song1 class 
+              viewDocument(doc3)  // <-- will call the "view" method of the Email1 class
+          }
+      
+          // Output:
+          // View PD1: MyPDF1.pdf
+          // Listen to Music Player: MySong1.mp3
+          // Document Name: Email to:Chris
+          // View Email: from= Bob, to= Chris, subject= Meeting
+      
+        ```
+        - Live Code Example: [How Abstract Classes Work in Kotlin](src/main/kotlin/abstractClassExample.kt)
+
     - ### Polymorphism
       - Polymorphism is the idea that a method can be called on an object and the method will behave differently
         based on the "type" of the "object" that the "method" is called on
@@ -1085,7 +1110,7 @@
      - Mutable State - All state in BOOP is immutable, and the object is expected to return a new object with the new state.
    - Amazingly, the dreaded Singleton Pattern is allowed to manage global state in BOOP.
    
-   - Example (Kotlin):
+   - Back-to-Object Oriented Programming Example (Kotlin):
      ```Kotlin
      class Page(  // <-- the "Page" class constructor, the "val" keyword means the variable is immutable
         val content: String
@@ -1098,58 +1123,59 @@
            return Page(newContent)  // <-- the "updateContent" method is expected to return a new object with the new state
         }
      }
-   
-     class Document(
-        val name: String,
+     
+     class Book(
+        val title: String,
         val pages: List<Page>
      ) {  
         fun view() { 
-           println("Document: $name, # of Pages: ${pages.size}")
+           println("Book: $title, # of Pages: ${pages.size}")
            pages.forEach { it.view() } 
         }
         
         fun updateName(newName: String): Document {
-           return Document(newName, pages)  // <-- the "updateName" method is expected to return a new object with the new state
+           return Book(newName, pages)  // <-- the "updateName" method is expected to return a new object with the new state
         }
         
-        fun updatePages(newPages: List<Page>): Document {
-           return Document(name, newPages)  // <-- the "updatePages" method is expected to return a new object with the new state
+        fun updatePages(newPages: List<Page>): Book {
+           return Book(name, newPages)  // <-- the "updatePages" method is expected to return a new object with the new state
         }
      }
    
      class Application(
-        val document: Document  // <-- the "Application" class, the "val" keyword means the variable is immutable
+        val book: Book  // <-- the "Application" class, the "val" keyword means the variable is immutable
      ) {  
         fun view() {
-           println("Application Viewing: ${document.name}")
-           document.view() 
+           println("Application Viewing: ${book.name}")
+           book.view() 
         }
         
-        fun updateDocument(newDocument: Document): Application {
+        fun updateBook(newDocument: Document): Application {
            return Application(newDocument)  // <-- the "updateDocument" method is expected to return a new object with the new state
         }
      }
      
-     func main() {
+     fun main() {
         val pages = listOf(
            Page("Page 1 Content"),
            Page("Page 2 Content"),
            Page("Page 3 Content")
         )
-        val doc = Document("MyDocument.txt", pages) // <-- the "val" keyword means the variable is immutable
-        var app = Application(doc) // <-- The "var" keyword means the variable is mutable, 
+        val book = Book("MyDocument.txt", pages) // <-- the "val" keyword means the variable is immutable
+        var app = Application(book) // <-- The "var" keyword means the variable is mutable, 
                                    //     `app` is a "var" because it's expected to change state. 
                                    // Every other variable is a "val" and is immutable.
         
         app.view()  // <-- will print: 
-                    // Application Viewing: MyDocument.txt
-                    // Document: MyDocument.txt, # of Pages: 3
+                    // Application Viewing: MyBook.txt
+                    // Book: MyBook.txt, # of Pages: 3
                     // Page: Page 1 Content
                     // Page: Page 2 Content
                     // Page: Page 3 Content
-        // app.document = Document("NewDocument.txt")  // <-- will not compile, as the variable is immutable
+        // app.book = Book("NewBook.txt")  // <-- will not compile, as the variable `book` is immutable and cannot be changed.
         
-        
+        // To change the state of the application, a whole new object must be created with the new state, 
+        // usually based on a copy the old state, with modifications to reflect the new state.
         val newPages = pages.copy()
            .toMutableList()
            .filter { page ->  // instead of using imperative "for" loops, "filter" uses a loop under the hood to create a new list of pages.
@@ -1159,18 +1185,31 @@
              add(Page("New Page 4 Content"))  // <-- adds a new page to the list
            }
            .toList()  // <-- converts the mutable list back to an immutable list
-        app = app.updateDocument( 
-           Document("UpdatedDocument.txt", newPages)
+        app = app.updateBook( 
+           Book("UpdatedBook.txt", newPages)
         )
         app.view()  // <-- will print: 
-                    // Application Viewing: UpdatedDocument.txt
-                    // Document: UpdatedDocument.txt, # of Pages: 3
+                    // Application Viewing: UpdatedBook.txt
+                    // Book: UpdatedBook.txt, # of Pages: 3
                     // Page: Page 1 Content
                     // Page: Page 3 Content
                     // Page: New Page 4 Content
      }
      
      main()
+     
+     // Output:
+     // Application Viewing: MyBook.txt
+     // Book: MyBook.txt, # of Pages: 3
+     // Page: Page 1 Content
+     // Page: Page 2 Content
+     // Page: Page 3 Content
+     // Application Viewing: UpdatedBook.txt
+     // Book: UpdatedBook.txt, # of Pages: 3
+     // Page: Page 1 Content
+     // Page: Page 3 Content
+     // Page: New Page 4 Content
+     
      
      ``` 
    - There are only a few BOOP languages, "Smalltalk" and, _incredibly_, "Javascript" are among the most popular ones.
