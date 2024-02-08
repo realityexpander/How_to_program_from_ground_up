@@ -41,12 +41,12 @@
       - Allowed for the first "programmable" machines that could be used to perform relatively complex tasks 
         like sorting and counting of specific data
       - [<img src="assets/punched_card.png" width="280">](https://en.wikipedia.org/wiki/Punched_card)
-      - [<img src="hollerith_counter.png" width="280">](https://en.wikipedia.org/wiki/Hollerith_machine)
+      - [<img src="assets/hollerith_counter.png" width="280">](https://en.wikipedia.org/wiki/Hollerith_machine)
     
     - Remnants of photons hitting a piece of glass coated with a thin layer of phosphor - 1940s to 1980s
       - [<img src="assets/williams_tube.png" width="280">](https://en.wikipedia.org/wiki/Williams_tube)
       - [<img src="assets/williams_tube2.png" width="280">](https://en.wikipedia.org/wiki/Williams_tube)
-      - [<img src="williams_tube3.png" width="280">](https://ub.fnwi.uva.nl/computermuseum/williamstube.html)
+      - [<img src="assets/williams_tube3.png" width="280">](https://ub.fnwi.uva.nl/computermuseum/williamstube.html)
       
     - Magnetic Phenomenon - 1950s to present
       - Electronically detectable areas on magnetizable material, or the presence of a magnetic field in a specific area
@@ -183,19 +183,31 @@
         - SR Latch 
         - https://youtu.be/KM0DdEaY5sY
 
-  - ## The Interchangeable Integrated Chip (IC) = Groups of transistor logic gates packaged together to perform a specific task
-  - ![img_1.png](the_ic.png)
-  - ![img_2.png](img_2.png)
-  - ![img_1.png](img_1.png)
-    - the logic gate "package" (groups of transistors for a specific logic operation)
-      - OR, AND, NOT, NAND package (usually 2-4 in the same package)
-      - Why is NAND gates so special?
-        - It's the most flexible can be combined to create any other logic gate, ie: AND, OR, NOT, XOR, etc.
-          1) tie inputs A & B together to create a NOT gate
-          2) tie inputs A & B together combined with a NOT gate to create an OR gate
-          3) use normal A & B inputs and combine with a NOT to create an AND gate
-      - Everything in computers can be done with just these three types of gates
-      - Most early digital electronic calculators were made solely with many IC's of these gates
+  - ## The Interchangeable Integrated Chip (IC) 
+  - Groups of transistor logic gates packaged together to perform a specific task
+  - Robert Noyce, inventor of first monolithic IC 
+    
+    ![the_ic.png](the_ic.png)
+  - Typical Early Logic Gate Package
+    
+    ![logic-gate-package.png](logic-gate-package.png)
+  
+  - Close up of silicon wafer wired to package
+    
+    ![chip-wired-to-package.png](chip-wired-to-package.png)
+     
+  - The logic gate "package" 
+  - A Package is a group of transistors for a specific logic operation placed on a single chip contained in a plastic 
+    or ceramic enclosure with metal pins to connect to the rest of the computer.
+    - Basic functions consist of Logical OR, AND, NOT, NAND package (usually 2-4 gates in the same package)
+    - Extremely complex functions are made by combining many of these packages together in clever ways
+  - Why is NAND gates so special?
+    - It's the most flexible can be combined to create any other logic gate, ie: AND, OR, NOT, XOR, etc.
+      1) tie inputs A & B together to create a NOT gate
+      2) tie inputs A & B together combined with a NOT gate to create an OR gate
+      3) use normal A & B inputs and combine with a NOT to create an AND gate
+    - Everything in computers can be done with just these three types of gates
+    - Most early digital electronic calculators were made solely with many IC's of these NAND gates
     
   - ## The Mighty Microprocessor (groups of integrated chips -> all put on one chip)
     - Contains a CPU (Central Processing Unit) and a small amount of ultra fast memory (called "Registers")
@@ -501,7 +513,7 @@
     ![array.png](arrays.png)
     
     - 2D Arrays
-     ![2d_arrays.png](2d_arrays.png)
+     ![2d_arrays.png](assets/2d_arrays.png)
     
     - 2D Arrays in Code (C) 
     - ![2dArraysInC.png](2dArraysInC.png) 
