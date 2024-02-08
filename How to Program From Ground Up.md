@@ -258,7 +258,7 @@
   - ## Representing Values in Memory 
     - ### Binary Counting
      
-      ![8-bit-binary.png](assets/8-bit-binary.png)
+    - ![8-bit-counting-2.png](8-bit-counting-2.png)
     - ### Hexadecimal Counting
       ![hexadecimal.png](assets/hexadecimal.png)
       
@@ -606,26 +606,29 @@
 # High-Level Language Styles
 
  - ### Procedural 1950s-1990s
-   - First style of high level language after assembly language
+   - First style of high-level language after assembly language
    - Considered "high level" because it was abstracted from the assembly language. The language was actually just 
      another program that translated the "high level" language into "machine code" for the CPU, usually at runtime.
+   - Procedural code is executed top to bottom, one line at a time. Control flow is done with "IF" and "GOTO" statements
    - GOTO was still commonly used, as most people didn't know how to use "subroutines" or "functions" yet and 
    - GOTO was easier to understand, at least first.
-   - Example of Procedural Oriented Programming with GOTO's: BASIC
-     ```
-     10 LET X = 10
+   - Example of Procedural-Oriented Programming with GOTO's: BASIC (Beginner's All-purpose Symbolic Instruction Code)
+     ```BASIC
+     5 REM PROGRAM TO ADD 2 NUMBERS, PRINT RESULT <-- "REM" is a "remark" or "comment"
+     10 LET X = 10   <-- "LET" is a "statement" that assigns a value to a variable
      20 LET Y = 32
-     30 GOTO 100
+     30 GOTO 100     <-- "GOTO" is a "statement" that changes the next line to execute to a different line
      40 PRINT "Output: "; Z
      50 GOTO 150
-     60 GOTO 190
-     100 REM ADD 2 NUMBERS, RESULT IN Z  <-- REM is a "remark" or "comment"
-     110 LET Z = X + Y  <-- All variables are global and mutable
+     60 IF X = 10 THEN GOTO 190
+     70 GOTO 10
+     100 REM ADD 2 NUMBERS, RESULT IN Z  
+     110 LET Z = X + Y   <-- All variables are global and mutable
      120 GOTO 40
      150 PRINT "THIS GOTO STUFF CAN GET CONFUSING"
      160 GOTO 60
      190 PRINT "HOW DID I GET HERE?"
-     200 END
+     220 END
      
      RUN
      
@@ -648,8 +651,8 @@
    - Each program was very "linear," "sequential," "imperative," and not portable or reusable, which lead to a lot of waste
    - Data and Code were kept separate.
      - Code was loaded into the computer, and then data was separately loaded and processed in "batches"
-   - Example of Procedural BASIC):
-     ```
+   - Example of Procedural BASIC with Subroutines and GOSUB's (GOSUB is a "GOTO" to a "SUBroutine"):
+     ```BASIC
      10 LET X = 10
      20 LET Y = 32
      30 GOSUB 100
@@ -667,6 +670,38 @@
      Output 2: 142
      
      ```
+     
+   - ### Loops instead of GOTOs
+   - The FOR "loop" statement was introduced to replace the "GOTO" statement, as an attempt to make procedural 
+     code more "structured."
+   - The "loop" statement was used to repeat a block of code a certain number of times, or until a certain condition was met.
+   
+   - Example in BASIC:
+     ```BASIC
+     10 FOR A = 1 TO 10 STEP 1 <-- The "FOR" statement changes the value of "I" from 1 to 10, incrementing by 1 at each NEXT statement
+     15 GOSUB 100
+     20 PRINT A, B
+     30 NEXT A   <-- Execution continues at line after the "FOR" statement (15), unless "I" is 10, then it goes to next line (40) 
+     40 END
+     100 REM ADD A AND B, RETURN IN B
+     110 LET B = A + B
+     120 RETURN
+     
+     RUN
+     
+     Output:
+        1 1
+        2 3
+        3 6
+        4 10
+        5 15
+        6 21
+        7 28
+        8 36
+        9 45
+        10 55
+     ```
+ 
    - Examples of Procedural languages are "Fortran" and "BASIC" and "COBOL"
  
  - ### Structured 1960s-Present
@@ -679,7 +714,7 @@
      - Example of structured language (C): 
        Note: The `//` symbols means the rest of the line is comment, it is not part of the program, 
              it's just for explanation and is ignored by the compiler.
-       ```
+       ```C
        int main() {  // <-- start of the program, int means the function returns an integer 
          int y = 100;
          int x = 10; 
@@ -701,7 +736,7 @@
    - The concept of "types" was introduced to define the size & purpose of certain "primitive" data types 
      like "int," "long," "float," "char," and "bool" and "structs" made up of these "primitive" data types
      - Example (C):
-     - ```
+       ```C
        struct Point {  <-- `Point` is a type that is made up of other types
          int x;
          int y;
@@ -790,7 +825,7 @@
         - It's a way to tell the compiler AND the programmer that the class must have certain "methods" and "variables" in it to be considered a valid "subclass" of the interface
         - The `interface` is implemented by the `subclass`, where the methods and variables are defined by the "concrete implementing" `class`
             - Example (in pseudo-code similar to common COP languages):
-              ```
+              ```OOP pseudo-code
               interface Document {     // <-- interfaces only define the "signature" of the methods it expects to be in the subclass
                 expects method view()  // this interface expects a method called "view" 
               }  
@@ -848,7 +883,7 @@
       - The class that is inherited from is called the "superclass" and the class that inherits is called the "subclass"
       - The "subclass" is also called a "derived class" and the "superclass" is also called a "base class"
       - Example:
-      - ```
+      - ```OOP pseudo-code
         open class Media {   // <-- the "base class" or "superclass", `open` means it can be subclasses (extended/inherited) 
           String name
           
@@ -932,7 +967,7 @@
       - Very similar to interfaces but can have default implementations of the methods & include variables
       - The `abstract class` is usually `extend`ed by the subclass and then the methods are overridden by the subclass
       - Example:
-    - ```
+    - ```OOP pseudo-code
       abstract class Document { 
         String name = ""                  // <-- Abstract classes can have variables.
         
@@ -1031,21 +1066,107 @@
    - Use of interfaces is limited to Classes that require testing, and are not automatically added for every class.
    - Use of `setters` and `getters` is specifically disallowed. Instead, the object is expected to respond to messages to change its 
      state, and to respond to messages to get its state.
-   - Specific COP patterns are not permitted, such as:
+   - Specific COP patterns are *NOT* permitted, such as:
      - Factory Pattern
      - Use of `null`
      - Getters and Setters
      - Reflection & Type Casting
      - Inheritance
      - Mutable State - All state in BOOP is immutable, and the object is expected to return a new object with the new state.
-     - 
    - Amazingly, the dreaded Singleton Pattern is allowed to manage global state in BOOP.
-      
- 
+   
+   - Example (Kotlin):
+     ```Kotlin
+     class Page(  // <-- the "Page" class constructor, the "val" keyword means the variable is immutable
+        val content: String
+     ) {  
+        fun view() { 
+           println("Page: $content") 
+        }
+        
+        fun updateContent(newContent: String) {
+           return Page(newContent)  // <-- the "updateContent" method is expected to return a new object with the new state
+        }
+     }
+   
+     class Document(
+        val name: String,
+        val pages: List<Page>
+     ) {  
+        fun view() { 
+           println("Document: $name, # of Pages: ${pages.size}")
+           pages.forEach { it.view() } 
+        }
+        
+        fun updateName(newName: String): Document {
+           return Document(newName, pages)  // <-- the "updateName" method is expected to return a new object with the new state
+        }
+        
+        fun updatePages(newPages: List<Page>): Document {
+           return Document(name, newPages)  // <-- the "updatePages" method is expected to return a new object with the new state
+        }
+     }
+   
+     class Application(
+        val document: Document  // <-- the "Application" class, the "val" keyword means the variable is immutable
+     ) {  
+        fun view() {
+           println("Application Viewing: ${document.name}")
+           document.view() 
+        }
+        
+        fun updateDocument(newDocument: Document): Application {
+           return Application(newDocument)  // <-- the "updateDocument" method is expected to return a new object with the new state
+        }
+     }
+     
+     func main() {
+        val pages = listOf(
+           Page("Page 1 Content"),
+           Page("Page 2 Content"),
+           Page("Page 3 Content")
+        )
+        val doc = Document("MyDocument.txt", pages) // <-- the "val" keyword means the variable is immutable
+        var app = Application(doc) // <-- The "var" keyword means the variable is mutable, 
+                                   //     `app` is a "var" because it's expected to change state. 
+                                   // Every other variable is a "val" and is immutable.
+        
+        app.view()  // <-- will print: 
+                    // Application Viewing: MyDocument.txt
+                    // Document: MyDocument.txt, # of Pages: 3
+                    // Page: Page 1 Content
+                    // Page: Page 2 Content
+                    // Page: Page 3 Content
+        // app.document = Document("NewDocument.txt")  // <-- will not compile, as the variable is immutable
+        
+        
+        val newPages = pages.copy()
+           .toMutableList()
+           .filter { page ->  // instead of using imperative "for" loops, "filter" uses a loop under the hood to create a new list of pages.
+              page.content != "Page 2 Content" // <-- removes the 2nd page from the list
+           }
+           .apply { // <-- creates a new list of pages with the same content as the original list 
+             add(Page("New Page 4 Content"))  // <-- adds a new page to the list
+           }
+           .toList()  // <-- converts the mutable list back to an immutable list
+        app = app.updateDocument( 
+           Document("UpdatedDocument.txt", newPages)
+        )
+        app.view()  // <-- will print: 
+                    // Application Viewing: UpdatedDocument.txt
+                    // Document: UpdatedDocument.txt, # of Pages: 3
+                    // Page: Page 1 Content
+                    // Page: Page 3 Content
+                    // Page: New Page 4 Content
+     }
+     
+     main()
+     
+     ``` 
    - There are only a few BOOP languages, "Smalltalk" and, _incredibly_, "Javascript" are among the most popular ones.
  
- - ### Functional Programming 50s-2020's
-   - ## Immutability 
+ - ### Functional Programming 1950s-Present
+   - ## Main Idea: Immutability 
      - Functional Programming's main idea is to avoid "side effects" and "shared mutable state" of the program
    - All functions in the core of the application return a value and have no "side effects" on any other "state" of 
      the program.
@@ -1054,10 +1175,11 @@
    - Functions are "first-class citizens" and can be passed as arguments to other functions, just like normal variables and objects
      - This allows customization of the functions by passing in any function as an argument to another function
      - This allows the functions to be "composed" together to create new functions from existing functions
-     - These functions are called "lambdas," "closures," "anonymous functions" or "function literals," all interchangeably.
+     - These functions are called "lambdas," "closures," "anonymous functions" or "function literals," 
+       and "higher-order functions" all interchangeably. It's all just functions!
    - Examples of functional languages are "Lisp", "Clojure" and "F#" and "Kotlin"
    - Example (Kotlin):
-       ```
+       ```Kotlin
        fun main() {
           val add = { a: Int, b: Int -> a + b }  // <-- a lambda that takes 2 integers and returns the sum of the integers.
           val multiply = { a: Int, b: Int -> a * b }  // <-- a lambda that takes 2 integers and returns the product of the integers.
@@ -1080,9 +1202,10 @@
          
        // Output:
        // 24
-            
+     
        ``` 
 
+   
 
 
 
