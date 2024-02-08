@@ -86,20 +86,22 @@
     - Can be physically manipulated using electricity to change state using an electromagnet.
     - Simple switches can be used to represent boolean logic operations
     - These operations are called "gates", conceptually similar to someone following path crossing a fence through a gate
-    - Logical Operations & Boolean Arithmetic
-      - Two switches in series represents logical AND gate
+    
+    - ### Logical Operations & Boolean Arithmetic
+      - Two switches in series represent a Logical AND gate
         - AND ( the `&&` symbol )
           - 0 && 0 = 0
           - 0 && 1 = 0
           - 1 && 0 = 0
           - 1 && 1 = 1
-      - Two switches in parallel represents logical OR gate
+      - Two switches in parallel represent a Logical OR gate
         - OR ( the `||` symbol) 
           - 0 || 0 = 0
           - 0 || 1 = 1
           - 1 || 0 = 1
           - 1 || 1 = 1
-      - Boolean logic requires one more operation to be complete: The logical NOT operation
+      - Boolean logic requires one more operation to be complete: The logical "NOT" operation...
+      - 
   
   - ## The Magnificent Magnet
     - Magnets can be electrically controlled to cause mechanical actions on certain metallic materials
@@ -180,7 +182,7 @@
         - SR Latch 
         - https://youtu.be/KM0DdEaY5sY
 
-  - ## The Interchangeable Integrated Chip (IC - groups of logic gates packaged together to perform a specific purpose)
+  - ## The Interchangeable Integrated Chip (IC) = Groups of transistor logic gates packaged together to perform a specific task
   - ![img_1.png](the_ic.png)
   - ![img_2.png](img_2.png)
   - ![img_1.png](img_1.png)
@@ -248,7 +250,7 @@
     - `0xCD: CMP` Compare the values in two registers and update the "flags" register with the result
     - `0xD0: BNE` If the "flags" register is not zero, start executing at a different location in main memory ie: "conditional branching"
   
-  - ### Clock — "The heart beat of the CPU"
+  - ### Clock — "The heart beat of the CPU to keep it in sync"
     - Clock Circuit - Basically a emits a short pulse of electricity at a regular interval
       - a "tick" of the clock, like flashing a light to the beat
     - Used synchronizes the operations of the CPU
@@ -259,7 +261,7 @@
     - The cycle of the clock is not the same as the cycle of the CPU, but the CPU normally does one operation per cycle
       but some operations may take more than one clock cycle to complete.
   
-  - ### Program Counter - "Where is the current instruction to be executed?"
+  - ### Program Counter - "Where in memory is the current instruction being executed?"
     - The "program counter" (PC) is a special register that keeps track of the current memory location of the
       current instruction that the CPU will execute/is executing
     - Defaults to the first memory location(0x00000000), and then increments by 1 after each instruction is executed
@@ -278,7 +280,7 @@
       - The number of cycles is totally dependent on the specific CPU and the specific operation
       - The operation may need to store the result back into main memory or into one or more registers
   
-  - ### Registers — "The Tiny Superfast Memory of the CPU"
+  - ### Registers — "The Tiny Superfast Memory Closest to the CPU"
     - Registers are a small amount of very fast memory that is part of the CPU
     - The registers are used to store the results of the instructions, and current operands being executed
     - The registers are used to store the current "state" of the CPU, like the "program counter" and the "flags" register
@@ -290,6 +292,25 @@
         - if the result of the last operation was zero, then the "zero" flag is set to 1; otherwise it's set to 0
         - if the result of the last operation was negative, then the "negative" flag is set to 1; otherwise it's set to 0
         - if the result of the last operation had to "carry" a bit, then the "carry" flag is set to 1; otherwise it's set to 0
+
+  - ### Example Machine Language Program (6502 — Add 2 numbers and store the result in memory)
+  - ```
+    Assembly   Opcode & Operand    
+    LDA #5     A905   // Load the value 5 into the "A" register, opcode: 0xA9 operand: 0x05
+    STA 0x0000 8D0000 // Store the value in the "A" register into memory location 0x0000, opcode: 0x8D operands: 0x00 0x00
+    LDA #7     A907   // Load the value 7 into the "A" register,  opcode: 0xA9 operand: 0x07                                            
+    STA 0x0001 8D0001 // Store the value in the "A" register into memory location 0x0001, opcode: 0x8D operands: 0x00 0x01
+    LDA 0x0000 A90000 // Load the value in memory location 0x0000 into the "A" register, opcode: 0xA9 operands: 0x00 0x00                      
+    ADC 0x0001 6D0001 // Add the value in memory location 0x0001 to the value in the "A" register, opcode: 0x6D operands: 0x00 0x01
+    STA 0x0002 8D0002 // Store the result of the addition into memory location 0x0002, opcode: 0x8D operands: 0x00 0x02
+    
+    // Memory state after the program has executed:
+    0x0000: 0x05
+    0x0001: 0x07
+    0x0002: 0x0C
+    
+    // The result of the addition of 5 and 7 is 12, which is 0x0C in hexadecimal
+    ```
 
 - # Assembly Language
   - Assembly Language is a "human-readable" representation of the "machine code" that the CPU can execute
@@ -416,7 +437,7 @@
     - The "characters" are sometimes terminated by a special "end of string" character, or have a length stored somewhere
     - The "characters" are usually accessed by an "index" which is a number that represents the position of the "characters" in the string
   
-  - ### Pointe
+  - ### Pointer
     - A number that represents the "address" of another location in memory
     - Diagram:
       - Address: Value 
@@ -477,31 +498,128 @@
         ![tree.png](assets/tree.png)  
 
 # High-Level Language Styles
+
  - ### Procedural 50s-60s
    - First style of high level language after assembly language
-   - Based on the idea of "subroutines" to deal with the use of "JMP/goto" statements which lead to confusing "spaghetti code"
-   - The "subroutines" are usually called "functions" or "procedures" or "methods"
-   - Early examples of procedural languages are "Fortran" and "C"
-   - The "subroutines" are usually "called" and "returned" using a "stack" to keep track of the "state" of the program
+   - Considered "high level" because it was abstracted from the assembly language. The language was actually just 
+     another program that translated the "high level" language into "machine code" for the CPU, usually at runtime.
+   - GOTO was still commonly used, as most people didn't know how to use "subroutines" or "functions" yet and 
+   - GOTO was easier to understand, at least first.
+   - Example of Procedural Oriented Programming with GOTO's: BASIC
+     ```
+     10 LET X = 10
+     20 LET Y = 32
+     30 GOTO 100
+     40 PRINT "Output: "; Z
+     50 GOTO 150
+     60 GOTO 190
+     100 REM ADD 2 NUMBERS, RESULT IN Z  <-- REM is a "remark" or "comment"
+     110 LET Z = X + Y  <-- All variables are global and mutable
+     120 GOTO 40
+     150 PRINT "THIS GOTO STUFF CAN GET CONFUSING"
+     160 GOTO 60
+     190 PRINT "HOW DID I GET HERE?"
+     200 END
+     
+     RUN
+     
+     Output: 42
+     THIS GOTO STUFF CAN GET CONFUSING
+     HOW DID I GET HERE?
+     
+     ```
+ 
+   - #### The Push for Subroutines
+   - Programmers were forced to use "subroutines" to deal with the overuse of "JMP/GOTO" statements which lead to 
+     extremely confusing "spaghetti code" which was unmaintainable and unreadable.
+   - The "subroutines" are usually called "functions" or "procedures"
+   - The "subroutines" are usually called and returned using a "stack" to keep track of where the program left off, 
+     instead of having to use "GOTO" statements
    - Variables were usually "global" and "mutable" which lead to "side effects" and hard to understand "state" of the program
    - Each program was very "linear," "sequential," "imperative," and not portable or reusable, which lead to a lot of waste
    - Data and Code were kept separate.
      - Code was loaded into the computer, and then data was separately loaded and processed in "batches"
+   - Example of Procedural BASIC):
+     ```
+     10 LET X = 10
+     20 LET Y = 32
+     30 GOSUB 100
+     40 PRINT "Output 1: "; Z
+     50 LET X = 110
+     70 GOSUB 100
+     80 PRINT "Output 2: "; Z
+     100 REM ADD 2 NUMBERS, RETURN IN Z  <-- start of a "subroutine", REM is a "remark" or "comment"
+     110 LET Z = X + Y 
+     120 RETURN  <-- end of a "subroutine", return execution to the line after the "GOSUB" statement
+     
+     RUN
+     
+     Output1: 42
+     Output2: 142
+     
+     ```
+   - Examples of procedural languages are "Fortran" and "BASIC" and "COBOL"
  
  - ### Structured 60s-70s
-   - No more "goto" statements, only "subroutines" and "conditional jumps"
-   - The concept of "scopes" and "blocks" to limit the use of "globally mutable" variables
-     - This was the origin of "encapsulation" and introduced to limit the visibility of the variables and functions to
-       only the "scope" or "block" that they were defined in, and to limit the "side effects" of the program.
+   - No more "goto" statements, only subroutines and conditional branching were allowed
+   - The concept of "scopes" (or "code blocks") to limit the use of "globally mutable" variables
+     - This is the origin of "encapsulation" and first introduced to limit the visibility of the "local" variables 
+       and functions to only the "scope" or "block" that they were defined in, and to limit the "side effects" of the program.
+     - This is also the reason for the "Structured Programming" paradigm, as it was the first time that the "state"
+       of the program was "structured" and "encapsulated" into "scopes" or "code blocks"
+     - Example of structured language (C): 
+       note: the `//` mean the rest of the line is comment. It is not part of the program, it's just for explanation
+       ```
+       int main() { 
+         int y = 1;
+         int x = 5; 
+         { // <-- start of a "scope" or "code block" or just "block"
+           int y = 6; // local to the "scope"
+           x = x + y; 
+         } // <-- end of the "scope"
+         printf("%d", x); 
+       }
+       
+       main();
+       
+       // Output: 11 
+         
+       ```
+   - The concept of "types" was introduced to define the size & purpose of certain "primitive" data types 
+     like "int," "long," "float," "char," and "bool" and "structs" made up of these "primitive" data types
+     - Example (C):
+     - ```
+       struct Point {  <-- `Point` is a type that is made up of other types
+         int x;
+         int y;
+         char colorId;
+       };
+       
+       int main() { 
+         int x = 5; 
+         float y = 6.0; 
+         char z = 'A'; 
+         struct Point p = { 10, 20, 'G' };
+         printf("Output: %d %f %c %d %d %d", x, y, z, p.x, p.y, p.colorId);
+       }
+       
+       main();
+       
+       // Output: 5 6.000000 A 10 20 71
+        
+       ```
    - Allowed more code reuse and easier to understand "state" of the program than procedural languages
    - This allowed libraries and "modules" to be more easily produced to create standard "subroutines" and
      "data structures" into "packages" and "system utilities" and "frameworks" to be used by other programmers
-   - The concept of "types" was introduced to define the "shape" of the "data" and the "methods" that could be used on the "data"
+     - Started the concept of "published interfaces" that could be imported into another program and used to 
+       provide the functionality of the "library." 
+     - These libraries were collections of functions and data structures that were related to each other for a specific task.
    - Structure languages were also much more portable and reusable than procedural languages as they were not
      tied to any specific computer hardware or operating system. The computer manufacturer only had to create the 
-     compiler for their particular machine, and then the same code could be run on any machine that had a compiler for the language.
+     compiler for their particular machine, and then the same code could be run on any machine that had a compiler 
+     for the language.
 
-- ### Class Oriented Programming 70s-2010s
+- ### Class Oriented Programming (COP) 70s-2010s
   - Usually called "Object Oriented Programming" but that's a misnomer, as objects are not the main focus, classes are.
   - Collected ideas around: 
     
@@ -516,21 +634,26 @@
       - A "Method" is just a normal function in the class that manipulates the variables in the object, 
         or call other methods in the object or other objects
         - The process of calling a method on an object is referred to as "sending a message" to the object 
-        - (TERRIBLE WORDING! bc it's not a message! It's just calling a function!!!! THIS IS NOT MESSAGING! AAAAHH!)
+        - (THIS IS TERRIBLE WORDING! bc it's not a message! It's just calling a function!!!! THIS IS NOT MESSAGING! AAAAHH!)
       - The values of the variables ("state") of the object are often made inaccessible from outside the class (ie: "private") 
         and only accessible by the methods of the class, or the methods in the inherited subclasses of the class.
       - Methods of the class can be made `public` to be globally accessible by other classes to provide the functionality of the class.
-      - Some methods of the "class" can be labeled "protected" and only accessible by "subclasses" of the "class"
+      - Some methods of the `class` can be labeled `protected` and only accessible by subclasses of the class
       - There is a special modifier called `static` makes a variable or method accessible without needing an instance of the class (object)
         - This loophole is the main reason why I call it "Class Oriented Programming" is not "object" oriented programming!
         - It's a way to make the class act like a "namespace" to group together the "methods" and "variables" that are related to each other
-        - This was not the original intent of the "class" and "object" paradigm, but was a way to fit the "class" paradigm into the "procedural" paradigm.
+        - This was not the original intent of the "class" and "object" paradigm, but was a way to fit the COP 
+          paradigm into the "procedural" paradigm.
     
-    - ### Classes and Objects as Name Spaces
-      - In most COP languages, the "class" is used as a "namespace" to group together the "methods" and "variables" that 
-        are related to each other
-      - This often lead to "collections of static methods" in order to continue the "procedural" paradigm
-      - These were popularized by web frameworks such as Java's 
+    - ### Classes and Objects as "Name Spaces"
+      - In COP languages, the `class` is used as a "namespace" to group together the methods and variables that 
+        are related to each other (known as "high cohesion") into a single object.
+      - All code must be inside an object or be declared as a `static` member of a class to be accessible without an object
+      - This often lead to "collections of static methods" that simply extended the "procedural" paradigm, except the
+        code blocks now had a name (the name of the Class) and were grouped together instead of being globally accessible.
+      - These were popularized by web frameworks such as Java's Spring Boot and Many Others
+        - The Pain of OOP, Lecture #2: Static methods and attributes are evil
+        - https://www.youtube.com/watch?v=lELJSj9mWbI
     
     - ### Inheritance 
       - Inheritance is the idea that a new `class` can inherit from another `class` all of it's methods and variables,
@@ -585,8 +708,53 @@
       - The `interface` is `implement`ed by a `class` and then the methods are defined by the `class`
     
     - ### Abstract Classes
-      - Very similar to interfaces but can have methods with default implementations of the methods
-      - The "abstract class" is usually "extended" by the "subclass" and then the "methods" are "overridden" by the "subclass"
+      - Very similar to interfaces but can have default implementations of the methods & include variables
+      - The `abstract class` is usually `extend`ed by the subclass and then the methods are overridden by the subclass
+      - Example:
+      - ```
+        abstract class Document { 
+          String name;                // <-- abstract classes can have variables
+          expects method open(String name)  // this abstract class expects a method called "open"
+          expects method showName() {    // this abstract class expects a method called "close" and has a default implementation
+              print "Name: " + this.name // <-- the "default implementation" for any subclass that doesn't override the method
+          } 
+        }  
+        
+        class PDF extends Document {
+            override method open(String name): {
+               this.name = name;
+               launchPDFViewer() // <-- the "implementation" of the "abstract class" 
+            } 
+        }
+        
+        class Email extends Document { 
+            method open(String to, String from, String subject): {
+               this.name = to;
+               showName(to); // <-- calls the "default implementation" of the abstract superclass 
+               launchEmailApp(to, from, subject) // <-- the implementation of the open method 
+            }
+            override method showName(): { // <-- overrides the "default implementation" of the abstract superclass
+               print "Email to: " + this.name  
+            } 
+        }
+        
+        class Song extends Document { 
+            override method open(String name): {
+                 this.name = name; 
+                 launchMusicPlayer(name) // <-- the "implementation" of the "abstract class" 
+            } 
+        }
+        
+        // Start of program
+        main() {
+            Document doc = new PDF("MyPDF.pdf");
+            doc.open();                // <-- will launch "PDF Viewer"
+            doc2 = new Email(to="Chris", from="from:Bob", subject="subject:Meeting");
+            doc2.open();               // <-- will launch "Email App"
+            doc3 = new Song();
+            doc3.open();               // <-- will launch "Music Player"
+        }
+        ```
     
     - ### Polymorphism
       - Polymorphism is the idea that a method can be called on an object and the method will behave differently
