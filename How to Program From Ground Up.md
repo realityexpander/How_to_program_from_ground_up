@@ -128,16 +128,16 @@
     - AND OR NOT gates with Relays
       - https://www.youtube.com/watch?v=FKub2SuugsQ
     - Computers built using Relays
-      - https://youtu.be/e8DavnWmr1E?si=zTmgE0FgV0NcckZ7
+      - https://youtu.be/e8DavnWmr1E
       - https://youtu.be/NXeBR-lbnjI
   
   - ## The Voracious Vacuum Tube
     - How Vacuum Tubes Work 
       - https://www.youtube.com/watch?v=nA_tgIygvNo
-      - Note: While the actual flow direction of electrons is from the "negative" terminal to the "positive" terminal, 
-        the "conventional" flow direction of electricity is considered to go from the "positive" terminal to the 
+      - Note: While the actual physical electron flow direction is from the "negative" terminal to the "positive" terminal, 
+        the "conventional" flow direction of electricity in schematics is considered to go from the "positive" terminal to the 
         "negative" terminal. 
-      - _Yes!_ this is somewhat confusing at first, and you can give thanks Ben Franklin for this technical debt we 
+      - _Yes!_ this is rather confusing at first, and you can give thanks Ben Franklin for his technical debt we 
         all have to deal with at the beginning of learning electronics.
     - Electricity in a vacuum behaves differently than in normal atmosphere. Electrons can flow freely in a vacuum. 
       - Tubes exploit this behavior of electrons in a vacuum to perform like a switch or an amplifiers.
@@ -1051,10 +1051,15 @@
         - The promise of "reusability" was not fulfilled by COP languages.
       - Banana, Monkey, Jungle Problem
         - https://crystal-villanueva.medium.com/the-banana-and-the-gorilla-problem-92c9a4717fd6
-    
+      - Java's Creators Rejected Multiple Inheritance - Here's Why
+        - https://www.youtube.com/watch?v=1-JBFJ8Xar0
+      - If you really want to achieve multiple inheritance (you should not need to, but here's how to do it):
+        - https://www.youtube.com/watch?v=3X9Eo2vzY1I
+        - Live Code Example: [How to Achieve Multiple Inheritance in Kotlin](src/main/kotlin/multipleInheritanceExample.kt)
+
     - Examples of Class Oriented Programming languages are "Simula," "C++" and "Java"
  
- - ## Object Oriented Programming 80s-2020's
+ - ## Object Oriented Programming 80s-Presemt
    - Alan Kay Style BOOP (Back-to-Object Oriented Programming)
      - Based on the idea of "messaging" between objects, VERY poorly named "object oriented programming" (admitted by Alan Kay)
    
