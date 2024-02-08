@@ -630,7 +630,7 @@
      160 GOTO 60
      190 PRINT "HOW DID I GET HERE?"
      220 END
-     
+   
      RUN
      
      Output: 
@@ -715,10 +715,10 @@
      - This is also the reason for the "Structured Programming" paradigm, as it was the first time that the "state"
        of the program was "structured" and "encapsulated" into "scopes" or "code blocks"
      - Example of structured language (C): 
-       Note: The `//` symbols means the rest of the line is comment, it is not part of the program, 
+       - Note: The `//` symbols means the rest of the line is comment, it is not part of the program, 
              it's just for explanation and is ignored by the compiler.
        ```C
-       int main() {  // <-- start of the program, int means the function returns an integer 
+       int main() {  // <-- start of the program, `int` means the function returns an integer 
          int y = 100;
          int x = 10; 
          { // <-- start of a "scope" or "code block" or just "block"
@@ -727,7 +727,7 @@
          } // <-- end of the "scope"
          
          printf("%d", x); // <-- print the value of x as a decimal number
-         printf("%c", x); // <-- print the value of y as a character (the ASCII value of x)
+         printf("%c", x); // <-- print the value of x as a character (the ASCII value of x)
        }
        
        main();  // <-- call the "main" function, runs the program
@@ -736,30 +736,38 @@
        // 42
        // *
        ```
-   - The concept of "types" was introduced to define the size & purpose of certain "primitive" data types 
-     like "int," "long," "float," "char," and "bool" and "structs" made up of these "primitive" data types
+     - Live Code Example in Kotlin: [Structured Programming Example](src/main/kotlin/structuredExample.kt)
+   
+   ### Types
+   - The concept of "types" (or "kinds") was introduced to define the size & intended purpose of "primitive" 
+     data types 
+     - Primitive types are: `int`, `long`, `float`, `char`, and `bool`
+     - Primitive types are the "building blocks" of all other types defined in `struct`s
      - Example (C):
        ```C
-       struct Point {  <-- `Point` is a type that is made up of other types
-         int x;
-         int y;
-         char colorId;
+       struct Point {  // <-- `Point` is a programmer-defined type that is made up of other types
+          int x;
+          int y;
+          char colorIdChar;  // <-- `char` is a type that represents a single ASCII character (1 byte)
        };
        
        int main() { 
-         int x = 5; 
-         float y = 6.0; 
-         char z = 'A'; 
-         struct Point p = { 10, 20, 'G' };
-         
-         printf("Output: %d %f %c %d %d %d", x, y, z, p.x, p.y, p.colorId);
+          int x = 5; 
+          float y = 6.128; 
+          char z = 'A'; 
+          struct Point p = { 10, 42, 'G' };
+          
+          printf("Output: %d %f %c   %d   %d  %c", 
+                          x, y, z, p.x, p.y, p.colorIdChar);
        }
        
        main();
        
-       // Output: 5 6.000000 A 10 20 71
+       // Output: 5 6.128000 A 10   42   G
         
        ```
+     - Live Code Example in Kotlin: [Types Example](src/main/kotlin/typesExample.kt)
+   
    - This allowed more code reuse and easier to understand "state" of the program than procedural languages
    - This allowed libraries and "modules" to be easily produced to create standard "subroutines" and
      "data structures" into "packages" and "system utilities" and "frameworks" to be used by other programmers
@@ -1084,7 +1092,7 @@
 
     - Examples of Class Oriented Programming languages are "Simula," "C++" and "Java"
  
- - ## Object Oriented Programming 80s-Presemt
+ - ## Back-to Object Oriented Programming 1980s-Present
    - Alan Kay Style BOOP (Back-to-Object Oriented Programming)
      - Based on the idea of "messaging" between objects, VERY poorly named "object oriented programming" (admitted by Alan Kay)
    
@@ -1110,7 +1118,7 @@
      - Mutable State - All state in BOOP is immutable, and the object is expected to return a new object with the new state.
    - Amazingly, the dreaded Singleton Pattern is allowed to manage global state in BOOP.
    
-   - Back-to-Object Oriented Programming Example (Kotlin):
+   - Back-to Object Oriented Programming Example (Kotlin):
    - ```Kotlin
      class Page(  // <-- the "Page" class constructor, the "val" keyword means the variable is immutable.
         private val content: String
@@ -1251,7 +1259,11 @@
  
  - ## Functional Programming 1950s-Present
    - ### Main Idea: Immutability & No Side Effects
-     - Functional Programming's main idea is to avoid "side effects" and "shared mutable state" of the program
+     - Functional Programming's main idea is to avoid "side effects" and "shared mutable state" of the program.
+     - One way is to is to make the state of the program unchangeable. Changes can only be made by creating a new state 
+       based on the a copy of the old state, and then returning the new state as the result of a function.
+     - BOOP style is a form of "Functional Programming" as the state of the program is immutable and passed as arguments 
+       to the functions, and a new state is returned as the result of the calls to the functions.
    - All functions in the core of the application return a value and have no "side effects" on any other "state" of 
      the program.
    - It's more of a style of programming than a "paradigm" as it can be used in any language, but it's most effective 
@@ -1291,8 +1303,8 @@
          
        // Output:
        // 24
-     
-   - ``` 
+
+   - Live Code Example: [Functional Example](src/main/kotlin/functionalExample.kt) 
 
    
 
