@@ -52,6 +52,8 @@ class Application(
 	}
 }
 
+
+// Start of program
 fun main() {
 	val pages = listOf(
 		Page("Page 1 Content"),
@@ -72,8 +74,8 @@ fun main() {
 	// You only see the high level view, and the implementation details are hidden deeper in the code.
 	app = Application(
 		Book(
-			"MyDocument.txt",
-			listOf(
+			title = "MyDocument.txt",
+			pages = listOf(
 				Page("Page 1 Content"),
 				Page("Page 2 Content"),
 				Page("Page 3 Content")

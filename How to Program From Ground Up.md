@@ -1111,96 +1111,127 @@
    - Amazingly, the dreaded Singleton Pattern is allowed to manage global state in BOOP.
    
    - Back-to-Object Oriented Programming Example (Kotlin):
-     ```Kotlin
-     class Page(  // <-- the "Page" class constructor, the "val" keyword means the variable is immutable
-        val content: String
-     ) {  
-        fun view() { 
-           println("Page: $content") 
-        }
-        
-        fun updateContent(newContent: String) {
-           return Page(newContent)  // <-- the "updateContent" method is expected to return a new object with the new state
-        }
+   - ```Kotlin
+     class Page(  // <-- the "Page" class constructor, the "val" keyword means the variable is immutable.
+        private val content: String
+     ) {
+       fun view() {
+          println("Page: $content")
+       }
+       
+       fun updateContent(newContent: String): Page {
+          return Page(newContent)  // <-- the "updateContent" method is expected to return a new object with the new state.
+       }
+       
+       fun inspectContent(): String {
+          return content
+       }
      }
-     
+
      class Book(
         val title: String,
-        val pages: List<Page>
-     ) {  
-        fun view() { 
-           println("Book: $title, # of Pages: ${pages.size}")
-           pages.forEach { it.view() } 
-        }
-        
-        fun updateName(newName: String): Document {
-           return Book(newName, pages)  // <-- the "updateName" method is expected to return a new object with the new state
-        }
-        
-        fun updatePages(newPages: List<Page>): Book {
-           return Book(name, newPages)  // <-- the "updatePages" method is expected to return a new object with the new state
-        }
-     }
-   
-     class Application(
-        val book: Book  // <-- the "Application" class, the "val" keyword means the variable is immutable
-     ) {  
+        private val pages: List<Page>
+     ) {
         fun view() {
-           println("Application Viewing: ${book.name}")
-           book.view() 
+           println("Book: $title, # of Pages: ${pages.size}")
+           pages.forEach { it.view() }
         }
-        
-        fun updateBook(newDocument: Document): Application {
-           return Application(newDocument)  // <-- the "updateDocument" method is expected to return a new object with the new state
+
+	    fun updateName(newTitle: String): Book {
+		   return Book(newTitle, pages)  // <-- the "updateName" method is expected to return a new object with the new state.
+	    }
+
+	    fun updatePages(newPages: List<Page>): Book {
+		    return Book(title, newPages)  // <-- the "updatePages" method is expected to return a new object with the new state.
+	    }
+     }
+
+     class Application(
+        private val book: Book  // <-- the "Application" class, the "val" keyword means the variable is immutable.
+     ) {
+        fun view() {
+           println("Application Viewing: ${book.title}")
+           book.view()
         }
+
+        fun updateBook(newDocument: Book): Application {
+		   return Application(newDocument)  // <-- the "updateDocument" method is expected to return a new object with the new state.
+	    }
      }
      
+     // Start of Program
      fun main() {
-        val pages = listOf(
+        // Create the list of Page objects
+        val pages = listOf(  // <-- the "val" keyword means the variable is immutable and can only be assigned once.
            Page("Page 1 Content"),
            Page("Page 2 Content"),
            Page("Page 3 Content")
         )
-        val book = Book("MyDocument.txt", pages) // <-- the "val" keyword means the variable is immutable
-        var app = Application(book) // <-- The "var" keyword means the variable is mutable, 
-                                   //     `app` is a "var" because it's expected to change state. 
-                                   // Every other variable is a "val" and is immutable.
-        
-        app.view()  // <-- will print: 
-                    // Application Viewing: MyBook.txt
-                    // Book: MyBook.txt, # of Pages: 3
-                    // Page: Page 1 Content
-                    // Page: Page 2 Content
-                    // Page: Page 3 Content
-        // app.book = Book("NewBook.txt")  // <-- will not compile, as the variable `book` is immutable and cannot be changed.
-        
-        // To change the state of the application, a whole new object must be created with the new state, 
-        // usually based on a copy the old state, with modifications to reflect the new state.
-        val newPages = pages.copy()
-           .toMutableList()
-           .filter { page ->  // instead of using imperative "for" loops, "filter" uses a loop under the hood to create a new list of pages.
-              page.content != "Page 2 Content" // <-- removes the 2nd page from the list
-           }
-           .apply { // <-- creates a new list of pages with the same content as the original list 
-             add(Page("New Page 4 Content"))  // <-- adds a new page to the list
-           }
-           .toList()  // <-- converts the mutable list back to an immutable list
-        app = app.updateBook( 
-           Book("UpdatedBook.txt", newPages)
+        // Create the book object using the list page objects
+        val book = Book(
+           "MyDocument.txt",
+           pages
         )
-        app.view()  // <-- will print: 
-                    // Application Viewing: UpdatedBook.txt
-                    // Book: UpdatedBook.txt, # of Pages: 3
-                    // Page: Page 1 Content
-                    // Page: Page 3 Content
-                    // Page: New Page 4 Content
+        // Create the application object using the book object 
+        var app = Application(book) // <-- The "var" keyword means the variable is mutable,
+                                    //     `app` is a "var" because it's expected to change state.
+                                    // Every other variable is a "val" and is immutable.
+
+	    // The above code could be arranged in the functional style, where the state of the program is created in 
+        // a single line!
+	    // This style is also known as "declarative" style, as opposed to the familiar "imperative" style.
+	    // Using declaritive style, the code is more about "what" is being done, rather than "how" it's being done.
+	    // You only see the high-level view, and the implementation details are hidden deeper in the code.
+	    app = Application(
+	    	Book(
+	    		title = "MyDocument.txt",
+	    		pages = listOf(
+	    			Page("Page 1 Content"),
+	    			Page("Page 2 Content"),
+	    			Page("Page 3 Content")
+	    		)
+	    	)
+	    )
+
+	    app.view()  // <-- will print:
+	                // Application Viewing: MyBook.txt
+	                // Book: MyBook.txt, # of Pages: 3
+	                // Page: Page 1 Content
+	                // Page: Page 2 Content
+	                // Page: Page 3 Content
+	                // app.book = Book("NewBook.txt")  // <-- will not compile, as the variable `book` is immutable and cannot be changed.
+        
+	    // To change the state of the application, a whole new object must be created with the new state,
+	    // usually based on a copy the old state, with modifications to reflect the new state.
+	    val newPages = pages
+	    	.filter { page ->  // instead of using imperative "for" loops, "filter" internally uses a loop to create
+	    		// a new list of pages.
+	    		page.inspectContent() != "Page 2 Content" // <-- removes the 2nd page from the list.
+	    	}
+	    	.toMutableList()  // <-- converts the immutable list to a mutable list to allow for adding a new page.
+	    	.apply { // <-- creates a new list of pages with the same content as the original list.
+	    		add(  // <-- adds a new page to the list.
+	    			Page("New Page 4 Content")
+	    		)
+	    	}
+	    	.toList()  // <-- converts the mutable list back to an immutable list.
+	    app = app.updateBook(
+	    	Book("UpdatedBook.txt", newPages)
+	    )
+        
+	    app.view()  // <-- will print:
+	                // Application Viewing: UpdatedBook.txt
+	                // Book: UpdatedBook.txt, # of Pages: 3
+	                // Page: Page 1 Content
+	                // Page: Page 3 Content
+	                // Page: New Page 4 Content
      }
      
      main()
-     
+
      // Output:
-     // Application Viewing: MyBook.txt
-     // Book: MyBook.txt, # of Pages: 3
+     // Application Viewing: MyDocument.txt
+     // Book: MyDocument.txt, # of Pages: 3
      // Page: Page 1 Content
      // Page: Page 2 Content
      // Page: Page 3 Content
@@ -1209,7 +1240,6 @@
      // Page: Page 1 Content
      // Page: Page 3 Content
      // Page: New Page 4 Content
-     
      
      ``` 
    - There are only a few BOOP languages, "Smalltalk" and, _incredibly_, "Javascript" are among the most popular ones.
