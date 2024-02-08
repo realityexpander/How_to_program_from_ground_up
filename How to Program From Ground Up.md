@@ -605,7 +605,7 @@
 
 # High-Level Language Styles
 
- - ### Procedural 1950s-1990s
+ - ## Procedural 1950s-1990s
    - First style of high-level language after assembly language
    - Considered "high level" because it was abstracted from the assembly language. The language was actually just 
      another program that translated the "high level" language into "machine code" for the CPU, usually at runtime.
@@ -704,11 +704,13 @@
  
    - Examples of Procedural languages are "Fortran" and "BASIC" and "COBOL"
  
- - ### Structured 1960s-Present
+ - ## Structured 1960s-Present
    - No more "goto" statements, only subroutines and conditional branching were allowed
    - The concept of "scopes" (or "code blocks") to limit the use of "globally mutable" variables
      - This is the origin of "encapsulation" and first introduced to limit the visibility of the "local" variables 
        and functions to only the "scope" or "block" that they were defined in, and to limit the "side effects" of the program.
+     - By reducing the area that needs to be understood, it makes the program easier to understand and maintain and
+       allowed for larger teams to work on the same program without stepping on each other's toes. 
      - This is also the reason for the "Structured Programming" paradigm, as it was the first time that the "state"
        of the program was "structured" and "encapsulated" into "scopes" or "code blocks"
      - Example of structured language (C): 
@@ -768,8 +770,8 @@
      compiler for their particular machine, and then the same code could be run on any machine that had a compiler 
      for the language.
 
-- ### Class Oriented Programming (COP) 70s-2010s
-  - Usually misnamed "Object Oriented Programming", as "Objects" are not the main focus, "Classes" are.
+- ## Class Oriented Programming (COP) 70s-2010s
+  - Usually misnamed "Object Oriented Programming," as "Objects" are _not_ the main focus, "Classes" are!
   
   - Collected ideas around: 
     - ### Encapsulation 
@@ -1029,27 +1031,30 @@
         - In the example above, the `viewDocument` function can be called with any `Document` object and the `view` method
           will behave differently based on the "type" of the `Document` object that is passed in
  
-    - ### Controlled Mutability and Visibility of variables
+    - ### Controlled Mutability and Visibility of Variables
       - Use of explicit `private` and `protected` and `public` to control the visibility of the variables and methods 
         of the class
       - Encouraged to use getters and setters to control the access to the variables of the class (which has since 
         been shown to be a bad idea due to misuse and overuse of the pattern)
     
-    - ### Issues from overuse of Inheritance and allowing for "multiple inheritance" in C++ 
-      - Lead to immense & unnecessary complexity to fit in the paradigm, as programmers tried to fit the "class" 
-        oriented paradigm into the "procedural" paradigm
-      - Inheritance is a bad idea for many reasons, and overused beyond its original intent
+    - ### Issues from Abuse of Inheritance and Allowing for "Multiple Inheritance" in C++ 
+      - Lead to immense & unnecessary complexity to fit in the "simulation" paradigm, as programmers tried to shove the 
+        "Procedural Paradigm" into the fancy new "Class Oriented" paradigm with less than stellar results.
+      - Inheritance is a usually a bad idea for many reasons, and very overused beyond its original intent.
         - The hype around reusability was so strong that it was often used to justify the use of inheritance in places 
           where it was not appropriate.
         - This lead to "fragile" and "rigid" code that was hard to understand and hard to modify, leading to a lot 
-          of waste and costs. 
+          of waste and costs.
+        - Many popular ways of dealing with the "procedural approach" to COP were turned into "design patterns" 
+          that were used to "fix" the problems of the "procedural approach" to COP. Many of these ideas were just
+          hacks to fit the "procedural approach" into the "COP" paradigm. 
         - The promise of "reusability" was not fulfilled by COP languages.
       - Banana, Monkey, Jungle Problem
         - https://crystal-villanueva.medium.com/the-banana-and-the-gorilla-problem-92c9a4717fd6
     
     - Examples of Class Oriented Programming languages are "Simula," "C++" and "Java"
  
- - ### Object Oriented Programming 80s-2020's
+ - ## Object Oriented Programming 80s-2020's
    - Alan Kay Style BOOP (Back-to-Object Oriented Programming)
      - Based on the idea of "messaging" between objects, VERY poorly named "object oriented programming" (admitted by Alan Kay)
    
@@ -1165,8 +1170,8 @@
      ``` 
    - There are only a few BOOP languages, "Smalltalk" and, _incredibly_, "Javascript" are among the most popular ones.
  
- - ### Functional Programming 1950s-Present
-   - ## Main Idea: Immutability 
+ - ## Functional Programming 1950s-Present
+   - ### Main Idea: Immutability 
      - Functional Programming's main idea is to avoid "side effects" and "shared mutable state" of the program
    - All functions in the core of the application return a value and have no "side effects" on any other "state" of 
      the program.
