@@ -879,61 +879,91 @@
         leads to "side effects" and tough to understand "state" of the program which leads to unnecessary complexity and bugs.
       - What's Wrong About Utility Classes? (webinar #6)
         https://www.youtube.com/watch?v=psrp3TtaYYI
-    
+
+```mermaid
+---
+title: Animal example
+---
+classDiagram
+    note "From Duck till Zebra"
+    Animal <|-- Duck
+    note for Duck "can fly\ncan swim\ncan dive\ncan help in debugging"
+    Animal <|-- Fish
+    Animal <|-- Zebra
+    Animal : +int age
+    Animal : +String gender
+    Animal: +isMammal()
+    Animal: +mate()
+    class Duck{
+        +String beakColor
+        +swim()
+        +quack()
+    }
+    class Fish{
+        -int sizeInFeet
+        -canEat()
+    }
+    class Zebra{
+        +bool is_wild
+        +run()
+    }
+```
+
     - ### Interfaces
-        - An `interface` is an agreement or "contract" that the class will have certain defined methods & variables in the class.
-        - It's a way to tell the compiler AND the programmer that the class must have certain "methods" and "variables" in it to be considered a valid "subclass" of the interface
-        - The `interface` is implemented by the `subclass`, where the methods and variables are defined by the "concrete implementing" `class`
-            - Example (in pseudo-code similar to common COP languages):
-              ```OOP Pseduo-Code
-              interface Document {     // <-- interfaces only define the "signature" of the methods it expects to be in the subclass
-                expects method view()  // this interface expects a method called "view" 
-              }  
+      - An `interface` is an agreement or "contract" that the class will have certain defined methods & variables in the class.
+      - It's a way to tell the compiler AND the programmer that the class must have certain "methods" and "variables" in it to be considered a valid "subclass" of the interface
+      - The `interface` is implemented by the `subclass`, where the methods and variables are defined by the "concrete implementing" `class`
+      
+      - Example (in pseudo-code similar to common COP languages):
+        ```OOP Pseduo-Code
+        interface Document {     // <-- interfaces only define the "signature" of the methods it expects to be in the subclass
+          expects method view()  // this interface expects a method called "view" 
+        }  
             
-              // PDF is one "concrete implementing" class of the "Document" interface
-              class PDF implements Document { // PDF is a subclass of Document, and must implement the "view" method
-                  override method view() { // <-- the implementation of the interface (uses the "override" keyword) 
-                     print "Launch PDF Viewer"  
-                  } 
-              }
+        // PDF is one "concrete implementing" class of the "Document" interface
+        class PDF implements Document { // PDF is a subclass of Document, and must implement the "view" method
+            override method view() { // <-- the implementation of the interface (uses the "override" keyword) 
+               print "Launch PDF Viewer"  
+            } 
+        }
               
-              // Email is one "concrete implementing" class of the "Document" interface
-              class Email implements Document { // Email is a subclass of Document, and must implement the "view" method
-                  override method view() { // <-- the implementation of the interface (uses the "override" keyword)
-                     print "Launch Email App"  
-                  } 
-              }
+        // Email is one "concrete implementing" class of the "Document" interface
+        class Email implements Document { // Email is a subclass of Document, and must implement the "view" method
+            override method view() { // <-- the implementation of the interface (uses the "override" keyword)
+               print "Launch Email App"  
+            } 
+        }
               
-              // Song is one "concrete implementing" class of the "Document" interface
-              class Song implements Document { // <-- the implementation of the interface (uses the "override" keyword)
-                  override method view() { 
-                     print "Launch Music Player"  
-                  } 
-              }
+        // Song is one "concrete implementing" class of the "Document" interface
+        class Song implements Document { // <-- the implementation of the interface (uses the "override" keyword)
+            override method view() { 
+               print "Launch Music Player"  
+            } 
+        }
               
-              // Start of program
-              method main() {
-                  Document doc1 = new PDF()
-                  Email doc2 = new Email()  
-                  Song doc3 = new Song() 
+        // Start of program
+        method main() {
+            Document doc1 = new PDF()
+            Email doc2 = new Email()  
+            Song doc3 = new Song() 
                  
-                  function viewDocument(Document doc) {  // Note that the parameter is of type `Document` and not `PDF` or `Email` or `Song` 
-                      doc.view() // Will call the appropriate "view" method of the subclass
-                  }
+            function viewDocument(Document doc) {  // Note that the parameter is of type `Document` and not `PDF` or `Email` or `Song` 
+                doc.view() // Will call the appropriate "view" method of the subclass
+            }
                   
-                  viewDocument(doc1)  // <-- will print "Launch PDF Viewer"
-                  viewDocument(doc2)  // <-- will print "Launch Email App"
-                  viewDocument(doc3)  // <-- will print "Launch Music Player"
-              }
-              ```
-              Live Code Example: [How Interfaces Work in Kotlin](src/main/kotlin/interfaceExample.kt)
+            viewDocument(doc1)  // <-- will print "Launch PDF Viewer"
+            viewDocument(doc2)  // <-- will print "Launch Email App"
+            viewDocument(doc3)  // <-- will print "Launch Music Player"
+        }
+        ```
+        Live Code Example: [How Interfaces Work in Kotlin](src/main/kotlin/interfaceExample.kt)
         - Interfaces allow a developer to add multiple different implementations of the same named method by defining a 
-          new `class` that `implement`s the superclass `interface` by defining code for the methods in the subclass
-            - This makes it easier to add new subclasses of the `interface` to the program without changing any existing code
-            - This also make it easier to write "testing" code that can be used to automatically verify the correctness of the methods
-              of the `class` by using "testing" implementations of the `interface`
+        new `class` that `implement`s the superclass `interface` by defining code for the methods in the subclass
+          - This makes it easier to add new subclasses of the `interface` to the program without changing any existing code
+          - This also make it easier to write "testing" code that can be used to automatically verify the correctness of the methods
+            of the `class` by using "testing" implementations of the `interface`
         - The `interface` is `implement`ed by a `class` and the methods are finished by the implementing `subclass` 
-          according to the method signatures in the `interface`
+        according to the method signatures in the `interface`
         - "Subclassing" is also called "Subtyping" or "Inheritance" and is the basis for "Polymorphism" and "Dynamic Binding"
 
     - ### Inheritance 
@@ -1237,18 +1267,18 @@
         // This style is also known as "declarative" style, as opposed to the familiar "imperative" style.
         // Using declaritive style, the code is more about "what" is being done, rather than "how" it's being done.
         // You only see the high-level view, and the implementation details are hidden deeper in the code.
-	    app = Application(
-	    	Book(
-	    	   title = "MyDocument.txt",
-	    	   pages = listOf(
-	    	      Page("Page 1 Content"),
-	    	      Page("Page 2 Content"),
-	    	      Page("Page 3 Content")
-	    	   )
-	    	)
-	    )
+        app = Application(
+           Book(
+              title = "MyDocument.txt",
+              pages = listOf(
+                 Page("Page 1 Content"),
+                 Page("Page 2 Content"),
+                 Page("Page 3 Content")
+              )
+           )
+        )
 
-	    app.view()  // <-- will print:
+        app.view()  // <-- will print:
 	                // Application Viewing: MyBook.txt
 	                // Book: MyBook.txt, # of Pages: 3
 	                // Page: Page 1 Content
@@ -1256,12 +1286,12 @@
 	                // Page: Page 3 Content
 	                // app.book = Book("NewBook.txt")  // <-- will not compile, as the variable `book` is immutable and cannot be changed.
         
-	    // To change the state of the application, a whole new object must be created with the new state,
-	    // usually based on a copy the old state, with modifications to reflect the new state.
-	    val newPages = pages
-	    	.filter { page ->  // instead of using imperative "for" loops, "filter" internally uses a loop to create
-	    		// a new list of pages.
-	    		page.inspectContent() != "Page 2 Content" // <-- removes the 2nd page from the list.
+        // To change the state of the application, a whole new object must be created with the new state,
+        // usually based on a copy the old state, with modifications to reflect the new state.
+        val newPages = pages
+        	.filter { page ->  // instead of using imperative "for" loops, "filter" internally uses a loop to create
+        		// a new list of pages.
+        		page.inspectContent() != "Page 2 Content" // <-- removes the 2nd page from the list.
 	    	}
 	    	.toMutableList()  // <-- converts the immutable list to a mutable list to allow for adding a new page.
 	    	.apply { // <-- creates a new list of pages with the same content as the original list.
@@ -1278,12 +1308,12 @@
               .updatePages(newPages)  // <-- Creates a new book with the updated `pages` and the same `title`.
         )
         
-	    app.view()  // <-- will print:
-	                // Application Viewing: UpdatedBook.txt
-	                // Book: UpdatedBook.txt, # of Pages: 3
-	                // Page: Page 1 Content
-	                // Page: Page 3 Content
-	                // Page: New Page 4 Content
+        app.view()  // <-- will print:
+                    // Application Viewing: UpdatedBook.txt
+                    // Book: UpdatedBook.txt, # of Pages: 3
+                    // Page: Page 1 Content
+                    // Page: Page 3 Content
+                    // Page: New Page 4 Content
      }
      
      main()
@@ -1364,7 +1394,7 @@
      the standard libraries and leveraged by the language itself.
   
     - Example Threads in Kotlin:
-      ```
+      ```Kotlin
       fun main() {
          var x = 0
 
@@ -1482,18 +1512,16 @@
   - Live Code Example: [How Coroutines Work in Kotlin](src/main/kotlin/coroutineExample.kt)
 
 - ## Conclusion
-  - The "paradigms" are not "better" or "worse" than each other, they are just different ways to structure the 
-    "state" and "behavior" of the program.
-  - Different aradigms can be used together to create a program that is easier to understand and maintain.
+  - The different paradigms are not better or worse than each other, they are just different styles to structure the 
+    state and behavior of software to provide a solution.
+  - Different paradigms can be combined together to create a program that is easier to understand and maintain.
   - Paradigms are not frozen and are constantly evolving as new ideas are added to the software development 
     methods to make creating software easier and more effective.
   - Each paradigm has their own trade-offs and costs that must be considered when 
     choosing which paradigm is appropriate for a particular problem. Sometimes, the best solution is the simplest one.
-  - Paradigms are not "dogma," and should not be followed blindly, but should be used as a guide to help 
+  - Paradigms are not dogma, and should not be followed blindly, but should be used as a guide to help 
     structure and organization the program to be easiest to understand and change.
-  - Paradigms "one-size-fits-all," and should be chosen based on the requirements of the problem 
-    and the experience of the programmer or team.
-  - Paradigms are not "independent," and are often used together to create a program that is easier to 
+  - Paradigms are not independent, and are often used together to create a program that is easier to 
     understand and maintain.
    
 
