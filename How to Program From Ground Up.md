@@ -112,7 +112,7 @@
           - 0 || 1 => 1
           - 1 || 0 => 1
           - 1 || 1 => 1
-      - Boolean logic requires one more operation to be complete: The logical "NOT" operation...
+      - Boolean logic requires one more operation to be complete: The logical `NOT` operation...
 
     - Insight 1: Logic in Physical Form
       - https://www.youtube.com/watch?v=txH3K3shIWs
@@ -192,6 +192,11 @@
     - The transistor can be used to represent any other logic gate and is the current basis for all modern computing.
     - The transistor is tiny because it is very small and fast, bumping up against the limits of physics on how 
       small it can be made.
+    - Transistors can create sophisticated operations by combining them in clever ways
+      - Designing a 7-segment hex decoder
+        - https://www.youtube.com/watch?v=7zffjsXqATg 
+      - Transistor Clock
+       - https://www.youtube.com/watch?v=Iu-W7LpSDmk  
 
     - ### How to Build Complex Logic Gates from Simple Transistors
       - Using a transistor to solve our problem - How transistors work as a switch
@@ -1345,8 +1350,122 @@
 
    - Live Code Example: [Functional Example](src/main/kotlin/functionalExample.kt) 
 
-   
+- ## Threads & Coroutines
+  - Threads are a way to run multiple "processes" at the same time, and are used to create "parallel" and "concurrent" programs.
+  - Coroutines are a way to run multiple "processes" at the same time, and are used to create "parallel" and "concurrent" programs.
+    - Coroutines always run inside one or more threads, and are used to create "parallel" and "concurrent" programs.
+  - Threads are relatively resource-heavy, as each thread requires its own "stack" and "heap" to run, and can be 
+    difficult to manage and debug when there are many threads running at the same time and sharing mutable state.
+  - Coroutines are relatively resource-light and simplify the management of where parts of the program are running.
+  - Coroutines are built-in to the Kotlin language, and are a first class citizen. Use of coroutines is built-into 
+     the standard libraries and leveraged by the language itself.
+  
+    - Example Threads in Kotlin:
+      ```
+      fun main() {
+          var x = 0
+    
+          val thread1 = Thread {
+              for (i in 1..10) {
+                  println("Thread 1: $i, x=$x")
+                  x++
+                  Thread.sleep(1000)
+              }
+          }
+          val thread2 = Thread {
+              for (i in 1..10) {
+                  println("Thread 2: $i, x=$x")
+                  x++
+                  Thread.sleep(1000)
+              }
+          }
+          thread1.start()
+          thread2.start()
+          thread1.join()
+          thread2.join()
+      }
+    
+      main()
+    
+      // Output:
+        // Thread 1: 1, x=0
+        // Thread 2: 1, x=0
+        // Thread 1: 2, x=1
+        // Thread 1: 3, x=3  // <-- The threads are running at the same time, so the output is likely not in order.
+        // Thread 2: 2, x=2
+        // Thread 2: 3, x=4
+        // Thread 1: 4, x=5
+        // Thread 2: 4, x=6
+        // Thread 2: 5, x=8
+        // Thread 1: 5, x=7
+        // Thread 1: 6, x=9
+        // Thread 2: 6, x=10
+        // Thread 1: 7, x=11
+        // Thread 2: 7, x=12
+        // Thread 1: 8, x=13
+        // Thread 2: 8, x=14
+        // Thread 1: 9, x=15
+        // Thread 2: 9, x=16
+        // Thread 1: 10, x=17
+        // Thread 2: 10, x=18  // <-- 
+      
+    - Live Code Example: [How Threads Work in Kotlin](src/main/kotlin/threadExample.kt)
 
+  - Example Coroutines in Kotlin:
+  - ```Kotlin
+    import kotlinx.coroutines.*
+    
+    fun main() {
+        var x = 0
+        val job1 = GlobalScope.launch {
+            for (i in 1..10) {
+                println("Coroutine 1: $i")
+                delay(1000)
+            }
+        }
+        val job2 = GlobalScope.launch {
+            for (i in 1..10) {
+                println("Coroutine 2: $i")
+                delay(1000)
+            }
+        }
+        runBlocking {
+            job1.join()
+            job2.join()
+        }
+    }
+    
+    main()
+    
+    // Output:
+    
+    ```
+  - Live Code Example: [How Coroutines Work in Kotlin](src/main/kotlin/coroutineExample.kt)
+- ## Conclusion
+  - The "paradigms" are not "better" or "worse" than each other, they are just different ways to structure the 
+    "state" and "behavior" of the program.
+  - The "paradigms" are not "mutually exclusive," and can be used together to create a program that is easier to 
+    understand and maintain.
+  - The "paradigms" are not "static," and are constantly evolving as new ideas are added to the "paradigms" to 
+    make them more effective and easier to use.
+  - The "paradigms" are not "perfect," and have their own "trade-offs" and "costs" that must be considered when 
+    choosing which "paradigm" to use for a particular program.
+  - The "paradigms" are not "dogma," and should not be followed blindly, but should be used as a guide to help 
+    structure the "state" and "behavior" of the program.
+  - The "paradigms" are not "one-size-fits-all," and should be chosen based on the "requirements" of the program 
+    and the "experience" of the programmer.
+  - The "paradigms" are not "independent," and are often used together to create a program that is easier to 
+    understand and maintain.
+  - The "paradigms" are not "static," and are constantly evolving as new ideas are added to the "paradigms" to 
+    make them more effective and easier to use.
+  - The "paradigms" are not "perfect," and have their own "trade-offs" and "costs" that must be considered when 
+    choosing which "paradigm" to use for a particular program.
+  - The "paradigms" are not "dogma," and should not be followed blindly, but should be used as a guide to help 
+    structure the "state" and "behavior" of the program.
+  - The "paradigms" are not "one-size-fits-all," and should be chosen based on the "requirements" of the program 
+    and the "experience" of the programmer.
+  - The "paradigms" are not "independent," and are often used together to create a program that is easier
+   
 
 
 
