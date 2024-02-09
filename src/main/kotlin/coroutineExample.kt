@@ -4,7 +4,7 @@ import kotlinx.coroutines.flow.update
 import kotlin.time.Duration.Companion.milliseconds
 import kotlin.time.ExperimentalTime
 
-private const val NUMBER_OF_CYCLES = 100
+private const val NUMBER_OF_CYCLES = 100 // may need 200 to guarantee the problem will occur.
 
 fun main() {
 	coroutineWithUpdateProblem()
