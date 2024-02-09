@@ -1,9 +1,12 @@
 # How to Program From The Ground Up with Minimal BS
 
 ## Introduction
-  - Discussion from the fundamentals of physical logic representation to the high level programming languages.
+  - How to guide for software engineers who need a quick overview of software development concepts 
+    from the fundamentals of physical logic representation to the high level programming languages.
   - The goal is to understand more the "why" and "how" of programming, not just the "what" and "where"
+  - There will be some technical details, but only enough to understand the overall concept, not to be an expert.
 
+## The Essence of Computing
   - People used to do all computing by hand, and now we use various machines to do the same thing, 
     in a much faster and more reliable way.
     - When we use a machine to do computing, we are just using the machine to represent the problem and the 
@@ -15,7 +18,7 @@
         - There were specialized roles for each person, for example, the "storage" would be a set of filing cabinets and a clerk to store and retrieve them.
           - This is now done by the "hard drive" and the "file system" in the computer.
         - The arithmetic would be done by a person called a "calculator" who would perform the operations and record the results.
-          - This is now done by the "Arithmetic Logic Unit" and the "Registers" in the computer.
+          - This is now done by the "Arithmetic Logic Unit" and stored in the "Registers" in the computer.
 
 # The Essence of Computing — What are we Representing?
   - Everything in computing is REPRESENTING digital information "as" something _else_.
@@ -24,7 +27,7 @@
     - Knots & Beads on a string - prehistoric, 6000 BC to 1500 AD
       - [<img src="assets/beads_on_string.png" width="280">](https://www.peruforless.com/blog/quipu/)
     
-    - Physical indentations in clay - 8000 BC to 100 AD
+    - Physical indentations in clay — 8000 BC to 100 AD
       - [<img src="assets/cuneiform.png" width="280">](https://www.thoughtco.com/clay-tokens-mesopotamian-writing-171673)
       - [<img src="assets/phyiscal_indentations.png" width="280">](https://www.thoughtco.com/clay-tokens-mesopotamian-writing-171673)
     
@@ -1363,51 +1366,55 @@
     - Example Threads in Kotlin:
       ```
       fun main() {
-          var x = 0
-    
-          val thread1 = Thread {
-              for (i in 1..10) {
-                  println("Thread 1: $i, x=$x")
-                  x++
-                  Thread.sleep(1000)
-              }
-          }
-          val thread2 = Thread {
-              for (i in 1..10) {
-                  println("Thread 2: $i, x=$x")
-                  x++
-                  Thread.sleep(1000)
-              }
-          }
-          thread1.start()
-          thread2.start()
-          thread1.join()
-          thread2.join()
+         var x = 0
+
+         val thread1 = Thread {
+            for (i in 1..NUMBER_OF_CYCLES) {
+               x++
+               println("Thread 1: i=$i, x=$x")
+               Thread.sleep(10) // milliseconds
+            }
+         }
+         val thread2 = Thread {
+            for (i in 1..NUMBER_OF_CYCLES) {
+               x++
+               println("Thread 2: i=$i, x=$x")
+               Thread.sleep(10) // milliseconds
+            }
+         }
+      
+         thread1.start()
+         thread2.start()
+         thread1.join()
+         thread2.join()
+         
+         println("Final value of x: $x, should be ${NUMBER_OF_CYCLES * 2}")
       }
     
       main()
-    
+
       // Output:
-        // Thread 1: 1, x=0
-        // Thread 2: 1, x=0
-        // Thread 1: 2, x=1
-        // Thread 1: 3, x=3  // <-- The threads are running at the same time, so the output is likely not in order.
-        // Thread 2: 2, x=2
-        // Thread 2: 3, x=4
-        // Thread 1: 4, x=5
-        // Thread 2: 4, x=6
-        // Thread 2: 5, x=8
-        // Thread 1: 5, x=7
-        // Thread 1: 6, x=9
-        // Thread 2: 6, x=10
-        // Thread 1: 7, x=11
-        // Thread 2: 7, x=12
-        // Thread 1: 8, x=13
-        // Thread 2: 8, x=14
-        // Thread 1: 9, x=15
-        // Thread 2: 9, x=16
-        // Thread 1: 10, x=17
-        // Thread 2: 10, x=18  // <-- 
+      // Thread 2: 1, x=0
+      // Thread 1: 1, x=0
+      // Thread 2: 2, x=2
+      // Thread 1: 2, x=2
+      // Thread 2: 3, x=4
+      // Thread 1: 3, x=5
+      // Thread 2: 4, x=6
+      // Thread 1: 4, x=7  // <-- Notice that the order of the output is not consistent, as the threads are running concurrently.
+      // Thread 1: 5, x=8
+      // Thread 2: 5, x=8
+      // Thread 1: 6, x=10
+      // Thread 2: 6, x=10 // <-- Notice the value of `x` is not consistently incrementing, as the updates are not `atomic`.
+      // Thread 1: 7, x=12
+      // Thread 2: 7, x=13
+      // ...
+      // Thread 1: i=98, x=186
+      // Thread 2: i=99, x=187
+      // Thread 2: i=100, x=188
+      // Thread 1: i=99, x=189
+      // Thread 1: i=100, x=190
+      // Final value of x: 190, should be 200  // <-- Notice the final value of `x` is not 200, as expected.
       
     - Live Code Example: [How Threads Work in Kotlin](src/main/kotlin/threadExample.kt)
 
@@ -1416,55 +1423,78 @@
     import kotlinx.coroutines.*
     
     fun main() {
-        var x = 0
-        val job1 = GlobalScope.launch {
-            for (i in 1..10) {
-                println("Coroutine 1: $i")
-                delay(1000)
-            }
-        }
-        val job2 = GlobalScope.launch {
-            for (i in 1..10) {
-                println("Coroutine 2: $i")
-                delay(1000)
-            }
-        }
-        runBlocking {
-            job1.join()
-            job2.join()
-        }
+       var x = 0
+       val lock = Any() // Doesn't matter what the type is. It's just used as a lock or "flag" to synchronize the threads.
+
+	   println("\nFixed Thread Update Problem using Atomic updates (synchronized)")
+       
+	   val thread1 = Thread {
+          for (i in 1..NUMBER_OF_CYCLES) {
+	   		 synchronized(lock) {  // <-- `synchronized` tells the execution to wait here until the lock is released.
+	   		    // This block is "locked" so another thread can't update `x` until the current thread is finished.
+	   		    x++
+	   		    println("Thread 1: i=$i, x=$x")
+	   		 } // <-- The lock is released here at the end of the synchronized block.
+	   		 Thread.sleep(10) // milliseconds
+	   	  }
+	   }
+	   val thread2 = Thread {
+	   	  for (i in 1..NUMBER_OF_CYCLES) {
+	   		 synchronized(lock) {
+	   			x++
+	   			println("Thread 2: i=$i, x=$x")
+	   		}
+	   		Thread.sleep(10) // milliseconds
+	   	  }
+	   }
+       
+	   thread1.start()
+	   thread2.start()
+	   thread1.join()
+	   thread2.join()
+       
+	   println("Final value of x: $x, should be ${NUMBER_OF_CYCLES * 2}")
     }
     
     main()
     
     // Output:
+    //	Fixed Thread Update Problem (Atomic updates)
+    //	Thread 1: i=1, x=1
+    //	Thread 2: i=1, x=2
+    //	Thread 1: i=2, x=3
+    //	Thread 2: i=2, x=4
+    //	Thread 2: i=3, x=5  // <-- Notice that the order of the output is inconsistent, as the threads are running concurrently.
+    //	Thread 1: i=3, x=6
+    //	Thread 1: i=4, x=7
+    //	Thread 2: i=4, x=8
+    //	Thread 2: i=5, x=9
+    // ...
+    //	Thread 2: i=98, x=195
+    //	Thread 1: i=98, x=196
+    //	Thread 2: i=99, x=197
+    //	Thread 1: i=99, x=198
+    //	Thread 2: i=100, x=199  // <-- Notice the value of `x` IS consistently incrementing, as the updates are `atomic`.
+    //	Thread 1: i=100, x=200
+    //	Final value of x: 200, should be 200
     
     ```
   - Live Code Example: [How Coroutines Work in Kotlin](src/main/kotlin/coroutineExample.kt)
+
 - ## Conclusion
   - The "paradigms" are not "better" or "worse" than each other, they are just different ways to structure the 
     "state" and "behavior" of the program.
-  - The "paradigms" are not "mutually exclusive," and can be used together to create a program that is easier to 
+  - Different aradigms can be used together to create a program that is easier to understand and maintain.
+  - Paradigms are not frozen and are constantly evolving as new ideas are added to the software development 
+    methods to make creating software easier and more effective.
+  - Each paradigm has their own trade-offs and costs that must be considered when 
+    choosing which paradigm is appropriate for a particular problem. Sometimes, the best solution is the simplest one.
+  - Paradigms are not "dogma," and should not be followed blindly, but should be used as a guide to help 
+    structure and organization the program to be easiest to understand and change.
+  - Paradigms "one-size-fits-all," and should be chosen based on the requirements of the problem 
+    and the experience of the programmer or team.
+  - Paradigms are not "independent," and are often used together to create a program that is easier to 
     understand and maintain.
-  - The "paradigms" are not "static," and are constantly evolving as new ideas are added to the "paradigms" to 
-    make them more effective and easier to use.
-  - The "paradigms" are not "perfect," and have their own "trade-offs" and "costs" that must be considered when 
-    choosing which "paradigm" to use for a particular program.
-  - The "paradigms" are not "dogma," and should not be followed blindly, but should be used as a guide to help 
-    structure the "state" and "behavior" of the program.
-  - The "paradigms" are not "one-size-fits-all," and should be chosen based on the "requirements" of the program 
-    and the "experience" of the programmer.
-  - The "paradigms" are not "independent," and are often used together to create a program that is easier to 
-    understand and maintain.
-  - The "paradigms" are not "static," and are constantly evolving as new ideas are added to the "paradigms" to 
-    make them more effective and easier to use.
-  - The "paradigms" are not "perfect," and have their own "trade-offs" and "costs" that must be considered when 
-    choosing which "paradigm" to use for a particular program.
-  - The "paradigms" are not "dogma," and should not be followed blindly, but should be used as a guide to help 
-    structure the "state" and "behavior" of the program.
-  - The "paradigms" are not "one-size-fits-all," and should be chosen based on the "requirements" of the program 
-    and the "experience" of the programmer.
-  - The "paradigms" are not "independent," and are often used together to create a program that is easier
    
 
 
