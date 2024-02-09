@@ -346,7 +346,9 @@
     - The "program counter" (PC) is a special register that keeps track of the current memory location of the
       current instruction that the CPU will execute/is executing
     - All instructions are processed one at a time per CPU, and never more than 1 instruction at a time.
-    - Defaults to the first memory location(0x00000000), and then increments by 1 after each instruction is executed
+    - Starts at the first memory location(0x00000000), and then increments by 1 after each instruction is executed.
+    - Program Counter Build
+      - https://www.youtube.com/watch?v=tNwU7pK_3tk
     - The "program counter" is updated by the "clock" at the end of each "cycle", or when a "jump" instruction is executed
 
   - ### Common Machine Code Opcodes (actual opcode is for Motorola 6502 CPU)
@@ -889,10 +891,12 @@
           title: Interface Example
           ---
           classDiagram
-          Document <|-- PDF
-          Document <|-- Email
-          Document <|-- Song
-          Document: expects method view()
+          Document <|-- PDF : implements
+          Document <|-- Email : implements
+          Document <|-- Song : implements
+          
+          <<interface>> Document
+          Document : expects method view()*
           
           class PDF{
               override method view()
@@ -967,15 +971,15 @@
 
         ```mermaid
         ---
-        title: Inheritance Example
+        title: Inheritance Example Diagram
         
         ---
         classDiagram
-        Media <|-- MP3
-        Media <|-- Video
-        MP3 <|-- ProtectedMP3       
+        Media <|-- MP3 : extends
+        Media <|-- Video : extends
+        MP3 <|-- ProtectedMP3 : extends      
         
-        Media: expects method play()
+        Media: expects method play()*
         class MP3{
            override method play()
         }
@@ -983,8 +987,8 @@
            override method play()
         }
         class ProtectedMP3 {
-           private String password
-           private Boolean isAuthenticated
+           private String password*
+           private Boolean isAuthenticated*
         
            override method play()
            method authenticate(password)
@@ -1072,19 +1076,24 @@
           - Live Code Example: [How Inheritance Works in Kotlin](src/main/kotlin/inheritanceExample.kt)
     
       - ### Abstract Classes
-        - Very similar to interfaces but can have default implementations of the methods & include variables
+        - Very similar to interfaces but can have default implementations of the methods & include variables.
+        - Think of "The General Category" instead of a specific case, like "documents" is the general category 
+          and PDFs, Excel files and Text files are specific "concrete" kinds or "implementations" of documents.
         - The `abstract class` is usually `extend`ed by the subclass and then the methods are overridden by the subclass
           ```mermaid
           ---
-          title: Abstract Class Example
+          title: Abstract Class Example Diagram
           
           ---
           classDiagram
-          File <|-- Excel
-          File <|-- Memo
-          File <|-- Photo
-          File: expects method view()
+          File <|-- Excel : extends
+          File <|-- Memo : extends
+          File <|-- Photo : extends
           
+          <<abstract>> File
+          class File { 
+              expects method view()*
+          }
           class Excel{
               override method view()
           }
@@ -1115,14 +1124,14 @@
               } 
           }
         
-          class Memo extends File { // <-- Word is a subclass of File.
+          class Memo extends File { // <-- Memo is a subclass of File.
               String to
               String from
               String subject
       
               Memo(String to, String from, String subject) {  // <-- the custom constructor of this class, its called to 
                                                               //     initialize the variables of the object.
-                  super("Memo to:" + to)  // <-- calls the constructor of the superclass (File).
+                  super("Memo to:" + to)  // <-- calls the constructor of the superclass (File)
                   this.to = to
                   this.from = from
                   this.subject = subject
@@ -1162,13 +1171,15 @@
               viewFile(file2)  // <-- will call the "view" method of the Photo class 
               viewFile(file3)  // <-- will call the "view" method of the Memo class
           }
+        
+          main()
       
           // Output:
           // View Excel: MyExcel.xls
           // View Photo: MyPhoto.jpg
-          // Document Name: TEMPORARY FILE NAME
+          // File Name: Memo to: Chris
           // View Memo: from= Bob, to= Chris, subject= Meeting
-          // Memo: Chris to Bob
+          // Memo from: Chris to: Bob
           // Sending Memo: from= Bob, to= Chris, subject= Meeting
       
           ```
@@ -1183,7 +1194,11 @@
  
       - ### Controlled Mutability and Visibility of Variables
         - Use of explicit `private` and `protected` and `public` to control the visibility of the variables and methods 
-          of the class
+          of the class.
+        - Making a variable `private` means that it can only be accessed by the methods of the class and not by any 
+          other class.
+        - Making a variable `protected` means that it can only be accessed by the methods of the class and any subclass 
+          of the class.
         - Encouraged to use getters and setters to control the access to the variables of the class (which has since 
           been shown to be a bad idea due to misuse and overuse of the pattern)
     

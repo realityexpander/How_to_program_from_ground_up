@@ -3,7 +3,7 @@ abstract class File(
 ) {
    abstract fun view()      // Expects a fun called "view" and has no default implementation.
    open fun showName() {    // Expects a fun called "showName" and has a default implementation.
-      println("Document Name: " + this.fileName) // <-- The "default implementation" for any subclass that doesn't override the fun.
+      println("File Name: " + this.fileName) // <-- The "default implementation" for any subclass that doesn't override the fun.
    }
 }
 
@@ -24,7 +24,7 @@ class Photo(
 }
 
 class Memo(
-   fileName: String = "TEMPORARY FILE NAME", // <-- Default value for the parameter "filename" if not provided.
+   fileName: String = "TEMPORARY_FILE_NAME.memo", // <-- Default value for the parameter "filename" if not provided.
    val to: String,
    val from: String,
    val subject: String
@@ -52,8 +52,8 @@ class Memo(
 
 // Start of program
 fun main() {
-   // val doc0: Document = File("MyDocument") // <-- Since the `File` class is `abstract`, an object
-                                                   // cannot be created from it. this will cause a compiler error.
+   // val file0: File = File("MyFile") // <-- Since the `File` class is `abstract`, an object
+                                       // cannot be created from it. this will cause a compiler error.
    val file1: File = Excel("MyExcel.xls")
    val file2: Photo = Photo("MyPhoto.jpg")
    val file3: Memo = Memo(to="Chris", from="Bob", subject="Meeting") // <-- `file3` is of type `Memo` and not
@@ -75,7 +75,7 @@ fun main() {
 // Output:
 //   View Excel: MyExcel.xls
 //   View Photo: MyPhoto.jpg
-//   Document Name: TEMPORARY FILE NAME
+//   File Name: TEMPORARY_FILE_NAME.memo
 //   View Memo: from= Bob, to= Chris, subject= Meeting
 //   Memo: Chris to Bob
 //   Sending Memo: from= Bob, to= Chris, subject= Meeting
