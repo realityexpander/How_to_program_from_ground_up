@@ -10,6 +10,13 @@
     the metaphors and context people were explaining these concepts, and in retrospect,
     were full of jargon and unnecessary complexity.
 
+  - This is my curated list of information to take you on a realistic and grounded journey of understanding 
+    the essential part of computing to create effective software.
+  
+  - I would like to say at the outset is there is a TREMENDOUS amount of jargon and multiple definitions
+    for the same ideas in computing. I will do my best to be as consistent as possible, and also work to 
+    point out the multiple definitions and reduce the jargon and clarify its core meanings and ideas.
+
 ## The Essence of Computing
   - People used to do all computing by hand, and now we use various machines to do the same thing, 
     in a much faster and more reliable way.
@@ -607,7 +614,11 @@
      
       [<img src="assets/2d_arrays.png" width="550"/>]()
   
-    - 2D Arrays in Code (in C, other languages may flip the order of rows and columns - yeah that's not confusing at all) 
+    - 2D Arrays in Code 
+      - in C, other languages may flip the order of rows and columns 
+      - Yeah that's not confusing at all!!!
+      - C is a "row-major" language, meaning the rows is the first index and the columns is the second index
+      - Python is a "column-major" language, meaning the columns is the first index and the rows is the second index
       
       [<img src="assets/2dArraysInC.png" width="550"/>]() 
   
@@ -1378,7 +1389,6 @@
      - Mutable State - All state in BOOP is immutable, and the object is expected to return a new object with the new state.
    - Amazingly, the dreaded Singleton Pattern is allowed to manage global state in BOOP.
    
-    - Example of BOOP in Kotlin:
       ```mermaid
       flowchart TB
       
@@ -1495,7 +1505,8 @@
         // Changing the State of the Application  //
         ////////////////////////////////////////////
        
-        // app.book = Book("UpdatedBook.txt", emptyList())  // <-- will not compile, as the variable `book` is immutable and cannot be changed.
+        // app.book = Book("UpdatedBook.txt", emptyList())  // <-- will not compile, as the variable `book` is immutable
+                                                            //     and cannot be modified. It can only be replaced.
         
         // To change the state of the application, a whole new object must be created with the new state,
         // usually based on a copy the old state, with modifications to reflect the new state.
