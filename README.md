@@ -1,3 +1,8 @@
+<link
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  rel="stylesheet"
+/>
+
 # How to Program From The Ground Up with Minimal BS
 
 ## Introduction
@@ -1371,6 +1376,25 @@
      - Mutable State - All state in BOOP is immutable, and the object is expected to return a new object with the new state.
    - Amazingly, the dreaded Singleton Pattern is allowed to manage global state in BOOP.
    
+    - Example of BOOP in Kotlin:
+      ```mermaid
+      flowchart TB
+      
+      subgraph Application
+         subgraph Book
+            subgraph Pages
+               A("fa:fa-twitter Page")-->|enclosed in| D(Pages List)
+               B(Page) -->|enclosed in| D(Pages List)
+               C(Page) -->|enclosed in| D(Pages List)
+            end
+             D(Pages List) -->|enclosed in| E(Book)
+         end
+         E(Book) -->|enclosed in| F(Application)
+      end
+      click A "https://www.github.com" _blank
+      
+      ```
+
    - Back-to Object Oriented Programming Example (Kotlin):
    - ```Kotlin
      class Page(  // <-- the "Page" class constructor, the "val" keyword means the variable is immutable.
@@ -1573,7 +1597,7 @@
   - Coroutines are a way to run multiple "processes" at the same time, and are used to create "parallel" and "concurrent" programs.
     - Coroutines always run inside one or more threads, and are used to create "parallel" and "concurrent" programs.
   - Threads are relatively resource-heavy, as each thread requires its own "stack" and "heap" to run, and can be 
-    difficult to manage and debug when there are many threads running at the same time and sharing mutable state.
+    challenging to manage and debug when there are many threads running at the same time and sharing mutable state.
   - Coroutines are relatively resource-light and simplify the management of where parts of the program are running.
   - Coroutines are built-in to the Kotlin language, and are a first class citizen. Use of coroutines is built-into 
      the standard libraries and leveraged by the language itself.
@@ -1650,7 +1674,7 @@
                 x++
                 println("Thread 1: i=$i, x=$x")
              } // <-- The lock is released here at the end of the synchronized block.
-          	  Thread.sleep(10) // milliseconds
+                Thread.sleep(10) // milliseconds
           }
        }
        val thread2 = Thread {
@@ -1796,7 +1820,8 @@
      // Coroutine 2: 6, x=12
      // ...
      // Final value of x: 200, should be 200 // <-- Notice the final value of `x` is correct.
-  ```
+    ```
+  
   - Live Code Example: [How Coroutines Work in Kotlin](src/main/kotlin/coroutineExample.kt)
 
 - ## Conclusion
