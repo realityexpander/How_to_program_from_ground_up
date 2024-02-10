@@ -63,7 +63,7 @@ fun coroutineWithUpdateProblem() {
 //	Coroutine 1: 99, x=193
 //	Coroutine 1: 100, x=194
 //	Coroutine 2: 100, x=195
-// Final value of x: 195, should be 200 // <-- Notice the final value of `x` is not correct.
+// Final value of x: 195, should be 200 // <-- Notice final value of `x` is 195, not the expected 200. This is a race condition.
 
 // Fix the issue with the atomic updates by using the `StateFlow` class.
 @OptIn(ExperimentalTime::class, DelicateCoroutinesApi::class)

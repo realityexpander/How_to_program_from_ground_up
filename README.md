@@ -352,7 +352,7 @@
   - ### Computer Block Diagram
     - ![img_3.png](assets/Computer_block_diagram.png)
 
-    - The MPU (Microprocessor Unit) is the "brain" of the computer (CPU) 
+    - The MPU (Micro-Processor Unit) is the "brain" of the computer (also called the CPU - Central Processing Unit) 
     - ![img_7.png](assets/MPU.png)
 
   - ### Clock — "The heart beat of the CPU to keep it all in sync"
@@ -1448,12 +1448,12 @@
         
         // The code executes from the innermost function to the outermost function.
         app = Application( // <-- Step 5 Creates a new Application object with the book object.
-           Book( <-- Step 4 Creates a new Book object with the
+           Book( // <-- Step 4 Creates a new Book object with the
               title = "MyBook.txt",
-              pages = listOf(  <-- creates a new list of Page objects with the content "Page 1 Content", "Page 2 Content", "Page 3 Content"
-                 Page("Page 1 Content"),  <-- Step 1 Creates a new Page object with the content "Page 1 Content"
-                 Page("Page 2 Content"),  <-- Step 2 Creates a new Page object with the content "Page 2 Content"
-                 Page("Page 3 Content")   <-- Step 3 Creates a new Page object with the content "Page 3 Content"
+              pages = listOf(  // <-- creates a new list of Page objects with the content "Page 1 Content", "Page 2 Content", "Page 3 Content"
+                 Page("Page 1 Content"), // <-- Step 1 Creates a new Page object with the content "Page 1 Content"
+                 Page("Page 2 Content"), // <-- Step 2 Creates a new Page object with the content "Page 2 Content"
+                 Page("Page 3 Content")  // <-- Step 3 Creates a new Page object with the content "Page 3 Content"
               )
            )
         )
@@ -1469,7 +1469,7 @@
         // Changing the State of the Application  //
         ////////////////////////////////////////////
        
-        // app.book = Book("NewBook.txt")  // <-- will not compile, as the variable `book` is immutable and cannot be changed.
+        // app.book = Book("UpdatedBook.txt", emptyList())  // <-- will not compile, as the variable `book` is immutable and cannot be changed.
         
         // To change the state of the application, a whole new object must be created with the new state,
         // usually based on a copy the old state, with modifications to reflect the new state.
@@ -1504,7 +1504,7 @@
      main()
 
      // Output:
-     // Application Viewing: MyDocument.txt
+     // Application Viewing: MyBook.txt
      // Book: MyDocument.txt, # of Pages: 3
      // Page: Page 1 Content
      // Page: Page 2 Content
@@ -1578,122 +1578,225 @@
   - Coroutines are built-in to the Kotlin language, and are a first class citizen. Use of coroutines is built-into 
      the standard libraries and leveraged by the language itself.
   
-    - Example Threads in Kotlin:
-      ```Kotlin
-      fun main() {
-         var x = 0
-
-         val thread1 = Thread {
-            for (i in 1..NUMBER_OF_CYCLES) {
-               x++
-               println("Thread 1: i=$i, x=$x")
-               Thread.sleep(10) // milliseconds
-            }
-         }
-         val thread2 = Thread {
-            for (i in 1..NUMBER_OF_CYCLES) {
-               x++
-               println("Thread 2: i=$i, x=$x")
-               Thread.sleep(10) // milliseconds
-            }
-         }
-      
-         thread1.start()
-         thread2.start()
-         thread1.join()
-         thread2.join()
-         
-         println("Final value of x: $x, should be ${NUMBER_OF_CYCLES * 2}")
-      }
-    
-      main()
-
-      // Output:
-      // Thread 2: 1, x=0
-      // Thread 1: 1, x=0
-      // Thread 2: 2, x=2
-      // Thread 1: 2, x=2
-      // Thread 2: 3, x=4
-      // Thread 1: 3, x=5
-      // Thread 2: 4, x=6
-      // Thread 1: 4, x=7  // <-- Notice that the order of the output is not consistent, as the threads are running concurrently.
-      // Thread 1: 5, x=8
-      // Thread 2: 5, x=8
-      // Thread 1: 6, x=10
-      // Thread 2: 6, x=10 // <-- Notice the value of `x` is not consistently incrementing, as the updates are not `atomic`.
-      // Thread 1: 7, x=12
-      // Thread 2: 7, x=13
-      // ...
-      // Thread 1: i=98, x=186
-      // Thread 2: i=99, x=187
-      // Thread 2: i=100, x=188
-      // Thread 1: i=99, x=189
-      // Thread 1: i=100, x=190
-      // Final value of x: 190, should be 200  // <-- Notice the final value of `x` is not 200, as expected.
-      
-    - Live Code Example: [How Threads Work in Kotlin](src/main/kotlin/threadExample.kt)
-
-  - Example Coroutines in Kotlin:
-  - ```Kotlin
-    import kotlinx.coroutines.*
-    
+  - Example Threads in Kotlin:
+    ```Kotlin
     fun main() {
        var x = 0
-       val lock = Any() // Doesn't matter what the type is. It's just used as a lock or "flag" to synchronize the threads.
+       val NUMBER_OF_CYCLES = 100
 
-	   println("\nFixed Thread Update Problem using Atomic updates (synchronized)")
-       
-	   val thread1 = Thread {
+       val thread1 = Thread {
           for (i in 1..NUMBER_OF_CYCLES) {
-	   		 synchronized(lock) {  // <-- `synchronized` tells the execution to wait here until the lock is released.
-	   		    // This block is "locked" so another thread can't update `x` until the current thread is finished.
-	   		    x++
-	   		    println("Thread 1: i=$i, x=$x")
-	   		 } // <-- The lock is released here at the end of the synchronized block.
-	   		 Thread.sleep(10) // milliseconds
-	   	  }
-	   }
-	   val thread2 = Thread {
-	   	  for (i in 1..NUMBER_OF_CYCLES) {
-	   		 synchronized(lock) {
-	   			x++
-	   			println("Thread 2: i=$i, x=$x")
-	   		}
-	   		Thread.sleep(10) // milliseconds
-	   	  }
-	   }
+             x++
+             println("Thread 1: i=$i, x=$x")
+             Thread.sleep(10) // milliseconds
+          }
+       }
+       val thread2 = Thread {
+          for (i in 1..NUMBER_OF_CYCLES) {
+             x++
+             println("Thread 2: i=$i, x=$x")
+             Thread.sleep(10) // milliseconds
+          }
+       }
+      
+       thread1.start()
+       thread2.start()
+       thread1.join()  // <-- `join` tells the main thread to wait here until `thread1` is finished.
+       thread2.join()  // <-- `join` tells the main thread to wait here until `thread2` is finished.
+         
+       println("Final value of x: $x, should be ${NUMBER_OF_CYCLES * 2}")
+    }
+    
+    main()
+
+    // Output:
+    // Thread 2: 1, x=0
+    // Thread 1: 1, x=0
+    // Thread 2: 2, x=2
+    // Thread 1: 2, x=2
+    // Thread 2: 3, x=4
+    // Thread 1: 3, x=5
+    // Thread 2: 4, x=6
+    // Thread 1: 4, x=7  // <-- Notice that the order of the output is not consistent, as the threads are running concurrently.
+    // Thread 1: 5, x=8
+    // Thread 2: 5, x=8
+    // Thread 1: 6, x=10
+    // Thread 2: 6, x=10 // <-- Notice the value of `x` is not consistently incrementing, as the updates are not `atomic`.
+    // Thread 1: 7, x=12
+    // Thread 2: 7, x=13
+    // ...
+    // Thread 1: i=98, x=186
+    // Thread 2: i=99, x=187
+    // Thread 2: i=100, x=188
+    // Thread 1: i=99, x=189
+    // Thread 1: i=100, x=190
+    // Final value of x: 190, should be 200  // <-- Notice final value of `x` is not epected value 200. This is a "Race" condition.
+    ``` 
+    - Live Code Example: [How Threads Work in Kotlin](src/main/kotlin/threadExample.kt)
+
+  - Fixing the threads "race condition" problem using "Atomic" updates (`synchronized` keyword)
+  - ```Kotlin
+    fun main() {
+       var x = 0
+       val NUMBER_OF_CYCLES = 100
+       val lock = Any() // Doesn't matter what the type is. It's just used as a lock or "flag" to synchronize the threads.
        
-	   thread1.start()
-	   thread2.start()
-	   thread1.join()
-	   thread2.join()
-       
-	   println("Final value of x: $x, should be ${NUMBER_OF_CYCLES * 2}")
+       println("\nFixed Thread Update Problem (race condition) using Atomic updates (synchronized)")
+          
+       val thread1 = Thread {
+          for (i in 1..NUMBER_OF_CYCLES) {
+             synchronized(lock) {  // <-- `synchronized` tells the execution to wait here until the lock is released.
+                // This block is "locked" so another thread can't update `x` until the current thread is finished.
+                x++
+                println("Thread 1: i=$i, x=$x")
+             } // <-- The lock is released here at the end of the synchronized block.
+          	  Thread.sleep(10) // milliseconds
+          }
+       }
+       val thread2 = Thread {
+          for (i in 1..NUMBER_OF_CYCLES) {
+             synchronized(lock) {
+                x++
+                println("Thread 2: i=$i, x=$x")
+             }
+             Thread.sleep(10) // milliseconds
+          }
+       }
+          
+       thread1.start()
+       thread2.start()
+       thread1.join()
+       thread2.join()
+          
+       println("Final value of x: $x, should be ${NUMBER_OF_CYCLES * 2}")
     }
     
     main()
     
     // Output:
-    //	Fixed Thread Update Problem (Atomic updates)
-    //	Thread 1: i=1, x=1
-    //	Thread 2: i=1, x=2
-    //	Thread 1: i=2, x=3
-    //	Thread 2: i=2, x=4
-    //	Thread 2: i=3, x=5  // <-- Notice that the order of the output is inconsistent, as the threads are running concurrently.
-    //	Thread 1: i=3, x=6
-    //	Thread 1: i=4, x=7
-    //	Thread 2: i=4, x=8
-    //	Thread 2: i=5, x=9
+    // Fixed Thread Update Problem (race condition) using Atomic updates (synchronized)
+    // Thread 1: i=1, x=1
+    // Thread 2: i=1, x=2
+    // Thread 1: i=2, x=3
+    // Thread 2: i=2, x=4
+    // Thread 2: i=3, x=5  // <-- Notice that the order of the output is inconsistent, as the threads are running concurrently.
+    // Thread 1: i=3, x=6
+    // Thread 1: i=4, x=7
+    // Thread 2: i=4, x=8
+    // Thread 2: i=5, x=9
     // ...
-    //	Thread 2: i=98, x=195
-    //	Thread 1: i=98, x=196
-    //	Thread 2: i=99, x=197
-    //	Thread 1: i=99, x=198
-    //	Thread 2: i=100, x=199  // <-- Notice the value of `x` IS consistently incrementing, as the updates are `atomic`.
-    //	Thread 1: i=100, x=200
-    //	Final value of x: 200, should be 200
+    // Thread 2: i=98, x=195
+    // Thread 1: i=98, x=196
+    // Thread 2: i=99, x=197
+    // Thread 1: i=99, x=198
+    // Thread 2: i=100, x=199  // <-- Notice the value of `x` IS consistently incrementing, as the updates are `atomic`.
+    // Thread 1: i=100, x=200
+    // Final value of x: 200, should be 200  // <-- Notice the final value of `x` is 200, as expected.
     
     ```
+  - Example Coroutines in Kotlin:
+  - ```Kotlin
+    import kotlinx.coroutines.*  // <-- import the `kotlinx.coroutines` library to use coroutines.
+    
+    fun main() {
+       var x = 0
+       
+       val job1 = GlobalScope.launch {
+          for (i in 1..NUMBER_OF_CYCLES) {
+             x++
+             println("Coroutine 1: $i, x=$x")
+             delay(10.milliseconds)
+          }
+       }
+       val job2 = GlobalScope.launch {
+          for (i in 1..NUMBER_OF_CYCLES) {
+             x++
+             println("Coroutine 2: $i, x=$x")
+             delay(10.milliseconds)
+          }
+       }
+       
+       runBlocking {
+          job1.join()
+          job2.join()
+       }
+       
+       println("Final value of x: $x, should be ${NUMBER_OF_CYCLES * 2}")
+    }
+    
+    // Output:
+    // Coroutine 2: 1, x=1
+    // Coroutine 1: 1, x=2
+    // Coroutine 2: 2, x=3
+    // Coroutine 1: 2, x=4
+    // Coroutine 2: 3, x=5
+    // Coroutine 1: 3, x=6
+    // Coroutine 2: 4, x=7
+    // Coroutine 1: 4, x=8
+    // Coroutine 2: 5, x=9
+    // Coroutine 1: 5, x=10
+    // Coroutine 2: 6, x=11
+    // Coroutine 1: 6, x=12
+    // Coroutine 1: 7, x=14 // <-- Notice the order of the output is inconsistent, as the coroutines run concurrently.
+    // ...
+    // Coroutine 1: 8, x=14 // <-- Notice the value of `x` is inconsistently incrementing, as the updates are NOT "atomic."
+    // Coroutine 2: 8, x=14
+    // Coroutine 1: 9, x=16
+    // Coroutine 2: 9, x=17
+    // ...
+    // Coroutine 2: 99, x=192
+    // Coroutine 1: 99, x=193
+    // Coroutine 1: 100, x=194
+    // Coroutine 2: 100, x=195
+    // Final value of x: 195, should be 200 // <-- Notice final value of `x` is 195, not the expected 200. This is a race condition.
+    ```
+  - Fixing the Coroutine race condition problem using "Atomic" updates (using `StateFlow` class)
+  - ```Kotlin
+     fun main() {
+        val x = MutableStateFlow(0)
+     
+        println("\nFixed Coroutine Update Problem using Atomic updates (StateFlow)")
+           
+        val job1 = GlobalScope.launch {
+           for (i in 1..NUMBER_OF_CYCLES) {
+              x.update { it + 1}
+              println("Coroutine 1: i=$i, x=${x.value}")
+              delay(10.milliseconds)
+           }
+        }
+           
+        val job2 = GlobalScope.launch {
+           for (i in 1..NUMBER_OF_CYCLES) {
+              x.update { it + 1}
+              println("Coroutine 2: i=$i, x=${x.value}")
+              delay(10.milliseconds)
+           }
+        }
+           
+        runBlocking {
+           job1.join()
+           job2.join()
+        }
+           
+        println("Final value of x: ${x.value}, should be ${NUMBER_OF_CYCLES * 2}")
+     }
+     
+     // Output:
+     // Fixed Coroutine Update Problem
+     // Coroutine 2: 1, x=2
+     // Coroutine 1: 1, x=1
+     // Coroutine 2: 2, x=4
+     // Coroutine 1: 2, x=3
+     // Coroutine 2: 3, x=5
+     // Coroutine 1: 3, x=6  // <-- Notice that the order of the output is inconsistent, as the coroutines run concurrently.
+     // Coroutine 1: 4, x=8
+     // Coroutine 2: 4, x=7  // <-- Notice the value of `x` IS consistently incrementing, as the updates are `atomic`.
+     // Coroutine 1: 5, x=9
+     // Coroutine 2: 5, x=10
+     // Coroutine 2: 6, x=12
+     // ...
+     // Final value of x: 200, should be 200 // <-- Notice the final value of `x` is correct.
+  ```
   - Live Code Example: [How Coroutines Work in Kotlin](src/main/kotlin/coroutineExample.kt)
 
 - ## Conclusion

@@ -63,7 +63,7 @@ fun fixedThreadUpdateProblemWithAtomicUpdates() {
 	var x = 0
 	val lock = Any() // Doesn't matter what the type is. It's just used as a lock or "flag" to synchronize the threads.
 
-	println("\nFixed Thread Update Problem using Atomic updates (synchronized)")
+	println("\nFixed Thread Update Problem (race condition) using Atomic updates (synchronized)")
 
 	val thread1 = Thread {
 		for (i in 1..NUMBER_OF_CYCLES) {
