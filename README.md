@@ -120,7 +120,8 @@
     - Easier to manipulate for humans than a bare wire
     - Can be physically manipulated using electricity to change state using an electromagnet.
     - Simple switches can be used to represent boolean logic operations
-    - These operations are called "gates", conceptually similar to someone following path crossing a fence through a gate
+    - These operations are called "gates", conceptually similar to someone following path across a fence, you can only 
+      pass through a gate if it's open, and you can't pass through if it's closed.
     
     - ### Logical Operations & Boolean Arithmetic
       - true = 1 = on = connected
@@ -328,6 +329,10 @@
 # SOFTWARE
 
 # Machine Code — The Microcode Soft-Circuitry Commands of the CPU
+  - BIG IDEA - Logic gates can be built up to create a "general-purpose" machine that can be setup using software
+    instead of discrete physical components. Actually any software COULD be implemented in hardware, but the
+    costs of doing so rarely make it practical at this point, other than a few very specialized problems like 
+    graphics cards to compute 3D graphics, bitcoin mining and AI training.
   - Machine Code is the "language" of logical operations that the computer can perform
     - It's really just human cleverness setting up problems in a way 
         that the machine can perform simple logical operations to give 
@@ -481,6 +486,7 @@
     ```
 
 - # Assembly Language
+  - BIG IDEA - Make the machine code easier for humans to read and write by using "mnemonics" to represent the opcodes.  
   - Assembly Language is a "human-readable" mnemonic representation of the "machine code" that the CPU can executes directly
   - The mnemonics are translated into the binary opcodes by an "Assembler"
   - The assembler is a program that converts and expands the mnemonics into the specific particular binary opcodes. 
@@ -551,10 +557,13 @@
       - A way to return from a function in machine code 
     - The "call" statement changes the program counter (PC) to point to a different location in memory
     - The "return" statement changes the program counter (PC) back to where it was before the "call" statement
-    - Subroutines are the basis for all "structured" programming
+    - Programmers use the phrase "call a function" to mean "set execution of next instruction to a location in memory 
+      where a function is stored"
+    - The phrase "return from a function" to mean "set execution of next instruction to the location in memory where the function was called from"
+    - Subroutines are the basis for all structured programming
 
 # Data Structures
-
+  - BIG IDEA - Giving Names structures to represent binary data in memory is easier for humans to deal with than hex codes.
   - "Data structures" are named concepts for common ways humans have invented to represent data, and usually predate computing.
   - They represent real world items and concepts in a way that a computer can be programmed to manipulate to solve a problem.
   - For example, a "list" is a common data structure for a series of items in a specific order.
@@ -640,9 +649,10 @@
     - A way to represent a list of single letters (characters) in memory, "strung" together to represent words and 
       sentences and paragraphs and documents.
     - The characters are usually stored in a contiguous block of memory.
-    - The characters are sometimes terminated by a special "end of string" character, or have a length stored somewhere.
-    - The characters are usually accessed by an "index" which is a number that represents the position of the 
-      "characters" in the string
+    - Characters are sometimes terminated by a special "end of string" character, or have a length stored somewhere.
+    - Characters are usually accessed by an "index" which is just a number that represents the position of the 
+      "characters" in the string, sometimes called an "offset"
+    - Strings are also interchangably called "substring", ie: "start" and "end" indexes, also known as a "slice" or "span"
       [<img src="assets/strings.png" width="550"/>]()
   
   
@@ -660,6 +670,13 @@
     - The pointer stored at 0x00000000 has the value 0x00000004, so it's pointing to address 0x00000004.
     - Address 0x00000004 contains the value 0x41, which represents the character 'A' or number 65 as an unsigned byte integer.
     - In this case, it's stored in "Little Endian" format, so the least significant bytes are stored first.
+    - Pointers usually have a type associated with them, so the compiler knows how long the block of memory that
+      the pointer is pointing to is, and how to interpret the values in that block of memory, 
+      ie: long int, char, float, struct, etc.
+    - In the case of a "address pointer", it's usually 4-16 bytes long, depending on the number of bits in the CPU's
+      "address bus" of the CPU.
+      - example: 32-bit CPU can address 2^32 (4,294,967,296) different memory locations, or 4GB of memory, so each
+        "address pointer" is 4 bytes long (32 bits)
   
       [Another pointer diagram](assets/pointer.png)
     - ```mermaid
@@ -676,31 +693,36 @@
     - Known as "Records" or "Data Classes" 
       - also called as "structs", sometimes referred to as "classes" and "objects"
     - A way to represent a "structured data" in memory
-      - meaning it has a standard format of mixed "types" representing a cohesive "thing" (sometimes called "shape" or "form")
+      - meaning it has a standard format of possibly mixed "types" representing a cohesive "thing" (sometimes called "shape" or "form")
     - The "structure" can represent anything
       - like a person, a car, a house, a company, a country, a planet, a solar system
       - Keep in mind, it's just a representation, not an actual thing and can only track the representative data
-      - The classic GI-GO (Garbage In, Garbage Out) problem
-    - The "structure" is usually made up of a list of "fields" which are the individual pieces of data that make up the "structure"
-    - The "fields" are usually accessed by a "name" which is a human-readable label for the "field"
-    - The "fields" are usually stored in a contiguous block of memory
-    - The "fields" are usually different types (like numbers, letters, strings, dates, times, arrays, and other Records)
+      - Programmers will often refer to the representation as the "thing" itself, which can lead to confusion and errors.
+      - The classic Computer Science GI-GO (Garbage In, Garbage Out) problem.
+        - The solution can only ever be as good as the data and the metaphorically representational model of the problem.
+        - Creating useful models of the real world is the most important part of programming, and the most difficult.
+    - The structure is usually made up of a list of "fields" which are the individual pieces of data that make up the structure.
+    - Fields are also called "properties", "attributes", "members", and sometimes "elements"
+    - The fields are usually accessed by a name which is the human-readable label for the field
+    - The fields of a strcuture are usually stored in a contiguous block of memory, but not always.
+    - The fields can be of different types (like numbers, letters, strings, dates, times, arrays, and other 
+      programmer-defined data structures.)
     
-    - Example of a "Person" structure (C)
+    - Example of a "Person" Data Structure (in C)
       ```C
         struct Person {
             char name[32];  // 32 characters to represent the name
-            int age;        // 4 bytes to represent the age
-            float height;   // 4 bytes to represent the height
-            float weight;   // 4 bytes to represent the weight
+            int age;        // 4 bytes to represent the age as an integer (not decimal or fraction)
+            float height;   // 4 bytes to represent the height as a floating point number (decimal)
+            float weight;   // 4 bytes to represent the weight as a floating point number (decimal)
         };
       ```
   
   - ### Stack
-    - A way to represent a "last in, first out" list of things in memory, similar to a stack of dinner plates
-    - The "things" are usually all the same size & type
-    - The "things" are usually all stored in a contiguous block of memory
-    - The "things" are usually accessed by a "stack pointer" which is a number that represents the position of the top-most "thing" in the stack
+    - A way to represent a "last in, first out" list of things in memory, similar to a stack of dinner plates.
+    - The values are always the same size & type and usually stored in a contiguous block of memory, but not always.
+    - The values are usually accessed by a "stack pointer" which is a number that represents the position of the 
+      top-most value in the stack, as a memory address or an index.
     - Efficient for adding and removing items from the list, but not efficient for accessing items in the list
       ![stack.png](assets/stack.png)
     - Quick Animation of a Stack
@@ -709,37 +731,58 @@
       - https://www.youtube.com/watch?v=toRJakeYIKA
   
   - ### Queue
-    - A way to represent a "first in, first out" list of things in memory, similar to a line of people waiting for a bus
-    - The "things" are usually all the same size & type
-    - The "things" are usually all stored in a contiguous block of memory
-    - The "things" are usually accessed by a "head" and "tail" which are numbers that represent the position of the first and last "thing" in the queue
+    - A way to represent a "first in, first out" list of values in memory, similar to a line of people waiting for a bank.
+    - The values are all the same type and usually stored in a contiguous block of memory, but not always. Sometimes
+      a Queue is stored as a "linked list" instead of an Array. (next section)
+    - The values are usually accessed by a "head" and "tail" which are numbers that represent the position of the first 
+      and last value in the queue as a memory address or an index.
     - Efficient for adding and removing items from the list, but not efficient for accessing items in the list
       ![queue.png](assets/queue.png)
     - Queue Data Structure Animation
       - https://www.youtube.com/watch?v=ojGf3SH7n48
   
   - ### Linked List
-    - A way to represent a "list" of things in memory, where each "thing" points ONLY to the next "thing" in the list
-    - The "things" are usually all the same size & type
-    - The "things" are NOT stored in a contiguous block of memory, which is the main difference between an array and a linked list
-    - The "things" are usually accessed by a "pointer" which is a number that represents the location of the "thing" in memory
-    - Used to represent a "dynamic" list, where the size of the list is not known ahead of time
-    - Efficient for adding and removing items from the list, but not efficient for accessing items in the list.
+    - A data structure to represent a list of values in memory, each value is the same size & type.
+    - Each value in the list is stored in a "node", where each node contains a value and a pointer that points 
+      ONLY to the _next_ node in the Linked List
+    - The nodes are NOT stored in a contiguous block of memory, which is the main difference between an Array and a Linked List
+    - The values are usually accessed by a pointer which is a number that represents the location of the node in memory
+    - A Linked List is used to represent a "dynamic" list, where the size of the list is not known ahead of time and
+      may change over time.
+    - Efficient for adding and removing items from the list, but not efficient for searching for items in the list.
     - [linkedList.png](assets/linkedList.png)
     - ```mermaid
       graph TD
-      HEAD["HEAD= Start pointer"] -->|points to | A[A= data + a pointer to node B]
-      A -->|points to |B[B= data + a pointer to node C]
-      B -->|points to | C[C= data + a pointer to node D]
-      C -->|points to | D[D= data + a pointer to node E ]
-      D -->|points to | E["E= data + a pointer to `NULL` (the end node)"]
+      HEAD["HEAD= Start pointer"] -->|points to | A[A= some data and a pointer to node B]
+      A -->|points to |B[B= some data and a pointer to node C]
+      B -->|points to | C[C= some data and a pointer to node D]
+      C -->|points to | D[D= some data and a pointer to node E ]
+      D -->|points to | E["E= some data and a pointer to `NULL` (the `End` node)"]
       TAIL["TAIL= End pointer"] -->|points to | E
 
-  - Map (or "Hash Table", "Hash Map", "Dictionary", "Associative Array")
-    - A way to represent a "list" of things in memory, where each "thing" points to one "thing" in the list
-    - The "things" are usually all the same size & type
-    - The "things" are NOT stored in a contiguous block of memory, which is the main difference between an array and a map
-    - The "things" are usually accessed by a "key" which is a number that represents the location of the "thing" in memory
+  - ### Map (or "Hash Table", "Hash Map", "Dictionary", "Associative Array")
+    - A data structure to represent a "mapping" of "keys" to values
+    - A "key" is a value that represents the label to "look-up" another value
+      - This is called "mapping" or "associating" the key with a specific value.
+      - example using JSON data format
+      - ```JSON
+        {
+          "jim001": {"name": "John", "age": 42, "height": 6.2, "weight": 180},
+          "chris123": {"name": "Chris", "age": 32, "height": 5.8, "weight": 160},
+          "grg88922": {"name": "George", "age": 22, "height": 5.5, "weight": 140},
+          "udu19fz": {"name": "Jeremy", "age": 19, "height": 5.9, "weight": 150}
+        }
+        ```
+      - `jim001` is the key, and the value is `{"name": "John", "age": 42, "height": 6.2, "weight": 180}`
+      - `chris123` is the key, and the value is `{"name": "Chris", "age": 32, "height": 5.8, "weight": 160}`
+      - `grg88922` is the key, and the value is `{"name": "George", "age": 22, "height": 5.5, "weight": 140}`
+      - `udu19fz` is the key, and the value is `{"name": "Jeremy", "age": 19, "height": 5.9, "weight": 150}`
+    - The values are usually the same type and the values are always accessed by a "key" instead of an "index".
+    - The key type is usually a string, but it can be any type, like another data structure or a simple number.
+      - The map uses a special "hash function" to convert the key into a number that represents the location of the 
+        value in memory.
+      - This hash function simply takes all the data for the value the key represents and converts it into a single
+        number (called the "hash") that represents the location of the value in memory.
     - Used to represent a "key-value" list, where each "thing" is accessed by a "key" instead of an "index"
     - Efficient for adding and removing items from the list, and efficient for accessing items in the list
     - [Another map diagram](assets/Map.png)
@@ -779,12 +822,15 @@
 # High-Level Language Styles
 
 - ## Procedural Programming 1950s-Present (for amateurs, 1960s-1990s for professionals)
+   - BIG IDEA - USING ENGLISH-LIKE COMMANDS instead of cryptic and tedious assembly language
    - First style of high-level language after assembly language
    - Considered "high level" because it was abstracted from the assembly language. The language was actually just 
      another program that translated the "high level" language into "machine code" for the CPU, usually at runtime.
    - Procedural code is executed top to bottom, one line at a time. Control flow is done with "IF" and "GOTO" statements
    - GOTO was still commonly used, as most people didn't know how to use "subroutines" or "functions" yet and 
    - GOTO was easier to understand, at least first.
+   - Online playground for BASIC to try these programs
+     - https://www.calormen.com/jsbasic/
    
    - Example of Procedural-Oriented Programming with GOTO's in BASIC (Beginner's All-purpose Symbolic Instruction Code)
      ```Text
@@ -812,8 +858,10 @@
      HOW DID I GET HERE?
      
      ```
- 
+     - [Click for source code to copy and paste into the BASIC playground](/assets/proceduralWithGoto.bas)
+
    - ### The Painful Push for Subroutines & Some Structure
+     - BIG IDEA - REUSABLE FUNCTIONS instead of lots of GOTO's
      - Programmers were eventually forced into using "subroutines" to deal with extreme overuse of "JUMP/GOTO" 
        statements common to programming at that time which lead to extremely confusing, unreadable and unmaintainable 
        "spaghetti code", so named because of the way the "GOTO" statements would jump around the program and get mixed
@@ -827,7 +875,7 @@
        - Code was loaded into the computer, and then data was separately loaded and processed in "batches"
      - Example of Procedural BASIC with Subroutines and `GOSUB`'s (the `GOSUB` command is a `GOTO` a "SUBroutine"):
        ```Text
-       5 REM PROGRAM TO ADD 2 NUMBERS, PRINT RESULT
+       5 REM PROGRAM TO ADD 2 NUMBERS, PRINT RESULT USING GOSUB
        10 LET X = 10
        20 LET Y = 32
        30 GOSUB 100
@@ -835,6 +883,7 @@
        50 LET X = 110
        70 GOSUB 100
        80 PRINT "Output 2: "; Z
+       90 END
        100 REM ADD 2 NUMBERS, RETURN IN Z  <-- This start of a "subroutine", REM is a "remark" or "comment" and is ignored by the program
        110 LET Z = X + Y 
        120 RETURN  <-- end of a "subroutine", return execution to the line after the "GOSUB" statement
@@ -877,9 +926,11 @@
           9 45
           10 55
        ```
+     - - [Click for source code to copy and paste into the BASIC playground](/assets/proceduralWithLoops.bas)
    - Examples of Procedural languages are "Fortran" and "BASIC" and "COBOL"
  
  - ## Structured Programming 1960s-Present
+   - BIG IDEA - SCOPES & TYPES!
    - No more "goto" statements, only subroutines and conditional branching were allowed
    - The concept of "scopes" (or "code blocks") to limit the use of "globally mutable" variables
      - This is the origin of "encapsulation" and first introduced to limit the visibility of the "local" variables 
@@ -900,8 +951,8 @@
            x = x + y; 
          } // <-- end of the "scope"
          
-         printf("%d", x); // <-- print the value of x as a decimal number
-         printf("%c", x); // <-- print the value of x as a character (the ASCII value of x)
+         printf("%d", x); // <-- print the value of x as a decimal number (%d means use "decimal" value of x, 42)
+         printf("%c", x); // <-- print the value of x as a character ("%c" means use the ASCII value of x, 42 is '*')
        }
        
        main();  // <-- call the "main" function, runs the program
@@ -915,6 +966,7 @@
    ### Types
    - The concept of "types" (or "kinds") was introduced to define the size & intended purpose of "primitive" 
      data types 
+     - Procedural langauges only had a few simple types: "number" or "character" or "string of characters" or "array"
      - Primitive types are: `int`, `long`, `float`, `char`, and `bool`
      - Primitive types are the "building blocks" of all other types defined in `struct`s
      - Example (C):
@@ -1371,12 +1423,19 @@
           - ```mermaid
             flowchart TD
             X["The Problem with Mutliple Inheritance"]
-            Animal -->|inherits| Cat["🐈 Cat"] & Dog["🐕 Dog"]-->|inherits| Cog???["Cog???"]
+            Animal["
+              abstract Animal
+              expects method makeSound()
+            "] -->|inherits| Cat["🐈 Cat
+               method makeSound()
+            "] & Dog["🐕 Dog
+                method makeSound()
+            "]-->|inherits| Cog???["Cog???"]
             
             Cog??? -..-> Y((("
-            So when `Cog` makes a sound, 
-            (ie: calls `makeSound()`) 
-            does it meow or bark?"))) 
+            When `Cog` makes a sound, 
+            (ie: method `makeSound()` is called) 
+            does it Meow or Bark?"))) 
             ```
           - Example of attempt to use "Multiple Inheritance" in C++:
             ```C++
