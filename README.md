@@ -1390,7 +1390,7 @@
    - Amazingly, the dreaded Singleton Pattern is allowed to manage global state in BOOP.
    
       ```mermaid
-      flowchart TB
+      flowchart LR
       
       subgraph Application
          subgraph Book
