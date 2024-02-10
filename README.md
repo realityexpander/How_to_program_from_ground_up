@@ -777,7 +777,10 @@
       - `chris123` is the key, and the value is `{"name": "Chris", "age": 32, "height": 5.8, "weight": 160}`
       - `grg88922` is the key, and the value is `{"name": "George", "age": 22, "height": 5.5, "weight": 140}`
       - `udu19fz` is the key, and the value is `{"name": "Jeremy", "age": 19, "height": 5.9, "weight": 150}`
-    - The values are usually the same type and the values are always accessed by a "key" instead of an "index".
+    - The values are normally all the same type are always accessed by a unique "key" instead of an "index".
+    - The keys are always unique, meaning that no two keys can be the same value. 
+      - There can be no duplicate keys.
+      - The values the keys are associated with can be the same, meaning 2 different keys can point to the same value.
     - The key type is usually a string, but it can be any type, like another data structure or a simple number.
       - The map uses a special "hash function" to convert the key into a number that represents the location of the 
         value in memory.
@@ -1586,7 +1589,7 @@
      
      // Start of Program
      fun main() {
-        // Setup the App in the Imperative Style
+        // Setup the App in the familiar "Imperative" Style:
         // Create the list of Page objects
         val pages = listOf(  // <-- the "val" keyword means the variable is immutable and can only be assigned once.
            Page("Page 1 Content"),
@@ -1603,14 +1606,16 @@
                                     //     `app` is a "var" because it's expected to change state.
                                     // Every other variable is a "val" and is immutable.
 
-        // Setup the app in the same way, but in the Functional Style.
         // The above code could be arranged in the functional style, where the state of the program is created in 
         // a single line!
-        // This style is also known as "declarative" style, as opposed to the familiar "imperative" style.
-        // Using declaritive style, the code is more about "what" is being done, rather than "how" it's being done.
-        // You only see the high-level view, and the implementation details are hidden deeper in the code.
+        //
+        // Now, setup the app with the same content, but in the "Functional" Style:
+        // - This style is also known as "declarative" style, as opposed to the familiar "imperative" style.
+        // - Using declaritive style, the code is more about "what" is being done, rather than "how" it's being done.
+        // - You only see the high-level view, as the implementation details are hidden deeper in the code.
+        // - Functions are called from the inside out, and the state of the program is created in a single line. 
         
-        // The code executes from the innermost function to the outermost function.
+        // The code executes from the innermost function to the outermost function (step 1 to step 5.)
         app = Application( // <-- Step 5 Creates a new Application object with the book object.
            Book( // <-- Step 4 Creates a new Book object with the
               title = "MyBook.txt",
@@ -1887,14 +1892,14 @@
     fun main() {
        var x = 0
        
-       val job1 = GlobalScope.launch {
+       val job1 = GlobalScope.launch {  // <-- `job1` is immediately started ("launched") to run in the main thread (GlobalScope).
           for (i in 1..NUMBER_OF_CYCLES) {
              x++
              println("Coroutine 1: $i, x=$x")
              delay(10.milliseconds)
           }
        }
-       val job2 = GlobalScope.launch {
+       val job2 = GlobalScope.launch {  // <-- `job2` is immediately started ("launched") to run in the main thread (GlobalScope).
           for (i in 1..NUMBER_OF_CYCLES) {
              x++
              println("Coroutine 2: $i, x=$x")
@@ -1903,8 +1908,8 @@
        }
        
        runBlocking {
-          job1.join()
-          job2.join()
+          job1.join()  // <-- `join` tells the main thread to wait here until `job1` is finished.
+          job2.join()  // <-- `join` tells the main thread to wait here until `job2` is finished.
        }
        
        println("Final value of x: $x, should be ${NUMBER_OF_CYCLES * 2}")
@@ -1943,25 +1948,25 @@
      
         println("\nFixed Coroutine Update Problem using Atomic updates (StateFlow)")
            
-        val job1 = GlobalScope.launch {
+        val job1 = GlobalScope.launch { // <-- `job1` is immediately started ("launched") to run in the main thread (GlobalScope).
            for (i in 1..NUMBER_OF_CYCLES) {
-              x.update { it + 1}
+              x.update { it + 1}  // <-- `update` tells the execution to wait here until the updating lock is released.
               println("Coroutine 1: i=$i, x=${x.value}")
               delay(10.milliseconds)
            }
         }
            
-        val job2 = GlobalScope.launch {
+        val job2 = GlobalScope.launch { // <-- `job2` is immediately started ("launched") to run in the main thread (GlobalScope).
            for (i in 1..NUMBER_OF_CYCLES) {
-              x.update { it + 1}
+              x.update { it + 1}  // <-- `update` tells the execution to wait here until the updating lock is released.
               println("Coroutine 2: i=$i, x=${x.value}")
               delay(10.milliseconds)
            }
         }
            
         runBlocking {
-           job1.join()
-           job2.join()
+           job1.join()  // <-- `join` tells the main thread to wait here until `job1` is finished.
+           job2.join()  // <-- `join` tells the main thread to wait here until `job2` is finished.
         }
            
         println("Final value of x: ${x.value}, should be ${NUMBER_OF_CYCLES * 2}")
