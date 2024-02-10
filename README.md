@@ -1223,10 +1223,10 @@
               expects method view()*
           }
           
-          class Excel{
+          class Excel {
               override method view()
           }
-          class Memo{
+          class Memo {
               override method view()
           }
           class Photo {
@@ -1395,11 +1395,11 @@
       subgraph Application
          subgraph Book
             subgraph Pages
-               A("📄 Page")-->|enclosed in| D
-               B("📄 Page") -->|enclosed in| D
-               C("📄 Page") -->|enclosed in| D
+               A("📄 Page 1 Content")-->|enclosed in| D
+               B("📄 Page 2 Content") -->|enclosed in| D
+               C("📄 Page 3 Content") -->|enclosed in| D
             end
-             D("📑 Pages List") -->|enclosed in| E(Book)
+             D("📑 List of Pages") -->|enclosed in| E(Book)
          end
          E("📖 Book") -->|enclosed in| F("🖥️ Application")
       end
