@@ -102,7 +102,7 @@
     - All of this is based on human ingenuity and cleverness, as the computer knows nothing about the problem. 
     - It's just following the logical operations that humans have carefully designed to represent the problem and a solution.
 
-# HARDWARE
+# HARDWARE - We Must Have A Machine To Do The Work (Until We All Attain Accurate Psychic Powers)
 
 # Low Level Hardware Implementations
   
@@ -257,14 +257,14 @@
   - Groups of transistor logic gates packaged together to perform a specific task
   - Robert Noyce, inventor of first monolithic IC 
     
-    ![the_ic.png](assets/the_ic.png)
+  - [<img src="assets/the_ic.png" width="400">](https://en.wikipedia.org/wiki/Robert_Noyce)
   - Typical Early Logic Gate Package
     
-    ![logic-gate-package.png](assets/logic-gate-package.png)
+  - [<img src="assets/logic-gate-package.png" width="400">](https://en.wikipedia.org/wiki/Robert_Noyce)
   
   - Close up of silicon wafer wired to package
     
-    ![chip-wired-to-package.png](assets/chip-wired-to-package.png)
+  - [<img src="assets/chip-wired-to-package.png" width="400">](https://en.wikipedia.org/wiki/Robert_Noyce)
      
   - The logic gate "package" 
   - A Package is a group of transistors for a specific logic operation placed on a single chip contained in a plastic 
@@ -303,7 +303,6 @@
     - May contain a small amount of "cache" memory (very fast memory near the CPU circuits) to speed up access to main memory
     - CPU's are where the execution of each instruction happens
 
-  
   - ## The Configurable Computer
     - ROM (Read Only Memory 
       - usually contains the basic software to start the computer, sometimes called "firmware")
@@ -326,7 +325,7 @@
         - The arm is controlled by software and uses "magnets" to move the arm to the correct position to read and write the data
         - Some sort of electrified magnet is the usual way that computers interact physically with the world
 
-# SOFTWARE
+# SOFTWARE - The Easily Changeable Machine
 
 # Machine Code — The Microcode Soft-Circuitry Commands of the CPU
   - BIG IDEA - Logic gates can be built up to create a "general-purpose" machine that can be setup using software
@@ -887,7 +886,7 @@
        70 GOSUB 100
        80 PRINT "Output 2: "; Z
        90 END
-       100 REM ADD 2 NUMBERS, RETURN IN Z  <-- This start of a "subroutine", REM is a "remark" or "comment" and is ignored by the program
+       100 REM ADD X + Y NUMBERS, RESULT IN Z  <-- This start of a "subroutine", REM is a "remark" or "comment" and is ignored by the program
        110 LET Z = X + Y 
        120 RETURN  <-- end of a "subroutine", return execution to the line after the "GOSUB" statement
      
@@ -897,7 +896,95 @@
        Output 2: 142
      
        ```
-     
+     - [Click for source code to copy and paste into the BASIC playground](/assets/proceduralWithGosub.bas)
+   
+   - Example without Loops (also called an "unrolled loop", because each step is imperative and "unrolled" from a loop)
+     - Interesting note: compilers will often "unroll" loops to make the code faster because it reduces the number of 
+       "conditional" statements that the CPU has to execute.
+     - ```Text
+       5 REM PROGRAM TO DEMO "WITHOUT LOOPS" TO CREATE A CUMULATIVE ADDITION TABLE
+       10 LET A = 1
+       20 GOSUB 400
+       30 PRINT A, B
+       40 LET A = A + 1
+       50 GOSUB 400
+       60 PRINT A, B
+       70 LET A = A + 1
+       80 GOSUB 400
+       90 PRINT A, B
+       100 LET A = A + 1
+       110 GOSUB 400
+       120 PRINT A, B
+       130 LET A = A + 1
+       140 GOSUB 400
+       150 PRINT A, B
+       160 LET A = A + 1
+       170 GOSUB 400
+       180 PRINT A, B
+       190 LET A = A + 1
+       200 GOSUB 400
+       210 PRINT A, B
+       220 LET A = A + 1
+       230 GOSUB 400
+       240 PRINT A, B
+       250 LET A = A + 1
+       260 GOSUB 400
+       270 PRINT A, B
+       280 LET A = A + 1
+       290 GOSUB 400
+       300 PRINT A, B
+       310 END
+       400 REM ADD A PLUS B, RESULT IN B
+       410 LET B = A + B
+       420 RETURN
+       
+       RUN
+       
+       Output:
+          1 1
+          2 3
+          3 6
+          4 10
+          5 15
+          6 21
+          7 28
+          8 36
+          9 45
+          10 55
+
+        ```
+     - [Click for source code to copy and paste into the BASIC playground](/assets/proceduralUnrolledLoops.bas)
+   
+   - #### Programmer rolled-loops leftover from Assembly Language
+   -  Example using programmer-made loops using GOTO's and Indexes (also called "counters" or "iterators" or "loop variables")
+      ```Text
+      5 REM PROGRAM TO DEMO "FOR LOOP" TO CREATE A CUMULATIVE ADDITION TABLE 
+      10 LET A = 1
+      20 GOSUB 100
+      30 PRINT A, B
+      40 LET A = A + 1
+      50 IF A <= 10 THEN GOTO 20  <-- This is the "loop" that repeats the code between line 20 and 50, 10 times
+      60 END
+      100 REM ADD A PLUS B, RESULT IN B
+      110 LET B = A + B
+      120 RETURN
+      
+      RUN
+       
+       Output:
+          1 1
+          2 3
+          3 6
+          4 10
+          5 15
+          6 21
+          7 28
+          8 36
+          9 45
+          10 55
+      ```
+     - [Click for source code to copy and paste into the BASIC playground](/assets/proceduralProgrammerMadeLoops.bas)
+
    - ### Loops instead of GOTOs
      - The FOR "loop" statement was introduced to replace the "GOTO" statement, as an attempt to make procedural 
        code more "structured."
@@ -906,12 +993,12 @@
      - Example in BASIC:
        ```Text
        5 REM PROGRAM TO DEMO "FOR LOOP" TO CREATE A CUMULATIVE ADDITION TABLE 
-       10 FOR A = 1 TO 10 STEP 1 <-- The "FOR" statement changes the value of "I" from 1 to 10, incrementing by 1 at each NEXT statement
+       10 FOR A = 1 TO 10 STEP 1 <-- The "FOR" statement changes the value of "A" from 1 to 10, incrementing by 1 at each NEXT statement
        15 GOSUB 100
        20 PRINT A, B
-       30 NEXT A   <-- Execution continues at line after the "FOR" statement (15), unless "I" is 10, then it goes to next line (40) 
+       30 NEXT A   <-- Execution continues at line after the "FOR" statement (15), unless "A" is 10, then it goes to next line (40) 
        40 END
-       100 REM ADD A AND B, RETURN IN B
+       100 REM ADD A PLUS B, RESULT IN B
        110 LET B = A + B
        120 RETURN
      
@@ -929,7 +1016,7 @@
           9 45
           10 55
        ```
-     - - [Click for source code to copy and paste into the BASIC playground](/assets/proceduralWithLoops.bas)
+   
    - Examples of Procedural languages are "Fortran" and "BASIC" and "COBOL"
  
  - ## Structured Programming 1960s-Present
@@ -1051,25 +1138,25 @@
         - All code must be inside an object OR be declared as a `static` member of a class to be accessible without an object
       
         - #### Issues with Static Methods and Attributes
-        - This often lead to "collections of static methods" that simply extended the "procedural" paradigm, except the
-          code blocks now had a name (the name of the Class) and were grouped together instead of being globally accessible.
-        - The `static` methods were passed in data as parameters and returned data as a result, just like the "procedural" paradigm.
-          - When `static` is used this way, it completely breaks encapsulation. The objects are just bags to hold code, 
-          and the data is fully exposed to anyone who wants to access it, as it is not retained as state within the object.
-        - This `static` way of programming lead to the same exact problems as the "procedural" paradigm, but with the 
-          added complexity of the "class" and "object" paradigm.
-        - These were popularized by web frameworks such as Java's Spring Boot and Many Others
-          - The Pain of OOP, Lecture #2: Static methods and attributes are evil
-          - https://www.youtube.com/watch?v=lELJSj9mWbI
-        - One of the main problems is that `static` methods and data lead to issues with "testing" the code, as the 
-          `static` methods and data are not "stateful" and are not "encapsulated" in the object, so they are not 
-          easily "mocked" or "stubbed" for testing purposes.
-        - Another side-effect of `static` methods and data is that they are not "thread-safe" and can lead to 
-          data corruption
-        - And the largest issue is that `static` is shared mutable state and is the root of all evil in programming as it
-          leads to "side effects" and tough to understand "state" of the program which leads to unnecessary complexity and bugs.
-        - What's Wrong About Utility Classes? (webinar #6)
-          https://www.youtube.com/watch?v=psrp3TtaYYI
+          - This often lead to "collections of static methods" that simply extended the "procedural" paradigm, except the
+            code blocks now had a name (the name of the Class) and were grouped together instead of being globally accessible.
+          - The `static` methods were passed in data as parameters and returned data as a result, just like the "procedural" paradigm.
+            - When `static` is used this way, it completely breaks encapsulation. The objects are just bags to hold code, 
+            and the data is fully exposed to anyone who wants to access it, as it is not retained as state within the object.
+          - This `static` way of programming lead to the same exact problems as the "procedural" paradigm, but with the 
+            added complexity of the "class" and "object" paradigm.
+          - These were popularized by web frameworks such as Java's Spring Boot and Many Others
+            - The Pain of OOP, Lecture #2: Static methods and attributes are evil
+            - https://www.youtube.com/watch?v=lELJSj9mWbI
+          - One of the main problems is that `static` methods and data lead to issues with "testing" the code, as the 
+            `static` methods and data are not "stateful" and are not "encapsulated" in the object, so they are not 
+            easily "mocked" or "stubbed" for testing purposes.
+          - Another side-effect of `static` methods and data is that they are not "thread-safe" and can lead to 
+            data corruption
+          - And the largest issue is that `static` is shared mutable state and is the root of all evil in programming as it
+            leads to "side effects" and tough to understand "state" of the program which leads to unnecessary complexity and bugs.
+          - What's Wrong About Utility Classes? (webinar #6)
+            https://www.youtube.com/watch?v=psrp3TtaYYI
 
       - ### Interfaces
         - An `interface` is an agreement or "contract" that the class will have certain defined methods & variables in the class.
