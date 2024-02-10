@@ -1,10 +1,14 @@
 # How to Program From The Ground Up with Minimal BS
 
 ## Introduction
-  - How to guide for software engineers who need a quick overview of software development concepts 
-    from the fundamentals of physical logic representation to the high level programming languages.
+  - How to guide for budding software engineers who need a quick overview of software development concepts 
+    from the fundamentals of physical logic representation to high-level programming languages concepts.
   - The goal is to understand more the "why" and "how" of programming, not just the "what" and "where"
   - There will be some technical details, but only enough to understand the overall concept, not to be an expert.
+  - I tried to cover the areas that I had difficulty understanding when I was learning to program.
+  - I have since found out that my confusion directly derived from how things were presented to me and how 
+    the metaphors and context people were explaining these concepts, and in retrospect,
+    were full of jargon and unnecessary complexity.
 
 ## The Essence of Computing
   - People used to do all computing by hand, and now we use various machines to do the same thing, 
@@ -25,17 +29,17 @@
   - Kinds of representations through history:
     
     - Knots & Beads on a string - prehistoric, 6000 BC to 1500 AD
-      - [<img src="assets/beads_on_string.png" width="280">](https://www.peruforless.com/blog/quipu/)
+      - [<img src="assets/beads_on_string.png" width="400">](https://www.peruforless.com/blog/quipu/)
     
     - Physical indentations in clay — 8000 BC to 100 AD
-      - [<img src="assets/cuneiform.png" width="280">](https://www.thoughtco.com/clay-tokens-mesopotamian-writing-171673)
-      - [<img src="assets/phyiscal_indentations.png" width="280">](https://www.thoughtco.com/clay-tokens-mesopotamian-writing-171673)
+      - [<img src="assets/cuneiform.png" width="400">](https://www.thoughtco.com/clay-tokens-mesopotamian-writing-171673)
+      - [<img src="assets/phyiscal_indentations.png" width="400">](https://www.thoughtco.com/clay-tokens-mesopotamian-writing-171673)
     
     - Beads on an abacus - 3000 BC to present
-      - [<img src="assets/abacus2.png" width="280">](https://en.wikipedia.org/wiki/Abacus) 
+      - [<img src="assets/abacus2.png" width="400">](https://en.wikipedia.org/wiki/Abacus) 
     
     - Ink Marks on paper - 3000 BC to present
-        - [<img src="assets/paper_ledger.png" width="280">](https://www.moderntreasury.com/journal/history-of-ledgers)
+        - [<img src="assets/paper_ledger.png" width="400">](https://www.moderntreasury.com/journal/history-of-ledgers)
     
     - Positions of sticks seen at a distance (Semaphores) - 1790s to 1850s
       - https://www.youtube.com/watch?v=muMXPVCMI5o
@@ -46,29 +50,29 @@
       - Data collected from the 1890 US Census was the first large scale use of punched cards
       - Allowed for the first "programmable" machines that could be used to perform relatively complex tasks 
         like sorting and counting of specific data
-      - [<img src="assets/punched_card.png" width="280">](https://en.wikipedia.org/wiki/Punched_card)
-      - [<img src="assets/hollerith_counter.png" width="280">](https://en.wikipedia.org/wiki/Hollerith_machine)
+      - [<img src="assets/punched_card.png" width="400">](https://en.wikipedia.org/wiki/Punched_card)
+      - [<img src="assets/hollerith_counter.png" width="400">](https://en.wikipedia.org/wiki/Hollerith_machine)
       - 1889 Herman Hollerith Census Machine by TMC which became IBM
         - https://www.youtube.com/watch?v=9HXjLW7v-II
     
     - Remnants of photons hitting a piece of glass coated with a thin layer of phosphor - 1940s to 1980s
-      - [<img src="assets/williams_tube.png" width="280">](https://en.wikipedia.org/wiki/Williams_tube)
-      - [<img src="assets/williams_tube2.png" width="280">](https://en.wikipedia.org/wiki/Williams_tube)
-      - [<img src="assets/williams_tube3.png" width="280">](https://ub.fnwi.uva.nl/computermuseum/williamstube.html)
+      - [<img src="assets/williams_tube.png" width="400">](https://en.wikipedia.org/wiki/Williams_tube)
+      - [<img src="assets/williams_tube2.png" width="400">](https://en.wikipedia.org/wiki/Williams_tube)
+      - [<img src="assets/williams_tube3.png" width="400">](https://ub.fnwi.uva.nl/computermuseum/williamstube.html)
       - Manchester Baby and the birth of Computer Memory
         - https://www.youtube.com/watch?v=SpqayTc_Gcw
          
     - Magnetic Phenomenon - 1950s to present
       - Electronically detectable areas on magnetizable material, or the presence of a magnetic field in a specific area
       - Core Memory - 1955 to 1975
-        - [<img src="assets/core_memory.png" width="280">](https://en.wikipedia.org/wiki/Core_memory) 
+        - [<img src="assets/core_memory.png" width="400">](https://en.wikipedia.org/wiki/Core_memory) 
       - Magnetic Tape - 1928 to present
-        - [<img src="assets/magnetic_viewer.png" width="280">](https://www.youtube.com/watch?v=aZOxn8ggX8w)
+        - [<img src="assets/magnetic_viewer.png" width="400">](https://www.youtube.com/watch?v=aZOxn8ggX8w)
       - Magnetic Disk - 1956 to present
-      - [<img src="assets/10mb_hard_disk.png" width="280">](https://en.wikipedia.org/wiki/IBM_305_RAMAC)
+      - [<img src="assets/10mb_hard_disk.png" width="400">](https://en.wikipedia.org/wiki/IBM_305_RAMAC)
     
     - Detectable electrical capacitance in a tiny area of silicon - 1960s to present
-      - [<img src="assets/DRAM.png" width="280">](https://en.wikipedia.org/wiki/Dynamic_random-access_memory)
+      - [<img src="assets/DRAM.png" width="400">](https://en.wikipedia.org/wiki/Dynamic_random-access_memory)
   
   - Creating ANY machine capable of using boolean logic enables complex custom general solutions
     - The problems must be able to be represented with binary information and the solution must be able to be 
@@ -578,22 +582,20 @@
       - 01010101 could represents votes of 8 people, or 8 switch settings, or the connected status of 8 different sensors.
       - The same eight bits can represent many different things, it's just a matter of how humans want to interpret the meaning of the bits.
   
-  - ## Common Data Structures used in Programming
-    - These various ways of representing things is called "type" 
-    - Types consist of the various representations of data in memory: 
-      - numbers
-      - characters (ASCII or Unicode)
-      - strings or even other arrays (multi-dimensional arrays)
-      - pointers
-      - Some languages allow functions to be represented as a type and passed around as a variable
-      - data structures (records, objects) made up of other types
+- ## Common Data Structures used in Programming
+  - These various ways of representing things is called "type" 
+  - Types consist of the various representations of data in memory: 
+    - numbers
+    - characters (ASCII or Unicode)
+    - strings or even other arrays (multi-dimensional arrays)
+    - pointers (values representing _other_ locations in memory)
+    - Some languages allow functions to be represented as a type and passed around as a variable
+    - data structures (records, objects) made up of other types
     
   - ### Array (1D, 2D, 3D, etc.)
     - A way to represent a "list" of values in memory
-    
-    - The "things" are usually all the same size & type
-    - The "things" are usually all stored in a contiguous block of memory
-    - The "things" are usually accessed by an "index" which is a number that represents the position of the "thing" in the array
+    - The values are usually all the same size & type & are all stored in a contiguous block of memory
+    - The values are usually accessed by an "index" which is a number that represents the position of the "thing" in the array
     
     - 1D Arrays
     
@@ -603,14 +605,17 @@
      
       [<img src="assets/2d_arrays.png" width="550"/>]()
   
-    - 2D Arrays in Code (C) 
+    - 2D Arrays in Code (in C, other languages may flip the order of rows and columns - yeah that's not confusing at all) 
+      
       [<img src="assets/2dArraysInC.png" width="550"/>]() 
   
   - ### String
-    - A way to represent a list of letters in memory, to represent words and sentences and paragraphs and documents
-    - The "characters" are usually stored in a contiguous block of memory
-    - The "characters" are sometimes terminated by a special "end of string" character, or have a length stored somewhere
-    - The "characters" are usually accessed by an "index" which is a number that represents the position of the "characters" in the string
+    - A way to represent a list of single letters (characters) in memory, "strung" together to represent words and 
+      sentences and paragraphs and documents.
+    - The characters are usually stored in a contiguous block of memory.
+    - The characters are sometimes terminated by a special "end of string" character, or have a length stored somewhere.
+    - The characters are usually accessed by an "index" which is a number that represents the position of the 
+      "characters" in the string
       [<img src="assets/strings.png" width="550"/>]()
   
   
@@ -629,10 +634,10 @@
     - Address 0x00000004 contains the value 0x41, which represents the character 'A' or number 65 as an unsigned byte integer.
     - In this case, it's stored in "Little Endian" format, so the least significant bytes are stored first.
   
-      [img_8.png](assets/pointer.png)
+      [Another pointer diagram](assets/pointer.png)
     - ```mermaid
       graph TD
-      A[Address 0x00000000 has value 0x00000004] -->|0x00000004 points to| B["Address 0x00000004 has value 0x2A (or * or 42)"]
+      A[Address 0x00000000 has value 0x00000004] -->|pointer at 0x00000000 points to address 0x00000004| B["Address 0x00000004 has value 0x2A (or * or 42)"]
    
       markdown["`
         The pointer stored at **0x00000000** has a value _0x00000004_, 
@@ -670,7 +675,23 @@
     - The "things" are usually all stored in a contiguous block of memory
     - The "things" are usually accessed by a "stack pointer" which is a number that represents the position of the top-most "thing" in the stack
     - Efficient for adding and removing items from the list, but not efficient for accessing items in the list
-      ![stack.png](assets/stack.png)  
+      ![stack.png](assets/stack.png)
+    - ```mermaid
+      block
+      columns 1
+      db(("DB"))
+      blockArrowId6<["&nbsp;&nbsp;&nbsp;"]>(down)
+      block:ID
+      A
+      B["A wide one in the middle"]
+      C
+      end
+      space
+      D
+      ID --> D
+      C --> D
+      style B fill:#969,stroke:#333,stroke-width:4px
+       ```
 
   - ### Queue
     - A way to represent a "first in, first out" list of things in memory, similar to a line of people waiting for a bus
@@ -733,8 +754,8 @@
    - GOTO was still commonly used, as most people didn't know how to use "subroutines" or "functions" yet and 
    - GOTO was easier to understand, at least first.
    
-   - Example of Procedural-Oriented Programming with GOTO's: BASIC (Beginner's All-purpose Symbolic Instruction Code)
-     ```BASIC
+   - Example of Procedural-Oriented Programming with GOTO's in BASIC (Beginner's All-purpose Symbolic Instruction Code)
+     ```Text
      5 REM PROGRAM TO ADD 2 NUMBERS, PRINT RESULT <-- "REM" is a "remark" or "comment"
      10 LET X = 10   <-- "LET" is a "statement" that assigns a value to a variable
      20 LET Y = 32
@@ -773,7 +794,8 @@
      - Data and Code were kept separate.
        - Code was loaded into the computer, and then data was separately loaded and processed in "batches"
      - Example of Procedural BASIC with Subroutines and `GOSUB`'s (the `GOSUB` command is a `GOTO` a "SUBroutine"):
-       ```BASIC
+       ```Text
+       5 REM PROGRAM TO ADD 2 NUMBERS, PRINT RESULT
        10 LET X = 10
        20 LET Y = 32
        30 GOSUB 100
@@ -798,7 +820,8 @@
      - The "loop" statement was used to repeat a block of code a certain number of times, or until a certain condition was met.
    
      - Example in BASIC:
-       ```BASIC
+       ```Text
+       5 REM PROGRAM TO DEMO "FOR LOOP" TO CREATE A CUMULATIVE ADDITION TABLE 
        10 FOR A = 1 TO 10 STEP 1 <-- The "FOR" statement changes the value of "I" from 1 to 10, incrementing by 1 at each NEXT statement
        15 GOSUB 100
        20 PRINT A, B
@@ -822,7 +845,6 @@
           9 45
           10 55
        ```
- 
    - Examples of Procedural languages are "Fortran" and "BASIC" and "COBOL"
  
  - ## Structured Programming 1960s-Present
@@ -976,8 +998,9 @@
           Document <|-- Song : implements
           
           <<interface>> Document
-          Document : expects method view()*
-          
+          class Document { 
+             expects method view()*
+          }
           class PDF{
               override method view()
           }
@@ -989,7 +1012,9 @@
           }
           ```
         - Example (in pseudo-code similar to common COP languages):
-          ```OOP Pseduo-Code
+          ```Text
+          // OOP Pseduo-Code
+          
           interface Document {     // <-- interfaces only define the "signature" of the methods it expects to be in the subclass
             expects method view()  // this interface expects a method called "view" 
           }  
@@ -1067,8 +1092,8 @@
            override method play()
         }
         class ProtectedMP3 {
-           private String password*
-           private Boolean isAuthenticated*
+           private String password
+           private Boolean isAuthenticated
         
            override method play()
            method authenticate(password)
@@ -1076,10 +1101,13 @@
         ```
 
         - Example for inheritance in pseudo-code (similar to common COP languages):
-         ```OOP pseudo-code
+         ```Text
+          // OOP pseudo-code
+          
           open class Media {   // <-- the "base class" or "superclass", `open` means it can be subclasses (extended/inherited)
             // Note: there is no visible constructor, so the default constructor will be used -> Media(), which takes no parameters and does not initialize any variables.
-          
+            String name = ""  // <-- the "state" of the object is stored in the variables of the class
+            
             open method play() { 
               print "Playing: " + this.name 
             } 
@@ -1172,10 +1200,11 @@
           File <|-- Memo : extends
           File <|-- Photo : extends
           
-          <<abstract>> File
+          <<abstract>> File 
           class File { 
               expects method view()*
           }
+          
           class Excel{
               override method view()
           }
@@ -1183,11 +1212,13 @@
               override method view()
           }
           class Photo {
-              override method view()
+              override methodview()
           }
           ```
         - Example for abstract classes in pseudo-code (similar to common COP languages):
-         ```OOP pseudo-code
+         ```Text
+          // OOP pseudo-code
+        
           abstract class File { 
             String name = ""                  // <-- Abstract classes can have variables.
         
@@ -1286,6 +1317,13 @@
           been shown to be a bad idea due to misuse and overuse of the pattern)
     
       - ### Issues from Abuse of Inheritance and Allowing for "Multiple Inheritance" in C++ 
+        - ```mermaid
+          flowchart TD
+          X["The Problem with Mutliple Inheritance"]
+          Animal -->|inherits| Cat & Dog-->|inherits| Cog???
+          
+          Y["Does the `Cog` meow or bark to make a sound?"] 
+          ```
         - Lead to immense & unnecessary complexity to fit in the "simulation" paradigm, as programmers tried to shove the 
           "Procedural Paradigm" into the fancy new "Class Oriented" paradigm with less than stellar results.
         - Inheritance is a usually a bad idea for many reasons, and very overused beyond its original intent.
@@ -1294,7 +1332,7 @@
           - This lead to "fragile" and "rigid" code that was hard to understand and hard to modify, leading to a lot 
             of waste and costs.
           - Many popular ways of dealing with the "procedural approach" to COP were turned into "design patterns" 
-            that were used to "fix" the problems of the "procedural approach" to COP. Many of these ideas were just
+            that were used to "fix" the problems of the "procedural approach" to `COP. Many of these ideas were just
             hacks to fit the "procedural approach" into the "COP" paradigm. 
           - The promise of "reusability" was not fulfilled by COP languages.
         - Banana, Monkey, Jungle Problem
@@ -1359,14 +1397,14 @@
            println("Book: $title, # of Pages: ${pages.size}")
            pages.forEach { it.view() }
         }
-
-	    fun updateTitle(newTitle: String): Book {
-		   return Book(newTitle, pages)  // <-- The "updateTitle" method returns a new object with the new state.
-	    }
-
-	    fun updatePages(newPages: List<Page>): Book {
-		    return Book(title, newPages)  // <-- The "updatePages" method returns a new object with the new state.
-	    }
+        
+        fun updateTitle(newTitle: String): Book {
+           return Book(newTitle, pages)  // <-- The "updateTitle" method returns a new object with the new state.
+        }
+        
+        fun updatePages(newPages: List<Page>): Book {
+            return Book(title, newPages)  // <-- The "updatePages" method returns a new object with the new state.
+        }
      }
 
      class Application(
@@ -1378,12 +1416,13 @@
         }
 
         fun updateBook(newBook: Book): Application {
-		   return Application(newBook)  // <-- The "updateBook" method returns a new object with the new state.
-	    }
+           return Application(newBook)  // <-- The "updateBook" method returns a new object with the new state.
+        }
      }
      
      // Start of Program
      fun main() {
+        // Setup the App in the Imperative Style
         // Create the list of Page objects
         val pages = listOf(  // <-- the "val" keyword means the variable is immutable and can only be assigned once.
            Page("Page 1 Content"),
@@ -1392,7 +1431,7 @@
         )
         // Create the book object using the list page objects
         val book = Book(
-           "MyDocument.txt",
+           "MyBook.txt",
            pages
         )
         // Create the application object using the book object 
@@ -1400,44 +1439,52 @@
                                     //     `app` is a "var" because it's expected to change state.
                                     // Every other variable is a "val" and is immutable.
 
+        // Setup the app in the same way, but in the Functional Style.
         // The above code could be arranged in the functional style, where the state of the program is created in 
         // a single line!
         // This style is also known as "declarative" style, as opposed to the familiar "imperative" style.
         // Using declaritive style, the code is more about "what" is being done, rather than "how" it's being done.
         // You only see the high-level view, and the implementation details are hidden deeper in the code.
-        app = Application(
-           Book(
-              title = "MyDocument.txt",
-              pages = listOf(
-                 Page("Page 1 Content"),
-                 Page("Page 2 Content"),
-                 Page("Page 3 Content")
+        
+        // The code executes from the innermost function to the outermost function.
+        app = Application( // <-- Step 5 Creates a new Application object with the book object.
+           Book( <-- Step 4 Creates a new Book object with the
+              title = "MyBook.txt",
+              pages = listOf(  <-- creates a new list of Page objects with the content "Page 1 Content", "Page 2 Content", "Page 3 Content"
+                 Page("Page 1 Content"),  <-- Step 1 Creates a new Page object with the content "Page 1 Content"
+                 Page("Page 2 Content"),  <-- Step 2 Creates a new Page object with the content "Page 2 Content"
+                 Page("Page 3 Content")   <-- Step 3 Creates a new Page object with the content "Page 3 Content"
               )
            )
         )
 
-        app.view()  // <-- will print:
+        app.view()  // <-- will print the same as the imperative style:
 	                // Application Viewing: MyBook.txt
 	                // Book: MyBook.txt, # of Pages: 3
 	                // Page: Page 1 Content
 	                // Page: Page 2 Content
 	                // Page: Page 3 Content
-	                // app.book = Book("NewBook.txt")  // <-- will not compile, as the variable `book` is immutable and cannot be changed.
+     
+        ////////////////////////////////////////////   
+        // Changing the State of the Application  //
+        ////////////////////////////////////////////
+       
+        // app.book = Book("NewBook.txt")  // <-- will not compile, as the variable `book` is immutable and cannot be changed.
         
         // To change the state of the application, a whole new object must be created with the new state,
         // usually based on a copy the old state, with modifications to reflect the new state.
         val newPages = pages
         	.filter { page ->  // instead of using imperative "for" loops, "filter" internally uses a loop to create
-        		// a new list of pages.
-        		page.inspectContent() != "Page 2 Content" // <-- removes the 2nd page from the list.
-	    	}
-	    	.toMutableList()  // <-- converts the immutable list to a mutable list to allow for adding a new page.
-	    	.apply { // <-- creates a new list of pages with the same content as the original list.
-	    		add(  // <-- adds a new page to the list.
-	    			Page("New Page 4 Content")
-	    		)
-	    	}
-	    	.toList()  // <-- converts the mutable list back to an immutable list.
+                               // a new list of pages.
+               page.inspectContent() != "Page 2 Content" // <-- removes the 2nd page from the list.
+            }
+            .toMutableList()  // <-- converts the immutable list to a mutable list to allow for adding a new page.
+            .apply { // <-- creates a new list of pages with the same content as the original list.
+               add(  // <-- adds a new page to the list.
+                  Page("New Page 4 Content")  // <-- creates a new page with the content "New Page 4 Content"
+               )
+            }
+            .toList()  // <-- converts the mutable list back to an immutable list.
 	    
         // The `updateBook` method is called to update the `book` which will create a `app` with the new state.
         app = app.updateBook(
