@@ -1,8 +1,3 @@
-<link
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-  rel="stylesheet"
-/>
-
 # How to Program From The Ground Up with Minimal BS
 
 ## Introduction
@@ -596,6 +591,8 @@
     - pointers (values representing _other_ locations in memory)
     - Some languages allow functions to be represented as a type and passed around as a variable
     - data structures (records, objects) made up of other types
+  - Animated Interactive Visualizations with pseduocode for many common data structures
+    - https://www.cs.usfca.edu/~galles/visualization/Algorithms.html
     
   - ### Array (1D, 2D, 3D, etc.)
     - A way to represent a "list" of values in memory
@@ -681,23 +678,7 @@
     - The "things" are usually accessed by a "stack pointer" which is a number that represents the position of the top-most "thing" in the stack
     - Efficient for adding and removing items from the list, but not efficient for accessing items in the list
       ![stack.png](assets/stack.png)
-    - ```mermaid
-      block
-      columns 1
-      db(("DB"))
-      blockArrowId6<["&nbsp;&nbsp;&nbsp;"]>(down)
-      block:ID
-      A
-      B["A wide one in the middle"]
-      C
-      end
-      space
-      D
-      ID --> D
-      C --> D
-      style B fill:#969,stroke:#333,stroke-width:4px
-       ```
-
+  
   - ### Queue
     - A way to represent a "first in, first out" list of things in memory, similar to a line of people waiting for a bus
     - The "things" are usually all the same size & type
@@ -722,7 +703,7 @@
       C -->|points to | D[D= data + a pointer to node E ]
       D -->|points to | E["E= data + a pointer to `NULL` (the end node)"]
       TAIL["TAIL= End pointer"] -->|points to | E
-      ```
+
   - Map (or "Hash Table", "Hash Map", "Dictionary", "Associative Array")
     - A way to represent a "list" of things in memory, where each "thing" points to one "thing" in the list
     - The "things" are usually all the same size & type
@@ -730,12 +711,12 @@
     - The "things" are usually accessed by a "key" which is a number that represents the location of the "thing" in memory
     - Used to represent a "key-value" list, where each "thing" is accessed by a "key" instead of an "index"
     - Efficient for adding and removing items from the list, and efficient for accessing items in the list
-      ![map.png](assets/map.png)
-    - ```mermaid
-      graph LR;
-         key1[key1] -->|Key 1| id2[Thing X]
-         key2[key2] -->|Key 2| id3[ValueY]
-         key3[key3] -->|Key 3| id4[ValueZ]
+    - [Another map diagram](assets/Map.png)
+  - ```mermaid
+    graph LR
+       key1[key1] -->|maps/refers/points to| id1[Value X]
+       key2[key2] -->|maps/refers/points to| id2[Value Y]
+       key3[key3] -->|maps/refers/points to| id3[Value Z]
     ```
 
   - ### Tree
@@ -745,9 +726,18 @@
     - The "things" are usually accessed by a "pointer" which is a number that represents the location of the "thing" in memory
     - Used to represent a "hierarchical" list, like a family tree, or a company organization chart
     - Special Case of a tree is a "Binary Tree" where each "thing" points to only two "things" in the list
-      - Binary Trees are used to represent "sorted" lists, where each "thing" is greater than the "thing" to the left, and less than the "thing" to the right
+    - Binary Trees are used to represent "sorted" lists, where each "thing" is greater than the "thing" to the left, and less than the "thing" to the right
       
-        ![tree.png](assets/tree.png)
+    - [Another tree diagram](assets/tree.png)
+    - ```mermaid
+      graph TD
+         A[Root] -->|points to | B[Left]
+         A -->|points to | C[Right]
+         B -->|points to | D[Left]
+         B -->|points to | E[Right]
+         C -->|points to | F[Left]
+         C -->|points to | G[Right]
+      ```
 
 # High-Level Language Styles
 
@@ -1090,10 +1080,10 @@
         MP3 <|-- ProtectedMP3 : extends      
         
         Media: expects method play()*
-        class MP3{
+        class MP3 {
            override method play()
         }
-        class Video{
+        class Video {
            override method play()
         }
         class ProtectedMP3 {
@@ -1105,7 +1095,7 @@
         }
         ```
 
-        - Example for inheritance in pseudo-code (similar to common COP languages):
+        - Example of inheritance (in pseudo-code, which is similar to common COP languages):
          ```Text
           // OOP pseudo-code
           
@@ -1206,7 +1196,7 @@
           File <|-- Photo : extends
           
           <<abstract>> File 
-          class File { 
+          class File {
               expects method view()*
           }
           
@@ -1325,7 +1315,7 @@
         - ```mermaid
           flowchart TD
           X["The Problem with Mutliple Inheritance"]
-          Animal -->|inherits| Cat & Dog-->|inherits| Cog???
+          Animal -->|inherits| Cat["🐈 Cat"] & Dog["🐕 Dog"]-->|inherits| Cog???["Cog???"]
           
           Y["Does the `Cog` meow or bark to make a sound?"] 
           ```
@@ -1383,15 +1373,15 @@
       subgraph Application
          subgraph Book
             subgraph Pages
-               A("fa:fa-twitter Page")-->|enclosed in| D(Pages List)
-               B(Page) -->|enclosed in| D(Pages List)
-               C(Page) -->|enclosed in| D(Pages List)
+               A("📄 Page")-->|enclosed in| D
+               B("📄 Page") -->|enclosed in| D
+               C("📄 Page") -->|enclosed in| D
             end
-             D(Pages List) -->|enclosed in| E(Book)
+             D("📑 Pages List") -->|enclosed in| E(Book)
          end
-         E(Book) -->|enclosed in| F(Application)
+         E("📖 Book") -->|enclosed in| F("🖥️ Application")
       end
-      click A "https://www.github.com" _blank
+      click F "https://github.com/realityexpander/How_to_program_from_ground_up/blob/main/src/main/kotlin/boopExample.kt" _blank
       
       ```
 
