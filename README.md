@@ -1495,7 +1495,7 @@
         )
 
         app.view()  // <-- will print the same as the imperative style:
-	                // Application Viewing: MyBook.txt
+	                // Application Viewing: MyBook.txtimp
 	                // Book: MyBook.txt, # of Pages: 3
 	                // Page: Page 1 Content
 	                // Page: Page 2 Content
@@ -1516,7 +1516,8 @@
                page.inspectContent() != "Page 2 Content" // <-- removes the 2nd page from the list.
             }
             .toMutableList()  // <-- converts the immutable list to a mutable list to allow for adding a new page.
-            .apply { // <-- creates a new list of pages with the same content as the original list.
+            .apply { // <-- creates a new list of pages with the same content as the original list, but with 
+                     //     the 2nd page removed.
                add(  // <-- adds a new page to the list.
                   Page("New Page 4 Content")  // <-- creates a new page with the content "New Page 4 Content"
                )
