@@ -1238,13 +1238,13 @@
           // OOP pseudo-code
         
           abstract class File { 
-            String name = ""                  // <-- Abstract classes can have variables.
+            String name = ""  // <-- Abstract classes can have variables.
         
-            File(String name) {           // <-- Abstract classes can have "default" constructors.
+            File(String name) {  // <-- Abstract classes can have "default" constructors.
                 this.name = name
             }
-            expects method view()          // Expects a method called "view" and has no default implementation.
-            expects method showName() {    // Expects a method called "showName" and has a default implementation.
+            expects method view()  // Expects a method called "view" and has no default implementation.
+            expects method showName() {  // Expects a method called "showName" and has a default implementation.
                 print "File Name: " + this.name // <-- The "default implementation" for any subclass that doesn't override the method.
             } 
           }  
