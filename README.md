@@ -31,13 +31,20 @@
         - The arithmetic would be done by a person called a "calculator" who would perform the operations and record the results.
           - This is now done by the "Arithmetic Logic Unit" and stored in the "Registers" in the computer.
 
-    - THERE IS NO MAGIC IN COMPUTING, JUST _HUMAN_ CLEVERNESS AND INGENUITY
-      - If you hear anyone say "it's just magic" or "it's just a black box" or "it's kind of like a person," 
-        they are either being lazy, indicating it's not relevant at the moment or (USUALLY) they don't 
-        understand the problem or the solution enough to explain it.
-      - BUT ITS ALWAYS JUST _HUMAN_ CLEVERNESS AND INGENUITY
-      - The machines will NEVER understand the problem or the solution, they are just following the logical operations 
-        that humans have carefully designed to represent the problem and a solution.
+    ## SOME IMPORTANT CONCEPTS
+    - THERE IS NO MAGIC IN COMPUTING, ONLY _HUMAN_ CLEVERNESS, SYSTEMIC THINKING AND INGENUITY.
+      - If you hear anyone say _"it's magic"_ or _"it's a black box"_ or _"it's kind of like a person,"_ 
+        they are: 
+        1) Being lazy, 
+        2) indicating it's not relevant at the moment.
+        3) (USUALLY) they don't understand the problem or the solution enough to explain it and get hand-wavy.
+    - ### ITS ALWAYS JUST _HUMAN_ CLEVERNESS AND INGENUITY, REPRESENTING ONE THING AS ANOTHER, NOTHING MORE.
+      - The machines will _NEVER_ understand the problem or the solution in the way humans conceive of the problem.
+      - These machines are only following the logical operations that humans have carefully designed to represent 
+        the problem and a solution "space." There is no inherent "understanding" in the machine, and can never be.
+      - The only way the machine would ever know the full human context of the problem and the solution is if 
+        the machine was a human, and then it would be a human, not a machine. 
+      - Mistaking the machine for having intelligence is known as "The Eliza Effect."
     
 # The Essence of Computing — What are we Representing?
   - Everything in computing is REPRESENTING digital information "as" something _else_.
