@@ -678,6 +678,10 @@
     - The "things" are usually accessed by a "stack pointer" which is a number that represents the position of the top-most "thing" in the stack
     - Efficient for adding and removing items from the list, but not efficient for accessing items in the list
       ![stack.png](assets/stack.png)
+    - Quick Animation of a Stack
+      - https://www.youtube.com/watch?v=5JQxVmQFFHE
+    - Stack Data Structure Animation
+      - https://www.youtube.com/watch?v=toRJakeYIKA
   
   - ### Queue
     - A way to represent a "first in, first out" list of things in memory, similar to a line of people waiting for a bus
@@ -686,6 +690,8 @@
     - The "things" are usually accessed by a "head" and "tail" which are numbers that represent the position of the first and last "thing" in the queue
     - Efficient for adding and removing items from the list, but not efficient for accessing items in the list
       ![queue.png](assets/queue.png)
+    - Queue Data Structure Animation
+      - https://www.youtube.com/watch?v=ojGf3SH7n48
   
   - ### Linked List
     - A way to represent a "list" of things in memory, where each "thing" points ONLY to the next "thing" in the list
@@ -712,6 +718,9 @@
     - Used to represent a "key-value" list, where each "thing" is accessed by a "key" instead of an "index"
     - Efficient for adding and removing items from the list, and efficient for accessing items in the list
     - [Another map diagram](assets/Map.png)
+    - Implementation details of a Map (An implementation of a Hash Map)
+      - https://www.youtube.com/watch?v=9zqGQQly0To
+      
   - ```mermaid
     graph LR
        key1[key1] -->|maps/refers/points to| id1[Value X]
@@ -729,6 +738,9 @@
     - Binary Trees are used to represent "sorted" lists, where each "thing" is greater than the "thing" to the left, and less than the "thing" to the right
       
     - [Another tree diagram](assets/tree.png)
+    - Tree Data Structure Summary
+      - https://www.youtube.com/watch?v=2gu3ACsq2jI 
+    
     - ```mermaid
       graph TD
          A[Root] -->|points to | B[Left]
@@ -1577,10 +1589,30 @@
        
        main()
          
-       // Output:
+       // Output:Add 
        // 24
 
    - Live Code Example: [Functional Example](src/main/kotlin/functionalExample.kt) 
+
+- ## Algorithms
+  - Binary Search Algorithm - Code walk-through and Complexity Analysis
+    - https://www.youtube.com/watch?v=LdjkZ2vQapI
+  - Animated Interactive Visualizations with pseduocode for many common data structures
+    - https://www.cs.usfca.edu/~galles/visualization/Algorithms.html 
+
+- ## Time Complexity
+  - The "time complexity" of a program is a measure of how the "running time" of the program grows as the "input size" 
+    of the program grows.
+  - The "time complexity" is usually expressed as a "big O" notation, which is a way to express the "upper bound" of 
+    the "running time" of the program.
+  - The "big O" notation is a way to express the "upper bound" of the worst-case running time of the program.
+  - 4 Types of Time Complexity:
+    - O(1) - "Constant Time" - The running time of the program does not change as the input size of the program grows.
+    - O(log n) - "Logarithmic Time" - The running time of the program grows as the logarithm of the input size of the program.
+    - O(n) - "Linear Time" - The running time of the program grows as the input size of the program.
+    - O(n^2) - "Quadratic Time" - The running time of the program grows as the square of the input size of the program.
+  - Learn Big O notation in 6 minutes 📈
+    - https://www.youtube.com/watch?v=XMUe3zFhM5c
 
 - ## Threads & Coroutines
   - Threads are a way to run multiple "processes" at the same time, and are used to create "parallel" and "concurrent" programs.
