@@ -31,6 +31,14 @@
         - The arithmetic would be done by a person called a "calculator" who would perform the operations and record the results.
           - This is now done by the "Arithmetic Logic Unit" and stored in the "Registers" in the computer.
 
+    - THERE IS NO MAGIC IN COMPUTING, JUST _HUMAN_ CLEVERNESS AND INGENUITY
+      - If you hear anyone say "it's just magic" or "it's just a black box" or "it's kind of like a person," 
+        they are either being lazy, indicating it's not relevant at the moment or (USUALLY) they don't 
+        understand the problem or the solution enough to explain it.
+      - BUT ITS ALWAYS JUST _HUMAN_ CLEVERNESS AND INGENUITY
+      - The machines will NEVER understand the problem or the solution, they are just following the logical operations 
+        that humans have carefully designed to represent the problem and a solution.
+    
 # The Essence of Computing — What are we Representing?
   - Everything in computing is REPRESENTING digital information "as" something _else_.
   - Kinds of representations through history:
@@ -117,6 +125,7 @@
     - ### Logical Operations & Boolean Arithmetic
       - true = 1 = on = connected
       - false = 0 = off = not connected
+      - A Logical "1" and "0" are called a "bit", as in a "binary digit"
       - Two switches in series represent a Logical AND gate
         - `AND` ( the `&&` symbol )
           - 0 && 0 => 0
@@ -341,6 +350,11 @@
     - ![8-bit-counting-2.png](assets/8-bit-counting-2.png)
     - ### Hexadecimal Counting
       ![hexadecimal.png](assets/hexadecimal.png)
+  
+    - 8 bits are called a "byte" and can represent 256 different values (0-255)
+      - A byte is the smallest unit of memory that can be addressed by the CPU
+      - They call it a "byte" because its a play on the word "bite" and it's the smallest amount of memory that 
+        can be "eaten" by the CPU (LOLOLOLL Computer people are soooooo funnnnnny)
       
     - ### ASCII Representation of Characters
       - ASCII is a 1 byte (8 bit) representation of the most common letters and symbols used in English
@@ -1334,33 +1348,86 @@
         - Encouraged to use getters and setters to control the access to the variables of the class (which has since 
           been shown to be a bad idea due to misuse and overuse of the pattern)
     
-      - ### Issues from Abuse of Inheritance and Allowing for "Multiple Inheritance" in C++ 
-        - ```mermaid
-          flowchart TD
-          X["The Problem with Mutliple Inheritance"]
-          Animal -->|inherits| Cat["🐈 Cat"] & Dog["🐕 Dog"]-->|inherits| Cog???["Cog???"]
-          
-          Y["Does the `Cog` meow or bark to make a sound?"] 
-          ```
-        - Lead to immense & unnecessary complexity to fit in the "simulation" paradigm, as programmers tried to shove the 
+      - ### Issues from Abuse of Inheritance 
+        - Use of Inheritance Lead to immense & unnecessary complexity to fit in the "simulation" paradigm, as programmers tried to shove the 
           "Procedural Paradigm" into the fancy new "Class Oriented" paradigm with less than stellar results.
         - Inheritance is a usually a bad idea for many reasons, and very overused beyond its original intent.
-          - The hype around reusability was so strong that it was often used to justify the use of inheritance in places 
+            - The hype around reusability was so strong that it was often used to justify the use of inheritance in places 
             where it was not appropriate.
-          - This lead to "fragile" and "rigid" code that was hard to understand and hard to modify, leading to a lot 
+            - This lead to "fragile" and "rigid" code that was hard to understand and hard to modify, leading to a lot 
             of waste and costs.
-          - Many popular ways of dealing with the "procedural approach" to COP were turned into "design patterns" 
+            - Many popular ways of dealing with the "procedural approach" to COP were turned into "design patterns" 
             that were used to "fix" the problems of the "procedural approach" to `COP. Many of these ideas were just
             hacks to fit the "procedural approach" into the "COP" paradigm. 
-          - The promise of "reusability" was not fulfilled by COP languages.
+            - The promise of "reusability" was not fulfilled by COP languages.
         - Banana, Monkey, Jungle Problem
-          - https://crystal-villanueva.medium.com/the-banana-and-the-gorilla-problem-92c9a4717fd6
-        - Java's Creators Rejected Multiple Inheritance - Here's Why
-          - https://www.youtube.com/watch?v=1-JBFJ8Xar0
-        - If you really want to achieve multiple inheritance (you should not need to, but here's how to do it):
-          - https://www.youtube.com/watch?v=3X9Eo2vzY1I
-          - Live Code Example: [How to Achieve Multiple Inheritance in Kotlin](src/main/kotlin/multipleInheritanceExample.kt)
-
+            - https://crystal-villanueva.medium.com/the-banana-and-the-gorilla-problem-92c9a4717fd6
+        - 
+        - ### Allowing for "Multiple Inheritance" in C++ was a mistake, and it was removed from Java and C# for good reason.
+          - Multiple Inheritance is the idea that a class can inherit from more than one class, and then have access to 
+            all of the methods and variables of the superclasses.
+          
+          - Diagram of Multiple Inheritance:
+          - ```mermaid
+            flowchart TD
+            X["The Problem with Mutliple Inheritance"]
+            Animal -->|inherits| Cat["🐈 Cat"] & Dog["🐕 Dog"]-->|inherits| Cog???["Cog???"]
+            
+            Cog??? -..-> Y((("
+            So when `Cog` makes a sound, 
+            (ie: calls `makeSound()`) 
+            does it meow or bark?"))) 
+            ```
+          - Example of attempt to use "Multiple Inheritance" in C++:
+            ```C++
+            class Animal {
+              public:
+                void makeSound() {
+                  cout << "Animal Sound" << endl;
+                }
+            };
+            
+            class Cat : public Animal {
+              public:
+                void makeSound() {
+                  cout << "Meow" << endl;
+                }
+            };
+            
+            class Dog : public Animal {
+              public:
+                void makeSound() {
+                  cout << "Bark" << endl;
+                }
+            };
+            
+            class Cog : public Cat, public Dog {
+            };
+            
+            int main() {
+                Cog c;
+                c.makeSound();
+            }
+            
+            main()   
+            
+            // Output:
+            // "Meow" or "Bark"??
+            
+            ```
+              - In C++, calling Cog's `makeSound()` method will print `Meow`, but in Python, calling 
+                Cog's `makeSound()` will print `Bark`!
+              - This behavior is _completely arbitrary_ and up to the designers of the language to decide which 
+                method will be called, and it's not consistent across different languages!
+              - It's also up to you to remember these kinds of details, as you are likely to be working in multiple 
+                languages in the same day, and it's easy to forget which language you are working in!
+              - UGH!
+              - Java's language Designers Rejected Multiple Inheritance - Here's Why
+                - https://www.youtube.com/watch?v=1-JBFJ8Xar0
+            - If you _really_ want to achieve multiple inheritance (you should never need to, but here's how to do it):
+              - https://www.youtube.com/watch?v=3X9Eo2vzY1I
+              - Live Code Example: [How to Achieve Multiple Inheritance in Kotlin](src/main/kotlin/multipleInheritanceExample.kt)
+          
       - Examples of Class Oriented Programming languages are "Simula," "C++" and "Java"
  
  - ## Back-to Object Oriented Programming 1980s-Present
@@ -1369,8 +1436,10 @@
    
    - What's Wrong With Object-Oriented Programming?
      - https://www.youtube.com/watch?v=K_QEOtYVQ7A
-   - All state is fully retained in the "object" and "methods" are used to send & receive messages to the "object" to 
-     change its "state"
+   - All state is fully retained in the Object and methods are used to "send messages" to the "object" to 
+     change its state. This "messaging" metaphor stands up because internal state is not directly accessible. You
+     must politely ask the object to change its state, and the object can choose to respond to the message or not.
+     Unlike in COP where internal state is commonly exposed and directly manipulated via static methods and variables.
    - Any state that needs to be exposed is only via "messages" to the object, and the object can choose to respond to 
      the message or not.
    - No `static` methods or variables, only instance variables that are private to the object.
@@ -1409,8 +1478,8 @@
 
    - Back-to Object Oriented Programming Example (Kotlin):
    - ```Kotlin
-     class Page(  // <-- the "Page" class constructor, the "val" keyword means the variable is immutable.
-        private val content: String
+     class Page(  // <-- the Page class constructor
+        private val content: String  // <-- the "val" keyword means the variable is immutable and can only be assigned once.
      ) {
        fun view() {
           println("Page: $content")
