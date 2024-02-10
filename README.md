@@ -37,6 +37,9 @@
     - Ink Marks on paper - 3000 BC to present
         - [<img src="assets/paper_ledger.png" width="280">](https://www.moderntreasury.com/journal/history-of-ledgers)
     
+    - Positions of sticks seen at a distance (Semaphores) - 1790s to 1850s
+      - https://www.youtube.com/watch?v=muMXPVCMI5o
+    
     - Punched Holes in a paper card - 1800s to 1970s
       - Vast improvement over the paper ledger
       - Collection of data was standardized, fast and could be read by a machine
@@ -146,6 +149,12 @@
     - Computers built using Relays
       - https://youtu.be/e8DavnWmr1E
       - https://youtu.be/NXeBR-lbnjI
+    - Hexadecimal Relay Calculator
+      - https://www.youtube.com/watch?v=OzTwg-AQJ6E
+    - Relay Calculators: Episode 3 - Relay Logic Gates, Latches and Delays
+      - https://www.youtube.com/watch?v=_nXc439NTYk
+    - Relay Calculators: Episode 4 - Mistakes
+      - https://youtu.be/OZXwNiJ7mtw
   
   - ## The Voracious Vacuum Tube
     - How Vacuum Tubes Work 
@@ -171,13 +180,22 @@
       - ie: when the grid is negatively charged, the flow of electricity from cathode to the anode is deterred.
       - This acts by default like a logical "NOT" gate.
     - The tube can be used to represent any other logic gate
-    - The vacuum tube is voracious because it consumes a lot of power to heat the cathode and generates a lot of heat
+    - In a Minute: Vacuum Tube Diodes in 60 Seconds
+      - https://www.youtube.com/watch?v=8so4qQcOAvQ
+    - In a Minute: Vacuum Tube Triodes in 60 Seconds
+      - https://www.youtube.com/watch?v=frZ35Y48vSk
+    - Let’s Build Some Logic Gates out of Vacuum Tubes: OR, NOR, NAND, AND
+      - https://www.youtube.com/watch?v=NkmrMdigB-8
+    - The vacuum tube is voracious because it consumes a lot of power to heat the cathode and 
+      generates a lot of excess heat
   
   - ## The Tiny Transistor
     - Very similar behavior to the vacuum tube, but much smaller and faster
       - How a transistor works
         - https://www.youtube.com/watch?v=DXvAlwMAxiA
-      
+      - Excellent animation of physical electrical flow thru semiconductors and how LED's are made
+        - Why It Was Almost Impossible to Make the Blue LED
+        - https://www.youtube.com/watch?v=AF8d72mA41M&t=203
     - No vacuum required, just a the semiconductor material.
       - Uses photographic techniques to create the transistor, not regular metallic parts.
     - The transistor consists of three parts:
@@ -242,6 +260,10 @@
     - Everything in computers can be done with just these three types of gates
     - Most early digital electronic calculators were made solely with many IC's of these NAND gates
     
+  - From simple NAND gate packages to a somewhat sophisticated 7-segment display using LED's
+    - Designing a 7-segment hex decoder
+      - https://www.youtube.com/watch?v=7zffjsXqATg
+
   - ## The Mighty Microprocessor (groups of integrated chips -> all put on one chip)
     - Contains a CPU (Central Processing Unit) and a small amount of ultra fast memory (called "Registers")
     - The CPU is just a clever and somewhat complex arrangement of logic gates that can perform a series of logical operations
@@ -305,7 +327,7 @@
   - ## Representing Values in Memory 
     - ### Binary Counting
      
-    - ![8-bit-counting-2.png](8-bit-counting-2.png)
+    - ![8-bit-counting-2.png](assets/8-bit-counting-2.png)
     - ### Hexadecimal Counting
       ![hexadecimal.png](assets/hexadecimal.png)
       
@@ -380,9 +402,11 @@
   
   - ### Registers — "The Tiny Superfast Memory Nearest to the CPU & Keeps the State of the CPU"
     - Registers are a small amount of super fast memory that is built into the CPU
-    - The registers are used to store the results of the instructions, and current operands being executed
-    - The registers are used to store the current "state" of the CPU, like the "program counter" and the "flags" register
-      - Some registers store the values of the last arithmetic operation, like from an "ADD" or "SUBTRACT" 
+    - Registers hold the current instruction (operator and operands) being executed in the "Instruction Register" (IR)
+    - Registers hold address pointers to the current location in main memory in the "Program Counter" (PC) and
+      the "Stack Pointer" (SP) and the "Memory Address Register" (MAR)
+    - The "X" and "Y" registers are used to store the operands for the Accumulator Register (ACC) are used to store 
+      the results of the last arithmetic operation, like from an "ADD" or "SUBTRACT". 
       - Some registers are a series of "status flags", single bits used to store the result of the last operation
       - Status flags are used to control the "conditional jumps" in the program
       - Flags such as "zero" or "carry" are used to indicate the results of the last operation
@@ -511,9 +535,12 @@
   - For example, a "list" is a common data structure for a series of items in a specific order.
     - A list can be used to represent a "orders to be shipped," "to-do items" or a "names and addresses to send a letter to"
 
+  - 100+ Computer Science Concepts Explained in less than 15 minutes
+    - https://www.youtube.com/watch?v=-uleG_Vecis
+
   - ## Numbers or Individual Characters? Or something else?
     
-    - ### Numbers 
+    - ### Number (Integer or Floating Point)
       - Are usually represented in binary (base 2, only 1 & 0)
       - Positive integers are usually represented in "unsigned" binary
         - 1 byte (8 bits) can represent unsigned 0 to 255 (known as a "byte" or "octet" or "char" or "unsigned char" or "unsigned byte")
@@ -529,11 +556,13 @@
         - 2 bytes (16 bits) can represent signed -32768 to 32767
         - 4 bytes (32 bits) can represent signed -2147483648 to 2147483647
       - Floating point numbers are usually represented in "IEEE 754" format
-        - 4 bytes (32 bits) can represent a floating point number
-        - 8 bytes (64 bits) can represent a double precision floating point number
+        - Floating point are used to represent very large or very small numbers including fractional decimal numbers 
+        - Floating point is so named because the "point" can "float" to represent very large or very small numbers
+        - 4 bytes (32 bits) can represent a floating point number value from -3.4E38 to 3.4E38
+        - 8 bytes (64 bits) can represent a double precision floating point number value from -1.7E308 to 1.7E308
         - Floating point numbers will use a "mantissa" and an "exponent" to represent the number in scientific notation
         - Due to the way floating point numbers are represented, they are not exact! And will have rounding errors!
-        - Why Is This Happening?! Floating Point Approximation 
+        - Why Is This Happening?! Floating Point Approximation! 
           - https://www.youtube.com/watch?v=2gIxbTn7GSc
     
     - ### Characters/Letters are usually represented in ASCII (1 byte) or Unicode(1 or more bytes)
@@ -549,30 +578,40 @@
       - 01010101 could represents votes of 8 people, or 8 switch settings, or the connected status of 8 different sensors.
       - The same eight bits can represent many different things, it's just a matter of how humans want to interpret the meaning of the bits.
   
-- ## Common Data Structures used in Programming
-  
-  - ### Arrays (1D, 2D, 3D, etc.)
-    - A way to represent a "list" of things in memory
-    - The "things" can be anything, like numbers, letters, strings or even other arrays (multi-dimensional arrays)
+  - ## Common Data Structures used in Programming
+    - These various ways of representing things is called "type" 
+    - Types consist of the various representations of data in memory: 
+      - numbers
+      - characters (ASCII or Unicode)
+      - strings or even other arrays (multi-dimensional arrays)
+      - pointers
+      - Some languages allow functions to be represented as a type and passed around as a variable
+      - data structures (records, objects) made up of other types
+    
+  - ### Array (1D, 2D, 3D, etc.)
+    - A way to represent a "list" of values in memory
+    
     - The "things" are usually all the same size & type
     - The "things" are usually all stored in a contiguous block of memory
     - The "things" are usually accessed by an "index" which is a number that represents the position of the "thing" in the array
     
     - 1D Arrays
-    ![array.png](assets/arrays.png)
+    
+      [<img src="assets/arrays.png" width="550"/>]()
     
     - 2D Arrays
-     ![2d_arrays.png](assets/2d_arrays.png)
-    
-    - 2D Arrays in Code (C) 
-    - ![2dArraysInC.png](assets/2dArraysInC.png) 
+     
+      [<img src="assets/2d_arrays.png" width="550"/>]()
   
-  - ### Strings
+    - 2D Arrays in Code (C) 
+      [<img src="assets/2dArraysInC.png" width="550"/>]() 
+  
+  - ### String
     - A way to represent a list of letters in memory, to represent words and sentences and paragraphs and documents
     - The "characters" are usually stored in a contiguous block of memory
     - The "characters" are sometimes terminated by a special "end of string" character, or have a length stored somewhere
     - The "characters" are usually accessed by an "index" which is a number that represents the position of the "characters" in the string
-    ![strings.png](assets/strings.png)
+      [<img src="assets/strings.png" width="550"/>]()
   
   
   - ### Pointer
@@ -580,19 +619,28 @@
     - Diagram:
       ``````
       - Address: Value 
-      - 0x00000000: 0x00  // 0x00000000 is the address, 0x00000004 is the value of this pointer, so it's pointing to address 0x00000004
+      - 0x00000000: 0x00  // 0x00000000 is the address, 0x00000004 is the value of this pointer (little Endian)
       - 0x00000001: 0x00  
       - 0x00000002: 0x00
-      - 0x00000002: 0x04  // This is a pointer's value is 0x00000004, so it's pointing to address 0x00000004
-      - 0x00000004: 0x41  // 0x00000004 is the address, 0x41 is character 'A' as ASCII, or 65 as an unsigned byte integer
+      - 0x00000002: 0x04  // This is a pointer's value is 0x00000004, so it's "pointing" to address 0x00000004
+      - 0x00000004: 0x2A  // 0x00000004 is the address, 0x2A is ACII character '*' or the integer number 42
+  
+    - The pointer stored at 0x00000000 has the value 0x00000004, so it's pointing to address 0x00000004.
+    - Address 0x00000004 contains the value 0x41, which represents the character 'A' or number 65 as an unsigned byte integer.
+    - In this case, it's stored in "Little Endian" format, so the least significant bytes are stored first.
+  
+      [img_8.png](assets/pointer.png)
+    - ```mermaid
+      graph TD
+      A[Address 0x00000000 has value 0x00000004] -->|0x00000004 points to| B["Address 0x00000004 has value 0x2A (or * or 42)"]
+   
+      markdown["`
+        The pointer stored at **0x00000000** has a value _0x00000004_, 
+        so it is pointing to address **0x00000004**
+      `"]
       ```
-    - The pointer stored at 0x00000000 has the value 0x00000004, so it's pointing to address 0x00000004
-    - Address 0x00000004 contains the value 0x41, which represents the character 'A' or the number 65 as an unsigned byte integer
-    - it's stored in "Little Endian" format, so the least significant bytes are stored first.
   
-      ![img_8.png](assets/pointer.png) 
-  
-  - ### Structures 
+  - ### Data Structures 
     - Known as "Records" or "Data Classes" 
       - also called as "structs", sometimes referred to as "classes" and "objects"
     - A way to represent a "structured data" in memory
@@ -638,8 +686,31 @@
     - The "things" are NOT stored in a contiguous block of memory, which is the main difference between an array and a linked list
     - The "things" are usually accessed by a "pointer" which is a number that represents the location of the "thing" in memory
     - Used to represent a "dynamic" list, where the size of the list is not known ahead of time
-    - Efficient for adding and removing items from the list, but not efficient for accessing items in the list
-      ![linkedList.png](assets/linkedList.png)
+    - Efficient for adding and removing items from the list, but not efficient for accessing items in the list.
+    - [linkedList.png](assets/linkedList.png)
+    - ```mermaid
+      graph TD
+      HEAD["HEAD= Start pointer"] -->|points to | A[A= data + a pointer to node B]
+      A -->|points to |B[B= data + a pointer to node C]
+      B -->|points to | C[C= data + a pointer to node D]
+      C -->|points to | D[D= data + a pointer to node E ]
+      D -->|points to | E["E= data + a pointer to `NULL` (the end node)"]
+      TAIL["TAIL= End pointer"] -->|points to | E
+      ```
+  - Map (or "Hash Table", "Hash Map", "Dictionary", "Associative Array")
+    - A way to represent a "list" of things in memory, where each "thing" points to one "thing" in the list
+    - The "things" are usually all the same size & type
+    - The "things" are NOT stored in a contiguous block of memory, which is the main difference between an array and a map
+    - The "things" are usually accessed by a "key" which is a number that represents the location of the "thing" in memory
+    - Used to represent a "key-value" list, where each "thing" is accessed by a "key" instead of an "index"
+    - Efficient for adding and removing items from the list, and efficient for accessing items in the list
+      ![map.png](assets/map.png)
+    - ```mermaid
+      graph LR;
+         key1[key1] -->|Key 1| id2[Thing X]
+         key2[key2] -->|Key 2| id3[ValueY]
+         key3[key3] -->|Key 3| id4[ValueZ]
+    ```
 
   - ### Tree
     - A way to represent a "hierarchical" list of things in memory, where each "thing" points to one or MORE "things" in the list
@@ -827,6 +898,15 @@
      tied to any specific computer hardware or operating system. The computer manufacturer only had to create the 
      compiler for their particular machine, and then the same code could be run on any machine that had a compiler 
      for the language.
+
+- ## Software Design Concepts - The Line, The Box and The Layers
+  - At about the time of the introduction of "structured programming," the concept of "software design" was introduced
+  - Software Design: Ep2 : 2nd Law of Software Design
+    - https://www.youtube.com/watch?v=fh1a74WWvJQ
+  - Software Design: Ep3 : Conceptual Layers
+    - https://www.youtube.com/watch?v=8R7hoC3OuPo
+  - Software Design: Ep4 : 3rd Law of Software Design
+    - https://www.youtube.com/watch?v=nCxhJ_51fjA 
 
 - ## Class Oriented Programming (COP) 1970s-Present
   - Usually misnamed "Object Oriented Programming," as "Objects" are _not_ the main focus, "Classes" are!
@@ -1077,8 +1157,10 @@
     
       - ### Abstract Classes
         - Very similar to interfaces but can have default implementations of the methods & include variables.
-        - Think of "The General Category" instead of a specific case, like "documents" is the general category 
-          and PDFs, Excel files and Text files are specific "concrete" kinds or "implementations" of documents.
+        - I like to forget the word `abstract` and think of "The General Category" instead of a specific case, 
+          like "documents" is the general category (abstract idea) of a generic "thing to structure and retain data." 
+        - PDFs, Excel files and Text files are specific "concrete" kinds (or "implementations") of the
+          abstract idea of "documents."
         - The `abstract class` is usually `extend`ed by the subclass and then the methods are overridden by the subclass
           ```mermaid
           ---
@@ -1186,6 +1268,7 @@
           - Live Code Example: [How Abstract Classes Work in Kotlin](src/main/kotlin/abstractClassExample.kt)
 
       - ### Polymorphism
+        - Yet another overcomplicated word for a very basic idea. 
         - Polymorphism is the idea that a method can be called on an object and the method will behave differently
           based on the "type" of the "object" that the "method" is called on
           - This is the basis for overriding methods in subclasses and `interfaces` and `abstract class`es
