@@ -247,7 +247,7 @@
       > - How Vacuum Tubes Work 
       >   - https://www.youtube.com/watch?v=nA_tgIygvNo
     
-      > - ### **Notice:**  While the actual physical electron flow direction is from the "negative" terminal to the "positive" terminal, the "conventional" flow direction of electricity in schematics is considered to go from the "positive" terminal to the "negative" terminal. 
+      > ### Notice:  While the actual physical electron flow direction is from the "negative" terminal to the "positive" terminal, the "conventional" flow direction of electricity in schematics is considered to go from the "positive" terminal to the "negative" terminal. 
       >> Yes! This is rather confusing at first, and you can give thanks to ding-dong Ben Franklin for this bit of technical debt we all have to deal with at the beginning of learning electronics.
     - Electricity in a vacuum behaves differently than in normal atmosphere. 
       - Electrons can flow freely in a vacuum. I like to think of this as the invention of "nothing."
@@ -438,7 +438,7 @@
 # SOFTWARE - The Easily Changeable Machine
 
 ## Machine Code — The Microcode Soft-Circuitry Commands of the CPU
-  - BIG IDEA - Logic gates can be built up to create a "general-purpose" machine that can be setup using software
+  - ### BIG IDEA - Logic gates can be built up to create a "general-purpose" machine that can be setup using software
     instead of discrete physical components. The software can be changed to change the behavior of the machine instead
     of physically creating a new machine. 
   - Actually any software COULD be implemented in hardware, but the costs of doing so rarely make it practical at 
@@ -461,7 +461,8 @@
     - These mnemonics are translated into the binary opcodes by a compiler or assembler program.
 
   - ## Representing Values in Memory 
-    - ### Binary Counting
+    - ### Binary Counting 
+      - BIG IDEA - The computer represents numbers in binary, and can perform arithmetic operations on them.
      
       [<img src="assets/8-bit-counting-2.png" width="450">](assets/8-bit-counting-2.png)
     
@@ -474,6 +475,7 @@
         can be "eaten" by the CPU (HAR HAR HARDY HAR Computer people are soooooo funnnnnny!)
       
     - ### ASCII Representation of Characters
+      - BIG IDEA - Standardized way to represent roman characters and numbers in memory.  
       - ASCII is a 1 byte (8 bit) representation of the most common letters and symbols used in English
       - ASCII stands for "American Standard Code for Information Interchange"
       - Note: The bits are used to categorize the characters into different groups & very intentionally designed
@@ -487,6 +489,7 @@
       - ### ASCII table using Hexadecimal 
       - Easier to read by humans, much more compact than binary
       - 2 Hexadecimal Characters can represent 1 byte
+        
         [<img src="assets/ascii_hexadecimal.png" width="450">](assets/ascii_hexadecimal.png)
 
   - ## Computer Block Diagram
@@ -1112,8 +1115,8 @@
      ```
      - [Click for source code to copy and paste into the BASIC playground](/assets/proceduralUnrolledLoops.bas)
    
-   - #### Programmer rolled-loops leftover from Assembly Language
-   -  Example using programmer-made loops using GOTO's and Indexes (also called "counters" or "iterators" or "loop variables")
+   - #### Programmer Written "looping" Leftover From Assembly Language
+     -  Example using programmer-made loops using GOTO's and Indexes (also called "counters" or "iterators" or "loop variables")
      ```Text
      5 REM PROGRAM TO DEMO "FOR LOOP" TO CREATE A CUMULATIVE ADDITION TABLE 
      10 LET A = 1
@@ -1143,7 +1146,7 @@
      - [Click for source code to copy and paste into the BASIC playground](/assets/proceduralProgrammerMadeLoops.bas)
 
    - ### Loops instead of GOTOs
-     - The FOR "loop" statement was introduced to replace the "GOTO" statement, as an attempt to make procedural 
+     - BIG IDEA - The FOR "loop" statement was introduced to replace the "GOTO" statement, as an attempt to make procedural 
        code more "structured."
      - The "loop" statement was used to repeat a block of code a certain number of times, or until a certain condition was met.
    
@@ -1177,7 +1180,9 @@
    
  
  - ## Structured Programming 1960s-Present
-   - BIG IDEA - SCOPES & TYPES!
+   ### BIG IDEA - SCOPES & TYPES!
+   
+   ### Scopes
    - No more "goto" statements, only subroutines and conditional branching were allowed
    - The concept of "scopes" (or "code blocks") to limit the use of "globally mutable" variables
      - This is the origin of "encapsulation" and first introduced to limit the visibility of the "local" variables 
@@ -1264,6 +1269,7 @@
       >   - https://www.cs.usfca.edu/~galles/visualization/Algorithms.html
 
 - ## Time Complexity - How long is this gonna take?
+    - ### BiG IDEA - Let's have a standard way to communicate about how long an algorithm will take to run 
     - The "time complexity" of a program is a measure of how the "running time" of the program grows as the "input size"
       of the program grows.
     - Also known as "Algorithmic Complexity" or "Big O notation"
@@ -1287,8 +1293,9 @@
         array grows.
       - If you are looping over items that are also looping over items, it's O(n^2) because the time it takes to loop over
         the items grows as the square of the size of the array grows.
-      - If you are doing a binary search, and each time you search you are cutting the size of the array in half, it's O(log n)
-        because the time it takes to search grows as the logarithm of the size of the array grows.
+      - Each time you add another loop, the time complexity grows as the square of the size of the array grows.
+      - If you are doing a binary search, and each time you search you are cutting the size of the array in half, 
+        it's O(log n) because the time it takes to search grows as the logarithm of the size of the array grows.
 
 - ## Software Design Concepts - The Line, The Box and The Layers
   - At about the time of the introduction of "structured programming," the concept of "software design" was introduced
