@@ -382,7 +382,8 @@
 
 # Machine Code — The Microcode Soft-Circuitry Commands of the CPU
   - BIG IDEA - Logic gates can be built up to create a "general-purpose" machine that can be setup using software
-    instead of discrete physical components. 
+    instead of discrete physical components. The software can be changed to change the behavior of the machine instead
+    of physically creating a new machine. 
   - Actually any software COULD be implemented in hardware, but the costs of doing so rarely make it practical at 
     this point, other than a few very specialized problems like graphics cards to compute 3D graphics, crypto mining and AI training.
   - Machine Code is the "language" of logical operations that the computer can perform.
@@ -430,10 +431,26 @@
         [<img src="assets/ascii_hexadecimal.png" width="550">](assets/ascii_hexadecimal.png)
 
   - ## Computer Block Diagram
-    [<img src="assets/Computer_block_diagram.png" width="550">](assets/Computer_block_diagram.png)
+      [<img src="assets/Computer_block_diagram.png" width="550">](assets/Computer_block_diagram.png)
+      - RAM = Random Access Memory
+      - ROM = Read Only Memory
+      - MPU = Micro-Processor Unit
+      - XTAL = Crystal Oscillator for the clock
+      - CLOCK = Clock Circuit
+      - I/O BUS = Input/Output Bus
   
-    The MPU (Micro-Processor Unit) is the "brain" of the computer (also called the CPU - Central Processing Unit) 
+  - ### The MPU (Micro-Processor Unit) 
+    - The Micro-Procession Unit is the "brain" of the computer 
+    - Also called the CPU - Central Processing Unit 
+    
     [<img src="assets/MPU.png" width="550">](assets/MPU.png)
+
+    - MAR = Memory Address Register - The current memory location that the CPU is accessing
+    - PC = Program Counter - The current memory location of the instruction that the CPU is/will execute
+    - IR = Instruction Register - The current opcode instruction being executed
+    - ACC = Accumulator - Results of the last arithmetic or logic operation
+    - X & Y = Registers - Used to store the input operands for output to Accumulator Register (ACC)
+      via the ALU (Arithmetic Logic Unit)
 
   - ### Clock — "The heart beat of the CPU to keep it all in sync"
     - Clock Circuit - Basically a emits a short pulse of electricity at a regular interval
@@ -483,6 +500,8 @@
     - After the operation is complete, the program counter (PC) is updated with the address of the next instruction to 
       be executed (or with a different location in memory if a "jump" instruction is executed)
     - The "fetch-decode-execute" cycle is the basis for all computing, and is the most important part of the CPU
+    - 8-bit CPU control logic: Part 1
+      - https://www.youtube.com/watch?v=dXdoim96v5A  
   
   - ### Registers — "The Tiny Superfast Memory Nearest to the CPU & Keeps the State of the CPU"
     - Registers are a small amount of super fast memory that is built into the CPU
