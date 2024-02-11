@@ -50,9 +50,9 @@
             ```
 
           > - Insight 1: Logic in Physical Form
-              >   - https://www.youtube.com/watch?v=txH3K3shIWs
+          >   - https://www.youtube.com/watch?v=txH3K3shIWs
           > - Exploring How Computers Work
-              >   - https://www.youtube.com/watch?v=QZwneRb-zqA
+          >   - https://www.youtube.com/watch?v=QZwneRb-zqA
 
     - ## _Boolean logic requires one more operation to be complete: The logical `NOT` operation..._
         - We need some kind of switch to represent a Logical NOT gate to create any other Boolean logic operation.
@@ -73,9 +73,9 @@
         - North or South (1 or 0)
         - It's magnificent bc its so useful and versatile
       > - How To Make an Electromagnet
-          >   - https://youtu.be/Vpb7IQ2Ib_Y
+      >   - https://youtu.be/Vpb7IQ2Ib_Y
       > - Magnetic Viewing Film - How it Works/Demos
-          >   - https://www.youtube.com/watch?v=slVL5nbTXd4
+      >   - https://www.youtube.com/watch?v=slVL5nbTXd4
 
 - ## The Raucous Relay
     - ### BIG IDEA - Use an electromagnet to control a switch (or multiple switches)
@@ -94,21 +94,21 @@
     - It's raucous because it makes a lot of noise when it switches on and off
 
       > - AND OR NOT gates with Relays
-          >   - https://www.youtube.com/watch?v=FKub2SuugsQ
+      >   - https://www.youtube.com/watch?v=FKub2SuugsQ
       > - Computers built using Relays
-          >   - https://youtu.be/e8DavnWmr1E
+      >   - https://youtu.be/e8DavnWmr1E
       >   - https://youtu.be/NXeBR-lbnjI
       > - Hexadecimal Relay Calculator
-          >   - https://www.youtube.com/watch?v=OzTwg-AQJ6E
+      >   - https://www.youtube.com/watch?v=OzTwg-AQJ6E
       > - Relay Calculators: Episode 3 - Relay Logic Gates, Latches and Delays
-          >   - https://www.youtube.com/watch?v=_nXc439NTYk
+      >   - https://www.youtube.com/watch?v=_nXc439NTYk
       > - Relay Calculators: Episode 4 - Mistakes
-          >   - https://youtu.be/OZXwNiJ7mtw
+      >   - https://youtu.be/OZXwNiJ7mtw
 
 - ## The Voracious Vacuum Tube
     - ### BIG IDEA - Instead of using a magnetic field to control a switch, we can use a vacuum to control the flow of electricity
       > - How Vacuum Tubes Work
-          >   - https://www.youtube.com/watch?v=nA_tgIygvNo
+      >   - https://www.youtube.com/watch?v=nA_tgIygvNo
 
       > ### Notice:  While the actual physical electron flow direction is from the "negative" terminal to the "positive" terminal, the "conventional" flow direction of electricity in schematics is considered to go from the "positive" terminal to the "negative" terminal.
       >> Yes! This is rather confusing at first, and you can give thanks to ding-dong Ben Franklin for this bit of technical debt we all have to deal with at the beginning of learning electronics.
@@ -131,27 +131,27 @@
     - The tube can be used to represent any other logic gate.
 
       > - In a Minute: Vacuum Tube Diodes in 60 Seconds
-          >   - https://www.youtube.com/watch?v=8so4qQcOAvQ
+      >   - https://www.youtube.com/watch?v=8so4qQcOAvQ
                 > 1942 ARMY RADIO TRAINING FILM “ ELECTRON THEORY AND THE DIODE TUBE ” VACUUM TUBE ELECTRONICS 72782
       >   - https://www.youtube.com/watch?v=cIvjBKMX9jg
       > - In a Minute: Vacuum Tube Triodes in 60 Seconds
-          >   - https://www.youtube.com/watch?v=frZ35Y48vSk
+      >   - https://www.youtube.com/watch?v=frZ35Y48vSk
       > - Let’s Build Some Logic Gates out of Vacuum Tubes: OR, NOR, NAND, AND
-          >   - https://www.youtube.com/watch?v=NkmrMdigB-8
+      >   - https://www.youtube.com/watch?v=NkmrMdigB-8
     - #### The vacuum tube is voracious because it consumes a lot of power to heat the cathode and generates a lot of excess heat.
 
 - ## The Tiny Transistor
     - Very similar behavior to the vacuum tube, but much smaller and faster
       > - How a transistor works
-          >   - https://www.youtube.com/watch?v=DXvAlwMAxiA
+      >   - https://www.youtube.com/watch?v=DXvAlwMAxiA
     - Excellent animation of physical electrical flow thru semiconductors and how LED's are made
       > - Why It Was Almost Impossible to Make the Blue LED
-          >   - https://www.youtube.com/watch?v=AF8d72mA41M&t=203
+      >   - https://www.youtube.com/watch?v=AF8d72mA41M&t=203
     - No vacuum required, just a the semiconductor material.
         - Uses photographic techniques to create the transistor, not regular metallic parts.
         - Difference in behavior between Tubes and Transistors
           > - Vacuum Tubes: Episode 2 - The Triode (Part 1)
-              >   - https://www.youtube.com/watch?v=xurmZWLjW2g
+          >   - https://www.youtube.com/watch?v=xurmZWLjW2g
 
     - The Transistor consists of three parts:
         - **"Drain"**
@@ -175,21 +175,21 @@
 
         - Transistors can create sophisticated operations by combining them in clever ways
           > - Designing a 7-segment hex decoder
-              >   - https://www.youtube.com/watch?v=7zffjsXqATg
+          >   - https://www.youtube.com/watch?v=7zffjsXqATg
           > - Transistor Clock
-              >   - https://www.youtube.com/watch?v=Iu-W7LpSDmk
+          >   - https://www.youtube.com/watch?v=Iu-W7LpSDmk
 
         - How do the essentials work?
           > - Using a transistor to solve our problem - How transistors work as a switch
-              >   - https://www.youtube.com/watch?v=ks_VShSgPns
+          >   - https://www.youtube.com/watch?v=ks_VShSgPns
           > - Insight 2: The MOS Transistor
-              >   - https://www.youtube.com/watch?v=sshPV7BV0k0
+          >   - https://www.youtube.com/watch?v=sshPV7BV0k0
           > - Inverting the signal with a transistor (The `NOT` gate)
-              >   - https://www.youtube.com/watch?v=hYN8C769k8A
+          >   - https://www.youtube.com/watch?v=hYN8C769k8A
           > - Making logic gates from transistors
-              >   - https://www.youtube.com/watch?v=sTu3LwpF6XI
+          >   - https://www.youtube.com/watch?v=sTu3LwpF6XI
           > - How does memory work?
-              >   - SR Latch
+          >   - SR Latch
           >   - https://youtu.be/KM0DdEaY5sY
 
 - ## The Interchangeable Integrated Chip (IC)
@@ -200,7 +200,7 @@
         - Basic functions consist of Logical OR, AND, NOT, NAND package (usually 2-4 gates in the same package)
         - Extremely complex functions are made by combining many of these packages in clever ways
       > - “MY FIRST CHIP” - Carver Mead - 2017
-          >   - https://www.youtube.com/watch?v=F5P5SAlEbo4
+      >   - https://www.youtube.com/watch?v=F5P5SAlEbo4
 
 - Robert Noyce, inventor of first monolithic IC
 
@@ -243,7 +243,7 @@
   [<img src="assets/seven_segment/Schematic-of-BCD-to-Decimal-Decoder.png" width="400">](https://www.researchgate.net/figure/Binary-coded-decimal-4-to-7-decoder-a-Schematics-of-a-4-to-7-decoder-implemented-with_fig4_337084817)
 
   > - Visualizing Data with 7-Segment Displays
-      >   - https://www.youtube.com/watch?v=hEDQpqhY2MA
+  >   - https://www.youtube.com/watch?v=hEDQpqhY2MA
 
 - Why is NAND gates so special?
     - It's the most flexible can be combined to create any other logic gate, ie: AND, OR, NOT, XOR, etc.
@@ -255,16 +255,16 @@
 
 - From simple NAND gate packages to a somewhat sophisticated 7-segment display using LED's.
   > - Designing a 7-segment hex decoder
-      >   - https://www.youtube.com/watch?v=7zffjsXqATg
+  >   - https://www.youtube.com/watch?v=7zffjsXqATg
 
 
 - ## The Mighty Microprocessor (groups of integrated chips -> all put on one chip)
     - Contains a CPU (Central Processing Unit) and a small amount of ultra fast memory (called "Registers").
     - The CPU is just a clever and somewhat complex arrangement of logic gates that can perform a series of logical operations/
       > - An intuitive approach for understanding the CPU and RAM
-          >   - https://www.youtube.com/watch?v=-IyB8hBkA9w
+      >   - https://www.youtube.com/watch?v=-IyB8hBkA9w
       > - How a CPU Works
-          >   - https://www.youtube.com/watch?v=cNN_tTXABUA
+      >   - https://www.youtube.com/watch?v=cNN_tTXABUA
 
     - Each part of the CPU is made of millions of the same kinds of logic gates that we've already discussed.
     - The CPU has a "clock" to synchronize the operations of the CPU.
@@ -280,12 +280,12 @@
     - Arranging the above components in particular patterns to achieve a specific task.
       > Digital Computer Techniques: Programming (1962) - AT&T Archives
       >   - https://www.youtube.com/watch?v=dFZecokdHLo
-            > Digital Computer Techniques: Computer Units (1962) - AT&T Archives
+      > Digital Computer Techniques: Computer Units (1962) - AT&T Archives
       >   - https://www.youtube.com/watch?v=5d7EMsy_RC0
 
     - Bus (a set of wires that connect the CPU to the rest of the computer)
       > - Experimenting with Buses and Three-State Logic
-          >   - https://www.youtube.com/watch?v=_3cNcmli6xQ
+      >   - https://www.youtube.com/watch?v=_3cNcmli6xQ
 
     - ROM (Read Only Memory
         - usually contains the basic software to start the computer, sometimes called "firmware")
@@ -295,9 +295,9 @@
     - RAM (Random Access Memory)
       > RAM module build - part 1
       >   - https://www.youtube.com/watch?v=uYXwCBo40iA
-            > RAM - Random Access Memory - How does a RAM of PC store data?- Video IT
+      > RAM - Random Access Memory - How does a RAM of PC store data?- Video IT
       >   - https://www.youtube.com/watch?v=Kav6oOFDQSA
-            > Dynamic Random Access Memory (DRAM). Part 1: Memory Cell Arrays
+      > Dynamic Random Access Memory (DRAM). Part 1: Memory Cell Arrays
       >   - https://www.youtube.com/watch?v=I-9XWtdW_Co
 
     - I/O (Input/Iutput) & Peripherals & Removable Storage & More
@@ -313,12 +313,12 @@
 
           > DATA PROCESSING AN INTRODUCTION 1972 KEY PUNCH COMPUTER & MAGNETIC TAPE EDUCATIONAL FILM
           >   - https://www.youtube.com/watch?v=uOYJtnux2sA
-                > Communications Milestone: Charged Coupled Devices (with Bonus Edition Introduction) - AT&T
+          > Communications Milestone: Charged Coupled Devices (with Bonus Edition Introduction) - AT&T
           >   - https://youtu.be/MoqeMEsC5p0?si=iizZq8ZJGxSEh16P&t=206
           >> Note that the CCD was invented in an "hour" due to how many other technologies had to be invented first.
 
     - Putting it all together
       > 1969 EDUTRONICS COMPUTER DATA PROCESSING PRINCIPLES & FILE CONCEPTS 54124
       >   - https://www.youtube.com/watch?v=0bLQ9EQ6PdY
-            > 1970s COMPUTER DATA PROCESSING & FILE MAINTENANCE EDUCATIONAL FILM FLOWCHARTS
+      > 1970s COMPUTER DATA PROCESSING & FILE MAINTENANCE EDUCATIONAL FILM FLOWCHARTS
       >   - https://www.youtube.com/watch?v=geo8UtItSwU
