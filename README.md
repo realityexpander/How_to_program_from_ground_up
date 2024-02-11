@@ -375,8 +375,10 @@
         - The "hard drive" is a "magnetic" storage device, and uses tiny spots of "magnetized" material to represent the "state" of the data
         - The arm is controlled by software and uses "magnets" to move the arm to the correct position to read and write the data
         - Some sort of electrified magnet is the usual way that computers interact physically with the world
-    - Experimenting with Buses and Three-State Logic
-      - https://www.youtube.com/watch?v=_3cNcmli6xQ
+    
+    > [!NOTE]
+    > Experimenting with Buses and Three-State Logic
+    >  - https://www.youtube.com/watch?v=_3cNcmli6xQ
 
 # SOFTWARE - The Easily Changeable Machine
 
@@ -401,7 +403,7 @@
   - The Machine hex value opcodes are unwieldy for humans to remember, so we use "mnemonics" to represent them.
     - Mnemonics are simply human-readable names for the opcodes, like "LOAD" or "STORE" or "ADD" or "SUBTRACT" used to 
       represent the opcodes values.
-    - The mnemonics are translated into the binary opcodes by a compiler or assembler program.
+    - These mnemonics are translated into the binary opcodes by a compiler or assembler program.
 
   - ## Representing Values in Memory 
     - ### Binary Counting
@@ -413,7 +415,7 @@
   
     - 8 bits are called a "byte" and can represent 256 different values (0-255)
       - A byte is the smallest unit of memory that can be addressed by the CPU
-      - They call it a "byte" because its a play on the word "bite" and it's the smallest amount of memory that 
+      > They call it a "byte" because its a play on the word "bite" and it's the smallest amount of memory that 
         can be "eaten" by the CPU (HAR HAR HARDY HAR Computer people are soooooo funnnnnny!)
       
     - ### ASCII Representation of Characters
