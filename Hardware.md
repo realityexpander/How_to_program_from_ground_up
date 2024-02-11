@@ -1,4 +1,4 @@
-# HARDWARE - We Must Have A Machine To Do The Work (Until We All Attain Accurate Psychic Powers)
+# HARDWARE — We Must Have A Machine To Do The Work (Until We All Attain Accurate Psychic Powers)
 
 # Low Level Hardware Implementations
 
@@ -6,13 +6,13 @@
 - We are using this arrangement to represent a logic "state"
     - This is the most basic representation of a "state" in computing
 - Connected or not connected? (1 or 0)
-    - But we dont really know it's state until we measure it somehow (like with a voltmeter or a light bulb)
+    - But we don't really know its state until we measure it somehow (like with a voltmeter or a light bulb)
 - Add visual Feedback - Light on or off (1 or 0)
 - Even though the light has in reality many, many different states constantly
   changing over time, we can still use it to represent a single state at time: Either on or off.
-- In this way we can use the light to represent a "bit" of information, which is the most basic unit of information in computing.
+- In this way, we can use the light to represent a "bit" of information, which is the most basic unit of information in computing.
 ## The Simple Switch
-  - ### BIG IDEA - A switch can be used to represent a logic "state"
+  - ### BIG IDEA — A switch can be used to represent a logic "state"
       - This is the most basic representation of a "state" in computing
       - Easier to manipulate for humans than a bare wire
   
@@ -21,13 +21,13 @@
   - Simple switches can be used to represent two boolean logic operations: AND and OR
       - Two switches in series represent a Logical AND gate
       - Two switches in parallel represent a Logical OR gate
-  - These operations are called "gates", conceptually similar to someone following path across a fence, you can only
+  - These operations are called "gates," conceptually similar to someone following a path across a fence, you can only
     pass through a gate if it's open, and you can't pass through if it's closed.
 
   - ### Logical Operations & Boolean Arithmetic
       - true = 1 = on = connected
       - false = 0 = off = not connected
-      - A Logical "1" and "0" are called a "bit", as in a "binary digit"
+      - A Logical "1" and "0" are called a "bit," as in a "binary digit"
       - Two switches in series represent a Logical AND gate
           - `AND` is the `&&` symbol in most programming languages.
         ```Console
@@ -71,7 +71,7 @@
 ## The Magnificent Electromagnet
    - ### BIG IDEA — An electrical current can cause mechanical actions with certain metallic materials.
      1) To physically manipulate the physical world, like a motor or a solenoid.
-     2) To induce a magnetic field to represent a "state", like magnetic tape or a hard drive.
+     2) To induce a magnetic field to represent a "state," like magnetic tape or a hard drive.
    
      [<img src="assets/electromagnet.png" width="450">](https://en.wikipedia.org/wiki/Electromagnet)
      [<img src="assets/electromagnet-with-switch.png" width="450">](https://circuitdigest.com/electronic-circuits/simple-relay-switch-circuit-diagram)
@@ -80,14 +80,14 @@
    - Additionally, certain metallic materials can be "magnetized" and "polarized" using electricity to represent a "state"
        - Magnetized or not (1 or 0)
        - North or South (1 or 0)
-       - It's magnificent bc its so useful and versatile
+       - It's magnificent because it is so useful and versatile and used all over computing.
      > - How To Make an Electromagnet
      >   - https://youtu.be/Vpb7IQ2Ib_Y
-     > - Magnetic Viewing Film - How it Works/Demos
+     > - Magnetic Viewing Film — How it Works/Demos
      >   - https://www.youtube.com/watch?v=slVL5nbTXd4
 
 ## The Raucous Relay
-   - ### BIG IDEA - Use an electromagnet to control a switch (or multiple switches.)
+   - ### BIG IDEA — Use an electromagnet to control a switch (or multiple switches.)
    
    - the first electrical computers were made of relays (extremely slow but faster than writing by hand!)
    - If a relay is set up to turn a switch OFF when the electromagnet is electrified, this creates a logical NOT gate,
@@ -118,24 +118,26 @@
 ## The Voracious Vacuum Tube
    
    - ### BIG IDEA — Instead of using a magnetic field to control a switch, we can use a vacuum to control the flow of electricity, just like a switch.
-     > - How Vacuum Tubes Work
-     >   - https://www.youtube.com/watch?v=nA_tgIygvNo
 
      [<img src="assets/vacuum_tube.png" width="400">](https://en.wikipedia.org/wiki/Vacuum_tube)
      [<img src="assets/vacuum_tube_diagram.png" width="200">](https://en.wikipedia.org/wiki/Vacuum_tube)
    
-     > ### Notice:  While the actual physical electron flow direction is from the "negative" terminal to the "positive" terminal, the "conventional" flow direction of electricity in schematics is considered to go from the "positive" terminal to the "negative" terminal.
-     >> Yes! This is rather confusing at first, and you can give thanks to ding-dong Ben Franklin for this bit of technical debt we all have to deal with at the beginning of learning electronics.
+     > - How Vacuum Tubes Work
+     >   - https://www.youtube.com/watch?v=nA_tgIygvNo
+     
+     > ### Notice:  
+     > While the actual physical electron flow direction is from the "negative" terminal to the "positive" terminal, the "conventional" flow direction of electricity in schematics is considered to go from the "positive" terminal to the "negative" terminal.
+     >> _Yes!_  This is rather confusing at first, and you can give thanks to ding-dong Ben Franklin for this bit of technical debt we all have to deal with at the beginning of learning electronics.
    
    - Electricity in a vacuum behaves differently than in normal atmosphere.
        - Electrons can flow freely in a vacuum. I like to think of this as the invention of "nothing."
        - Tubes exploit this behavior of electrons in a vacuum to perform like a switch or an amplifiers.
-   - Tube made for use in logic (Triode) consists of three parts:
+   - The Tube made for use in logic (Triode) consists of three parts:
        - **"Cathode"**
            - Essentially a light bulb filament tied to the common "ground/negative" terminal of the power supply.
-           - Negative terminal of the tube it used to "emit" electrons to the anode and complete the circuit.
+           - The Negative terminal of the tube is used to "emit" electrons to the anode and complete the circuit.
        - **"Anode"**
-           - Positive terminal of the tube hooked to the "load" and the positive terminal of the power supply.)
+           - Positive terminal of the tube hooked to the "load" and the positive terminal of the power supply.
            - Used to "collect" electrons from the cathode and to indicate "state" and complete the circuit.
        - **"Grid"**
            - this acts as a switch also called a "valve" when referring to tubes.
@@ -156,7 +158,7 @@
    - #### The vacuum tube is voracious because it consumes a lot of power to heat the cathode and generates a lot of excess heat.
 
 ## The Tiny Transistor
-   - ### BIG IDEA - Instead of using an electrically heated wire and vacuum to control the flow of electricity, we can use a cheap semiconductor material and reduce energy and size by a factor of 100.
+   - ### BIG IDEA — Instead of using an electrically heated wire and vacuum to control the flow of electricity, we can use an economical semiconductor material and reduce energy and size by a factor of 100.
    
      [<img src="assets/transistor_vs_tube.png" width="400">](https://www.youtube.com/watch?v=DXvAlwMAxiA)
    
@@ -164,12 +166,12 @@
      > - How a Transistor Works
      >   - https://www.youtube.com/watch?v=DXvAlwMAxiA
      
-     Excellent animation of physical electrical flow thru semiconductors and how LED's are made
+     Excellent animation of physical electrical flow through semiconductors and how LEDs are made
      > - Why It Was Almost Impossible to Make the Blue LED
      >   - https://www.youtube.com/watch?v=AF8d72mA41M&t=203
      
      Difference in behavior between Tubes and Transistors
-     > - Vacuum Tubes: Episode 2 - The Triode (Part 1)
+     > - Vacuum Tubes: Episode 2 — The Triode (Part 1)
      >   - https://www.youtube.com/watch?v=xurmZWLjW2g
 
    - The Transistor consists of three parts:
@@ -185,7 +187,9 @@
            - also known as "base" often connected to the "control."
            - (not always "positive" in modern transistors, but usually is.)
    - The transistor can be used to represent any other logic gate and is the current basis for all modern computing.
-   - The transistor is tiny because it is very small and fast, bumping up against the limits of physics on how
+   - The transistor is tiny because it is much smaller when compared to a vacuum tube. 
+   - It can also switch much faster and consume much less power than the vacuum tube.
+   - The switching and size limits bumping up against the limits of physics on size and speed.
      small it can be made.
 
    - ### How to Build Complex Logic Gates from Simple Transistors
@@ -199,7 +203,7 @@
          >   - https://www.youtube.com/watch?v=Iu-W7LpSDmk
 
        - How do the essentials work?
-         > - Using a transistor to solve our problem - How transistors work as a switch
+         > - Using a transistor to solve our problem — How transistors work as a switch
          >   - https://www.youtube.com/watch?v=ks_VShSgPns
          > - Insight 2: The MOS Transistor
          >   - https://www.youtube.com/watch?v=sshPV7BV0k0
@@ -212,19 +216,20 @@
          >   - https://youtu.be/KM0DdEaY5sY
 
 ## The Interchangeable Integrated Chip (IC)
-  - ### BIG IDEA - We can use photographic techniques to create thousands of transistors on a single chip and radically reduce costs of manufacture and assembly of computing devices and increase functionality and reliability.
+  - ### BIG IDEA — We can use photographic techniques to create thousands of transistors on a single chip and radically reduce the costs of manufacture and assembly of computing devices and increase functionality and reliability.
+  
   - This allows creating large groups of transistor logic gates packaged together to perform a specific task.
   - The packages were standardized, allowing for the creation of complex computing devices using interchangeable parts.
   
   - #### The Logic Gate "Package"
     - A Package is a group of transistors for a specific logic operation placed on a single chip contained in a plastic
       or ceramic enclosure with metal pins to connect to the rest of the computer.
-        - Basic functions consist of Logical OR, AND, NOT, NAND package (usually 2-4 gates in the same package)
+        - Basic functions consist of Logical OR, AND, NOT, NAND package (usually 2–4 gates in the same package)
         - Extremely complex functions are made by combining many of these packages in clever ways
-      > - “MY FIRST CHIP” - Carver Mead - 2017
-      >   - https://www.youtube.com/watch?v=F5P5SAlEbo4
+        > - “MY FIRST CHIP” - Carver Mead - 2017
+        >   - https://www.youtube.com/watch?v=F5P5SAlEbo4
 
-- Robert Noyce, inventor of first monolithic IC holding a photogaphic layer for an Integrated Circuit.
+- Robert Noyce, inventor of the first monolithic IC holding a photographic layer for an Integrated Circuit.
 
   [<img src="assets/the_ic.png" width="400">](https://en.wikipedia.org/wiki/Robert_Noyce)
 
@@ -240,11 +245,11 @@
 
   [<img src="assets/seven_segment/Inverter-Gate-and-NAND-gate-under-50x-microscope.png" width="400">](https://www.researchgate.net/figure/Logic-gates-based-on-printed-electrochemical-transistors-Schematics-of-an-inverter-a_fig3_337084817)
 
-- 7 Segment LED Display Package
+- 7-Segment LED Display Package
 
   [<img src="assets/seven_segment/Seven_segment_01_Pengo.jpg" width="200">](https://en.wikipedia.org/wiki/Seven-segment_display)
 
-- 7 Segment Display Schematic Common Cathode
+- 7-Segment Display Schematic Common Cathode
 
   [<img src="assets/seven_segment/Internal-Schematic-Common-Cathode-7-Segment-LED-Display.png" width="200">]()
 
@@ -252,11 +257,11 @@
 
   [<img src="assets/seven_segment/BCD-to-7-Segment-Display-Decoder.png" width="400">](https://www.electrical4u.com/bcd-to-seven-segment-decoder/)
 
-- 7 Segment Display Display truth table
+- 7-Segment Display truth table
 
   [<img src="assets/seven_segment/7-segment-display-truth-table.webp" width="400">](https://en.wikipedia.org/wiki/Seven-segment_display)
 
-- 7 Segment Display "BCD to 7 Segment Decoder" Schematic "Naive" Implementation
+- 7-Segment Display "BCD to 7-Segment Decoder" Schematic "Naive" Implementation
 
   [<img src="assets/seven_segment/BCD-to-7-segment-Decoder-Design-Using-Basic-Gates.jpg" width="400">](https://www.electronicshub.org/bcd-7-segment-led-display-decoder-circuit/)
 
@@ -269,7 +274,7 @@
 
  - Why is NAND gates so special?
    
-   [<img src="NAND_gate.png" width="150">](https://en.wikipedia.org/wiki/NAND_gate)
+   [<img src="assets/NAND_gate.png" width="150">](https://en.wikipedia.org/wiki/NAND_gate)
    - It's the most flexible can be combined to create any other logic gate, ie: AND, OR, NOT, XOR, etc.
         1) Tie inputs A & B together to create a NOT gate.
         2) Tie inputs A & B together combined with a NOT gate to create an OR gate.
@@ -284,12 +289,12 @@
 
 
 - ## The Mighty Microprocessor
-  - ### BIG IDEA - Consolidate all the necessary components from various Integrated Chips required for a computer onto a single chip.
+  - ### BIG IDEA — Consolidate all the necessary components from various Integrated Chips required for a computer onto a single chip.
   
-    [<img src="6502.png" width="400">](https://en.wikipedia.org/wiki/MOS_Technology_6502)
+    [<img src="assets/6502.png" width="400">](https://en.wikipedia.org/wiki/MOS_Technology_6502)
 
   - Simply groups of different Integrated Chips -> All put on one chip.
-  - Contains a CPU (Central Processing Unit) and a small amount of ultra fast memory (called "Registers").
+  - Contains a CPU (Central Processing Unit) and a small amount of ultra-fast memory (called "Registers").
   - The CPU is just a clever and somewhat complex arrangement of logic gates that can perform a series of logical operations/
     > - An intuitive approach for understanding the CPU and RAM
     >   - https://www.youtube.com/watch?v=-IyB8hBkA9w
@@ -301,13 +306,13 @@
   - It also has a "program counter" to keep track of the current instruction in memory that the CPU is executing.
   - Has an "ALU" (Arithmetic Logic Unit) to perform basic arithmetic and logical operations.
       - How does an ALU work?
-        > - Learn how computers add numbers and build a 4 bit adder circuit
+        > - Learn how computers add numbers and build a 4-bit adder circuit
         > - https://youtu.be/wvJc9CZcvBc
-  - May contain a small amount of "cache" memory (very fast memory near the CPU circuits) to speed up access to main memory.
-  - CPU's are where the execution of each instruction happens.
+  - It May contain a small amount of "cache" memory (extremely quick memory near the CPU circuits) to speed up access to the main memory.
+  - CPUs are where the execution of each instruction happens.
 
 - ## The Configurable Computer
-   - ### BIG IDEA - Instead of putting all the functions for a task into a single computer, define for a standardized interface to connect different devices together to perform a task.  
+   - ### BIG IDEA — Instead of putting all the functions for a task into a single computer, define for a standardized interface to connect different devices to perform a task.  
     
     - By arranging the basic electronic components in particular patterns to achieve a specific narrow specialized task,
       like storing data on some medium, measuring sensors, controlling a motor, displaying an image, etc.
@@ -321,7 +326,7 @@
       > - Experimenting with Buses and Three-State Logic
       >   - https://www.youtube.com/watch?v=_3cNcmli6xQ
 
-    - ROM (Read Only Memory
+    - ROM (Read-Only Memory)
         - usually contains the basic software to start the computer, sometimes called "firmware")
         - Not easy to change, but can be changed with special equipment.
         - TODO add a ROM video
@@ -334,7 +339,7 @@
       > Dynamic Random Access Memory (DRAM). Part 1: Memory Cell Arrays
       >   - https://www.youtube.com/watch?v=I-9XWtdW_Co
 
-    - I/O (Input/Iutput) & Peripherals & Removable Storage & More
+    - I/O (Input/Output) & Peripherals & Removable Storage & More
         - All just more variations of the same thing
             - All built up from the same basic logic gates and transistors, or similar technology
             - Even video cameras, microphones, radios and speakers are just variations of the same basic technology
@@ -347,7 +352,7 @@
 
           > DATA PROCESSING AN INTRODUCTION 1972 KEY PUNCH COMPUTER & MAGNETIC TAPE EDUCATIONAL FILM
           >   - https://www.youtube.com/watch?v=uOYJtnux2sA
-          > Communications Milestone: Charged Coupled Devices (with Bonus Edition Introduction) - AT&T
+          > Communications Milestone: Charged Coupled Devices (with Bonus Edition Introduction) — AT&T
           >   - https://youtu.be/MoqeMEsC5p0?si=iizZq8ZJGxSEh16P&t=206
           >> Note that the CCD was invented in an "hour" due to how many other technologies had to be invented first.
 
