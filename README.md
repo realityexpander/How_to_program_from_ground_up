@@ -4,7 +4,7 @@
 - [The Essence of Computing](TheEssentialQuestion-WhatAreWeComputing.md)
 - Hardware
   - Low Level Hardware Implementations
-    - [The Wire & the Light Bulb & the Battery](Hardware.md#the-wire--the-light-bulb--the-battery)
+    - [The Wire & the Light Bulb & the Battery](Hardware.md#the-wire--the-battery)
     - [The Simple Switch](Hardware.md#the-simple-switch)
     - [The Magnificent Magnet](Hardware.md#the-magnificent-electromagnet)
     - [The Raucous Relay](Hardware.md#the-raucous-relay)
@@ -12,7 +12,8 @@
     - [The Tiny Transistor](Hardware.md#the-tiny-transistor)
     - [The Interchangeable Integrated Chip (IC)](Hardware.md#the-interchangeable-integrated-chip-ic)
     - [The Mighty Microprocessor](Hardware.md#the-mighty-microprocessor)
-- 
+- Data Structures
+  -  
 
 ## Introduction
   - How to guide for budding software engineers who need a primer overview of software development concepts 
@@ -68,55 +69,3 @@
       - Mistaking the machine for having intelligence is known as "The Eliza Effect."
 
 [Continue Reading](TheEssentialQuestion-WhatAreWeComputing.md)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

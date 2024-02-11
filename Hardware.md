@@ -1,24 +1,28 @@
-# HARDWARE — We Must Have A Machine To Do The Work (Until We All Attain Accurate Psychic Powers)
+# HARDWARE — We Must Have A Machine To Do The Work
+  - ### Until We All Attain Accurate Psychic Powers, there must be some kind of mechanical or electronic device to do the work.
 
 # Low Level Hardware Implementations
 
-## The Wire & the Light Bulb & the Battery
+## The Wire & the Battery
+  - ### BIG IDEA — A wire can be used to represent a logical "state": Is electricity flowing or not flowing?
+  - This is the most basic representation of a "state" in computing, and the underlying principle of all computing.
 - We are using this arrangement to represent a logic "state"
     - This is the most basic representation of a "state" in computing
 - Connected or not connected? (1 or 0)
     - But we don't really know its state until we measure it somehow (like with a voltmeter or a light bulb)
-- Add visual Feedback - Light on or off (1 or 0)
-- Even though the light has in reality many, many different states constantly
-  changing over time, we can still use it to represent a single state at time: Either on or off.
-- In this way, we can use the light to represent a "bit" of information, which is the most basic unit of information in computing.
-## The Simple Switch
-  - ### BIG IDEA — A switch can be used to represent a logic "state"
+
+## The Simple Switch & Light Bulb
+  - ### BIG IDEA — A switch can be used to represent a logic "state".
       - This is the most basic representation of a "state" in computing
       - Easier to manipulate for humans than a bare wire
   
         [<img src="assets/simpleSwitch.png" width="400">]()
-  
-  - Simple switches can be used to represent two boolean logic operations: AND and OR
+  - Add visual Feedback - Light on or off (1 or 0)
+    - Even though the light has in reality many, many different states constantly
+     changing over time, we can still use it to represent a single state at time: Either on or off.
+    - In this way, we can use the light to represent a "bit" of information, which is the most basic unit of information in computing.
+
+    - Simple switches can be used to represent two boolean logic operations: AND and OR
       - Two switches in series represent a Logical AND gate
       - Two switches in parallel represent a Logical OR gate
   - These operations are called "gates," conceptually similar to someone following a path across a fence, you can only
@@ -89,7 +93,7 @@
 ## The Raucous Relay
    - ### BIG IDEA — Use an electromagnet to control a switch (or multiple switches.)
    
-   - the first electrical computers were made of relays (extremely slow but faster than writing by hand!)
+   - The first electrical computers were made of relays (extremely slow but faster than calculating manually!)
    - If a relay is set up to turn a switch OFF when the electromagnet is electrified, this creates a logical NOT gate,
      so using a relay in this way allows us to represent any other logic gate!
    - `NOT` is the `!` symbol in most programming languages.
@@ -115,8 +119,7 @@
      > - Relay Calculators: Episode 4 - Mistakes
      >   - https://youtu.be/OZXwNiJ7mtw
 
-## The Voracious Vacuum Tube
-   
+## The Voracious Vacuum Tube 
    - ### BIG IDEA — Instead of using a magnetic field to control a switch, we can use a vacuum to control the flow of electricity, just like a switch.
 
      [<img src="assets/vacuum_tube.png" width="400">](https://en.wikipedia.org/wiki/Vacuum_tube)
@@ -282,13 +285,11 @@
    - Everything in computers can be done with just these three types of gates.
    - Most early digital electronic calculators were made solely with many IC's of these NAND gates.
 
-
 - From simple NAND gate packages to a somewhat sophisticated 7-segment display using LED's.
   > - Designing a 7-segment hex decoder
   >   - https://www.youtube.com/watch?v=7zffjsXqATg
 
-
-- ## The Mighty Microprocessor
+## The Mighty Microprocessor
   - ### BIG IDEA — Consolidate all the necessary components from various Integrated Chips required for a computer onto a single chip.
   
     [<img src="assets/6502.png" width="400">](https://en.wikipedia.org/wiki/MOS_Technology_6502)
@@ -305,61 +306,66 @@
   - The CPU has a "clock" to synchronize the operations of the CPU.
   - It also has a "program counter" to keep track of the current instruction in memory that the CPU is executing.
   - Has an "ALU" (Arithmetic Logic Unit) to perform basic arithmetic and logical operations.
-      - How does an ALU work?
-        > - Learn how computers add numbers and build a 4-bit adder circuit
-        > - https://youtu.be/wvJc9CZcvBc
+      > - How does an ALU work?
+      > - Learn how computers add numbers and build a 4-bit adder circuit
+      >   - https://youtu.be/wvJc9CZcvBc
   - It May contain a small amount of "cache" memory (extremely quick memory near the CPU circuits) to speed up access to the main memory.
   - CPUs are where the execution of each instruction happens.
 
-- ## The Configurable Computer
-   - ### BIG IDEA — Instead of putting all the functions for a task into a single computer, define for a standardized interface to connect different devices to perform a task.  
+## The Configurable Computer
+  - ### BIG IDEA — Instead of putting all the functions for a task into a single computer, define for a standardized interface to connect different devices to perform a task.  
     
-    - By arranging the basic electronic components in particular patterns to achieve a specific narrow specialized task,
-      like storing data on some medium, measuring sensors, controlling a motor, displaying an image, etc.
-      
-      > Digital Computer Techniques: Programming (1962) - AT&T Archives
-      >   - https://www.youtube.com/watch?v=dFZecokdHLo
-      > Digital Computer Techniques: Computer Units (1962) - AT&T Archives
-      >   - https://www.youtube.com/watch?v=5d7EMsy_RC0
+  - By arranging the basic electronic components in particular patterns to achieve a specific narrow specialized task,
+    like storing data on some medium, measuring sensors, controlling a motor, displaying an image, etc.
+    
+    > Digital Computer Techniques: Programming (1962) - AT&T Archives
+    >   - https://www.youtube.com/watch?v=dFZecokdHLo
+    
+    > Digital Computer Techniques: Computer Units (1962) - AT&T Archives
+    >   - https://www.youtube.com/watch?v=5d7EMsy_RC0
 
-    - Bus (a set of wires that connect the CPU to the rest of the computer)
-      > - Experimenting with Buses and Three-State Logic
-      >   - https://www.youtube.com/watch?v=_3cNcmli6xQ
+  - Bus (a set of wires that connect the CPU to the rest of the computer)
+    > - Experimenting with Buses and Three-State Logic
+    >   - https://www.youtube.com/watch?v=_3cNcmli6xQ
 
-    - ROM (Read-Only Memory)
-        - usually contains the basic software to start the computer, sometimes called "firmware")
-        - Not easy to change, but can be changed with special equipment.
-        - TODO add a ROM video
+  - ROM (Read-Only Memory)
+    - usually contains the basic software to start the computer, sometimes called "firmware")
+    - Not easy to change, but can be changed with special equipment.
+      [<img src="assets/ROM.png" width="400">](https://en.wikipedia.org/wiki/Read-only_memory)
 
-    - RAM (Random Access Memory)
-      > RAM module build - part 1
-      >   - https://www.youtube.com/watch?v=uYXwCBo40iA
-      > RAM - Random Access Memory - How does a RAM of PC store data?- Video IT
-      >   - https://www.youtube.com/watch?v=Kav6oOFDQSA
-      > Dynamic Random Access Memory (DRAM). Part 1: Memory Cell Arrays
-      >   - https://www.youtube.com/watch?v=I-9XWtdW_Co
+  - RAM (Random Access Memory)
+    > RAM module build - part 1
+    >   - https://www.youtube.com/watch?v=uYXwCBo40iA
+    
+    > RAM - Random Access Memory - How does a RAM of PC store data?- Video IT
+    >   - https://www.youtube.com/watch?v=Kav6oOFDQSA
+    
+    > Dynamic Random Access Memory (DRAM). Part 1: Memory Cell Arrays
+    >   - https://www.youtube.com/watch?v=I-9XWtdW_Co
 
-    - I/O (Input/Output) & Peripherals & Removable Storage & More
-        - All just more variations of the same thing
-            - All built up from the same basic logic gates and transistors, or similar technology
-            - Even video cameras, microphones, radios and speakers are just variations of the same basic technology
-        - Using the same principles to represent logic states and perform logical operations
-        - Often electromagnets to control mechanical devices or other machines
-            - The classic example is the "hard drive" which uses a spinning disk and a moving arm to read and write data
-            - The "hard drive" is a "magnetic" storage device, and uses tiny spots of "magnetized" material to represent the "state" of the data
-            - The arm is controlled by software and uses "magnets" to move the arm to the correct position to read and write the data
-            - Some sort of electrified magnet is the usual way that computers interact physically with the world
+  - I/O (Input/Output) & Peripherals & Removable Storage & More
+    - All just more variations of the same thing
+        - All built up from the same basic logic gates and transistors, or similar technology
+        - Even video cameras, microphones, radios and speakers are just variations of the same basic technology
+    - Using the same principles to represent logic states and perform logical operations
+    - Often electromagnets to control mechanical devices or other machines
+      - The classic example is the "hard drive" which uses a spinning disk and a moving arm to read and write data
+      - The "hard drive" is a "magnetic" storage device, and uses tiny spots of "magnetized" material to represent the "state" of the data
+      - The arm is controlled by software and uses "magnets" to move the arm to the correct position to read and write the data
+      - Some sort of electrified magnet is the usual way that computers interact physically with the world
 
-          > DATA PROCESSING AN INTRODUCTION 1972 KEY PUNCH COMPUTER & MAGNETIC TAPE EDUCATIONAL FILM
-          >   - https://www.youtube.com/watch?v=uOYJtnux2sA
-          > Communications Milestone: Charged Coupled Devices (with Bonus Edition Introduction) — AT&T
-          >   - https://youtu.be/MoqeMEsC5p0?si=iizZq8ZJGxSEh16P&t=206
-          >> Note that the CCD was invented in an "hour" due to how many other technologies had to be invented first.
+    > DATA PROCESSING AN INTRODUCTION 1972 KEY PUNCH COMPUTER & MAGNETIC TAPE EDUCATIONAL FILM
+    >   - https://www.youtube.com/watch?v=uOYJtnux2sA
+    
+    > Communications Milestone: Charged Coupled Devices (with Bonus Edition Introduction) — AT&T
+    >   - https://youtu.be/MoqeMEsC5p0?si=iizZq8ZJGxSEh16P&t=206
+    >> Note that the CCD was invented in an "hour" due to how many other technologies had to be invented first.
 
-    - Putting it all together
-      > 1969 EDUTRONICS COMPUTER DATA PROCESSING PRINCIPLES & FILE CONCEPTS 54124
-      >   - https://www.youtube.com/watch?v=0bLQ9EQ6PdY
-      > 1970s COMPUTER DATA PROCESSING & FILE MAINTENANCE EDUCATIONAL FILM FLOWCHARTS
-      >   - https://www.youtube.com/watch?v=geo8UtItSwU
+  - Putting it all together
+    > 1969 EDUTRONICS COMPUTER DATA PROCESSING PRINCIPLES & FILE CONCEPTS 54124
+    >   - https://www.youtube.com/watch?v=0bLQ9EQ6PdY
+    
+    > 1970s COMPUTER DATA PROCESSING & FILE MAINTENANCE EDUCATIONAL FILM FLOWCHARTS
+    >   - https://www.youtube.com/watch?v=geo8UtItSwU
 
 [Continue Reading](DataSructures.md)
