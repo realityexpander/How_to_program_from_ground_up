@@ -51,20 +51,26 @@
   - Kinds of representations through history:
     
     - Knots & Beads on a string - prehistoric, 6000 BC to 1500 AD
-      - [<img src="assets/beads_on_string.png" width="400">](https://www.peruforless.com/blog/quipu/)
+      
+      [<img src="assets/beads_on_string.png" width="400">](https://www.peruforless.com/blog/quipu/)
     
     - Physical indentations in clay — 8000 BC to 100 AD
-      - [<img src="assets/cuneiform.png" width="400">](https://www.thoughtco.com/clay-tokens-mesopotamian-writing-171673)
-      - [<img src="assets/phyiscal_indentations.png" width="400">](https://www.thoughtco.com/clay-tokens-mesopotamian-writing-171673)
+      
+      [<img src="assets/cuneiform.png" width="400">](https://www.thoughtco.com/clay-tokens-mesopotamian-writing-171673)
+      
+      [<img src="assets/phyiscal_indentations.png" width="400">](https://www.thoughtco.com/clay-tokens-mesopotamian-writing-171673)
     
     - Beads on an abacus - 3000 BC to present
-      - [<img src="assets/abacus2.png" width="400">](https://en.wikipedia.org/wiki/Abacus) 
+      
+      [<img src="assets/abacus2.png" width="400">](https://en.wikipedia.org/wiki/Abacus) 
     
     - Ink Marks on paper - 3000 BC to present
-        - [<img src="assets/paper_ledger.png" width="400">](https://www.moderntreasury.com/journal/history-of-ledgers)
+      
+      [<img src="assets/paper_ledger.png" width="400">](https://www.moderntreasury.com/journal/history-of-ledgers)
     
     - Positions of sticks seen at a distance (Semaphores) - 1790s to 1850s
-      - https://www.youtube.com/watch?v=muMXPVCMI5o
+      > - TeleCommunication: Semaphore Systems
+      >   - https://www.youtube.com/watch?v=muMXPVCMI5o
     
     - Punched Holes in a paper card - 1800s to 1970s
       - Vast improvement over the paper ledger
@@ -72,31 +78,43 @@
       - Data collected from the 1890 US Census was the first large scale use of punched cards
       - Allowed for the first "programmable" machines that could be used to perform relatively complex tasks 
         like sorting and counting of specific data
-      - [<img src="assets/punched_card.png" width="400">](https://en.wikipedia.org/wiki/Punched_card)
-      - [<img src="assets/hollerith_counter.png" width="400">](https://en.wikipedia.org/wiki/Hollerith_machine)
-      - 1889 Herman Hollerith Census Machine by TMC which became IBM
-        - https://www.youtube.com/watch?v=9HXjLW7v-II
+      
+        [<img src="assets/punched_card.png" width="400">](https://en.wikipedia.org/wiki/Punched_card)
+        [<img src="assets/hollerith_counter.png" width="400">](https://en.wikipedia.org/wiki/Hollerith_machine)
+      
+      > - 1889 Herman Hollerith Census Machine by TMC which became IBM
+      >  - https://www.youtube.com/watch?v=9HXjLW7v-II
     
     - Remnants of photons hitting a piece of glass coated with a thin layer of phosphor - 1940s to 1980s
-      - [<img src="assets/williams_tube.png" width="400">](https://en.wikipedia.org/wiki/Williams_tube)
-      - [<img src="assets/williams_tube2.png" width="400">](https://en.wikipedia.org/wiki/Williams_tube)
-      - [<img src="assets/williams_tube3.png" width="400">](https://ub.fnwi.uva.nl/computermuseum/williamstube.html)
-      - Manchester Baby and the birth of Computer Memory
-        - https://www.youtube.com/watch?v=SpqayTc_Gcw
+      
+      [<img src="assets/williams_tube.png" width="400">](https://en.wikipedia.org/wiki/Williams_tube)
+      [<img src="assets/williams_tube2.png" width="400">](https://en.wikipedia.org/wiki/Williams_tube)
+      [<img src="assets/williams_tube3.png" width="400">](https://ub.fnwi.uva.nl/computermuseum/williamstube.html)
+      
+      > - Manchester Baby and the birth of Computer Memory
+      >  - https://www.youtube.com/watch?v=SpqayTc_Gcw
          
     - Magnetic Phenomenon - 1950s to present
       - Electronically detectable areas on magnetizable material, or the presence of a magnetic field in a specific area
+      
       - Core Memory - 1955 to 1975
-        - [<img src="assets/core_memory.png" width="400">](https://en.wikipedia.org/wiki/Core_memory) 
+        
+        [<img src="assets/core_memory.png" width="400">](https://en.wikipedia.org/wiki/Core_memory) 
       - Magnetic Tape - 1928 to present
-        - [<img src="assets/magnetic_viewer.png" width="400">](https://www.youtube.com/watch?v=aZOxn8ggX8w)
+        - "Sequential" access to data, like a cassette tape or a VHS tape
+        
+        [<img src="assets/magnetic_viewer.png" width="400">](https://www.youtube.com/watch?v=aZOxn8ggX8w)
       - Magnetic Disk - 1956 to present
-      - [<img src="assets/10mb_hard_disk.png" width="400">](https://en.wikipedia.org/wiki/IBM_305_RAMAC)
+        - "Random" access to data, like a record player or a CD player, and uses mechanical means to access the data
+        
+        [<img src="assets/10mb_hard_disk.png" width="400">](https://en.wikipedia.org/wiki/IBM_305_RAMAC)
     
-    - Detectable electrical capacitance in a tiny area of silicon - 1960s to present
-      - [<img src="assets/DRAM.png" width="400">](https://en.wikipedia.org/wiki/Dynamic_random-access_memory)
+    - Tiny electrical charge of a capacitor (gaps between metals) in a tiny area of space - 1960s to present
+      - DRAM (Dynamic Random Access Memory) Chip (10x magnification), not mechanical at all, just electrical.
+        
+        [<img src="assets/DRAM.png" width="400">](https://en.wikipedia.org/wiki/Dynamic_random-access_memory)
   
-  - Creating ANY machine capable of using boolean logic enables complex custom general solutions
+  - ### Creating ANY machine capable of using boolean logic enables complex custom general solutions.
     - The problems must be able to be represented with binary information and the solution must be able to be 
       represented with a series of logical operations.
     - By building up from the simple logic of `AND`, `OR`, and `NOT` operations, humans can create an 
@@ -106,8 +124,11 @@
       controlled by a series of logical operations & conditions that lead to certain states and available actions.
     - These logical operations are built up using patterns called "algorithms" grouped together in "programs" that
       can be executed by a digital computer.
-    - All of this is based on human ingenuity and cleverness, as the computer knows nothing about the problem. 
-    - It's just following the logical operations that humans have carefully designed to represent the problem and a solution.
+      
+      > ## All of this "technology" is based on human ingenuity and cleverness to exploit natural phenomenon in a way to create some "useful work". 
+      > ### The machines cannot possibly "know" anything about the problem or solution, and never will. 
+    
+      ### It's just following the logical operations that humans have carefully designed to represent the problem and represent a solution.
 
 # HARDWARE - We Must Have A Machine To Do The Work (Until We All Attain Accurate Psychic Powers)
 
@@ -124,9 +145,12 @@
     - In this way we can use the light to represent a "bit" of information, which is the most basic unit of information in computing.
   
   - ## The Simple Switch
-    - Easier to manipulate for humans than a bare wire
-    - Can be physically manipulated using electricity to change state using an electromagnet.
-    - Simple switches can be used to represent boolean logic operations
+    - ### BIG IDEA - A switch can be used to represent a logic "state" 
+      - This is the most basic representation of a "state" in computing
+      - Easier to manipulate for humans than a bare wire
+    - Simple switches can be used to represent two boolean logic operations: AND and OR
+      - Two switches in series represent a Logical AND gate
+      - Two switches in parallel represent a Logical OR gate
     - These operations are called "gates", conceptually similar to someone following path across a fence, you can only 
       pass through a gate if it's open, and you can't pass through if it's closed.
     
@@ -135,66 +159,93 @@
       - false = 0 = off = not connected
       - A Logical "1" and "0" are called a "bit", as in a "binary digit"
       - Two switches in series represent a Logical AND gate
-        - `AND` ( the `&&` symbol )
-          - 0 && 0 => 0
-          - 0 && 1 => 0
-          - 1 && 0 => 0
-          - 1 && 1 => 1
+        - `AND` is the `&&` symbol in most programming languages.
+        ```Console
+          Truth Table of AND gate
+          | A | B | A && B |
+          |---|---|--------|
+          | 0 | 0 |   0    |
+          | 0 | 1 |   0    |
+          | 1 | 0 |   0    |
+          | 1 | 1 |   1    |
+          ```
       - Two switches in parallel represent a Logical OR gate
-        - `OR` ( the `||` symbol) 
-          - 0 || 0 => 0
-          - 0 || 1 => 1
-          - 1 || 0 => 1
-          - 1 || 1 => 1
-      - Boolean logic requires one more operation to be complete: The logical `NOT` operation...
+        - `OR` is the `||` symbol in most programming languages. 
+        ```Console
+          Truth Table of OR gate
+          | A | B | A || B |
+          |---|---|--------|
+          | 0 | 0 |   0    |
+          | 0 | 1 |   1    |
+          | 1 | 0 |   1    |
+          | 1 | 1 |   1    |
+          ```
 
-    - Insight 1: Logic in Physical Form
-      - https://www.youtube.com/watch?v=txH3K3shIWs
-    - Exploring How Computers Work 
-      - https://www.youtube.com/watch?v=QZwneRb-zqA 
+        > - Insight 1: Logic in Physical Form
+        >   - https://www.youtube.com/watch?v=txH3K3shIWs
+        > - Exploring How Computers Work 
+        >   - https://www.youtube.com/watch?v=QZwneRb-zqA 
+  
+    - ## _Boolean logic requires one more operation to be complete: The logical `NOT` operation..._
+      - We need some kind of switch to represent a Logical NOT gate to create any other Boolean logic operation.
+        - `NOT` is the `!` symbol in most programming languages.
+        ```Console
+          Truth Table of NOT gate
+          | A | !A |
+          |---|----|
+          | 0 |  1 |
+          | 1 |  0 |
+          ```
+      - ### We need the light bulb to on when the switch is off, and off when the switch is on, BUT HOW TO DO THAT?
   
   - ## The Magnificent Magnet
-    - Magnets can be electrically controlled to cause mechanical actions on certain metallic materials
+    - ### BIG IDEA - Magnets can be electrically controlled to cause mechanical actions on certain metallic materials
     - Certain Metallic Materials can be "magnetized" and "polarized" using electricity to represent a "state"
       - Magnetized or not (1 or 0) 
       - North or South (1 or 0)
       - It's magnificent bc its so useful and versatile
-    - How To Make an Electromagnet 
-      - https://youtu.be/Vpb7IQ2Ib_Y
-    - Magnetic Viewing Film - How it Works/Demos 
-      - https://www.youtube.com/watch?v=slVL5nbTXd4
+      > - How To Make an Electromagnet 
+      >   - https://youtu.be/Vpb7IQ2Ib_Y
+      > - Magnetic Viewing Film - How it Works/Demos 
+      >   - https://www.youtube.com/watch?v=slVL5nbTXd4
   
   - ## The Raucous Relay
-    - Uses an electromagnet to control a switch (or multiple switches)
+    - ### BIG IDEA - Use an electromagnet to control a switch (or multiple switches) 
     - the first electrical computers were made of relays (extremely slow but faster than writing by hand!)
-    - If a circuit is designed to turn a switch OFF when the relay is electrified, this creates a logical NOT gate, 
-      so using a relay in this way allows us to represent any other logic gate.
-    - NOT (!)
-        - !0 = 1
-        - !1 = 0
-    - The relay can be used to represent any other logic gate
-    - It's raucous because it makes a lot of noise
-    - AND OR NOT gates with Relays
-      - https://www.youtube.com/watch?v=FKub2SuugsQ
-    - Computers built using Relays
-      - https://youtu.be/e8DavnWmr1E
-      - https://youtu.be/NXeBR-lbnjI
-    - Hexadecimal Relay Calculator
-      - https://www.youtube.com/watch?v=OzTwg-AQJ6E
-    - Relay Calculators: Episode 3 - Relay Logic Gates, Latches and Delays
-      - https://www.youtube.com/watch?v=_nXc439NTYk
-    - Relay Calculators: Episode 4 - Mistakes
-      - https://youtu.be/OZXwNiJ7mtw
+    - If a relay is set up to turn a switch OFF when the electromagnet is electrified, this creates a logical NOT gate, 
+      so using a relay in this way allows us to represent any other logic gate!
+    - `NOT` is the `!` symbol in most programming languages.
+        ```Console
+          Truth Table of NOT gate
+          | A | !A |
+          |---|----|
+          | 0 |  1 |
+          | 1 |  0 |
+    
+    - Logical NOT is also called "inversion" or "negation" in Boolean logic, or "inverted state"  
+    - It's raucous because it makes a lot of noise when it switches on and off
+    
+      > - AND OR NOT gates with Relays
+      >   - https://www.youtube.com/watch?v=FKub2SuugsQ
+      > - Computers built using Relays
+      >   - https://youtu.be/e8DavnWmr1E
+      >   - https://youtu.be/NXeBR-lbnjI
+      > - Hexadecimal Relay Calculator
+      >   - https://www.youtube.com/watch?v=OzTwg-AQJ6E
+      > - Relay Calculators: Episode 3 - Relay Logic Gates, Latches and Delays
+      >   - https://www.youtube.com/watch?v=_nXc439NTYk
+      > - Relay Calculators: Episode 4 - Mistakes
+      >   - https://youtu.be/OZXwNiJ7mtw
   
   - ## The Voracious Vacuum Tube
-    - How Vacuum Tubes Work 
-      - https://www.youtube.com/watch?v=nA_tgIygvNo
-      - Note: While the actual physical electron flow direction is from the "negative" terminal to the 
-        "positive" terminal, the "conventional" flow direction of electricity in schematics is considered to go 
-        from the "positive" terminal to the "negative" terminal. 
-      - _Yes!_ this is rather confusing at first, and you can give thanks Ben Franklin for his technical debt we 
-        all have to deal with at the beginning of learning electronics.
-    - Electricity in a vacuum behaves differently than in normal atmosphere. Electrons can flow freely in a vacuum. 
+    - ### BIG IDEA - Instead of using a magnetic field to control a switch, we can use a vacuum to control the flow of electricity 
+      > - How Vacuum Tubes Work 
+      >   - https://www.youtube.com/watch?v=nA_tgIygvNo
+    
+      > - ### **Notice:**  While the actual physical electron flow direction is from the "negative" terminal to the "positive" terminal, the "conventional" flow direction of electricity in schematics is considered to go from the "positive" terminal to the "negative" terminal. 
+      >> Yes! This is rather confusing at first, and you can give thanks to ding-dong Ben Franklin for this bit of technical debt we all have to deal with at the beginning of learning electronics.
+    - Electricity in a vacuum behaves differently than in normal atmosphere. 
+      - Electrons can flow freely in a vacuum. I like to think of this as the invention of "nothing."
       - Tubes exploit this behavior of electrons in a vacuum to perform like a switch or an amplifiers.
     - Tube made for use in logic (Triode) consists of three parts:
       - **"Cathode"** 
@@ -209,28 +260,28 @@
       - ie: when the grid is positively charged, the flow of electricity from cathode to the anode is allowed.
       - ie: when the grid is negatively charged, the flow of electricity from cathode to the anode is deterred.
       - This acts by default like a logical "NOT" gate.
-    - The tube can be used to represent any other logic gate
-    - In a Minute: Vacuum Tube Diodes in 60 Seconds
-      - https://www.youtube.com/watch?v=8so4qQcOAvQ
-    - In a Minute: Vacuum Tube Triodes in 60 Seconds
-      - https://www.youtube.com/watch?v=frZ35Y48vSk
-    - Let’s Build Some Logic Gates out of Vacuum Tubes: OR, NOR, NAND, AND
-      - https://www.youtube.com/watch?v=NkmrMdigB-8
-    - The vacuum tube is voracious because it consumes a lot of power to heat the cathode and 
-      generates a lot of excess heat
+    - The tube can be used to represent any other logic gate.
+    
+      > - In a Minute: Vacuum Tube Diodes in 60 Seconds
+      >   - https://www.youtube.com/watch?v=8so4qQcOAvQ
+      > - In a Minute: Vacuum Tube Triodes in 60 Seconds
+      >   - https://www.youtube.com/watch?v=frZ35Y48vSk
+      > - Let’s Build Some Logic Gates out of Vacuum Tubes: OR, NOR, NAND, AND
+      >   - https://www.youtube.com/watch?v=NkmrMdigB-8
+    - #### The vacuum tube is voracious because it consumes a lot of power to heat the cathode and generates a lot of excess heat.
   
   - ## The Tiny Transistor
     - Very similar behavior to the vacuum tube, but much smaller and faster
-      - How a transistor works
-        - https://www.youtube.com/watch?v=DXvAlwMAxiA
-      - Excellent animation of physical electrical flow thru semiconductors and how LED's are made
-        - Why It Was Almost Impossible to Make the Blue LED
-        - https://www.youtube.com/watch?v=AF8d72mA41M&t=203
+      > - How a transistor works
+      >   - https://www.youtube.com/watch?v=DXvAlwMAxiA
+    - Excellent animation of physical electrical flow thru semiconductors and how LED's are made
+      > - Why It Was Almost Impossible to Make the Blue LED
+      >   - https://www.youtube.com/watch?v=AF8d72mA41M&t=203
     - No vacuum required, just a the semiconductor material.
       - Uses photographic techniques to create the transistor, not regular metallic parts.
       - Difference in behavior between Tubes and Transistors
-        - Vacuum Tubes: Episode 2 - The Triode (Part 1)
-          - https://www.youtube.com/watch?v=xurmZWLjW2g  
+        > - Vacuum Tubes: Episode 2 - The Triode (Part 1)
+        >   - https://www.youtube.com/watch?v=xurmZWLjW2g  
     
     - The Transistor consists of three parts:
       - **"Drain"** 
@@ -248,27 +299,28 @@
     - The transistor is tiny because it is very small and fast, bumping up against the limits of physics on how 
       small it can be made.
     
-    - How do computers remember?
-      - https://www.youtube.com/watch?v=I0-izyq6q5s
-    
-    - Transistors can create sophisticated operations by combining them in clever ways
-      - Designing a 7-segment hex decoder
-        - https://www.youtube.com/watch?v=7zffjsXqATg 
-      - Transistor Clock
-       - https://www.youtube.com/watch?v=Iu-W7LpSDmk  
-
     - ### How to Build Complex Logic Gates from Simple Transistors
-      - Using a transistor to solve our problem - How transistors work as a switch
-        - https://www.youtube.com/watch?v=ks_VShSgPns
-      - Inverting the signal with a transistor (The `NOT` gate)
-        - https://www.youtube.com/watch?v=hYN8C769k8A
-      - Making logic gates from transistors 
-        - https://www.youtube.com/watch?v=sTu3LwpF6XI
-      - How does memory work?
-        - SR Latch 
-        - https://youtu.be/KM0DdEaY5sY
-      - Insight 2: The MOS Transistor
-        - https://www.youtube.com/watch?v=sshPV7BV0k0
+      > - How do computers remember?
+      >   - https://www.youtube.com/watch?v=I0-izyq6q5s
+    
+      - Transistors can create sophisticated operations by combining them in clever ways
+        > - Designing a 7-segment hex decoder
+        >   - https://www.youtube.com/watch?v=7zffjsXqATg 
+        > - Transistor Clock
+        >   - https://www.youtube.com/watch?v=Iu-W7LpSDmk  
+
+      - How do the essentials work?
+      > - Using a transistor to solve our problem - How transistors work as a switch
+      >   - https://www.youtube.com/watch?v=ks_VShSgPns
+      > - Insight 2: The MOS Transistor
+      >   - https://www.youtube.com/watch?v=sshPV7BV0k0
+      > - Inverting the signal with a transistor (The `NOT` gate)
+      >   - https://www.youtube.com/watch?v=hYN8C769k8A
+      > - Making logic gates from transistors 
+      >   - https://www.youtube.com/watch?v=sTu3LwpF6XI
+      > - How does memory work?
+      >   - SR Latch 
+      >   - https://youtu.be/KM0DdEaY5sY
   
   - ## The Interchangeable Integrated Chip (IC) 
   - Groups of transistor logic gates packaged together to perform a specific task
@@ -276,9 +328,9 @@
     - A Package is a group of transistors for a specific logic operation placed on a single chip contained in a plastic
       or ceramic enclosure with metal pins to connect to the rest of the computer.
       - Basic functions consist of Logical OR, AND, NOT, NAND package (usually 2-4 gates in the same package)
-      - Extremely complex functions are made by combining many of these packages together in clever ways
-      - “MY FIRST CHIP” - Carver Mead - 2017
-          - https://www.youtube.com/watch?v=F5P5SAlEbo4
+      - Extremely complex functions are made by combining many of these packages in clever ways
+      > - “MY FIRST CHIP” - Carver Mead - 2017
+      >   - https://www.youtube.com/watch?v=F5P5SAlEbo4
   
   - Robert Noyce, inventor of first monolithic IC 
     
@@ -320,51 +372,50 @@
     
     [<img src="assets/seven_segment/Schematic-of-BCD-to-Decimal-Decoder.png" width="400">](https://www.researchgate.net/figure/Binary-coded-decimal-4-to-7-decoder-a-Schematics-of-a-4-to-7-decoder-implemented-with_fig4_337084817)
 
-  - Visualizing Data with 7-Segment Displays
-    - https://www.youtube.com/watch?v=hEDQpqhY2MA
+    > - Visualizing Data with 7-Segment Displays
+    >   - https://www.youtube.com/watch?v=hEDQpqhY2MA
 
   - Why is NAND gates so special?
     - It's the most flexible can be combined to create any other logic gate, ie: AND, OR, NOT, XOR, etc.
-      1) tie inputs A & B together to create a NOT gate
-      2) tie inputs A & B together combined with a NOT gate to create an OR gate
-      3) use normal A & B inputs and combine with a NOT to create an AND gate
-    - Everything in computers can be done with just these three types of gates
-    - Most early digital electronic calculators were made solely with many IC's of these NAND gates
+      1) Tie inputs A & B together to create a NOT gate.
+      2) Tie inputs A & B together combined with a NOT gate to create an OR gate.
+      3) Use normal A & B inputs and combine with another NAND gate in a NOT configuration to create an AND gate.
+    - Everything in computers can be done with just these three types of gates.
+    - Most early digital electronic calculators were made solely with many IC's of these NAND gates.
     
-  - From simple NAND gate packages to a somewhat sophisticated 7-segment display using LED's
-    - Designing a 7-segment hex decoder
-      - https://www.youtube.com/watch?v=7zffjsXqATg
+  - From simple NAND gate packages to a somewhat sophisticated 7-segment display using LED's.
+    > - Designing a 7-segment hex decoder
+    >   - https://www.youtube.com/watch?v=7zffjsXqATg
 
 
   - ## The Mighty Microprocessor (groups of integrated chips -> all put on one chip)
-    - Contains a CPU (Central Processing Unit) and a small amount of ultra fast memory (called "Registers")
-    - The CPU is just a clever and somewhat complex arrangement of logic gates that can perform a series of logical operations
-      - An intuitive approach for understanding the CPU and RAM
-        - https://www.youtube.com/watch?v=-IyB8hBkA9w
-      - How a CPU Works
-        - https://www.youtube.com/watch?v=cNN_tTXABUA
+    - Contains a CPU (Central Processing Unit) and a small amount of ultra fast memory (called "Registers").
+    - The CPU is just a clever and somewhat complex arrangement of logic gates that can perform a series of logical operations/
+      > - An intuitive approach for understanding the CPU and RAM
+      >   - https://www.youtube.com/watch?v=-IyB8hBkA9w
+      > - How a CPU Works
+      >   - https://www.youtube.com/watch?v=cNN_tTXABUA
     
-    - Each part of the CPU is made of millions of the same kinds of logic gates that we've already discussed
-    - The CPU has a "clock" to synchronize the operations of the CPU
-    - It also has a "program counter" to keep track of the current instruction in memory that the CPU is executing
-    - Has an "ALU" (Arithmetic Logic Unit) to perform basic arithmetic and logical operations
+    - Each part of the CPU is made of millions of the same kinds of logic gates that we've already discussed.
+    - The CPU has a "clock" to synchronize the operations of the CPU.
+    - It also has a "program counter" to keep track of the current instruction in memory that the CPU is executing.
+    - Has an "ALU" (Arithmetic Logic Unit) to perform basic arithmetic and logical operations.
       - How does an ALU work? 
-        - Learn how computers add numbers and build a 4 bit adder circuit 
-        - https://youtu.be/wvJc9CZcvBc 
-    - May contain a small amount of "cache" memory (very fast memory near the CPU circuits) to speed up access to main memory
-    - CPU's are where the execution of each instruction happens
+        > - Learn how computers add numbers and build a 4 bit adder circuit 
+        > - https://youtu.be/wvJc9CZcvBc 
+    - May contain a small amount of "cache" memory (very fast memory near the CPU circuits) to speed up access to main memory.
+    - CPU's are where the execution of each instruction happens.
 
   - ## The Configurable Computer
     - ROM (Read Only Memory 
       - usually contains the basic software to start the computer, sometimes called "firmware")
       - Not easy to change, but can be changed with special equipment.
-      - https://www.youtube.com/watch?v=3l5q0xaQEf8
-    - RAM (Random Access Memory) 
-      - https://www.youtube.com/watch?v=uYXwCBo40iA
-      - RAM - Random Access Memory - How does a RAM of PC store data?- Video IT
-        - https://www.youtube.com/watch?v=Kav6oOFDQSA
-      - Dynamic Random Access Memory (DRAM). Part 1: Memory Cell Arrays
-        - https://www.youtube.com/watch?v=I-9XWtdW_Co
+        > - RAM (Random Access Memory) 
+        >  - https://www.youtube.com/watch?v=uYXwCBo40iA
+        > - RAM - Random Access Memory - How does a RAM of PC store data?- Video IT
+        >   - https://www.youtube.com/watch?v=Kav6oOFDQSA
+        > - Dynamic Random Access Memory (DRAM). Part 1: Memory Cell Arrays
+        >  - https://www.youtube.com/watch?v=I-9XWtdW_Co
     - IO & Peripherals & Removable Storage & More
       - All just more variations of the same thing
         - All built up from the same basic logic gates and transistors, or similar technology
@@ -375,14 +426,13 @@
         - The "hard drive" is a "magnetic" storage device, and uses tiny spots of "magnetized" material to represent the "state" of the data
         - The arm is controlled by software and uses "magnets" to move the arm to the correct position to read and write the data
         - Some sort of electrified magnet is the usual way that computers interact physically with the world
-    
-> [!NOTE]
-> Experimenting with Buses and Three-State Logic
->  - https://www.youtube.com/watch?v=_3cNcmli6xQ
+
+      > - Experimenting with Buses and Three-State Logic
+      >   - https://www.youtube.com/watch?v=_3cNcmli6xQ
 
 # SOFTWARE - The Easily Changeable Machine
 
-# Machine Code — The Microcode Soft-Circuitry Commands of the CPU
+## Machine Code — The Microcode Soft-Circuitry Commands of the CPU
   - BIG IDEA - Logic gates can be built up to create a "general-purpose" machine that can be setup using software
     instead of discrete physical components. The software can be changed to change the behavior of the machine instead
     of physically creating a new machine. 
@@ -460,8 +510,8 @@
       - Often uses a quartz crystal (XTAL in schematic) and the piezoelectric effect to keep a steady beat, like a watch
       - Can also use a 555 timer chip to generate a clock signal
     - Used synchronizes the operations of the CPU
-      - Example Implementation - Astable 555 timer - 8-bit computer clock - part 1
-      - https://www.youtube.com/watch?v=kRlSFm519Bo 
+      > - Example Implementation - Astable 555 timer - 8-bit computer clock - part 1
+      >   - https://www.youtube.com/watch?v=kRlSFm519Bo 
     - Everything in the computer happens one step at a time, and the clock is the thing that makes the "steps"
     - Each "tick" of the clock is called a "cycle"
     - The cycle of the clock is not the same as the cycle of the CPU, but the CPU normally does one operation per cycle
@@ -472,8 +522,8 @@
       current instruction that the CPU will execute/is executing
     - All instructions are processed one at a time per CPU, and never more than 1 instruction at a time.
     - Starts at the first memory location(0x00000000), and then increments by 1 after each instruction is executed.
-    - Program Counter Build
-      - https://www.youtube.com/watch?v=tNwU7pK_3tk
+      > - Program Counter Build
+      >  - https://www.youtube.com/watch?v=tNwU7pK_3tk
     - The "program counter" is updated by the "clock" at the end of each "cycle", or when a "jump" instruction is executed
 
   - ### Common Machine Code Opcodes (actual opcode is for Motorola 6502 CPU)
@@ -502,8 +552,8 @@
     - After the operation is complete, the program counter (PC) is updated with the address of the next instruction to 
       be executed (or with a different location in memory if a "jump" instruction is executed)
     - The "fetch-decode-execute" cycle is the basis for all computing, and is the most important part of the CPU
-    - 8-bit CPU control logic: Part 1
-      - https://www.youtube.com/watch?v=dXdoim96v5A  
+      > - 8-bit CPU control logic: Part 1
+      >   - https://www.youtube.com/watch?v=dXdoim96v5A  
   
   - ### Registers — "The Tiny Superfast Memory Nearest to the CPU & Keeps the State of the CPU"
     - Registers are a small amount of super fast memory that is built into the CPU
@@ -531,8 +581,8 @@
         - Sets the "Greater" flag if the result of the operation was greater than the other operand
         - Sets the "Less" flag if the result of the operation was less than the other operand
         - Sets the "Equal" flag if the result of the operation was equal to the other operand
-    - Learn how computers add numbers and build a 4 bit adder circuit
-      - https://www.youtube.com/watch?v=wvJc9CZcvBc&list=WL    
+      > - Learn how computers add numbers and build a 4 bit adder circuit
+      >   - https://www.youtube.com/watch?v=wvJc9CZcvBc&list=WL    
   
   - ### Control Unit
     - The "Control Unit" is the part of the CPU that controls the "fetch-decode-execute" cycle
@@ -563,84 +613,93 @@
     ```
 
 - # Assembly Language
-  - BIG IDEA - Make the machine code easier for humans to read and write by using "mnemonics" to represent the opcodes.  
-  - Assembly Language is a "human-readable" mnemonic representation of the "machine code" that the CPU can executes directly
-  - The mnemonics are translated into the binary opcodes by an "Assembler"
-  - The assembler is a program that converts and expands the mnemonics into the specific particular binary opcodes. 
+  - ### BIG IDEA - Make the machine code easier for humans to read and write by using "mnemonics" to represent the opcodes instead of the actual hex values.
+  - Assembly Language is a "human-readable" mnemonic representation of the "machine code" that the CPU can executes directly.
+  - The mnemonics are translated into the binary opcodes by another program called an "Assembler."
+  - The assembler converts and expands the mnemonics into the specific particular binary opcodes for each 
+    particular operation and arrangement of operands. It also calculates the memory addresses for the labels and
+    variables in the program.
   - Assembly Language is the most "primitive" language that a human can reasonably use to program a computer in an efficient manner.
   - It's totally possible to program a computer using just "machine code" (the binary opcodes), but it's challenging and error-prone.
   - There is no "universal" assembly language, each CPU has it's own assembly language, so the assembly language is 
     completely dependent on the specific CPU and is usually defined by the manufacturer of the CPU.
   - The complexity of the assembly language is usually directly related to the complexity of the CPU & the number of 
-    different operations that the CPU can perform.
+    different operations that the CPU can perform in it's "instruction set" of opcodes.
   
-  - ## Common Assembly Language Operations
+  - ## Common Assembly Language Operations (Mnemonics for Opcodes)
 
-  - ### Jump 
+  - ### Jump  `JMP`
     - The "goto" statement of machine code
     - Changes the program counter (PC) to point to a different location in memory
-    - Usually mnemonic `JMP`
-    - Also known a "branch" or "loop"
+    - Usually mnemonic `JMP [Label or Address]` where the operand is the label of the location in memory to jump to or a 
+      specific location in memory to jump to.
+    - Also known a "branch" or "loop."
     - No limits to where the jump can go, it be anywhere in memory. If it's wrong, the machine will likely halt
-      or do something unexpected, also called a "crash"
-  
-  - ### Load 
+      or do something unexpected, also called a "crash," "hang," "freeze," "fault," or "exception"
+  - ### Load `LDX`
     - Copies a value from a location in memory into a register (a tiny bit of memory that is part of the CPU)
-    - Usually mnemonic `LDX` where X is the register to load into
-  - ### Store 
-    - Copies a value from a register into a location in memory 
-    - Usually mnemonic `STX` where X is the register to store from
-  - ### Move 
-    - Copies a value from one register into another register 
-    - Usually mnemonic `MOV`
-  - ### Add 
-    - Adds the values in two registers and stores the result in a third register 
+    - Usually mnemonic `LDX [ADDR]` where X is the register to load into, and the operand is the location in memory to load from.
+    - Also known as "fetch" or "read" or "get."
+  - ### Store `STX`
+    - Copies a value from a register into a location in memory. 
+    - Usually mnemonic `STX [ADDR]` where X is the register to store from and the operand is the location in memory to store into.
+    - Also known as "write" or "put."
+  - ### Move `MOV`
+    - Copies a value from one register into another register. 
+    - Usually mnemonic `MOV X,Y` and an operand where X is the register to move from and Y is the register to move to.
+    - Also known as "copy" or "transfer."
+  - ### Add `ADD`
+    - Adds the values in two registers and stores the result in the Accumulator register.
     - Usually mnemonic `ADD`
-  - ### Subtract 
-    - Subtracts the values in two registers and stores the result in a third register 
+    - Also known as "increment" or "plus."
+  - ### Subtract `SUB`
+    - Subtracts the values in two registers and stores the result in a Accumulator register.
     - Usually mnemonic `SUB`
-  - ### Compare 
-    - Compares the values in two registers and updates the flag register 
-    - Usually mnemonic `CMP`
-
-  - ## Conditional Jump
+    - Also known as "decrement" or "minus."
+  - ### Compare `CMP`
+    - Compares the values in two registers and updates the flag register with the result. 
+    - Usually mnemonic `CMP X,Y` and an operand where X is the register to compare with Y.
+    - Also known as "test" or "equal."
+  - ### Conditional Jump `JNZ`
     - The "`if`" statement of machine code, controls the flow of the program, branching execution to different 
-      locations in memory depending on the result of a previous operation
-    - Changes the program counter (PC) to point to a different location in memory based on the result of a previous operation
-    - The results of the previous operation is kept in a "register" (a tiny bit of memory that is part of the CPU)
-    - The "if" statement is the most important part of programming, it's the basis for all decision making
+      locations in memory depending on the result of a previous operation.
+    - Changes the program counter (PC) to point to a different location in memory based on the result of a previous operation.
+    - The results of the previous operation is kept in an ALU (Arithmetic Logic Unit) "flag" register.
+    - The "if" statement is the most important part of programming, it's the basis for all decision making.
     - Usually mnemonics: 
-      - `JNZ` (Jump if the register flag "Not Zero" is set)
-      - `JZ` (Jump if the register flag "Zero" is set)
-      - `JG` (Jump if the register flag "Greater" Flag is set)
-      - `JL` (Jump if the register flag "Less" is set)
-    - Also known as "branching" or "a conditional" or "loop"
+      - `JNZ` (Jump if the register flag "Not Zero" is set.)
+      - `JZ` (Jump if the register flag "Zero" is set.)
+      - `JG` (Jump if the register flag "Greater" Flag is set.)
+      - `JL` (Jump if the register flag "Less" is set.)
+    - Also known as "branching" or "a conditional" or "loop."
   
   - ## Variables
-    - Are just named memory locations that are used to store data, sometimes called "fields," "attributes," or "properties"
-    - The data is a representation of something else, like a number or a letter, or maybe a color, or an address for another location in memory
+    - "Variables" are just named values for memory locations used to store data
+      - Often called "fields," "attributes," or "properties."
+    - The data is a representation of something else, like a number or a letter, or maybe a color, or an address 
+      for another location in memory.
     - Variables are a convenient way to give a name to a location in memory
-    - The "name" of the variable is used to by the assembler to access the "value" of the variable, instead of the 
-      "address" of the variable in memory.
-    - The naming is solely for the convenience of the human programmer, the machine doesn't care what the variable is 
-      called or that it even has a name. This is just a way to reduce the complexity of the program for the 
-      human programmer.
+    - The assembler uses to the name of the variable to access the value of the variable, instead of the 
+      address of the variable in memory. This is much easier for humans to remember and use.
+    - The naming is solely for the convenience of the human programmer, as the machine doesn't care what the variable is 
+      called or that it even has a name. This is just a way to reduce the complexity of the program for the people.
   
   - ## Subroutines
-    - Usually mnemonic CALL
-      - Jumps to a location of a function in memory & preserve current state
-      - Pushes the current PC & Registers onto the stack, and then changes the PC to point to a different location in memory
-    - Usually mnemonic RETURN
-      - A way to return from a function in machine code 
-    - The "call" statement changes the program counter (PC) to point to a different location in memory
-    - The "return" statement changes the program counter (PC) back to where it was before the "call" statement
+    - The `CALL` statement changes the program counter (PC) to point to a different location in memory.
+    - The `RETURN` statement changes the program counter (PC) back to where it was before the `CALL` statement.
+    - To start execution in a subroutine, the mnemonic `CALL [Label or Address]` is used.
+      - Preserves the current state of the registers before jumping. 
+      - Pushes the current PC & Registers onto the stack, and then changes the PC to point to a different location in memory.
+      - Execution continues until a "return" statement is executed.
+    - To return execution of a subroutine back to the line after it was called, the mnemonic `RET` or `RETURN` is used.
     - Programmers use the phrase "call a function" to mean "set execution of next instruction to a location in memory 
-      where a function is stored"
-    - The phrase "return from a function" to mean "set execution of next instruction to the location in memory where the function was called from"
-    - Subroutines are the basis for all structured programming
+      where a function is stored."
+    - The phrase "return from a function" to mean "set execution of next instruction to the location in memory where 
+      the function was called from."
+    - Subroutines are the basis for all structured programming.
 
 # Data Structures
-  - BIG IDEA - It's easier for humans to deal with names of structures that represent data in memory than hex code addresses.
+  - ### BIG IDEA - It's easier for humans to deal with names of structures that represent data in memory than hex code addresses.
   - "Data structures" are named concepts for common ways humans have invented to represent data, and often predate computing.
   - They represent real world items and concepts in a way that a computer can be programmed to represent and solve a problem.
   - For example, a "list" is a common data structure for a series of "items" in a specific order.
@@ -649,10 +708,10 @@
     - Items in lists can be accessed by their "index" which is a number that represents the position of the item in 
       the list count from the beginning of the list.
 
-  - 100+ Computer Science Concepts Explained in less than 15 minutes
-    - https://www.youtube.com/watch?v=-uleG_Vecis
-  - 10 Math Concepts for Programmers
-    - https://www.youtube.com/watch?v=bOCHTHkBoAs
+    > - 100+ Computer Science Concepts Explained in less than 15 minutes
+    >   - https://www.youtube.com/watch?v=-uleG_Vecis
+    > - 10 Math Concepts for Programmers
+    >   - https://www.youtube.com/watch?v=bOCHTHkBoAs
 
   - ## Numbers or Individual Characters? Or something else?
     
@@ -667,8 +726,8 @@
         - 2's Complement is the "complement" of the number (flipping the bits) and then adding 1.
         - 2's Complement is used to represent negative numbers in binary because it makes the addition and 
           subtraction of numbers easier.
-        - Twos complement: Negative numbers in binary 
-          - https://www.youtube.com/watch?v=4qH4unVtJkE
+          > - Twos complement: Negative numbers in binary 
+          >   - https://www.youtube.com/watch?v=4qH4unVtJkE
         - 1 byte (8 bits) can represent signed -128 to 127
         - 2 bytes (16 bits) can represent signed -32768 to 32767
         - 4 bytes (32 bits) can represent signed -2147483648 to 2147483647
@@ -679,12 +738,12 @@
         - 8 bytes (64 bits) can represent a double precision floating point number value from -1.7E308 to 1.7E308
         - Floating point numbers will use a "mantissa" and an "exponent" to represent the number in scientific notation
         - Due to the way floating point numbers are represented, they are not exact! And will have rounding errors!
-        - Why Is This Happening?! Floating Point Approximation! 
-          - https://www.youtube.com/watch?v=2gIxbTn7GSc
+          > - Why Is This Happening?! Floating Point Approximation! 
+          >   - https://www.youtube.com/watch?v=2gIxbTn7GSc
     
     - ### Characters/Letters are usually represented in ASCII (1 byte) or Unicode(1 or more bytes)
-      - Ascii is a 1 byte (8 bit) representation of the most common letters and symbols
-      - Unicode is a 1 or more byte representation of all the letters and symbols in all the world's languages
+      - ASCII is a 1 byte (8 bit) representation of the most common letters and symbols.
+      - Unicode is a 1 or more bytes representation of all the letters and symbols in all the world's languages.
     
     - ### Something else?
       - Numbers and Characters are the most common things to represent in memory, but anything can be represented in memory
@@ -696,29 +755,30 @@
       - The same eight bits can represent many different things, it's just a matter of how humans want to interpret the meaning of the bits.
   
 - ## Common Data Structures used in Programming
+  - ### BIG IDEA - Giving names to common ways of represent data in memory makes it easier for people to communicate with each other about what the data represents. 
   - These various ways of representing things is called "type" 
   - Types consist of the various representations of data in memory: 
-    - numbers
-    - characters (ASCII or Unicode)
-    - strings or even other arrays (multi-dimensional arrays)
-    - pointers (values representing _other_ locations in memory)
-    - Some languages allow functions to be represented as a type and passed around as a variable
-    - data structures (records, objects) made up of other types
-  - Animated Interactive Visualizations with pseduocode for many common data structures
-    - https://www.cs.usfca.edu/~galles/visualization/Algorithms.html
+    - numbers.
+    - characters (ASCII or Unicode.)
+    - strings or even other arrays (multi-dimensional arrays.)
+    - pointers (values representing _other_ locations in memory.)
+    - Some languages allow functions to be represented as a type and passed around as a variable.
+    - data structures (records, objects) made up of other types.
+      > - Animated Interactive Visualizations with pseudocode for many common data structures
+      >   - https://www.cs.usfca.edu/~galles/visualization/Algorithms.html
     
   - ### Array (1D, 2D, 3D, etc.)
-    - A way to represent a "list" of values in memory
-    - The values are usually all the same size & type & are all stored in a contiguous block of memory
-    - The values are usually accessed by an "index" which is a number that represents the position of the "thing" in the array
+    - A way to represent a "list" of values in memory.
+    - The values are usually all the same size & type & are all stored in a contiguous block of memory.
+    - The values are usually accessed by an "index" which is a number that represents the position of the "thing" in the array.
     
     - 1D Arrays
     
-      [<img src="assets/arrays.png" width="550"/>]()
+      [<img src="assets/arrays.png" width="350"/>]()
     
     - 2D Arrays
      
-      [<img src="assets/2d_arrays.png" width="550"/>]()
+      [<img src="assets/2d_arrays.png" width="450"/>]()
   
     - 2D Arrays in Code 
       - in C, other languages may flip the order of rows and columns 
@@ -726,7 +786,7 @@
       - C is a "row-major" language, meaning the rows is the first index and the columns is the second index
       - Python is a "column-major" language, meaning the columns is the first index and the rows is the second index
       
-      [<img src="assets/2dArraysInC.png" width="550"/>]() 
+      [<img src="assets/2dArraysInC.png" width="450"/>]() 
   
   - ### String
     - A way to represent a list of single letters (characters) in memory, "strung" together to represent words and 
@@ -736,7 +796,7 @@
     - Characters are usually accessed by an "index" which is just a number that represents the position of the 
       "characters" in the string, sometimes called an "offset"
     - Strings are also interchangably called "substring", ie: "start" and "end" indexes, also known as a "slice" or "span"
-      [<img src="assets/strings.png" width="550"/>]()
+      [<img src="assets/strings.png" width="350"/>]()
   
   
   - ### Pointer
@@ -762,7 +822,7 @@
         "address pointer" is 4 bytes long (32 bits)
   
       [Another pointer diagram](assets/pointer.png)
-    - ```mermaid
+      ```mermaid
       graph TD
       A[Address 0x00000000 has value 0x00000004] -->|pointer at 0x00000000 points to address 0x00000004| B["Address 0x00000004 has value 0x2A (or * or 42)"]
    
@@ -807,11 +867,11 @@
     - The values are usually accessed by a "stack pointer" which is a number that represents the position of the 
       top-most value in the stack, as a memory address or an index.
     - Efficient for adding and removing items from the list, but not efficient for accessing items in the list
-      ![stack.png](assets/stack.png)
-    - Quick Animation of a Stack
-      - https://www.youtube.com/watch?v=5JQxVmQFFHE
-    - Stack Data Structure Animation
-      - https://www.youtube.com/watch?v=toRJakeYIKA
+      [<img src="assets/stack.png" width="450"/>]() 
+      > - Quick Animation of a Stack
+      >   - https://www.youtube.com/watch?v=5JQxVmQFFHE
+      > - Stack Data Structure Animation
+      >   - https://www.youtube.com/watch?v=toRJakeYIKA
   
   - ### Queue
     - A way to represent a "first in, first out" list of values in memory, similar to a line of people waiting for a bank.
@@ -821,8 +881,8 @@
       and last value in the queue as a memory address or an index.
     - Efficient for adding and removing items from the list, but not efficient for accessing items in the list
       ![queue.png](assets/queue.png)
-    - Queue Data Structure Animation
-      - https://www.youtube.com/watch?v=ojGf3SH7n48
+      > - Queue Data Structure Animation
+      >   - https://www.youtube.com/watch?v=ojGf3SH7n48
   
   - ### Linked List
     - A data structure to represent a list of values in memory, each value is the same size & type.
@@ -834,7 +894,7 @@
       may change over time.
     - Efficient for adding and removing items from the list, but not efficient for searching for items in the list.
     - [linkedList.png](assets/linkedList.png)
-    - ```mermaid
+      ```mermaid
       graph TD
       HEAD["HEAD= Start pointer"] -->|points to | A[A= some data and a pointer to node B]
       A -->|points to |B[B= some data and a pointer to node C]
@@ -844,11 +904,11 @@
       TAIL["TAIL= End pointer"] -->|points to | E
 
   - ### Map (or "Hash Table", "Hash Map", "Dictionary", "Associative Array")
-    - A data structure to represent a "mapping" of "keys" to values
-    - A "key" is a value that represents the label to "look-up" another value
+    - A "Map" is a data structure to represent a "mapping" of "keys" to values.
+    - A "key" is a value that represents the label to "look-up" another value.
       - This is called "mapping" or "associating" the key with a specific value.
-      - example using JSON data format
-      - ```JSON
+      - example using JSON (JavaScript Object Notation) data format:
+        ```JSON
         {
           "jim001": {"name": "John", "age": 42, "height": 6.2, "weight": 180},
           "chris123": {"name": "Chris", "age": 32, "height": 5.8, "weight": 160},
@@ -872,10 +932,10 @@
     - Used to represent a "key-value" list, where each "thing" is accessed by a "key" instead of an "index"
     - Efficient for adding and removing items from the list, and efficient for accessing items in the list
     - [Another map diagram](assets/Map.png)
-    - Hash tables in 4 minutes
-      - https://www.youtube.com/watch?v=knV86FlSXJ8
-    - Implementation details of a Map (An implementation of a Hash Map)
-      - https://www.youtube.com/watch?v=9zqGQQly0To
+      > - Hash tables in 4 minutes
+      >   - https://www.youtube.com/watch?v=knV86FlSXJ8
+      > - Implementation details of a Map (An implementation of a Hash Map)
+      >   - https://www.youtube.com/watch?v=9zqGQQly0To
       
   - ```mermaid
     graph LR
@@ -894,8 +954,8 @@
     - Binary Trees are used to represent "sorted" lists, where each "thing" is greater than the "thing" to the left, and less than the "thing" to the right
       
     - [Another tree diagram](assets/tree.png)
-    - Tree Data Structure Summary
-      - https://www.youtube.com/watch?v=2gu3ACsq2jI 
+      > - Tree Data Structure Summary
+      >   - https://www.youtube.com/watch?v=2gu3ACsq2jI 
     
     - ```mermaid
       graph TD
@@ -910,15 +970,16 @@
 # High-Level Language Styles
 
 - ## Procedural Programming 1950s-Present (for amateurs, 1960s-1990s for professionals)
-   - BIG IDEA - USING ENGLISH-LIKE COMMANDS instead of cryptic and tedious assembly language
+   - ### BIG IDEA - USE ENGLISH-LIKE COMMANDS instead of cryptic and tedious assembly language
    - First style of high-level language after assembly language
    - Considered "high level" because it was abstracted from the assembly language. The language was actually just 
      another program that translated the "high level" language into "machine code" for the CPU, usually at runtime.
+   - Examples of Procedural languages are "Fortran" and "BASIC" and "COBOL"
    - Procedural code is executed top to bottom, one line at a time. Control flow is done with "IF" and "GOTO" statements
    - GOTO was still commonly used, as most people didn't know how to use "subroutines" or "functions" yet and 
    - GOTO was easier to understand, at least first.
-   - Online playground for BASIC to try these programs
-     - https://www.calormen.com/jsbasic/
+     > - Online playground for BASIC to try these programs
+     >   - https://www.calormen.com/jsbasic/
    
    - Example of Procedural-Oriented Programming with GOTO's in BASIC (Beginner's All-purpose Symbolic Instruction Code)
      ```Text
@@ -987,88 +1048,88 @@
    - Example without Loops (also called an "unrolled loop", because each step is imperative and "unrolled" from a loop)
      - Interesting note: compilers will often "unroll" loops to make the code faster because it reduces the number of 
        "conditional" statements that the CPU has to execute.
-     - ```Text
-       5 REM PROGRAM TO DEMO "WITHOUT LOOPS" TO CREATE A CUMULATIVE ADDITION TABLE
-       10 LET A = 1
-       20 GOSUB 400
-       30 PRINT A, B
-       40 LET A = A + 1
-       50 GOSUB 400
-       60 PRINT A, B
-       70 LET A = A + 1
-       80 GOSUB 400
-       90 PRINT A, B
-       100 LET A = A + 1
-       110 GOSUB 400
-       120 PRINT A, B
-       130 LET A = A + 1
-       140 GOSUB 400
-       150 PRINT A, B
-       160 LET A = A + 1
-       170 GOSUB 400
-       180 PRINT A, B
-       190 LET A = A + 1
-       200 GOSUB 400
-       210 PRINT A, B
-       220 LET A = A + 1
-       230 GOSUB 400
-       240 PRINT A, B
-       250 LET A = A + 1
-       260 GOSUB 400
-       270 PRINT A, B
-       280 LET A = A + 1
-       290 GOSUB 400
-       300 PRINT A, B
-       310 END
-       400 REM ADD A PLUS B, RESULT IN B
-       410 LET B = A + B
-       420 RETURN
-       
-       RUN
-       
-       Output:
-          1 1
-          2 3
-          3 6
-          4 10
-          5 15
-          6 21
-          7 28
-          8 36
-          9 45
-          10 55
+     ```Text
+     5 REM PROGRAM TO DEMO "WITHOUT LOOPS" TO CREATE A CUMULATIVE ADDITION TABLE
+     10 LET A = 1
+     20 GOSUB 400
+     30 PRINT A, B
+     40 LET A = A + 1
+     50 GOSUB 400
+     60 PRINT A, B
+     70 LET A = A + 1
+     80 GOSUB 400
+     90 PRINT A, B
+     100 LET A = A + 1
+     110 GOSUB 400
+     120 PRINT A, B
+     130 LET A = A + 1
+     140 GOSUB 400
+     150 PRINT A, B
+     160 LET A = A + 1
+     170 GOSUB 400
+     180 PRINT A, B
+     190 LET A = A + 1
+     200 GOSUB 400
+     210 PRINT A, B
+     220 LET A = A + 1
+     230 GOSUB 400
+     240 PRINT A, B
+     250 LET A = A + 1
+     260 GOSUB 400
+     270 PRINT A, B
+     280 LET A = A + 1
+     290 GOSUB 400
+     300 PRINT A, B
+     310 END
+     400 REM ADD A PLUS B, RESULT IN B
+     410 LET B = A + B
+     420 RETURN
+     
+     RUN
+     
+     Output:
+        1 1
+        2 3
+        3 6
+        4 10
+        5 15
+        6 21
+        7 28
+        8 36
+        9 45
+        10 55
 
-        ```
+     ```
      - [Click for source code to copy and paste into the BASIC playground](/assets/proceduralUnrolledLoops.bas)
    
    - #### Programmer rolled-loops leftover from Assembly Language
    -  Example using programmer-made loops using GOTO's and Indexes (also called "counters" or "iterators" or "loop variables")
-      ```Text
-      5 REM PROGRAM TO DEMO "FOR LOOP" TO CREATE A CUMULATIVE ADDITION TABLE 
-      10 LET A = 1
-      20 GOSUB 100
-      30 PRINT A, B
-      40 LET A = A + 1
-      50 IF A <= 10 THEN GOTO 20  <-- This is the "loop" that repeats the code between line 20 and 50, 10 times
-      60 END
-      100 REM ADD A PLUS B, RESULT IN B
-      110 LET B = A + B
-      120 RETURN
+     ```Text
+     5 REM PROGRAM TO DEMO "FOR LOOP" TO CREATE A CUMULATIVE ADDITION TABLE 
+     10 LET A = 1
+     20 GOSUB 100
+     30 PRINT A, B
+     40 LET A = A + 1
+     50 IF A <= 10 THEN GOTO 20  <-- This is the "loop" that repeats the code between line 20 and 50, 10 times
+     60 END
+     100 REM ADD A PLUS B, RESULT IN B
+     110 LET B = A + B
+     120 RETURN
+     
+     RUN
       
-      RUN
-       
-       Output:
-          1 1
-          2 3
-          3 6
-          4 10
-          5 15
-          6 21
-          7 28
-          8 36
-          9 45
-          10 55
-      ```
+      Output:
+         1 1
+         2 3
+         3 6
+         4 10
+         5 15
+         6 21
+         7 28
+         8 36
+         9 45
+         10 55
+     ```
      - [Click for source code to copy and paste into the BASIC playground](/assets/proceduralProgrammerMadeLoops.bas)
 
    - ### Loops instead of GOTOs
@@ -1102,8 +1163,8 @@
           9 45
           10 55
        ```
+     - [Click for source code to copy and paste into the BASIC playground](/assets/proceduralWithForLoop.bas) 
    
-   - Examples of Procedural languages are "Fortran" and "BASIC" and "COBOL"
  
  - ## Structured Programming 1960s-Present
    - BIG IDEA - SCOPES & TYPES!
