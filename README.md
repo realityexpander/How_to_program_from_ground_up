@@ -378,8 +378,7 @@
     
 > [!NOTE]
 > Experimenting with Buses and Three-State Logic
-    
-    >  - https://www.youtube.com/watch?v=_3cNcmli6xQ
+>  - https://www.youtube.com/watch?v=_3cNcmli6xQ
 
 # SOFTWARE - The Easily Changeable Machine
 
