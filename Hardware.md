@@ -2,69 +2,69 @@
 
 # Low Level Hardware Implementations
 
-- ## The Wire & the Light Bulb & the Battery<a id="wire-light-bulb-battery"></a>
-    - We are using this arrangement to represent a logic "state"
-        - This is the most basic representation of a "state" in computing
-    - Connected or not connected? (1 or 0)
-        - But we dont really know it's state until we measure it somehow (like with a voltmeter or a light bulb)
-    - Add visual Feedback - Light on or off (1 or 0)
-    - Even though the light has in reality many, many different states constantly
-      changing over time, we can still use it to represent a single state at time: Either on or off.
-    - In this way we can use the light to represent a "bit" of information, which is the most basic unit of information in computing.
+## The Wire & the Light Bulb & the Battery
+- We are using this arrangement to represent a logic "state"
+    - This is the most basic representation of a "state" in computing
+- Connected or not connected? (1 or 0)
+    - But we dont really know it's state until we measure it somehow (like with a voltmeter or a light bulb)
+- Add visual Feedback - Light on or off (1 or 0)
+- Even though the light has in reality many, many different states constantly
+  changing over time, we can still use it to represent a single state at time: Either on or off.
+- In this way we can use the light to represent a "bit" of information, which is the most basic unit of information in computing.
 
 - ## The Simple Switch
-    - ### BIG IDEA - A switch can be used to represent a logic "state"
-        - This is the most basic representation of a "state" in computing
-        - Easier to manipulate for humans than a bare wire
-    - Simple switches can be used to represent two boolean logic operations: AND and OR
-        - Two switches in series represent a Logical AND gate
-        - Two switches in parallel represent a Logical OR gate
-    - These operations are called "gates", conceptually similar to someone following path across a fence, you can only
-      pass through a gate if it's open, and you can't pass through if it's closed.
+  - ### BIG IDEA - A switch can be used to represent a logic "state"
+      - This is the most basic representation of a "state" in computing
+      - Easier to manipulate for humans than a bare wire
+  - Simple switches can be used to represent two boolean logic operations: AND and OR
+      - Two switches in series represent a Logical AND gate
+      - Two switches in parallel represent a Logical OR gate
+  - These operations are called "gates", conceptually similar to someone following path across a fence, you can only
+    pass through a gate if it's open, and you can't pass through if it's closed.
 
-    - ### Logical Operations & Boolean Arithmetic
-        - true = 1 = on = connected
-        - false = 0 = off = not connected
-        - A Logical "1" and "0" are called a "bit", as in a "binary digit"
-        - Two switches in series represent a Logical AND gate
-            - `AND` is the `&&` symbol in most programming languages.
-          ```Console
-            Truth Table of AND gate
-            | A | B | A && B |
-            |---|---|--------|
-            | 0 | 0 |   0    |
-            | 0 | 1 |   0    |
-            | 1 | 0 |   0    |
-            | 1 | 1 |   1    |
-            ```
-        - Two switches in parallel represent a Logical OR gate
-            - `OR` is the `||` symbol in most programming languages.
-          ```Console
-            Truth Table of OR gate
-            | A | B | A || B |
-            |---|---|--------|
-            | 0 | 0 |   0    |
-            | 0 | 1 |   1    |
-            | 1 | 0 |   1    |
-            | 1 | 1 |   1    |
-            ```
+  - ### Logical Operations & Boolean Arithmetic
+      - true = 1 = on = connected
+      - false = 0 = off = not connected
+      - A Logical "1" and "0" are called a "bit", as in a "binary digit"
+      - Two switches in series represent a Logical AND gate
+          - `AND` is the `&&` symbol in most programming languages.
+        ```Console
+          Truth Table of AND gate
+          | A | B | A && B |
+          |---|---|--------|
+          | 0 | 0 |   0    |
+          | 0 | 1 |   0    |
+          | 1 | 0 |   0    |
+          | 1 | 1 |   1    |
+          ```
+      - Two switches in parallel represent a Logical OR gate
+          - `OR` is the `||` symbol in most programming languages.
+        ```Console
+          Truth Table of OR gate
+          | A | B | A || B |
+          |---|---|--------|
+          | 0 | 0 |   0    |
+          | 0 | 1 |   1    |
+          | 1 | 0 |   1    |
+          | 1 | 1 |   1    |
+          ```
 
-          > - Insight 1: Logic in Physical Form
-          >   - https://www.youtube.com/watch?v=txH3K3shIWs
-          > - Exploring How Computers Work
-          >   - https://www.youtube.com/watch?v=QZwneRb-zqA
+        > - Insight 1: Logic in Physical Form
+        >   - https://www.youtube.com/watch?v=txH3K3shIWs
+        > - Exploring How Computers Work
+        >   - https://www.youtube.com/watch?v=QZwneRb-zqA
 
-    - ## _Boolean logic requires one more operation to be complete: The logical `NOT` operation..._
-        - We need some kind of switch to represent a Logical NOT gate to create any other Boolean logic operation.
-            - We need a `NOT` is the `!` symbol in most programming languages.
-          ```Console
-            Truth Table of NOT gate
-            | A | !A |
-            |---|----|
-            | 0 |  1 |
-            | 1 |  0 |
-            ```
-        - ### We need the light bulb to on when the switch is off, and off when the switch is on, BUT HOW TO DO THAT?
+- ## _Boolean logic requires one more operation to be complete: The logical `NOT` operation..._
+    - We need some kind of switch to represent a Logical NOT gate to create any other Boolean logic operation.
+        - We need a `NOT` is the `!` symbol in most programming languages.
+      ```Console
+        Truth Table of NOT gate
+        | A | !A |
+        |---|----|
+        | 0 |  1 |
+        | 1 |  0 |
+        ```
+    - ### We need the light bulb to on when the switch is off, and off when the switch is on, BUT HOW TO DO THAT?
 
 - ## The Magnificent Magnet
     - ### BIG IDEA - Magnets can be electrically controlled to cause mechanical actions on certain metallic materials
@@ -258,7 +258,8 @@
   >   - https://www.youtube.com/watch?v=7zffjsXqATg
 
 
-- ## The Mighty Microprocessor (groups of integrated chips -> all put on one chip)
+- ## The Mighty Microprocessor
+    - Simply groups of different Integrated Chips -> All put on one chip.
     - Contains a CPU (Central Processing Unit) and a small amount of ultra fast memory (called "Registers").
     - The CPU is just a clever and somewhat complex arrangement of logic gates that can perform a series of logical operations/
       > - An intuitive approach for understanding the CPU and RAM
