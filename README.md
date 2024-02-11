@@ -6,7 +6,7 @@
   - Low Level Hardware Implementations
     - [The Wire & the Light Bulb & the Battery](Hardware.md#the-wire--the-light-bulb--the-battery)
     - [The Simple Switch](Hardware.md#the-simple-switch)
-    - [The Magnificent Magnet](Hardware.md#the-magnificent-magnet)
+    - [The Magnificent Magnet](Hardware.md#the-magnificent-electromagnet)
     - [The Raucous Relay](Hardware.md#the-raucous-relay)
     - [The Voracious Vacuum Tube](Hardware.md#the-voracious-vacuum-tube)
     - [The Tiny Transistor](Hardware.md#the-tiny-transistor)

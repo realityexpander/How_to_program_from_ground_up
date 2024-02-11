@@ -11,11 +11,13 @@
 - Even though the light has in reality many, many different states constantly
   changing over time, we can still use it to represent a single state at time: Either on or off.
 - In this way we can use the light to represent a "bit" of information, which is the most basic unit of information in computing.
-
-- ## The Simple Switch
+## The Simple Switch
   - ### BIG IDEA - A switch can be used to represent a logic "state"
       - This is the most basic representation of a "state" in computing
       - Easier to manipulate for humans than a bare wire
+  
+        [<img src="assets/simpleSwitch.png" width="400">]()
+  
   - Simple switches can be used to represent two boolean logic operations: AND and OR
       - Two switches in series represent a Logical AND gate
       - Two switches in parallel represent a Logical OR gate
@@ -54,11 +56,11 @@
         > - Exploring How Computers Work
         >   - https://www.youtube.com/watch?v=QZwneRb-zqA
 
-- ## _Boolean logic requires one more operation to be complete: The logical `NOT` operation..._
+  - ## _Boolean logic requires one more operation to be complete: The logical `NOT` operation..._
     - We need some kind of switch to represent a Logical NOT gate to create any other Boolean logic operation.
         - We need a `NOT` is the `!` symbol in most programming languages.
       ```Console
-        Truth Table of NOT gate
+        Truth Table of NOT gate  <-- WE GOTTA HAVE SOME WAY TO DO THIS, and regular switches won't work.
         | A | !A |
         |---|----|
         | 0 |  1 |
@@ -66,135 +68,155 @@
         ```
     - ### We need the light bulb to on when the switch is off, and off when the switch is on, BUT HOW TO DO THAT?
 
-- ## The Magnificent Magnet
-    - ### BIG IDEA - Magnets can be electrically controlled to cause mechanical actions on certain metallic materials
-    - Certain Metallic Materials can be "magnetized" and "polarized" using electricity to represent a "state"
-        - Magnetized or not (1 or 0)
-        - North or South (1 or 0)
-        - It's magnificent bc its so useful and versatile
-      > - How To Make an Electromagnet
-      >   - https://youtu.be/Vpb7IQ2Ib_Y
-      > - Magnetic Viewing Film - How it Works/Demos
-      >   - https://www.youtube.com/watch?v=slVL5nbTXd4
+## The Magnificent Electromagnet
+   - ### BIG IDEA — An electrical current can cause mechanical actions with certain metallic materials.
+     1) To physically manipulate the physical world, like a motor or a solenoid.
+     2) To induce a magnetic field to represent a "state", like magnetic tape or a hard drive.
+   
+     [<img src="assets/electromagnet.png" width="450">](https://en.wikipedia.org/wiki/Electromagnet)
+     [<img src="assets/electromagnet-with-switch.png" width="450">](https://circuitdigest.com/electronic-circuits/simple-relay-switch-circuit-diagram)
 
-- ## The Raucous Relay
-    - ### BIG IDEA - Use an electromagnet to control a switch (or multiple switches)
-    - the first electrical computers were made of relays (extremely slow but faster than writing by hand!)
-    - If a relay is set up to turn a switch OFF when the electromagnet is electrified, this creates a logical NOT gate,
-      so using a relay in this way allows us to represent any other logic gate!
-    - `NOT` is the `!` symbol in most programming languages.
-        ```Console
-          Truth Table of NOT gate
-          | A | !A |
-          |---|----|
-          | 0 |  1 |
-          | 1 |  0 |
+   - Metallic materials can be made to move objects by using electricity to induce a magnetic field.
+   - Additionally, certain metallic materials can be "magnetized" and "polarized" using electricity to represent a "state"
+       - Magnetized or not (1 or 0)
+       - North or South (1 or 0)
+       - It's magnificent bc its so useful and versatile
+     > - How To Make an Electromagnet
+     >   - https://youtu.be/Vpb7IQ2Ib_Y
+     > - Magnetic Viewing Film - How it Works/Demos
+     >   - https://www.youtube.com/watch?v=slVL5nbTXd4
 
-    - Logical NOT is also called "inversion" or "negation" in Boolean logic, or "inverted state"
-    - It's raucous because it makes a lot of noise when it switches on and off
+## The Raucous Relay
+   - ### BIG IDEA - Use an electromagnet to control a switch (or multiple switches.)
+   
+   - the first electrical computers were made of relays (extremely slow but faster than writing by hand!)
+   - If a relay is set up to turn a switch OFF when the electromagnet is electrified, this creates a logical NOT gate,
+     so using a relay in this way allows us to represent any other logic gate!
+   - `NOT` is the `!` symbol in most programming languages.
+       ```Console
+         Truth Table of NOT gate
+         | A | !A |
+         |---|----|
+         | 0 |  1 |
+         | 1 |  0 |
+ 
+   - Logical NOT is also called "inversion" or "negation" in Boolean logic, or "inverted state"
+   - It's raucous because it makes a lot of noise when it switches on and off
+ 
+     > - AND OR NOT gates with Relays
+     >   - https://www.youtube.com/watch?v=FKub2SuugsQ
+     > - Computers built using Relays
+     >   - https://youtu.be/e8DavnWmr1E
+     >   - https://youtu.be/NXeBR-lbnjI
+     > - Hexadecimal Relay Calculator
+     >   - https://www.youtube.com/watch?v=OzTwg-AQJ6E
+     > - Relay Calculators: Episode 3 - Relay Logic Gates, Latches and Delays
+     >   - https://www.youtube.com/watch?v=_nXc439NTYk
+     > - Relay Calculators: Episode 4 - Mistakes
+     >   - https://youtu.be/OZXwNiJ7mtw
 
-      > - AND OR NOT gates with Relays
-      >   - https://www.youtube.com/watch?v=FKub2SuugsQ
-      > - Computers built using Relays
-      >   - https://youtu.be/e8DavnWmr1E
-      >   - https://youtu.be/NXeBR-lbnjI
-      > - Hexadecimal Relay Calculator
-      >   - https://www.youtube.com/watch?v=OzTwg-AQJ6E
-      > - Relay Calculators: Episode 3 - Relay Logic Gates, Latches and Delays
-      >   - https://www.youtube.com/watch?v=_nXc439NTYk
-      > - Relay Calculators: Episode 4 - Mistakes
-      >   - https://youtu.be/OZXwNiJ7mtw
+## The Voracious Vacuum Tube
+   
+   - ### BIG IDEA — Instead of using a magnetic field to control a switch, we can use a vacuum to control the flow of electricity, just like a switch.
+     > - How Vacuum Tubes Work
+     >   - https://www.youtube.com/watch?v=nA_tgIygvNo
 
-- ## The Voracious Vacuum Tube
-    - ### BIG IDEA - Instead of using a magnetic field to control a switch, we can use a vacuum to control the flow of electricity
-      > - How Vacuum Tubes Work
-      >   - https://www.youtube.com/watch?v=nA_tgIygvNo
+     [<img src="assets/vacuum_tube.png" width="400">](https://en.wikipedia.org/wiki/Vacuum_tube)
+     [<img src="assets/vacuum_tube_diagram.png" width="200">](https://en.wikipedia.org/wiki/Vacuum_tube)
+   
+     > ### Notice:  While the actual physical electron flow direction is from the "negative" terminal to the "positive" terminal, the "conventional" flow direction of electricity in schematics is considered to go from the "positive" terminal to the "negative" terminal.
+     >> Yes! This is rather confusing at first, and you can give thanks to ding-dong Ben Franklin for this bit of technical debt we all have to deal with at the beginning of learning electronics.
+   
+   - Electricity in a vacuum behaves differently than in normal atmosphere.
+       - Electrons can flow freely in a vacuum. I like to think of this as the invention of "nothing."
+       - Tubes exploit this behavior of electrons in a vacuum to perform like a switch or an amplifiers.
+   - Tube made for use in logic (Triode) consists of three parts:
+       - **"Cathode"**
+           - Essentially a light bulb filament tied to the common "ground/negative" terminal of the power supply.
+           - Negative terminal of the tube it used to "emit" electrons to the anode and complete the circuit.
+       - **"Anode"**
+           - Positive terminal of the tube hooked to the "load" and the positive terminal of the power supply.)
+           - Used to "collect" electrons from the cathode and to indicate "state" and complete the circuit.
+       - **"Grid"**
+           - this acts as a switch also called a "valve" when referring to tubes.
+   - The Grid can be used to control the flow of electricity between the cathode and anode.
+       - ie: when the grid is positively charged, the flow of electricity from cathode to the anode is allowed.
+       - ie: when the grid is negatively charged, the flow of electricity from cathode to the anode is deterred.
+       - This acts by default like a logical "NOT" gate.
+   - The tube can be used to represent any other logic gate.
 
-      > ### Notice:  While the actual physical electron flow direction is from the "negative" terminal to the "positive" terminal, the "conventional" flow direction of electricity in schematics is considered to go from the "positive" terminal to the "negative" terminal.
-      >> Yes! This is rather confusing at first, and you can give thanks to ding-dong Ben Franklin for this bit of technical debt we all have to deal with at the beginning of learning electronics.
-    - Electricity in a vacuum behaves differently than in normal atmosphere.
-        - Electrons can flow freely in a vacuum. I like to think of this as the invention of "nothing."
-        - Tubes exploit this behavior of electrons in a vacuum to perform like a switch or an amplifiers.
-    - Tube made for use in logic (Triode) consists of three parts:
-        - **"Cathode"**
-            - Essentially a light bulb filament tied to the common "ground/negative" terminal of the power supply.
-            - Negative terminal of the tube it used to "emit" electrons to the anode and complete the circuit.
-        - **"Anode"**
-            - Positive terminal of the tube hooked to the "load" and the positive terminal of the power supply.)
-            - Used to "collect" electrons from the cathode and to indicate "state" and complete the circuit.
-        - **"Grid"**
-            - this acts as a switch also called a "valve" when referring to tubes.
-    - The Grid can be used to control the flow of electricity between the cathode and anode.
-        - ie: when the grid is positively charged, the flow of electricity from cathode to the anode is allowed.
-        - ie: when the grid is negatively charged, the flow of electricity from cathode to the anode is deterred.
-        - This acts by default like a logical "NOT" gate.
-    - The tube can be used to represent any other logic gate.
+     > - In a Minute: Vacuum Tube Diodes in 60 Seconds
+     >   - https://www.youtube.com/watch?v=8so4qQcOAvQ
+     > 1942 ARMY RADIO TRAINING FILM “ ELECTRON THEORY AND THE DIODE TUBE ” VACUUM TUBE ELECTRONICS 72782
+     >   - https://www.youtube.com/watch?v=cIvjBKMX9jg
+     > - In a Minute: Vacuum Tube Triodes in 60 Seconds
+     >   - https://www.youtube.com/watch?v=frZ35Y48vSk
+     > - Let’s Build Some Logic Gates out of Vacuum Tubes: OR, NOR, NAND, AND
+     >   - https://www.youtube.com/watch?v=NkmrMdigB-8
+   - #### The vacuum tube is voracious because it consumes a lot of power to heat the cathode and generates a lot of excess heat.
 
-      > - In a Minute: Vacuum Tube Diodes in 60 Seconds
-      >   - https://www.youtube.com/watch?v=8so4qQcOAvQ
-                > 1942 ARMY RADIO TRAINING FILM “ ELECTRON THEORY AND THE DIODE TUBE ” VACUUM TUBE ELECTRONICS 72782
-      >   - https://www.youtube.com/watch?v=cIvjBKMX9jg
-      > - In a Minute: Vacuum Tube Triodes in 60 Seconds
-      >   - https://www.youtube.com/watch?v=frZ35Y48vSk
-      > - Let’s Build Some Logic Gates out of Vacuum Tubes: OR, NOR, NAND, AND
-      >   - https://www.youtube.com/watch?v=NkmrMdigB-8
-    - #### The vacuum tube is voracious because it consumes a lot of power to heat the cathode and generates a lot of excess heat.
+## The Tiny Transistor
+   - ### BIG IDEA - Instead of using an electrically heated wire and vacuum to control the flow of electricity, we can use a cheap semiconductor material and reduce energy and size by a factor of 100.
+   
+     [<img src="assets/transistor_vs_tube.png" width="400">](https://www.youtube.com/watch?v=DXvAlwMAxiA)
+   
+     Very similar behavior to the vacuum tube, but much smaller and much, much faster
+     > - How a Transistor Works
+     >   - https://www.youtube.com/watch?v=DXvAlwMAxiA
+     
+     Excellent animation of physical electrical flow thru semiconductors and how LED's are made
+     > - Why It Was Almost Impossible to Make the Blue LED
+     >   - https://www.youtube.com/watch?v=AF8d72mA41M&t=203
+     
+     Difference in behavior between Tubes and Transistors
+     > - Vacuum Tubes: Episode 2 - The Triode (Part 1)
+     >   - https://www.youtube.com/watch?v=xurmZWLjW2g
 
-- ## The Tiny Transistor
-    - Very similar behavior to the vacuum tube, but much smaller and faster
-      > - How a transistor works
-      >   - https://www.youtube.com/watch?v=DXvAlwMAxiA
-    - Excellent animation of physical electrical flow thru semiconductors and how LED's are made
-      > - Why It Was Almost Impossible to Make the Blue LED
-      >   - https://www.youtube.com/watch?v=AF8d72mA41M&t=203
-    - No vacuum required, just a the semiconductor material.
-        - Uses photographic techniques to create the transistor, not regular metallic parts.
-        - Difference in behavior between Tubes and Transistors
-          > - Vacuum Tubes: Episode 2 - The Triode (Part 1)
-          >   - https://www.youtube.com/watch?v=xurmZWLjW2g
+   - The Transistor consists of three parts:
+       - **"Drain"**
+           - (the "anode" in the vacuum tube.)
+           - also known as "collector" or "sink" often connected to "load."
+           - (not always "positive" in modern transistors, but usually is.)
+       - **"Source"**
+           - (the "cathode" in the vacuum tube)
+           - also known as "emitter" often connected to "ground."
+           - (not always "negative" in modern transistors, but usually is.)
+       - **"Gate"** (the "Grid" in the vacuum tube.)
+           - also known as "base" often connected to the "control."
+           - (not always "positive" in modern transistors, but usually is.)
+   - The transistor can be used to represent any other logic gate and is the current basis for all modern computing.
+   - The transistor is tiny because it is very small and fast, bumping up against the limits of physics on how
+     small it can be made.
 
-    - The Transistor consists of three parts:
-        - **"Drain"**
-            - (the "anode" in the vacuum tube.)
-            - also known as "collector" or "sink" often connected to "load."
-            - (not always "positive" in modern transistors, but usually is.)
-        - **"Source"**
-            - (the "cathode" in the vacuum tube)
-            - also known as "emitter" often connected to "ground."
-            - (not always "negative" in modern transistors, but usually is.)
-        - **"Gate"** (the "Grid" in the vacuum tube.)
-            - also known as "base" often connected to the "control."
-            - (not always "positive" in modern transistors, but usually is.)
-    - The transistor can be used to represent any other logic gate and is the current basis for all modern computing.
-    - The transistor is tiny because it is very small and fast, bumping up against the limits of physics on how
-      small it can be made.
+   - ### How to Build Complex Logic Gates from Simple Transistors
+     > - How do computers remember?
+     >   - https://www.youtube.com/watch?v=I0-izyq6q5s
 
-    - ### How to Build Complex Logic Gates from Simple Transistors
-      > - How do computers remember?
-          >   - https://www.youtube.com/watch?v=I0-izyq6q5s
+       - Transistors can create sophisticated operations by combining them in clever ways
+         > - Designing a 7-segment hex decoder
+         >   - https://www.youtube.com/watch?v=7zffjsXqATg
+         > - Transistor Clock
+         >   - https://www.youtube.com/watch?v=Iu-W7LpSDmk
 
-        - Transistors can create sophisticated operations by combining them in clever ways
-          > - Designing a 7-segment hex decoder
-          >   - https://www.youtube.com/watch?v=7zffjsXqATg
-          > - Transistor Clock
-          >   - https://www.youtube.com/watch?v=Iu-W7LpSDmk
+       - How do the essentials work?
+         > - Using a transistor to solve our problem - How transistors work as a switch
+         >   - https://www.youtube.com/watch?v=ks_VShSgPns
+         > - Insight 2: The MOS Transistor
+         >   - https://www.youtube.com/watch?v=sshPV7BV0k0
+         > - Inverting the signal with a transistor (The `NOT` gate)
+         >   - https://www.youtube.com/watch?v=hYN8C769k8A
+         > - Making logic gates from transistors
+         >   - https://www.youtube.com/watch?v=sTu3LwpF6XI
+         > - How does memory work?
+         >   - SR Latch
+         >   - https://youtu.be/KM0DdEaY5sY
 
-        - How do the essentials work?
-          > - Using a transistor to solve our problem - How transistors work as a switch
-          >   - https://www.youtube.com/watch?v=ks_VShSgPns
-          > - Insight 2: The MOS Transistor
-          >   - https://www.youtube.com/watch?v=sshPV7BV0k0
-          > - Inverting the signal with a transistor (The `NOT` gate)
-          >   - https://www.youtube.com/watch?v=hYN8C769k8A
-          > - Making logic gates from transistors
-          >   - https://www.youtube.com/watch?v=sTu3LwpF6XI
-          > - How does memory work?
-          >   - SR Latch
-          >   - https://youtu.be/KM0DdEaY5sY
-
-- ## The Interchangeable Integrated Chip (IC)
-- Groups of transistor logic gates packaged together to perform a specific task
-- #### The Logic Gate "Package"
+## The Interchangeable Integrated Chip (IC)
+  - ### BIG IDEA - We can use photographic techniques to create thousands of transistors on a single chip and radically reduce costs of manufacture and assembly of computing devices and increase functionality and reliability.
+  - This allows creating large groups of transistor logic gates packaged together to perform a specific task.
+  - The packages were standardized, allowing for the creation of complex computing devices using interchangeable parts.
+  
+  - #### The Logic Gate "Package"
     - A Package is a group of transistors for a specific logic operation placed on a single chip contained in a plastic
       or ceramic enclosure with metal pins to connect to the rest of the computer.
         - Basic functions consist of Logical OR, AND, NOT, NAND package (usually 2-4 gates in the same package)
@@ -202,7 +224,7 @@
       > - “MY FIRST CHIP” - Carver Mead - 2017
       >   - https://www.youtube.com/watch?v=F5P5SAlEbo4
 
-- Robert Noyce, inventor of first monolithic IC
+- Robert Noyce, inventor of first monolithic IC holding a photogaphic layer for an Integrated Circuit.
 
   [<img src="assets/the_ic.png" width="400">](https://en.wikipedia.org/wiki/Robert_Noyce)
 
@@ -245,13 +267,16 @@
   > - Visualizing Data with 7-Segment Displays
   >   - https://www.youtube.com/watch?v=hEDQpqhY2MA
 
-- Why is NAND gates so special?
-    - It's the most flexible can be combined to create any other logic gate, ie: AND, OR, NOT, XOR, etc.
+ - Why is NAND gates so special?
+   
+   [<img src="NAND_gate.png" width="150">](https://en.wikipedia.org/wiki/NAND_gate)
+   - It's the most flexible can be combined to create any other logic gate, ie: AND, OR, NOT, XOR, etc.
         1) Tie inputs A & B together to create a NOT gate.
         2) Tie inputs A & B together combined with a NOT gate to create an OR gate.
         3) Use normal A & B inputs and combine with another NAND gate in a NOT configuration to create an AND gate.
-    - Everything in computers can be done with just these three types of gates.
-    - Most early digital electronic calculators were made solely with many IC's of these NAND gates.
+   - Everything in computers can be done with just these three types of gates.
+   - Most early digital electronic calculators were made solely with many IC's of these NAND gates.
+
 
 - From simple NAND gate packages to a somewhat sophisticated 7-segment display using LED's.
   > - Designing a 7-segment hex decoder
@@ -259,26 +284,34 @@
 
 
 - ## The Mighty Microprocessor
-    - Simply groups of different Integrated Chips -> All put on one chip.
-    - Contains a CPU (Central Processing Unit) and a small amount of ultra fast memory (called "Registers").
-    - The CPU is just a clever and somewhat complex arrangement of logic gates that can perform a series of logical operations/
-      > - An intuitive approach for understanding the CPU and RAM
-      >   - https://www.youtube.com/watch?v=-IyB8hBkA9w
-      > - How a CPU Works
-      >   - https://www.youtube.com/watch?v=cNN_tTXABUA
+  - ### BIG IDEA - Consolidate all the necessary components from various Integrated Chips required for a computer onto a single chip.
+  
+    [<img src="6502.png" width="400">](https://en.wikipedia.org/wiki/MOS_Technology_6502)
 
-    - Each part of the CPU is made of millions of the same kinds of logic gates that we've already discussed.
-    - The CPU has a "clock" to synchronize the operations of the CPU.
-    - It also has a "program counter" to keep track of the current instruction in memory that the CPU is executing.
-    - Has an "ALU" (Arithmetic Logic Unit) to perform basic arithmetic and logical operations.
-        - How does an ALU work?
-          > - Learn how computers add numbers and build a 4 bit adder circuit
-          > - https://youtu.be/wvJc9CZcvBc
-    - May contain a small amount of "cache" memory (very fast memory near the CPU circuits) to speed up access to main memory.
-    - CPU's are where the execution of each instruction happens.
+  - Simply groups of different Integrated Chips -> All put on one chip.
+  - Contains a CPU (Central Processing Unit) and a small amount of ultra fast memory (called "Registers").
+  - The CPU is just a clever and somewhat complex arrangement of logic gates that can perform a series of logical operations/
+    > - An intuitive approach for understanding the CPU and RAM
+    >   - https://www.youtube.com/watch?v=-IyB8hBkA9w
+    > - How a CPU Works
+    >   - https://www.youtube.com/watch?v=cNN_tTXABUA
+
+  - Each part of the CPU is made of millions of the same kinds of logic gates that we've already discussed.
+  - The CPU has a "clock" to synchronize the operations of the CPU.
+  - It also has a "program counter" to keep track of the current instruction in memory that the CPU is executing.
+  - Has an "ALU" (Arithmetic Logic Unit) to perform basic arithmetic and logical operations.
+      - How does an ALU work?
+        > - Learn how computers add numbers and build a 4 bit adder circuit
+        > - https://youtu.be/wvJc9CZcvBc
+  - May contain a small amount of "cache" memory (very fast memory near the CPU circuits) to speed up access to main memory.
+  - CPU's are where the execution of each instruction happens.
 
 - ## The Configurable Computer
-    - Arranging the above components in particular patterns to achieve a specific task.
+   - ### BIG IDEA - Instead of putting all the functions for a task into a single computer, define for a standardized interface to connect different devices together to perform a task.  
+    
+    - By arranging the basic electronic components in particular patterns to achieve a specific narrow specialized task,
+      like storing data on some medium, measuring sensors, controlling a motor, displaying an image, etc.
+      
       > Digital Computer Techniques: Programming (1962) - AT&T Archives
       >   - https://www.youtube.com/watch?v=dFZecokdHLo
       > Digital Computer Techniques: Computer Units (1962) - AT&T Archives
