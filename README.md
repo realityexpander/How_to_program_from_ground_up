@@ -376,8 +376,8 @@
         - The arm is controlled by software and uses "magnets" to move the arm to the correct position to read and write the data
         - Some sort of electrified magnet is the usual way that computers interact physically with the world
     
-    > [!NOTE]
-    > Experimenting with Buses and Three-State Logic
+> [!NOTE]
+> Experimenting with Buses and Three-State Logic
     
     >  - https://www.youtube.com/watch?v=_3cNcmli6xQ
 
