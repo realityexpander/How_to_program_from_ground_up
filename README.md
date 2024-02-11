@@ -416,16 +416,16 @@
       - usually contains the basic software to start the computer, sometimes called "firmware")
       - Not easy to change, but can be changed with special equipment.
         > - RAM (Random Access Memory) 
-        >  - https://www.youtube.com/watch?v=uYXwCBo40iA
+        >   - https://www.youtube.com/watch?v=uYXwCBo40iA
         > - RAM - Random Access Memory - How does a RAM of PC store data?- Video IT
         >   - https://www.youtube.com/watch?v=Kav6oOFDQSA
         > - Dynamic Random Access Memory (DRAM). Part 1: Memory Cell Arrays
-        >  - https://www.youtube.com/watch?v=I-9XWtdW_Co
-    - IO & Peripherals & Removable Storage & More
+        >   - https://www.youtube.com/watch?v=I-9XWtdW_Co
+    - I/O (Input/Iutput) & Peripherals & Removable Storage & More
       - All just more variations of the same thing
         - All built up from the same basic logic gates and transistors, or similar technology
         - Even video cameras, microphones, radios and speakers are just variations of the same basic technology
-      - using the same principles to represent logic states and perform logical operations
+      - Using the same principles to represent logic states and perform logical operations
       - Often electromagnets to control mechanical devices or other machines
         - The classic example is the "hard drive" which uses a spinning disk and a moving arm to read and write data
         - The "hard drive" is a "magnetic" storage device, and uses tiny spots of "magnetized" material to represent the "state" of the data
