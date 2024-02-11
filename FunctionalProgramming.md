@@ -1,6 +1,7 @@
 ## Functional Programming 1950s-Present
-  - ### BIG IDEA - Shared mutable state is a big problem, especially in a parallel processing task. 
-  - The Functional style requires:
+  - ### BIG IDEA - Shared mutable state is a big problem, especially for parallel processing task. 
+
+  - ### The Functional style requires:
     1) Calling functions will NEVER change anything outside the function being called.
     2) Functions passed in with certain arguments will ALWAYS return the same result.
     2) Functions can be passed as arguments to other functions.
@@ -54,3 +55,6 @@
   // 24
   ```
   > Live Code Example: [Functional Example](src/main/kotlin/functionalExample.kt)
+
+[Continue Reading](Conclusion.md)  
+  

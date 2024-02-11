@@ -197,3 +197,5 @@
       
       ```
       > Live Code Example: [BOOP example](src/main/kotlin/boopExample.kt)   
+
+[Continue Reading](FunctionalProgramming.md)

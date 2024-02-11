@@ -478,3 +478,5 @@
                       > - If you _really_ want to achieve multiple inheritance (_you should never need to, but here's how to do it_):
                       >  - https://www.youtube.com/watch?v=3X9Eo2vzY1I
                       >  - Live Code Example: [How to Achieve Multiple Inheritance in Kotlin](src/main/kotlin/multipleInheritanceExample.kt)
+                      
+[Continue Reading](BoopProgramming.md)

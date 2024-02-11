@@ -1,7 +1,14 @@
 # High-Level Language Styles
 
+- ### BIG IDEA - Use English-like commands instead of cryptic and tedious assembly language.
+  - The first high-level languages were just "assemblers" that translated "mnemonics" into "machine code" for the CPU.
+  - The next step was to create a language that was more "abstract" and "portable" than assembly language.
+  - The languages allowed for more widespread adoption of computers and programming, as the languages were easier to learn
+    and use than assembly language.
+
 - ## Procedural Programming 1950s-Present (for amateurs, 1960s-1990s for professionals)
-    - ### BIG IDEA - USE ENGLISH-LIKE COMMANDS instead of cryptic and tedious assembly language
+    - ### BIG IDEA - Use "subroutines" to avoid "GOTO" statements and "spaghetti code"
+    
     - First style of high-level language after assembly language
     - Considered "high level" because it was abstracted from the assembly language. The language was actually just
       another program that translated the "high level" language into "machine code" for the CPU, usually at runtime.
@@ -195,3 +202,5 @@
              10 55
           ```
         - [Click for source code to copy and paste into the BASIC playground](/assets/proceduralWithForLoop.bas) 
+
+[Continue Reading](StructuredProgramming.md)

@@ -84,3 +84,5 @@
       > ### The machines cannot possibly "know" anything about the problem or solution, and never will.
 
       ### It's just following the logical operations that humans have carefully designed to represent the problem and represent a solution.
+
+[Continue Reading](Hardware.md)

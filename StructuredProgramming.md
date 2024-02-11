@@ -78,3 +78,5 @@
   tied to any specific computer hardware or operating system. The computer manufacturer only had to create the
   compiler for their particular machine, and then the same code could be run on any machine that had a compiler
   for the language.
+
+[Continue Reading](ClassOrientedProgramming.md)
