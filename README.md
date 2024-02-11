@@ -30,7 +30,8 @@
       boolean logic to represent the problem and its sequence of actions to solve it.
     - Each operation in the computer was once done by teams of people working in groups, logically delineated in 
       nearly the same way as the computer's components are arranged.
-        - There were specialized roles for each person, for example, the "storage" would be a set of filing cabinets and a clerk to store and retrieve them.
+        - There were specialized roles for each person, for example, the "storage" would be a set of filing cabinets 
+          and a clerk to store and retrieve them.
           - This is now done by the "hard drive" and the "file system" in the computer.
         - The arithmetic would be done by a person called a "calculator" who would perform the operations and record the results.
           - This is now done by the "Arithmetic Logic Unit" and stored in the "Registers" in the computer.
