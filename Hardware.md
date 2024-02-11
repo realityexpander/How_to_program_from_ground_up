@@ -344,15 +344,15 @@
     >   - https://www.youtube.com/watch?v=I-9XWtdW_Co
 
   - I/O (Input/Output) & Peripherals & Removable Storage & More
-    - All just more variations of the same thing
-        - All built up from the same basic logic gates and transistors, or similar technology
-        - Even video cameras, microphones, radios and speakers are just variations of the same basic technology
-    - Using the same principles to represent logic states and perform logical operations
-    - Often electromagnets to control mechanical devices or other machines
-      - The classic example is the "hard drive" which uses a spinning disk and a moving arm to read and write data
-      - The "hard drive" is a "magnetic" storage device, and uses tiny spots of "magnetized" material to represent the "state" of the data
-      - The arm is controlled by software and uses "magnets" to move the arm to the correct position to read and write the data
-      - Some sort of electrified magnet is the usual way that computers interact physically with the world
+    - All just more variations of the same thing.
+        - All built up from the same basic logic gates and transistors, or similar technology.
+        - Even video cameras, microphones, radios and speakers are just variations of the same basic technology.
+    - Using the same principles to represent logic states and perform logical operations.
+    - Often electromagnets are used to control mechanical devices or other machines.
+      - The classic example is the "hard drive" which uses a spinning disk and a moving arm to read and write data.
+      - The "hard drive" is a "magnetic" storage device, and uses tiny spots of "magnetized" material to represent the "state" of the data.
+      - The arm is controlled by software and uses "magnets" to move the arm to the correct position to read and write the data.
+      - Some sort of electrified magnet is the usual way that computers interact physically with the world.
 
     > DATA PROCESSING AN INTRODUCTION 1972 KEY PUNCH COMPUTER & MAGNETIC TAPE EDUCATIONAL FILM
     >   - https://www.youtube.com/watch?v=uOYJtnux2sA
