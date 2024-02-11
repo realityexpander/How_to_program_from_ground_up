@@ -5,7 +5,7 @@
 - Hardware
   - Low Level Hardware Implementations
     <!--[The Wire & the Light Bulb & the Battery](Hardware.md#the-wire--the-light-bulb--the-battery) -->
-    - [The Wire & the Light Bulb & the Battery](Hardware.md#wire)
+    - [The Wire & the Light Bulb & the Battery](Hardware.md#wire-light-bulb-battery)
     - [The Simple Switch](Hardware.md##the-simple-switch)
     - [The Magnificent Magnet](Hardware.md##the-magnificent-magnet)
     - [The Raucous Relay](Hardware.md##the-raucous-relay)

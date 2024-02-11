@@ -2,8 +2,7 @@
 
 # Low Level Hardware Implementations
 
-- ## The Wire & the Light Bulb & the Battery 
-    <a id="wire"></a>
+- ## The Wire & the Light Bulb & the Battery<a id="wire-light-bulb-battery"></a>
     - We are using this arrangement to represent a logic "state"
         - This is the most basic representation of a "state" in computing
     - Connected or not connected? (1 or 0)
