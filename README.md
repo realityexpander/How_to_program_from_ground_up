@@ -150,6 +150,8 @@
 
     - Insight 1: Logic in Physical Form
       - https://www.youtube.com/watch?v=txH3K3shIWs
+    - Exploring How Computers Work 
+      - https://www.youtube.com/watch?v=QZwneRb-zqA 
   
   - ## The Magnificent Magnet
     - Magnets can be electrically controlled to cause mechanical actions on certain metallic materials
@@ -226,7 +228,11 @@
         - https://www.youtube.com/watch?v=AF8d72mA41M&t=203
     - No vacuum required, just a the semiconductor material.
       - Uses photographic techniques to create the transistor, not regular metallic parts.
-    - The transistor consists of three parts:
+      - Difference in behavior between Tubes and Transistors
+        - Vacuum Tubes: Episode 2 - The Triode (Part 1)
+          - https://www.youtube.com/watch?v=xurmZWLjW2g  
+    
+    - The Transistor consists of three parts:
       - **"Drain"** 
         - (the "anode" in the vacuum tube.) 
         - also known as "collector" or "sink" often connected to "load." 
@@ -241,6 +247,10 @@
     - The transistor can be used to represent any other logic gate and is the current basis for all modern computing.
     - The transistor is tiny because it is very small and fast, bumping up against the limits of physics on how 
       small it can be made.
+    
+    - How do computers remember?
+      - https://www.youtube.com/watch?v=I0-izyq6q5s
+    
     - Transistors can create sophisticated operations by combining them in clever ways
       - Designing a 7-segment hex decoder
         - https://www.youtube.com/watch?v=7zffjsXqATg 
@@ -262,24 +272,57 @@
   
   - ## The Interchangeable Integrated Chip (IC) 
   - Groups of transistor logic gates packaged together to perform a specific task
+  - #### The Logic Gate "Package"
+    - A Package is a group of transistors for a specific logic operation placed on a single chip contained in a plastic
+      or ceramic enclosure with metal pins to connect to the rest of the computer.
+      - Basic functions consist of Logical OR, AND, NOT, NAND package (usually 2-4 gates in the same package)
+      - Extremely complex functions are made by combining many of these packages together in clever ways
+      - “MY FIRST CHIP” - Carver Mead - 2017
+          - https://www.youtube.com/watch?v=F5P5SAlEbo4
+  
   - Robert Noyce, inventor of first monolithic IC 
     
-  - [<img src="assets/the_ic.png" width="400">](https://en.wikipedia.org/wiki/Robert_Noyce)
+    [<img src="assets/the_ic.png" width="400">](https://en.wikipedia.org/wiki/Robert_Noyce)
+  
   - Typical Early Logic Gate Package
     
-  - [<img src="assets/logic-gate-package.png" width="400">](https://en.wikipedia.org/wiki/Robert_Noyce)
+    [<img src="assets/seven_segment/74HC42.jpg" width="400">](https://shop.griederbauteile.ch/en/info/7/74HC42.pdf)
   
   - Close up of silicon wafer wired to package
     
-  - [<img src="assets/chip-wired-to-package.png" width="400">](https://en.wikipedia.org/wiki/Robert_Noyce)
-     
-  - The logic gate "package" 
-  - A Package is a group of transistors for a specific logic operation placed on a single chip contained in a plastic 
-    or ceramic enclosure with metal pins to connect to the rest of the computer.
-    - Basic functions consist of Logical OR, AND, NOT, NAND package (usually 2-4 gates in the same package)
-    - Extremely complex functions are made by combining many of these packages together in clever ways
-    - “MY FIRST CHIP” - Carver Mead - 2017
-      - https://www.youtube.com/watch?v=F5P5SAlEbo4
+    [<img src="assets/chip-wired-to-package.png" width="400">](https://en.wikipedia.org/wiki/Robert_Noyce)
+
+  - Inverter Gate and NAND gate under 50x microscope
+
+    [<img src="assets/seven_segment/Inverter-Gate-and-NAND-gate-under-50x-microscope.png" width="400">](https://www.researchgate.net/figure/Logic-gates-based-on-printed-electrochemical-transistors-Schematics-of-an-inverter-a_fig3_337084817)
+  
+  - 7 Segment LED Display Package
+
+    [<img src="assets/seven_segment/Seven_segment_01_Pengo.jpg" width="200">](https://en.wikipedia.org/wiki/Seven-segment_display)
+
+  - 7 Segment Display Schematic Common Cathode
+
+    [<img src="assets/seven_segment/Internal-Schematic-Common-Cathode-7-Segment-LED-Display.png" width="200">]()
+  
+  - What is a "BCD to 7 Segment Display Decoder"?
+
+    [<img src="assets/seven_segment/BCD-to-7-Segment-Display-Decoder.png" width="400">](https://www.electrical4u.com/bcd-to-seven-segment-decoder/)
+    
+  - 7 Segment Display Display truth table
+ 
+    [<img src="assets/seven_segment/7-segment-display-truth-table.webp" width="400">](https://en.wikipedia.org/wiki/Seven-segment_display)
+
+  - 7 Segment Display "BCD to 7 Segment Decoder" Schematic "Naive" Implementation
+  
+    [<img src="assets/seven_segment/BCD-to-7-segment-Decoder-Design-Using-Basic-Gates.jpg" width="400">](https://www.electronicshub.org/bcd-7-segment-led-display-decoder-circuit/)
+    
+  - Schematic of BCD to Decimal Decoder using Clever Arrangement of NAND gates and Inverters
+    
+    [<img src="assets/seven_segment/Schematic-of-BCD-to-Decimal-Decoder.png" width="400">](https://www.researchgate.net/figure/Binary-coded-decimal-4-to-7-decoder-a-Schematics-of-a-4-to-7-decoder-implemented-with_fig4_337084817)
+
+  - Visualizing Data with 7-Segment Displays
+    - https://www.youtube.com/watch?v=hEDQpqhY2MA
+
   - Why is NAND gates so special?
     - It's the most flexible can be combined to create any other logic gate, ie: AND, OR, NOT, XOR, etc.
       1) tie inputs A & B together to create a NOT gate
@@ -291,6 +334,7 @@
   - From simple NAND gate packages to a somewhat sophisticated 7-segment display using LED's
     - Designing a 7-segment hex decoder
       - https://www.youtube.com/watch?v=7zffjsXqATg
+
 
   - ## The Mighty Microprocessor (groups of integrated chips -> all put on one chip)
     - Contains a CPU (Central Processing Unit) and a small amount of ultra fast memory (called "Registers")
@@ -331,41 +375,45 @@
         - The "hard drive" is a "magnetic" storage device, and uses tiny spots of "magnetized" material to represent the "state" of the data
         - The arm is controlled by software and uses "magnets" to move the arm to the correct position to read and write the data
         - Some sort of electrified magnet is the usual way that computers interact physically with the world
+    - Experimenting with Buses and Three-State Logic
+      - https://www.youtube.com/watch?v=_3cNcmli6xQ
 
 # SOFTWARE - The Easily Changeable Machine
 
 # Machine Code — The Microcode Soft-Circuitry Commands of the CPU
   - BIG IDEA - Logic gates can be built up to create a "general-purpose" machine that can be setup using software
-    instead of discrete physical components. Actually any software COULD be implemented in hardware, but the
-    costs of doing so rarely make it practical at this point, other than a few very specialized problems like 
-    graphics cards to compute 3D graphics, bitcoin mining and AI training.
-  - Machine Code is the "language" of logical operations that the computer can perform
-    - It's really just human cleverness setting up problems in a way 
-        that the machine can perform simple logical operations to give 
-        us a representation of the result of the problem
+    instead of discrete physical components. 
+  - Actually any software COULD be implemented in hardware, but the costs of doing so rarely make it practical at 
+    this point, other than a few very specialized problems like graphics cards to compute 3D graphics, crypto mining and AI training.
+  - Machine Code is the "language" of logical operations that the computer can perform.
+    - It's really just human cleverness setting up problems in a way that a machine can perform simple logical 
+      operations to give a representation of the results.
     - Anything the computer can do is just a combination of these simple logical operations, designed by people
-      to represent the problem to be solved by a digital computer using a series of logical operations & states
+      to represent the problem to be solved using a series of logical operations & states.
     - The specific instructions for the CPU are called operation codes, or "opcodes", and are just strings of 
-      arbitrary binary numbers like 1010101011010101 that represent the logical operations that the CPU can perform.
+      arbitrary binary numbers like 1010101111010111 that represent a particlar set of logical operations that the CPU 
+      should can perform.
     - The opcode values are completely dependent on the specific CPU, and are usually defined by the manufacturer of the CPU.
-    - These numbers are usually represented in hexadecimal (base 16) to make them easier to read and write (as opposed to binary, base 2)
-    - The opcodes are the most primitive logical operations that the CPU can perform
-    - The opcodes are usually followed by "operands" which are the "arguments" to the operation
-  - The Machine opcodes are unwieldy for humans to remember, so we use "mnemonics" to represent them
-    - Mnemonics are just human-readable names for the opcodes, like "LOAD" or "STORE" or "ADD" or "SUBTRACT"
-    - The mnemonics are then translated into the binary opcodes by a "compiler" or "assembler"
+    - These opcodes are usually represented in hexadecimal (base 16) to make them easier to read and write (as opposed to binary, base 2)
+    - The opcodes are the most primitive logical operations that the CPU can perform.
+    - The opcodes are usually followed by "operands" which are the "arguments" to the operation.
+  - The Machine hex value opcodes are unwieldy for humans to remember, so we use "mnemonics" to represent them.
+    - Mnemonics are simply human-readable names for the opcodes, like "LOAD" or "STORE" or "ADD" or "SUBTRACT" used to 
+      represent the opcodes values.
+    - The mnemonics are translated into the binary opcodes by a compiler or assembler program.
 
   - ## Representing Values in Memory 
     - ### Binary Counting
      
-    - ![8-bit-counting-2.png](assets/8-bit-counting-2.png)
+      [<img src="assets/8-bit-counting-2.png" width="550">](assets/8-bit-counting-2.png)
+    
     - ### Hexadecimal Counting
-      ![hexadecimal.png](assets/hexadecimal.png)
+      [<img src="assets/hexadecimal.png" width="550">](assets/hexadecimal.png)
   
     - 8 bits are called a "byte" and can represent 256 different values (0-255)
       - A byte is the smallest unit of memory that can be addressed by the CPU
       - They call it a "byte" because its a play on the word "bite" and it's the smallest amount of memory that 
-        can be "eaten" by the CPU (LOLOLOLL Computer people are soooooo funnnnnny)
+        can be "eaten" by the CPU (HAR HAR HARDY HAR Computer people are soooooo funnnnnny!)
       
     - ### ASCII Representation of Characters
       - ASCII is a 1 byte (8 bit) representation of the most common letters and symbols used in English
@@ -375,17 +423,17 @@
         The control codes are used to synchronize communication between devices, like "start of text" or "end of transmission"
       - Look at the numbers in the ASCII table and see if you can see the pattern
         - The Capital letters are 1 bit higher than the lowercase letters
-        ![ASCII-binary.png](assets/ASCII-binary.png)
+        [<img src="assets/ASCII-binary.png" width="550">](assets/ASCII-binary.png)
       
       - ASCII table using Hexadecimal - Easier to read by humans, much more compact than binary
       - 2 Hexadecimal Characters can represent 1 byte
-        ![ascii_hexadecimal.png](assets/ascii_hexadecimal.png)
+        [<img src="assets/ascii_hexadecimal.png" width="550">](assets/ascii_hexadecimal.png)
 
-  - ### Computer Block Diagram
-    - ![img_3.png](assets/Computer_block_diagram.png)
-
-    - The MPU (Micro-Processor Unit) is the "brain" of the computer (also called the CPU - Central Processing Unit) 
-    - ![img_7.png](assets/MPU.png)
+  - ## Computer Block Diagram
+    [<img src="assets/Computer_block_diagram.png" width="550">](assets/Computer_block_diagram.png)
+  
+    The MPU (Micro-Processor Unit) is the "brain" of the computer (also called the CPU - Central Processing Unit) 
+    [<img src="assets/MPU.png" width="550">](assets/MPU.png)
 
   - ### Clock — "The heart beat of the CPU to keep it all in sync"
     - Clock Circuit - Basically a emits a short pulse of electricity at a regular interval
@@ -419,7 +467,7 @@
     - `0xCD: CMP` Compare the values in two registers and update the "flags" register with the result
     - `0xD0: BNE` If the "flags" register is not zero, start executing at a different location in main memory ie: "conditional branching"
 
-  - ### Fetch-Decode-Execute Cycle of the CPU — "The Dumb-Quick-Work of the CPU"
+  - ### Fetch-Decode-Execute Cycle of the CPU — "The Dumb & Quick Work of the Machine"
     - Fetch means to get the next opcode instruction from main memory address in the PC and puts the opcode into 
       the "Instruction register (IR)" on the CPU
     - Decode means to figure out what the opcode operation is and what the operands are (if any)
@@ -462,7 +510,9 @@
         - Sets the "Greater" flag if the result of the operation was greater than the other operand
         - Sets the "Less" flag if the result of the operation was less than the other operand
         - Sets the "Equal" flag if the result of the operation was equal to the other operand
-        
+    - Learn how computers add numbers and build a 4 bit adder circuit
+      - https://www.youtube.com/watch?v=wvJc9CZcvBc&list=WL    
+  
   - ### Control Unit
     - The "Control Unit" is the part of the CPU that controls the "fetch-decode-execute" cycle
     - It synchronizes the operations of the CPU with the RAM, ROM, and other parts of the computer
@@ -569,14 +619,19 @@
     - Subroutines are the basis for all structured programming
 
 # Data Structures
-  - BIG IDEA - Giving Names structures to represent binary data in memory is easier for humans to deal with than hex codes.
-  - "Data structures" are named concepts for common ways humans have invented to represent data, and usually predate computing.
-  - They represent real world items and concepts in a way that a computer can be programmed to manipulate to solve a problem.
-  - For example, a "list" is a common data structure for a series of items in a specific order.
-    - A list can be used to represent a "orders to be shipped," "to-do items" or a "names and addresses to send a letter to"
+  - BIG IDEA - It's easier for humans to deal with names of structures that represent data in memory than hex code addresses.
+  - "Data structures" are named concepts for common ways humans have invented to represent data, and often predate computing.
+  - They represent real world items and concepts in a way that a computer can be programmed to represent and solve a problem.
+  - For example, a "list" is a common data structure for a series of "items" in a specific order.
+    - A list can be used to represent a "orders to be shipped," "to-do items" or a "names and addresses to send a letter to."
+    - Each item in the list is called an "element" or "item" or "member" of the list.
+    - Items in lists can be accessed by their "index" which is a number that represents the position of the item in 
+      the list count from the beginning of the list.
 
   - 100+ Computer Science Concepts Explained in less than 15 minutes
     - https://www.youtube.com/watch?v=-uleG_Vecis
+  - 10 Math Concepts for Programmers
+    - https://www.youtube.com/watch?v=bOCHTHkBoAs
 
   - ## Numbers or Individual Characters? Or something else?
     
@@ -586,17 +641,18 @@
         - 1 byte (8 bits) can represent unsigned 0 to 255 (known as a "byte" or "octet" or "char" or "unsigned char" or "unsigned byte")
         - 2 bytes (16 bits) can represent unsigned 0 to 65535 (known as a "short", sometimes "word")
         - 4 bytes (32 bits) can represent unsigned 0 to 4294967295 (known as an "int", sometimes "long")
-      - Negative integers are usually represented in "signed" binary 
-        - 2's Complement is the most common way to represent negative numbers in binary
-        - 2's Complement is the "complement" of the number (flipping the bits) and then adding 1
-        - 2's Complement is used to represent negative numbers in binary because it makes the "addition" and "subtraction" of numbers easier
+      - Negative integers are usually represented in "signed" binary. 
+        - 2's Complement is the most common way to represent negative numbers in binary.
+        - 2's Complement is the "complement" of the number (flipping the bits) and then adding 1.
+        - 2's Complement is used to represent negative numbers in binary because it makes the addition and 
+          subtraction of numbers easier.
         - Twos complement: Negative numbers in binary 
           - https://www.youtube.com/watch?v=4qH4unVtJkE
         - 1 byte (8 bits) can represent signed -128 to 127
         - 2 bytes (16 bits) can represent signed -32768 to 32767
         - 4 bytes (32 bits) can represent signed -2147483648 to 2147483647
       - Floating point numbers are usually represented in "IEEE 754" format
-        - Floating point are used to represent very large or very small numbers including fractional decimal numbers 
+        - "Floating point" is used to represent very large or very small numbers including fractional decimal numbers 
         - Floating point is so named because the "point" can "float" to represent very large or very small numbers
         - 4 bytes (32 bits) can represent a floating point number value from -3.4E38 to 3.4E38
         - 8 bytes (64 bits) can represent a double precision floating point number value from -1.7E308 to 1.7E308
@@ -795,6 +851,8 @@
     - Used to represent a "key-value" list, where each "thing" is accessed by a "key" instead of an "index"
     - Efficient for adding and removing items from the list, and efficient for accessing items in the list
     - [Another map diagram](assets/Map.png)
+    - Hash tables in 4 minutes
+      - https://www.youtube.com/watch?v=knV86FlSXJ8
     - Implementation details of a Map (An implementation of a Hash Map)
       - https://www.youtube.com/watch?v=9zqGQQly0To
       
@@ -1043,16 +1101,18 @@
        int main() {  // <-- start of the program, `int` means the function returns an integer 
          int y = 100;
          int x = 10; 
-         { // <-- start of a "scope" or "code block" or just "block"
-           int y = 32; // local to the "scope"
-           x = x + y; 
-         } // <-- end of the "scope"
+         { // <-- Start of a "scope" or "code block" or just "block."
+           int y = 32; // "Local" to the "scope."
+           x = x + y;  // Uses the "local" variable "y" and variable "x" from the outer "main" scope. 
+         } // <-- end of the "scope."
          
-         printf("%d", x); // <-- print the value of x as a decimal number (%d means use "decimal" value of x, 42)
-         printf("%c", x); // <-- print the value of x as a character ("%c" means use the ASCII value of x, 42 is '*')
+         printf("%d", x); // <-- Print the value of x as a decimal number 
+                          //     (%d means use "decimal" value of x, 42.)
+         printf("%c", x); // <-- Print the value of x as a character 
+                          //     ("%c means use the ASCII value of x, 42 is character '*')
        }
        
-       main();  // <-- call the "main" function, runs the program
+       main();  // <-- Call the "main" function, runs the program
        
        // Output: 
        // 42
@@ -1068,10 +1128,10 @@
      - Primitive types are the "building blocks" of all other types defined in `struct`s
      - Example (C):
        ```C
-       struct Point {  // <-- `Point` is a programmer-defined type that is made up of other types
+       struct Point {  // <-- `Point` is a programmer-defined type that is made up of other types.
           int x;
           int y;
-          char colorIdChar;  // <-- `char` is a type that represents a single ASCII character (1 byte)
+          char colorIdChar;  // <-- `char` is a type that represents a single ASCII character (1 byte.)
        };
        
        int main() { 
@@ -1080,8 +1140,8 @@
           char z = 'A'; 
           struct Point p = { 10, 42, 'G' };
           
-          printf("Output: %d %f %c   %d   %d  %c", 
-                          x, y, z, p.x, p.y, p.colorIdChar);
+          printf("Output: %d %f %c   %d   %d   %c", 
+                           x, y, z, p.x, p.y, p.colorIdChar);
        }
        
        main();
@@ -1110,6 +1170,10 @@
     - https://www.youtube.com/watch?v=8R7hoC3OuPo
   - Software Design: Ep4 : 3rd Law of Software Design
     - https://www.youtube.com/watch?v=nCxhJ_51fjA 
+
+- ## "Algorithmic Complexity" - How long is this gonna take?
+  - Learn Big O notation in 6 minutes 📈
+    - https://www.youtube.com/watch?v=XMUe3zFhM5c  
 
 - ## Class Oriented Programming (COP) 1970s-Present
   - Usually misnamed "Object Oriented Programming," as "Objects" are _not_ the main focus, "Classes" are!
@@ -1178,10 +1242,10 @@
           Document <|-- Email : implements
           Document <|-- Song : implements
           
-          <<interface>> Document
           class Document { 
              expects method view()*
           }
+          <<interface>> Document
           class PDF{
               override method view()
           }
