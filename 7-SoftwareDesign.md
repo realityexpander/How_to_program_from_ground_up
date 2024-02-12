@@ -51,4 +51,4 @@
     > - Software Design: Ep4 : 3rd Law of Software Design
     >     - https://www.youtube.com/watch?v=nCxhJ_51fjA 
 
-[Continue Reading - Class Oriented Programming](8-ClassOrientedProgramming)
+[Continue Reading - Class Oriented Programming](8-ClassOrientedProgramming.md)
