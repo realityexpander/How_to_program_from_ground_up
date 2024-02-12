@@ -14,7 +14,7 @@
     - [The Mighty Microprocessor](03-Hardware#the-mighty-microprocessor)
 - [Data Structures](04-DataStructures)
   - How Humans Represent Data in Binary in Computers
-  - [Numbers](04-DataStructures.md#numbers) 
+  - [Numbers](./04-DataStructures.md#numbers) 
   - [Characters](04-DataStructures#characters)
   - [Array](04-DataStructures#array)
   - [String](04-DataStructures#string)
