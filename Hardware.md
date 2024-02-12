@@ -331,6 +331,7 @@
   - ROM (Read-Only Memory)
     - usually contains the basic software to start the computer, sometimes called "firmware")
     - Not easy to change, but can be changed with special equipment.
+      
       [<img src="assets/ROM.png" width="400">](https://en.wikipedia.org/wiki/Read-only_memory)
 
   - RAM (Random Access Memory)
