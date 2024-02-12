@@ -23,7 +23,7 @@
       - O(n) - "Linear Time" - The running time of the program grows as the input size of the program.
       - O(n^2) - "Quadratic Time" - The running time of the program grows as the square of the input size of the program.
 
-    [<img src="assets/Big-O.png" width="350"/>](https://www.youtube.com/watch?v=XMUe3zFhM5c)
+    [<img src="assets/bigo.png" width="350"/>](https://www.youtube.com/watch?v=XMUe3zFhM5c)
 
     > - Learn Big O notation in 6 minutes 📈
     >   - https://www.youtube.com/watch?v=XMUe3zFhM5c
