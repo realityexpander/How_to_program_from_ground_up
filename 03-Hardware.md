@@ -393,5 +393,5 @@
     > 1970s COMPUTER DATA PROCESSING & FILE MAINTENANCE EDUCATIONAL FILM FLOWCHARTS
     >   - https://www.youtube.com/watch?v=geo8UtItSwU
 
-- [Continue Reading - Data Structures](04-DataStructures)
+- [Continue Reading - Data Structures](./04-DataStructures.md)
 - [Back to Index](README.md)

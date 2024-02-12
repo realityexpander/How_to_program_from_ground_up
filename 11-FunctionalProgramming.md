@@ -56,5 +56,5 @@
   ```
   > Live Code Example: [Functional Example](src/main/kotlin/functionalExample.kt)
 
-- [Continue Reading - Parallel Processing](12-ParallelProcessing.md)  
+- [Continue Reading - Parallel Processing](./12-ParallelProcessing.md)  
 - [Back to Index](README.md)

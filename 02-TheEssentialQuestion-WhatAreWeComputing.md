@@ -88,5 +88,5 @@
 
       ### It's just following the logical operations that humans have carefully designed to represent the problem and represent a solution.
 
-- [Continue Reading - Hardware](03-Hardware)
+- [Continue Reading - Hardware](./03-Hardware.md)
 - [Back to Index](README.md)

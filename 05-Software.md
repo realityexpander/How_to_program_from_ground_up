@@ -297,5 +297,5 @@
       the function was called from."
     - Subroutines are the basis for all structured programming.
 
-- [Continue Reading - High Level Languages](06-HighLevelLanguages)
+- [Continue Reading - High Level Languages](./06-HighLevelLanguages.md)
 - [Back to Index](README.md)
