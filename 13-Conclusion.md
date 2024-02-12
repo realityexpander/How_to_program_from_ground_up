@@ -11,4 +11,4 @@
 - Paradigms are not independent, and are often used together to create a program that is easier to
   understand and maintain.
 
-[Back to Index](README.md)
+- [Back to Index](README.md)

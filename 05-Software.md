@@ -24,16 +24,18 @@
     - The opcodes are the most primitive logical operations that the CPU can perform.
     - The opcodes are usually followed by "operands" which are the "arguments" to the operation.
   - The Machine hex value opcodes are unwieldy for humans to remember, so we use "mnemonics" to represent them.
-    - Mnemonics are simply human-readable names for the opcodes, like "LOAD" or "STORE" or "ADD" or "SUBTRACT" used to
+    - Mnemonics are simply human-readable names for the opcodes, like `LOAD`, `STORE`, `ADD`, `COMPARE`, and `JUMP` used to
       represent the opcodes values.
     - These mnemonics are translated into the binary opcodes by a compiler or assembler program.
 
 ## Representing Values in Memory
     
   - ### Binary Counting
-    - ### BIG IDEA - We can represent numbers in binary, and then perform arithmetic operations on them.
-    
-    [<img src="assets/8-bit-counting-2.png" width="450">](assets/8-bit-counting-2.png)
+    - ### BIG IDEA - If we can represent numbers in binary, we can then perform logical operations to build complex arithmetic operations.
+ 
+      [<img src="assets/8-bit-counting-2.png" width="450">](assets/8-bit-counting-2.png)
+    > Learn how computers add numbers and build a 4 bit adder circuit
+    > https://www.youtube.com/watch?v=wvJc9CZcvBc
 
   - ### Hexadecimal Counting
     - ### BIG IDEA - Hexadecimal is a compact way to represent binary values in a way that is easier for humans to read and write.
@@ -295,4 +297,5 @@
       the function was called from."
     - Subroutines are the basis for all structured programming.
 
-[Continue Reading - High Level Languages](6-HighLevelLanguages.md)
+- [Continue Reading - High Level Languages](06-HighLevelLanguages)
+- [Back to Index](README.md)

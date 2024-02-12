@@ -1,32 +1,32 @@
 # How to Program From The Ground Up with Minimal BS
 
 - [Introduction](#introduction)
-- [The Essence of Computing](2-TheEssentialQuestion-WhatAreWeComputing)
-- [Hardware](3-Hardware.md)
-  - Low Level Hardware Implementations
-    - [The Wire & the Light Bulb & the Battery](3-Hardware#the-wire--the-battery)
-    - [The Simple Switch](3-Hardware#the-simple-switch)
-    - [The Magnificent Magnet](3-Hardware#the-magnificent-electromagnet)
-    - [The Raucous Relay](3-Hardware#the-raucous-relay)
-    - [The Voracious Vacuum Tube](3-Hardware#the-voracious-vacuum-tube)
-    - [The Tiny Transistor](3-Hardware#the-tiny-transistor)
-    - [The Interchangeable Integrated Chip (IC)](3-Hardware#the-interchangeable-integrated-chip-ic)
-    - [The Mighty Microprocessor](3-Hardware#the-mighty-microprocessor)
-- [Data Structures](4-DataStructures.md)
-  - The Representations of Data in Memory
-  - [Numbers](4-DataStructures.md#numbers) 
-  - [Characters](4-DataStructures.md#characters)
-  - [Array](4-DataStructures.md#array)
-  - [String](4-DataStructures.md#string)
-  - [Pointer](4-DataStructures.md#pointer)
-  - ["Data Structures"](4-DataStructures.md#data-structures)
-  - [Stack](4-DataStructures.md#stack)
-  - [Queue](4-DataStructures.md#queue)
-  - [Linked List](4-DataStructures.md#linked-list)
-  - [Map](4-DataStructures.md#map)
-  - [Tree](4-DataStructures.md#tree)
-- [Software](5-Software.md)
-  - [Machine Code](5-Software.md#machine-code)
+- [The Essence of Computing](02-TheEssentialQuestion-WhatAreWeComputing)
+- [Hardware](03-Hardware)
+  - Using Natural Phenomenon to Represent Human Information
+    - [The Wire & the Light Bulb & the Battery](03-Hardware#the-wire--the-battery)
+    - [The Simple Switch](03-Hardware#the-simple-switch)
+    - [The Magnificent Magnet](03-Hardware#the-magnificent-electromagnet)
+    - [The Raucous Relay](03-Hardware#the-raucous-relay)
+    - [The Voracious Vacuum Tube](03-Hardware#the-voracious-vacuum-tube)
+    - [The Tiny Transistor](03-Hardware#the-tiny-transistor)
+    - [The Interchangeable Integrated Chip (IC)](03-Hardware#the-interchangeable-integrated-chip-ic)
+    - [The Mighty Microprocessor](03-Hardware#the-mighty-microprocessor)
+- [Data Structures](04-DataStructures)
+  - How Humans Represent Data in Binary in Computers
+  - [Numbers](04-DataStructures#numbers) 
+  - [Characters](04-DataStructures#characters)
+  - [Array](04-DataStructures#array)
+  - [String](04-DataStructures#string)
+  - [Pointer](04-DataStructures#pointer)
+  - ["Data Structures"](04-DataStructures#data-structures)
+  - [Stack](04-DataStructures#stack)
+  - [Queue](04-DataStructures#queue)
+  - [Linked List](04-DataStructures#linked-list)
+  - [Map](04-DataStructures#map)
+  - [Tree](04-DataStructures#tree)
+- [Software](05-Software)
+  - [Machine Code](05-Software#machine-code)
   - 
 
 ## Introduction
@@ -86,4 +86,5 @@
       - Mistaking the machine for having intelligence is known as "The Eliza Effect" and is a common mistake 
         made by people who don't understand the limits of the machine's capabilities.
 
-[Continue Reading - The Essential Question](2-TheEssentialQuestion-WhatAreWeComputing.md)
+- [Continue Reading - The Essential Question](02-TheEssentialQuestion-WhatAreWeComputing)
+- [Back to Index](README.md)

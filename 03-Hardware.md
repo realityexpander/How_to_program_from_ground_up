@@ -3,7 +3,7 @@
 
 # Low Level Hardware Implementations
 
-## The Wire & the Battery — 1800's to present
+## The Wire & the Battery — 1800's to present <a name="the-wire--the-battery"></a>
   - ### BIG IDEA — A wire can be used to represent a logical "state": Is electricity flowing or not flowing?
   - This is the most basic representation of a "state" in computing, and the underlying principle of all computing.
 - We are using this arrangement to represent a logic "state"
@@ -11,7 +11,7 @@
 - Connected or not connected? (1 or 0)
     - But we don't really know its state until we measure it somehow (like with a voltmeter or a light bulb)
 
-## The Simple Switch & Light Bulb — 1830's to present
+## The Simple Switch & Light Bulb — 1830's to present <a name="the-simple-switch"></a>
   - ### BIG IDEA — A switch can be used to represent a logic "state".
       - This is the most basic representation of a "state" in computing
       - Easier to manipulate for humans than a bare wire
@@ -72,7 +72,7 @@
         ```
     - ### We need the light bulb to on when the switch is off, and off when the switch is on, BUT HOW TO DO THAT?
 
-## The Magnificent Electromagnet — 1825 to present
+## The Magnificent Electromagnet — 1825 to present <a name="the-magnificent-electromagnet"></a>
    - ### BIG IDEA — An electrical current can cause mechanical actions with certain metallic materials.
      1) To physically manipulate the physical world, like a motor or a solenoid.
      2) To induce a magnetic field to represent a "state," like magnetic tape or a hard drive.
@@ -90,7 +90,7 @@
      > - Magnetic Viewing Film — How it Works/Demos
      >   - https://www.youtube.com/watch?v=slVL5nbTXd4
 
-## The Raucous Relay — 1835 to 1920's
+## The Raucous Relay — 1835 to 1920's <a name="the-raucous-relay"></a>
    - ### BIG IDEA — Use an electromagnet to control a switch (or multiple switches.)
    
    - The first electrical computers were made of relays (extremely slow but faster than calculating manually!)
@@ -119,7 +119,7 @@
      > - Relay Calculators: Episode 4 - Mistakes
      >   - https://youtu.be/OZXwNiJ7mtw
 
-## The Voracious Vacuum Tube — 1904 to 1960's
+## The Voracious Vacuum Tube — 1904 to 1960's <a name="the-voracious-vacuum-tube"></a>
    - ### BIG IDEA — Instead of using a magnetic field to control a switch, we can use a vacuum to control the flow of electricity, in a way that works just like a switch.
 
      [<img src="assets/vacuum_tube.png" width="400">](https://en.wikipedia.org/wiki/Vacuum_tube)
@@ -160,7 +160,7 @@
      >   - https://www.youtube.com/watch?v=NkmrMdigB-8
    - #### The vacuum tube is voracious because it consumes a lot of power to heat the cathode and generates a lot of excess heat.
 
-## The Tiny Transistor - 1957 to present
+## The Tiny Transistor - 1957 to present <a name="the-tiny-transistor"></a>
    - ### BIG IDEA — Instead of using an electrically heated wire and vacuum to control the flow of electricity, we can use an economical semiconductor material and reduce energy and size by a factor of 100.
    
      [<img src="assets/transistor_vs_tube.png" width="400">](https://www.youtube.com/watch?v=DXvAlwMAxiA)
@@ -218,7 +218,7 @@
          >   - SR Latch
          >   - https://youtu.be/KM0DdEaY5sY
 
-## The Interchangeable Integrated Chip (IC) — 1960's to present
+## The Interchangeable Integrated Chip (IC) — 1960's to present <a name="the-interchangeable-integrated-chip-ic"></a>
   - ### BIG IDEA — We can use photographic techniques to create thousands of transistors on a single chip and radically reduce the costs of manufacture and assembly of computing devices and increase functionality and reliability.
   
   - This allows creating large groups of transistor logic gates packaged together to perform a specific task.
@@ -232,75 +232,83 @@
         > - “MY FIRST CHIP” - Carver Mead - 2017
         >   - https://www.youtube.com/watch?v=F5P5SAlEbo4
 
-- Robert Noyce, inventor of the first monolithic IC holding a photographic layer for an Integrated Circuit.
+    > - Robert Noyce, inventor of the first monolithic IC holding a photographic layer for an Integrated Circuit.
+    > 
+    >   [<img src="assets/the_ic.png" width="400">](https://en.wikipedia.org/wiki/Robert_Noyce)
+    > 
+    > - Logic Gate Symbols
+    >  
+    >   [<img src="assets/logicGateSymbols.png" width="400">](https://en.wikipedia.org/wiki/Logic_gate)
+    > 
+    > - Typical Early Logic Gate Package
+    > 
+    >   [<img src="assets/seven_segment/74HC42.jpg" width="400">](https://shop.griederbauteile.ch/en/info/7/74HC42.pdf)
+    > 
+    > - NAND gate package
+    >   
+    >   [<img src="assets/NAND_gate_package.png" width="300">](https://www.homemade-circuits.com/simple-circuits-using-ic-7400-nand-gates/)
+    >   
+    > - Close up of silicon wafer wired to package
+    > 
+    >   [<img src="assets/chip-wired-to-package.png" width="400">](https://en.wikipedia.org/wiki/Robert_Noyce)
+    > 
+    > - Inverter Gate and NAND gate under 50x microscope
+    > 
+    >   [<img src="assets/seven_segment/Inverter-Gate-and-NAND-gate-under-50x-microscope.png" width="400">](https://www.researchgate.net/figure/Logic-gates-based-on-printed-electrochemical-transistors-Schematics-of-an-inverter-a_fig3_337084817)
+    > 
+    > - 7-Segment LED Display Package
+    > 
+    >   [<img src="assets/seven_segment/Seven_segment_01_Pengo.jpg" width="200">](https://en.wikipedia.org/wiki/Seven-segment_display)
+    > 
+    > - 7-Segment Display Schematic Common Cathode
+    > 
+    >   [<img src="assets/seven_segment/Internal-Schematic-Common-Cathode-7-Segment-LED-Display.png" width="200">]()
+    > 
+    > - What is a "BCD (Binary Coded Decimal) to 7 Segment Display Decoder"?
+    > 
+    >   [<img src="assets/seven_segment/BCD-to-7-Segment-Display-Decoder.png" width="400">](https://www.electrical4u.com/bcd-to-seven-segment-decoder/)
+    > 
+    > - 7-Segment Display truth table
+    > 
+    >   [<img src="assets/seven_segment/7-segment-display-truth-table.webp" width="400">](https://en.wikipedia.org/wiki/Seven-segment_display)
+    > 
+    > - 7-Segment Display "BCD to 7-Segment Decoder" Schematic "Naive" Implementation
+    > 
+    >   [<img src="assets/seven_segment/BCD-to-7-segment-Decoder-Design-Using-Basic-Gates.jpg" width="400">](https://www.electronicshub.org/bcd-7-segment-led-display-decoder-circuit/)
+    > 
+    > - Schematic of BCD to Decimal Decoder using Clever Arrangement of NAND gates and Inverters
+    > 
+    >   [<img src="assets/seven_segment/Schematic-of-BCD-to-Decimal-Decoder.png" width="400">](https://www.researchgate.net/figure/Binary-coded-decimal-4-to-7-decoder-a-Schematics-of-a-4-to-7-decoder-implemented-with_fig4_337084817)
+    > 
+    >   > - Visualizing Data with 7-Segment Displays
+    >   >   - https://www.youtube.com/watch?v=hEDQpqhY2MA
 
-  [<img src="assets/the_ic.png" width="400">](https://en.wikipedia.org/wiki/Robert_Noyce)
+  - ### Why are NAND gates special?
+    - NAND gates are known as universal gates, because you can make any other gates out of them. 
+     
+      [<img src="assets/NAND_equivalent.png" width="300">](assets/NAND_equivalent.png)
+      [<img src="assets/NAND_gate.png" width="200">](https://en.wikipedia.org/wiki/NAND_gate)
+    
+    - It's the most flexible gate and can be combined to create any other logic gate, ie: `AND`, `OR`, `NOT`, `XOR`, etc.
+      - `NOT` (inverter) = tie the `NAND` inputs together, this applies the same input to the 2 NAND’s inputs. 
+      - `AND` = `NAND` gate accepts 2 inputs and placing a `NOT` gate on the `NAND` output makes an `AND` gate.
+      - `OR` = Inverters on each of the `NAND` gate inputs makes an `OR` gate.
+      - `NOR` = Take one NAND gate, and place 2 inverters on each of the 2 NAND gate inputs and an inverter on the NAND output, makes a `NOR` gate.
+      - `XOR` = 4 NAND gates makes an "exclusive OR"`XOR` gate.
+      - `XNOR` = 4 NAND gates + one NAND inverter makes an "exclusive NOR" `XNOR` gate.
+    - Everything in computers can be accomplished solely with just these three types of gates.
+    - Most early semiconductor-based digital electronic calculators were made up of many IC's consisting solely of these NAND gates.
 
-- Typical Early Logic Gate Package
+    - From simple NAND gate packages to a somewhat sophisticated 7-segment display using LED's.
+      > - Designing a 7-segment hex decoder
+      >   - https://www.youtube.com/watch?v=7zffjsXqATg
 
-  [<img src="assets/seven_segment/74HC42.jpg" width="400">](https://shop.griederbauteile.ch/en/info/7/74HC42.pdf)
-
-- Close up of silicon wafer wired to package
-
-  [<img src="assets/chip-wired-to-package.png" width="400">](https://en.wikipedia.org/wiki/Robert_Noyce)
-
-- Inverter Gate and NAND gate under 50x microscope
-
-  [<img src="assets/seven_segment/Inverter-Gate-and-NAND-gate-under-50x-microscope.png" width="400">](https://www.researchgate.net/figure/Logic-gates-based-on-printed-electrochemical-transistors-Schematics-of-an-inverter-a_fig3_337084817)
-
-- 7-Segment LED Display Package
-
-  [<img src="assets/seven_segment/Seven_segment_01_Pengo.jpg" width="200">](https://en.wikipedia.org/wiki/Seven-segment_display)
-
-- 7-Segment Display Schematic Common Cathode
-
-  [<img src="assets/seven_segment/Internal-Schematic-Common-Cathode-7-Segment-LED-Display.png" width="200">]()
-
-- What is a "BCD to 7 Segment Display Decoder"?
-
-  [<img src="assets/seven_segment/BCD-to-7-Segment-Display-Decoder.png" width="400">](https://www.electrical4u.com/bcd-to-seven-segment-decoder/)
-
-- 7-Segment Display truth table
-
-  [<img src="assets/seven_segment/7-segment-display-truth-table.webp" width="400">](https://en.wikipedia.org/wiki/Seven-segment_display)
-
-- 7-Segment Display "BCD to 7-Segment Decoder" Schematic "Naive" Implementation
-
-  [<img src="assets/seven_segment/BCD-to-7-segment-Decoder-Design-Using-Basic-Gates.jpg" width="400">](https://www.electronicshub.org/bcd-7-segment-led-display-decoder-circuit/)
-
-- Schematic of BCD to Decimal Decoder using Clever Arrangement of NAND gates and Inverters
-
-  [<img src="assets/seven_segment/Schematic-of-BCD-to-Decimal-Decoder.png" width="400">](https://www.researchgate.net/figure/Binary-coded-decimal-4-to-7-decoder-a-Schematics-of-a-4-to-7-decoder-implemented-with_fig4_337084817)
-
-  > - Visualizing Data with 7-Segment Displays
-  >   - https://www.youtube.com/watch?v=hEDQpqhY2MA
-
- - ### Why are NAND gates special?
-   - NAND gates are known as universal gates, because you can make any other gates out of them. 
-   
-     [<img src="assets/NAND_equivalent.png" width="300">](assets/NAND_equivalent.png)
-     [<img src="assets/NAND_gate.png" width="200">](https://en.wikipedia.org/wiki/NAND_gate)
-   
-   - It's the most flexible gate and can be combined to create any other logic gate, ie: `AND`, `OR`, `NOT`, `XOR`, etc.
-     - `NOT` (inverter) = tie the `NAND` inputs together, this applies the same input to the 2 NAND’s inputs. 
-     - `AND` = `NAND` gate accepts 2 inputs and placing a `NOT` gate on the `NAND` output makes an `AND` gate.
-     - `OR` = Inverters on each of the `NAND` gate inputs makes an `OR` gate.
-     - `NOR` = Take one NAND gate, and place 2 inverters on each of the 2 NAND gate inputs and an inverter on the NAND output, makes a `NOR` gate.
-     - `XOR` = 4 NAND gates makes an "exclusive OR"`XOR` gate.
-     - `XNOR` = 4 NAND gates + one NAND inverter makes an "exclusive NOR" `XNOR` gate.
-   - Everything in computers can be accomplished solely with just these three types of gates.
-   - Most early semiconductor-based digital electronic calculators were made up of many IC's consisting solely of these NAND gates.
-
-- From simple NAND gate packages to a somewhat sophisticated 7-segment display using LED's.
-  > - Designing a 7-segment hex decoder
-  >   - https://www.youtube.com/watch?v=7zffjsXqATg
-
-## The Mighty Microprocessor — 1971 to present
+## The Mighty Microprocessor — 1971 to present <a name="the-mighty-microprocessor"></a>
   - ### BIG IDEA — Consolidate all the necessary components from various Integrated Chips required for a computer onto a single chip.
   
     [<img src="assets/6502.png" width="400">](https://en.wikipedia.org/wiki/MOS_Technology_6502)
 
-  - Simply groups of different Integrated Chips -> All put on one chip.
+  - Simply groups of different Integrated Chips ➜ All put on one chip.
   - Contains a CPU (Central Processing Unit) and a small amount of ultra-fast memory (called "Registers").
   - The CPU is just a clever and somewhat complex arrangement of logic gates that can perform a series of logical operations/
     > - An intuitive approach for understanding the CPU and RAM
@@ -318,7 +326,7 @@
   - It May contain a small amount of "cache" memory (extremely quick memory near the CPU circuits) to speed up access to the main memory.
   - CPUs are where the execution of each instruction happens.
 
-## The Configurable Computer
+## The Configurable Computer <a name="the-configurable-computer"></a>
   - ### BIG IDEA — Instead of putting all the functions for a task into a single computer, define for a standardized interface to connect different devices to perform a task.  
     
   - By arranging the basic electronic components in particular patterns to achieve a specific narrow specialized task,
@@ -377,4 +385,5 @@
     > 1970s COMPUTER DATA PROCESSING & FILE MAINTENANCE EDUCATIONAL FILM FLOWCHARTS
     >   - https://www.youtube.com/watch?v=geo8UtItSwU
 
-[Continue Reading - Data Structures](4-DataStructures.md)
+- [Continue Reading - Data Structures](04-DataStructures)
+- [Back to Index](README.md)

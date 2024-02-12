@@ -228,4 +228,5 @@
         ```
       - [Click for source code to copy and paste into the BASIC playground: `proceduralWithForLoop.bas`](assets/proceduralWithForLoop.bas) 
 
-[Continue Reading - Software Design](7-SoftwareDesign.md)
+- [Continue Reading - Software Design](07-SoftwareDesign)
+- [Back to Index](README.md)
