@@ -68,4 +68,4 @@
         the machine was a human, and then it would be a human, not a machine. 
       - Mistaking the machine for having intelligence is known as "The Eliza Effect."
 
-[Continue Reading](TheEssentialQuestion-WhatAreWeComputing.md)
+[Continue Reading - The Essential Question](TheEssentialQuestion-WhatAreWeComputing.md)

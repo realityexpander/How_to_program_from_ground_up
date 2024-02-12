@@ -56,5 +56,5 @@
   ```
   > Live Code Example: [Functional Example](src/main/kotlin/functionalExample.kt)
 
-[Continue Reading](Conclusion.md)  
+[Continue Reading - Conclusion](Conclusion.md)  
   

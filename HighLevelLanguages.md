@@ -6,17 +6,19 @@
   - The languages allowed for more widespread adoption of computers and programming, as the languages were easier to learn
     and use than assembly language.
 
-- ## Procedural Programming 1950s-Present (for amateurs, 1960s-1990s for professionals)
-    - ### BIG IDEA - Use "subroutines" to avoid "GOTO" statements and "spaghetti code"
+- ## Procedural Programming (1960s-Present)
+    - ### BIG IDEA - Use "subroutines" to avoid `GOTO` statements and "spaghetti code"
     
     - First style of high-level language after assembly language
     - Considered "high level" because it was abstracted from the assembly language. The language was actually just
       another program that translated the "high level" language into "machine code" for the CPU, usually at runtime.
     - Examples of Procedural languages are "Fortran" and "BASIC" and "COBOL"
-    - Procedural code is executed top to bottom, one line at a time. Control flow is done with "IF" and "GOTO" statements
-    - GOTO was still commonly used, as most people didn't know how to use "subroutines" or "functions" yet and
-    - GOTO was easier to understand, at least first.
-      > - Online playground for BASIC to try these programs
+    
+    - Procedural code is executed top to bottom, one line at a time. 
+    - Control flow is done with `IF` and `GOTO` statements.
+    - `GOTO` was still commonly used, as most people didn't know how to use "subroutines" or "functions" yet and
+    - `GOTO` was easier to understand, at least first... (DUN, Dun, dun...)
+      > - Online playground to try these programs in BASIC
       >   - https://www.calormen.com/jsbasic/
 
     - Example of Procedural-Oriented Programming with GOTO's in BASIC (Beginner's All-purpose Symbolic Instruction Code)
@@ -48,7 +50,8 @@
         - [Click for source code to copy and paste into the BASIC playground](/assets/proceduralWithGoto.bas)
 
     - ### The Painful Push for Subroutines & Some Structure
-        - BIG IDEA - REUSABLE FUNCTIONS instead of lots of GOTO's
+        - ### BIG IDEA - Reusable functions and procedures to avoid "spaghetti code" and enable working on teams. 
+        
         - Programmers were eventually forced into using "subroutines" to deal with extreme overuse of "JUMP/GOTO"
           statements common to programming at that time which lead to extremely confusing, unreadable and unmaintainable
           "spaghetti code", so named because of the way the "GOTO" statements would jump around the program and get mixed
@@ -83,7 +86,7 @@
           ```
         - [Click for source code to copy and paste into the BASIC playground](/assets/proceduralWithGosub.bas)
 
-    - Example without Loops (also called an "unrolled loop", because each step is imperative and "unrolled" from a loop)
+    - Example using `GOSUB` without Loops (also called an "unrolled loop", because each step is imperative and "unrolled" from a loop)
         - Interesting note: compilers will often "unroll" loops to make the code faster because it reduces the number of
           "conditional" statements that the CPU has to execute.
       ```Text
@@ -140,7 +143,7 @@
       ```
         - [Click for source code to copy and paste into the BASIC playground](/assets/proceduralUnrolledLoops.bas)
 
-    - #### Programmer Written "looping" Leftover From Assembly Language
+    - #### Programmer-Implemented "Looping" Style Leftover From Assembly Language
         -  Example using programmer-made loops using GOTO's and Indexes (also called "counters" or "iterators" or "loop variables")
       ```Text
       5 REM PROGRAM TO DEMO "FOR LOOP" TO CREATE A CUMULATIVE ADDITION TABLE 
@@ -171,7 +174,9 @@
         - [Click for source code to copy and paste into the BASIC playground](/assets/proceduralProgrammerMadeLoops.bas)
 
     - ### Loops instead of GOTOs
-        - BIG IDEA - The FOR "loop" statement was introduced to replace the "GOTO" statement, as an attempt to make procedural
+        - ### BIG IDEA - We can standardize and write common functions in software and possibly add them to the language or a standard libary to reduce programming time and errors.
+        
+        - The FOR "loop" statement was introduced to replace the "GOTO" statement, as an attempt to make procedural
           code more "structured."
         - The "loop" statement was used to repeat a block of code a certain number of times, or until a certain condition was met.
 
@@ -203,4 +208,4 @@
           ```
         - [Click for source code to copy and paste into the BASIC playground](/assets/proceduralWithForLoop.bas) 
 
-[Continue Reading](StructuredProgramming.md)
+[Continue Reading - Structured Programming](StructuredProgramming.md)

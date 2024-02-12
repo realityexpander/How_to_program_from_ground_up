@@ -27,7 +27,7 @@
             - 2's Complement is used to represent negative numbers in binary because it makes the addition and
               subtraction of numbers easier.
               > - Twos complement: Negative numbers in binary
-                  >   - https://www.youtube.com/watch?v=4qH4unVtJkE
+              >   - https://www.youtube.com/watch?v=4qH4unVtJkE
             - 1 byte (8 bits) can represent signed -128 to 127
             - 2 bytes (16 bits) can represent signed -32768 to 32767
             - 4 bytes (32 bits) can represent signed -2147483648 to 2147483647
@@ -39,7 +39,7 @@
             - Floating point numbers will use a "mantissa" and an "exponent" to represent the number in scientific notation
             - Due to the way floating point numbers are represented, they are not exact! And will have rounding errors!
               > - Why Is This Happening?! Floating Point Approximation!
-                  >   - https://www.youtube.com/watch?v=2gIxbTn7GSc
+              >   - https://www.youtube.com/watch?v=2gIxbTn7GSc
 
     - ### Characters/Letters are usually represented in ASCII (1 byte) or Unicode(1 or more bytes)
         - ASCII is a 1 byte (8 bit) representation of the most common letters and symbols.
@@ -65,7 +65,7 @@
         - Some languages allow functions to be represented as a type and passed around as a variable.
         - data structures (records, objects) made up of other types.
           > - Animated Interactive Visualizations with pseudocode for many common data structures
-              >   - https://www.cs.usfca.edu/~galles/visualization/Algorithms.html
+          >   - https://www.cs.usfca.edu/~galles/visualization/Algorithms.html
 
     - ### Array (1D, 2D, 3D, etc.)
         - A way to represent a "list" of values in memory.
@@ -82,11 +82,11 @@
 
               [<img src="assets/2d_arrays.png" width="350"/>]()
 
-      > - 2D Arrays in Code
+      > - 2D Array Representation in Computer Languages
       >   - Other computer languages may flip the order of rows and columns.
       >   - C is a "row-major" language, meaning the rows is the first index and the columns is the second index
       >   - Python is a "column-major" language, meaning the columns is the first index and the rows is the second index
-      >>    [<img src="assets/2dArraysInC.png" width="350"/>]()
+      >>    [<img src="assets/2dArraysInC.png" width="450"/>]()
       >   - Yeah this not confusing at all!!!
 
     - ### String
@@ -269,4 +269,4 @@
          C -->|points to | F[Left]
          C -->|points to | G[Right]
       ```
-[Continue Reading](HighLevelLanguages.md)
+[Continue Reading - High Level Languages](HighLevelLanguages.md)

@@ -79,4 +79,4 @@
   compiler for their particular machine, and then the same code could be run on any machine that had a compiler
   for the language.
 
-[Continue Reading](ClassOrientedProgramming.md)
+[Continue Reading - Class Oriented Programming](ClassOrientedProgramming.md)
