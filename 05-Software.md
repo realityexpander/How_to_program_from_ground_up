@@ -225,49 +225,49 @@
    - ### Common Assembly Language Operations (Mnemonics for Opcodes)
      >
      > - #### Jump  `JMP`
-     >     - The "goto" statement of machine code
-     >     - Changes the program counter (PC) to point to a different location in memory
-     >     - Usually mnemonic `JMP [Label or Address]` where the operand is the label of the location in memory to jump to or a
-     >       specific location in memory to jump to.
-     >     - Also known a "branch" or "loop."
-     >     - No limits to where the jump can go, it be anywhere in memory. If it's wrong, the machine will likely halt
-     >       or do something unexpected, also called a "crash," "hang," "freeze," "fault," or "exception"
+     >   - The "goto" statement of machine code
+     >   - Changes the program counter (PC) to point to a different location in memory
+     >   - Usually mnemonic `JMP [Label or Address]` where the operand is the label of the location in memory to jump to or a
+     >     specific location in memory to jump to.
+     >   - Also known a "branch" or "loop."
+     >   - No limits to where the jump can go, it be anywhere in memory. If it's wrong, the machine will likely halt
+     >     or do something unexpected, also called a "crash," "hang," "freeze," "fault," or "exception"
      > - #### Load `LDX`
-     >     - Copies a value from a location in memory into a register (a tiny bit of memory that is part of the CPU)
-     >     - Usually mnemonic `LDX [ADDR]` where X is the register to load into, and the operand is the location in memory to load from.
-     >     - Also known as "fetch" or "read" or "get."
+     >   - Copies a value from a location in memory into a register (a tiny bit of memory that is part of the CPU)
+     >   - Usually mnemonic `LDX [ADDR]` where X is the register to load into, and the operand is the location in memory to load from.
+     >   - Also known as "fetch" or "read" or "get."
      > - #### Store `STX`
-     >     - Copies a value from a register into a location in memory.
-     >     - Usually mnemonic `STX [ADDR]` where X is the register to store from and the operand is the location in memory to store into.
-     >     - Also known as "write" or "put."
+     >   - Copies a value from a register into a location in memory.
+     >   - Usually mnemonic `STX [ADDR]` where X is the register to store from and the operand is the location in memory to store into.
+     >   - Also known as "write" or "put."
      > - #### Move `MOV`
-     >     - Copies a value from one register into another register.
-     >     - Usually mnemonic `MOV X,Y` and an operand where X is the register to move from and Y is the register to move to.
-     >     - Also known as "copy" or "transfer."
+     >   - Copies a value from one register into another register.
+     >   - Usually mnemonic `MOV X,Y` and an operand where X is the register to move from and Y is the register to move to.
+     >   - Also known as "copy" or "transfer."
      > - #### Add `ADD`
-     >     - Adds the values in two registers and stores the result in the Accumulator register.
-     >     - Usually mnemonic `ADD`
-     >     - Also known as "increment" or "plus."
+     >   - Adds the values in two registers and stores the result in the Accumulator register.
+     >   - Usually mnemonic `ADD`
+     >   - Also known as "increment" or "plus."
      > - #### Subtract `SUB`
-     >     - Subtracts the values in two registers and stores the result in a Accumulator register.
-     >     - Usually mnemonic `SUB`
-     >     - Also known as "decrement" or "minus."
+     >    - Subtracts the values in two registers and stores the result in a Accumulator register.
+     >    - Usually mnemonic `SUB`
+     >    - Also known as "decrement" or "minus."
      > - #### Compare `CMP`
-     >     - Compares the values in two registers and updates the flag register with the result.
-     >     - Usually mnemonic `CMP X,Y` and an operand where X is the register to compare with Y.
-     >     - Also known as "test" or "equal."
+     >   - Compares the values in two registers and updates the flag register with the result.
+     >   - Usually mnemonic `CMP X,Y` and an operand where X is the register to compare with Y.
+     >   - Also known as "test" or "equal."
      > - #### Conditional Jump `JNZ`
-     >     - The "`if`" statement of machine code, controls the flow of the program, branching execution to different
-     >       locations in memory depending on the result of a previous operation.
-     >     - Changes the program counter (PC) to point to a different location in memory based on the result of a previous operation.
-     >     - The results of the previous operation is kept in an ALU (Arithmetic Logic Unit) "flag" register.
-     >     - The "if" statement is the most important part of programming, it's the basis for all decision making.
-     >     - Usually mnemonics:
-     >         - `JNZ` (Jump if the register flag "Not Zero" is set.)
-     >         - `JZ` (Jump if the register flag "Zero" is set.)
-     >         - `JG` (Jump if the register flag "Greater" Flag is set.)
-     >         - `JL` (Jump if the register flag "Less" is set.)
-     >     - Also known as "branching" or "a conditional" or "loop."
+     >   - The "`if`" statement of machine code, controls the flow of the program, branching execution to different
+     >     locations in memory depending on the result of a previous operation.
+     >   - Changes the program counter (PC) to point to a different location in memory based on the result of a previous operation.
+     >   - The results of the previous operation is kept in an ALU (Arithmetic Logic Unit) "flag" register.
+     >   - The "if" statement is the most important part of programming, it's the basis for all decision making.
+     >   - Usually mnemonics:
+     >       - `JNZ` (Jump if the register flag "Not Zero" is set.)
+     >       - `JZ` (Jump if the register flag "Zero" is set.)
+     >       - `JG` (Jump if the register flag "Greater" Flag is set.)
+     >       - `JL` (Jump if the register flag "Less" is set.)
+     >   - Also known as "branching" or "a conditional" or "loop."
 
   - ## Variables
     ### BIG IDEA - "Variables" are just named values for memory locations used to store data, and easier for humans to remember and use.
