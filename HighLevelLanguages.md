@@ -1,25 +1,33 @@
-# High-Level Language Styles
-
-- ### BIG IDEA - Use English-like commands instead of cryptic and tedious assembly language.
+# High-Level Languages
+  ### BIG IDEA - English-like commands are easier for people to read and understand than cryptic assembly language.
+  - High-level meaning more friendly to humans to work with, not necessarily more powerful or faster for the computer to execute.
   - The first high-level languages were just "assemblers" that translated "mnemonics" into "machine code" for the CPU.
   - The next step was to create a language that was more "abstract" and "portable" than assembly language.
-  - The languages allowed for more widespread adoption of computers and programming, as the languages were easier to learn
-    and use than assembly language.
+  - All languages, no matter how sophisticated, are eventually translated into "machine code" for the CPU to execute.
+  - The High-level languages allowed for more widespread adoption of computers and programming, as the languages were 
+    easier to learn and use than assembly language.
 
-- ## Procedural Programming (1960s-Present)
-    - ### BIG IDEA - Use "subroutines" to avoid `GOTO` statements and "spaghetti code"
+  - This style of programming was extremely successful in 1960-1990's, and is still used today in mostly in banking.
+    > Computing and Computers - Batch Processing - BBC2 - 1980
+    > - https://www.youtube.com/watch?v=fAselhq0Q8g
     
-    - First style of high-level language after assembly language
-    - Considered "high level" because it was abstracted from the assembly language. The language was actually just
-      another program that translated the "high level" language into "machine code" for the CPU, usually at runtime.
-    - Examples of Procedural languages are "Fortran" and "BASIC" and "COBOL"
+# Programming Styles
+  - The first programming styles were direct descedants of assembly language, and worked in the same way.
+  - This way of working is generally referred to as "imperative" programming, as the programmer is giving the
+    computer the exact set of steps to perform to solve a problem. There is another style of programming called
+    "declarative" which we shall discuss later.
+
+- ## Procedural Programming (1957-Present)
+    - ### BIG IDEA - Using GOTo's to jump around the program was a bad idea leading to unmaintainable code! We need to a better way!
     
     - Procedural code is executed top to bottom, one line at a time. 
     - Control flow is done with `IF` and `GOTO` statements.
-    - `GOTO` was still commonly used, as most people didn't know how to use "subroutines" or "functions" yet and
+    - `GOTO` was still commonly used to control flow of execution, as most people didn't know how to use 
+      "subroutines" yet
     - `GOTO` was easier to understand, at least first... (DUN, Dun, dun...)
       > - Online playground to try these programs in BASIC
       >   - https://www.calormen.com/jsbasic/
+    - Examples of Procedural languages are "Fortran" and "BASIC" and "COBOL"
 
     - Example of Procedural-Oriented Programming with GOTO's in BASIC (Beginner's All-purpose Symbolic Instruction Code)
       ```Text
@@ -47,44 +55,44 @@
       HOW DID I GET HERE?
       
       ```
-        - [Click for source code to copy and paste into the BASIC playground](/assets/proceduralWithGoto.bas)
+        - [Click for source code to copy and paste into the BASIC playground: proceduralWithGoto.bas](assets/proceduralWithGoto.bas)
 
-    - ### The Painful Push for Subroutines & Some Structure
-        - ### BIG IDEA - Reusable functions and procedures to avoid "spaghetti code" and enable working on teams. 
-        
-        - Programmers were eventually forced into using "subroutines" to deal with extreme overuse of "JUMP/GOTO"
-          statements common to programming at that time which lead to extremely confusing, unreadable and unmaintainable
-          "spaghetti code", so named because of the way the "GOTO" statements would jump around the program and get mixed
-          up like a plate of spaghetti.
-        - These subroutines are referred to "functions," "procedures," and "methods" in modern programming languages.
-        - The "subroutines" are usually called and returned using a "stack" to keep track of where the program left off,
-          instead of having to use "GOTO" statements
-        - Variables were usually "global" and "mutable" which lead to "side effects" and hard to understand "state" of the program
-        - Each program was very "linear," "sequential," "imperative," and not portable or reusable, which lead to a lot of waste
-        - Data and Code were kept separate.
-            - Code was loaded into the computer, and then data was separately loaded and processed in "batches"
-        - Example of Procedural BASIC with Subroutines and `GOSUB`'s (the `GOSUB` command is a `GOTO` a "SUBroutine"):
-          ```Text
-          5 REM PROGRAM TO ADD 2 NUMBERS, PRINT RESULT USING GOSUB
-          10 LET X = 10
-          20 LET Y = 32
-          30 GOSUB 100
-          40 PRINT "Output 1: "; Z
-          50 LET X = 110
-          70 GOSUB 100
-          80 PRINT "Output 2: "; Z
-          90 END
-          100 REM ADD X + Y NUMBERS, RESULT IN Z  <-- This start of a "subroutine", REM is a "remark" or "comment" and is ignored by the program
-          110 LET Z = X + Y 
-          120 RETURN  <-- end of a "subroutine", return execution to the line after the "GOSUB" statement
-        
-          RUN
-        
-          Output 1: 42
-          Output 2: 142
-        
-          ```
-        - [Click for source code to copy and paste into the BASIC playground](/assets/proceduralWithGosub.bas)
+    - ## The Painful Push for Subroutines & Some Structure
+      - ### BIG IDEA - Reusable functions and procedures to avoid "spaghetti code" and enable working on teams. 
+      
+      - Programmers were eventually forced into using "subroutines" to deal with extreme overuse of "JUMP/GOTO"
+        statements common to programming at that time which lead to extremely confusing, unreadable and unmaintainable
+        "spaghetti code", so named because of the way the "GOTO" statements would jump around the program and get mixed
+        up like a plate of spaghetti.
+      - These subroutines are referred to "functions," "procedures," and "methods" in modern programming languages.
+      - The "subroutines" are usually called and returned using a "stack" to keep track of where the program left off,
+        instead of having to use "GOTO" statements
+      - Variables were usually "global" and "mutable" which lead to "side effects" and hard to understand "state" of the program
+      - Each program was very "linear," "sequential," "imperative," and not portable or reusable, which lead to a lot of waste
+      - Data and Code were kept separate.
+          - Code was loaded into the computer, and then data was separately loaded and processed in "batches"
+      - Example of Procedural BASIC with Subroutines and `GOSUB`'s (the `GOSUB` command is a `GOTO` a "SUBroutine"):
+        ```Text
+        5 REM PROGRAM TO ADD 2 NUMBERS, PRINT RESULT USING GOSUB
+        10 LET X = 10
+        20 LET Y = 32
+        30 GOSUB 100
+        40 PRINT "Output 1: "; Z
+        50 LET X = 110
+        70 GOSUB 100
+        80 PRINT "Output 2: "; Z
+        90 END
+        100 REM ADD X + Y NUMBERS, RESULT IN Z  <-- This start of a "subroutine", REM is a "remark" or "comment" and is ignored by the program
+        110 LET Z = X + Y 
+        120 RETURN  <-- end of a "subroutine", return execution to the line after the "GOSUB" statement
+      
+        RUN
+      
+        Output 1: 42
+        Output 2: 142
+      
+        ```
+        - [Click for source code to copy and paste into the BASIC playground: proceduralWithGosub.bas](assets/proceduralWithGosub.bas)
 
     - Example using `GOSUB` without Loops (also called an "unrolled loop", because each step is imperative and "unrolled" from a loop)
         - Interesting note: compilers will often "unroll" loops to make the code faster because it reduces the number of
@@ -141,9 +149,9 @@
          10 55
  
       ```
-        - [Click for source code to copy and paste into the BASIC playground](/assets/proceduralUnrolledLoops.bas)
+        - [Click for source code to copy and paste into the BASIC playground: proceduralUnrolledLoops.bas](assets/proceduralUnrolledLoops.bas)
 
-    - #### Programmer-Implemented "Looping" Style Leftover From Assembly Language
+    - ### Programmer-Implemented "Looping" Style Leftover From Assembly Language
         -  Example using programmer-made loops using GOTO's and Indexes (also called "counters" or "iterators" or "loop variables")
       ```Text
       5 REM PROGRAM TO DEMO "FOR LOOP" TO CREATE A CUMULATIVE ADDITION TABLE 
@@ -171,10 +179,10 @@
           9 45
           10 55
       ```
-        - [Click for source code to copy and paste into the BASIC playground](/assets/proceduralProgrammerMadeLoops.bas)
+        - [Click for source code to copy and paste into the BASIC playground: proceduralProgrammerMadeLoops.bas](assets/proceduralProgrammerMadeLoops.bas)
 
-    - ### Loops instead of GOTOs
-        - ### BIG IDEA - We can standardize and write common functions in software and possibly add them to the language or a standard libary to reduce programming time and errors.
+    - ### Use Language's Loop Command instead of GOTOs
+        - ### BIG IDEA - We can standardize common use-cases (like looping) into the language to reduce programming time, communicate intent of code to other people and minimize errors.
         
         - The FOR "loop" statement was introduced to replace the "GOTO" statement, as an attempt to make procedural
           code more "structured."
@@ -206,6 +214,6 @@
              9 45
              10 55
           ```
-        - [Click for source code to copy and paste into the BASIC playground](/assets/proceduralWithForLoop.bas) 
+        - [Click for source code to copy and paste into the BASIC playground: proceduralWithForLoop.bas](assets/proceduralWithForLoop.bas) 
 
 [Continue Reading - Structured Programming](StructuredProgramming.md)

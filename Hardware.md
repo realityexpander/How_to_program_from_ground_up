@@ -3,7 +3,7 @@
 
 # Low Level Hardware Implementations
 
-## The Wire & the Battery
+## The Wire & the Battery — 1800's to present
   - ### BIG IDEA — A wire can be used to represent a logical "state": Is electricity flowing or not flowing?
   - This is the most basic representation of a "state" in computing, and the underlying principle of all computing.
 - We are using this arrangement to represent a logic "state"
@@ -11,7 +11,7 @@
 - Connected or not connected? (1 or 0)
     - But we don't really know its state until we measure it somehow (like with a voltmeter or a light bulb)
 
-## The Simple Switch & Light Bulb
+## The Simple Switch & Light Bulb — 1830's to present
   - ### BIG IDEA — A switch can be used to represent a logic "state".
       - This is the most basic representation of a "state" in computing
       - Easier to manipulate for humans than a bare wire
@@ -72,7 +72,7 @@
         ```
     - ### We need the light bulb to on when the switch is off, and off when the switch is on, BUT HOW TO DO THAT?
 
-## The Magnificent Electromagnet
+## The Magnificent Electromagnet — 1825 to present
    - ### BIG IDEA — An electrical current can cause mechanical actions with certain metallic materials.
      1) To physically manipulate the physical world, like a motor or a solenoid.
      2) To induce a magnetic field to represent a "state," like magnetic tape or a hard drive.
@@ -90,7 +90,7 @@
      > - Magnetic Viewing Film — How it Works/Demos
      >   - https://www.youtube.com/watch?v=slVL5nbTXd4
 
-## The Raucous Relay
+## The Raucous Relay — 1835 to 1920's
    - ### BIG IDEA — Use an electromagnet to control a switch (or multiple switches.)
    
    - The first electrical computers were made of relays (extremely slow but faster than calculating manually!)
@@ -119,7 +119,7 @@
      > - Relay Calculators: Episode 4 - Mistakes
      >   - https://youtu.be/OZXwNiJ7mtw
 
-## The Voracious Vacuum Tube 
+## The Voracious Vacuum Tube — 1904 to 1960's
    - ### BIG IDEA — Instead of using a magnetic field to control a switch, we can use a vacuum to control the flow of electricity, just like a switch.
 
      [<img src="assets/vacuum_tube.png" width="400">](https://en.wikipedia.org/wiki/Vacuum_tube)
@@ -160,7 +160,7 @@
      >   - https://www.youtube.com/watch?v=NkmrMdigB-8
    - #### The vacuum tube is voracious because it consumes a lot of power to heat the cathode and generates a lot of excess heat.
 
-## The Tiny Transistor
+## The Tiny Transistor - 1957 to present
    - ### BIG IDEA — Instead of using an electrically heated wire and vacuum to control the flow of electricity, we can use an economical semiconductor material and reduce energy and size by a factor of 100.
    
      [<img src="assets/transistor_vs_tube.png" width="400">](https://www.youtube.com/watch?v=DXvAlwMAxiA)
@@ -218,7 +218,7 @@
          >   - SR Latch
          >   - https://youtu.be/KM0DdEaY5sY
 
-## The Interchangeable Integrated Chip (IC)
+## The Interchangeable Integrated Chip (IC) — 1960's to present
   - ### BIG IDEA — We can use photographic techniques to create thousands of transistors on a single chip and radically reduce the costs of manufacture and assembly of computing devices and increase functionality and reliability.
   
   - This allows creating large groups of transistor logic gates packaged together to perform a specific task.
@@ -275,21 +275,28 @@
   > - Visualizing Data with 7-Segment Displays
   >   - https://www.youtube.com/watch?v=hEDQpqhY2MA
 
- - Why is NAND gates so special?
+ - ### Why are NAND gates special?
+   - NAND gates are known as universal gates, because you can make any other gates out of them. 
    
-   [<img src="assets/NAND_gate.png" width="150">](https://en.wikipedia.org/wiki/NAND_gate)
-   - It's the most flexible can be combined to create any other logic gate, ie: AND, OR, NOT, XOR, etc.
-        1) Tie inputs A & B together to create a NOT gate.
-        2) Tie inputs A & B together combined with a NOT gate to create an OR gate.
-        3) Use normal A & B inputs and combine with another NAND gate in a NOT configuration to create an AND gate.
-   - Everything in computers can be done with just these three types of gates.
-   - Most early digital electronic calculators were made solely with many IC's of these NAND gates.
+     [<img src="assets/NAND_equivalent.png" width="300">](assets/NAND_equivalent.png)
+     [<img src="assets/NAND_gate.png" width="200">](https://en.wikipedia.org/wiki/NAND_gate)
+   
+   - It's the most flexible gate and can be combined to create any other logic gate, ie: `AND`, `OR`, `NOT`, `XOR`, etc.
+     - `NOT` (inverter) = tie the `NAND` inputs together, this applies the same input to the 2 NAND’s inputs. 
+       - The output will be the inverse of the input, this makes a `NOT` gate.
+     - `AND` = `NAND` gate accepts 2 inputs and placing a `NOT` gate on the `NAND` output makes an `AND` gate.
+     - `OR` = Inverters on each of the `NAND` gate inputs makes an `OR` gate.
+     - `NOR` = Take one NAND gate, and place 2 inverters on each of the 2 NAND gate inputs and an inverter on the NAND output, makes a `NOR` gate.
+     - `XOR` = 4 NAND gates makes an `XOR` gate.
+     - `XNOR` = 4 NAND gates + one inverters makes an `XNOR` gate.
+   - Everything in computers can be accomplished solely with just these three types of gates.
+   - Most early semiconductor-based digital electronic calculators were made up of many IC's consisting solely of these NAND gates.
 
 - From simple NAND gate packages to a somewhat sophisticated 7-segment display using LED's.
   > - Designing a 7-segment hex decoder
   >   - https://www.youtube.com/watch?v=7zffjsXqATg
 
-## The Mighty Microprocessor
+## The Mighty Microprocessor — 1971 to present
   - ### BIG IDEA — Consolidate all the necessary components from various Integrated Chips required for a computer onto a single chip.
   
     [<img src="assets/6502.png" width="400">](https://en.wikipedia.org/wiki/MOS_Technology_6502)
