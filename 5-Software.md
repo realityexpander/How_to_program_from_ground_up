@@ -4,8 +4,11 @@
 - ### BIG IDEA - Logic gates can be built up to create a "general-purpose" machine that can be setup using software
   instead of discrete physical components. The software can be changed to change the behavior of the machine instead
   of physically creating a new machine.
-- Actually any software COULD be implemented in hardware, but the costs of doing so rarely make it practical at
-  this point, other than a few very specialized problems like graphics cards to compute 3D graphics, crypto mining and AI training.
+- Actually any software COULD be implemented in hardware, but the costs of doing so rarely make it practical, 
+  other than a few very specialized problems like graphics cards to compute 3D graphics, crypto mining and AI training.
+  > What's an FPGA? (Field-Programmable Gate Array - Software in Hardware)
+  > - https://www.youtube.com/watch?v=iHg0mmIg0UU
+
 - Machine Code is the "language" of logical operations that the computer can perform.
     - It's really just human cleverness setting up problems in a way that a machine can perform simple logical
       operations to give a representation of the results.
@@ -269,3 +272,5 @@
         - The phrase "return from a function" to mean "set execution of next instruction to the location in memory where
           the function was called from."
         - Subroutines are the basis for all structured programming.
+
+[Continue Reading - High Level Languages](6-HighLevelLanguages)

@@ -1,19 +1,29 @@
 # How to Program From The Ground Up with Minimal BS
 
 - [Introduction](#introduction)
-- [The Essence of Computing](TheEssentialQuestion-WhatAreWeComputing.md)
+- [The Essence of Computing](2-TheEssentialQuestion-WhatAreWeComputing)
 - Hardware
   - Low Level Hardware Implementations
-    - [The Wire & the Light Bulb & the Battery](Hardware.md#the-wire--the-battery)
-    - [The Simple Switch](Hardware.md#the-simple-switch)
-    - [The Magnificent Magnet](Hardware.md#the-magnificent-electromagnet)
-    - [The Raucous Relay](Hardware.md#the-raucous-relay)
-    - [The Voracious Vacuum Tube](Hardware.md#the-voracious-vacuum-tube)
-    - [The Tiny Transistor](Hardware.md#the-tiny-transistor)
-    - [The Interchangeable Integrated Chip (IC)](Hardware.md#the-interchangeable-integrated-chip-ic)
-    - [The Mighty Microprocessor](Hardware.md#the-mighty-microprocessor)
-- Data Structures
-  -  
+    - [The Wire & the Light Bulb & the Battery](3-Hardware#the-wire--the-battery)
+    - [The Simple Switch](3-Hardware#the-simple-switch)
+    - [The Magnificent Magnet](3-Hardware#the-magnificent-electromagnet)
+    - [The Raucous Relay](3-Hardware#the-raucous-relay)
+    - [The Voracious Vacuum Tube](3-Hardware#the-voracious-vacuum-tube)
+    - [The Tiny Transistor](3-Hardware#the-tiny-transistor)
+    - [The Interchangeable Integrated Chip (IC)](3-Hardware#the-interchangeable-integrated-chip-ic)
+    - [The Mighty Microprocessor](3-Hardware#the-mighty-microprocessor)
+- Data Structures from 4-DataStructures.md
+  - [Numbers](4-DataStructures#numbers) 
+  - Characters
+  - Array
+  - String
+  - Pointer
+  - "Data Structure"
+  - Stack
+  - Queue
+  - Linked List
+  - Map
+  - Tree
 
 ## Introduction
   - How to guide for budding software engineers who need a primer overview of software development concepts 
@@ -68,4 +78,4 @@
         the machine was a human, and then it would be a human, not a machine. 
       - Mistaking the machine for having intelligence is known as "The Eliza Effect."
 
-[Continue Reading - The Essential Question](TheEssentialQuestion-WhatAreWeComputing.md)
+[Continue Reading - The Essential Question](2-TheEssentialQuestion-WhatAreWeComputing)

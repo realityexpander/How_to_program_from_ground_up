@@ -479,4 +479,4 @@
                       >  - https://www.youtube.com/watch?v=3X9Eo2vzY1I
                       >  - Live Code Example: [How to Achieve Multiple Inheritance in Kotlin](src/main/kotlin/multipleInheritanceExample.kt)
                       
-[Continue Reading - Back-to Object Oriented Programming](BoopProgramming.md)
+[Continue Reading - Back-to-Object-Oriented Programming](10-BackToObjectOrientedProgramming)

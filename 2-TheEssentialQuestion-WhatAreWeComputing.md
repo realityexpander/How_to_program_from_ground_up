@@ -88,4 +88,4 @@
 
       ### It's just following the logical operations that humans have carefully designed to represent the problem and represent a solution.
 
-[Continue Reading - Hardware](Hardware.md)
+[Continue Reading - Hardware](3-Hardware.md)

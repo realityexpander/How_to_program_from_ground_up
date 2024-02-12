@@ -14,7 +14,7 @@
   > - 10 Math Concepts for Programmers
   >   - https://www.youtube.com/watch?v=bOCHTHkBoAs
 
-## Numbers or Individual Characters? Or something else?
+## Numbers or Individual Characters? Or something else? <a name="numbers"></a>
 - ### BIG IDEA - Everything in a computer is represented as a series of "bits" (1s and 0s) in memory.
 
 ### Number (Integer or Floating Point)
@@ -135,8 +135,8 @@
      `"]
      ```
 
-### Structures
-  - Also known as "Records" or "Data Classes"
+### "Data Structures" or just "Structures"
+  - Also known as "Records" or "Data Classes," "Data Objects," "Data Types," "Data Models," or "Data Entities"
     - also called as "structs", sometimes referred to as "classes" and "objects"
   - A way to represent a "structured data" in memory
     - meaning it has a standard format of possibly mixed "types" representing a cohesive "thing" (sometimes called "shape" or "form")
@@ -220,10 +220,10 @@
         "udu19fz": {"name": "Jeremy", "age": 19, "height": 5.9, "weight": 150}
       }
       ```
-    - `jim001` is the key, and the value is `{"name": "John", "age": 42, "height": 6.2, "weight": 180}`
-    - `chris123` is the key, and the value is `{"name": "Chris", "age": 32, "height": 5.8, "weight": 160}`
-    - `grg88922` is the key, and the value is `{"name": "George", "age": 22, "height": 5.5, "weight": 140}`
-    - `udu19fz` is the key, and the value is `{"name": "Jeremy", "age": 19, "height": 5.9, "weight": 150}`
+    - `jim001` is the key, and its value is `{"name": "John", "age": 42, "height": 6.2, "weight": 180}`
+    - `chris123` is the key, and its value is `{"name": "Chris", "age": 32, "height": 5.8, "weight": 160}`
+    - `grg88922` is the key, and its value is `{"name": "George", "age": 22, "height": 5.5, "weight": 140}`
+    - `udu19fz` is the key, and its value is `{"name": "Jeremy", "age": 19, "height": 5.9, "weight": 150}`
   - The values are normally all the same type are always accessed by a unique "key" instead of an "index".
   - The keys are always unique, meaning that no two keys can be the same value.
       - There can be no duplicate keys.
@@ -300,4 +300,4 @@
       X{{Example of a Binary Tree}}
     ```
 
-[Continue Reading - High Level Languages](HighLevelLanguages.md)
+[Continue Reading - Software](5-Software.md)

@@ -11,13 +11,13 @@
   - The High-level languages allowed for more widespread adoption of computers and programming, as the languages were 
     easier to learn and use than Assembly Language.
     
-# Programming Styles
+## Programming Styles
   - The first programming styles were direct descedants of assembly language, and worked in the same way.
   - This way of working is generally referred to as "imperative" programming, as the programmer is giving the
     computer the exact set of steps to perform to solve a problem. There is another style of programming called
     "declarative" which we shall discuss later.
 
-- ## Procedural Programming (1957-Present)
+## Procedural Programming (1957-Present)
     ### BIG IDEA - Using `GOTOs` to jump around the program was an unscalable idea leading to unmaintainable code! We need to a better way!
     
     - Procedural code is executed top to bottom, one line at a time. 
@@ -228,4 +228,4 @@
         ```
       - [Click for source code to copy and paste into the BASIC playground: `proceduralWithForLoop.bas`](assets/proceduralWithForLoop.bas) 
 
-[Continue Reading - Structured Programming](StructuredProgramming.md)
+[Continue Reading - Software Design](7-SoftwareDesign)
