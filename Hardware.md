@@ -283,12 +283,11 @@
    
    - It's the most flexible gate and can be combined to create any other logic gate, ie: `AND`, `OR`, `NOT`, `XOR`, etc.
      - `NOT` (inverter) = tie the `NAND` inputs together, this applies the same input to the 2 NAND’s inputs. 
-       - The output will be the inverse of the input, this makes a `NOT` gate.
      - `AND` = `NAND` gate accepts 2 inputs and placing a `NOT` gate on the `NAND` output makes an `AND` gate.
      - `OR` = Inverters on each of the `NAND` gate inputs makes an `OR` gate.
      - `NOR` = Take one NAND gate, and place 2 inverters on each of the 2 NAND gate inputs and an inverter on the NAND output, makes a `NOR` gate.
-     - `XOR` = 4 NAND gates makes an `XOR` gate.
-     - `XNOR` = 4 NAND gates + one inverters makes an `XNOR` gate.
+     - `XOR` = 4 NAND gates makes an "exclusive OR"`XOR` gate.
+     - `XNOR` = 4 NAND gates + one NAND inverter makes an "exclusive NOR" `XNOR` gate.
    - Everything in computers can be accomplished solely with just these three types of gates.
    - Most early semiconductor-based digital electronic calculators were made up of many IC's consisting solely of these NAND gates.
 
@@ -336,8 +335,10 @@
     >   - https://www.youtube.com/watch?v=_3cNcmli6xQ
 
   - ROM (Read-Only Memory)
-    - usually contains the basic software to start the computer, sometimes called "firmware")
-    - Not easy to change, but can be changed with special equipment.
+    - Used to hold the basic software to start ("boot") the computer, sometimes called "firmware"
+    - The settings are "burned" into the ROM and usually cannot be changed.
+    - Some ROM's cannot be changed, some changed only once (PROM's - Programmable Read-Only Memory) and some 
+      can be changed many times with special equipment like EEPROM's (Electrically Erasable Programmable Read-Only Memory.)
       
       [<img src="assets/ROM.png" width="400">](https://en.wikipedia.org/wiki/Read-only_memory)
 

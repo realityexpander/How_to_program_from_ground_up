@@ -101,7 +101,7 @@
       
       // Start of Program
       fun main() {
-         // Setup the App in the familiar "Imperative" Style:
+         // Setup the App in the familiar Imperative Style:
          // Create the list of Page objects
          val pages = listOf(  // <-- the "val" keyword means the variable is immutable and can only be assigned once.
             Page("Page 1 Content"),
@@ -117,16 +117,25 @@
          var app = Application(book) // <-- The "var" keyword means the variable is mutable,
                                      //     `app` is a "var" because it's expected to change state.
                                      // Every other variable is a "val" and is immutable.
+      
+         app.view()  // <-- will print:
+                     // Application Viewing: MyBook.txtimp
+                     // Book: MyBook.txt, # of Pages: 3
+                     // Page: Page 1 Content
+                     // Page: Page 2 Content
+                     // Page: Page 3 Content
  
          // The above code could be arranged in the functional style, where the state of the program is created in 
          // a single line!
          //
-         // Now, setup the app with the same content, but in the "Functional" Style:
          // - This style is also known as "declarative" style, as opposed to the familiar "imperative" style.
-         // - Using declaritive style, the code is more about "what" is being done, rather than "how" it's being done.
-         // - You only see the high-level view, as the implementation details are hidden deeper in the code.
-         // - Functions are called from the inside out, and the state of the program is created in a single line. 
+         // - Using declaritive style, the code is about "what" needs to be done, rather than step-by-step "how" to do it.
+         // - As a programmer, you only see the high-level view, as the implementation details are hidden deeper 
+         //   in the code, "abstracted" away in the functions.
+         // - Functions are called and executed from the innermost brackets first to the outermost assignment last.
+         // - The state of the program is created in a single call to the `Application` constructor. 
          
+         // Setup the App in Functional Style:
          // The code executes from the innermost function to the outermost function (step 1 to step 5.)
          app = Application( // <-- Step 5 Creates a new Application object with the book object.
             Book( // <-- Step 4 Creates a new Book object with the
