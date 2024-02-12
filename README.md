@@ -13,7 +13,7 @@
     - [The Interchangeable Integrated Chip (IC)](3-Hardware#the-interchangeable-integrated-chip-ic)
     - [The Mighty Microprocessor](3-Hardware#the-mighty-microprocessor)
 - Data Structures from 4-DataStructures.md
-  - [Numbers](4-DataStructures#numbers) 
+  - [Numbers](4-DataStructures.md#numbers) 
   - Characters
   - Array
   - String

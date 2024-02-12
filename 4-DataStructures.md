@@ -14,7 +14,7 @@
   > - 10 Math Concepts for Programmers
   >   - https://www.youtube.com/watch?v=bOCHTHkBoAs
 
-## Numbers or Individual Characters? Or something else? <a id="numbers"></a>
+## Numbers or Individual Characters? Or something else? <a name="numbers"></a> 
 - ### BIG IDEA - Everything in a computer is represented as a series of "bits" (1s and 0s) in memory.
 
 ### Number (Integer or Floating Point)
