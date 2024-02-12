@@ -1,7 +1,8 @@
 # Data Structures
 - ### BIG IDEA - It's easier for humans to deal with names of structures that represent data in memory than hex code addresses.
 
-- "Data structures" are named concepts for common ways humans have invented to represent data, and often predate computing.
+- "Data structures" is the overall name for the various named concepts for common ways humans have invented to 
+  represent data, and often predate modern computing.
 - They represent real world items and concepts in a way that a computer can be programmed to represent and solve a problem.
 - For example, a "list" is a common data structure for a series of "items" in a specific order.
   - A list can be used to represent a "orders to be shipped," "to-do items" or a "names and addresses to send a letter to."
@@ -19,10 +20,11 @@
 
 ### Number (Integer or Floating Point)
   - Positive integers are represented as unsigned non-floating point numbers, ie: only positive whole numbers.
-    - 1 byte (8 bits) can represent unsigned 0 to 255 (known as a "byte" or "octet" or "char" or "unsigned char" or "unsigned byte")
+    - 1 byte (8 bits) can represent unsigned 0 to 255 (known as a `byte`, `octet`, `char`, `unsigned char` or `unsigned byte`)
     - 2 bytes (16 bits) can represent unsigned 0 to 65535 (known as a "short", sometimes "word")
     - 4 bytes (32 bits) can represent unsigned 0 to 4294967295 (known as an "int", sometimes "long")
   - Negative integers are stored as "signed" binary using "2's Complement" representation.
+    - They are "signed" because they can represent both positive and negative numbers ("negative sign" or "positive sign".)  
     - 2's Complement is the most common way to represent negative numbers in binary.
     - 2's Complement is the "complement" of the number (flipping the bits) and then adding 1.
     - 2's Complement is used to represent negative numbers in binary because it makes the addition and
@@ -33,7 +35,7 @@
     - 2 bytes (16 bits) can represent signed -32768 to 32767
     - 4 bytes (32 bits) can represent signed -2147483648 to 2147483647
   - "Floating point" numbers are usually represented in standard "IEEE 754" format
-    - Floating point is used to represent very large or very small numbers including fractional decimal numbers
+    - Floating point is used to represent extremely large or extremely small values including fractional decimal values.
     - Floating point is so named because the "point" can "float" to represent very large or very small numbers
     - 4 bytes (32 bits) can represent a floating point number value from -3.4E38 to 3.4E38
     - 8 bytes (64 bits) can represent a double precision floating point number value from -1.7E308 to 1.7E308
@@ -43,20 +45,25 @@
       >   - https://www.youtube.com/watch?v=2gIxbTn7GSc
   
 ### Characters/Letters are usually represented in ASCII (1 byte) or Unicode(1 or more bytes) <a name="characters"></a>
+  - ### BIG IDEA - Characters are just numbers that represent letters and symbols.
+  
   - ASCII is a 1 byte (8 bit) representation of the most common letters and symbols.
   - Unicode is a 1 or more bytes representation of all the letters and symbols in all the world's languages.
 
-### Need to Represent Something else? 
+### Need to Represent Something else?
+  - ### BIG IDEA - Bits can represent anything!
+  
   - Numbers and Characters are the most common things to represent in memory, but anything can be represented in memory
   - Colors, Sounds, Images, Videos, Programs, Documents, etc.
   - Anything that can be represented as a series of values can be represented in memory.
   - For example, images are usually represented as a series of "pixels" or "picture elements" which are a series of
-    "colors" which are a series of "numbers" that represent the red, green, and blue values of the color.
-  - 01010101 could represents votes of 8 people, or 8 switch settings, or the connected status of 8 different sensors.
+    "color values" that represent the red, green, and blue brightness levels when combined to create a color.
+  - `01010101` could represents votes of 8 people, or 8 switch settings, or some kind of status for 8 different sensors.
   - The same eight bits can represent many different things, it's just a matter of how humans want to interpret the meaning of the bits.
 
 ## Common Data Structures used in Programming
   - ### BIG IDEA — Giving names to common ways of representing data in memory makes it easier for people to communicate with each other about what the data represents.
+  
   - These various ways of representing things is called "type"
   - Types consist of the various representations of data in memory:
     - numbers.
@@ -69,6 +76,8 @@
       >   - https://www.cs.usfca.edu/~galles/visualization/Algorithms.html
 
 ### Array (1D, 2D, 3D, etc.) <a name="array"></a>
+  - ### BIG IDEA - Arrays are a way to represent a "list" of values in memory. Computers are really good at processing lists!
+  
   - A way to represent a "list" of values in memory.
   - The values are usually all the same size & type & are all stored in a contiguous block of memory.
   - The values are usually accessed by an "index" which is a number that represents the position of the "thing" in the array.
@@ -91,6 +100,8 @@
   >   - Yeah this not confusing at all!!!
 
 ### String (Array of Characters) <a name="string"></a>
+  - ### BIG IDEA - Strings are just a way to represent a list of single letters (characters) in memory, "strung" together to represent words and sentences and paragraphs and documents.
+
   - A way to represent a list of single letters (characters) in memory, "strung" together to represent words and
     sentences and paragraphs and documents.
   - The characters are usually stored in a contiguous block of memory.
@@ -103,42 +114,45 @@
 
 
 ### Pointer <a name="pointer"></a>
-   - A number that represents the "address" of another location in memory
-   - Diagram:
-     ``````
-     - Address: Value 
-     - 0x00000000: 0x00  // 0x00000000 is the address, 0x00000004 is the value of this pointer (little Endian)
-     - 0x00000001: 0x00  
-     - 0x00000002: 0x00
-     - 0x00000002: 0x04  // This is a pointer's value is 0x00000004, so it's "pointing" to address 0x00000004
-     - 0x00000004: 0x2A  // 0x00000004 is the address, 0x2A is ACII character '*' or the integer number 42
+  - ### BIG IDEA - A value that represents the "address" of another location in memory
+  - A Pointer's value "points-to" the address of another location in memory.
+  - Diagram:
+    ``````
+    - Address: Value 
+    - 0x00000000: 0x00  // 0x00000000 is the address, 0x00000004 is the value of this pointer (little Endian)
+    - 0x00000001: 0x00  
+    - 0x00000002: 0x00
+    - 0x00000002: 0x04  // This is a pointer's value is 0x00000004, so it's "pointing" to address 0x00000004
+    - 0x00000004: 0x2A  // 0x00000004 is the address, 0x2A is ACII character '*' or the integer number 42
 
-   - The pointer stored at 0x00000000 has the value 0x00000004, so it's pointing to address 0x00000004.
-   - Address 0x00000004 contains the value 0x41, which represents the character 'A' or number 65 as an unsigned byte integer.
-   - In this case, it's stored in "Little Endian" format, so the least significant bytes are stored first.
-   - Pointers usually have a type associated with them, so the compiler knows how long the block of memory that
-     the pointer is pointing to is, and how to interpret the values in that block of memory,
-     ie: long int, char, float, struct, etc.
-   - In the case of a "address pointer", it's usually 4-16 bytes long, depending on the number of bits in the CPU's
-     "address bus" of the CPU.
-     - example: 32-bit CPU can address 2^32 (4,294,967,296) different memory locations, or 4GB of memory, so each
-       "address pointer" is 4 bytes long (32 bits)
+  - The pointer stored at 0x00000000 has the value 0x00000004, so it's pointing to address 0x00000004.
+  - Address 0x00000004 contains the value 0x41, which represents the character 'A' or number 65 as an unsigned byte integer.
+  - In this case, it's stored in "Little Endian" format, so the least significant bytes are stored first.
+  - Pointers usually have a type associated with them, so the compiler knows how long the block of memory that
+    the pointer is pointing to is, and how to interpret the values in that block of memory,
+    ie: long int, char, float, struct, etc.
+  - In the case of a "address pointer", it's usually 4-16 bytes long, depending on the number of bits in the CPU's
+    "address bus" of the CPU.
+    - example: 32-bit CPU can address 2^32 (4,294,967,296) different memory locations, or 4GB of memory, so each
+      "address pointer" is 4 bytes long (32 bits)
 
-     [Another pointer diagram](assets/pointer.png)
-     ```mermaid
-     graph TD
-     A[Address 0x00000000 has value 0x00000004] -->|pointer at 0x00000000 points to address 0x00000004| B["Address 0x00000004 has value 0x2A (or * or 42)"]
+    [Another pointer diagram](assets/pointer.png)
+    ```mermaid
+    graph TD
+    A[Address 0x00000000 has value 0x00000004] -->|pointer at 0x00000000 points to address 0x00000004| B["Address 0x00000004 has value 0x2A (or * or 42)"]
   
-     markdown["`
-       The pointer stored at **0x00000000** has a value _0x00000004_, 
-       so it is pointing to address **0x00000004**
-     `"]
-     ```
+    markdown["`
+      The pointer stored at **0x00000000** has a value _0x00000004_, 
+      so it is pointing to address **0x00000004**
+    `"]
+    ```
 
 ### "Data Structures" or just "Structures" <a name="data-structures"></a>
-  - Also known as "Records" or "Data Classes," "Data Objects," "Data Types," "Data Models," or "Data Entities"
-    - also called as "structs", sometimes referred to as "classes" and "objects"
-  - A way to represent a "structured data" in memory
+  - ### BIG IDEA - We can represent anything in memory as a "structured" list of more basic types.
+  
+  - Also known as "Records," "Data Classes," "Data Objects," "Data Types," "Data Models," or "Data Entities"
+    - also called as "structs", sometimes referred to as "Classes" and "Objects"
+    - Data to humans is _very important_, so we have given lots of different names to the same basic idea.
     - meaning it has a standard format of possibly mixed "types" representing a cohesive "thing" (sometimes called "shape" or "form")
   - The "structure" can represent anything
     - like a person, a car, a house, a company, a country, a planet, a solar system
@@ -165,7 +179,9 @@
      ```
 
 ### Stack <a name="stack"></a>
-  - A way to represent a "last in, first out" list of things in memory, similar to a stack of dinner plates.
+  - ### BIG IDEA - A way to represent a "last in, first out" list of things in memory, similar to a stack of dinner plates.
+  
+  - Stacks of values are useful in sorting and searching algorithms, and lots of other algorithms.
   - The values are always the same size & type and usually stored in a contiguous block of memory, but not always.
   - The values are usually accessed by a "stack pointer" which is a number that represents the position of the
     top-most value in the stack, as a memory address or an index.
@@ -178,7 +194,9 @@
     >   - https://www.youtube.com/watch?v=toRJakeYIKA
 
 ### Queue <a name="queue"></a>
-  - A way to represent a "first in, first out" list of values in memory, similar to a line of people waiting for a bank.
+  - ### BIG IDEA - A way to represent a "first in, first out" list of values in memory, similar to a line of people waiting for a bank.
+ 
+  - Queues of values are useful in many areas of computing, like "job queues" in operating systems, and "message queues" in networking.
   - The values are all the same type and usually stored in a contiguous block of memory, but not always. Sometimes
     a Queue is stored as a "linked list" instead of an Array. (next section)
   - The values are usually accessed by a "head" and "tail" which are numbers that represent the position of the first
@@ -189,6 +207,9 @@
     >   - https://www.youtube.com/watch?v=ojGf3SH7n48
 
 ### Linked List <a name="linked-list"></a>
+ - ### BIG IDEA - A way to represent a "dynamic" list of values in memory, where the size of the list is not known ahead of time and may change over time.
+ 
+  - Lists of changing size are useful to organize many areas of computing, like file systems and databases.
   - A data structure to represent a list of values in memory, each value is the same size & type.
   - Each value in the list is stored in a "node", where each node contains a value and a pointer that points
     ONLY to the _next_ node in the Linked List
@@ -208,6 +229,9 @@
     TAIL["TAIL= End pointer"] -->|points to | E
 
 ### Map (or "Hash Table", "Hash Map", "Dictionary", "Associative Array") <a name="map"></a>
+    - ### BIG IDEA - A way to represent a "mapping" of "keys" to "values" in memory, where each "key" is unique and "points to" a specific "value".
+  
+  - Mapping is very common in computers, like looking up a person's number in a phone book, or looking up a word in a dictionary.
   - A "Map" is a data structure to represent a "mapping" of "keys" to values.
   - A "key" is a value that represents the label to "look-up" another value.
     - This is called "mapping" or "associating" the key with a specific value.
@@ -248,7 +272,10 @@
           key3[key3] -->|maps to / refers to / points to| id3[Value Z]
     ``` 
 ### Tree <a name="tree"></a>
-  - A way to represent a "hierarchical" list of nodes in memory, where each node contains a values and 
+  - ### BIG IDEA - A way to represent a "hierarchical" list of nodes in memory, where each node contains a values and "points to" one or MORE other nodes that are direct descendants of the node.
+  
+  - Trees are used to represent a "hierarchical" list, like a sorted list of items, or a company organization chart.
+  - Trees keep track of list of nodes in memory, where each node contains a values and 
     "points to" one or MORE other nodes that are direct descendants of the node.
     - The descendants are called "children" and the node is called the parent, and the parent is also a child of another node.
     - The "root" is the top-most node in the tree, and has no parent.

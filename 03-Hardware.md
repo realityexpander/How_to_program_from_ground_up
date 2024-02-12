@@ -4,12 +4,18 @@
 # Low Level Hardware Implementations
 
 ## The Wire & the Battery — 1800's to present <a name="the-wire--the-battery"></a>
-  - ### BIG IDEA — A wire can be used to represent a logical "state": Is electricity flowing or not flowing?
-  - This is the most basic representation of a "state" in computing, and the underlying principle of all computing.
-- We are using this arrangement to represent a logic "state"
-    - This is the most basic representation of a "state" in computing
-- Connected or not connected? (1 or 0)
-    - But we don't really know its state until we measure it somehow (like with a voltmeter or a light bulb)
+  - ### BIG IDEA — A wire can be used to represent a logical "state"
+  - Is electricity flowing or not flowing?
+  - This is the most basic representation of a state in computing, and the underlying principle of all modern computing.
+  - We are using this arrangement to represent a Boolean logic state
+    - In Boolean Logic, a state is either true or false, on or off, 1 or 0. 
+  - Connected or not connected?
+    - Problem: we don't really know its state until we measure it somehow (like with a voltmeter or a light bulb)
+    - We can feel the wire heat up, but that's **awful inconvenient** and not very precise.
+  
+  > Light a bulb with a battery and one wire
+  >  - https://www.youtube.com/watch?v=_voN5_NUQIc
+  >> Note: A light bulb is basically a wire in a vacuum that gets white hot and glows when electricity flows through it.
 
 ## The Simple Switch & Light Bulb — 1830's to present <a name="the-simple-switch"></a>
   - ### BIG IDEA — A switch can be used to represent a logic "state".
@@ -284,7 +290,7 @@
     >   >   - https://www.youtube.com/watch?v=hEDQpqhY2MA
 
   - ### Why are NAND gates special?
-    - NAND gates are known as universal gates, because you can make any other gates out of them. 
+    - ### BIG IDEA - NAND gates are known as universal gates, because you can make any other gates out of them. 
      
       [<img src="assets/NAND_equivalent.png" width="300">](assets/NAND_equivalent.png)
       [<img src="assets/NAND_gate.png" width="200">](https://en.wikipedia.org/wiki/NAND_gate)
@@ -343,10 +349,12 @@
     >   - https://www.youtube.com/watch?v=_3cNcmli6xQ
 
   - ROM (Read-Only Memory)
-    - Used to hold the basic software to start ("boot") the computer, sometimes called "firmware"
-    - The settings are "burned" into the ROM and usually cannot be changed.
-    - Some ROM's cannot be changed, some changed only once (PROM's - Programmable Read-Only Memory) and some 
-      can be changed many times with special equipment like EEPROM's (Electrically Erasable Programmable Read-Only Memory.)
+    - Used to hold the basic software to start ("boot") the computer (sometimes called "firmware")
+    - The values of each memory location are programmed, or "burned" into the ROM and usually cannot be changed.
+    - Most ROMs cannot be changed
+    - Some changed only once like PROMs (Programmable Read-Only Memory)
+    - Some can be changed many times like EPROMs (Erasable Programmable Read-Only Memory) but
+      these changes are slow and require special equipment. There is a limit to the number of times they can be changed.
       
       [<img src="assets/ROM.png" width="400">](https://en.wikipedia.org/wiki/Read-only_memory)
 
