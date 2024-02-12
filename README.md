@@ -2,7 +2,7 @@
 
 - [Introduction](#introduction)
 - [The Essence of Computing](2-TheEssentialQuestion-WhatAreWeComputing)
-- Hardware
+- [Hardware](3-Hardware.md)
   - Low Level Hardware Implementations
     - [The Wire & the Light Bulb & the Battery](3-Hardware#the-wire--the-battery)
     - [The Simple Switch](3-Hardware#the-simple-switch)
@@ -12,18 +12,22 @@
     - [The Tiny Transistor](3-Hardware#the-tiny-transistor)
     - [The Interchangeable Integrated Chip (IC)](3-Hardware#the-interchangeable-integrated-chip-ic)
     - [The Mighty Microprocessor](3-Hardware#the-mighty-microprocessor)
-- Data Structures from 4-DataStructures.md
+- [Data Structures](4-DataStructures.md)
+  - The Representations of Data in Memory
   - [Numbers](4-DataStructures.md#numbers) 
-  - Characters
-  - Array
-  - String
-  - Pointer
-  - "Data Structure"
-  - Stack
-  - Queue
-  - Linked List
-  - Map
-  - Tree
+  - [Characters](4-DataStructures.md#characters)
+  - [Array](4-DataStructures.md#array)
+  - [String](4-DataStructures.md#string)
+  - [Pointer](4-DataStructures.md#pointer)
+  - ["Data Structures"](4-DataStructures.md#data-structures)
+  - [Stack](4-DataStructures.md#stack)
+  - [Queue](4-DataStructures.md#queue)
+  - [Linked List](4-DataStructures.md#linked-list)
+  - [Map](4-DataStructures.md#map)
+  - [Tree](4-DataStructures.md#tree)
+- [Software](5-Software.md)
+  - [Machine Code](5-Software.md#machine-code)
+  - 
 
 ## Introduction
   - How to guide for budding software engineers who need a primer overview of software development concepts 
@@ -78,4 +82,4 @@
         the machine was a human, and then it would be a human, not a machine. 
       - Mistaking the machine for having intelligence is known as "The Eliza Effect."
 
-[Continue Reading - The Essential Question](2-TheEssentialQuestion-WhatAreWeComputing)
+[Continue Reading - The Essential Question](2-TheEssentialQuestion-WhatAreWeComputing.md)

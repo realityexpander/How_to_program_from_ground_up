@@ -1,9 +1,10 @@
 # SOFTWARE - The Easily Changeable Machine
 
-## Machine Code — The Microcode Soft-Circuitry Commands of the CPU
-- ### BIG IDEA - Logic gates can be built up to create a "general-purpose" machine that can be setup using software
-  instead of discrete physical components. The software can be changed to change the behavior of the machine instead
-  of physically creating a new machine.
+## Machine Language Code — The Soft-Circuitry Commands for the CPU <a name="machine-code"></a>
+- ### BIG IDEA - Logic gates can be built up to create a "general-purpose" machine that can execute easily changeable 
+  programs called software instead of discrete physical components. 
+- The software can be changed, at any time, to change the behavior of the machine instead of physically creating a 
+  new machine for that specific task.
 - Actually any software COULD be implemented in hardware, but the costs of doing so rarely make it practical, 
   other than a few very specialized problems like graphics cards to compute 3D graphics, crypto mining and AI training.
   > What's an FPGA? (Field-Programmable Gate Array - Software in Hardware)

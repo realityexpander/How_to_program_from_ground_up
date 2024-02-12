@@ -42,11 +42,11 @@
       > - Why Is This Happening?! Floating Point Approximation!
       >   - https://www.youtube.com/watch?v=2gIxbTn7GSc
   
-### Characters/Letters are usually represented in ASCII (1 byte) or Unicode(1 or more bytes)
+### Characters/Letters are usually represented in ASCII (1 byte) or Unicode(1 or more bytes) <a name="characters"></a>
   - ASCII is a 1 byte (8 bit) representation of the most common letters and symbols.
   - Unicode is a 1 or more bytes representation of all the letters and symbols in all the world's languages.
 
-### Need to Represent Something else?
+### Need to Represent Something else? 
   - Numbers and Characters are the most common things to represent in memory, but anything can be represented in memory
   - Colors, Sounds, Images, Videos, Programs, Documents, etc.
   - Anything that can be represented as a series of values can be represented in memory.
@@ -68,7 +68,7 @@
       > - Animated Interactive Visualizations with pseudocode for many common data structures
       >   - https://www.cs.usfca.edu/~galles/visualization/Algorithms.html
 
-### Array (1D, 2D, 3D, etc.)
+### Array (1D, 2D, 3D, etc.) <a name="array"></a>
   - A way to represent a "list" of values in memory.
   - The values are usually all the same size & type & are all stored in a contiguous block of memory.
   - The values are usually accessed by an "index" which is a number that represents the position of the "thing" in the array.
@@ -90,7 +90,7 @@
   >>    [<img src="assets/2dArraysInC.png" width="450"/>]()
   >   - Yeah this not confusing at all!!!
 
-### String
+### String (Array of Characters) <a name="string"></a>
   - A way to represent a list of single letters (characters) in memory, "strung" together to represent words and
     sentences and paragraphs and documents.
   - The characters are usually stored in a contiguous block of memory.
@@ -102,7 +102,7 @@
     [<img src="assets/strings.png" width="350"/>]()
 
 
-### Pointer
+### Pointer <a name="pointer"></a>
    - A number that represents the "address" of another location in memory
    - Diagram:
      ``````
@@ -135,7 +135,7 @@
      `"]
      ```
 
-### "Data Structures" or just "Structures"
+### "Data Structures" or just "Structures" <a name="data-structures"></a>
   - Also known as "Records" or "Data Classes," "Data Objects," "Data Types," "Data Models," or "Data Entities"
     - also called as "structs", sometimes referred to as "classes" and "objects"
   - A way to represent a "structured data" in memory
@@ -164,7 +164,7 @@
     };
      ```
 
-### Stack
+### Stack <a name="stack"></a>
   - A way to represent a "last in, first out" list of things in memory, similar to a stack of dinner plates.
   - The values are always the same size & type and usually stored in a contiguous block of memory, but not always.
   - The values are usually accessed by a "stack pointer" which is a number that represents the position of the
@@ -177,7 +177,7 @@
     > - Stack Data Structure Animation
     >   - https://www.youtube.com/watch?v=toRJakeYIKA
 
-### Queue
+### Queue <a name="queue"></a>
   - A way to represent a "first in, first out" list of values in memory, similar to a line of people waiting for a bank.
   - The values are all the same type and usually stored in a contiguous block of memory, but not always. Sometimes
     a Queue is stored as a "linked list" instead of an Array. (next section)
@@ -188,7 +188,7 @@
     > - Queue Data Structure Animation
     >   - https://www.youtube.com/watch?v=ojGf3SH7n48
 
-### Linked List
+### Linked List <a name="linked-list"></a>
   - A data structure to represent a list of values in memory, each value is the same size & type.
   - Each value in the list is stored in a "node", where each node contains a value and a pointer that points
     ONLY to the _next_ node in the Linked List
@@ -207,7 +207,7 @@
     D -->|points to | E["E= some data and a pointer to `NULL` (the `End` node)"]
     TAIL["TAIL= End pointer"] -->|points to | E
 
-### Map (or "Hash Table", "Hash Map", "Dictionary", "Associative Array")
+### Map (or "Hash Table", "Hash Map", "Dictionary", "Associative Array") <a name="map"></a>
   - A "Map" is a data structure to represent a "mapping" of "keys" to values.
   - A "key" is a value that represents the label to "look-up" another value.
     - This is called "mapping" or "associating" the key with a specific value.
@@ -246,8 +246,8 @@
          key1[key1] -->|maps to / refers to / points to| id1[Value X]
          key2[key2] -->|maps to / refers to / points to| id2[Value Y]
           key3[key3] -->|maps to / refers to / points to| id3[Value Z]
-    ```
-### Tree
+    ``` 
+### Tree <a name="tree"></a>
   - A way to represent a "hierarchical" list of nodes in memory, where each node contains a values and 
     "points to" one or MORE other nodes that are direct descendants of the node.
     - The descendants are called "children" and the node is called the parent, and the parent is also a child of another node.
