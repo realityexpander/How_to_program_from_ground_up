@@ -86,5 +86,5 @@
       - Mistaking the machine for having intelligence is known as "The Eliza Effect" and is a common mistake 
         made by people who don't understand the limits of the machine's capabilities.
 
-- [Continue Reading - The Essential Question](02-TheEssentialQuestion-WhatAreWeComputing)
+- [Continue Reading - The Essential Question](./02-TheEssentialQuestion-WhatAreWeComputing)
 - [Back to Index](README.md)
