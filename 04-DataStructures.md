@@ -323,6 +323,8 @@
       D -->|right points to | K1>NULL]
       F -->|left points to | L1>NULL]
       F -->|right points to | M2>NULL]
+      G1 -->|left points to | N2>NULL]
+      G1 -->|right points to | O2>NULL]
       
       X{{Example of a Binary Tree}}
     ```
