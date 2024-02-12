@@ -32,7 +32,8 @@
 ## Introduction
   - How to guide for budding software engineers who need a primer overview of software development concepts 
     from the fundamentals of physical logic representation to high-level programming languages.
-  - ### The goal is to understand more the `why` and `how` of programming, not just the `what` and `where`.
+  - ### The goal is to have you
+  - understand more the `why` and `how` of programming, not just the `what` and `where`.
     - This is my curated list of information to take you on a realistic and grounded journey of understanding
       the essential part of computing to create effective software.
     - There will be some technical details, but only enough to understand the fundamental principles, not to be an expert.

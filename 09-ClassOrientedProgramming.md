@@ -1,4 +1,4 @@
-- ## Class Oriented Programming (COP) 1970s-Present
+- ## Class Oriented Programming Style (COP) 1970s-Present
     - ### BIG IDEA - We can simulate real-world objects and their interactions with each other!
     
     - Usually misnamed "Object Oriented Programming," as "Objects" are _not_ the main focus, "Classes" are!

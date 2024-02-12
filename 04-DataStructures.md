@@ -1,5 +1,5 @@
 # Data Structures
-- ### BIG IDEA - It's easier for humans to deal with names of structures that represent data in memory than hex code addresses.
+- ### BIG IDEA — It's easier for humans to deal with names of structures that represent data in memory than hex code addresses.
 
 - "Data structures" is the overall name for the various named concepts for common ways humans have invented to 
   represent data, and often predate modern computing.
@@ -61,7 +61,7 @@
   - `01010101` could represents votes of 8 people, or 8 switch settings, or some kind of status for 8 different sensors.
   - The same eight bits can represent many different things, it's just a matter of how humans want to interpret the meaning of the bits.
 
-## Common Data Structures used in Programming
+# Common Data Structures used in Programming
   - ### BIG IDEA — Giving names to common ways of representing data in memory makes it easier for people to communicate with each other about what the data represents.
   
   - These various ways of representing things is called "type"
@@ -75,7 +75,7 @@
       > - Animated Interactive Visualizations with pseudocode for many common data structures
       >   - https://www.cs.usfca.edu/~galles/visualization/Algorithms.html
 
-### Array (1D, 2D, 3D, etc.) <a name="array"></a>
+## Array (1D, 2D, 3D, etc.) <a name="array"></a>
   - ### BIG IDEA - Arrays are a way to represent a "list" of values in memory. Computers are really good at processing lists!
   
   - A way to represent a "list" of values in memory.
@@ -99,7 +99,7 @@
   >>    [<img src="assets/2dArraysInC.png" width="450"/>]()
   >   - Yeah this not confusing at all!!!
 
-### String (Array of Characters) <a name="string"></a>
+## String (Array of Characters) <a name="string"></a>
   - ### BIG IDEA - Strings are just a way to represent a list of single letters (characters) in memory, "strung" together to represent words and sentences and paragraphs and documents.
 
   - A way to represent a list of single letters (characters) in memory, "strung" together to represent words and
@@ -113,7 +113,7 @@
     [<img src="assets/strings.png" width="350"/>]()
 
 
-### Pointer <a name="pointer"></a>
+## Pointer <a name="pointer"></a>
   - ### BIG IDEA - A value that represents the "address" of another location in memory
   - A Pointer's value "points-to" the address of another location in memory.
   - Diagram:
@@ -147,7 +147,7 @@
     `"]
     ```
 
-### "Data Structures" or just "Structures" <a name="data-structures"></a>
+## "Data Structures" or just "Structures" <a name="data-structures"></a>
   - ### BIG IDEA - We can represent anything in memory as a "structured" list of more basic types.
   
   - Also known as "Records," "Data Classes," "Data Objects," "Data Types," "Data Models," or "Data Entities"
@@ -178,7 +178,7 @@
     };
      ```
 
-### Stack <a name="stack"></a>
+## Stack <a name="stack"></a>
   - ### BIG IDEA - A way to represent a "last in, first out" list of things in memory, similar to a stack of dinner plates.
   
   - Stacks of values are useful in sorting and searching algorithms, and lots of other algorithms.
@@ -193,7 +193,7 @@
     > - Stack Data Structure Animation
     >   - https://www.youtube.com/watch?v=toRJakeYIKA
 
-### Queue <a name="queue"></a>
+## Queue <a name="queue"></a>
   - ### BIG IDEA - A way to represent a "first in, first out" list of values in memory, similar to a line of people waiting for a bank.
  
   - Queues of values are useful in many areas of computing, like "job queues" in operating systems, and "message queues" in networking.
@@ -206,7 +206,7 @@
     > - Queue Data Structure Animation
     >   - https://www.youtube.com/watch?v=ojGf3SH7n48
 
-### Linked List <a name="linked-list"></a>
+## Linked List <a name="linked-list"></a>
  - ### BIG IDEA - A way to represent a "dynamic" list of values in memory, where the size of the list is not known ahead of time and may change over time.
  
   - Lists of changing size are useful to organize many areas of computing, like file systems and databases.
@@ -228,7 +228,7 @@
     D -->|points to | E["E= some data and a pointer to `NULL` (the `End` node)"]
     TAIL["TAIL= End pointer"] -->|points to | E
 
-### Map (or "Hash Table", "Hash Map", "Dictionary", "Associative Array") <a name="map"></a>
+## Map (or "Hash Table", "Hash Map", "Dictionary", "Associative Array") <a name="map"></a>
     - ### BIG IDEA - A way to represent a "mapping" of "keys" to "values" in memory, where each "key" is unique and "points to" a specific "value".
   
   - Mapping is very common in computers, like looking up a person's number in a phone book, or looking up a word in a dictionary.
@@ -271,7 +271,7 @@
          key2[key2] -->|maps to / refers to / points to| id2[Value Y]
           key3[key3] -->|maps to / refers to / points to| id3[Value Z]
     ``` 
-### Tree <a name="tree"></a>
+## Tree <a name="tree"></a>
   - ### BIG IDEA - A way to represent a "hierarchical" list of nodes in memory, where each node contains a values and "points to" one or MORE other nodes that are direct descendants of the node.
   
   - Trees are used to represent a "hierarchical" list, like a sorted list of items, or a company organization chart.

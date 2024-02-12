@@ -10,7 +10,8 @@
     other than a few very specialized problems like graphics cards to compute 3D graphics, crypto mining and AI training.
     > What's an FPGA? (Field-Programmable Gate Array - Software in Hardware)
     >   - https://www.youtube.com/watch?v=iHg0mmIg0UU
-    > CPU vs FPGA 
+    
+    > CPU vs FPGA
     >   - https://www.youtube.com/watch?v=BML1YHZpx2o
   - Machine Code is the "language" of logical operations that the computer can perform.
     - It's really just human cleverness setting up problems in a way that a machine can perform simple logical
@@ -68,40 +69,40 @@
 
         [<img src="assets/ascii_hexadecimal.png" width="450">](assets/ascii_hexadecimal.png)
 
-## The Essential Minimum Components of a Computer System
+# The Minimum Components of Any Computer System
   
   - Computer Block Diagram
     > [<img src="assets/Computer_block_diagram.png" width="450">](assets/Computer_block_diagram.png)
     >
-    >  - RAM = Random Access Memory.
-    >  - ROM = Read Only Memory.
-    >  - MPU = Micro-Processor Unit.
-    >  - XTAL = Crystal Oscillator for the clock.
-    >  - CLOCK = Clock Circuit.
-    >  - I/O BUS = Input/Output Bus.
+    > - RAM = Random Access Memory.
+    > - ROM = Read Only Memory.
+    > - MPU = Micro-Processor Unit.
+    > - XTAL = Crystal Oscillator for the clock.
+    > - CLOCK = Clock Circuit.
+    > - I/O BUS = Input/Output Bus.
 
   - ### The MPU (Micro-Processor Unit)
     - The Micro-Procession Unit is the "brain" of the computer
     - Also called the CPU - Central Processing Unit
 
-     >  [<img src="assets/MPU.png" width="450">](assets/MPU.png)
-     >
-     >    - MAR = Memory Address Register - The current memory location that the CPU is accessing.
-     >    - PC = Program Counter - The current memory location of the instruction that the CPU is/will execute.
-     >    - IR = Instruction Register - The current opcode instruction being executed.
-     >    - Control Unit - Synchronizes the operations of the CPU with the RAM, ROM, and other parts of the computer.
-     >    - ALU = Arithmetic Logic Unit - Performs the basic arithmetic and logical operations.
-     >    - ACC = Accumulator - Results of the last arithmetic or logic operation.
-     >    - X & Y = Registers - Used to store the input operands for output to Accumulator Register (ACC.)
-     >      via the ALU (Arithmetic Logic Unit.)
+    >  [<img src="assets/MPU.png" width="450">](assets/MPU.png)
+    >
+    >  - MAR = Memory Address Register — The current memory location that the CPU is accessing.
+    >  - PC = Program Counter — The current memory location of the instruction that the CPU is/will execute.
+    >  - IR = Instruction Register — The current opcode instruction being executed.
+    >  - Control Unit — Synchronizes the operations of the CPU with the RAM, ROM, and other parts of the computer.
+    >  - ALU = Arithmetic Logic Unit — Performs the basic arithmetic and logical operations.
+    >  - ACC = Accumulator — Results of the last arithmetic or logic operation.
+    >  - X & Y = Registers — Used to store the input operands for output to Accumulator Register (ACC.)
+    >    via the ALU (Arithmetic Logic Unit.)
 
   - ### Clock — "The heart beat of the CPU to keep it all in sync"
     - Clock Circuit - Basically a emits a short pulse of electricity at a regular interval
-        - a "tick" of the clock, like flashing a light to the beat
-        - Often uses a quartz crystal (XTAL in schematic) and the piezoelectric effect to keep a steady beat, like a watch
-        - Can also use a 555 timer chip to generate a clock signal
-    - Used synchronizes the operations of the CPU
-       > Example Implementation of a clocl
+        - a "tick" of the clock, like flashing a light to the beat.
+        - Often uses a quartz crystal (XTAL in schematic) and the piezoelectric effect to keep a steady beat, like a watch.
+        - Sometimes the common 555-timer IC chip is used to generate a clock signal.
+    - Use to synchronize the operations of the CPU and access to the RAM, ROM, and other parts of the computer.
+       > Example Implementation of a clock for a CPU
        > Astable 555 timer - 8-bit computer clock - part 1
        >  - https://www.youtube.com/watch?v=kRlSFm519Bo
    
@@ -110,7 +111,7 @@
     - The cycle of the clock is not the same as the cycle of the CPU, but the CPU normally does one operation per cycle
       but some operations may take more than one clock cycle to complete.
 
-  - ### Program Counter (PC) - "Where in memory is the current instruction being executed?"
+  - ### Program Counter (PC) — "Where in memory is the current instruction being executed?"
     - The "program counter" (PC) is a special register that keeps track of the current memory location of the
       current instruction that the CPU will execute/is executing
     - All instructions are processed one at a time per CPU, and never more than 1 instruction at a time.
@@ -204,8 +205,8 @@
      
     // The result of the addition of 5 and 7 is 12, which is 0x0C in hexadecimal
     ```
-## Assembly Language
-  - ### BIG IDEA - Make the machine code easier for humans to read and write by using "mnemonics" to represent the opcodes instead of the actual hex values.
+# Assembly Language - The First Human-readable Language for Programming Computers
+  - ### BIG IDEA — Make the machine code easier for humans to read and write by using "mnemonics" to represent the opcodes instead of the actual hex values.
   
   - Assembly Language is a "human-readable" mnemonic representation of the "machine code" that the CPU can executes directly.
   - The mnemonics are translated into the binary opcodes by another program called an "Assembler."
@@ -222,55 +223,55 @@
     > How a CPU Works
     >  - https://www.youtube.com/watch?v=cNN_tTXABUA
   
-   - ### Common Assembly Language Operations (Mnemonics for Opcodes)
-     >
-     > - #### Jump  `JMP`
-     >   - The "goto" statement of machine code
-     >   - Changes the program counter (PC) to point to a different location in memory
-     >   - Usually mnemonic `JMP [Label or Address]` where the operand is the label of the location in memory to jump to or a
-     >     specific location in memory to jump to.
-     >   - Also known a "branch" or "loop."
-     >   - No limits to where the jump can go, it be anywhere in memory. If it's wrong, the machine will likely halt
-     >     or do something unexpected, also called a "crash," "hang," "freeze," "fault," or "exception"
-     > - #### Load `LDX`
-     >   - Copies a value from a location in memory into a register (a tiny bit of memory that is part of the CPU)
-     >   - Usually mnemonic `LDX [ADDR]` where X is the register to load into, and the operand is the location in memory to load from.
-     >   - Also known as "fetch" or "read" or "get."
-     > - #### Store `STX`
-     >   - Copies a value from a register into a location in memory.
-     >   - Usually mnemonic `STX [ADDR]` where X is the register to store from and the operand is the location in memory to store into.
-     >   - Also known as "write" or "put."
-     > - #### Move `MOV`
-     >   - Copies a value from one register into another register.
-     >   - Usually mnemonic `MOV X,Y` and an operand where X is the register to move from and Y is the register to move to.
-     >   - Also known as "copy" or "transfer."
-     > - #### Add `ADD`
-     >   - Adds the values in two registers and stores the result in the Accumulator register.
-     >   - Usually mnemonic `ADD`
-     >   - Also known as "increment" or "plus."
-     > - #### Subtract `SUB`
-     >    - Subtracts the values in two registers and stores the result in a Accumulator register.
-     >    - Usually mnemonic `SUB`
-     >    - Also known as "decrement" or "minus."
-     > - #### Compare `CMP`
-     >   - Compares the values in two registers and updates the flag register with the result.
-     >   - Usually mnemonic `CMP X,Y` and an operand where X is the register to compare with Y.
-     >   - Also known as "test" or "equal."
-     > - #### Conditional Jump `JNZ`
-     >   - The "`if`" statement of machine code, controls the flow of the program, branching execution to different
-     >     locations in memory depending on the result of a previous operation.
-     >   - Changes the program counter (PC) to point to a different location in memory based on the result of a previous operation.
-     >   - The results of the previous operation is kept in an ALU (Arithmetic Logic Unit) "flag" register.
-     >   - The "if" statement is the most important part of programming, it's the basis for all decision making.
-     >   - Usually mnemonics:
-     >       - `JNZ` (Jump if the register flag "Not Zero" is set.)
-     >       - `JZ` (Jump if the register flag "Zero" is set.)
-     >       - `JG` (Jump if the register flag "Greater" Flag is set.)
-     >       - `JL` (Jump if the register flag "Less" is set.)
-     >   - Also known as "branching" or "a conditional" or "loop."
+    - ### Common Assembly Language Operations (Mnemonics for Opcodes)
+      >
+      > - #### Jump  `JMP`
+      >   - The "goto" statement of machine code
+      >   - Changes the program counter (PC) to point to a different location in memory
+      >   - Usually mnemonic `JMP [Label or Address]` where the operand is the label of the location in memory to jump to or a
+      >     specific location in memory to jump to.
+      >   - Also known a "branch" or "loop."
+      >   - No limits to where the jump can go, it be anywhere in memory. If it's wrong, the machine will likely halt
+      >     or do something unexpected, also called a "crash," "hang," "freeze," "fault," or "exception"
+      > - #### Load `LDX`
+      >   - Copies a value from a location in memory into a register (a tiny bit of memory that is part of the CPU)
+      >   - Usually mnemonic `LDX [ADDR]` where X is the register to load into, and the operand is the location in memory to load from.
+      >   - Also known as "fetch" or "read" or "get."
+      > - #### Store `STX`
+      >   - Copies a value from a register into a location in memory.
+      >   - Usually mnemonic `STX [ADDR]` where X is the register to store from and the operand is the location in memory to store into.
+      >   - Also known as "write" or "put."
+      > - #### Move `MOV`
+      >   - Copies a value from one register into another register.
+      >   - Usually mnemonic `MOV X,Y` and an operand where X is the register to move from and Y is the register to move to.
+      >   - Also known as "copy" or "transfer."
+      > - #### Add `ADD`
+      >   - Adds the values in two registers and stores the result in the Accumulator register.
+      >   - Usually mnemonic `ADD`
+      >   - Also known as "increment" or "plus."
+      > - #### Subtract `SUB`
+      >    - Subtracts the values in two registers and stores the result in a Accumulator register.
+      >    - Usually mnemonic `SUB`
+      >    - Also known as "decrement" or "minus."
+      > - #### Compare `CMP`
+      >   - Compares the values in two registers and updates the flag register with the result.
+      >   - Usually mnemonic `CMP X,Y` and an operand where X is the register to compare with Y.
+      >   - Also known as "test" or "equal."
+      > - #### Conditional Jump `JNZ`
+      >   - The `if` command of machine code, controls the flow of the program, branching execution to different
+      >     locations in memory depending on the result of a previous operation.
+      >   - Changes the program counter (PC) to point to a different location in memory based on the result of a previous operation.
+      >   - The results of the previous operation is kept in an ALU (Arithmetic Logic Unit) "flag" register.
+      >   - The `if` statement is the most important part of programming, it's the basis for all decision making.
+      >   - Usually mnemonics:
+      >       - `JNZ` (Jump if the register flag "Not Zero" is set.)
+      >       - `JZ` (Jump if the register flag "Zero" is set.)
+      >       - `JG` (Jump if the register flag "Greater" Flag is set.)
+      >       - `JL` (Jump if the register flag "Less" is set.)
+      >   - Also known as "branching" or "a conditional" or "loop."
 
   - ## Variables
-    ### BIG IDEA - "Variables" are just named values for memory locations used to store data, and easier for humans to remember and use.
+    - ### BIG IDEA — "Variables" are just named values for memory locations used to store data, and easier for humans to remember and use.
     
     - "Variables" are just named values for memory locations used to store data
         - Often called "fields," "attributes," or "properties."
@@ -283,7 +284,7 @@
       called or that it even has a name. This is just a way to reduce the complexity of the program for the people.
 
   - ## Subroutines
-    ### BIG IDEA - Subroutines is an easier way to organize and reuse code, instead of a long list of instructions or `JMP` spaghetti code.
+    ### BIG IDEA — Subroutines is an easier way to organize and reuse code, instead of a long list of instructions or `JMP` spaghetti code.
     
     - The `CALL` statement changes the program counter (PC) to point to a different location in memory.
     - The `RETURN` statement changes the program counter (PC) back to where it was before the `CALL` statement.
