@@ -120,7 +120,7 @@
      >   - https://youtu.be/OZXwNiJ7mtw
 
 ## The Voracious Vacuum Tube — 1904 to 1960's
-   - ### BIG IDEA — Instead of using a magnetic field to control a switch, we can use a vacuum to control the flow of electricity, just like a switch.
+   - ### BIG IDEA — Instead of using a magnetic field to control a switch, we can use a vacuum to control the flow of electricity, in a way that works just like a switch.
 
      [<img src="assets/vacuum_tube.png" width="400">](https://en.wikipedia.org/wiki/Vacuum_tube)
      [<img src="assets/vacuum_tube_diagram.png" width="200">](https://en.wikipedia.org/wiki/Vacuum_tube)
