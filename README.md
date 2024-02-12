@@ -73,14 +73,17 @@
       - If you hear anyone say _"it's magic"_ or _"it's a black box"_ or _"it's kind of like a person,"_ 
         they are: 
         1) Being lazy, 
-        2) indicating it's not relevant at the moment.
-        3) (USUALLY) they don't understand the problem or the solution enough to explain it and get hand-wavy.
-    - ### ITS ALWAYS JUST _HUMAN_ CLEVERNESS AND INGENUITY, REPRESENTING ONE THING AS ANOTHER, NOTHING MORE.
-      - The machines will _NEVER_ understand the problem or the solution in the way humans conceive of the problem.
+        2) Or indicating it's not relevant at the moment,
+        3) Or (USUALLY) they don't understand the problem or the solution enough to explain it and become hand-wavy.
+    
+    - ### ITS ALWAYS JUST _HUMAN_ CLEVERNESS AND INGENUITY, THE IDEA OF REPRESENTING ONE THING AS ANOTHER, NOTHING MORE.
+      
+      - The machines CAN _NEVER_ UNDERSTAND the problem or the solution in the way humans conceive of the problem.
       - These machines are only following the logical operations that humans have carefully designed to represent 
         the problem and a solution "space." There is no inherent "understanding" in the machine, and can never be.
-      - The only way the machine would ever know the full human context of the problem and the solution is if 
-        the machine was a human, and then it would be a human, not a machine. 
-      - Mistaking the machine for having intelligence is known as "The Eliza Effect."
+      - The only way the machine would ever know the full human context of the problem (and the solution) is if 
+        the machine ACTUALLY was a human, and then it would be a _human_, and not a machine. 
+      - Mistaking the machine for having intelligence is known as "The Eliza Effect" and is a common mistake 
+        made by people who don't understand the limits of the machine's capabilities.
 
 [Continue Reading - The Essential Question](2-TheEssentialQuestion-WhatAreWeComputing.md)
