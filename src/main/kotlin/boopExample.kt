@@ -1,5 +1,3 @@
-package org.example
-
 // BOOP Programming Example (Back-to Object Oriented Programming, Alan Kay's original vision of OOP)
 
 class Page(  // <-- the "Page" class constructor, the "val" keyword means the variable is immutable.

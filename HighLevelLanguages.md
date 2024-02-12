@@ -1,5 +1,6 @@
 # High-Level Languages
   ### BIG IDEA - English-like commands are easier for people to read and understand than cryptic assembly language.
+  
   - High-level meaning more friendly to humans to work with, not necessarily more powerful or faster for the computer to execute.
   - The first high-level languages were just "assemblers" that translated "mnemonics" into "machine code" for the CPU.
   - The next step was to create a language that was more "abstract" and "portable" than assembly language.
@@ -7,7 +8,7 @@
   - The High-level languages allowed for more widespread adoption of computers and programming, as the languages were 
     easier to learn and use than assembly language.
 
-  - This style of programming was extremely successful in 1960-1990's, and is still used today in mostly in banking.
+  - This style of programming was extremely successful in 1957–1990's, and is still used today in mostly in banking.
     > Computing and Computers - Batch Processing - BBC2 - 1980
     > - https://www.youtube.com/watch?v=fAselhq0Q8g
     
@@ -18,47 +19,47 @@
     "declarative" which we shall discuss later.
 
 - ## Procedural Programming (1957-Present)
-    - ### BIG IDEA - Using GOTo's to jump around the program was a bad idea leading to unmaintainable code! We need to a better way!
+    ### BIG IDEA - Using GOTOs to jump around the program was an unscalable idea leading to unmaintainable code! We need to a better way!
     
     - Procedural code is executed top to bottom, one line at a time. 
     - Control flow is done with `IF` and `GOTO` statements.
     - `GOTO` was still commonly used to control flow of execution, as most people didn't know how to use 
-      "subroutines" yet
+      "subroutines" yet.
     - `GOTO` was easier to understand, at least first... (DUN, Dun, dun...)
       > - Online playground to try these programs in BASIC
       >   - https://www.calormen.com/jsbasic/
-    - Examples of Procedural languages are "Fortran" and "BASIC" and "COBOL"
+    - Some exampled of Procedural languages are "Fortran" and "BASIC" and "COBOL."
 
-    - Example of Procedural-Oriented Programming with GOTO's in BASIC (Beginner's All-purpose Symbolic Instruction Code)
-      ```Text
-      5 REM PROGRAM TO ADD 2 NUMBERS, PRINT RESULT <-- "REM" is a "remark" or "comment"
-      10 LET X = 10   <-- "LET" is a "statement" that assigns a value to a variable
-      20 LET Y = 32
-      30 GOTO 100     <-- "GOTO" is a "statement" that changes the next line to execute to a different line
-      40 PRINT "Output: "; Z
-      50 GOTO 150
-      60 IF X = 10 THEN GOTO 190
-      70 GOTO 10
-      100 REM ADD 2 NUMBERS, RESULT IN Z  
-      110 LET Z = X + Y   <-- All variables are global and mutable
-      120 GOTO 40
-      150 PRINT "THIS GOTO STUFF CAN GET CONFUSING"
-      160 GOTO 60
-      190 PRINT "HOW DID I GET HERE?"
-      220 END
-    
-      RUN
-      
-      Output: 
-      42
-      THIS GOTO STUFF CAN GET CONFUSING
-      HOW DID I GET HERE?
-      
-      ```
+    - ### Example of Procedural-Oriented Programming with GOTO's in BASIC (Beginner's All-purpose Symbolic Instruction Code)
+        ```Text
+        5 REM PROGRAM TO ADD 2 NUMBERS, PRINT RESULT <-- "REM" is a "remark" or "comment"
+        10 LET X = 10   <-- "LET" is a "statement" that assigns a value to a variable
+        20 LET Y = 32
+        30 GOTO 100     <-- "GOTO" is a "statement" that changes the next line to execute to a different line
+        40 PRINT "Output: "; Z
+        50 GOTO 150
+        60 IF X = 10 THEN GOTO 190
+        70 GOTO 10
+        100 REM ADD 2 NUMBERS, RESULT IN Z  
+        110 LET Z = X + Y   <-- All variables are global and mutable
+        120 GOTO 40
+        150 PRINT "THIS GOTO STUFF CAN GET CONFUSING"
+        160 GOTO 60
+        190 PRINT "HOW DID I GET HERE?"
+        220 END
+        
+        RUN
+        
+        Output: 
+        42
+        THIS GOTO STUFF CAN GET CONFUSING
+        HOW DID I GET HERE?
+        
+        ```
         - [Click for source code to copy and paste into the BASIC playground: proceduralWithGoto.bas](assets/proceduralWithGoto.bas)
 
     - ## The Painful Push for Subroutines & Some Structure
-      - ### BIG IDEA - Reusable functions and procedures to avoid "spaghetti code" and enable working on teams. 
+      ### BIG IDEA - Reusable functions and procedures to avoid "spaghetti code" and enable working on teams. 
       
       - Programmers were eventually forced into using "subroutines" to deal with extreme overuse of "JUMP/GOTO"
         statements common to programming at that time which lead to extremely confusing, unreadable and unmaintainable
@@ -71,7 +72,7 @@
       - Each program was very "linear," "sequential," "imperative," and not portable or reusable, which lead to a lot of waste
       - Data and Code were kept separate.
           - Code was loaded into the computer, and then data was separately loaded and processed in "batches"
-      - Example of Procedural BASIC with Subroutines and `GOSUB`'s (the `GOSUB` command is a `GOTO` a "SUBroutine"):
+      - ### Example of Procedural BASIC with Subroutines and `GOSUB`'s (the `GOSUB` command is a `GOTO` a "SUBroutine"):
         ```Text
         5 REM PROGRAM TO ADD 2 NUMBERS, PRINT RESULT USING GOSUB
         10 LET X = 10
@@ -85,135 +86,143 @@
         100 REM ADD X + Y NUMBERS, RESULT IN Z  <-- This start of a "subroutine", REM is a "remark" or "comment" and is ignored by the program
         110 LET Z = X + Y 
         120 RETURN  <-- end of a "subroutine", return execution to the line after the "GOSUB" statement
-      
+        
         RUN
-      
+        
         Output 1: 42
         Output 2: 142
-      
+        
         ```
         - [Click for source code to copy and paste into the BASIC playground: proceduralWithGosub.bas](assets/proceduralWithGosub.bas)
-
-    - Example using `GOSUB` without Loops (also called an "unrolled loop", because each step is imperative and "unrolled" from a loop)
+    
+    - ## Naive Solutions to Problems Call for High-Level Language Features
+      - One problem with the low-level languages is that every programmer was left to their own in how to
+        structure their code, and this lead to a lot of "reinventing the wheel" and odd solutions that were hard to
+        understand and maintain.
+      - ### Example of Naive Solution using `GOSUB` without Loops 
+        - This approach is called an "unrolled loop", because each step is imperative and "unrolled" from the loop.
         - Interesting note: compilers will often "unroll" loops to make the code faster because it reduces the number of
           "conditional" statements that the CPU has to execute.
-      ```Text
-      5 REM PROGRAM TO DEMO "WITHOUT LOOPS" TO CREATE A CUMULATIVE ADDITION TABLE
-      10 LET A = 1
-      20 GOSUB 400
-      30 PRINT A, B
-      40 LET A = A + 1
-      50 GOSUB 400
-      60 PRINT A, B
-      70 LET A = A + 1
-      80 GOSUB 400
-      90 PRINT A, B
-      100 LET A = A + 1
-      110 GOSUB 400
-      120 PRINT A, B
-      130 LET A = A + 1
-      140 GOSUB 400
-      150 PRINT A, B
-      160 LET A = A + 1
-      170 GOSUB 400
-      180 PRINT A, B
-      190 LET A = A + 1
-      200 GOSUB 400
-      210 PRINT A, B
-      220 LET A = A + 1
-      230 GOSUB 400
-      240 PRINT A, B
-      250 LET A = A + 1
-      260 GOSUB 400
-      270 PRINT A, B
-      280 LET A = A + 1
-      290 GOSUB 400
-      300 PRINT A, B
-      310 END
-      400 REM ADD A PLUS B, RESULT IN B
-      410 LET B = A + B
-      420 RETURN
-      
-      RUN
-      
-      Output:
-         1 1
-         2 3
-         3 6
-         4 10
-         5 15
-         6 21
-         7 28
-         8 36
-         9 45
-         10 55
- 
-      ```
-        - [Click for source code to copy and paste into the BASIC playground: proceduralUnrolledLoops.bas](assets/proceduralUnrolledLoops.bas)
-
-    - ### Programmer-Implemented "Looping" Style Leftover From Assembly Language
-        -  Example using programmer-made loops using GOTO's and Indexes (also called "counters" or "iterators" or "loop variables")
-      ```Text
-      5 REM PROGRAM TO DEMO "FOR LOOP" TO CREATE A CUMULATIVE ADDITION TABLE 
-      10 LET A = 1
-      20 GOSUB 100
-      30 PRINT A, B
-      40 LET A = A + 1
-      50 IF A <= 10 THEN GOTO 20  <-- This is the "loop" that repeats the code between line 20 and 50, 10 times
-      60 END
-      100 REM ADD A PLUS B, RESULT IN B
-      110 LET B = A + B
-      120 RETURN
-      
-      RUN
-       
-       Output:
-          1 1
-          2 3
-          3 6
-          4 10
-          5 15
-          6 21
-          7 28
-          8 36
-          9 45
-          10 55
-      ```
-        - [Click for source code to copy and paste into the BASIC playground: proceduralProgrammerMadeLoops.bas](assets/proceduralProgrammerMadeLoops.bas)
-
-    - ### Use Language's Loop Command instead of GOTOs
-        - ### BIG IDEA - We can standardize common use-cases (like looping) into the language to reduce programming time, communicate intent of code to other people and minimize errors.
+        ```Text
+        5 REM PROGRAM TO DEMO "WITHOUT LOOPS" TO CREATE A CUMULATIVE ADDITION TABLE
+        10 LET A = 1
+        20 GOSUB 400
+        30 PRINT A, B
+        40 LET A = A + 1
+        50 GOSUB 400
+        60 PRINT A, B
+        70 LET A = A + 1
+        80 GOSUB 400
+        90 PRINT A, B
+        100 LET A = A + 1
+        110 GOSUB 400
+        120 PRINT A, B
+        130 LET A = A + 1
+        140 GOSUB 400
+        150 PRINT A, B
+        160 LET A = A + 1
+        170 GOSUB 400
+        180 PRINT A, B
+        190 LET A = A + 1
+        200 GOSUB 400
+        210 PRINT A, B
+        220 LET A = A + 1
+        230 GOSUB 400
+        240 PRINT A, B
+        250 LET A = A + 1
+        260 GOSUB 400
+        270 PRINT A, B
+        280 LET A = A + 1
+        290 GOSUB 400
+        300 PRINT A, B
+        310 END
+        400 REM ADD A PLUS B, RESULT IN B
+        410 LET B = A + B
+        420 RETURN
         
-        - The FOR "loop" statement was introduced to replace the "GOTO" statement, as an attempt to make procedural
-          code more "structured."
-        - The "loop" statement was used to repeat a block of code a certain number of times, or until a certain condition was met.
+        RUN
+        
+        Output:
+           1 1
+           2 3
+           3 6
+           4 10
+           5 15
+           6 21
+           7 28
+           8 36
+           9 45
+           10 55
+        
+        ```
+      - [Click for source code to copy and paste into the BASIC playground: proceduralUnrolledLoops.bas](assets/proceduralUnrolledLoops.bas)
 
-        - Example in BASIC:
-          ```Text
-          5 REM PROGRAM TO DEMO "FOR LOOP" TO CREATE A CUMULATIVE ADDITION TABLE 
-          10 FOR A = 1 TO 10 STEP 1 <-- The "FOR" statement changes the value of "A" from 1 to 10, incrementing by 1 at each NEXT statement
-          15 GOSUB 100
-          20 PRINT A, B
-          30 NEXT A   <-- Execution continues at line after the "FOR" statement (15), unless "A" is 10, then it goes to next line (40) 
-          40 END
-          100 REM ADD A PLUS B, RESULT IN B
-          110 LET B = A + B
-          120 RETURN
+    - ## Problem: Programmer-Implemented "Looping" Style Leftover From Assembly Language
+      -  Example using programmer-made loops using GOTO's and Indexes (also called "counters" or "iterators" or "loop variables")
+      - In this case, its easy to see that the variable "A" is being used as a "counter" to control the "loop" 
+        that repeats the code between line 20 and 50, 10 times.
+      - But when programs become larger and more complex, it becomes more difficult to understand exactly what the 
+            variables are used for.
+        ```Text
+        5 REM PROGRAM TO DEMO "FOR LOOP" TO CREATE A CUMULATIVE ADDITION TABLE 
+        10 LET A = 1
+        20 GOSUB 100
+        30 PRINT A, B
+        40 LET A = A + 1
+        50 IF A <= 10 THEN GOTO 20  <-- This is the "loop" that repeats the code between line 20 and 50, 10 times
+        60 END
+        100 REM ADD A PLUS B, RESULT IN B
+        110 LET B = A + B
+        120 RETURN
         
-          RUN
+        RUN
+         
+        Output:
+           1 1
+           2 3
+           3 6
+           4 10
+           5 15
+           6 21
+           7 28
+           8 36
+           9 45
+           10 55
+        ```
+      - [Click for source code to copy and paste into the BASIC playground: proceduralProgrammerMadeLoops.bas](assets/proceduralProgrammerMadeLoops.bas)
+
+    - ## Solution: Use High-Level Language Commands Such as `FOR` to Create a Loop instead of `GOTO`
+      ### BIG IDEA - We can standardize common use-cases (like looping) into the language to reduce programming time, communicate intent of code to other people and minimize errors.
+      
+      - The `FOR` "loop" command was introduced to replace the programmer-implemented `GOTO` looping 
+        implementations, as an attempt to make procedural code more structured and readable.
+
+      - ### Example using BASIC's `FOR` Loop
+        ```Text
+        5 REM PROGRAM TO DEMO "FOR LOOP" TO CREATE A CUMULATIVE ADDITION TABLE 
+        10 FOR A = 1 TO 10 STEP 1  <-- The "FOR" statement changes the value of "A" from 1 to 10, incrementing by 1 at each NEXT statement
+        15 GOSUB 100
+        20 PRINT A, B
+        30 NEXT A   <-- Execution continues at line after the "FOR" statement (15), unless "A" is 10, then it goes to next line (40) 
+        40 END
+        100 REM ADD A PLUS B, RESULT IN B
+        110 LET B = A + B
+        120 RETURN
         
-          Output:
-             1 1
-             2 3
-             3 6
-             4 10
-             5 15
-             6 21
-             7 28
-             8 36
-             9 45
-             10 55
-          ```
-        - [Click for source code to copy and paste into the BASIC playground: proceduralWithForLoop.bas](assets/proceduralWithForLoop.bas) 
+        RUN
+        
+        Output:
+           1 1
+           2 3
+           3 6
+           4 10
+           5 15
+           6 21
+           7 28
+           8 36
+           9 45
+           10 55
+        ```
+      - [Click for source code to copy and paste into the BASIC playground: proceduralWithForLoop.bas](assets/proceduralWithForLoop.bas) 
 
 [Continue Reading - Structured Programming](StructuredProgramming.md)

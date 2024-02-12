@@ -1,4 +1,6 @@
 - ## Back-to Object Oriented Programming 1980s-Present
+    ### BIG IDEA — The state of the program is immutable and is only changed by creating a new state based on the old state.
+    
     - Alan Kay Style BOOP (Back-to-Object Oriented Programming)
         - Based on the idea of "messaging" between objects, VERY poorly named "object oriented programming", admitted 
           by Alan Kay himself, the inventor of the term.
@@ -28,6 +30,7 @@
         - Mutable State - All state in BOOP is immutable, and the object is expected to return a new object with the new state.
     - Amazingly, the dreaded Singleton Pattern is allowed to manage global state in BOOP.
     - There are only a few BOOP languages, "Smalltalk" and, _incredibly_, "Javascript" are among the most popular ones.
+    
     - Example of BOOP in Kotlin:
 
        ```mermaid
