@@ -68,7 +68,8 @@
           - This is now done by the "Arithmetic Logic Unit" and stored in the "Registers" in the computer.
 
     ## SOME IMPORTANT ITEMS TO KEEP IN MIND
-    - THERE IS NO MAGIC IN COMPUTING, ONLY _HUMAN_ CLEVERNESS, SYSTEMIC THINKING AND INGENUITY.
+    - THERE IS NO MAGIC IN COMPUTING, ONLY _HUMAN_ CLEVERNESS, _HUMAN_ SYSTEMIC THINKING AND _HUMAN_ INGENUITY 
+      USED TO SOLVE _HUMAN_ PROBLEMS. 
       - If you hear anyone say _"it's magic"_ or _"it's a black box"_ or _"it's kind of like a person,"_ 
         they are: 
         1) Being lazy, 
