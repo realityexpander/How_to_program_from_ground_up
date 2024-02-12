@@ -1,72 +1,80 @@
 ## Structured Programming 1960s-Present
 
-### BIG IDEA - Putting different parts of a program into distinct "code blocks" or "scopes" to limit the visibility of variables and functions to other parts of the program
+### BIG IDEA - Put different parts of a program into distinct sections, or "code blocks" or "scopes" to limit the visibility of variables and functions to other parts of the program in order to reduce cognitive load to understanding code, make modifying code easier and enabling re-use of code via libraries.
 
 ### Scopes
 - No more "goto" statements, only subroutines and conditional branching were allowed.
-- The concept of "scopes" (or "code blocks") to limit the use of "globally mutable" variables.
-    - This is the origin of "encapsulation" and first introduced to limit the visibility of the "local" variables
-      and functions to only the "scope" or "block" that they were defined in, and to limit the "side effects" of the program.
-    - By reducing the area that needs to be understood, it makes the program easier to understand and maintain and
-      allowed for larger teams to work on the same program without stepping on each other's toes.
-    - This is also the reason for the "Structured Programming" paradigm, as it was the first time that the "state"
-      of the program was "structured" and "encapsulated" into "scopes" or "code blocks"
-    - Example of structured language (C):
-        - Note: The `//` symbols means the rest of the line is comment, it is not part of the program,
-          it's just for explanation and is ignored by the compiler.
-      ```C
-      int main() {  // <-- start of the program, `int` means the function returns an integer 
-        int y = 100;
-        int x = 10; 
-        { // <-- Start of a "scope" or "code block" or just "block."
-          int y = 32; // "Local" to the "scope."
-          x = x + y;  // Uses the "local" variable "y" and variable "x" from the outer "main" scope. 
-        } // <-- end of the "scope."
+- The concept of "scopes" (or "code blocks") to limit the use of "globally mutable" variables and visibility of functions.
+  - This is the origin of "encapsulation" and first introduced to limit the visibility of the "local" variables
+    and functions to only the "scope" or "block" that they were defined in, and to limit the "side effects" of the program.
+  - Scopes have names and can be nested inside other scopes, and the "local" variables and functions are only visible
+    to the "scope" that they are defined in. The inner scope has access to it's outer scope as well. But the outer scope
+    does not have access to the inner scope.
+  - By reducing the area that needs to be understood. it makes the program easier to understand and maintain and
+    allowed for larger teams to work on the same program without stepping on each other's toes.
+  - This is also the reason for the "Structured Programming" paradigm, as it was the first time that the "state"
+    of the program was "structured" and "encapsulated" into "scopes" or "code blocks"
+  - Example of structured language (C):
+      - Note: The `//` symbols means the rest of the line is comment, it is not part of the program,
+        it's just for explanation and is ignored by the compiler.
+    ```C
+    int main() {  // <-- start of the program, `int` means the function returns an integer 
+      int y = 100;
+      int x = 10; 
+      
+      { // <-- The "open curly bracket" denotes the start of a scope or "code block" or just "block."
+        int y = 32; // Inside the brackets is "Inner" or "Local" to the scope.
+        int z = 55; // <-- Only visible to the scope it's defined in, ie: this one.
         
-        printf("%d", x); // <-- Print the value of x as a decimal number 
-                         //     (%d means use "decimal" value of x, 42.)
-        printf("%c", x); // <-- Print the value of x as a character 
-                         //     ("%c means use the ASCII value of x, 42 is character '*')
-      }
+        x = x + y;  // <-- Uses the local variable `y` and variable `x` from the Outer `main` function scope. 
+      } // <-- The "close curly braket" denotes the end of the scope.
       
-      main();  // <-- Call the "main" function, runs the program
-      
-      // Output: 
-      // 42
-      // *
-      ```
-    - Live Code Example in Kotlin: [Structured Programming Example](src/main/kotlin/structuredExample.kt)
+      printf("%d", x); // <-- Print the value of x as a decimal number 
+                       //     (%d means use decimal value of x, 42.)
+      printf("%c", x); // <-- Print the value of x as a character 
+                       //     ("%c means use the ASCII value of x, 42 is character '*')
+    
+      // printf("%d", z); // <-- This line would cause a "compile error" because the variable "z" is not visible in this scope.
+    }
+    
+    main();  // <-- Call the "main" function, runs the program
+    
+    // Output: 
+    // 42
+    // *
+    ```
+  - Live Code Example in Kotlin: [Structured Programming Example with Scopes: `structuredExample.kt`](src/main/kotlin/structuredExample.kt)
 
 ### Types
 - The concept of "types" (or "kinds") was introduced to define the size & intended purpose of "primitive"
   data types
-    - Procedural langauges only had a few simple types: "number" or "character" or "string of characters" or "array"
-    - Primitive types are: `int`, `long`, `float`, `char`, and `bool`
-    - Primitive types are the "building blocks" of all other types defined in `struct`s
-    - Example (C):
-      ```C
-      struct Point {  // <-- `Point` is a programmer-defined type that is made up of other types.
-         int x;
-         int y;
-         char colorIdChar;  // <-- `char` is a type that represents a single ASCII character (1 byte.)
-      };
-      
-      int main() { 
-         int x = 5; 
-         float y = 6.128; 
-         char z = 'A'; 
-         struct Point p = { 10, 42, 'G' };
-         
-         printf("Output: %d %f %c   %d   %d   %c", 
-                          x, y, z, p.x, p.y, p.colorIdChar);
-      }
-      
-      main();
-      
-      // Output: 5 6.128000 A 10   42   G
+  - Procedural langauges only had a few simple types: "number" or "character" or "string of characters" or "array"
+  - Primitive types are: `int`, `long`, `float`, `char`, and `bool`
+  - Primitive types are the "building blocks" of all other types defined in `struct`s
+  - Example of Types (C):
+    ```C
+    struct Point {  // <-- `Point` is a programmer-defined type that is made up of other types (Structure or "struct")
+       int x;
+       int y;
+       char colorIdChar;  // <-- `char` is a type that represents a single ASCII character (1 byte.)
+    };
+    
+    int main() { 
+       int x = 5; 
+       float y = 6.128; 
+       char z = 'A'; 
+       struct Point p = { 10, 42, 'G' };
        
-      ```
-    - Live Code Example in Kotlin: [Types Example](src/main/kotlin/typesExample.kt)
+       printf("Output: %d %f %c   %d   %d   %c", 
+                        x, y, z, p.x, p.y, p.colorIdChar);
+    }
+    
+    main();
+    
+    // Output: 5 6.128000 A 10   42   G
+     
+    ```
+    - Live Code Example in Kotlin: [Types Example: `typesExample.kt`](src/main/kotlin/typesExample.kt)
 
 - This allowed easier code reuse and easier to understand "state" of the program than procedural languages
 - This allowed libraries and "modules" to be easily produced to create standard "subroutines" and
