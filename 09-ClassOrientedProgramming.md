@@ -21,27 +21,80 @@
   - Think of a `struct` in C, but with functions that can access the data in the `struct`, and the data is
     "private" and only accessible by the functions in the `struct`.
   - Data & code are "encapsulated," (or enclosed) into a `class`.
-      - also called a "Template", it is similar to a blueprint for a house as it describes what will be created when the house is built)
+      - `class` is also referred to as a "template", it is similar to a blueprint for a house as it describes what will be created when the house is built)
   - A `class` is a template for creating an in-memory instance of the class (called an "Object") which contains the
     state and pointers to the "methods" (functions) of the `class`,
-  - When a new Object is created from a class template, the Object is called an "instance" of the class.
-  - An Object is just a structure in memory that contains the values (or "state") of the variables and pointers to
-    the methods of the class.
+
+    ```mermaid
+         flowchart LR
+    
+        catMakeSoundFunctionPointer -- calls --> catMakeSound
+        subgraph catObject["[object instance Cat@19FCA68D]"]
+            catAgeData["`age: 3`"] 
+            catMakeSoundFunctionPointer["`method makeSound(): 
+                                           calls 
+                                           function @C62F3842`"]
+        end
+        catAgeData -- stores value of --> catAgeInt
+        
+        catAbstractAgeInt -- expects --> catAgeInt
+        abstractMethodMakeSound -- expects --> catMakeSound
+        catAgeInt -- implements --> catAbstractAgeInt
+        subgraph classCat["class Cat extend Animal"]
+            catAgeInt["int age"]
+            catMakeSound["`function @C62F3842:
+                        method makeSound() =
+                        {  print “_Meow_” }`"]
+        end
+    
+        classCat -- creates object --> catObject
+        classCat -- extends --> abstractAnimal
+        catMakeSound -- implements --> abstractMethodMakeSound
+        subgraph abstractAnimal["abstract class Animal"]
+          catAbstractAgeInt["`abstract 
+                              int age`"]
+          abstractMethodMakeSound("`abstract 
+                                    method makeSound()`")
+        end
+    
+         style abstractAnimal fill:#03A, stroke:#f66, stroke-width:2px, color:#fff, stroke-dasharray: 5 5
+         style abstractMethodMakeSound fill:#03A, stroke:#f66, stroke-width:2px, color:#fff, stroke-dasharray: 5 5
+         style catAbstractAgeInt fill:#03A, stroke:#f66, stroke-width:2px, color:#fff, stroke-dasharray: 5 5
+         
+         style classCat fill:#17F, stroke:#f66, stroke-width:2px, color:#fff, stroke-dasharray: 5 5
+         style catAgeInt fill:#03A, stroke:#f66, stroke-width:2px, color:#fff, stroke-dasharray: 5 5
+         
+         style catMakeSoundFunctionPointer fill:#17F, stroke:#f66, stroke-width:2px, color:#fff, stroke-dasharray: 5 5
+         
+         style catObject fill:#69F, stroke:#f66, stroke-width:2px, color:#fff
+         style catMakeSoundFunctionPointer stroke-dasharray: 5 5, stroke:#f66, stroke-width:2px
+         style catAbstractAgeInt stroke-dasharray: 5 5, stroke:#f66, stroke-width:2px
+         style catAgeInt stroke-dasharray: 5 5, stroke:#f66, stroke-width:2px
+    ````
+    - TODO FIX COLORS AND STYLES  
+  - ### Instantiation
+    - When a new object is created from a class template, the Object is called an "instance" of the class.
+    - An Object is just a structure in memory that contains the values (or "state") of the variables and pointers to
+      the methods of the class.
   - A "Method" is just a normal function in the class that manipulates the variables in the object,
     or call other methods in the object or other objects.
       - The process of calling a method on an object is referred to as "sending a message" to the object
       - (THIS IS TERRIBLE WORDING! bc it's not a message! It's just calling a function!!!! THIS IS NOT MESSAGING! AAAAHH!)
-  - The values of the variables ("state") of the object are often made inaccessible from outside the class (ie: "private")
-    and only accessible by the methods of the class, or the methods in the inherited subclasses of the class.
-  - Methods of the class can be made `public` to be globally accessible by other classes to provide the functionality of the class.
-  - Some methods of the `class` can be labeled `protected` and only accessible by subclasses of the class
-  - There is a special modifier called `static` makes a variable or method accessible without needing an instance of the class (object)
-      - This loophole is the main reason why I call it "Class Oriented Programming" is not "object" oriented programming!
-      - It's a way to make the class act like a "namespace" to group together the "methods" and "variables" that are related to each other
-      - This was not the original intent of the "class" and "object" paradigm, but was a way to fit the COP
-        paradigm into the "procedural" paradigm.
-  - The use of the word "constructor" is a bit of a misnomer, as the memory space for the Object has been allocated
     and the `constructor` is called to set the initial values of the variables in the object ("initialize" the state.)
+  - The use of the word "constructor" is a bit of a misnomer, as the memory space for the Object has been allocated
+  
+  - ### Instance Variables = State of the Object
+    - The values of the variables ("state") of the object are often made inaccessible from outside the class (ie: `private`)
+      and only accessible by the methods of the class, or the methods in the inherited subclasses of the class.
+    - Methods of the class can be made `public` to be globally accessible by other classes to provide the functionality of the class.
+    - Some methods of the `class` can be labeled `protected` and only accessible by subclasses of the class
+    - There is a special modifier called `static` makes a variable or method accessible without needing an instance of the class (object)
+      - This loophole is the main reason why I call it "Class"-oriented programming and _not_ "Object"-oriented programming!
+      - Using `static` is a way to use a `class` as a "name-space" to group together the methods and variables that 
+        are related to each other to work on the same data, which is often not part of the `class`. An example of this is
+        the `Math` class in Java, which contains only `static` methods and no data.
+      - This was not the original intent of the Class and Object use-cases, but it was a way to fit the COP
+        paradigm into the "procedural" paradigm.
 
   - ### Using Classes and Objects as "Name-Spaces/Scopes" Lead to Procedural-Style Code Implementations <a name="using-classes-and-objects-as-name-spaces"></a>
     - In COP languages, the `class` is used as a "namespace" to group together various methods and variables that
