@@ -544,14 +544,14 @@
   
     ExcelFileObjectPrintContentMethodFunctionPointer -- calls --> ExcelFileClassPrintContentMethod:::Object
     ExcelFileObjectAgeInt -- stores value of --> ExcelFileClassAgeInt
-    subgraph ExcelFileObject["[One “ExcelFile” object instance @19FCA68D]"]
+    subgraph ExcelFileObject["[object instance ExcelFile @19FCA68D]"]
         ExcelFileObjectAgeInt["int content = 3"]
         ExcelFileObjectPrintContentMethodFunctionPointer{"method PrintContent(): 
                                            calls 
                                      function @C62F3842
-                                     in Class “ExcelFile”"}
+                                     in class ExcelFile"}
     end
-    subgraph classExcelFile["class “ExcelFile” extends File"]
+    subgraph classExcelFile["class ExcelFile extends File"]
         ExcelFileClassAgeInt["int content"]
         ExcelFileClassPrintContentMethod{"function @C62F3842:  
                     method PrintContent() =
@@ -565,7 +565,7 @@
                        object" --> ExcelFileObject:::Object
     classExcelFile -- extends --> abstractFile:::Abstract
     ExcelFileClassPrintContentMethod -- implements --> abstractPrintContentMethod:::Abstract
-    subgraph abstractFile["abstract class “File”"]
+    subgraph abstractFile["abstract class File"]
       abstractAgeInt["abstract int content"]
       abstractPrintContentMethod{"abstract method 
                                PrintContent()"}
@@ -618,13 +618,13 @@
       flowchart TD
          X["The Problem with Multiple Inheritance"]
          Animal["
-           abstract Animal
+           abstract class Animal
            expects method makeSound()
-         "] -->|inherits| Cat["🐈 Cat
+         "] -->|inherits| Cat["🐈 Class Cat
             method makeSound()
-         "] & Dog["🐕 Dog
+         "] & Dog["🐕 Class Dog
              method makeSound()
-         "]-->|inherits| Cog???["Cog (???)"]
+         "]-->|inherits| Cog???["class Cog(???) extends Cat & Dog"]
       
          Cog??? -..-> Y((("`
          When “Cog” makes a sound, 
