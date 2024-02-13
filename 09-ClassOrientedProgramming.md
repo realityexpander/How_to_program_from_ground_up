@@ -26,50 +26,53 @@
     state and pointers to the "methods" (functions) of the `class`,
 
     ```mermaid
-         flowchart LR
+        flowchart LR
     
-        catMakeSoundFunctionPointer -- calls --> catMakeSound
+        catMakeSoundFunctionPointer -- calls --> catMakeSound::Object
+        catAgeData -- stores value of --> catAgeInt:::Object
         subgraph catObject["[object instance Cat@19FCA68D]"]
             catAgeData["age: 3"] 
             catMakeSoundFunctionPointer["method makeSound(): 
                                                calls 
                                          function @C62F3842"]
         end
-        catAgeData -- stores value of --> catAgeInt
         
-        catAbstractAgeInt -- expects --> catAgeInt
-        abstractMethodMakeSound -- expects --> catMakeSound
-        catAgeInt -- implements --> catAbstractAgeInt
+        catAbstractAgeInt:Abstract -- expects --> catAgeInt:::Object
+        abstractMethodMakeSound:::Abstract -- expects --> catMakeSound:::Class
+        catAgeInt -- implements --> catAbstractAgeInt:::Abstract
         subgraph classCat["class Cat extends Animal"]
             catAgeInt["int age"]
-            catMakeSound["function @C62F3842:
+         
+            catMakeSound["function @C62F3842:  
                         method makeSound() =
                         { print “Meow” }"]
         end
     
-        classCat -- creates object --> catObject
-        classCat -- extends --> abstractAnimal
-        catMakeSound -- implements --> abstractMethodMakeSound
+        classCat -- creates object --> catObject:::Object
+        classCat -- extends --> abstractAnimal:::Abstract
+        catMakeSound -- implements --> abstractMethodMakeSound:::Abstract
         subgraph abstractAnimal["abstract class Animal"]
           catAbstractAgeInt["abstract int age"]
-          abstractMethodMakeSound("abstract 
-                                    method makeSound()")
+          abstractMethodMakeSound("abstract method 
+                                   makeSound()")
         end
     
-         style abstractAnimal fill:#03A, stroke:#f66, stroke-width:2px, color:#fff, stroke-dasharray: 5 5
-         style abstractMethodMakeSound fill:#03A, stroke:#f66, stroke-width:2px, color:#fff, stroke-dasharray: 5 5
-         style catAbstractAgeInt fill:#03A, stroke:#f66, stroke-width:2px, color:#fff, stroke-dasharray: 5 5
-         
-         style classCat fill:#17F, stroke:#f66, stroke-width:2px, color:#fff, stroke-dasharray: 5 5
-         style catAgeInt fill:#03A, stroke:#f66, stroke-width:2px, color:#fff, stroke-dasharray: 5 5
-         
-         style catMakeSoundFunctionPointer fill:#17F, stroke:#f66, stroke-width:2px, color:#fff, stroke-dasharray: 5 5
-         
-         style catObject fill:#69F, stroke:#f66, stroke-width:2px, color:#fff
-         style catMakeSoundFunctionPointer stroke-dasharray: 5 5, stroke:#f66, stroke-width:2px
-         style catAbstractAgeInt stroke-dasharray: 5 5, stroke:#f66, stroke-width:2px
-         style catAgeInt stroke-dasharray: 5 5, stroke:#f66, stroke-width:2px
-    ````
+        %% style abstractMethodMakeSound fill:#03A, stroke:#f66, stroke-width:2px, color:#fff, stroke-dasharray: 5 5
+        %% style catAbstractAgeInt fill:#03A, stroke:#f66, stroke-width:2px, color:#fff, stroke-dasharray: 5 5
+        %% style classCat fill:#17F, stroke:#f66, stroke-width:2px, color:#fff, stroke-dasharray: 5 5
+        %% style catAgeInt fill:#03A, stroke:#f66, stroke-width:2px, color:#fff, stroke-dasharray: 5 5
+        %% style catMakeSoundFunctionPointer fill:#17F, stroke:#f66, stroke-width:2px, color:#fff, stroke-dasharray: 5 5
+        %% style catObject fill:#69F, stroke:#f66, stroke-width:2px, color:#fff
+        %% style abstractAnimal fill:#000, stroke:#FFF, stroke-width:2px, color:#fff, stroke-dasharray: 5 5
+        
+        %% style catMakeSoundFunctionPointer stroke-dasharray: 5 5, stroke:#f66, stroke-width:2px
+        %% style catAbstractAgeInt stroke-dasharray: 5 5, stroke:#f66, stroke-width:2px
+        %% style catAgeInt stroke-dasharray: 5 5, stroke:#f66, stroke-width:2px
+        
+        classDef Abstract fill:#F00, stroke:#0F0, stroke-width:2px, color:#fff, stroke-dasharray: 5 5
+        classDef Class fill:#0F0, stroke:#00F, stroke-width:4px, color:#000, stroke-dasharray: 5 5
+        classDef Object fill:#00F, stroke:#000, stroke-width:6px, color:#fff
+    ```A
     - TODO FIX COLORS AND STYLES  
   - ### Instantiation
     - When a new object is created from a class template, the Object is called an "instance" of the class.
