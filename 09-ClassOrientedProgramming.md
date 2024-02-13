@@ -31,9 +31,9 @@
         catMakeSoundFunctionPointer -- calls --> catMakeSound
         subgraph catObject["[object instance Cat@19FCA68D]"]
             catAgeData["`age: 3`"] 
-            catMakeSoundFunctionPointer["`method makeSound(): 
+            catMakeSoundFunctionPointer["method makeSound(): 
                                            calls 
-                                           function @C62F3842`"]
+                                           function @C62F3842"]
         end
         catAgeData -- stores value of --> catAgeInt
         
@@ -42,17 +42,16 @@
         catAgeInt -- implements --> catAbstractAgeInt
         subgraph classCat["class Cat extend Animal"]
             catAgeInt["int age"]
-            catMakeSound["`function @C62F3842:
+            catMakeSound["function @C62F3842:
                         method makeSound() =
-                        {  print “_Meow_” }`"]
+                        { print “Meow” }"]
         end
     
         classCat -- creates object --> catObject
         classCat -- extends --> abstractAnimal
         catMakeSound -- implements --> abstractMethodMakeSound
         subgraph abstractAnimal["abstract class Animal"]
-          catAbstractAgeInt["`abstract 
-                              int age`"]
+          catAbstractAgeInt["abstract int age"]
           abstractMethodMakeSound("`abstract 
                                     method makeSound()`")
         end
