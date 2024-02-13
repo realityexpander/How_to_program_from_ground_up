@@ -1,13 +1,22 @@
 # Class Oriented Programming Style (COP) 1970s-Present <a name="class-oriented-programming"></a>
   - ### BIG IDEA — We can simulate real-world objects and their interactions with each other by using "classes" and "objects" in our code.
   
-  - Usually misnamed "Object Oriented Programming," as "Objects" are _not_ the main focus, "Classes" are!
-  - Based on Simula 67, a language designed to simulate real-world systems. The creator gave "head nods" to
-    "Smalltalk" but took a different and more "procedural" approach to the class and object concepts explored in
-    Smalltalk, primarily to use more practical aspect of the ideas for the needs of the time.
-  - The main idea is to use class "templates" to group together methods and variables that are related to each other.
-    Objects are created based on the the classes templates, and then call methods on itself and other object
-    in order to simulate real-world objects and their interactions with each other.
+  - Usually misnamed "Object Oriented Programming (OOP)," as "Objects" are _not_ the main focus of the paradigm, "Classes" are!
+  - COP is Based on "Simula 67," a language specifically designed to simulate real-world systems. 
+  - The creator gave "head nods" to "Smalltalk" but took a different and more "procedural" approach to the class 
+    and object concepts explored in Smalltalk, primarily to use more practical aspect of the ideas for the needs of the time.
+  - The practical hardware limitations outweighed the theoretical purity of OOP, and shortcuts were made for the sake of
+    performance and practicality, such as use of `static` functions to manipulate data directly instead of calling 
+    methods on objects to manipulate the data indirectly.
+  - The main idea is to use class "templates" (called a `class`) to group together methods and variables that are 
+    related to each other (highly cohesive) and then create "objects" from the class templates to simulate 
+    real-world systems.
+  - "Objects" are created based on the `class` template. Methods are called on itself and other objects
+    in order to simulate real-world interactions with each other.
+  - Think of simulating a hospital with a `class` called "Doctor" and a `class` called "Patient" and a `class` called "Hospital"
+    - The `class` "Doctor" would have methods like "treatPatient()" and "writePrescription()" and "getPaid()"
+    - The `class` "Patient" would have methods like "getTreated()" and "payBill()" and "getPrescription()"
+    - The `class` "Hospital" would have methods like "admitPatient()" and "payDoctor()" and "payNurse()"
   - Examples of Class-Oriented Programming languages are "Simula," "C++", "C#" and "Java"
   
 ## COP Tried to Introduce a New Style of Programming, But Ended With Mixed Results <a name="cop-tried-to-introduce"></a>
@@ -27,38 +36,94 @@
       or "specific" class, and is not meant to be instantiated itself, only extended and be used as a "general"
       template for the "specific" classes.
 
-    ```mermaid
-       flowchart TD
-           
-       subgraph catClass["Class “Cat”
-       "]
-       catObjectAgeInt["int age"]
-       catObjectMakeSoundMethodFunctionPointer{"method makeSound():
-                   { println(“Meow”) }"}
-       end
-       
-    ```
-    ```Text
-      // COP Pseduo-Code
+      ```Text
+      // COP Pseudo-Code
       class Cat {
          int age
-         method makeSound() {
-            println(“Meow”)
-         }
-          
+         
          constructor Cat(int age) {
             this.age = age
+         }
+         
+         method makeSound() {
+            println(“Meow”)
          }
       }
         
         // Start of program
-      method main() {
+      function main() {
          Cat cat1 = new Cat(3)  // <-- Creates a new object of the class "Cat" and
                                 //     assigns its location to variable `cat1`, ie: "Instantiates" the class.
          cat1.makeSound()  // <-- will print "Meow".
       }
       ```
+      ### Simplistic Overview of a Class and an Object Instance of the Class
+      ```mermaid
+         flowchart TB
+         
+         subgraph catObject["Object “Cat” @BFFC882A"]
+              catObjectAgeInt["`int age = 3`"] 
+              catObjectMakeSoundMethodFunctionPointer{"`method makeSound(): 
+                                                   { println(“Meow”) }`"}
+         end
+         subgraph catClass["Template class “Cat”"]
+            catClassAgeInt["int age"]
+            catClassMakeSoundMethodFunctionPointer{"method makeSound():
+                                                 { println(“Meow”) }"}
+         end
+         catClass -- "
+            instantiate = allocate 
+            physical memory space for 
+            the data defined in the class
+         " --> catObject:::Object
+         
+         catObjectAgeInt -- stores value of --> catClassAgeInt
+         
+         style catClass fill:#444, stroke:#FFF, stroke-width:1px, color:#FFF, stroke-dasharray: 5 5
+         style catClassAgeInt fill:#444, stroke:#FFF, stroke-width:1px, color:#FFF, stroke-dasharray: 5 5
+         style catClassMakeSoundMethodFunctionPointer fill:#444, stroke:#FFF, stroke-width:1px, color:#FFF, stroke-dasharray: 5 5 
+         
+         classDef Object fill:#55F, stroke:#FFF, stroke-width:3px, color:#fff
+         style catObjectAgeInt fill:#55F, stroke:#FFF, stroke-width:3px, color:#fff
+         style catObjectMakeSoundMethodFunctionPointer fill:#55F, stroke:#FFF, stroke-width:3px, color:#fff 
+       
+      ```
+      ### Sophisticated Diagram of a Class and Object Instance
 
+      ```mermaid
+         flowchart RL
+          
+         catClass -- "
+            creates 
+      (instantiates)
+            object in memory
+      " --> catObject:::Object
+         subgraph catObject["Object “Cat” @BFFC882A"]
+              catObjectAgeInt["`int age = 3`"] 
+              catObjectMakeSoundMethodFunctionPointer{"`method makeSound(): 
+                                                   calls function defined in class`"}
+         end
+      
+         subgraph catClass["Class “Cat”"]
+            catClassAgeInt["int age
+                            (value is stored in object)"]
+            catClassMakeSoundMethodFunctionPointer{"method makeSound():
+                                                 { println(“Meow”) }"}
+         end
+         catObjectMakeSoundMethodFunctionPointer -- calls --> catClassMakeSoundMethodFunctionPointer:::Object
+           
+         label["Sophisticated Diagram of 
+                Class and an Object Instance"]   
+      
+         style catClass fill:#444, stroke:#FFF, stroke-width:1px, color:#FFF, stroke-dasharray: 5 5
+         style catClassAgeInt fill:#444, stroke:#FFF, stroke-width:1px, color:#FFF, stroke-dasharray: 5 5
+         style catClassMakeSoundMethodFunctionPointer fill:#55F, stroke:#FFF, stroke-width:3px, color:#fff 
+         
+         classDef Object fill:#55F, stroke:#FFF, stroke-width:3px, color:#fff
+         style catObjectAgeInt fill:#55F, stroke:#FFF, stroke-width:3px, color:#fff
+         style catObjectMakeSoundMethodFunctionPointer fill:#444, stroke:#FFF, stroke-width:1px, color:#FFF, stroke-dasharray: 5 5 
+         
+      ```
   - ### Instantiation
     - When a new object is created from a class template, the Object is called an "instance" of the class.
     - An Object is just a structure in memory that contains the values (or "state") of the variables and pointers to
@@ -127,11 +192,12 @@
     ---
     title: Interface Example
     ---
-    classDiagram 
+    classDiagram
+    direction TB 
     Document <|-- PDF : implements
     Document <|-- Email : implements
     Document <|-- Song : implements
-      
+     
     class Document["interface Document"] { 
        expects method view()* [No implementation here!]
     }
@@ -145,31 +211,32 @@
     class Song["Class Song"] {
         override method view() Launch Music Player
     }
+    
     ```
-  - Example (in pseudo-code similar to common COP languages):
+  - Interface Example (in pseudo-code similar to common COP languages):
     ```Text
-    // OOP Pseduo-Code
+    // COP Pseudo-Code
       
-    interface Document {     // <-- interfaces only define the "signature" of the methods it expects to be in the subclass
-      expects method view()  // this interface expects a method called "view" 
+    interface Document {     // <-- interfaces only define the "signature" of the methods it expects to be in the subclass.
+      expects method view()  // this interface expects a method called "view", there is no implementation here.
     }  
         
-    // PDF is one "concrete implementing" class of the "Document" interface
-    class PDF implements Document { // PDF is a subclass of Document, and must implement the "view" method
+    // PDF is one "concrete implementing" class of the "Document" interface.
+    class PDF implements Document { // <-- PDF is a subclass of Document, and must implement the "view" method.
         override method view() { // <-- the implementation of the interface (uses the "override" keyword) 
            print "Launch PDF Viewer"  
         } 
     }
           
-    // Email is one "concrete implementing" class of the "Document" interface
-    class Email implements Document { // Email is a subclass of Document, and must implement the "view" method
-        override method view() { // <-- the implementation of the interface (uses the "override" keyword)
+    // Email is one "concrete implementing" class of the "Document" interface.
+    class Email implements Document { <-- // Email is a subclass of Document, and must implement the "view" method.
+        override method view() { // <-- the implementation of the interface (uses the "override" keyword.)
            print "Launch Email App"  
         }
     }
           
-    // Song is one "concrete implementing" class of the "Document" interface
-    class Song implements Document { // <-- the implementation of the interface (uses the "override" keyword)
+    // Song is one "concrete implementing" class of the "Document" interface.
+    class Song implements Document { // <-- the implementation of the interface (uses the "override" keyword.)
         override method view() { 
            print "Launch Music Player"  
         } 
@@ -181,13 +248,13 @@
         Email doc2 = new Email()  
         Song doc3 = new Song() 
              
-        function viewDocument(Document doc) {  // Note that the parameter is of type `Document` and not `PDF` or `Email` or `Song` 
-            doc.view() // Will call the appropriate "view" method of the subclass
+        function viewDocument(Document doc) {  // Note that the parameter is of type `Document` and not `PDF` or `Email` or `Song`. 
+            doc.view() // Will call the appropriate "view" method of the subclass.
         }
               
-        viewDocument(doc1)  // <-- will print "Launch PDF Viewer"
-        viewDocument(doc2)  // <-- will print "Launch Email App"
-        viewDocument(doc3)  // <-- will print "Launch Music Player"
+        viewDocument(doc1)  // <-- will print "Launch PDF Viewer".
+        viewDocument(doc2)  // <-- will print "Launch Email App".
+        viewDocument(doc3)  // <-- will print "Launch Music Player".
     }
     ```
     > Live Code Example: [How Interfaces Work in Kotlin](src/main/kotlin/interfaceExample.kt)
@@ -204,17 +271,19 @@
 ## Inheritance <a name="inheritance"></a>
   - Inheritance is the idea that a new `class` can inherit from another `class` all of its methods and variables,
     and then add new methods or override methods in the subclass that will modify the behavior of the
-    original `class`
-  - Classes can inherit from other classes to reuse code and "state", and to create "subtypes/subclasses"
-  - The class that is inherited from is called the "superclass" and the class that inherits is called the "subclass"
-  - The "subclass" is also called a "derived class" and the "superclass" is also called a "base class"
+    original `class`.
+  - Classes can inherit from other classes to reuse code and "state", and to create "subtypes/subclasses."
+  - The class that is inherited from is called the "superclass" and the class that inherits is called the "subclass."
+  - The "subclass" is also called a "derived class" and the "superclass" is also called a "base class."
+  - "Subtyping," "Subclassing," and "Inheritance" are all the same concept, and are the basis for polymorphism and dynamic binding.
 
     ```mermaid
     ---
-    title: Inheritance Example Diagram
+    title: Class Inheritance Example Diagram
       
     ---
     classDiagram
+    direction TB
     Media <|-- MP3 : extends
     Media <|-- Video : extends
     MP3 <|-- ProtectedMP3 : extends      
@@ -237,7 +306,7 @@
 
     - ### Example of inheritance (in pseudocode, and is similar to common COP languages):
       ```Text
-      // OOP pseudo-code
+      // COP pseudo-code
         
       open class Media {   // <-- the "base class" or "superclass", `open` means it can be subclasses (extended/inherited)
         // Note: there is no visible constructor, so the default constructor will be used -> Media(), which takes no parameters and does not initialize any variables.
@@ -317,23 +386,23 @@
       // Playing Protected MP3: MyProtectedMP3.mp3
        ```
       > - Live Code Example: [How Inheritance Works in Kotlin](src/main/kotlin/inheritanceExample.kt)
-
+   
 ## Problems Arising from the Abuse of Inheritance <a name="problems-arising-from-the-abuse-of-inheritance"></a>
-- ### BIG IDEA — The hype around reusability was so strong at the time that it was often used to justify the use of inheritance in places where it was not appropriate.
+  - ### BIG IDEA — The hype around reusability was so strong at the time that it was often used to justify the use of inheritance in places where it was not appropriate.
 
-- Use of Inheritance Lead to immense & unnecessary complexity to fit in the "simulation" paradigm, as programmers tried to shove the
-  "Procedural Paradigm" into the fancy new "Class Oriented" paradigm with less than stellar results.
-- Inheritance is a usually a bad idea for many reasons, and very overused beyond its original intent.
-    - The hype around reusability was so strong that it was often used to justify the use of inheritance in places
-      where it was not appropriate.
-    - This lead to "fragile" and "rigid" code that was hard to understand and hard to modify, leading to a lot
-      of waste and costs.
-    - Many popular ways of dealing with the "procedural approach" to COP were turned into "design patterns"
-      that were used to "fix" the problems of the "procedural approach" to `COP. Many of these ideas were just
-      hacks to fit the "procedural approach" into the "COP" paradigm.
-    - The promise of "reusability" was not fulfilled by COP languages.
-      > - Banana, Monkey, Jungle Problem
-          >   - https://crystal-villanueva.medium.com/the-banana-and-the-gorilla-problem-92c9a4717fd6
+  - Use of Inheritance Lead to immense & unnecessary complexity to fit in the "simulation" paradigm, as programmers tried to shove the
+    "Procedural Paradigm" into the fancy new "Class Oriented" paradigm with less than stellar results.
+  - Inheritance is a usually a bad idea for many reasons, and very overused beyond its original intent.
+      - The hype around reusability was so strong that it was often used to justify the use of inheritance in places
+        where it was not appropriate.
+      - This lead to "fragile" and "rigid" code that was hard to understand and hard to modify, leading to a lot
+        of waste and costs.
+      - Many popular ways of dealing with the "procedural approach" to COP were turned into "design patterns"
+        that were used to "fix" the problems of the "procedural approach" to `COP. Many of these ideas were just
+        hacks to fit the "procedural approach" into the "COP" paradigm.
+      - The promise of "reusability" was not fulfilled by COP languages.
+        > - Banana, Monkey, Jungle Problem
+            >   - https://crystal-villanueva.medium.com/the-banana-and-the-gorilla-problem-92c9a4717fd6
 
 ## Abstract Classes <a name="abstract-classes"></a>
   - ### BIG IDEA — Lets have a class that defines a general category of objects, but doesn't define the implementation details of the objects.
@@ -346,61 +415,72 @@
     like "documents" is the general category (abstract idea) of a generic "thing to structure and retain data."
   - PDFs, Excel files and Text files are specific "concrete" kinds (or "implementations") of the
     abstract idea of "documents."
-  - The `abstract class` is usually `extend`ed by the subclass and then the methods are overridden by the subclass
+  - The `abstract class` is usually `extend`ed by the subclass and the subclass methods `overridde` the superclass methods.
     ```mermaid
     ---
     title: Abstract Class Example Diagram
       
     ---
     classDiagram
+    direction LR
     File <|-- Excel : extends
     File <|-- Memo : extends
     File <|-- Photo : extends
       
-    class File {
-        expects method view()*
+    class File["abstract class File"] {
+        String name  // ⬅︎ Abstract classes can have variables
+        method view(): Launch Basic Text Editor ("default" implementation)
+        method showName(): Print "File Name: " + this.name ("default" implementation")
     }
     <<abstract>> File 
       
-    class Excel {
-        override method view()
+    class Excel["class Excel extends File"] {
+        override String name // ⬅︎ Subclasses must declare abstract variables
+        override method view() Launch Excel Viewer
     }
-    class Memo {
-        override method view()
+    class Memo["class Memo extends File"] {
+        String to  // ⬅︎ Subclasses can have additional variables
+        String from
+        String subject
+        override method view() Launch Memo Viewer
+        override method showName() Print "Memo from: " + this.from + ", to: " + this.to
     }
-    class Photo {
-        override methodview()
+    class Photo["class Photo extends File"] {
+        override method view() Launch Photo Viewer
     }
     ```
   - Example for abstract classes in pseudo-code (similar to common COP languages):
     ```Text
-     // OOP pseudo-code
+     // COP pseudo-code
      
      abstract class File { 
-       String name = ""  // <-- Abstract classes can have variables.
+       abstract String name // <-- Abstract classes can have variables.
      
        File(String name) {  // <-- Abstract classes can have "default" constructors.
            this.name = name
        }
-       expects method view()  // Expects a method called "view" and has no default implementation.
-       expects method showName() {  // Expects a method called "showName" and has a default implementation.
+       abstract method view()  // Expects a method called "view" and has no default implementation.
+       abstract method showName() {  // Expects a method called "showName" and has a default implementation.
            print "File Name: " + this.name // <-- The "default implementation" for any subclass that doesn't override the method.
        } 
      }  
      
      class Excel extends File {  // <-- Excel is a subclass of File.
+         override String name // <-- Subclasses must declare the abstract variables from superclass.
+    
          override method view() { // <-- the implementation of the abstract class "view".
             print "View Excel: " + this.name  
          } 
      }
      
      class Memo extends File { // <-- Memo is a subclass of File.
+         override String name // <-- Subclasses must declare the abstract variables from superclass.
          String to
          String from
          String subject
     
-         Memo(String to, String from, String subject) {  // <-- the custom constructor of this class, its called to 
-                                                         //     initialize the variables of the object.
+         constructor Memo(String to, String from, String subject) {  // <-- the custom constructor of this class, its called to 
+                                                                     //     initialize the variables of the object.
              super("Memo to:" + to)  // <-- calls the constructor of the superclass (File)
              this.to = to
              this.from = from
@@ -420,15 +500,17 @@
      }
      
      class Photo extends File { // <-- Photo is a subclass of Document
+         override String name // <-- Subclasses must declare the abstract variables from superclass.
+         
          override method view() {  // <-- the implementation of the abstract class "view"
               print "View Photo: " + this.name
          } 
      }
      
      // Start of program
-     method main() {
+     function main() {
          // File doc0 = new File("MyFile")  // Since the `File` class is `abstract`, an object cannot be created from it. 
-                                            // This will cause a compiler error.
+                                            // Attempting this will result in a compiler error.
          File file1 = new Excel("MyExcel.xls")
          File file2 = new Photo("MyPhoto.jpg")
          Memo file3 = new Memo(to="Chris", from="Bob", subject="Meeting")
@@ -503,7 +585,7 @@
 
 ## Polymorphism <a name="polymorphism"></a>
   - ### BIG IDEA — The idea that a method can be called on an object and the method will behave differently based on the "type" of the "object" that the "method" is called on.
-  - In OOP, the `interface` and `abstract class` are implementations of the idea of Polymorphism.
+  - In COP, the `interface` and `abstract class` are implementations of the idea of Polymorphism.
 
   - Yet another overcomplicated word for a very basic, simple idea.
   - Polymorphism is the idea that a method can be called on an object and the method will behave differently
@@ -527,7 +609,6 @@
     been shown to be a bad idea due to misuse and overuse of the pattern)
 
 
-
 ## Allowing for "Multiple Inheritance" in C++ was a mistake, and it was removed from Java and C# for very good reasons. <a name="multiple-inheritance-removed"></a>
   - Multiple Inheritance is the idea that a class can inherit from more than one class, and then have access to
     all methods and variables of the superclasses.
@@ -545,10 +626,10 @@
              method makeSound()
          "]-->|inherits| Cog???["Cog (???)"]
       
-         Cog??? -..-> Y((("
-         When `Cog` makes a sound, 
-         (ie: method `makeSound()` is called) 
-         does it Meow or Bark?"))) 
+         Cog??? -..-> Y((("`
+         When “Cog” makes a sound, 
+         (ie: method “makeSound()” is called on object Cog) 
+         Does it _Meow_ or _Bark_?`"))) 
       ```
   - Example of attempt to use "Multiple Inheritance" in C++:
     ```C++
