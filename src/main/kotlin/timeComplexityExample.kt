@@ -3,15 +3,15 @@
 // Algorithm: Binary Search
 // Performs a binary search on a sorted array - O(log n)
 // Returns the index of the value in the array, or -1 if the value is not found.
-fun Array<Int>.binarySearch(value: Int): Int {
+fun Array<Int>.binarySearch(searchValue: Int): Int {
 	var low = 0
 	var high = size - 1
 	while (low <= high) {
 		val mid = (low + high) / 2
 		val midVal = this[mid]
 		when {
-			midVal < value -> low = mid + 1
-			midVal > value -> high = mid - 1
+			midVal < searchValue -> low = mid + 1
+			midVal > searchValue -> high = mid - 1
 			else -> return mid
 		}
 	}
@@ -52,7 +52,6 @@ fun main() {
 	println("Linear Time Lookup O(n) = Result: $result, Time: ${System.currentTimeMillis() - start}ms")
 
 
-	// Notice how this one takes MUCH, MUCH longer than the previous ones.
 	start = System.currentTimeMillis()
 	result = 0
 	for (i in 0 until x.size) { // <-- O(n)
@@ -63,6 +62,7 @@ fun main() {
 	println("Quadratic Time Lookup O(n^2) = Result: $result, Time: ${System.currentTimeMillis() - start}ms")
 
 
+	// Notice how this one takes MUCH, MUCH longer than the previous ones.
 	start = System.currentTimeMillis()
 	result = 0
 	for (i in 0 until x.size) { // <-- O(n)
