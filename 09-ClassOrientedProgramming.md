@@ -25,55 +25,48 @@
   - A `class` is a template for creating an in-memory instance of the class (called an "Object") which contains the
     state and pointers to the "methods" (functions) of the `class`,
 
-    ```mermaid
-        flowchart LR
+  ```mermaid
+    flowchart LR
+
+    catObjectMakeSoundMethodFunctionPointer -- calls --> catClassMakeSoundMethod:::Object
+    catObjectAgeInt -- stores value of --> catClassAgeInt
+    subgraph catObject["[One “Cat” object instance @19FCA68D]"]
+        catObjectAgeInt["int age = 3"]
+        catObjectMakeSoundMethodFunctionPointer{"method makeSound(): 
+                                           calls 
+                                     function @C62F3842
+                                     in Class Cat"}
+    end
     
-        catMakeSoundFunctionPointer -- calls --> catMakeSound::Object
-        catAgeData -- stores value of --> catAgeInt:::Object
-        subgraph catObject["[object instance Cat@19FCA68D]"]
-            catAgeData["age: 3"] 
-            catMakeSoundFunctionPointer["method makeSound(): 
-                                               calls 
-                                         function @C62F3842"]
-        end
-        
-        catAbstractAgeInt:Abstract -- expects --> catAgeInt:::Object
-        abstractMethodMakeSound:::Abstract -- expects --> catMakeSound:::Class
-        catAgeInt -- implements --> catAbstractAgeInt:::Abstract
-        subgraph classCat["class Cat extends Animal"]
-            catAgeInt["int age"]
-         
-            catMakeSound["function @C62F3842:  
-                        method makeSound() =
-                        { print “Meow” }"]
-        end
+    abstractAgeInt -- ”expects” --> catClassAgeInt
+    abstractMakeSoundMethod -- “expects” --> catClassMakeSoundMethod:::Object
+    catClassAgeInt -- implements --> abstractAgeInt:::Abstract
+    subgraph classCat["class Cat extends Animal"]
+        catClassAgeInt["int age"]
+        catClassMakeSoundMethod{"function @C62F3842:  
+                    method makeSound() =
+                    { print “Meow” }"}
+    end
+
+    classCat -- creates object --> catObject:::Object
+    classCat -- extends --> abstractAnimal:::Abstract
+    catClassMakeSoundMethod -- implements --> abstractMakeSoundMethod:::Abstract
+    subgraph abstractAnimal["abstract class Animal"]
+      abstractAgeInt["abstract int age"]
+      abstractMakeSoundMethod{"abstract method 
+                               makeSound()"}
+    end
+
+    classDef Abstract fill:#222, stroke:#0F0, stroke-width:1px, color:#fff, stroke-dasharray: 5 5
     
-        classCat -- creates object --> catObject:::Object
-        classCat -- extends --> abstractAnimal:::Abstract
-        catMakeSound -- implements --> abstractMethodMakeSound:::Abstract
-        subgraph abstractAnimal["abstract class Animal"]
-          catAbstractAgeInt["abstract int age"]
-          abstractMethodMakeSound("abstract method 
-                                   makeSound()")
-        end
-    
-        %% style abstractMethodMakeSound fill:#03A, stroke:#f66, stroke-width:2px, color:#fff, stroke-dasharray: 5 5
-        %% style catAbstractAgeInt fill:#03A, stroke:#f66, stroke-width:2px, color:#fff, stroke-dasharray: 5 5
-        %% style classCat fill:#17F, stroke:#f66, stroke-width:2px, color:#fff, stroke-dasharray: 5 5
-        %% style catAgeInt fill:#03A, stroke:#f66, stroke-width:2px, color:#fff, stroke-dasharray: 5 5
-        %% style catMakeSoundFunctionPointer fill:#17F, stroke:#f66, stroke-width:2px, color:#fff, stroke-dasharray: 5 5
-        %% style catObject fill:#69F, stroke:#f66, stroke-width:2px, color:#fff
-        %% style abstractAnimal fill:#000, stroke:#FFF, stroke-width:2px, color:#fff, stroke-dasharray: 5 5
+    classDef Class fill:#444, stroke:#00F, stroke-width:1px, color:#000, stroke-dasharray: 5 5
+    style classCat fill:#444, stroke:#DDD, stroke-width:1px, color:#000, stroke-dasharray: 5 5
+    style catClassAgeInt fill:#444, stroke:#DDD, stroke-width:1px, color:#FFF, stroke-dasharray: 5 5
         
-        %% style catMakeSoundFunctionPointer stroke-dasharray: 5 5, stroke:#f66, stroke-width:2px
-        %% style catAbstractAgeInt stroke-dasharray: 5 5, stroke:#f66, stroke-width:2px
-        %% style catAgeInt stroke-dasharray: 5 5, stroke:#f66, stroke-width:2px
-        
-        classDef Abstract fill:#F00, stroke:#0F0, stroke-width:2px, color:#fff, stroke-dasharray: 5 5
-        classDef Class fill:#0F0, stroke:#00F, stroke-width:4px, color:#000, stroke-dasharray: 5 5
-        classDef Object fill:#00F, stroke:#000, stroke-width:6px, color:#fff
-    ```A
-    - TODO FIX COLORS AND STYLES  
+    classDef Object fill:#55F, stroke:#FFF, stroke-width:3px, color:#fff
+    style catObjectAgeInt fill:#55F, stroke:#FFF, stroke-width:3px, color:#fff
+    style catObjectMakeSoundMethodFunctionPointer fill:#222, stroke:#DDD, stroke-width:1px, color:#000, stroke-dasharray: 5 5
+  ```
   - ### Instantiation
     - When a new object is created from a class template, the Object is called an "instance" of the class.
     - An Object is just a structure in memory that contains the values (or "state") of the variables and pointers to
