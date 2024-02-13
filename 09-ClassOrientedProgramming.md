@@ -139,9 +139,9 @@
     title: Interface Example
     ---
     classDiagram
-    Document <|-- PDF : implements
-    Document <|-- Email : implements
-    Document <|-- Song : implements
+    Document <|-- class PDF : implements
+    Document <|-- class Email : implements
+    Document <|-- clasd Song : implements
       
     class Document { 
        expects method view()*
