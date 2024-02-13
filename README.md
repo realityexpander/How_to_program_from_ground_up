@@ -60,7 +60,7 @@
 - [Structured Programming](08-StructuredProgramming.md)
   - [Scopes](08-StructuredProgramming.md#scopes)
   - [Types](08-StructuredProgramming.md#types)
-- [Class Oriented Programming](08-ClassOrientedProgramming.md)
+- [Class Oriented Programming](09-ClassOrientedProgramming.md)
   - [COP Tried to Introduce a New Style of Programming, But Ended With Mixed Results](09-ClassOrientedProgramming.md#cop-tried-to-introduce)
   - [Encapsulation](09-ClassOrientedProgramming.md#encapsulation)
     - [Using Classes and Objects as "Name-Spaces/Scopes" Lead to Procedural-Style Code Implementations](09-ClassOrientedProgramming.md#using-classes-and-objects-as-name-spaces)
