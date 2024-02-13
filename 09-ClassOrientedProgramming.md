@@ -1,4 +1,4 @@
-# Class Oriented Programming Style (COP) 1970s-Present
+# Class Oriented Programming Style (COP) 1970s-Present <a name="class-oriented-programming"></a>
   - ### BIG IDEA — We can simulate real-world objects and their interactions with each other by using "classes" and "objects" in our code.
   
   - Usually misnamed "Object Oriented Programming," as "Objects" are _not_ the main focus, "Classes" are!
@@ -10,9 +10,14 @@
     in order to simulate real-world objects and their interactions with each other.
   - Examples of Class-Oriented Programming languages are "Simula," "C++", "C#" and "Java"
   
-## COP Collected ideas around:
-
-### Encapsulation
+## COP Tried to Introduce a New Style of Programming, But Ended With Mixed Results <a name="cop-tried-to-introduce"></a>
+  - COP was a way to for most programmers to fit the `procedural` paradigm into the `class` and `object` paradigm, 
+    with mixed results.
+  - Due to the terminology and lack or effective learning resources along with many differing opinions about how
+    to apply the paradigm, many aspect were often misused and misunderstood, which lead to ineffiecient programs
+    that were difficult to understand and maintain.
+  
+## Encapsulation <a name="encapsulation"></a>
   - Think of a `struct` in C, but with functions that can access the data in the `struct`, and the data is
     "private" and only accessible by the functions in the `struct`.
   - Data & code are "encapsulated," (or enclosed) into a `class`.
@@ -38,14 +43,14 @@
   - The use of the word "constructor" is a bit of a misnomer, as the memory space for the Object has been allocated
     and the `constructor` is called to set the initial values of the variables in the object ("initialize" the state.)
 
-  - ### Using Classes and Objects "Name-Spaces/Scopes" for Procedural-Style Code Implementations
+  - ### Using Classes and Objects "Name-Spaces/Scopes" Lead to Procedural-Style Code Implementations <a name="using-classes-and-objects-as-name-spaces"></a>
     - In COP languages, the `class` is used as a "namespace" to group together various methods and variables that
       are related to each other (known as "high cohesion") into a single class or "namespace".
         - Variables and methods can be called via a common name, like: `Person.age` or `Person.setName()`
     - All code must be inside an object OR be declared as a `static` member of a `class` to be accessible without an object
         - This use of `static` functions is a primary indication of the COP paradigm is being followed.
 
-    - #### Problems Abusing Static Methods and Attributes
+    - #### Problems Arising from Abusing Static Methods and Attributes <a name="problems-arising-from-abusing-static"></a>
       - Using `static` breaks the encapsulation of the object and leads to "procedural" style programming.
       - Misuse of `static` methods often lead to "collections of static methods" that simply extended the "procedural" paradigm, except the
         code blocks now had a name (the name of the Class) and were grouped together instead of being globally accessible.
@@ -70,7 +75,7 @@
         > - What's Wrong About Utility Classes? (Static Methods)
         >   - https://www.youtube.com/watch?v=psrp3TtaYYI
 
-## Interfaces
+## Interfaces <a name="interfaces"></a>
   - ### BIG IDEA — Can we swap out different implementations of the same named method?
   - ie: Can we have a method called `view` that runs different code depending on the class of the object?
   
@@ -155,7 +160,7 @@
         according to the method signatures in the `interface`
       - "Subclassing" is also called "Subtyping" or "Inheritance" and is the basis for "Polymorphism" and "Dynamic Binding"
 
-## Inheritance
+## Inheritance <a name="inheritance"></a>
   - Inheritance is the idea that a new `class` can inherit from another `class` all of its methods and variables,
     and then add new methods or override methods in the subclass that will modify the behavior of the
     original `class`
@@ -272,7 +277,7 @@
        ```
       > - Live Code Example: [How Inheritance Works in Kotlin](src/main/kotlin/inheritanceExample.kt)
 
-## Abstract Classes
+## Abstract Classes <a name="abstract-classes"></a>
   - ### BIG IDEA — Lets have a class that defines a general category of objects, but doesn't define the implementation details of the objects.
     - ie: Like a "Document" class that has a method called "view" but doesn't define how the document is viewed.
     - You can't create a generic "Document", but you can create a "PDF" or "Excel" or "Text" document that has a "view" method.
@@ -392,7 +397,7 @@
      ```
      - Live Code Example: [How Abstract Classes Work in Kotlin](src/main/kotlin/abstractClassExample.kt)
 
-## Polymorphism
+## Polymorphism <a name="polymorphism"></a>
   - ### BIG IDEA — The idea that a method can be called on an object and the method will behave differently based on the "type" of the "object" that the "method" is called on.
   - In OOP, the `interface` and `abstract class` are implementations of the idea of Polymorphism.
 
@@ -403,7 +408,7 @@
       - In the example above, the `viewDocument` function can be called with any `Document` object and the `view` method
         will behave differently based on the "type" of the `Document` object that is passed in
 
-## Controlled Visibility of Variables
+## Controlled Visibility of Variables and Methods <a name="controlled-visibility"></a>
   - ### BIG IDEA — Global mutable variables is a big problem, so lets control the visibility of the variables and 
     methods of the class to other classes and subclasses.
   - ie: Making a variable `private` means that it can only be accessed by the methods of the class and not by any other class.
@@ -417,8 +422,8 @@
   - Encouraged to use getters and setters to control the access to the variables of the class (which has since
     been shown to be a bad idea due to misuse and overuse of the pattern)
 
-## Issues from Abuse of Inheritance
-  - ### BIG IDEA — The hype around reusability was so strong that it was often used to justify the use of inheritance in places where it was not appropriate.
+## Problems Arising from the Abuse of Inheritance <a name="problems-arising-from-the-abuse-of-inheritance"></a>
+  - ### BIG IDEA — The hype around reusability was so strong at the time that it was often used to justify the use of inheritance in places where it was not appropriate.
   
   - Use of Inheritance Lead to immense & unnecessary complexity to fit in the "simulation" paradigm, as programmers tried to shove the
     "Procedural Paradigm" into the fancy new "Class Oriented" paradigm with less than stellar results.
@@ -434,7 +439,7 @@
       > - Banana, Monkey, Jungle Problem
       >   - https://crystal-villanueva.medium.com/the-banana-and-the-gorilla-problem-92c9a4717fd6
 
-    ### Allowing for "Multiple Inheritance" in C++ was a mistake, and it was removed from Java and C# for very good reasons.
+    ### Allowing for "Multiple Inheritance" in C++ was a mistake, and it was removed from Java and C# for very good reasons. <a name="multiple-inheritance-removed"></a>
       - Multiple Inheritance is the idea that a class can inherit from more than one class, and then have access to
         all methods and variables of the superclasses.
     
@@ -509,6 +514,22 @@
       > NOTE: If you _really_ want to achieve multiple inheritance... (_you should never need it, but here's how:_)
       >   - https://www.youtube.com/watch?v=3X9Eo2vzY1I
       >   - Live Code Example: [How to Achieve Multiple Inheritance in Kotlin](src/main/kotlin/multipleInheritanceExample.kt)
-                    
+
+## Design Patterns <a name="design-patterns"></a>
+  - ### BIG IDEA — There are common problems and ways of solving them that humans have already figured out and named them.
+ 
+  - "Design Patterns" became popular around the time of C++ due to the new complexity of the language and the
+    need to solve the problems of the "procedural approach" to COP.
+  - These "patterns" were discovered along the way and shared on public forums and in many books from different
+    authors, emphasizing different ideas and approaches to the problems that arose from C++ programming.
+  - Most of these "patterns" were just hacks to fit the "procedural approach" into the "COP" paradigm.
+  - Many programmers accepted these patterns as some kind of gospel, and they were often used to justify the
+    use of inheritance in places where it was not appropriate, as well as other language features.
+  - For example,"The "Gang of Four" book is the most famous book on the subject, and it is often referred to as the "Bible."
+  - Although some of the ideas in the book are good, many of the ideas are just hacks to fit the "procedural
+    approach" into the "COP" paradigm.
+  
+  - ### Many of the problems in COP could have been avoided by exploring what the originator of the term "Object Oriented", Alan Kay, originally meant by the term "Object Oriented."
+ 
 - [Continue Reading - Back-to-Object-Oriented Programming](./10-BackToObjectOrientedProgramming.md)
 - [Back to Index](README.md)

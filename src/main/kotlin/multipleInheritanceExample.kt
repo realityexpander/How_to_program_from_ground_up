@@ -41,7 +41,7 @@ interface Add3 {
    }
 }
 
-class Calculator(
+class Calculator1(
    override val a: Int = 0,  // <-- must override the properties for the interface to define the default values
    override val b: Int = 0   // <-- must override the properties for the interface to define the default values
 ) : Add1, Add2, Add3 {  // <-- Inherit("Subclass"/"Subtype"/"Derive") from three interfaces (multiple inheritance)
@@ -57,8 +57,24 @@ class Calculator(
    }
 }
 
+class Calculator2(
+   override val a: Int = 0,
+   override val b: Int = 0
+) : Add1, Add2, Add3 {
+
+   override fun add(): Int {
+      return super<Add2>.add()  // <-- calls different implementation than the Calculator1 class
+   }
+
+   override fun subtract(): Int {
+      return super<Add1>.subtract()  // <-- calls different implementation than the Calculator1 class
+   }
+}
+
 fun main() {
-   val calc = Calculator(1, 2)
-   println("sum=${calc.add()}")  // <-- 3
-   
+   val calc1 = Calculator1(1, 2)
+   println("sum=${calc1.add()}")  // <-- Output: sum=3
+
+   val calc2 = Calculator2(1, 2)
+   println("sum=${calc2.add()}")  // <-- Output: sum=6
 }

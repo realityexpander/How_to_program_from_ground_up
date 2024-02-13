@@ -57,7 +57,8 @@
   - [Time Complexity](07-SoftwareDesign.md#time-complexity)
     - [Shorthand Guide & Sample Code](07-SoftwareDesign.md#time-complexity-example)
   - [Communicating Software Designs Visually](07-SoftwareDesign.md#communicating-software-designs)
--  
+- [COP Tried to Introduce a New Style of Programming, But Ended With Mixed Results](
+  -    
 
 ## Introduction
   - How to guide for budding software engineers who need a primer overview of software development concepts 
