@@ -53,7 +53,7 @@
         classCat -- creates object --> catObject:::Object
         classCat -- extends --> abstractAnimal:::Abstract
         catClassMakeSoundMethod -- implements --> abstractMakeSoundMethod:::Abstract
-        subgraph abstractAnimal["abstract class Animal"]
+        subgraph abstractAnimal["abstract class “Animal”"]
           abstractAgeInt["abstract int age"]
           abstractMakeSoundMethod{"abstract method 
                                    makeSound()"}
