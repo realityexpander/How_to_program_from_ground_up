@@ -218,7 +218,7 @@
     ```
   - Interface Example (in pseudo-code similar to common COP languages):
     ```Text
-    // COP Pseudo-Code
+    // COP Pseudocode
       
     interface Document {     // <-- interfaces only define the "signature" of the methods it expects to be in the subclass.
        expects method view()  // this interface expects a method called "view", there is no implementation here.
@@ -312,72 +312,72 @@
       // COP pseudo-code
         
       open class Media {   // <-- the "base class" or "superclass", `open` means it can be subclasses (extended/inherited)
-        // Note: there is no visible constructor, so the default constructor will be used -> Media(), which takes no parameters and does not initialize any variables.
-        String name = ""  // <-- the "state" of the object is stored in the variables of the class
-          
-        open method play() { 
-          print "Playing: " + this.name 
-        } 
+         // Note: there is no visible constructor, so the default constructor will be used -> Media(), which takes no parameters and does not initialize any variables.
+         String name = ""  // <-- the "state" of the object is stored in the variables of the class
+           
+         open method play() { 
+            print "Playing: " + this.name 
+         } 
       }  
       
       open class MP3 extends Media {   // <-- the "subclass" or "derived class"; it `extends` (inherits) from the superclass (Media).
-          // NOTICE: No constructor is defined, so the default constructor in the superclass will be used -> Media()
+         // NOTICE: No constructor is defined, so the default constructor in the superclass will be used -> Media()
       
-          override method play() { 
-             print "Playing MP3: " + this.name 
-          } 
+         override method play() { 
+            print "Playing MP3: " + this.name 
+         } 
       }
       
       class Video extends Media { 
-          // NOTICE: No constructor is defined, so the default constructor in the superclass will be used -> Media()
-          
-          override method play() { 
-             print "Playing Video: " + this.name 
-          } 
+         // NOTICE: No constructor is defined, so the default constructor in the superclass will be used -> Media()
+         
+         override method play() { 
+            print "Playing Video: " + this.name 
+         } 
       }
       
       class ProtectedMP3 extends MP3 {  // note: "Concrete Class" MP3 must be declared as `open` in order to be subclassed
-          String password
-          Boolean authenticated = false
+         String password
+         Boolean authenticated = false
       
-          constructor ProtectedMP3(String name, String password) {  // <-- the constructor of this class, its called to initialize the object
-              super(name)  // <-- calls the constructor of the superclass (MP3)
-              this.password = password    // Sets the password for the password protected MP3
-          }
+         constructor ProtectedMP3(String name, String password) {  // <-- the constructor of this class, its called to initialize the object
+            super(name)  // <-- calls the constructor of the superclass (MP3)
+            this.password = password    // Sets the password for the password protected MP3
+         }
       
-          method authenticate(String password) {
-              if (this.password == password) {
-                  this.authenticated = true
-                  print "Authenticated!"
-              }
-          } 
-          override method play() {
-             if (this.authenticated == true) {
-                  print "Playing Protected MP3: " + this.name 
-             } else {
-                  print "Not Authenticated!"
-             }
-          } 
+         method authenticate(String password) {
+            if (this.password == password) {
+               this.authenticated = true
+               print "Authenticated!"
+            }
+         } 
+         override method play() {
+            if (this.authenticated == true) {
+               print "Playing Protected MP3: " + this.name 
+            } else {
+               print "Not Authenticated!"
+            }
+         } 
       }
       
       // Start of program
       method main() {
-          Media doc0        = new Media()  // Since the `Media` class is `open` and not `abstract`, an object can be created from it.
-          Media doc1        = new MP3()
-          Media doc2        = new Video()
-          ProtectedMP3 doc3 = new ProtectedMP3("MyProtectedMP3.mp3", "MySecretPassword123")  // note that the `ProtectedMP3` type is required to call the `authenticate` method
+         Media doc0        = new Media()  // Since the `Media` class is `open` and not `abstract`, an object can be created from it.
+         Media doc1        = new MP3()
+         Media doc2        = new Video()
+         ProtectedMP3 doc3 = new ProtectedMP3("MyProtectedMP3.mp3", "MySecretPassword123")  // note that the `ProtectedMP3` type is required to call the `authenticate` method
       
-          function playMedia(Media media) {  // Note that the parameter is of type `Media` and not `MP3` or `Video` or `ProtectedMP3`
-              media.play()
-          }
+         function playMedia(Media media) {  // Note that the parameter is of type `Media` and not `MP3` or `Video` or `ProtectedMP3`
+            media.play()
+         }
       
-          playMedia(doc0)            // <-- will print "Playing: MyMedia"
-          playMedia(doc)             // <-- will print "Playing MP3: MyMP3.mp3"
-          playMedia(doc2)            // <-- will print "Playing Video: MyVideo.mp4"
+         playMedia(doc0)            // <-- will print "Playing: MyMedia"
+         playMedia(doc)             // <-- will print "Playing MP3: MyMP3.mp3"
+         playMedia(doc2)            // <-- will print "Playing Video: MyVideo.mp4"
       
-          playMedia(doc3)            // <-- will print "Not Authenticated!"
-          doc3.authenticate("MySecretPassword123")  // <-- will print "Authenticated!"
-          playMedia(doc3)            // <-- will print "Playing Protected MP3: MyProtectedMP3.mp3"
+         playMedia(doc3)            // <-- will print "Not Authenticated!"
+         doc3.authenticate("MySecretPassword123")  // <-- will print "Authenticated!"
+         playMedia(doc3)            // <-- will print "Playing Protected MP3: MyProtectedMP3.mp3"
       }
       
       // Output:
@@ -433,26 +433,26 @@
     File <|-- Photo : extends
       
     class File["abstract class File"] {
-        String name  // ⬅︎ Abstract classes can have variables
-        method view(): Launch Basic Text Editor ("default" implementation)
-        method showName(): Print "File Name: " + this.name ("default" implementation")
+       String name  // ⬅︎ Abstract classes can have variables
+       method view(): Launch Basic Text Editor ("default" implementation)
+       method showName(): Print "File Name: " + this.name ("default" implementation")
     }
     <<abstract>> File 
       
     class Excel["class Excel extends File"] {
-        override String name // ⬅︎ Subclasses must declare abstract variables
-        override method view() Launch Excel Viewer
+       override String name // ⬅︎ Subclasses must declare abstract variables
+       override method view() Launch Excel Viewer
     }
     class Memo["class Memo extends File"] {
-        override String name // ⬅︎ Subclasses must declare abstract variables
-        String to  // ⬅︎ Subclasses can have additional variables
-        String from
-        String subject
-        override method view() Launch Memo Viewer
-        override method showName() Print "Memo from: " + this.from + ", to: " + this.to
+       override String name // ⬅︎ Subclasses must declare abstract variables
+       String to  // ⬅︎ Subclasses can have additional variables
+       String from
+       String subject
+       override method view() Launch Memo Viewer
+       override method showName() Print "Memo from: " + this.from + ", to: " + this.to
     }
     class Photo["class Photo extends File"] {
-        override method view() Launch Photo Viewer
+       override method view() Launch Photo Viewer
     }
     ```
   - Example for abstract classes in pseudo-code (similar to common COP languages):
@@ -460,56 +460,56 @@
      // COP pseudo-code
      
      abstract class File { 
-       abstract String name // <-- Abstract classes can have variables.
-     
-       File(String name) {  // <-- Abstract classes can have "default" constructors.
+        abstract String name // <-- Abstract classes can have variables.
+        
+        constructor File(String name) {  // <-- Abstract classes can have "default" constructors.
            this.name = name
-       }
-       abstract method view()  // Expects a method called "view" and has no default implementation.
-       abstract method showName() {  // Expects a method called "showName" and has a default implementation.
+        }
+        abstract method view()  // Expects a method called "view" and has no default implementation.
+        abstract method showName() {  // Expects a method called "showName" and has a default implementation.
            print "File Name: " + this.name // <-- The "default implementation" for any subclass that doesn't override the method.
-       } 
+        } 
      }  
      
      class Excel extends File {  // <-- Excel is a subclass of File.
-         override String name // <-- Subclasses must declare the abstract variables from superclass.
+        override String name // <-- Subclasses must declare the abstract variables from superclass.
     
-         override method view() { // <-- the implementation of the abstract class "view".
-            print "View Excel: " + this.name  
-         } 
+        override method view() { // <-- the implementation of the abstract class "view".
+           print "View Excel: " + this.name  
+        } 
      }
      
      class Memo extends File { // <-- Memo is a subclass of File.
-         override String name // <-- Subclasses must declare the abstract variables from superclass.
-         String to
-         String from
-         String subject
+        override String name // <-- Subclasses must declare the abstract variables from superclass.
+        String to
+        String from
+        String subject
     
-         constructor Memo(String to, String from, String subject) {  // <-- the custom constructor of this class, its called to 
-                                                                     //     initialize the variables of the object.
-             super("Memo to:" + to)  // <-- calls the constructor of the superclass (File)
-             this.to = to
-             this.from = from
-             this.subject = subject
-         }
+        constructor Memo(String to, String from, String subject) {  // <-- the custom constructor of this class, its called to 
+                                                                    //     initialize the variables of the object.
+           super("Memo to:" + to)  // <-- calls the constructor of the superclass (File)
+           this.to = to
+           this.from = from
+           this.subject = subject
+        }
        
-         override method view() {  // <-- the implementation of the abstract class "view".
-            super.showName(to)     // <-- Calls the "default implementation" of the abstract superclass.
-                                   // Note: Calls to the super class are not required, but can be used to call any 
-                                   // implementations of the superclass.
-          
-            print "View Memo: from= " + this.from + ", to= " + this.to + ", subject= " + this.subject 
-         }
-         override method showName() { // <-- overrides the "default implementation" of the abstract superclass.
-            print "Memo from: " + this.from + ", to: " + this.to
-         } 
+        override method view() {  // <-- the implementation of the abstract class "view".
+           super.showName(to)     // <-- Calls the "default implementation" of the abstract superclass.
+                                  // Note: Calls to the super class are not required, but can be used to call any 
+                                  // implementations of the superclass.
+         
+           print "View Memo: from= " + this.from + ", to= " + this.to + ", subject= " + this.subject 
+        }
+        override method showName() { // <-- overrides the "default implementation" of the abstract superclass.
+           print "Memo from: " + this.from + ", to: " + this.to
+        } 
      }
      
      class Photo extends File { // <-- Photo is a subclass of Document
          override String name // <-- Subclasses must declare the abstract variables from superclass.
          
          override method view() {  // <-- the implementation of the abstract class "view"
-              print "View Photo: " + this.name
+            print "View Photo: " + this.name
          } 
      }
      
@@ -522,7 +522,7 @@
          Memo file3 = new Memo(to="Chris", from="Bob", subject="Meeting")
      
          function viewFile(File file)  // Note that the parameter `doc` is of type `File` and not `Excel` or `Photo` or `Memo`.
-             file.view(name)
+            file.view(name)
          }
      
          viewFile(file1)  // <-- will call the "view" method of the Excel class
