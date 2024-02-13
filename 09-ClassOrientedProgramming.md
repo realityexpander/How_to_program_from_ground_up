@@ -40,7 +40,7 @@
         catAbstractAgeInt -- expects --> catAgeInt
         abstractMethodMakeSound -- expects --> catMakeSound
         catAgeInt -- implements --> catAbstractAgeInt
-        subgraph classCat["class Cat extend Animal"]
+        subgraph classCat["class Cat extends Animal"]
             catAgeInt["int age"]
             catMakeSound["function @C62F3842:
                         method makeSound() =
