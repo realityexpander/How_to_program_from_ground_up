@@ -37,7 +37,7 @@
                                        function @C62F3842
                                        in Class Cat"}
       end
-      abstractAgeInt -- ”expects” --> catClassAgeInt
+%%    abstractAgeInt -- ”expects” --> catClassAgeInt
 %%    abstractMakeSoundMethod -- “expects” --> catClassMakeSoundMethod:::Object
 %%    catClassAgeInt -- implements --> abstractAgeInt:::Abstract
 %%    subgraph classCat["class Cat extends Animal"]
