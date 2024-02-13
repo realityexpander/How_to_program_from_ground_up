@@ -637,7 +637,7 @@
          (ie: method “makeSound()” is called on object Cog) 
          Does it _Meow_ or _Bark_?`"))) 
       ```
-  - Example of attempt to use "Multiple Inheritance" in C++:
+  - Example of an attempt to use "Multiple Inheritance" in C++:
     ```C++
     class Animal {
        public:
