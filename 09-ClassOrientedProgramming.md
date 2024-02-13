@@ -40,12 +40,12 @@
       abstractAgeInt -- ”expects” --> catClassAgeInt
       abstractMakeSoundMethod -- “expects” --> catClassMakeSoundMethod:::Object
       catClassAgeInt -- implements --> abstractAgeInt:::Abstract
-      subgraph classCat["class Cat extends Animal"]
-          catClassAgeInt["int age"]
-          catClassMakeSoundMethod["function @C62F3842:  
-                      method makeSound() =
-                      { print Meow }"]
-      end
+%%    subgraph classCat["class Cat extends Animal"]
+%%        catClassAgeInt["int age"]
+%%        catClassMakeSoundMethod["function @C62F3842:  
+%%                    method makeSound() =
+%%                    { print Meow }"]
+%%    end
 %%      
 %%      classCat -- creates object --> catObject:::Object
 %%      classCat -- extends --> abstractAnimal:::Abstract
