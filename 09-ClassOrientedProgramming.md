@@ -37,11 +37,11 @@
                                        function @C62F3842
                                        in Class Cat"}
       end
-      subgraph classCat["class Cat extends Animal"]
+      subgraph classCat["class “Cat” extends Animal"]
           catClassAgeInt["int age"]
-          catClassMakeSoundMethod["function @C62F3842:  
+          catClassMakeSoundMethod{"function @C62F3842:  
                       method makeSound() =
-                      { print Meow }"]
+                      { print Meow }"}
       end
       abstractAgeInt -- expects --> catClassAgeInt
       abstractMakeSoundMethod -- expects --> catClassMakeSoundMethod:::Object
@@ -52,8 +52,8 @@
       catClassMakeSoundMethod -- implements --> abstractMakeSoundMethod:::Abstract
       subgraph abstractAnimal["abstract class Animal"]
         abstractAgeInt["abstract int age"]
-        abstractMakeSoundMethod["abstract method 
-                                 makeSound()"]
+        abstractMakeSoundMethod{"abstract method 
+                                 makeSound()"}
       end
       
       classDef Abstract fill:#222, stroke:#0F0, stroke-width:1px, color:#fff, stroke-dasharray: 5 5
