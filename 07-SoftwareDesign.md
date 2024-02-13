@@ -1,5 +1,7 @@
 # Software Design
 
+  - ### BIG IDEA — How do we talk about these things with other people efficiently and effectively?
+
 ## Algorithms - How are we gonna solve this?
   - ### BiG IDEA - Let's give names to the clever ways we humans have found to solve problems.
 
@@ -24,7 +26,7 @@
 Sorting Algorithms Explained Visually
 
 ## Time Complexity - How long is this gonna take?
-  - ### BiG IDEA - Let's have a standard way to communicate about how long an algorithm or program will take to execute.
+  - ### BiG IDEA — Let's have a standard way to communicate about how long an algorithm or program will take to execute.
   
   - The "time complexity" of a program is a measure of how the "running time" of the program grows as the "input size"
     of the program grows.
@@ -126,11 +128,13 @@ Sorting Algorithms Explained Visually
       ```
         > Live Code Example: [Time Complexity Example](src/main/kotlin/timeComplexityExample.kt)
 
-## Communicating Software Designs - How do we talk about these things with other people? 
+## Communicating Software Designs 
+  - ### Big IDEA — How can we use diagrams and drawings to communicate about software designs? 
+  
   - ### The Line, The Box and The Layers
-    - At the time when structured programming took off, the concept of "Software Design" was introduced
-      as people created more complex software systems with more complex requirements and larger teams of people working
-      together to create the software.
+    - At the time when structured programming became popular, the concept of "Software Design" was developed to help
+      people create more complex software systems with more complex requirements and coordinating work with larger 
+      teams of people working together in the same codebase.
     > - Software Design: Ep2 : 2nd Law of Software Design
     >     - https://www.youtube.com/watch?v=fh1a74WWvJQ
     > - Software Design: Ep3 : Conceptual Layers

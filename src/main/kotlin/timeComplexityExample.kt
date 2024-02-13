@@ -1,4 +1,4 @@
-fun randomInt(max: Int) = (0..max).random()
+// Program to demonstrate time complexity of various algorithms.
 
 // Algorithm: Binary Search
 // Performs a binary search on a sorted array - O(log n)
@@ -33,12 +33,14 @@ fun Array<Int>.quickSort(): Array<Int> {
 	return less + equal + greater
 }
 
+fun randomInt(max: Int) = (0..max).random()
+
 fun main() {
-	val x = Array(2_000) { randomInt(100) } // <-- O(n) - Fill Array x with 100 random integers
-	var result = 0
+	val x = Array(2_000) { randomInt(100) } // <-- O(n) - Fill Array `x` with 2000 random integers
+	var result: Long = 0
 
 	var start = System.currentTimeMillis()
-	result = x[500] // <-- O(1)
+	result = x[500].toLong() // <-- O(1)
 	println("Constant Time Lookup O(1) = Result: $result, Time: ${System.currentTimeMillis() - start}ms")
 
 
