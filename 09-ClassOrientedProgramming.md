@@ -43,7 +43,7 @@
                       method makeSound() =
                       { print Meow }"]
       end
-      abstractAgeInt -- ”expects” --> catClassAgeInt
+      abstractAgeInt -- expects --> catClassAgeInt
 %%      abstractMakeSoundMethod -- “expects” --> catClassMakeSoundMethod:::Object
 %%      catClassAgeInt -- implements --> abstractAgeInt:::Abstract
 %%      
