@@ -24,7 +24,8 @@
     - The opcode values are completely dependent on the specific CPU, and are usually defined by the manufacturer of the CPU.
     - These opcodes are usually represented in hexadecimal (base 16) to make them easier to read and write (as opposed to binary, base 2)
     - The opcodes are the most primitive logical operations that the CPU can perform.
-    - The opcodes are usually followed by "operands" which are the "arguments" to the operation.
+    - The opcodes are usually followed by "operands" which are the "arguments" or "parameters" to the operation.
+      - ie: the source and destination of the operation, or a value to be used in the operation.
   - The Machine hex value opcodes are unwieldy for humans to remember, so we use "mnemonics" to represent them.
     - Mnemonics are simply human-readable names for the opcodes, like `LOAD`, `STORE`, `ADD`, `COMPARE`, and `JUMP` used to
       represent the opcodes values.
