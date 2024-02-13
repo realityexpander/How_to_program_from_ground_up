@@ -76,9 +76,9 @@
 - [Back-to-Object Oriented Programming](10-BackToObjectOrientedProgramming.md)
   - [Banned Patterns in BOOP](banned-patterns-in-boop)
   - [Why is Class-Oriented Programming (COP)](10-BackToObjectOrientedProgramming.md#why-is-cop-bad)
-  - [Back-to Object Oriented Programming Example](10-BackToObjectOrientedProgramming.md#boop-example
+  - [Back-to Object Oriented Programming Example](10-BackToObjectOrientedProgramming.md#boop-example)
 - [Functional Programming](11-FunctionalProgramming.md)
-  -  
+  - 
 
 ## Introduction
   - How to guide for budding software engineers who need a primer overview of software development concepts 

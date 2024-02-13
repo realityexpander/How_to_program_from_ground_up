@@ -127,14 +127,16 @@
     - The "program counter" is updated by the "clock" at the end of each "cycle", or when a "jump" instruction is executed
 
   - ### Common Machine Language Opcodes (actual opcode is for Motorola 6502 CPU) <a name="common-opcodes"></a>
-    > - `Hex: Opcode Mnemonic`
-    > - `0xA9: LDA` Load a value from main memory into a register
-    > - `0xA2: MOV` Move a value from one register to another
-    > - `0x8D: STA` Store a value from a register into main memory
-    > - `0x4C: JMP` Start executing next instruction at a different location in main memory by updating the Program Counter with a new value
-    > - `0x6D: ADC` Add the values in two registers and store the result in a third register and update the "carry flag" register if there is a "carry"
-    > - `0xCD: CMP` Compare the values in two registers and update the "flags" register with the result
-    > - `0xD0: BNE` If the "flags" register is not zero, start executing at a different location in main memory ie: "conditional branching"
+    | Hex Opcode | Mnemonic | Description                                                                                                                         |
+    |------------|----------|-------------------------------------------------------------------------------------------------------------------------------------|
+    | 0xA9       | LDA      | Load a value from main memory into a register                                                                                       |
+    | 0xA2       | MOV      | Move a value from one register to another                                                                                           |
+    | 0x8D       | STA      | Store a value from a register into main memory                                                                                      |
+    | 0x4C       | JMP      | Start executing next instruction at a different location in main memory by updating the Program Counter with a new value            |
+    | 0x6D       | ADC      | Add the values in two registers and store the result in a third register and update the "carry flag" register if there is a "carry" |
+    | 0xCD       | CMP      | Compare the values in two registers and update the "flags" register with the result                                                 |
+    | 0xD0       | BNE      | If the "flags" register is not zero, start executing at a different location in main memory ie: "conditional branching"             |
+
 
   - ### Fetch-Decode-Execute Cycle of the CPU — "The Dumb & Quick Work of the Machine" <a name="fetch-decode-execute"></a>
     - Fetch means to get the next opcode instruction from main memory address in the PC and puts the opcode into

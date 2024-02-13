@@ -4,10 +4,12 @@
   - Alan Kay Style BOOP (Back-to-Object Oriented Programming)
       - Based on the idea of "messaging" between objects, VERY poorly named "object oriented programming", admitted 
         by Alan Kay himself, the inventor of the term.
-  
+
       > What's Wrong With Object-Oriented Programming? Yegor Bugayenko
       >   - https://www.youtube.com/watch?v=K_QEOtYVQ7A
       
+      [<img src="assets/alan_kay.png" width="350"/>](assets/alan_kay.png)
+ 
       > Alan Kay at OOPSLA 1997 - The computer revolution hasn't happened yet
       >   - https://www.youtube.com/watch?v=oKg1hTOQXoY
       >> ### Alan Kay:
@@ -62,11 +64,14 @@
   - Amazingly, the dreaded Singleton Pattern _is allowed_ to manage global state in BOOP.
   
 ## Why is Class-Oriented Programming (COP) Bad? <a name="why-is-cop-bad"></a>
-    > The Pain of OOP, Lecture #3: Getters and naked data
-    > - https://www.youtube.com/watch?v=2YyVmIQQ23w
+  - The main problem with COP is that it's common practices lead to fragile code that was difficult to maintain and
+    understand, for similar reasons as to why "Spaghetti Code" is difficult to maintain and understand.
+  
+  > The Pain of OOP, Lecture #3: Getters and naked data
+  > - https://www.youtube.com/watch?v=2YyVmIQQ23w
 
-    > The Pain of OOP, Lecture #5: -ER Suffix is Evil
-    > - https://www.youtube.com/watch?v=6GMiosTLUTc 
+  > The Pain of OOP, Lecture #5: -ER Suffix is Evil
+  > - https://www.youtube.com/watch?v=6GMiosTLUTc 
   
   - Example of BOOP in Kotlin:
   
