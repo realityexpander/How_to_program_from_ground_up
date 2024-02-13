@@ -30,10 +30,10 @@
     
         catMakeSoundFunctionPointer -- calls --> catMakeSound
         subgraph catObject["[object instance Cat@19FCA68D]"]
-            catAgeData["`age: 3`"] 
+            catAgeData["age: 3"] 
             catMakeSoundFunctionPointer["method makeSound(): 
-                                           calls 
-                                           function @C62F3842"]
+                                               calls 
+                                         function @C62F3842"]
         end
         catAgeData -- stores value of --> catAgeInt
         
@@ -52,8 +52,8 @@
         catMakeSound -- implements --> abstractMethodMakeSound
         subgraph abstractAnimal["abstract class Animal"]
           catAbstractAgeInt["abstract int age"]
-          abstractMethodMakeSound("`abstract 
-                                    method makeSound()`")
+          abstractMethodMakeSound("abstract 
+                                    method makeSound()")
         end
     
          style abstractAnimal fill:#03A, stroke:#f66, stroke-width:2px, color:#fff, stroke-dasharray: 5 5
