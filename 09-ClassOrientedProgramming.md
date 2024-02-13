@@ -677,11 +677,11 @@
     
      ```
   - In C++, calling Cog's `makeSound()` method will print `Meow`, _BUT_ in Python, calling
-    Cog's `makeSound()` will print `Bark`!
+    `Cog`'s `makeSound()` will print `Bark`!
   - This behavior is _completely arbitrary_ and up to the designers of the language to decide which
     method will be called, and it's _not_ consistent across different languages!
   - It's also up to you to remember these kinds of details, as you are likely to be working in multiple
-    languages in the same day, and it's quite easy to forget which language you are working in which lead to weird bugs.
+    languages in the same day. Furthermore, it's quite easy to forget which language you are working in which lead to weird bugs.
   - UGH!
   
   > Java's language Designers Rejected Multiple Inheritance - Here's Why
@@ -702,7 +702,7 @@
   - Many programmers accepted these patterns as some kind of gospel, and they were often used to justify the
     use of inheritance in places where it was not appropriate, as well as other language features.
   - For example,"The "Gang of Four" book is the most famous book on the subject, and it is often referred to as the "Bible."
-  - Although some of the ideas in the book are good, many of the ideas are just hacks to fit the "procedural
+  - Although some ideas in the book are good, many of the ideas are just generally-accepted hacks to fit the "procedural
     approach" into the "COP" paradigm.
   
   - ### Many of the problems in COP could have been avoided by exploring what the originator of the term "Object Oriented", Alan Kay, originally meant by the term "Object Oriented."
