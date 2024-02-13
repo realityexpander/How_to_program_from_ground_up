@@ -66,7 +66,7 @@ Sorting Algorithms Explained Visually
           var low = 0
           var high = size - 1
           while (low <= high) {
-              val mid = (low + high) / 2
+              val mid = (low + high) / 2  // search 1/2 of the array each loop
               val midVal = this[mid]
               when {
                   midVal < value -> low = mid + 1
@@ -79,9 +79,9 @@ Sorting Algorithms Explained Visually
       }
       
       // Algorithm: Quick Sort
+      // Perform recursive quicksort - O(n log n)
+      // Returns a new sorted array.
       fun Array<Int>.quickSort(): Array<Int> {
-          // Perform recursive quicksort - O(n log n)
-          // Returns a new sorted array.
           if (size < 2) return this
           val pivot = this[randomInt(size - 1)]
           
@@ -94,16 +94,16 @@ Sorting Algorithms Explained Visually
       
     
       fun main() {
-         val x = Array(100) { randomInt(100) } // <-- O(n) - Fill Array x with 100 random integers
+         val x: Array<Int> = Array(100) { randomInt(100) } // <-- O(n) - Fill Array x with 100 random integers
          
-         val a = x[50] // <-- O(1)
+         val a: Int = x[50] // <-- O(1) - Simple Lookup
          
-         for (i in 0 until x.size) { // <-- O(n)
+         for (i in 0 until x.size) { // <-- O(n) - Loop over items 1 time
              println(x[i])
          }
          
-         for (i in 0 until x.size) { // <-- O(n)
-             for (j in 0 until x.size) { // <-- O(n^2)
+         for (i in 0 until x.size) { // <-- O(n) 
+             for (j in 0 until x.size) { // <-- O(n^2) - Double Loop over items (squared)
                  println(x[i] + x[j])
              }
          }
@@ -111,14 +111,14 @@ Sorting Algorithms Explained Visually
          // Notice this one will take MUCH, MUCH longer than the previous ones.
          for (i in 0 until x.size) { // <-- O(n)
              for (j in 0 until x.size) { // <-- O(n^2)
-                 for (k in 0 until x.size) { // <-- O(n^3)
+                 for (k in 0 until x.size) { // <-- O(n^3) - Triple Loop over items (cubed)
                      println(x[i] + x[j] + x[k])
                  }
              }
          }
          
-         val sorted = x.quickSort() // <-- O(n log n)
-         val y = sorted.binarySearch(50) // <-- O(log n)
+         val sorted: Array<Int> = x.quickSort() // <-- O(n log n) - Fastest known sorting algorithm for general case.
+         val y = sorted.binarySearch(50) // <-- O(log n) - Searches a sorted array for a value, halving the search space each loop.
       }
       
       // << NO OUTPUT - Just code illustrating the time complexity of the operations >> 
