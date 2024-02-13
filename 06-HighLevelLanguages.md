@@ -1,4 +1,4 @@
-# High-Level Languages
+# High-Level Languages (1957-Present) <a name="high-level-languages"></a>
   - ### BIG IDEA - English-like commands are easier for people to read and understand than cryptic assembly language.
   
   - High-level meaning more friendly to humans to work with, not necessarily more powerful or faster for the 
@@ -17,7 +17,7 @@
     computer the exact set of steps to perform to solve a problem. There is another style of programming called
     "declarative" which we shall discuss later.
 
-# Procedural Programming Style (1957-Present)
+# Procedural Programming Style (1957-Present) <a name="procedural-programming"></a>
   - ### BIG IDEA - Using `GOTOs` to jump around the program was an unscalable idea leading to unmaintainable code! We need to a better way!
   
   - Procedural code is executed top to bottom, one line at a time. 
@@ -33,7 +33,7 @@
     >   - https://www.calormen.com/jsbasic/
   - Some examples of Procedural languages are "Fortran" and "BASIC" and "COBOL."
 
-  - ## Example of the Problem with Abusing the `GOTO` Command in Procedural Programming Style BASIC 
+  - ## Example of the Problem with Abusing the `GOTO` Command in Procedural Programming Style BASIC  <a name="abusing-goto"></a>
       ```Text
       5 REM PROGRAM TO ADD 2 NUMBERS, PRINT RESULT <-- "REM" is a "remark" or "comment"
       10 LET X = 10   <-- "LET" is a "statement" that assigns a value to a variable
@@ -61,7 +61,7 @@
       ```
       - [Click for source code to copy and paste into the BASIC playground: `proceduralWithGoto.bas`](assets/proceduralWithGoto.bas)
 
-  - ## The Painful Push for Subroutines & Some Structure
+  - ## Solution: The Painful Push for Subroutines & Some Structure <a name="solution-subroutines"></a>
     - ### BIG IDEA - Reusable functions and procedures to avoid "spaghetti code" and enable working on teams. 
     
     - Programmers were eventually forced into using "subroutines" to deal with extreme overuse of `JUMP` and `GOTO`
@@ -99,7 +99,7 @@
       ```
       - [Click for source code to copy and paste into the BASIC playground: `proceduralWithGosub.bas`](assets/proceduralWithGosub.bas)
   
-  - ## Problem: Naive Solutions to Common Programmer Problems Lead to for High-Level Language Features
+  - ## Problem: Naive Solutions to Common Programmer Problems Lead to for High-Level Language Features <a name="naive-solutions"></a>
     - One problem with the low-level languages is that every programmer was left to their own creativity in how to
       structure their code, and this lead to a lot of "reinventing the wheel" and strange solutions that were hard to
       understand and maintain.
@@ -161,7 +161,7 @@
       ```
     - [Click for source code to copy and paste into the BASIC playground: `proceduralUnrolledLoops.bas`](assets/proceduralUnrolledLoops.bas)
 
-  - ## Problem: Imperative "Looping" Style Leftover From Assembly Language
+  - ## Problem: Imperative "Looping" Style Leftover From Assembly Language <a name="problem-imperative-looping"></a>
     - An example of common way of creating loops was to use `GOTO` and variables as indexes (also called "counters" or "iterators" or "loop variables")
     - In this case, its easy to see that the variable "A" is being used as an index to control the loop 
       that repeats the code between line 20 and 50, 10 times.
@@ -196,8 +196,8 @@
       ```
     - [Click for source code to copy and paste into the BASIC playground: `proceduralProgrammerMadeLoops.bas`](assets/proceduralProgrammerMadeLoops.bas)
 
-  - ## Solution: Use High-Level Language Commands Such as `FOR` to Create a Loop instead of `GOTO` and `IF`
-    ### BIG IDEA - We can standardize common use-cases (like looping) into the language to reduce programming time, communicate intent of code to other people and minimize errors.
+  - ## Solution: Use High-Level Language Commands Like `FOR` to Create a Loop instead of `GOTO` and `IF` <a name="solution-declaraitive-for-loop"></a>
+    - ### BIG IDEA - We can standardize common use-cases (like looping) into the language to reduce programming time, communicate intent of code to other people and minimize errors.
     
     - The `FOR` "loop" command was introduced to replace the programmer-implemented `GOTO` looping 
       implementations, as an attempt to make procedural code more structured and readable.

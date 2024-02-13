@@ -31,26 +31,31 @@
       represent the opcodes values.
     - These mnemonics are translated into the binary opcodes by a compiler or assembler program.
 
-## Representing Values in Memory
+## Representation of Data in Computer Memory <a name="representing-values-in-memory"></a>
     
-  - ### Binary Counting
+  - ### Binary Counting <a name="binary-counting"></a>
     - ### BIG IDEA - If we can represent numbers in binary, we can then perform logical operations to build complex arithmetic operations.
  
       [<img src="assets/8-bit-counting-2.png" width="450">](assets/8-bit-counting-2.png)
     > Learn how computers add numbers and build a 4 bit adder circuit
     > https://www.youtube.com/watch?v=wvJc9CZcvBc
 
-  - ### Hexadecimal Counting
+
+  - ### 8 bits are called a "byte" and can represent 256 different values (0-255)
+      - A byte is the smallest unit of memory that can be addressed by that particlar CPU, in all my examples its 8 bits.
+    > They call it a "byte" because its a play on the word "bite" and it's the smallest amount of memory that
+    > can be "eaten" by the CPU (HAR HAR HARDY HAR Computer people are soooooo funnnnnny!)
+    >
+    > My conspiracy theory of the origin of Pac-Man...
+    >
+    >  [<img src="assets/pacman_bytes.png" width="150">](./assets/pacman_bytes.png) ⬅  ︎🅿🅐🅒-🅼🅐🅝 eating 1 byte.
+
+  - ### Hexadecimal Counting <a name="hexadecimal-counting"></a>
     - ### BIG IDEA - Hexadecimal is a compact way to represent binary values in a way that is easier for humans to read and write.
     
       [<img src="assets/hexadecimal.png" width="350">](assets/hexadecimal.png)
 
-  - 8 bits are called a "byte" and can represent 256 different values (0-255)
-      - A byte is the smallest unit of memory that can be addressed by the CPU
-    > They call it a "byte" because its a play on the word "bite" and it's the smallest amount of memory that
-    can be "eaten" by the CPU (HAR HAR HARDY HAR Computer people are soooooo funnnnnny!)
-
-  - ### Standardized ASCII Representation of Alpha-numeric Characters
+  - ### Standardized ASCII Representation of Alpha-numeric Characters <a name="standardized-ascii"></a>
       - ### BIG IDEA - Standardized way to represent roman characters and numbers in memory.
       
       - ASCII is a 1 byte (8 bit) representation of the most common letters and symbols used in English
@@ -70,7 +75,7 @@
 
         [<img src="assets/ascii_hexadecimal.png" width="450">](assets/ascii_hexadecimal.png)
 
-# The Minimum Components of Any Computer System
+# The Minimum Components of Any Computer System <a name="minimum-components"></a>
   
   - Computer Block Diagram
     > [<img src="assets/Computer_block_diagram.png" width="450">](assets/Computer_block_diagram.png)
@@ -82,7 +87,7 @@
     > - CLOCK = Clock Circuit.
     > - I/O BUS = Input/Output Bus.
 
-  - ### The MPU (Micro-Processor Unit)
+  - ### The CPU or MPU (Central-Processing Unit ot Micro-Processor Unit) <a name="the cpu-mpu"></a>
     - The Micro-Procession Unit is the "brain" of the computer
     - Also called the CPU - Central Processing Unit
 
@@ -97,8 +102,8 @@
     >  - X & Y = Registers — Used to store the input operands for output to Accumulator Register (ACC.)
     >    via the ALU (Arithmetic Logic Unit.)
 
-  - ### Clock — "The heart beat of the CPU to keep it all in sync"
-    - Clock Circuit - Basically a emits a short pulse of electricity at a regular interval
+  - ### Clock — "The heart beat of the CPU to keep it all in sync" <a name="clock"></a>
+    - Clock Circuit — Basically a emits a short pulse of electricity at a regular interval
         - a "tick" of the clock, like flashing a light to the beat.
         - Often uses a quartz crystal (XTAL in schematic) and the piezoelectric effect to keep a steady beat, like a watch.
         - Sometimes the common 555-timer IC chip is used to generate a clock signal.
@@ -112,7 +117,7 @@
     - The cycle of the clock is not the same as the cycle of the CPU, but the CPU normally does one operation per cycle
       but some operations may take more than one clock cycle to complete.
 
-  - ### Program Counter (PC) — "Where in memory is the current instruction being executed?"
+  - ### Program Counter (PC) — "Where in memory is the current instruction being executed?" <a name="program-counter"></a>
     - The "program counter" (PC) is a special register that keeps track of the current memory location of the
       current instruction that the CPU will execute/is executing
     - All instructions are processed one at a time per CPU, and never more than 1 instruction at a time.
@@ -121,7 +126,7 @@
         >  - https://www.youtube.com/watch?v=tNwU7pK_3tk
     - The "program counter" is updated by the "clock" at the end of each "cycle", or when a "jump" instruction is executed
 
-  - ### Common Machine Code Opcodes (actual opcode is for Motorola 6502 CPU)
+  - ### Common Machine Language Opcodes (actual opcode is for Motorola 6502 CPU) <a name="common-opcodes"></a>
     > - `Hex: Opcode Mnemonic`
     > - `0xA9: LDA` Load a value from main memory into a register
     > - `0xA2: MOV` Move a value from one register to another
@@ -131,7 +136,7 @@
     > - `0xCD: CMP` Compare the values in two registers and update the "flags" register with the result
     > - `0xD0: BNE` If the "flags" register is not zero, start executing at a different location in main memory ie: "conditional branching"
 
-  - ### Fetch-Decode-Execute Cycle of the CPU — "The Dumb & Quick Work of the Machine"
+  - ### Fetch-Decode-Execute Cycle of the CPU — "The Dumb & Quick Work of the Machine" <a name="fetch-decode-execute"></a>
     - Fetch means to get the next opcode instruction from main memory address in the PC and puts the opcode into
      the "Instruction register (IR)" on the CPU
     - Decode means to figure out what the opcode operation is and what the operands are (if any)
@@ -150,7 +155,7 @@
        > 8-bit CPU control logic: Part 1
        >  - https://www.youtube.com/watch?v=dXdoim96v5A
 
-  - ### Registers — "The Tiny Superfast Memory Nearest to the CPU & Keeps the State of the CPU"
+  - ### Registers — "The Tiny Superfast Memory Nearest to the CPU & Keeps the State of the CPU" <a name="registers"></a>
     - Registers are a small amount of super fast memory that is built into the CPU
     - Registers hold the current instruction (operator and operands) being executed in the "Instruction Register" (IR)
     - Registers hold address pointers to the current location in main memory in the "Program Counter" (PC) and
@@ -165,7 +170,7 @@
         - if the result of the last operation was negative, then the "negative" flag is set to 1; otherwise it's set to 0
         - if the result of the last operation had to "carry" a bit, then the "carry" flag is set to 1; otherwise it's set to 0
 
-  - ### Arithmetic Logic Unit (ALU) — "The Calculator of the CPU"
+  - ### Arithmetic Logic Unit (ALU) — "The Calculator of the CPU" <a name="alu"></a>
    - The ALU is the part of the CPU that performs the basic arithmetic and logical operations
    - The ALU is used to perform the "Add" and "Subtract" operations
      - Stores the result of the operation in the "Accumulator" register
@@ -179,13 +184,13 @@
      > Learn how computers add numbers and build a 4 bit adder circuit
      >  - https://www.youtube.com/watch?v=wvJc9CZcvBc&list=WL
 
-  - ### Control Unit
+  - ### Control Unit — "The Traffic Light of the CPU" <a name="control-unit"></a>
     - The "Control Unit" is the part of the CPU that controls the "fetch-decode-execute" cycle
     - It synchronizes the operations of the CPU with the RAM, ROM, and other parts of the computer
     - It keeps track of the internal cpu-cycles for each instruction (different than clock cycles, as some operations may take more than one clock cycle to complete)
     - It updates the "program counter" with the next instruction to be executed, or with a different location in memory if a "jump" instruction is executed.
 
-  - ### Example Machine Language Program (Motorola 6502 CPU)
+  - ### Example Machine Language Program (Motorola 6502 CPU) <a name="example-machine-language-program"></a>
     ```
     Add 2 numbers and store the result in memory)
      
@@ -206,7 +211,7 @@
      
     // The result of the addition of 5 and 7 is 12, which is 0x0C in hexadecimal
     ```
-# Assembly Language - The First Human-readable Language for Programming Computers
+# Assembly Language - The First Human-readable Language for Programming Computers <a name="assembly-language"></a>
   - ### BIG IDEA — Make the machine code easier for humans to read and write by using "mnemonics" to represent the opcodes instead of the actual hex values.
   
   - Assembly Language is a "human-readable" mnemonic representation of the "machine code" that the CPU can executes directly.
@@ -224,7 +229,7 @@
     > How a CPU Works
     >  - https://www.youtube.com/watch?v=cNN_tTXABUA
   
-    - ### Common Assembly Language Operations (Mnemonics for Opcodes)
+    - ### Common Assembly Language Operations (Mnemonics representing Opcodes) <a name="common-assembly-operations"></a>
       >
       > - #### Jump  `JMP`
       >   - The "goto" statement of machine code
@@ -271,11 +276,11 @@
       >       - `JL` (Jump if the register flag "Less" is set.)
       >   - Also known as "branching" or "a conditional" or "loop."
 
-  - ## Variables
+  - ## Variables <a name="variables"></a>
     - ### BIG IDEA — "Variables" are just named values for memory locations used to store data, and easier for humans to remember and use.
     
     - "Variables" are just named values for memory locations used to store data
-        - Often called "fields," "attributes," or "properties."
+        - Often called "fields," "attributes," "labels," or "properties."
     - The data is a representation of something else, like a number or a letter, or maybe a color, or an address
       for another location in memory.
     - Variables are a convenient way to give a name to a location in memory
@@ -284,7 +289,7 @@
     - The naming is solely for the convenience of the human programmer, as the machine doesn't care what the variable is
       called or that it even has a name. This is just a way to reduce the complexity of the program for the people.
 
-  - ## Subroutines
+  - ## Subroutines <a name="subroutines"></a>
     ### BIG IDEA — Subroutines is an easier way to organize and reuse code, instead of a long list of instructions or `JMP` spaghetti code.
     
     - The `CALL` statement changes the program counter (PC) to point to a different location in memory.

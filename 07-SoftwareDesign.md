@@ -2,7 +2,7 @@
 
   - ### BIG IDEA — How do we talk about these things with other people efficiently and effectively?
 
-## Algorithms - How are we gonna solve this?
+## Algorithms - How are we gonna solve this? <a name="algorithms"></a>
   - ### BiG IDEA - Let's give names to the clever ways we humans have found to solve problems.
 
   - Algorithms are just a set of instructions that are used to solve a problem or perform a task, all based on the
@@ -20,12 +20,9 @@
     >   - https://www.youtube.com/watch?v=kPRA0W1kECg
     
     > Sorting Algorithms Explained Visually
-    >   - https://www.youtube.com/watch?v=RfXt_qHDEPw  
+    >   - https://www.youtube.com/watch?v=RfXt_qHDEPw
 
-
-Sorting Algorithms Explained Visually
-
-## Time Complexity - How long is this gonna take?
+## Time Complexity - How long is this gonna take? <a name="time-complexity"></a>
   - ### BiG IDEA — Let's have a standard way to communicate about how long an algorithm or program will take to execute.
   
   - The "time complexity" of a program is a measure of how the "running time" of the program grows as the "input size"
@@ -47,7 +44,7 @@ Sorting Algorithms Explained Visually
         > - Learn Big O notation in 6 minutes 📈
         >   - https://www.youtube.com/watch?v=XMUe3zFhM5c
   
-  - ### Shorthand:
+  - ### Shorthand Guide & Sample Code <a name="time-complexity-example"></a>
     - If you are doing a simple lookup in an array, it's O(1) because the time it takes to find the value in the array
       does not change as the size of the array grows.
     - If you are looping over items, it's O(n) because the time it takes to loop over the items grows as the size of the
@@ -128,7 +125,7 @@ Sorting Algorithms Explained Visually
       ```
         > Live Code Example: [Time Complexity Example](src/main/kotlin/timeComplexityExample.kt)
 
-## Communicating Software Designs 
+## Communicating Software Designs Visually <a name="communicating-software-designs"></a>
   - ### Big IDEA — How can we use diagrams and drawings to communicate about software designs? 
   
   - ### The Line, The Box and The Layers
