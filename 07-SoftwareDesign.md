@@ -11,11 +11,12 @@
 
 ## Time Complexity - How long is this gonna take?
   - ### BiG IDEA - Let's have a standard way to communicate about how long an algorithm will take to run
+  
   - The "time complexity" of a program is a measure of how the "running time" of the program grows as the "input size"
     of the program grows.
   - Also known as "Algorithmic Complexity" or "Big O notation"
   - The "time complexity" is usually expressed as a "big O" notation, which is a way to express the "upper bound" of
-    the "running time" of the program.
+    the "running time" of the program, ie: the worst case scenario.
   - The "big O" notation is a way to express the "upper bound" or maximum expected of the worst-case running time of a program.
   - 6 Common Types of Time Complexity:
       - O(1) - "Constant Time" - The running time of the program does not change as the input size of the program grows.
@@ -44,9 +45,10 @@
     - ```Kotlin
       fun randomInt(max: Int) = (0..max).random()
       
+      // Algorithm: Binary Search
+      // Perform binary search a sorted array - O(log n)
+      // Returns the index of the value in the array, or -1 if the value is not found.
       fun Array<Int>.binarySearch(value: Int): Int {
-          // Perform binary search a sorted array - O(log n)
-          // Returns the index of the value in the array, or -1 if the value is not found.
           var low = 0
           var high = size - 1
           while (low <= high) {
@@ -62,6 +64,7 @@
           return -1 // -1 = value not found
       }
       
+      // Algorithm: Quick Sort
       fun Array<Int>.quickSort(): Array<Int> {
           // Perform recursive quicksort - O(n log n)
           // Returns a new sorted array.
@@ -79,6 +82,7 @@
          val x = Array(100) { randomInt(100) } // <-- O(n) - Fill Array x with 100 random integers
          
          val a = x[50] // <-- O(1)
+         
          for (i in 0 until x.size) { // <-- O(n)
              println(x[i])
          }

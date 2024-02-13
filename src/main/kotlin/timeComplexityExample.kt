@@ -1,8 +1,9 @@
 fun randomInt(max: Int) = (0..max).random()
 
+// Algorithm: Binary Search
+// Performs a binary search on a sorted array - O(log n)
+// Returns the index of the value in the array, or -1 if the value is not found.
 fun Array<Int>.binarySearch(value: Int): Int {
-	// Perform binary search a sorted array - O(log n)
-	// Returns the index of the value in the array, or -1 if the value is not found.
 	var low = 0
 	var high = size - 1
 	while (low <= high) {
@@ -18,9 +19,10 @@ fun Array<Int>.binarySearch(value: Int): Int {
 	return -1 // -1 = value not found
 }
 
+// Algorithm: Quick Sort
+// Perform recursive quicksort - O(n log n)
+// Returns a new sorted array.
 fun Array<Int>.quickSort(): Array<Int> {
-	// Perform recursive quicksort - O(n log n)
-	// Returns a new sorted array.
 	if (size < 2) return this
 	val pivot = this[randomInt(size - 1)]
 
