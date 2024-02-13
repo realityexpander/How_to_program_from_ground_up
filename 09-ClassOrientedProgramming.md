@@ -61,12 +61,12 @@
       ```mermaid
          flowchart TB
          
-         subgraph catObject["Object “Cat” @BFFC882A"]
+         subgraph catObject["Object “Cat” 🐈 @BFFC882A"]
               catObjectAgeInt["`int age = 3`"] 
               catObjectMakeSoundMethodFunctionPointer{"`method makeSound(): 
                                                    { println(“Meow”) }`"}
          end
-         subgraph catClass["Template class “Cat”"]
+         subgraph catClass["Template class “Cat” 🐱"]
             catClassAgeInt["int age"]
             catClassMakeSoundMethodFunctionPointer{"method makeSound():
                                                  { println(“Meow”) }"}
@@ -95,16 +95,16 @@
           
          catClass -- "
             creates 
-      (instantiates)
+            (instantiates)
             object in memory
       " --> catObject:::Object
-         subgraph catObject["Object “Cat” @BFFC882A"]
+         subgraph catObject["Object “Cat” 🐈 @BFFC882A"]
               catObjectAgeInt["`int age = 3`"] 
               catObjectMakeSoundMethodFunctionPointer{"`method makeSound(): 
                                                    calls function defined in class`"}
          end
       
-         subgraph catClass["Class “Cat”"]
+         subgraph catClass["Class “Cat” 🐱"]
             catClassAgeInt["int age
                             (value is stored in object)"]
             catClassMakeSoundMethodFunctionPointer{"method makeSound():
@@ -182,7 +182,10 @@
         >   - https://www.youtube.com/watch?v=psrp3TtaYYI
 
 ## Interfaces <a name="interfaces"></a>
-  - ### BIG IDEA — Can we swap out different implementations of the same named method?
+  - ### BIG IDEA — Can we swap out different implementations of the same named method, like plugging in different electrical appliances to the same electrical outlet?
+ 
+    > [<img src="assets/plugs_and_adapters.png" width="200"/>](assets/plugs_and_adapters.png)
+    
   - ie: Can we have a method called `view` that runs different code depending on the class of the object?
   
   - An `interface` is an agreement or "contract" that the class will have certain defined methods & variables in the class.
@@ -405,12 +408,14 @@
             >   - https://crystal-villanueva.medium.com/the-banana-and-the-gorilla-problem-92c9a4717fd6
 
 ## Abstract Classes <a name="abstract-classes"></a>
-  - ### BIG IDEA — Lets have a class that defines a general category of objects, but doesn't define the implementation details of the objects.
+  - ### BIG IDEA — Lets have a class that defines a general category of objects, but doesn't define the implementation details of the objects. That way we can create many different kinds of objects that all have the same "method signature," but have different implementations of the methods.
+   
     - ie: Like a "Document" class that has a method called "view" but doesn't define how the document is viewed.
     - You can't create a generic "Document", but you can create a "PDF" or "Excel" or "Text" document that has a "view" method.
     - The "Document" class is an "abstract class" and the "PDF" or "Excel" or "Text" document is a "concrete class."
   
-  - Very similar to interfaces but can have default implementations of the methods & include variables.
+  - #### Very similar to interfaces but can have default implementations of the methods & define variables that are 
+    expected to be in the subclass.
   - I like to forget the word `abstract` and think of "The General Category" instead of a specific case,
     like "documents" is the general category (abstract idea) of a generic "thing to structure and retain data."
   - PDFs, Excel files and Text files are specific "concrete" kinds (or "implementations") of the
@@ -439,6 +444,7 @@
         override method view() Launch Excel Viewer
     }
     class Memo["class Memo extends File"] {
+        override String name // ⬅︎ Subclasses must declare abstract variables
         String to  // ⬅︎ Subclasses can have additional variables
         String from
         String subject
@@ -667,7 +673,7 @@
     main()   
     
     // THIS IS *NOT* THE OUTPUT:
-    // Does the Cog"Meow" or "Bark"???
+    // Does the Cog "Meow" or "Bark"???
     
      ```
   - In C++, calling Cog's `makeSound()` method will print `Meow`, _BUT_ in Python, calling
