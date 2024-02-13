@@ -57,8 +57,28 @@
   - [Time Complexity](07-SoftwareDesign.md#time-complexity)
     - [Shorthand Guide & Sample Code](07-SoftwareDesign.md#time-complexity-example)
   - [Communicating Software Designs Visually](07-SoftwareDesign.md#communicating-software-designs)
-- [COP Tried to Introduce a New Style of Programming, But Ended With Mixed Results](
-  -    
+- [Structured Programming](08-StructuredProgramming.md)
+  - [Scopes](08-StructuredProgramming.md#scopes)
+  - [Types](08-StructuredProgramming.md#types)
+- [Class Oriented Programming](08-ClassOrientedProgramming.md)
+  - [COP Tried to Introduce a New Style of Programming, But Ended With Mixed Results](09-ClassOrientedProgramming.md#cop-tried-to-introduce)
+  - [Encapsulation](09-ClassOrientedProgramming.md#encapsulation)
+    - [Using Classes and Objects as "Name-Spaces/Scopes" Lead to Procedural-Style Code Implementations](09-ClassOrientedProgramming.md#using-classes-and-objects-as-name-spaces)
+    - [Problems Arising from Abusing Static Methods and Attributes](09-ClassOrientedProgramming.md#problems-arising-from-abusing-static)
+  - [Interfaces](09-ClassOrientedProgramming.md#interfaces)
+  - [Inheritance](09-ClassOrientedProgramming.md#inheritance)
+    - [Problems Arising from the Abuse of Inheritance](09-ClassOrientedProgramming.md#problems-arising-from-the-abuse-of-inheritance)
+  - [Abstract Classes](09-ClassOrientedProgramming.md#abstract-classes)
+  - [Polymorphism](09-ClassOrientedProgramming.md#polymorphism)
+  - [Controlled Visibility of Variables and Methods](09-ClassOrientedProgramming.md#controlled-visibility)
+  - [Allowing for "Multiple Inheritance" in C++ was a mistake, and it was removed from Java and C# for very good reasons](multiple-inheritance-removed)
+  - [Design Patterns](09-ClassOrientedProgramming.md#design-patterns)
+- [Back-to-Object Oriented Programming](10-BackToObjectOrientedProgramming.md)
+  - [Banned Patterns in BOOP](banned-patterns-in-boop)
+  - [Why is Class-Oriented Programming (COP)](10-BackToObjectOrientedProgramming.md#why-is-cop-bad)
+  - [Back-to Object Oriented Programming Example](10-BackToObjectOrientedProgramming.md#boop-example
+- [Functional Programming](11-FunctionalProgramming.md)
+  -  
 
 ## Introduction
   - How to guide for budding software engineers who need a primer overview of software development concepts 
@@ -118,5 +138,5 @@
       - Mistaking the machine for having intelligence is known as "The Eliza Effect" and is a common mistake 
         made by people who don't understand the limits of the machine's capabilities.
 
-- [Continue Reading - The Essential Question](./02-TheEssentialQuestion-WhatAreWeComputing)
+- [Continue Reading - The Essential Question](02-TheEssentialQuestion-WhatAreWeComputing.md)
 - [Back to Index](README.md)

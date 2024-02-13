@@ -43,7 +43,7 @@
   - The use of the word "constructor" is a bit of a misnomer, as the memory space for the Object has been allocated
     and the `constructor` is called to set the initial values of the variables in the object ("initialize" the state.)
 
-  - ### Using Classes and Objects "Name-Spaces/Scopes" Lead to Procedural-Style Code Implementations <a name="using-classes-and-objects-as-name-spaces"></a>
+  - ### Using Classes and Objects as "Name-Spaces/Scopes" Lead to Procedural-Style Code Implementations <a name="using-classes-and-objects-as-name-spaces"></a>
     - In COP languages, the `class` is used as a "namespace" to group together various methods and variables that
       are related to each other (known as "high cohesion") into a single class or "namespace".
         - Variables and methods can be called via a common name, like: `Person.age` or `Person.setName()`
@@ -277,6 +277,23 @@
        ```
       > - Live Code Example: [How Inheritance Works in Kotlin](src/main/kotlin/inheritanceExample.kt)
 
+## Problems Arising from the Abuse of Inheritance <a name="problems-arising-from-the-abuse-of-inheritance"></a>
+- ### BIG IDEA — The hype around reusability was so strong at the time that it was often used to justify the use of inheritance in places where it was not appropriate.
+
+- Use of Inheritance Lead to immense & unnecessary complexity to fit in the "simulation" paradigm, as programmers tried to shove the
+  "Procedural Paradigm" into the fancy new "Class Oriented" paradigm with less than stellar results.
+- Inheritance is a usually a bad idea for many reasons, and very overused beyond its original intent.
+    - The hype around reusability was so strong that it was often used to justify the use of inheritance in places
+      where it was not appropriate.
+    - This lead to "fragile" and "rigid" code that was hard to understand and hard to modify, leading to a lot
+      of waste and costs.
+    - Many popular ways of dealing with the "procedural approach" to COP were turned into "design patterns"
+      that were used to "fix" the problems of the "procedural approach" to `COP. Many of these ideas were just
+      hacks to fit the "procedural approach" into the "COP" paradigm.
+    - The promise of "reusability" was not fulfilled by COP languages.
+      > - Banana, Monkey, Jungle Problem
+          >   - https://crystal-villanueva.medium.com/the-banana-and-the-gorilla-problem-92c9a4717fd6
+
 ## Abstract Classes <a name="abstract-classes"></a>
   - ### BIG IDEA — Lets have a class that defines a general category of objects, but doesn't define the implementation details of the objects.
     - ie: Like a "Document" class that has a method called "view" but doesn't define how the document is viewed.
@@ -299,10 +316,10 @@
     File <|-- Memo : extends
     File <|-- Photo : extends
       
-    <<abstract>> File 
     class File {
         expects method view()*
     }
+    <<abstract>> File 
       
     class Excel {
         override method view()
@@ -422,98 +439,83 @@
   - Encouraged to use getters and setters to control the access to the variables of the class (which has since
     been shown to be a bad idea due to misuse and overuse of the pattern)
 
-## Problems Arising from the Abuse of Inheritance <a name="problems-arising-from-the-abuse-of-inheritance"></a>
-  - ### BIG IDEA — The hype around reusability was so strong at the time that it was often used to justify the use of inheritance in places where it was not appropriate.
-  
-  - Use of Inheritance Lead to immense & unnecessary complexity to fit in the "simulation" paradigm, as programmers tried to shove the
-    "Procedural Paradigm" into the fancy new "Class Oriented" paradigm with less than stellar results.
-  - Inheritance is a usually a bad idea for many reasons, and very overused beyond its original intent.
-    - The hype around reusability was so strong that it was often used to justify the use of inheritance in places
-      where it was not appropriate.
-    - This lead to "fragile" and "rigid" code that was hard to understand and hard to modify, leading to a lot
-      of waste and costs.
-    - Many popular ways of dealing with the "procedural approach" to COP were turned into "design patterns"
-      that were used to "fix" the problems of the "procedural approach" to `COP. Many of these ideas were just
-      hacks to fit the "procedural approach" into the "COP" paradigm.
-    - The promise of "reusability" was not fulfilled by COP languages.
-      > - Banana, Monkey, Jungle Problem
-      >   - https://crystal-villanueva.medium.com/the-banana-and-the-gorilla-problem-92c9a4717fd6
 
-    ### Allowing for "Multiple Inheritance" in C++ was a mistake, and it was removed from Java and C# for very good reasons. <a name="multiple-inheritance-removed"></a>
-      - Multiple Inheritance is the idea that a class can inherit from more than one class, and then have access to
-        all methods and variables of the superclasses.
-    
-      - Diagram of Multiple Inheritance:
-        ```mermaid
-          flowchart TD
-             X["The Problem with Multiple Inheritance"]
-             Animal["
-               abstract Animal
-               expects method makeSound()
-             "] -->|inherits| Cat["🐈 Cat
-                method makeSound()
-             "] & Dog["🐕 Dog
-                 method makeSound()
-             "]-->|inherits| Cog???["Cog (???)"]
-          
-             Cog??? -..-> Y((("
-             When `Cog` makes a sound, 
-             (ie: method `makeSound()` is called) 
-             does it Meow or Bark?"))) 
-          ```
-      - Example of attempt to use "Multiple Inheritance" in C++:
-        ```C++
-        class Animal {
-           public:
-              void makeSound() {
-                 cout << "Make animal sound" << endl;
-              }
-        };
-        
-        class Cat : public Animal {
-           public:
-              void makeSound() {
-                cout << "Meow" << endl;
-             }
-        };
-        
-        class Dog : public Animal {
-           public:
-              void makeSound() {
-                cout << "Bark" << endl;
-              }
-        };
-        
-        class Cog : public Cat, public Dog {  // <-- Multiple Inheritance.
-           // nothing defined here.
-        };
-        
-        int main() {
-           Cog c;  // <-- Create a new Cog object.
-           
-           c.makeSound(); // <-- What will this print? "Meow" or "Bark"???
-        }
-        
-        main()   
-        
-        // THIS IS *NOT* THE OUTPUT:
-        // Does the Cog"Meow" or "Bark"???
-        
-         ```
-      - In C++, calling Cog's `makeSound()` method will print `Meow`, _BUT_ in Python, calling
-        Cog's `makeSound()` will print `Bark`!
-      - This behavior is _completely arbitrary_ and up to the designers of the language to decide which
-        method will be called, and it's _not_ consistent across different languages!
-      - It's also up to you to remember these kinds of details, as you are likely to be working in multiple
-        languages in the same day, and it's quite easy to forget which language you are working in which lead to weird bugs.
-      - UGH!
+
+## Allowing for "Multiple Inheritance" in C++ was a mistake, and it was removed from Java and C# for very good reasons. <a name="multiple-inheritance-removed"></a>
+  - Multiple Inheritance is the idea that a class can inherit from more than one class, and then have access to
+    all methods and variables of the superclasses.
+
+  - Diagram of Multiple Inheritance:
+    ```mermaid
+      flowchart TD
+         X["The Problem with Multiple Inheritance"]
+         Animal["
+           abstract Animal
+           expects method makeSound()
+         "] -->|inherits| Cat["🐈 Cat
+            method makeSound()
+         "] & Dog["🐕 Dog
+             method makeSound()
+         "]-->|inherits| Cog???["Cog (???)"]
       
-      > Java's language Designers Rejected Multiple Inheritance - Here's Why
-      >   - https://www.youtube.com/watch?v=1-JBFJ8Xar0
+         Cog??? -..-> Y((("
+         When `Cog` makes a sound, 
+         (ie: method `makeSound()` is called) 
+         does it Meow or Bark?"))) 
+      ```
+  - Example of attempt to use "Multiple Inheritance" in C++:
+    ```C++
+    class Animal {
+       public:
+          void makeSound() {
+             cout << "Make animal sound" << endl;
+          }
+    };
     
-      > NOTE: If you _really_ want to achieve multiple inheritance... (_you should never need it, but here's how:_)
-      >   - https://www.youtube.com/watch?v=3X9Eo2vzY1I
-      >   - Live Code Example: [How to Achieve Multiple Inheritance in Kotlin](src/main/kotlin/multipleInheritanceExample.kt)
+    class Cat : public Animal {
+       public:
+          void makeSound() {
+            cout << "Meow" << endl;
+         }
+    };
+    
+    class Dog : public Animal {
+       public:
+          void makeSound() {
+            cout << "Bark" << endl;
+          }
+    };
+    
+    class Cog : public Cat, public Dog {  // <-- Multiple Inheritance.
+       // nothing defined here.
+    };
+    
+    int main() {
+       Cog c;  // <-- Create a new Cog object.
+       
+       c.makeSound(); // <-- What will this print? "Meow" or "Bark"???
+    }
+    
+    main()   
+    
+    // THIS IS *NOT* THE OUTPUT:
+    // Does the Cog"Meow" or "Bark"???
+    
+     ```
+  - In C++, calling Cog's `makeSound()` method will print `Meow`, _BUT_ in Python, calling
+    Cog's `makeSound()` will print `Bark`!
+  - This behavior is _completely arbitrary_ and up to the designers of the language to decide which
+    method will be called, and it's _not_ consistent across different languages!
+  - It's also up to you to remember these kinds of details, as you are likely to be working in multiple
+    languages in the same day, and it's quite easy to forget which language you are working in which lead to weird bugs.
+  - UGH!
+  
+  > Java's language Designers Rejected Multiple Inheritance - Here's Why
+  >   - https://www.youtube.com/watch?v=1-JBFJ8Xar0
+
+  > NOTE: If you _really_ want to achieve multiple inheritance... (_you should never need it, but here's how:_)
+  >   - https://www.youtube.com/watch?v=3X9Eo2vzY1I
+  >   - Live Code Example: [How to Achieve Multiple Inheritance in Kotlin](src/main/kotlin/multipleInheritanceExample.kt)
 
 ## Design Patterns <a name="design-patterns"></a>
   - ### BIG IDEA — There are common problems and ways of solving them that humans have already figured out and named them.

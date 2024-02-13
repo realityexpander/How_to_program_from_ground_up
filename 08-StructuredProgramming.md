@@ -1,8 +1,8 @@
-## Structured Programming 1960s-Present
+## Structured Programming 1960s-Present <a name="structured-programming"></a>
 
 ### BIG IDEA - Put different parts of a program into distinct sections, or "code blocks" or "scopes" to limit the visibility of variables and functions to other parts of the program in order to reduce cognitive load to understanding code, make modifying code easier and enabling re-use of code via libraries.
 
-### Scopes
+### Scopes <a name="scopes"></a>
 - No more "goto" statements, only subroutines and conditional branching were allowed.
 - The concept of "scopes" (or "code blocks") to limit the use of "globally mutable" variables and visibility of functions.
   - This is the origin of "encapsulation" and first introduced to limit the visibility of the "local" variables
@@ -45,7 +45,7 @@
     ```
   - Live Code Example in Kotlin: [Structured Programming Example with Scopes: `structuredExample.kt`](src/main/kotlin/structuredExample.kt)
 
-### Types
+### Types <a name="types"></a>
 - The concept of "types" (or "kinds") was introduced to define the size & intended purpose of "primitive"
   data types
   - Procedural langauges only had a few simple types: "number" or "character" or "string of characters" or "array"
