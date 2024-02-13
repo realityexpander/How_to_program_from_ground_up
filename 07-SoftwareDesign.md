@@ -1,6 +1,8 @@
 # Software Design
 
 ## Algorithms - How are we gonna solve this?
+  - ### BiG IDEA - Let's give names to the clever ways we humans have found to solve problems.
+
   - Algorithms are just a set of instructions that are used to solve a problem or perform a task, all based on the
     cleverness and creativity of the designer. People have invented many ways to solve problems, and some of these
     are so common that they have been given names, like "sorting" and "searching" algorithms.
@@ -9,8 +11,20 @@
     > - Animated Interactive Visualizations with pseudocode for many common data structures
     > - https://www.cs.usfca.edu/~galles/visualization/Algorithms.html
 
+    > Quick Sort [Visual Explanation] 
+    >   - https://www.youtube.com/watch?v=WprjBK0p6rw
+   
+    > 15 Sorting Algorithms in 6 Minutes
+    >   - https://www.youtube.com/watch?v=kPRA0W1kECg
+    
+    > Sorting Algorithms Explained Visually
+    >   - https://www.youtube.com/watch?v=RfXt_qHDEPw  
+
+
+Sorting Algorithms Explained Visually
+
 ## Time Complexity - How long is this gonna take?
-  - ### BiG IDEA - Let's have a standard way to communicate about how long an algorithm will take to run
+  - ### BiG IDEA - Let's have a standard way to communicate about how long an algorithm or program will take to execute.
   
   - The "time complexity" of a program is a measure of how the "running time" of the program grows as the "input size"
     of the program grows.
@@ -40,10 +54,10 @@
       the items grows as the square of the size of the array grows.
     - Each time you add another loop, the time complexity grows as the square of the size of the array grows.
     - If you are doing a binary search, and each time you search you are cutting the size of the array in half,
-      it's O(log n) 
+      it's O(log n)
  
     - ```Kotlin
-      fun randomInt(max: Int) = (0..max).random()
+      // Program to illustrate the time complexity of various operations
       
       // Algorithm: Binary Search
       // Perform binary search a sorted array - O(log n)
@@ -78,6 +92,7 @@
           return less + equal + greater
       }
       
+    
       fun main() {
          val x = Array(100) { randomInt(100) } // <-- O(n) - Fill Array x with 100 random integers
          
@@ -106,7 +121,8 @@
          val y = sorted.binarySearch(50) // <-- O(log n)
       }
       
-      // << NO OUTPUT - Just sample code illustrating the time complexity of the operations - check sample code for output >>
+      // << NO OUTPUT - Just code illustrating the time complexity of the operations >> 
+      // << - Run the live code example to generate output >>
       ```
         > Live Code Example: [Time Complexity Example](src/main/kotlin/timeComplexityExample.kt)
 
