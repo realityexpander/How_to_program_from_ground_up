@@ -44,8 +44,8 @@
                       { print Meow }"]
       end
       abstractAgeInt -- ”expects” --> catClassAgeInt
-      abstractMakeSoundMethod -- “expects” --> catClassMakeSoundMethod:::Object
-      catClassAgeInt -- implements --> abstractAgeInt:::Abstract
+%%      abstractMakeSoundMethod -- “expects” --> catClassMakeSoundMethod:::Object
+%%      catClassAgeInt -- implements --> abstractAgeInt:::Abstract
 %%      
 %%      classCat -- creates object --> catObject:::Object
 %%      classCat -- extends --> abstractAnimal:::Abstract
