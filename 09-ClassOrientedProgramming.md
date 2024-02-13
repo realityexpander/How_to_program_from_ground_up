@@ -28,7 +28,7 @@
     ```mermaid
       flowchart LR
       
-    catObjectMakeSoundMethodFunctionPointer -- calls --> catClassMakeSoundMethod:::Object
+      catObjectMakeSoundMethodFunctionPointer -- calls --> catClassMakeSoundMethod:::Object
       catObjectAgeInt -- stores value of --> catClassAgeInt
       subgraph catObject["[One “Cat” object instance @19FCA68D]"]
           catObjectAgeInt["int age = 3"]
@@ -37,15 +37,15 @@
                                        function @C62F3842
                                        in Class Cat"}
       end
-%%      abstractAgeInt -- ”expects” --> catClassAgeInt
-%%      abstractMakeSoundMethod -- “expects” --> catClassMakeSoundMethod:::Object
-%%      catClassAgeInt -- implements --> abstractAgeInt:::Abstract
-%%      subgraph classCat["class Cat extends Animal"]
-%%          catClassAgeInt["int age"]
-%%          catClassMakeSoundMethod["function @C62F3842:  
-%%                      method makeSound() =
-%%                      { print Meow }"]
-%%      end
+      abstractAgeInt -- ”expects” --> catClassAgeInt
+      abstractMakeSoundMethod -- “expects” --> catClassMakeSoundMethod:::Object
+      catClassAgeInt -- implements --> abstractAgeInt:::Abstract
+      subgraph classCat["class Cat extends Animal"]
+          catClassAgeInt["int age"]
+          catClassMakeSoundMethod["function @C62F3842:  
+                      method makeSound() =
+                      { print Meow }"]
+      end
 %%      
 %%      classCat -- creates object --> catObject:::Object
 %%      classCat -- extends --> abstractAnimal:::Abstract
