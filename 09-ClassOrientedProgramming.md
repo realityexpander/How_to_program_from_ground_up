@@ -26,59 +26,52 @@
       state and pointers to the "methods" (functions) of the `class`. An `abstract class` is a template for a "concrete"
       or "specific" class, and is not meant to be instantiated itself, only extended and be used as a "general"
       template for the "specific" classes.
-    - 
 
-      ```mermaid
-        flowchart LR
-      
-        catObjectMakeSoundMethodFunctionPointer -- calls --> catClassMakeSoundMethod:::Object
-        catObjectAgeInt -- stores value of --> catClassAgeInt
-        subgraph catObject["[One “Cat” object instance @19FCA68D]"]
-            catObjectAgeInt["int age = 3"]
-            catObjectMakeSoundMethodFunctionPointer{"method makeSound(): 
-                                               calls 
-                                         function @C62F3842
-                                         in Class Cat"}
-        end
-        subgraph classCat["class “Cat” extends Animal"]
-            catClassAgeInt["int age"]
-            catClassMakeSoundMethod{"function @C62F3842:  
-                        method makeSound() =
-                        { print “Meow” }"}
-        end
-        abstractAgeInt -- expects --> catClassAgeInt
-        abstractMakeSoundMethod -- expects --> catClassMakeSoundMethod:::Object
-        catClassAgeInt -- implements --> abstractAgeInt:::Abstract
-      
-        classCat -- creates object --> catObject:::Object
-        classCat -- extends --> abstractAnimal:::Abstract
-        catClassMakeSoundMethod -- implements --> abstractMakeSoundMethod:::Abstract
-        subgraph abstractAnimal["abstract class “Animal”"]
-          abstractAgeInt["abstract int age"]
-          abstractMakeSoundMethod{"abstract method 
-                                   makeSound()"}
-        end
-      
-        classDef Abstract fill:#222, stroke:#0F0, stroke-width:1px, color:#fff, stroke-dasharray: 5 5
-        classDef Class fill:#444, stroke:#00F, stroke-width:1px, color:#000, stroke-dasharray: 5 5
-        style classCat fill:#444, stroke:#DDD, stroke-width:1px, color:#000, stroke-dasharray: 5 5
-        style catClassAgeInt fill:#444, stroke:#DDD, stroke-width:1px, color:#FFF, stroke-dasharray: 5 5
-        classDef Object fill:#55F, stroke:#FFF, stroke-width:3px, color:#fff
-        style catObjectAgeInt fill:#55F, stroke:#FFF, stroke-width:3px, color:#fff
-        style catObjectMakeSoundMethodFunctionPointer fill:#222, stroke:#DDD, stroke-width:1px, color:#000, stroke-dasharray: 5 5
+    ```mermaid
+       flowchart TD
+           
+       subgraph catClass["Class “Cat”
+       "]
+       catObjectAgeInt["int age"]
+       catObjectMakeSoundMethodFunctionPointer{"method makeSound():
+                   { println(“Meow”) }"}
+       end
+       
+    ```
+    ```Text
+      // COP Pseduo-Code
+      class Cat {
+         int age
+         method makeSound() {
+            println(“Meow”)
+         }
+          
+         constructor Cat(int age) {
+            this.age = age
+         }
+      }
+        
+        // Start of program
+      method main() {
+         Cat cat1 = new Cat(3)  // <-- Creates a new object of the class "Cat" and
+                                //     assigns its location to variable `cat1`, ie: "Instantiates" the class.
+         cat1.makeSound()  // <-- will print "Meow".
+      }
       ```
+
   - ### Instantiation
     - When a new object is created from a class template, the Object is called an "instance" of the class.
     - An Object is just a structure in memory that contains the values (or "state") of the variables and pointers to
       the methods of the class.
   - A "Method" is just a normal function in the class that manipulates the variables in the object,
-    or call other methods in the object or other objects.
-      - The process of calling a method on an object is referred to as "sending a message" to the object
+      or call other methods in the object or other objects.
+      - The process of calling a method on an object is referred to as "sending a message" to the object in COP.
       - (THIS IS TERRIBLE WORDING! bc it's not a message! It's just calling a function!!!! THIS IS NOT MESSAGING! AAAAHH!)
+      - This misnomer lead to a lot of confusion for reasons that will be made clear in this document.
     and the `constructor` is called to set the initial values of the variables in the object ("initialize" the state.)
   - The use of the word "constructor" is a bit of a misnomer, as the memory space for the Object has been allocated
   
-  - ### Instance Variables = State of the Object
+  - ### Object Instance Variable Values = "State" of the Object
     - The values of the variables ("state") of the object are often made inaccessible from outside the class (ie: `private`)
       and only accessible by the methods of the class, or the methods in the inherited subclasses of the class.
     - Methods of the class can be made `public` to be globally accessible by other classes to provide the functionality of the class.
@@ -134,23 +127,23 @@
     ---
     title: Interface Example
     ---
-    classDiagram
-    Document <|-- class PDF : implements
-    Document <|-- class Email : implements
-    Document <|-- clasd Song : implements
+    classDiagram 
+    Document <|-- PDF : implements
+    Document <|-- Email : implements
+    Document <|-- Song : implements
       
-    class Document { 
-       expects method view()*
+    class Document["interface Document"] { 
+       expects method view()* [No implementation here!]
     }
     <<interface>> Document
-    class PDF{
-        override method view()
+    class PDF["Class PDF"] { 
+        override method view() Launch PDF Viewer 
     }
-    class Email{
-        override method view()
+    class Email["Class Email"] {
+        override method view() Launch Email App
     }
-    class Song{
-        override method view()
+    class Song["Class Song"] {
+        override method view() Launch Music Player
     }
     ```
   - Example (in pseudo-code similar to common COP languages):
@@ -461,6 +454,52 @@
     
      ```
      - Live Code Example: [How Abstract Classes Work in Kotlin](src/main/kotlin/abstractClassExample.kt)
+
+## Full Diagram of How `abstract` Classes, Extended Classes and Objects Are Stored in Memory
+
+  ```mermaid
+    flowchart LR
+  
+    ExcelFileObjectPrintContentMethodFunctionPointer -- calls --> ExcelFileClassPrintContentMethod:::Object
+    ExcelFileObjectAgeInt -- stores value of --> ExcelFileClassAgeInt
+    subgraph ExcelFileObject["[One “ExcelFile” object instance @19FCA68D]"]
+        ExcelFileObjectAgeInt["int content = 3"]
+        ExcelFileObjectPrintContentMethodFunctionPointer{"method PrintContent(): 
+                                           calls 
+                                     function @C62F3842
+                                     in Class “ExcelFile”"}
+    end
+    subgraph classExcelFile["class “ExcelFile” extends File"]
+        ExcelFileClassAgeInt["int content"]
+        ExcelFileClassPrintContentMethod{"function @C62F3842:  
+                    method PrintContent() =
+                    { print this.content }"}
+    end
+    abstractAgeInt -- expects --> ExcelFileClassAgeInt
+    abstractPrintContentMethod -- expects --> ExcelFileClassPrintContentMethod:::Object
+    ExcelFileClassAgeInt -- implements --> abstractAgeInt:::Abstract
+  
+    classExcelFile -- "instantiates 
+                       object" --> ExcelFileObject:::Object
+    classExcelFile -- extends --> abstractFile:::Abstract
+    ExcelFileClassPrintContentMethod -- implements --> abstractPrintContentMethod:::Abstract
+    subgraph abstractFile["abstract class “File”"]
+      abstractAgeInt["abstract int content"]
+      abstractPrintContentMethod{"abstract method 
+                               PrintContent()"}
+    end
+  
+    classDef Abstract fill:#222, stroke:#0F0, stroke-width:1px, color:#fff, stroke-dasharray: 5 5
+    
+    classDef Class fill:#444, stroke:#00F, stroke-width:1px, color:#000, stroke-dasharray: 5 5
+    %% For nodes that are the source of a link, the style must be defined in the link, not the classDef. 
+    style classExcelFile fill:#444, stroke:#DDD, stroke-width:1px, color:#000, stroke-dasharray: 5 5
+    style ExcelFileClassAgeInt fill:#444, stroke:#DDD, stroke-width:1px, color:#FFF, stroke-dasharray: 5 5
+    
+    classDef Object fill:#55F, stroke:#FFF, stroke-width:3px, color:#fff
+    style ExcelFileObjectAgeInt fill:#55F, stroke:#FFF, stroke-width:3px, color:#fff
+    style ExcelFileObjectPrintContentMethodFunctionPointer fill:#222, stroke:#DDD, stroke-width:1px, color:#000, stroke-dasharray: 5 5
+  ```
 
 ## Polymorphism <a name="polymorphism"></a>
   - ### BIG IDEA — The idea that a method can be called on an object and the method will behave differently based on the "type" of the "object" that the "method" is called on.
