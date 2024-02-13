@@ -221,43 +221,43 @@
     // COP Pseudo-Code
       
     interface Document {     // <-- interfaces only define the "signature" of the methods it expects to be in the subclass.
-      expects method view()  // this interface expects a method called "view", there is no implementation here.
+       expects method view()  // this interface expects a method called "view", there is no implementation here.
     }  
         
     // PDF is one "concrete implementing" class of the "Document" interface.
     class PDF implements Document { // <-- PDF is a subclass of Document, and must implement the "view" method.
-        override method view() { // <-- the implementation of the interface (uses the "override" keyword) 
-           print "Launch PDF Viewer"  
-        } 
+       override method view() { // <-- the implementation of the interface (uses the "override" keyword) 
+          print "Launch PDF Viewer"  
+       } 
     }
           
     // Email is one "concrete implementing" class of the "Document" interface.
     class Email implements Document { <-- // Email is a subclass of Document, and must implement the "view" method.
-        override method view() { // <-- the implementation of the interface (uses the "override" keyword.)
-           print "Launch Email App"  
-        }
+       override method view() { // <-- the implementation of the interface (uses the "override" keyword.)
+          print "Launch Email App"  
+       }
     }
           
     // Song is one "concrete implementing" class of the "Document" interface.
     class Song implements Document { // <-- the implementation of the interface (uses the "override" keyword.)
-        override method view() { 
-           print "Launch Music Player"  
-        } 
+       override method view() { 
+          print "Launch Music Player"  
+       } 
     }
           
     // Start of program
     method main() {
-        Document doc1 = new PDF()
-        Email doc2 = new Email()  
-        Song doc3 = new Song() 
+       Document doc1 = new PDF()
+       Email doc2 = new Email()  
+       Song doc3 = new Song() 
+            
+       function viewDocument(Document doc) {  // Note that the parameter is of type `Document` and not `PDF` or `Email` or `Song`. 
+          doc.view() // Will call the appropriate "view" method of the subclass.
+       }
              
-        function viewDocument(Document doc) {  // Note that the parameter is of type `Document` and not `PDF` or `Email` or `Song`. 
-            doc.view() // Will call the appropriate "view" method of the subclass.
-        }
-              
-        viewDocument(doc1)  // <-- will print "Launch PDF Viewer".
-        viewDocument(doc2)  // <-- will print "Launch Email App".
-        viewDocument(doc3)  // <-- will print "Launch Music Player".
+       viewDocument(doc1)  // <-- will print "Launch PDF Viewer".
+       viewDocument(doc2)  // <-- will print "Launch Email App".
+       viewDocument(doc3)  // <-- will print "Launch Music Player".
     }
     ```
     > Live Code Example: [How Interfaces Work in Kotlin](src/main/kotlin/interfaceExample.kt)
