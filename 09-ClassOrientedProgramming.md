@@ -98,7 +98,7 @@
             object in memory
       " --> catObject:::Object
          subgraph catObject["Object “Cat” 🐈 @BFFC882A"]
-              catObjectAgeInt["`int age = 3`"] 
+              catObjectAgeInt["int age = 3"] 
               catObjectMakeSoundMethodFunctionPointer{"method makeSound(): 
                                                    calls function defined in class"}
          end
