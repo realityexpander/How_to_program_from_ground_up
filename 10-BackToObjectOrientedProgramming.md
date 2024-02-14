@@ -42,6 +42,10 @@
   - Any state that needs to be exposed is only via "messages" to the object, and the object can choose to respond to
     the message or not.
   - No `static` methods or variables, only instance variables that are private to the `object`.
+    - Use of `static` methods and variables is specifically disallowed as it leads to "shared mutable state" and
+      "side effects" that are difficult to maintain and understand.
+      > Objects vs. Static Methods (webinar #1)
+      >   - https://www.youtube.com/watch?v=D0dqC_3Bch8
   - `protected` methods are allowed, but discouraged as they lead to "fragile" and "rigid" code.
   - Use of inheritance is explicitly discouraged, and prefer composition over inheritance. Exceptions for shallow
     hierarchies of 2-3 levels maximum meant to model the real world objects, not to create a "hierarchy of types."

@@ -95,7 +95,8 @@
      >   - https://youtu.be/Vpb7IQ2Ib_Y
      > - Magnetic Viewing Film — How it Works/Demos
      >   - https://www.youtube.com/watch?v=slVL5nbTXd4
-
+     > - Electronics Magnetic Cores I Properties 1961 US Army Training Film
+     >   - https://www.youtube.com/watch?v=fQhSqoNm-qE
 ## The Raucous Relay — 1835 to 1920's <a name="the-raucous-relay"></a>
    - ### BIG IDEA — Use an electromagnet to control a switch (or multiple switches.)
    
@@ -158,12 +159,14 @@
 
      > - In a Minute: Vacuum Tube Diodes in 60 Seconds
      >   - https://www.youtube.com/watch?v=8so4qQcOAvQ
-     > 1942 ARMY RADIO TRAINING FILM “ ELECTRON THEORY AND THE DIODE TUBE ” VACUUM TUBE ELECTRONICS 72782
+     > 1942 ARMY RADIO TRAINING FILM “ELECTRON THEORY AND THE DIODE TUBE” VACUUM TUBE ELECTRONICS
      >   - https://www.youtube.com/watch?v=cIvjBKMX9jg
      > - In a Minute: Vacuum Tube Triodes in 60 Seconds
      >   - https://www.youtube.com/watch?v=frZ35Y48vSk
      > - Let’s Build Some Logic Gates out of Vacuum Tubes: OR, NOR, NAND, AND
      >   - https://www.youtube.com/watch?v=NkmrMdigB-8
+     > - Computer History 1949 -1960 Early Vacuum Tube Computers Overview
+     >   - https://www.youtube.com/watch?v=WnNm_uJYWhA 
    - #### The vacuum tube is voracious because it consumes a lot of power to heat the cathode and generates a lot of excess heat.
 
 ## The Tiny Transistor - 1957 to present <a name="the-tiny-transistor"></a>
@@ -171,19 +174,16 @@
    
      [<img src="assets/transistor_vs_tube.png" width="400">](https://www.youtube.com/watch?v=DXvAlwMAxiA)
    
-     Very similar behavior to the vacuum tube, but much smaller and much, much faster
+     Very similar behavior to the vacuum tube, but much, much smaller and much, much faster at switching on and off.
      > - How a Transistor Works
      >   - https://www.youtube.com/watch?v=DXvAlwMAxiA
-     
-     Excellent animation of physical electrical flow through semiconductors and how LEDs are made
      > - Why It Was Almost Impossible to Make the Blue LED
+     >   - Excellent animation of physical electrical flow through semiconductors and how LEDs are made.
      >   - https://www.youtube.com/watch?v=AF8d72mA41M&t=203
-     
-     > 1959 Navy Training Film - Transistors / Switching
+     > - 1959 Navy Training Film - Transistors / Switching
      >   - https://www.youtube.com/watch?v=l50XdZwtQ2U
-     
-     Difference in behavior between Tubes and Transistors
      > - Vacuum Tubes: Episode 2 — The Triode (Part 1)
+     >   - Difference in behavior between Tubes and Transistors.
      >   - https://www.youtube.com/watch?v=xurmZWLjW2g
 
    - The Transistor consists of three parts:
@@ -240,6 +240,8 @@
         - Extremely complex functions are made by combining many of these packages in clever ways
         > - “MY FIRST CHIP” - Carver Mead - 2017
         >   - https://www.youtube.com/watch?v=F5P5SAlEbo4
+        > - Intel: The Making of a Chip with 22nm/3D Transistors | Intel
+        >   - https://www.youtube.com/watch?v=d9SWNLZvA8g
 
     > - Robert Noyce, inventor of the first monolithic IC holding a photographic layer for an Integrated Circuit.
     > 
@@ -249,11 +251,11 @@
     >  
     >   [<img src="assets/logicGateSymbols.png" width="400">](https://en.wikipedia.org/wiki/Logic_gate)
     > 
-    > - Typical Early Logic Gate Package
+    > - Typical Early Logic Gate Package - 74HC42 (BCD to Decimal Decoder)
     > 
     >   [<img src="assets/seven_segment/74HC42.jpg" width="400">](https://shop.griederbauteile.ch/en/info/7/74HC42.pdf)
     > 
-    > - NAND gate package
+    > - Package Schematic for a Quad 2-Input NAND Gate IC (74HC00)
     >   
     >   [<img src="assets/NAND_gate_package.png" width="300">](https://www.homemade-circuits.com/simple-circuits-using-ic-7400-nand-gates/)
     >   
@@ -341,10 +343,9 @@
   - By arranging the basic electronic components in particular patterns to achieve a specific narrow specialized task,
     like storing data on some medium, measuring sensors, controlling a motor, displaying an image, etc.
     
-    > Digital Computer Techniques: Programming (1962) - AT&T Archives
+    > - Digital Computer Techniques: Programming (1962) - AT&T Archives
     >   - https://www.youtube.com/watch?v=dFZecokdHLo
-    
-    > Digital Computer Techniques: Computer Units (1962) - AT&T Archives
+    > - Digital Computer Techniques: Computer Units (1962) - AT&T Archives
     >   - https://www.youtube.com/watch?v=5d7EMsy_RC0
 
   - Bus (a set of wires that connect the CPU to the rest of the computer)
@@ -362,13 +363,11 @@
       [<img src="assets/ROM.png" width="400">](https://en.wikipedia.org/wiki/Read-only_memory)
 
   - RAM (Random Access Memory)
-    > RAM module build - part 1
+    > - RAM module build - part 1
     >   - https://www.youtube.com/watch?v=uYXwCBo40iA
-    
-    > RAM - Random Access Memory - How does a RAM of PC store data?- Video IT
+    > - RAM - Random Access Memory - How does a RAM of PC store data?- Video IT
     >   - https://www.youtube.com/watch?v=Kav6oOFDQSA
-    
-    > Dynamic Random Access Memory (DRAM). Part 1: Memory Cell Arrays
+    > - Dynamic Random Access Memory (DRAM). Part 1: Memory Cell Arrays
     >   - https://www.youtube.com/watch?v=I-9XWtdW_Co
 
   - I/O (Input/Output) & Peripherals & Removable Storage & More
@@ -382,18 +381,16 @@
       - The arm is controlled by software and uses "magnets" to move the arm to the correct position to read and write the data.
       - Some sort of electrified magnet is the usual way that computers interact physically with the world.
 
-    > DATA PROCESSING AN INTRODUCTION 1972 KEY PUNCH COMPUTER & MAGNETIC TAPE EDUCATIONAL FILM
+    > - DATA PROCESSING AN INTRODUCTION 1972 KEY PUNCH COMPUTER & MAGNETIC TAPE EDUCATIONAL FILM
     >   - https://www.youtube.com/watch?v=uOYJtnux2sA
-    
-    > Communications Milestone: Charged Coupled Devices (with Bonus Edition Introduction) — AT&T
+    > - Communications Milestone: Charged Coupled Devices (with Bonus Edition Introduction) — AT&T
     >   - https://youtu.be/MoqeMEsC5p0?si=iizZq8ZJGxSEh16P&t=206
     >> Note that the CCD was invented in an "hour" due to how many other technologies had to be invented first.
 
   - Putting it all together
-    > 1969 EDUTRONICS COMPUTER DATA PROCESSING PRINCIPLES & FILE CONCEPTS 54124
+    > - 1969 EDUTRONICS COMPUTER DATA PROCESSING PRINCIPLES & FILE CONCEPTS 54124
     >   - https://www.youtube.com/watch?v=0bLQ9EQ6PdY
-    
-    > 1970s COMPUTER DATA PROCESSING & FILE MAINTENANCE EDUCATIONAL FILM FLOWCHARTS
+    > - 1970s COMPUTER DATA PROCESSING & FILE MAINTENANCE EDUCATIONAL FILM FLOWCHARTS
     >   - https://www.youtube.com/watch?v=geo8UtItSwU
 
 - [Continue Reading - Data Structures](./04-DataStructures.md)
