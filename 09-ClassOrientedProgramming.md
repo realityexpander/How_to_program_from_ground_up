@@ -98,40 +98,40 @@
       - ###### sophisticated-diagram
 
       ```mermaid
-         flowchart LR
+         flowchart TB
+      
+         label["Sophisticated Diagram of 
+                Class and an Object Instance
+                🐱➤➤🐈"]  
           
          catClass -- "
                 creates 
              (or “instantiates”)
-            object in memory
+            a “Cat” object in memory
             using the class ‟Cat”
             as a template
             🐱➤➤🐈
          " --> catObject:::Object
          subgraph catObject["Object “Cat” 🐈 @BFFC882A"]
-              catObjectAgeInt["int age = 3"] 
               catObjectMakeSoundMethodFunctionPointer{"method makeSound(): 
                                                       calls function defined 
                                                       in class
                                                       “Cat” 
                                                       🐱
          "}
+              catObjectAgeInt["int age = 3"] 
          end
       
          subgraph catClass["Class “Cat” 🐱"]
-            catClassAgeInt["int age
-                            (value is stored in object)
-                            ⬇︎
-         "]
             catClassMakeSoundMethodFunctionPointer{"method makeSound():
                                                  { println(“Meow”) }
                                                  😺"}
+            catClassAgeInt["int age
+                            (value is stored in object)
+                            ⬇︎
+            "]
          end
          catObjectMakeSoundMethodFunctionPointer -- calls --> catClassMakeSoundMethodFunctionPointer:::Object
-           
-         label["Sophisticated Diagram of 
-                Class and an Object Instance
-                🐱➤➤🐈"]   
       
          style catClass fill:#444, stroke:#FFF, stroke-width:1px, color:#FFF, stroke-dasharray: 5 5
          style catClassAgeInt fill:#444, stroke:#FFF, stroke-width:1px, color:#FFF, stroke-dasharray: 5 5
@@ -621,13 +621,16 @@
                                            calls 
                                      function @C62F3842
                                      in class ExcelFile
+                                     🖨️
                                      "}
     end
     subgraph classExcelFile["class ExcelFile extends File"]
         ExcelFileClassAgeInt["int content"]
         ExcelFileClassPrintContentMethod{"function @C62F3842:  
                     method PrintContent() =
-                    { print this.content }"}
+                    { print this.content }
+                    🖨️
+                    "}
     end
     abstractAgeInt -- expects --> ExcelFileClassAgeInt
     abstractPrintContentMethod -- expects --> ExcelFileClassPrintContentMethod:::Object
@@ -637,7 +640,8 @@
           The ExcelFile Object @19FCA68D 
           is an instance of the ExcelFile class.
           ExcelFile class is a subclass of the 
-          abstract File class."]
+          abstract File class.
+          📁 ➤➤ 🗄️"]
     
     classExcelFile -- "instantiates 
                        object" --> ExcelFileObject:::Object
@@ -647,6 +651,7 @@
       abstractAgeInt["abstract int content"]
       abstractPrintContentMethod{"abstract method 
                                PrintContent()
+                               ⎙
                                "}
     end
   
