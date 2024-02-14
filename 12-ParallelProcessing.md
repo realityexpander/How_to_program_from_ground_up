@@ -240,6 +240,15 @@
      // Final value of x: 200, should be 200 // <-- Notice the final value of `x` is correct.
     ```
     > Live Code Example: [How Coroutines Work in Kotlin](src/main/kotlin/coroutineExample.kt)
-      
+  
+  - ### Coroutines are Much Faster Than Threads
+    - Coroutines are much faster than threads, as they are much lighter weight and can be run in parallel on the same thread.
+    - Instead of swapping out the entire stack and heap of a thread, coroutines can be paused and resumed at any point in the
+      execution of the coroutine, and can be run on the same thread as other coroutines.
+    - This is due to change in the language and the JVM to support coroutines, and the use of "continuations" to save the state
+      of the coroutine at any point in its execution, and then resume the coroutine from that point at a later time.
+    
+    > Live Code Example: [Coroutines vs Threads 100,000 tasks time comparison](src/main/kotlin/coroutineVsThreadExample.kt)
+    
 - [Continue Reading - Conclusion](./13-Conclusion.md)
 - [Back to Index](README.md)

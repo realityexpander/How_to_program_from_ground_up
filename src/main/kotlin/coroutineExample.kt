@@ -9,12 +9,7 @@ private const val NUMBER_OF_CYCLES = 100 // may need 200 to guarantee the proble
 
 fun main() {
 	coroutineWithUpdateProblem()
-
 	fixedCoroutineUpdateProblemWithAtomicUpdates()
-
-	runBlocking {
-		threadVsCoroutinesPerformanceDifference()
-	}
 }
 
 @OptIn(DelicateCoroutinesApi::class, ExperimentalTime::class)
@@ -116,50 +111,3 @@ fun fixedCoroutineUpdateProblemWithAtomicUpdates() {
 //	Coroutine 2: 6, x=12
 // ...
 // Final value of x: 200, should be 200 // <-- Notice the final value of `x` is correct.
-
-
-// Example of using coroutines and threads to compare performance for 100_000 tasks.
-@OptIn(DelicateCoroutinesApi::class, ExperimentalTime::class)
-suspend fun threadVsCoroutinesPerformanceDifference() {
-	val counter = AtomicInteger(0)
-	val numParallelTasks = 100_000
-
-	println("\nThread vs Coroutines Performance Difference:")
-
-	// Using coroutines
-	println("Coroutines running...")
-	val job = GlobalScope.launch {
-		repeat(numParallelTasks) {
-			launch {
-				counter.incrementAndGet()
-				delay(3.milliseconds)
-			}
-		}
-	}
-	job.join()
-	var startTime = System.currentTimeMillis()
-	println("Coroutines result: ${counter.get()}")
-	println("Time taken: ${System.currentTimeMillis() - startTime}ms")
-
-	// Using threads
-	println("Threads running...")
-	val threadList = List(numParallelTasks) {
-		Thread {
-			counter.incrementAndGet()
-			Thread.sleep(3)
-		}
-	}
-	counter.set(0)
-	startTime = System.currentTimeMillis()
-	threadList.forEach(Thread::start)
-	threadList.forEach(Thread::join)
-	println("\nThreads result: ${counter.get()}")
-	println("Time taken: ${System.currentTimeMillis() - startTime}ms")
-}
-
-// Output:
-//	Coroutines result: 100000
-//	Time taken: 33ms
-//
-//	Threads result: 100000
-//	Time taken: 5956ms
