@@ -56,14 +56,16 @@
       - Factory Pattern
       - Abstract Factory Pattern
       - Adapter Pattern is strongly discouraged, and prefer composition over inheritance.
+      - Facade, Bridge, Proxy and Decorator Patterns are all very similar to the Adapter Pattern and are discouraged.
       - Builder Pattern considered too clumsy, the "Fluent" pattern is preferred 
         - "Fluent Pattern" is where an `object` is modified and returned to the caller to allow for "method chaining."
       - Type-casting is frowned upon, and prefer the use of interfaces or composition as type-casting was only necessary for COP style implementations. 
 
-    > 10 Design Patterns Explained in 10 Minutes
-    > - https://www.youtube.com/watch?v=tv-_1er1mWI
-    > Patterns, Anti-Patterns, and Refactoring
-    > - https://www.youtube.com/watch?v=LrTBIcFhawI
+      > 10 Design Patterns Explained in 10 Minutes
+      > - https://www.youtube.com/watch?v=tv-_1er1mWI
+      
+      > Patterns, Anti-Patterns, and Refactoring - Yegor Bugayenko
+      > - https://www.youtube.com/watch?v=LrTBIcFhawI
   - Other patterns common to COP are disallowed:
     - Use of `null`
     - Use of `static` methods and variables
@@ -79,10 +81,10 @@
   - The main problem with COP is that it's common practices lead to fragile code that was difficult to maintain and
     understand, for similar reasons as to why "Spaghetti Code" is difficult to maintain and understand.
   
-  > The Pain of OOP, Lecture #3: Getters and naked data
+  > The Pain of OOP, Lecture #3: Getters and naked data - Yegor Bugayenko
   > - https://www.youtube.com/watch?v=2YyVmIQQ23w
 
-  > The Pain of OOP, Lecture #5: -ER Suffix is Evil
+  > The Pain of OOP, Lecture #5: -ER Suffix is Evil - Yegor Bugayenko
   > - https://www.youtube.com/watch?v=6GMiosTLUTc 
   
   - Example of BOOP in Kotlin:

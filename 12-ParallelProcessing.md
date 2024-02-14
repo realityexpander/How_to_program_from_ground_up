@@ -1,7 +1,7 @@
 # Parallel Processing
-- ### BIG IDEA - It would be useful if we could do more than one thing at the same time on the same computer.
+  - ### BIG IDEA - It would be useful if we could do more than one thing at the same time on the same computer.
 
-- ## Threads
+## Threads
 - Threads are a way to run multiple "processes" at the same time, and are used to create "parallel" (or "concurrent") programs.
 - Threads are relatively resource-heavy, as each thread requires its own "stack" and "heap" to run, and can be
   challenging to manage and debug when there are many threads running at the same time and sharing mutable state.
@@ -27,8 +27,8 @@
         }
      }
     
-     thread1.start()
-     thread2.start()
+     thread1.start() // <-- `start` tells the thread to start running.
+     thread2.start() // <-- `start` tells the thread to start running.
      thread1.join()  // <-- `join` tells the main thread to wait here until `thread1` is finished.
      thread2.join()  // <-- `join` tells the main thread to wait here until `thread2` is finished.
        
@@ -124,122 +124,122 @@
   ```
   > Live Code Example: [How to Threads Work in Kotlin](src/main/kotlin/threadExample.kt)
 
-- ## Coroutines
+## Coroutines
   - ### BIG IDEA - Is there a way to simulate parallel execution and avoid the complexity of threads? 
   
   - Coroutines are another way to run multiple processes at the same time, just like threads.
-    - Coroutines always run on one or more threads, so threads are still used to run the coroutines, but abstracted away.
+  - Coroutines always run on one or more threads, so threads are still used to run the coroutines, but abstracted away.
   - Coroutines are relatively resource-light and simplify the management of where parts of the program are running, so
     you can have many more coroutines running at the same time than you can have threads. 
   - Coroutines are built-in to the Kotlin language, and are a first-class citizen. Use of coroutines is built-into
     the standard libraries and leveraged by the language itself. 
     
-    - ### Example Coroutines in Kotlin (has a race condition problem):
-      ```Kotlin
-      import kotlinx.coroutines.*  // <-- import the `kotlinx.coroutines` library to use coroutines.
-      
-      fun main() {
-         var x = 0
-         
-         val job1 = GlobalScope.launch {  // <-- `job1` is immediately started ("launched") to run in the main thread (GlobalScope).
-            for (i in 1..NUMBER_OF_CYCLES) {
-               x++
-               println("Coroutine 1: $i, x=$x")
-               delay(10.milliseconds)
-            }
-         }
-         val job2 = GlobalScope.launch {  // <-- `job2` is immediately started ("launched") to run in the main thread (GlobalScope).
-            for (i in 1..NUMBER_OF_CYCLES) {
-               x++
-               println("Coroutine 2: $i, x=$x")
-               delay(10.milliseconds)
-            }
-         }
-         
-         runBlocking {
-            job1.join()  // <-- `join` tells the main thread to wait here until `job1` is finished.
-            job2.join()  // <-- `join` tells the main thread to wait here until `job2` is finished.
-         }
-         
-         println("Final value of x: $x, should be ${NUMBER_OF_CYCLES * 2}")
-      }
-      
-      // Output:
-      // Coroutine 2: 1, x=1
-      // Coroutine 1: 1, x=2
-      // Coroutine 2: 2, x=3
-      // Coroutine 1: 2, x=4
-      // Coroutine 2: 3, x=5
-      // Coroutine 1: 3, x=6
-      // Coroutine 2: 4, x=7
-      // Coroutine 1: 4, x=8
-      // Coroutine 2: 5, x=9
-      // Coroutine 1: 5, x=10
-      // Coroutine 2: 6, x=11
-      // Coroutine 1: 6, x=12
-      // Coroutine 1: 7, x=14 // <-- Notice the order of the output is inconsistent, as the coroutines run concurrently.
-      // ...
-      // Coroutine 1: 8, x=14 // <-- Notice the value of `x` is inconsistently incrementing, as the updates are NOT "atomic."
-      // Coroutine 2: 8, x=14
-      // Coroutine 1: 9, x=16
-      // Coroutine 2: 9, x=17
-      // ...
-      // Coroutine 2: 99, x=192
-      // Coroutine 1: 99, x=193
-      // Coroutine 1: 100, x=194
-      // Coroutine 2: 100, x=195
-      // Final value of x: 195, should be 200 // <-- Notice final value of `x` is 195, not the expected 200. This is a race condition.
-      ```
-      > Live Code Example: [How Coroutines Work in Kotlin](src/main/kotlin/coroutineExample.kt)
-
-    - ### Fixing the Coroutine race condition problem using "Atomic" updates (using `StateFlow` class)
-      ```Kotlin
-       fun main() {
-          val x = MutableStateFlow(0)
+  - ### Example Coroutines in Kotlin (has a race condition problem):
+    ```Kotlin
+    import kotlinx.coroutines.*  // <-- import the `kotlinx.coroutines` library to use coroutines.
+    
+    fun main() {
+       var x = 0
        
-          println("\nFixed Coroutine Update Problem using Atomic updates (StateFlow)")
-             
-          val job1 = GlobalScope.launch { // <-- `job1` is immediately started ("launched") to run in the main thread (GlobalScope).
-             for (i in 1..NUMBER_OF_CYCLES) {
-                x.update { it + 1}  // <-- `update` tells the execution to wait here until the updating lock is released.
-                println("Coroutine 1: i=$i, x=${x.value}")
-                delay(10.milliseconds)
-             }
+       val job1 = GlobalScope.launch {  // <-- `job1` is immediately started ("launched") to run in the main thread (GlobalScope).
+          for (i in 1..NUMBER_OF_CYCLES) {
+             x++
+             println("Coroutine 1: $i, x=$x")
+             delay(10.milliseconds)
           }
-             
-          val job2 = GlobalScope.launch { // <-- `job2` is immediately started ("launched") to run in the main thread (GlobalScope).
-             for (i in 1..NUMBER_OF_CYCLES) {
-                x.update { it + 1}  // <-- `update` tells the execution to wait here until the updating lock is released.
-                println("Coroutine 2: i=$i, x=${x.value}")
-                delay(10.milliseconds)
-             }
+       }
+       val job2 = GlobalScope.launch {  // <-- `job2` is immediately started ("launched") to run in the main thread (GlobalScope).
+          for (i in 1..NUMBER_OF_CYCLES) {
+             x++
+             println("Coroutine 2: $i, x=$x")
+             delay(10.milliseconds)
           }
-             
-          runBlocking {
-             job1.join()  // <-- `join` tells the main thread to wait here until `job1` is finished.
-             job2.join()  // <-- `join` tells the main thread to wait here until `job2` is finished.
-          }
-             
-          println("Final value of x: ${x.value}, should be ${NUMBER_OF_CYCLES * 2}")
        }
        
-       // Output:
-       // Fixed Coroutine Update Problem
-       // Coroutine 2: 1, x=2
-       // Coroutine 1: 1, x=1
-       // Coroutine 2: 2, x=4
-       // Coroutine 1: 2, x=3
-       // Coroutine 2: 3, x=5
-       // Coroutine 1: 3, x=6  // <-- Notice that the order of the output is inconsistent, as the coroutines run concurrently.
-       // Coroutine 1: 4, x=8
-       // Coroutine 2: 4, x=7  // <-- Notice the value of `x` IS consistently incrementing, as the updates are `atomic`.
-       // Coroutine 1: 5, x=9
-       // Coroutine 2: 5, x=10
-       // Coroutine 2: 6, x=12
-       // ...
-       // Final value of x: 200, should be 200 // <-- Notice the final value of `x` is correct.
-      ```
-      > Live Code Example: [How Coroutines Work in Kotlin](src/main/kotlin/coroutineExample.kt)
+       runBlocking {
+          job1.join()  // <-- `join` tells the main thread to wait here until `job1` is finished.
+          job2.join()  // <-- `join` tells the main thread to wait here until `job2` is finished.
+       }
+       
+       println("Final value of x: $x, should be ${NUMBER_OF_CYCLES * 2}")
+    }
+    
+    // Output:
+    // Coroutine 2: 1, x=1
+    // Coroutine 1: 1, x=2
+    // Coroutine 2: 2, x=3
+    // Coroutine 1: 2, x=4
+    // Coroutine 2: 3, x=5
+    // Coroutine 1: 3, x=6
+    // Coroutine 2: 4, x=7
+    // Coroutine 1: 4, x=8
+    // Coroutine 2: 5, x=9
+    // Coroutine 1: 5, x=10
+    // Coroutine 2: 6, x=11
+    // Coroutine 1: 6, x=12
+    // Coroutine 1: 7, x=14 // <-- Notice the order of the output is inconsistent, as the coroutines run concurrently.
+    // ...
+    // Coroutine 1: 8, x=14 // <-- Notice the value of `x` is inconsistently incrementing, as the updates are NOT "atomic."
+    // Coroutine 2: 8, x=14
+    // Coroutine 1: 9, x=16
+    // Coroutine 2: 9, x=17
+    // ...
+    // Coroutine 2: 99, x=192
+    // Coroutine 1: 99, x=193
+    // Coroutine 1: 100, x=194
+    // Coroutine 2: 100, x=195
+    // Final value of x: 195, should be 200 // <-- Notice final value of `x` is 195, not the expected 200. This is a race condition.
+    ```
+    > Live Code Example: [How Coroutines Work in Kotlin](src/main/kotlin/coroutineExample.kt)
+
+  - ### Fixing the Coroutine race condition problem using "Atomic" updates (using `StateFlow` class)
+    ```Kotlin
+     fun main() {
+        val x = MutableStateFlow(0)
+     
+        println("\nFixed Coroutine Update Problem using Atomic updates (StateFlow)")
+           
+        val job1 = GlobalScope.launch { // <-- `job1` is immediately started ("launched") to run in the main thread (GlobalScope).
+           for (i in 1..NUMBER_OF_CYCLES) {
+              x.update { it + 1}  // <-- `update` tells the execution to wait here until the updating lock is released.
+              println("Coroutine 1: i=$i, x=${x.value}")
+              delay(10.milliseconds)
+           }
+        }
+           
+        val job2 = GlobalScope.launch { // <-- `job2` is immediately started ("launched") to run in the main thread (GlobalScope).
+           for (i in 1..NUMBER_OF_CYCLES) {
+              x.update { it + 1}  // <-- `update` tells the execution to wait here until the updating lock is released.
+              println("Coroutine 2: i=$i, x=${x.value}")
+              delay(10.milliseconds)
+           }
+        }
+           
+        runBlocking {
+           job1.join()  // <-- `join` tells the main thread to wait here until `job1` is finished.
+           job2.join()  // <-- `join` tells the main thread to wait here until `job2` is finished.
+        }
+           
+        println("Final value of x: ${x.value}, should be ${NUMBER_OF_CYCLES * 2}")
+     }
+     
+     // Output:
+     // Fixed Coroutine Update Problem
+     // Coroutine 2: 1, x=2
+     // Coroutine 1: 1, x=1
+     // Coroutine 2: 2, x=4
+     // Coroutine 1: 2, x=3
+     // Coroutine 2: 3, x=5
+     // Coroutine 1: 3, x=6  // <-- Notice that the order of the output is inconsistent, as the coroutines run concurrently.
+     // Coroutine 1: 4, x=8
+     // Coroutine 2: 4, x=7  // <-- Notice the value of `x` IS consistently incrementing, as the updates are `atomic`.
+     // Coroutine 1: 5, x=9
+     // Coroutine 2: 5, x=10
+     // Coroutine 2: 6, x=12
+     // ...
+     // Final value of x: 200, should be 200 // <-- Notice the final value of `x` is correct.
+    ```
+    > Live Code Example: [How Coroutines Work in Kotlin](src/main/kotlin/coroutineExample.kt)
       
 - [Continue Reading - Conclusion](./13-Conclusion.md)
 - [Back to Index](README.md)
