@@ -129,9 +129,9 @@
   - ### Big IDEA — How can we use diagrams and drawings to communicate about software designs? 
   
   - ### The Line, The Box and The Layers
-    - At the time when structured programming became popular, the concept of "Software Design" was developed to help
-      people create more complex software systems with more complex requirements and coordinating work with larger 
-      teams of people working together in the same codebase.
+    - At the time when structured programming became popular, ideas around "Software Design" were developed to help
+      people create more complex software systems with increasingly more complex requirements and coordinating work 
+      with larger teams of people working together a shared codebase.
     > - Software Design: Ep1 : 1st law of Software Design (The Box)
     >   - https://www.youtube.com/watch?v=2icF3vvsxH8
     > - Software Design: Ep2 : 2nd Law of Software Design (The Line)
