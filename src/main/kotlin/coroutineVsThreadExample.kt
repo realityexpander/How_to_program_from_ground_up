@@ -20,30 +20,32 @@ suspend fun threadVsCoroutinesPerformanceDifference() {  // <-- `suspend` keywor
 	// Using coroutines
 	println("Coroutines running...")
 	val job = GlobalScope.launch {
-		repeat(numParallelTasks) {
-			launch {
-				counter.incrementAndGet()
+		repeat(numParallelTasks) {// <-- `repeat` runs the given task 100_000 times.
+			launch {// <-- `launch` creates a new coroutine with the given task.
+				// The task:
+				counter.incrementAndGet() // <-- this is the task.
 				delay(3.milliseconds)
 			}
 		}
 	}
-	job.join()
 	var startTime = System.currentTimeMillis()
+	job.join()  // <-- `join` waits for the coroutine to finish.
 	println("Coroutines result: ${counter.get()}")
 	println("Time taken: ${System.currentTimeMillis() - startTime}ms")
 
 	// Using threads
 	println("\nThreads running...")
-	val threadList = List(numParallelTasks) {
-		Thread {
+	val threadList = List(numParallelTasks) {// <-- `List` creates a list of 100_000 elements.
+		Thread {  // <-- `Thread` creates a new thread with the given task.
+			// The task:
 			counter.incrementAndGet()
 			Thread.sleep(3) // 3ms
 		}
 	}
 	counter.set(0)
 	startTime = System.currentTimeMillis()
-	threadList.forEach(Thread::start)
-	threadList.forEach(Thread::join)
+	threadList.forEach(Thread::start)  // <-- `start` starts running the task in a new thread.
+	threadList.forEach(Thread::join) // <-- `join` waits for the thread to finish.
 	println("\nThreads result: ${counter.get()}")
 	println("Time taken: ${System.currentTimeMillis() - startTime}ms")
 }
