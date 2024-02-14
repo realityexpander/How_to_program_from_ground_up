@@ -30,10 +30,10 @@
         >   - https://www.youtube.com/watch?v=N9c7_8Gp7gI
         
         > We Were So Lucky Alan Kay
-        > - https://www.youtube.com/watch?v=ktPCH_p80e4
+        >   - https://www.youtube.com/watch?v=ktPCH_p80e4
         
         > Seminar with Alan Kay on Object Oriented Programming (VPRI 0246)
-        > - https://www.youtube.com/watch?v=QjJaFG63Hlo
+        >   - https://www.youtube.com/watch?v=QjJaFG63Hlo
   
   - All state is fully retained in the `object` and methods are used to "send messages" to the `object` to
     change its state. This "messaging" metaphor stands up because internal state is not directly accessible. You
@@ -66,6 +66,7 @@
       
       > Patterns, Anti-Patterns, and Refactoring - Yegor Bugayenko
       > - https://www.youtube.com/watch?v=LrTBIcFhawI
+  
   - Other patterns common to COP are disallowed:
     - Use of `null`
     - Use of `static` methods and variables
@@ -75,7 +76,7 @@
     - Mutable State - All state in BOOP is immutable, and the object is expected to return a new object with the new state.
     - Classes ending with -er that mutate data passed in without retaining state internal to the object.
       - Like `Manager`, `Controller`, `Handler`, `Processor`, `Updater`, `Setter`, `Getter`, `Modifier`, `Changer`, etc.
-  - Amazingly, the dreaded Singleton Pattern _is allowed_ to manage global state in BOOP.
+  - Amazingly, the dreaded Singleton Pattern _is allowed_ to manage global state in BOOP, but not `static` variables or methods.
   
 ## Why is Class-Oriented Programming (COP) Bad? <a name="why-is-cop-bad"></a>
   - The main problem with COP is that it's common practices lead to fragile code that was difficult to maintain and
@@ -172,7 +173,8 @@
        // Create the application object using the book object 
        var app = Application(book) // <-- The "var" keyword means the variable is mutable,
                                    //     `app` is a "var" because it's expected to change state.
-                                   // Every other variable is a "val" and is immutable.
+                                   // `app` is using the Singleton pattern, and it's allowed in BOOP, as its 
+                                   // state is immutable.
     
        app.view()  // <-- will print:
                    // Application Viewing: MyBook.txtimp
