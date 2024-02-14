@@ -57,8 +57,9 @@
       - Abstract Factory Pattern
       - Visitor Pattern
       - Command Pattern
-      - Builder Pattern, fluent pattern is preferred (`return` the object passed-in to allow for chaining of method calls.)
-    
+      - Builder Pattern considered too clumsy, the "Fluent" pattern is preferred 
+        - "Fluent Pattern" is where an `object` is modified and returned to the caller to allow for "method chaining."
+
     > 10 Design Patterns Explained in 10 Minutes
     > - https://www.youtube.com/watch?v=tv-_1er1mWI
     > Patterns, Anti-Patterns, and Refactoring
