@@ -429,7 +429,7 @@
         hacks to fit the "procedural approach" into the "COP" paradigm.
       - The promise of "reusability" was not fulfilled by COP languages.
         > - Banana, Monkey, Jungle Problem
-            >   - https://crystal-villanueva.medium.com/the-banana-and-the-gorilla-problem-92c9a4717fd6
+        >   - https://crystal-villanueva.medium.com/the-banana-and-the-gorilla-problem-92c9a4717fd6
 
 ## Abstract Classes = The Name of a "Category or Group"  <a name="abstract-classes"></a>
   - ### BIG IDEA — Lets have a class that defines a general category of objects, but doesn't define the implementation details of the objects. That way we can create many different kinds of objects that all have the same "method signature," but have different implementations of the methods.
