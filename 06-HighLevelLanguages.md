@@ -1,4 +1,5 @@
 # High-Level Languages (1957-Present) <a name="high-level-languages"></a>
+###### high-level-languages
   - ### BIG IDEA - English-like commands are easier for people to read and understand than cryptic assembly language.
   
   - High-level meaning more friendly to humans to work with, not necessarily more powerful or faster for the 
@@ -12,12 +13,14 @@
     easier to learn and use than Assembly Language.
     
 ## Programming Styles <a name="programming-styles"></a>
+###### programming-styles
   - The first programming styles were direct descedants of assembly language, and worked in the same way.
   - This way of working is generally referred to as "imperative" programming, as the programmer is giving the
     computer the exact set of steps to perform to solve a problem. There is another style of programming called
     "declarative" which we shall discuss later.
 
 # Procedural Programming Style (1957-Present) <a name="procedural-programming"></a>
+###### procedural-programming
   - ### BIG IDEA - Using `GOTOs` to jump around the program was an unscalable idea leading to unmaintainable code! We need to a better way!
   
   - Procedural code is executed top to bottom, one line at a time. 
@@ -34,11 +37,12 @@
   - Some examples of Procedural languages are "Fortran" and "BASIC" and "COBOL."
 
   - ## Example of the Problem with Abusing the `GOTO` Command in Procedural Programming Style BASIC  <a name="abusing-goto"></a>
+  - ###### abusing-goto
       ```Text
       5 REM PROGRAM TO ADD 2 NUMBERS, PRINT RESULT <-- "REM" is a "remark" or "comment"
-      10 LET X = 10   <-- "LET" is a "statement" that assigns a value to a variable
+      10 LET X = 10   <-- "LET" is a "statement" that assigns a value to a variable, all variables are global and mutable.
       20 LET Y = 32
-      30 GOTO 100     <-- "GOTO" is a "statement" that changes the next line to execute to a different line
+      30 GOTO 100     <-- "GOTO" is a "statement" that changes the next line to execute to a different line.
       40 PRINT "Output: "; Z
       50 GOTO 150
       60 IF X = 10 THEN GOTO 190
@@ -62,6 +66,7 @@
       - [Click for source code to copy and paste into the BASIC playground: `proceduralWithGoto.bas`](assets/proceduralWithGoto.bas)
 
   - ## Solution: The Painful Push for Subroutines & Some Structure <a name="solution-subroutines"></a>
+    - ###### solution-subroutines
     - ### BIG IDEA - Reusable functions and procedures to avoid "spaghetti code" and enable working on teams. 
     
     - Programmers were eventually forced into using "subroutines" to deal with extreme overuse of `JUMP` and `GOTO`
@@ -100,6 +105,7 @@
       - [Click for source code to copy and paste into the BASIC playground: `proceduralWithGosub.bas`](assets/proceduralWithGosub.bas)
   
   - ## Problem: Naive Solutions to Common Programmer Problems Lead to for High-Level Language Features <a name="naive-solutions"></a>
+    - ###### naive-solutions
     - One problem with the low-level languages is that every programmer was left to their own creativity in how to
       structure their code, and this lead to a lot of "reinventing the wheel" and strange solutions that were hard to
       understand and maintain.
@@ -162,6 +168,7 @@
     - [Click for source code to copy and paste into the BASIC playground: `proceduralUnrolledLoops.bas`](assets/proceduralUnrolledLoops.bas)
 
   - ## Problem: Imperative "Looping" Style Leftover From Assembly Language <a name="problem-imperative-looping"></a>
+    - ###### problem-imperative-looping
     - An example of common way of creating loops was to use `GOTO` and variables as indexes (also called "counters" or "iterators" or "loop variables")
     - In this case, its easy to see that the variable "A" is being used as an index to control the loop 
       that repeats the code between line 20 and 50, 10 times.
@@ -196,11 +203,14 @@
       ```
     - [Click for source code to copy and paste into the BASIC playground: `proceduralProgrammerMadeLoops.bas`](assets/proceduralProgrammerMadeLoops.bas)
 
-  - ## Solution: Use High-Level Language Commands Like `FOR` to Create a Loop instead of `GOTO` and `IF` <a name="solution-declarative-for-loop"></a>
+  - ## Solution: Use High-Level Language Command (Like `FOR`,) to Create a "Standard" Loop instead of `GOTO` and `IF` <a name="solution-declarative-for-loop"></a>
+    - ###### solution-declarative-for-loop
     - ### BIG IDEA - We can standardize common use-cases (like looping) into the language to reduce programming time, communicate intent of code to other people and minimize errors.
     
     - The `FOR` "loop" command was introduced to replace the programmer-implemented `GOTO` looping 
       implementations, as an attempt to make procedural code more structured and readable.
+    - Now, when a programmer sees the `FOR` command, they know that a loop is being created, and they can 
+      easily understand the structure of the loop, saving time and reducing errors.
     - Using `FOR` in this way is much easier to understand and maintain than the previous examples.
     - Using the language command `FOR` in this way is also called `declarative` programming, as the programmer is 
       declaring what they want to happen, rather than imperatively telling the computer what to do step by step.

@@ -3,6 +3,7 @@
   - ### BIG IDEA — How do we talk about these things with other people efficiently and effectively?
 
 ## Algorithms - How are we gonna solve this? <a name="algorithms"></a>
+###### algorithms
   - ### BiG IDEA - Let's give names to the clever ways we humans have found to solve problems.
 
   - Algorithms are just a set of instructions that are used to solve a problem or perform a task, all based on the
@@ -23,6 +24,7 @@
     >   - https://www.youtube.com/watch?v=RfXt_qHDEPw
 
 ## Time Complexity - How long is this gonna take? <a name="time-complexity"></a>
+##### time-complexity
   - ### BiG IDEA — Let's have a standard way to communicate about how long an algorithm or program will take to execute.
   
   - The "time complexity" of a program is a measure of how the "running time" of the program grows as the "input size"
@@ -45,6 +47,7 @@
         >   - https://www.youtube.com/watch?v=XMUe3zFhM5c
   
   - ### Shorthand Guide & Sample Code <a name="time-complexity-example"></a>
+    - ###### time-complexity-example
     - If you are doing a simple lookup in an array, it's O(1) because the time it takes to find the value in the array
       does not change as the size of the array grows.
     - If you are looping over items, it's O(n) because the time it takes to loop over the items grows as the size of the
@@ -126,6 +129,7 @@
         > Live Code Example: [Time Complexity Example](src/main/kotlin/timeComplexityExample.kt)
 
 ## Communicating Software Designs Visually <a name="communicating-software-designs"></a>
+##### communicating-software-designs
   - ### BIG IDEA — How can we use drawings and diagrams to visually communicate about software designs? 
   
   - ### The Line, The Box and The Conceptual Layers
