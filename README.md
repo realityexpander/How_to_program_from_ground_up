@@ -1,4 +1,4 @@
-# How to Program From The Ground Up with Minimal BS
+# How to Program From The Bottom Up (with Minimal BS)
 
 ## Table of Contents
 - [Introduction](#introduction)
