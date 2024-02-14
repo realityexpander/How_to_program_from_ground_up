@@ -600,7 +600,11 @@
     abstractPrintContentMethod -- expects --> ExcelFileClassPrintContentMethod:::Object
     ExcelFileClassAgeInt -- implements --> abstractAgeInt:::Abstract
   
-    note["`EXPLANATION: The ExcelFile Object @19FCA68D is an instance of the ExcelFile class, and the ExcelFile class is a subclass of the abstract File class.`"]
+    note["EXPLANATION: 
+          The ExcelFile Object @19FCA68D 
+          is an instance of the ExcelFile class.
+          ExcelFile class is a subclass of the 
+          abstract File class."]
     
     classExcelFile -- "instantiates 
                        object" --> ExcelFileObject:::Object
