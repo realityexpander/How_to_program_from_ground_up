@@ -93,8 +93,8 @@
          flowchart LR
           
          catClass -- "
-            creates 
-            (instantiates)
+                creates 
+             (instantiates)
             object in memory
       " --> catObject:::Object
          subgraph catObject["Object “Cat” 🐈 @BFFC882A"]
