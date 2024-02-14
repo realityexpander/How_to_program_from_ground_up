@@ -1,4 +1,4 @@
-## Functional Programming 1950s-Present
+## Functional Programming 1950s-Present (FP) <a name="FunctionalProgramming"></a>
   - ### BIG IDEA - Shared mutable state is a complex problem, especially for parallel processing task. 
 
   - ### The Functional style requires:
@@ -13,7 +13,7 @@
     - #### SEE WHAT I MEAN WITH ALL THE NAMES FOR THE SAME THING?
       - Please stop with all the names for the same old stuff!!!!!   
 
-- ### Immutability & No Side Effects
+- ### Immutability & No Side Effects <a name="ImmutabilityNoSideEffects"></a>
   - Mutability means something can be changed, and immutability means it cannot be changed once it's created.
     - Functional Programming style's main idea is to avoid "side effects" and "shared mutable state" of the program.
     - One way is to is to make the state of the program unchangeable. Changes can only be made by creating a new state

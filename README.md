@@ -1,5 +1,6 @@
 # How to Program From The Ground Up with Minimal BS
 
+## Table of Contents
 - [Introduction](#introduction)
 - [The Essence of Computing](02-TheEssentialQuestion-WhatAreWeComputing)
 - [Hardware](03-Hardware)
@@ -74,11 +75,17 @@
   - [Allowing for "Multiple Inheritance" in C++ was a mistake, and it was removed from Java and C# for very good reasons](multiple-inheritance-removed)
   - [Design Patterns](09-ClassOrientedProgramming.md#design-patterns)
 - [Back-to-Object Oriented Programming](10-BackToObjectOrientedProgramming.md)
-  - [Banned Patterns in BOOP](banned-patterns-in-boop)
+  - [Banned Patterns in BOOP](10-BackToObjectOrientedProgramming.md#banned-patterns-in-boop)
   - [Why is Class-Oriented Programming (COP)](10-BackToObjectOrientedProgramming.md#why-is-cop-bad)
   - [Back-to Object Oriented Programming Example](10-BackToObjectOrientedProgramming.md#boop-example)
 - [Functional Programming](11-FunctionalProgramming.md)
-  - 
+  - [Functional Programming Style](11-FunctionalProgramming.md#FunctionalProgramming)
+  - [Immutability & No Side Effects](11-FunctionalProgramming.md#ImmutabilityNoSideEffects)
+- [Parallel Processing (Concurrent Programming)](12-ParallelProcessing.md)
+  - [Threads](12-ParallelProcessing.md#threads)
+  - [Atomic Updates](12-ParallelProcessing.md#AtomicUpdates)
+  - [Coroutines](12-ParallelProcessing.md#coroutines)
+  - [Coroutines are Much Faster Than Threads](12-ParallelProcessing.md#CoroutinesVsThreads)
 
 ## Introduction
   - How to guide for budding software engineers who need a primer overview of software development concepts 

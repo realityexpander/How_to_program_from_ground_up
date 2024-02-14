@@ -1,7 +1,7 @@
-# Parallel Processing
+# Parallel Processing (Concurrent Programming) <a name="ParallelProcessing"></a>
   - ### BIG IDEA - It would be useful if we could do more than one thing at the same time on the same computer.
 
-## Threads
+## Threads <a name="Threads"></a>
 - Threads are a way to run multiple "processes" at the same time, and are used to create "parallel" (or "concurrent") programs.
 - Threads are relatively resource-heavy, as each thread requires its own "stack" and "heap" to run, and can be
   challenging to manage and debug when there are many threads running at the same time and sharing mutable state.
@@ -62,7 +62,7 @@
   ``` 
   > Live Code Example: [How Threads Work in Kotlin](src/main/kotlin/threadExample.kt)
 
-- ### Fixing the threads "race condition" problem using "Atomic" updates (`synchronized` keyword)
+- ### Fixing the threads "race condition" problem using "Atomic" updates (`synchronized` keyword) <a name="AtomicUpdates"></a>
   ```Kotlin
   fun main() {
      var x = 0
@@ -124,8 +124,8 @@
   ```
   > Live Code Example: [How to Threads Work in Kotlin](src/main/kotlin/threadExample.kt)
 
-## Coroutines
-  - ### BIG IDEA - Is there a way to simulate parallel execution and avoid the complexity of threads? 
+## Coroutines <a name="Coroutines"></a>
+  - ### BIG IDEA - Is there a way to simulate parallel execution and avoid the complexity and overhead of threads?
   
   - Coroutines are another way to run multiple processes at the same time, just like threads.
   - Coroutines always run on one or more threads, so threads are still used to run the coroutines, but abstracted away.
@@ -192,7 +192,7 @@
     ```
     > Live Code Example: [How Coroutines Work in Kotlin](src/main/kotlin/coroutineExample.kt)
 
-  - ### Fixing the Coroutine race condition problem using "Atomic" updates (using `StateFlow` class)
+  - ### Fixing the Coroutine race condition problem using "Atomic" updates (using `StateFlow` class) <a name="AtomicUpdatesCoroutines"></a>
     ```Kotlin
      fun main() {
         val x = MutableStateFlow(0)
@@ -241,7 +241,7 @@
     ```
     > Live Code Example: [How Coroutines Work in Kotlin](src/main/kotlin/coroutineExample.kt)
   
-## Coroutines are Much Faster Than Threads
+## Coroutines are Much Faster Than Threads <a name="CoroutinesVsThreads"></a>
   - ### BIG IDEA - Coroutines are much faster than threads, as they are much lighter weight and can be run in parallel on the same thread.
   
   - Instead of swapping out the entire stack and heap of a thread each time the task is swapped, coroutines can be 
