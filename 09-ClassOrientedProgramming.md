@@ -726,8 +726,7 @@
          When “Cog” makes a sound, 
          (ie: method “makeSound()” is called on object Cog) 
          Does it “Meow” or “Bark?”"
-         🐈+🐕=⚙️???
-    ))) 
+         ))) 
       ```
   - Example of an attempt to use "Multiple Inheritance" in C++:
     ```C++
