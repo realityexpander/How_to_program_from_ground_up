@@ -4,6 +4,7 @@
 # Low Level Hardware Implementations
 
 ## The Wire & the Battery — 1800's to present <a name="the-wire--the-battery"></a>
+###### the-wire--the-battery
   - ### BIG IDEA — A wire can be used to represent a logical "state"
   - Is electricity flowing or not flowing?
   - This is the most basic representation of a state in computing, and the underlying principle of all modern computing.
@@ -17,7 +18,8 @@
   >  - https://www.youtube.com/watch?v=_voN5_NUQIc
   >> Note: A light bulb is basically a wire in a vacuum that gets white hot and glows when electricity flows through it.
 
-## The Simple Switch & Light Bulb — 1830's to present <a name="the-simple-switch"></a>
+## The Simple Switch & Light Bulb — 1830's to present <a name="the-simple-switch">
+###### the-simple-switch
   - ### BIG IDEA — A switch can be used to represent a logic "state".
       - This is the most basic representation of a "state" in computing
       - Easier to manipulate for humans than a bare wire
@@ -79,6 +81,7 @@
     - ### We need the light bulb to on when the switch is off, and off when the switch is on, BUT HOW TO DO THAT?
 
 ## The Magnificent Electromagnet — 1825 to present <a name="the-magnificent-electromagnet"></a>
+###### the-magnificent-electromagnet
    - ### BIG IDEA — An electrical current can cause mechanical actions with certain metallic materials.
      1) To physically manipulate the physical world, like a motor or a solenoid.
      2) To induce a magnetic field to represent a "state," like magnetic tape or a hard drive.
@@ -102,7 +105,8 @@
      > Magnetic Core Memory
      >   - https://www.youtube.com/watch?v=paQ3zIsz1-8
 
-# The Raucous Relay — 1835 to 1920's <a name="the-raucous-relay"></a>
+## The Raucous Relay — 1835 to 1920's <a name="the-raucous-relay"></a>
+###### the-raucous-relay
    - ### BIG IDEA — Use an electromagnet to control a switch (or multiple switches.)
    
    - The first electrical computers were made of relays (extremely slow but faster than calculating manually!)
@@ -134,6 +138,7 @@
      >   - https://youtu.be/OZXwNiJ7mtw
 
 ## The Voracious Vacuum Tube — 1904 to 1960's <a name="the-voracious-vacuum-tube"></a>
+###### the-voracious-vacuum-tube
    - ### BIG IDEA — Instead of using a magnetic field to control a switch, we can use a vacuum to control the flow of electricity, in a way that works just like a switch.
 
      [<img src="assets/vacuum_tube.png" width="400">](https://en.wikipedia.org/wiki/Vacuum_tube)
@@ -177,6 +182,7 @@
    - #### The vacuum tube is voracious because it consumes a lot of power to heat the cathode and generates a lot of excess heat.
 
 ## The Tiny Transistor - 1957 to present <a name="the-tiny-transistor"></a>
+###### the-tiny-transistor
    - ### BIG IDEA — Instead of using an electrically heated wire and vacuum to control the flow of electricity, we can use an economical semiconductor material and reduce energy and size by a factor of 100.
    
      [<img src="assets/transistor_vs_tube.png" width="400">](https://www.youtube.com/watch?v=DXvAlwMAxiA)
@@ -235,6 +241,7 @@
          >   - https://youtu.be/KM0DdEaY5sY
 
 ## The Interchangeable Integrated Chip (IC) — 1960's to present <a name="the-interchangeable-integrated-chip-ic"></a>
+###### the-interchangeable-integrated-chip-ic
   - ### BIG IDEA — We can use photographic techniques to create thousands of transistors on a single chip and radically reduce the costs of manufacture and assembly of computing devices and increase functionality and reliability.
   
   - This allows creating large groups of transistor logic gates packaged together to perform a specific task.
@@ -302,6 +309,7 @@
     >   >   - https://www.youtube.com/watch?v=hEDQpqhY2MA
 
   - ### Why are NAND gates special?
+    - ###### nand-gates
     - ### BIG IDEA - NAND gates are known as universal gates, because you can make any other gates out of them. 
      
       [<img src="assets/NAND_equivalent.png" width="300">](assets/NAND_equivalent.png)
@@ -322,7 +330,7 @@
       >   - https://www.youtube.com/watch?v=7zffjsXqATg
 
 ## The Mighty Microprocessor — 1971 to present <a name="the-mighty-microprocessor"></a>
-  - ###### the-mighty-microprocessor
+###### the-mighty-microprocessor
   - ### BIG IDEA — Consolidate all the necessary components from various Integrated Chips required for a computer onto a single chip.
   
     [<img src="assets/6502.png" width="400">](https://en.wikipedia.org/wiki/MOS_Technology_6502)
@@ -346,6 +354,7 @@
   - CPUs are where the execution of each instruction happens.
 
 ## The Configurable Computer <a name="the-configurable-computer"></a>
+###### the-configurable-computer
   - ### BIG IDEA — Instead of putting all the functions for a task into a single computer, define for a standardized interface to connect different devices to perform a task.  
     
   - By arranging the basic electronic components in particular patterns to achieve a specific narrow specialized task,

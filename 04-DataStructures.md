@@ -15,7 +15,8 @@
   > - 10 Math Concepts for Programmers
   >   - https://www.youtube.com/watch?v=bOCHTHkBoAs
 
-## Numbers or Individual Characters? Or something else? <a name="numbers"></a> 
+## Numbers or Individual Characters? Or something else? <a name="numbers"></a>
+###### numbers
 - ### BIG IDEA - Everything in a computer is represented as a series of "bits" (1s and 0s) in memory.
 
 ### Number (Integer or Floating Point)
@@ -45,6 +46,7 @@
       >   - https://www.youtube.com/watch?v=2gIxbTn7GSc
   
 ### Characters/Letters are usually represented in ASCII (1 byte) or Unicode(1 or more bytes) <a name="characters"></a>
+###### characters
   - ### BIG IDEA - Characters are just numbers that represent letters and symbols.
   
   - ASCII is a 1 byte (8 bit) representation of the most common letters and symbols.
@@ -61,7 +63,8 @@
   - `01010101` could represents votes of 8 people, or 8 switch settings, or some kind of status for 8 different sensors.
   - The same eight bits can represent many different things, it's just a matter of how humans want to interpret the meaning of the bits.
 
-# Common Data Structures used in Programming
+# Common Data Structures used in Programming <a name="data-structures"></a>
+###### data-structures
   - ### BIG IDEA — Giving names to common ways of representing data in memory makes it easier for people to communicate with each other about what the data represents.
   
   - These various ways of representing things is called "type"
@@ -76,6 +79,7 @@
       >   - https://www.cs.usfca.edu/~galles/visualization/Algorithms.html
 
 ## Array (1D, 2D, 3D, etc.) <a name="array"></a>
+###### array
   - ### BIG IDEA - Arrays are a way to represent a "list" of values in memory. Computers are really good at processing lists!
   
   - A way to represent a "list" of values in memory.
@@ -100,6 +104,7 @@
   >   - Yeah this not confusing at all!!!
 
 ## String (Array of Characters) <a name="string"></a>
+###### string
   - ### BIG IDEA - Strings are just a way to represent a list of single letters (characters) in memory, "strung" together to represent words and sentences and paragraphs and documents.
 
   - A way to represent a list of single letters (characters) in memory, "strung" together to represent words and
@@ -114,6 +119,7 @@
 
 
 ## Pointer <a name="pointer"></a>
+###### pointer
   - ### BIG IDEA - A value that represents the "address" of another location in memory
   - A Pointer's value "points-to" the address of another location in memory.
   - Diagram:
@@ -148,6 +154,7 @@
     ```
 
 ## "Data Structures" or just "Structures" <a name="data-structures"></a>
+###### data-structures
   - ### BIG IDEA - We can represent anything in memory as a "structured" list of more basic types.
   
   - Also known as "Records," "Data Classes," "Data Objects," "Data Types," "Data Models," or "Data Entities"
@@ -179,6 +186,7 @@
      ```
 
 ## Stack <a name="stack"></a>
+###### stack
   - ### BIG IDEA - A way to represent a "last in, first out" list of things in memory, similar to a stack of dinner plates.
   
   - Stacks of values are useful in sorting and searching algorithms, and lots of other algorithms.
@@ -194,6 +202,7 @@
     >   - https://www.youtube.com/watch?v=toRJakeYIKA
 
 ## Queue <a name="queue"></a>
+###### queue
   - ### BIG IDEA - A way to represent a "first in, first out" list of values in memory, similar to a line of people waiting for a bank.
  
   - Queues of values are useful in many areas of computing, like "job queues" in operating systems, and "message queues" in networking.
@@ -207,6 +216,7 @@
     >   - https://www.youtube.com/watch?v=ojGf3SH7n48
 
 ## Linked List <a name="linked-list"></a>
+###### linked-list
  - ### BIG IDEA - A way to represent a "dynamic" list of values in memory, where the size of the list is not known ahead of time and may change over time.
  
   - Lists of changing size are useful to organize many areas of computing, like file systems and databases.
@@ -229,7 +239,8 @@
     TAIL["TAIL= End pointer"] -->|points to | E
 
 ## Map (or "Hash Table", "Hash Map", "Dictionary", "Associative Array") <a name="map"></a>
-    - ### BIG IDEA - A way to represent a "mapping" of "keys" to "values" in memory, where each "key" is unique and "points to" a specific "value".
+###### map
+  - ### BIG IDEA - A way to represent a "mapping" of "keys" to "values" in memory, where each "key" is unique and "points to" a specific "value".
   
   - Mapping is very common in computers, like looking up a person's number in a phone book, or looking up a word in a dictionary.
   - A "Map" is a data structure to represent a "mapping" of "keys" to values.
@@ -272,6 +283,7 @@
           key3[key3] -->|maps to / refers to / points to| id3[Value Z]
     ``` 
 ## Tree <a name="tree"></a>
+###### tree
   - ### BIG IDEA - A way to represent a "hierarchical" list of nodes in memory, where each node contains a values and "points to" one or MORE other nodes that are direct descendants of the node.
   
   - Trees are used to represent a "hierarchical" list, like a sorted list of items, or a company organization chart.
