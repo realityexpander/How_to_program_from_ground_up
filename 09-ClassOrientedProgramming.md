@@ -265,6 +265,13 @@
        viewDocument(doc2)  // <-- will print "Launch Email App".
        viewDocument(doc3)  // <-- will print "Launch Music Player".
     }
+    
+    main()
+    
+    // Output:
+    // Launch PDF Viewer
+    // Launch Email App
+    // Launch Music Player
     ```
     > Live Code Example: [How Interfaces Work in Kotlin](src/main/kotlin/interfaceExample.kt)
 
