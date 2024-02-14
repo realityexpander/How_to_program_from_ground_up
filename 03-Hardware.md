@@ -179,6 +179,9 @@
      > - Why It Was Almost Impossible to Make the Blue LED
      >   - https://www.youtube.com/watch?v=AF8d72mA41M&t=203
      
+     > 1959 Navy Training Film - Transistors / Switching
+     >   - https://www.youtube.com/watch?v=l50XdZwtQ2U
+     
      Difference in behavior between Tubes and Transistors
      > - Vacuum Tubes: Episode 2 — The Triode (Part 1)
      >   - https://www.youtube.com/watch?v=xurmZWLjW2g

@@ -8,33 +8,32 @@
   - The practical hardware limitations outweighed the theoretical purity of OOP, and shortcuts were made for the sake of
     performance and practicality, such as use of `static` functions to manipulate data directly instead of calling 
     methods on objects to manipulate the data indirectly.
-  - The main idea is to use class "templates" (called a `class`) to group together methods and variables that are 
-    related to each other (highly cohesive) and then create "objects" from the class templates to simulate 
-    real-world systems.
-  - "Objects" are created based on the `class` template. Methods are called on itself and other objects
-    in order to simulate real-world interactions with each other.
+  - The main idea is to use templates (called a "`class`") to group together methods and variables that are 
+    related to each other (highly cohesive) and then create `objects` from the class to simulate 
+    real-world objects and interactions.
   - Think of simulating a hospital with a `class` called "Doctor" and a `class` called "Patient" and a `class` called "Hospital"
     - The `class` "Doctor" would have methods like "treatPatient()" and "writePrescription()" and "getPaid()"
     - The `class` "Patient" would have methods like "getTreated()" and "payBill()" and "getPrescription()"
     - The `class` "Hospital" would have methods like "admitPatient()" and "payDoctor()" and "payNurse()"
   - Examples of Class-Oriented Programming languages are "Simula," "C++", "C#" and "Java"
   
-## COP Tried to Introduce a New Style of Programming, But Ended With Mixed Results <a name="cop-tried-to-introduce"></a>
-  - COP was a way to for most programmers to fit the `procedural` paradigm into the `class` and `object` paradigm, 
+## COP Tried to Introduce a New Style of Programming, Resulting in Mixed Results <a name="cop-tried-to-introduce"></a>
+  - COP was a way to for most programmers to fit the "procedural" paradigm into a `class` and `object` paradigm, 
     with mixed results.
-  - Due to the terminology and lack or effective learning resources along with many differing opinions about how
-    to apply the paradigm, many aspect were often misused and misunderstood, which lead to ineffiecient programs
-    that were difficult to understand and maintain.
+  - Due to the terminology and lack or effective learning resources, as well as many differing opinions about how
+    to apply the COP paradigm, many aspect were often misused, abused and misunderstood. These widespread confusion lead to 
+    inefficiently structured programs that became increasingly difficult understand and maintain. The same problems 
+    that plagued the "procedural" paradigm were now present in the "class" and "object" paradigm, mainly due to the
+    misuse of `static` methods and data to mimic the "procedural" paradigm.
   
 ## Encapsulation <a name="encapsulation"></a>
   - Think of a `struct` in C, but with functions that can access the data in the `struct`, and the data is
-    "private" and only accessible by the functions in the `struct`.
-  - Data & code are "encapsulated," (or enclosed) into a `class`.
-      - `class` is also referred to as a "template", it is similar to a blueprint for a house as it describes what will be created when the house is built)
-    - A `class` is a template for creating an in-memory instance of the class (called an "Object") which contains the
-      state and pointers to the "methods" (functions) of the `class`. An `abstract class` is a template for a "concrete"
-      or "specific" class, and is not meant to be instantiated itself, only extended and be used as a "general"
-      template for the "specific" classes.
+    `private` and only accessible by the functions inside the `struct`, or expressly marked as `public`.
+  - Data & code are "encapsulated," (or enclosed) into classes.
+      - `class` is also referred to as a "template", it is similar to a blueprint for a house as it describes 
+        what will be created when the house is built)
+    - A `class` is a template for creating an in-memory instance of the class (called an `object`) which contains the
+      state and pointers to the methods (functions) of the `class`.
 
       ```Text
       // COP Pseudo-Code
@@ -63,8 +62,8 @@
          
          subgraph catObject["Object “Cat” 🐈 @BFFC882A"]
               catObjectAgeInt["`int age = 3`"] 
-              catObjectMakeSoundMethodFunctionPointer{"`method makeSound(): 
-                                                   { println(“Meow”) }`"}
+              catObjectMakeSoundMethodFunctionPointer{"method makeSound(): 
+                                                   { println(“Meow”) }"}
          end
          subgraph catClass["Template class “Cat” 🐱"]
             catClassAgeInt["int age"]
@@ -91,7 +90,7 @@
       ### Sophisticated Diagram of a Class and Object Instance
 
       ```mermaid
-         flowchart RL
+         flowchart LR
           
          catClass -- "
             creates 
@@ -100,8 +99,8 @@
       " --> catObject:::Object
          subgraph catObject["Object “Cat” 🐈 @BFFC882A"]
               catObjectAgeInt["`int age = 3`"] 
-              catObjectMakeSoundMethodFunctionPointer{"`method makeSound(): 
-                                                   calls function defined in class`"}
+              catObjectMakeSoundMethodFunctionPointer{"method makeSound(): 
+                                                   calls function defined in class"}
          end
       
          subgraph catClass["Class “Cat” 🐱"]
@@ -124,7 +123,7 @@
          style catObjectMakeSoundMethodFunctionPointer fill:#444, stroke:#FFF, stroke-width:1px, color:#FFF, stroke-dasharray: 5 5 
          
       ```
-  - ### Instantiation
+  - ## Instantiation
     - When a new object is created from a class template, the Object is called an "instance" of the class.
     - An Object is just a structure in memory that contains the values (or "state") of the variables and pointers to
       the methods of the class.
@@ -136,7 +135,7 @@
     and the `constructor` is called to set the initial values of the variables in the object ("initialize" the state.)
   - The use of the word "constructor" is a bit of a misnomer, as the memory space for the Object has been allocated
   
-  - ### Object Instance Variable Values = "State" of the Object
+  - ## Object Instance Variable Values = "State" of the Object
     - The values of the variables ("state") of the object are often made inaccessible from outside the class (ie: `private`)
       and only accessible by the methods of the class, or the methods in the inherited subclasses of the class.
     - Methods of the class can be made `public` to be globally accessible by other classes to provide the functionality of the class.
@@ -149,48 +148,55 @@
       - This was not the original intent of the Class and Object use-cases, but it was a way to fit the COP
         paradigm into the "procedural" paradigm.
 
-  - ### Using Classes and Objects as "Name-Spaces/Scopes" Lead to Procedural-Style Code Implementations <a name="using-classes-and-objects-as-name-spaces"></a>
-    - In COP languages, the `class` is used as a "namespace" to group together various methods and variables that
-      are related to each other (known as "high cohesion") into a single class or "namespace".
+  - ## Problem: Using Classes and Objects as "Name-Spaces/Scopes" Lead to Procedural-Style Code Implementations <a name="using-classes-and-objects-as-name-spaces"></a>
+    - In COP languages, the `class` is used as a "name-space" to group together various methods and variables that
+      are related to each other (known as "high cohesion") into a single class or "name-space".
         - Variables and methods can be called via a common name, like: `Person.age` or `Person.setName()`
     - All code must be inside an object OR be declared as a `static` member of a `class` to be accessible without an object
         - This use of `static` functions is a primary indication of the COP paradigm is being followed.
-
-    - #### Problems Arising from Abusing Static Methods and Attributes <a name="problems-arising-from-abusing-static"></a>
-      - Using `static` breaks the encapsulation of the object and leads to "procedural" style programming.
-      - Misuse of `static` methods often lead to "collections of static methods" that simply extended the "procedural" paradigm, except the
-        code blocks now had a name (the name of the Class) and were grouped together instead of being globally accessible.
-      - The `static` methods were passed in data as parameters and returned data as a result, just like the "procedural" paradigm.
-          - When `static` is used this way, it completely breaks encapsulation. The objects are just bags to hold code,
-            and the data is fully exposed to anyone who wants to access it, as it is not retained as state within the object.
-      - This `static` way of programming lead to the same exact problems as the "procedural" paradigm, but with the
-        needlessly added complexity of the class and object paradigms.
-      
-      - These were popularized by web frameworks such as Java's Spring Boot and Many Others.
-        > - The Pain of OOP, Lecture #2: Static methods and attributes are evil
-        >   - https://www.youtube.com/watch?v=lELJSj9mWbI
-      
-      - One of the main problems is that `static` methods and data lead to issues with "testing" the code, as the
-        `static` methods and data are stateful and are not encapsulated in an object, so they are not
-        easily "mocked" or "stubbed" for testing purposes, ie: called with "known" data to verify the correctness of the method.
-      - Another side-effect of `static` methods and data is that they are not "thread-safe" and can easily lead to
-        data corruption.
-      - And the largest issue is that `static` is shared mutable state and is the root of all evil in programming as it
-        leads to undesired side-effects and tough to follow states of the program which leads to unnecessary complexity 
-        and difficult to fix bugs.
-        > - What's Wrong About Utility Classes? (Static Methods)
-        >   - https://www.youtube.com/watch?v=psrp3TtaYYI
+      > Objects vs. Static Methods
+      > https://www.youtube.com/watch?v=D0dqC_3Bch8
+  
+  - ## Problems Arising from Abusing `Static` Methods and Attributes <a name="problems-arising-from-abusing-static"></a>
+    - Using `static` breaks the encapsulation of the object and leads to "procedural" style programming because it
+        allows the data to be accessed and manipulated directly without the use of the methods of the `class`.
+    - Misuse of `static` methods often lead to "collections of static methods" that simply extended the "procedural" paradigm, except the
+      code blocks now had a name (the name of the Class) and were grouped together instead of being globally accessible.
+    - The `static` methods were passed in data as parameters and returned data as a result, just like the "procedural" paradigm.
+        - When `static` is used this way, it completely breaks encapsulation. The objects are just bags to hold code,
+          and the data is fully exposed to anyone who wants to access it, as it is not retained as state within the object.
+    - This `static` way of programming lead to the same exact problems as the "procedural" paradigm, but with the
+      needlessly added complexity of the class and object paradigms.
+    
+    - These were popularized by web frameworks such as Java's Spring Boot and Many Others.
+      > - The Pain of OOP, Lecture #2: Static methods and attributes are evil
+      >   - https://www.youtube.com/watch?v=lELJSj9mWbI
+    
+    - One of the main problems is that `static` methods and data lead to issues with "testing" the code, as the
+      `static` methods and data are stateful and are not encapsulated in an object, so they are not
+      easily "mocked" or "stubbed" for testing purposes, ie: called with "known" data to verify the correctness of the method.
+    - Another side-effect of `static` methods and data is that they are not "thread-safe" and can easily lead to
+      data corruption.
+    - And the largest issue is that `static` is shared mutable state and is the root of all evil in programming as it
+      leads to undesired side-effects and tough to follow states of the program which leads to unnecessary complexity 
+      and difficult to fix bugs.
+      > - What's Wrong About Utility Classes? (Static Methods)
+      >   - https://www.youtube.com/watch?v=psrp3TtaYYI
 
 ## Interfaces <a name="interfaces"></a>
-  - ### BIG IDEA — Can we swap out different implementations of the same named method, like plugging in different electrical appliances to the same electrical outlet?
+  - ### BIG IDEA — Can we swap out different implementations of the same named methods to allow more flexible code?
+     - ### Like plugging in different electrical appliances to the same electrical outlet, the outlet and plug are the `interface` and the appliances are the different implementations.
  
     > [<img src="assets/plugs_and_adapters.png" width="200"/>](assets/plugs_and_adapters.png)
     
-  - ie: Can we have a method called `view` that runs different code depending on the class of the object?
+    - ie: Can we have a method called `view` that runs different code depending on the `type` of the `object`?
   
-  - An `interface` is an agreement or "contract" that the class will have certain defined methods & variables in the class.
-  - It's a way to tell the compiler AND the programmer that the class must have certain "methods" and "variables" in it to be considered a valid "subclass" of the interface
-  - The `interface` is implemented by the `subclass`, where the methods and variables are defined by the "concrete implementing" `class`
+  - An `interface` is an "agreement" (also called "contract") that the class will have certain defined methods & 
+    variables in any subclass that `implements` the `interface`.
+  - It's a way to tell the compiler _AND_ the programmer that the implementing `class` must have certain methods 
+    and variables in it to be considered a genuine subclass (or subtype) of the `interface`.
+  - The `interface` is implemented by the subclass, where the methods and variables are defined by the 
+    concrete implementing `class`.
     ```mermaid
     ---
     title: Interface Example
@@ -269,9 +275,12 @@
             of the `class` by using "testing" implementations of the `interface`
       - The `interface` is `implement`ed by a `class` and the methods are finished by the implementing `subclass`
         according to the method signatures in the `interface`
-      - "Subclassing" is also called "Subtyping" or "Inheritance" and is the basis for "Polymorphism" and "Dynamic Binding"
+      - "Subclassing" is also called "Subtyping" or "Inheritance" and is the basis for Polymorphism as it allows
+        different implementations of the same named method to be used interchangeably in the program.  
 
 ## Inheritance <a name="inheritance"></a>
+  - ### BIG IDEA - Can we create a new class that inherits all the methods and variables of another class and then add new methods or override methods in the subclass?
+  
   - Inheritance is the idea that a new `class` can inherit from another `class` all of its methods and variables,
     and then add new methods or override methods in the subclass that will modify the behavior of the
     original `class`.
@@ -407,20 +416,27 @@
         > - Banana, Monkey, Jungle Problem
             >   - https://crystal-villanueva.medium.com/the-banana-and-the-gorilla-problem-92c9a4717fd6
 
-## Abstract Classes <a name="abstract-classes"></a>
+## Abstract Classes = The Name of a "Category or Group"  <a name="abstract-classes"></a>
   - ### BIG IDEA — Lets have a class that defines a general category of objects, but doesn't define the implementation details of the objects. That way we can create many different kinds of objects that all have the same "method signature," but have different implementations of the methods.
    
-    - ie: Like a "Document" class that has a method called "view" but doesn't define how the document is viewed.
-    - You can't create a generic "Document", but you can create a "PDF" or "Excel" or "Text" document that has a "view" method.
-    - The "Document" class is an "abstract class" and the "PDF" or "Excel" or "Text" document is a "concrete class."
+    - ie: Like an `abstract class Document` that has a method called `view` doesn't necessarily implement how a 
+      document is viewed, only it's method definition. Any object that is a subtype of "Document" must have a `view` 
+      method implemented.
+    - You can't create a generic `Document` object, BUT you can create a `PDF` or `Excel` or `Text` object that is 
+      is a subclass of the `abstract class Document` class, as they will require a `view` method to be implemented.
+    - The `Document` class is an `abstract class` and the `class PDF`,`class Excel,` and `class Text` are the 
+      "concrete classes."
   
   - #### Very similar to interfaces but can have default implementations of the methods & define variables that are 
     expected to be in the subclass.
-  - I like to forget the word `abstract` and think of "The General Category" instead of a specific case,
-    like "documents" is the general category (abstract idea) of a generic "thing to structure and retain data."
-  - PDFs, Excel files and Text files are specific "concrete" kinds (or "implementations") of the
-    abstract idea of "documents."
-  - The `abstract class` is usually `extend`ed by the subclass and the subclass methods `overridde` the superclass methods.
+  
+  - #### ANOTHER OVERCOMPLICATED CONCEPT
+  - An `abstract class` is a template for a "concrete" (or specific) `class`, and cannot to be instantiated itself, 
+    only `extend`-ed and be used as a "general" `class` to group the "specific" classes into categories or "types."
+  - I like to forget the word `abstract` and replace it wih the phrase"The General Category"
+    - ie: "documents" is the general category (abstract idea) of a generic "something to structure and retain data."
+  - The `abstract class` is `extend`ed by the subclass and the subclass methods `override` the superclass methods by
+    implementing the method in the subclass. 
     ```mermaid
     ---
     title: Abstract Class Example Diagram
@@ -639,6 +655,9 @@
       ```
   - Example of an attempt to use "Multiple Inheritance" in C++:
     ```C++
+    #include <iostream>
+    using namespace std;
+    
     class Animal {
        public:
           void makeSound() {
@@ -646,14 +665,14 @@
           }
     };
     
-    class Cat : public Animal {
+    class Cat : public Animal {  // <-- Cat inherits from Animal.
        public:
           void makeSound() {
             cout << "Meow" << endl;
          }
     };
     
-    class Dog : public Animal {
+    class Dog : public Animal { // <-- Dog inherits from Animal.
        public:
           void makeSound() {
             cout << "Bark" << endl;
@@ -669,8 +688,6 @@
        
        c.makeSound(); // <-- What will this print? "Meow" or "Bark"???
     }
-    
-    main()   
     
     // THIS IS *NOT* THE OUTPUT:
     // Does the Cog "Meow" or "Bark"???

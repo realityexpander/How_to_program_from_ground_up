@@ -23,6 +23,9 @@
       > Alan Kay, 2015: Power of Simplicity
       >   - https://www.youtube.com/watch?v=NdSD07U5uBs
       
+      > Rethinking CS Education | Alan Kay, CrossRoads 2015
+      >   - https://www.youtube.com/watch?v=N9c7_8Gp7gI
+ 
       > We Were So Lucky Alan Kay
       > - https://www.youtube.com/watch?v=ktPCH_p80e4
      
@@ -52,6 +55,11 @@
       - Visitor Pattern
       - Command Pattern
       - Builder Pattern, fluent pattern is preferred (`return` the object passed-in to allow for chaining of method calls.)
+    
+    > 10 Design Patterns Explained in 10 Minutes
+    > - https://www.youtube.com/watch?v=tv-_1er1mWI
+    > Patterns, Anti-Patterns, and Refactoring
+    > - https://www.youtube.com/watch?v=LrTBIcFhawI
   - Other patterns common to COP are disallowed:
     - Use of `null`
     - Use of `static` methods and variables
