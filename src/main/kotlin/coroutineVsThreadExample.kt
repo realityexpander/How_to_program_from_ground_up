@@ -4,14 +4,14 @@ import kotlin.time.Duration.Companion.milliseconds
 import kotlin.time.ExperimentalTime
 
 fun main() {
-	runBlocking {
+	runBlocking { // <-- `runBlocking` creates a coroutine context and runs the code inside it.
 		threadVsCoroutinesPerformanceDifference()
 	}
 }
 
 // Example of using coroutines and threads to compare performance for 100_000 tasks.
 @OptIn(DelicateCoroutinesApi::class, ExperimentalTime::class)
-suspend fun threadVsCoroutinesPerformanceDifference() {
+suspend fun threadVsCoroutinesPerformanceDifference() {  // <-- `suspend` keyword means this function can be called from a coroutine.
 	val counter = AtomicInteger(0)
 	val numParallelTasks = 100_000
 
