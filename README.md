@@ -65,6 +65,7 @@ walk through the essential part of computing to create effective software.
   - [Time Complexity](07-SoftwareDesign.md#time-complexity)
     - [Shorthand Guide & Sample Code](07-SoftwareDesign.md#time-complexity-example)
   - [Communicating Software Designs Visually](07-SoftwareDesign.md#communicating-software-designs)
+  - [Some Thoughts on Common Software Production Methodologies](07-SoftwareDesign.md#some-thoughts-on-common-software-production-methodologies)
 - [Structured Programming](08-StructuredProgramming.md)
   - Can we give some kind of standard way of organizing and communicating the solution to a problem? 
   - [Scopes](08-StructuredProgramming.md#scopes)
@@ -94,14 +95,15 @@ walk through the essential part of computing to create effective software.
   - [Back-to Object Oriented Programming Example](10-BackToObjectOrientedProgramming.md#boop-example)
 - [Functional Programming](11-FunctionalProgramming.md)
   - Can we structure our code in a way to have less bugs and be easier to understand?
-  - [Functional Programming Style](11-FunctionalProgramming.md#FunctionalProgramming)
-  - [Immutability & No Side Effects](11-FunctionalProgramming.md#ImmutabilityNoSideEffects)
-- [Parallel Processing (Concurrent Programming)](12-ParallelProcessing.md)
+  - [Immutability & No Side Effects](11-FunctionalProgramming.md#immutability-no-side-effects)
+  - [Functional Programming Style](11-FunctionalProgramming.md#functionalExample)
+- [Parallel Processing (also called "Concurrent" Programming)](12-ParallelProcessing.md)
   - Can we make our programs run faster by doing more than one thing at a time?  
   - [Threads](12-ParallelProcessing.md#threads)
-  - [Atomic Updates](12-ParallelProcessing.md#AtomicUpdates)
+  - [Fixing the threads "race condition" problem using "Atomic" updates](12-ParallelProcessing.md#atomic-updates)
   - [Coroutines](12-ParallelProcessing.md#coroutines)
-  - [Coroutines are Much Faster Than Threads](12-ParallelProcessing.md#CoroutinesVsThreads)
+  - [Fixing the Coroutine race condition problem using "Atomic" updates](12-ParallelProcessing.md#fixing-updates-with-coroutines)
+  - [Coroutines are Much Faster Than Threads](12-ParallelProcessing.md#coroutines-vs-threads)
 
 ## Introduction
   - How to guide for budding software engineers who need a primer overview of software development concepts 

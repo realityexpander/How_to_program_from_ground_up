@@ -13,7 +13,8 @@
     - #### SEE WHAT I MEAN WITH ALL THE NAMES FOR THE SAME THING?
       - Please stop with all the names for the same old stuff!!!!!   
 
-- ### Immutability & No Side Effects <a name="ImmutabilityNoSideEffects"></a>
+- ### Immutability & No Side Effects <a name="immutability-no-side-effects"></a>
+###### immutability-no-side-effects
   - Mutability means something can be changed, and immutability means it cannot be changed once it's created.
     - Functional Programming style's main idea is to avoid "side effects" and "shared mutable state" of the program.
     - One way is to is to make the state of the program unchangeable. Changes can only be made by creating a new state
@@ -38,6 +39,7 @@
 - Examples of functional languages are "Lisp", "Clojure" and "Javascript" and "Kotlin"
 
 - Example of Functional style (Kotlin):
+  - ###### functionalExample
   ```Kotlin
   fun main() {
      val add = { a: Int, b: Int -> a + b }  // <-- a lambda that takes 2 integers and returns the sum of the integers.

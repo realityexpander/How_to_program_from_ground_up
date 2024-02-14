@@ -2,38 +2,34 @@
   - ### BIG IDEA #1 — The state of the program is immutable and is only changed by creating a totally new state by modifying the old state.
   - ### BIG IDEA #2 - The state of the objects is private and only mutable via methods that are called on the object.  
 
-  - Alan Kay Style BOOP (Back-to-Object Oriented Programming)
-      - Based on the idea of "messaging" between objects, VERY poorly named "object oriented programming", admitted 
-        by Alan Kay himself, the inventor of the term.
-
-        > What's Wrong With Object-Oriented Programming? Yegor Bugayenko
-        >   - https://www.youtube.com/watch?v=K_QEOtYVQ7A
-      
-        [<img src="assets/alan_kay.png" width="350"/>](assets/alan_kay.png)
-      
-        > Alan Kay at OOPSLA 1997 - The computer revolution hasn't happened yet
-        >   - https://www.youtube.com/watch?v=oKg1hTOQXoY
-        >> ### Alan Kay:
-        >> - "I'm sorry that I long ago coined the term “objects” for this topic because it gets many people to focus 
-        >>   on the lesser idea. The big idea is “messaging.”" 
-        >> - The key in making great and growable systems is much more to have things communicate through _messages_ and not through direct mutable state.
-      
-      - ### BOOP style takes the message metaphor to mean that the state of the program is immutable.
-        - The `object` state can only changed by creating a new state via modifying the old state by calling `public` 
-          method on objects.
-        - All state of the `object` is `private` and only accessible via methods that are called on the object.
+## Alan Kay Style BOOP (The _Original_ Object Oriented Programming)
+  - Based on the idea of "messaging" between objects, VERY poorly named "object oriented programming", admitted 
+    by Alan Kay himself, the inventor of the term.
+    
+    > [<img src="assets/alan_kay.png" width="320"/>](assets/alan_kay.png)
+    > - Alan Kay at OOPSLA 1997 - The computer revolution hasn't happened yet
+    >   - https://www.youtube.com/watch?v=oKg1hTOQXoY
+    >> ### Alan Kay:
+    >> - **"I'm sorry that I long ago coined the term “objects” for this topic because it gets many people to focus on the lesser idea."** 
+    >> - The big idea is “messaging.” 
+    >> - The key in making great and growable systems is much more to have things communicate through _messages_ and not through direct mutable state.
+    
+  - ### BOOP style takes the message metaphor to mean that the state of the program is immutable.
+    - The `object` state can only changed by creating a new state via modifying the old state by calling `public` 
+      method on objects.
+    - All state of the `object` is `private` and only accessible via methods that are called on the object.
   
-        > Alan Kay, 2015: Power of Simplicity
-        >   - https://www.youtube.com/watch?v=NdSD07U5uBs
-        
-        > Rethinking CS Education | Alan Kay, CrossRoads 2015
-        >   - https://www.youtube.com/watch?v=N9c7_8Gp7gI
-        
-        > We Were So Lucky Alan Kay
-        >   - https://www.youtube.com/watch?v=ktPCH_p80e4
-        
-        > Seminar with Alan Kay on Object Oriented Programming (VPRI 0246)
-        >   - https://www.youtube.com/watch?v=QjJaFG63Hlo
+      > - Alan Kay, 2015: Power of Simplicity
+      >   - https://www.youtube.com/watch?v=NdSD07U5uBs
+      >
+      > - Rethinking CS Education | Alan Kay, CrossRoads 2015
+      >   - https://www.youtube.com/watch?v=N9c7_8Gp7gI
+      >
+      > - We Were So Lucky Alan Kay
+      >   - https://www.youtube.com/watch?v=ktPCH_p80e4
+      >
+      > - Seminar with Alan Kay on Object Oriented Programming (VPRI 0246)
+      >   - https://www.youtube.com/watch?v=QjJaFG63Hlo
   
   - All state is fully retained in the `object` and methods are used to "send messages" to the `object` to
     change its state. This "messaging" metaphor stands up because internal state is not directly accessible. You
@@ -57,31 +53,36 @@
 
 ## Banned COP Patterns in BOOP <a name="banned-patterns-in-boop"></a>
  - ###### banned-patterns-in-boop
-  - Specific COP-like "Design Patterns" are *NOT* permitted, such as:
-      - Factory Pattern
-      - Abstract Factory Pattern
-      - Adapter Pattern is strongly discouraged, and prefer composition over inheritance.
-      - Facade, Bridge, Proxy and Decorator Patterns are all very similar to the Adapter Pattern and are discouraged.
-      - Builder Pattern considered too clumsy, the "Fluent" pattern is preferred 
-        - "Fluent Pattern" is where an `object` is modified and returned to the caller to allow for "method chaining."
-      - Type-casting is frowned upon, and prefer the use of interfaces or composition as type-casting was only necessary for COP style implementations. 
-
-      > 10 Design Patterns Explained in 10 Minutes
-      > - https://www.youtube.com/watch?v=tv-_1er1mWI
-      
-      > Patterns, Anti-Patterns, and Refactoring - Yegor Bugayenko
-      > - https://www.youtube.com/watch?v=LrTBIcFhawI
+   > [<img src ="assets/yegor_bugayenko.png" width="300"/>](https://www.yegor256.com/about-me.html)
+   > - [Yegor Bugayenko, Author of Elegant Objects](https://www.yegor256.com/about-me.html)
+   > - BOOP is my name for the style of programming that Yegor Bugayenko describes in his book "Elegant Objects."
+   > - What's Wrong With Object-Oriented Programming? Yegor Bugayenko
+   >   - https://www.youtube.com/watch?v=K_QEOtYVQ7A
   
-  - Other patterns common to COP are disallowed:
-    - Use of `null`
-    - Use of `static` methods and variables
-    - `Get`-ters and `Set`-ters
-    - Reflection & Type Casting
-    - Inheritance more than 2-3 levels deep. Prefer no inheritance and use composition instead.
-    - Mutable State - All state in BOOP is immutable, and the object is expected to return a new object with the new state.
-    - Classes ending with -er that mutate data passed in without retaining state internal to the object.
-      - Like `Manager`, `Controller`, `Handler`, `Processor`, `Updater`, `Setter`, `Getter`, `Modifier`, `Changer`, etc.
-  - Amazingly, the dreaded Singleton Pattern _is allowed_ to manage global state in BOOP, but not `static` variables or methods.
+ - ### Specific COP-like "Design Patterns" are *NOT* permitted, such as:
+   - Factory Pattern
+   - Abstract Factory Pattern
+   - Adapter Pattern is strongly discouraged, and prefer composition over inheritance.
+   - Facade, Bridge, Proxy and Decorator Patterns are all very similar to the Adapter Pattern and are discouraged.
+   - Builder Pattern considered too clumsy, the "Fluent" pattern is preferred 
+     - "Fluent Pattern" is where an `object` is modified and returned to the caller to allow for "method chaining."
+   - Type-casting is frowned upon, and prefer the use of interfaces or composition as type-casting was only necessary for COP style implementations. 
+
+     > - 10 Design Patterns Explained in 10 Minutes
+     >   - https://www.youtube.com/watch?v=tv-_1er1mWI
+     > - Patterns, Anti-Patterns, and Refactoring - Yegor Bugayenko
+     >   - https://www.youtube.com/watch?v=LrTBIcFhawI
+ 
+ - ### Other disallowed patterns common in COP:
+   - Use of `null`
+   - Use of `static` methods and variables
+   - `Get`-ters and `Set`-ters
+   - Reflection & Type Casting
+   - Inheritance more than 2-3 levels deep. Prefer no inheritance and use composition instead.
+   - Mutable State - All state in BOOP is immutable, and the object is expected to return a new object with the new state.
+   - Classes ending with -er that mutate data passed in without retaining state internal to the object.
+     - Like `Manager`, `Controller`, `Handler`, `Processor`, `Updater`, `Setter`, `Getter`, `Modifier`, `Changer`, etc.
+ - Amazingly, the dreaded Singleton Pattern _is allowed_ to manage global state in BOOP, but not `static` variables or methods.
   
 ## Why is Class-Oriented Programming (COP) Bad? <a name="why-is-cop-bad"></a>
   - ###### why-is-cop-bad

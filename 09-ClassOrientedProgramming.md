@@ -176,7 +176,7 @@
     - All code must be inside an object OR be declared as a `static` member of a `class` to be accessible without an object
         - This use of `static` functions is a primary indication of the COP paradigm is being followed.
       > Objects vs. Static Methods
-      > https://www.youtube.com/watch?v=D0dqC_3Bch8
+      > - https://www.youtube.com/watch?v=D0dqC_3Bch8
   
   - ## Problems Arising from Abusing `Static` Methods and Attributes <a name="problems-arising-from-abusing-static"></a>
     - ###### problems-arising-from-abusing-static
@@ -465,8 +465,7 @@
     - The `Document` class is an `abstract class` and the `class PDF`,`class Excel,` and `class Text` are the 
       "concrete classes."
   
-  - #### Very similar to interfaces but can have default implementations of the methods & define variables that are 
-    expected to be in the subclass.
+  - #### Very similar to interfaces but can have default implementations of the methods & define variables that are expected to be in the subclass.
   
   - #### ANOTHER EXAMPLE OF A SIMPLE IDEA LEADING TO OVERCOMPLICATED CODE
     - Leading to unwieldy and hard to understand code, often used in places where it was not necessary.
@@ -477,7 +476,7 @@
     only `extend`-ed and be used as a "general" `class` to group the "specific" classes into categories or "types."
   - I like to forget the word `abstract` and replace it wih the phrase"The General Category"
     - ie: "documents" is the general category (abstract idea) of a generic "something to structure and retain data."
-  - The `abstract class` is `extend`ed by the subclass and the subclass methods `override` the superclass methods by
+  - The `abstract class` is `extend`—ed by the subclass and the subclass methods `override` the superclass methods by
     implementing the method in the subclass. 
     ```mermaid
     ---
@@ -657,7 +656,7 @@
 
 ## Polymorphism <a name="polymorphism"></a>
 ###### polymorphism
-  - ### BIG IDEA — The idea that a method can be called on an object and the method will behave differently based on the "type" of the "object" that the "method" is called on.
+  - ### BIG IDEA — The idea that a method can be called on an object and the method will behave differently based on the `class` of the object that is called.
   - In COP, the `interface` and `abstract class` are implementations of the idea of polymorphism.
 
   - #### ANOTHER EXAMPLE OF A SIMPLE IDEA WITH AN OVERCOMPLICATED NAME!
@@ -755,7 +754,7 @@
     // Does the Cog "Meow" or "Bark"???
     
      ```
-  - In C++, calling Cog's `makeSound()` method will print `Meow`, _BUT_ in Python, calling
+  - In C++, calling `Cog`'s `makeSound()` method will print `Meow`, _BUT_ in Python, calling
     `Cog`'s `makeSound()` will print `Bark`!
   - This behavior is _completely arbitrary_ and up to the designers of the language to decide which
     method will be called, and it's _not_ consistent across different languages!
@@ -763,12 +762,12 @@
     languages in the same day. Furthermore, it's quite easy to forget which language you are working in which lead to weird bugs.
   - UGH!
   
-  > Java's language Designers Rejected Multiple Inheritance - Here's Why
-  >   - https://www.youtube.com/watch?v=1-JBFJ8Xar0
-
-  > NOTE: If you _really_ want to achieve multiple inheritance... (_you should never need it, but here's how:_)
-  >   - https://www.youtube.com/watch?v=3X9Eo2vzY1I
-  >   - Live Code Example: [How to Achieve Multiple Inheritance in Kotlin](src/main/kotlin/multipleInheritanceExample.kt)
+    > Java's language Designers Rejected Multiple Inheritance - Here's Why
+    >   - https://www.youtube.com/watch?v=1-JBFJ8Xar0
+    
+    > NOTE: If you _really_ want to achieve multiple inheritance... (_you should never need it, but here's how:_)
+    >   - https://www.youtube.com/watch?v=3X9Eo2vzY1I
+    >   - Live Code Example: [How to Achieve Multiple Inheritance in Kotlin](src/main/kotlin/multipleInheritanceExample.kt)
 
 ## Design Patterns <a name="design-patterns"></a>
 ###### design-patterns
@@ -787,5 +786,5 @@
   
   - ### Many of the problems in COP could have been avoided by exploring what the originator of the term "Object Oriented", Alan Kay, originally meant by the term "Object Oriented."
  
-- [Continue Reading - Back-to-Object-Oriented Programming](./10-BackToObjectOrientedProgramming.md)
+- [Continue Reading - Back-to-Object Oriented Programming](./10-BackToObjectOrientedProgramming.md)
 - [Back to Index](README.md)

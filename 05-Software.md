@@ -84,12 +84,12 @@
   - Computer Block Diagram
     > [<img src="assets/Computer_block_diagram.png" width="450">](assets/Computer_block_diagram.png)
     >
-    > - RAM = Random Access Memory.
-    > - ROM = Read Only Memory.
-    > - MPU = Micro-Processor Unit.
-    > - XTAL = Crystal Oscillator for the clock.
-    > - CLOCK = Clock Circuit.
-    > - I/O BUS = Input/Output Bus.
+    > - `RAM` = Random Access Memory. Where all data is stored while the computer is running.
+    > - `ROM` = Read Only Memory. Where the computer stores the "boot" program that starts the computer.
+    > - `MPU` = Micro-Processor Unit. Where the execution of programs occurs.
+    > - `XTAL` = Crystal Oscillator for the clock. 
+    > - `CLOCK` = Clock Circuit. Sets the coordinating "heartbeat" for the computer. 
+    > - `I/O BUS` = Input/Output Bus. The "highway" for data to come into and out of the computer.
 
   - ### The CPU or MPU (Central-Processing Unit ot Micro-Processor Unit) <a name="the-cpu-mpu"></a>
     - ###### the-cpu-mpu
@@ -98,14 +98,13 @@
 
     >  [<img src="assets/MPU.png" width="450">](assets/MPU.png)
     >
-    >  - MAR = Memory Address Register — The current memory location that the CPU is accessing.
-    >  - PC = Program Counter — The current memory location of the instruction that the CPU is/will execute.
-    >  - IR = Instruction Register — The current opcode instruction being executed.
-    >  - Control Unit — Synchronizes the operations of the CPU with the RAM, ROM, and other parts of the computer.
-    >  - ALU = Arithmetic Logic Unit — Performs the basic arithmetic and logical operations.
-    >  - ACC = Accumulator — Results of the last arithmetic or logic operation.
-    >  - X & Y = Registers — Used to store the input operands for output to Accumulator Register (ACC.)
-    >    via the ALU (Arithmetic Logic Unit.)
+    >  - `MAR` = Memory Address Register — The current memory location that the CPU is accessing.
+    >  - `PC` = Program Counter — The current memory location of the instruction that the CPU is/will execute.
+    >  - `IR` = Instruction Register — The current opcode instruction being executed.
+    >  - `Control Unit` — Synchronizes the operations of the CPU with the RAM, ROM, and other parts of the computer.
+    >  - `ALU` = Arithmetic Logic Unit — Performs the basic arithmetic and logical operations.
+    >  - `ACC` = Accumulator — Results of the last arithmetic or logic operation.
+    >  - `X` & `Y` = Registers — Used to store the input operands for output to Accumulator Register (ACC.) via the ALU (Arithmetic Logic Unit.)
 
   - ### Clock — "The heart beat of the CPU to keep it all in sync" <a name="the-clock"></a>
     - ###### the-clock
@@ -135,15 +134,15 @@
 
   - ### Common Machine Language Opcodes (actual opcode is for Motorola 6502 CPU) <a name="common-opcodes"></a>
     - ###### common-opcodes
-    | Hex Opcode | Mnemonic | Description                                                                                                                         |
-    |------------|----------|-------------------------------------------------------------------------------------------------------------------------------------|
-    | 0xA9       | LDA      | Load a value from main memory into a register                                                                                       |
-    | 0xA2       | MOV      | Move a value from one register to another                                                                                           |
-    | 0x8D       | STA      | Store a value from a register into main memory                                                                                      |
-    | 0x4C       | JMP      | Start executing next instruction at a different location in main memory by updating the Program Counter with a new value            |
-    | 0x6D       | ADC      | Add the values in two registers and store the result in a third register and update the "carry flag" register if there is a "carry" |
-    | 0xCD       | CMP      | Compare the values in two registers and update the "flags" register with the result                                                 |
-    | 0xD0       | BNE      | If the "flags" register is not zero, start executing at a different location in main memory ie: "conditional branching"             |
+    | 6502 Hex Opcode | Mnemonic | Description                                                                                                                         |
+    |-----------------|----------|-------------------------------------------------------------------------------------------------------------------------------------|
+    | `0xA9`          | `LDA`    | Load a value from main memory into a register                                                                                       |
+    | `0xA2`          | `MOV`    | Move a value from one register to another                                                                                           |
+    | `0x8D`          | `STA`    | Store a value from a register into main memory                                                                                      |
+    | `0x4C`          | `JMP`    | Start executing next instruction at a different location in main memory by updating the Program Counter with a new value            |
+    | `0x6D`          | `ADC`    | Add the values in two registers and store the result in a third register and update the "carry flag" register if there is a "carry" |
+    | `0xCD`          | `CMP`    | Compare the values in two registers and update the "flags" register with the result                                                 |
+    | `0xD0`          | `BNE`    | If the "flags" register is not zero, start executing at a different location in main memory ie: "conditional branching"             |
 
 
   - ### Fetch-Decode-Execute Cycle of the CPU — "The Dumb & Quick Work of the Machine" <a name="fetch-decode-execute"></a>
@@ -170,18 +169,18 @@
     - ###### registers
     - ### BIG IDEA — Registers are a small amount of super fast memory that is built into the CPU.
     - Registers are a small amount of super fast memory that is built into the CPU
-    - Registers hold the current instruction (operator and operands) being executed in the "Instruction Register" (IR)
-    - Registers hold address pointers to the current location in main memory in the "Program Counter" (PC) and
-      the "Stack Pointer" (SP) and the "Memory Address Register" (MAR)
-    - The "X" and "Y" registers are used to store the operands for the Accumulator Register (ACC) are used to store
-      the results of the last arithmetic operation, like from an "ADD" or "SUBTRACT".
+    - Registers hold the current instruction (operator and operands) being executed in the "Instruction Register" (`IR`)
+    - Registers hold address pointers to the current location in main memory in the "Program Counter" (`PC`) and
+      the "Stack Pointer" (`SP`) and the "Memory Address Register" (`MAR`)
+    - The `X` and `Y` registers are used to store the operands for the Accumulator Register (`ACC`) are used to store
+      the results of the last arithmetic operation, like from an `ADD` or `SUBTRACT`.
       - Some registers are a series of "status flags", single bits used to store the result of the last operation
       - Status flags are used to control the "conditional jumps" in the program
       - Flags such as "zero" or "carry" are used to indicate the results of the last operation
       - For example:
-        - if the result of the last operation was zero, then the "zero" flag is set to 1; otherwise it's set to 0
-        - if the result of the last operation was negative, then the "negative" flag is set to 1; otherwise it's set to 0
-        - if the result of the last operation had to "carry" a bit, then the "carry" flag is set to 1; otherwise it's set to 0
+        - if the result of the last operation was zero, then the `zero` flag is set to 1; otherwise it's set to 0
+        - if the result of the last operation was negative, then the `negative` flag is set to 1; otherwise it's set to 0
+        - if the result of the last operation had to carry a bit, then the `carry` flag is set to 1; otherwise it's set to 0
 
   - ### Arithmetic Logic Unit (ALU) — "The Calculator of the CPU" <a name="alu"></a>
    - ###### alu
@@ -189,13 +188,13 @@
    - The ALU is the part of the CPU that performs the basic arithmetic and logical operations
    - The ALU is used to perform the "Add" and "Subtract" operations
      - Stores the result of the operation in the "Accumulator" register
-     - Sets the "carry" flag if the result of the operation had to "carry" a bit
-     - Sets the "negative" flag if the result of the operation was negative
+     - Sets the `carry` flag if the result of the operation had to "carry" a bit
+     - Sets the `negative` flag if the result of the operation was negative
    - The ALU is used to perform the "Compare" operation, and all other logical operations operations
-     - Sets the "Zero" flag if the result of the operation was zero
-     - Sets the "Greater" flag if the result of the operation was greater than the other operand
-     - Sets the "Less" flag if the result of the operation was less than the other operand
-     - Sets the "Equal" flag if the result of the operation was equal to the other operand
+     - Sets the `Zero` flag if the result of the operation was zero
+     - Sets the `Greater` flag if the result of the operation was greater than the other operand
+     - Sets the `Less` flag if the result of the operation was less than the other operand
+     - Sets the `Equal` flag if the result of the operation was equal to the other operand
      > Learn how computers add numbers and build a 4 bit adder circuit
      >  - https://www.youtube.com/watch?v=wvJc9CZcvBc&list=WL
 
@@ -205,7 +204,7 @@
     - The "Control Unit" is the part of the CPU that controls the "fetch-decode-execute" cycle
     - It synchronizes the operations of the CPU with the RAM, ROM, and other parts of the computer
     - It keeps track of the internal cpu-cycles for each instruction (different than clock cycles, as some operations may take more than one clock cycle to complete)
-    - It updates the "program counter" with the next instruction to be executed, or with a different location in memory if a "jump" instruction is executed.
+    - It updates the "program counter" with the next instruction to be executed, or with a different location in memory if a `JUMP` instruction is executed.
 
   - ### Example Machine Language Program (Motorola 6502 CPU) <a name="example-machine-language-program"></a>
     ```
@@ -220,6 +219,8 @@
     LDA 0x0000 A90000 // Load the value in memory location 0x0000 into the "A" register, opcode: 0xA9 operands: 0x00 0x00                      
     ADC 0x0001 6D0001 // Add the value in memory location 0x0001 to the value in the "A" register, opcode: 0x6D operands: 0x00 0x01
     STA 0x0002 8D0002 // Store the result of the addition into memory location 0x0002, opcode: 0x8D operands: 0x00 0x02
+    BRK        00     // Stops the CPU executing any more instructions, opcode: 0x00
+    ```
      
     // Memory state after the program has executed:
     0x0000: 0x05

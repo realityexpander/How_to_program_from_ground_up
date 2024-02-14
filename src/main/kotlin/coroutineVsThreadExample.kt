@@ -9,7 +9,7 @@ fun main() {
 	}
 }
 
-// Example of using coroutines and threads to compare performance for 100_000 tasks.
+// Example of using coroutines and threads to compare performance for 100_000 tasks. (the _ is just for human readability, and ignored by the compiler.)
 @OptIn(DelicateCoroutinesApi::class, ExperimentalTime::class)
 suspend fun threadVsCoroutinesPerformanceDifference() {  // <-- `suspend` keyword means this function can be called from a coroutine.
 	val counter = AtomicInteger(0)
