@@ -18,6 +18,7 @@
   - Examples of Class-Oriented Programming languages are "Simula," "C++", "C#" and "Java"
   
 ## COP Tried to Introduce a New Style of Programming, Resulting in Mixed Results <a name="cop-tried-to-introduce"></a>
+###### cop-tried-to-introduce
   - COP was a way to for most programmers to fit the "procedural" paradigm into a `class` and `object` paradigm, 
     with mixed results.
   - Due to the terminology and lack or effective learning resources, as well as many differing opinions about how
@@ -27,6 +28,8 @@
     misuse of `static` methods and data to mimic the "procedural" paradigm.
   
 ## Encapsulation <a name="encapsulation"></a>
+###### encapsulation
+  - ### BIG IDEA — Can we put data and the code that manipulates the data into a "container" that is only accessible by the code in the container?
   - Think of a `struct` in C, but with functions that can access the data in the `struct`, and the data is
     `private` and only accessible by the functions inside the `struct`, or expressly marked as `public`.
   - Data & code are "encapsulated," (or enclosed) into classes.
@@ -56,19 +59,22 @@
          cat1.makeSound()  // <-- will print "Meow".
       }
       ```
-      ### Simplistic Overview of a Class and an Object Instance of the Class
+      ### Simplistic Overview of a Class and an Object Instance of the Class <a name="simplistic-overview"></a>
+      - ###### simplistic-overview
       ```mermaid
          flowchart TB
          
          subgraph catObject["Object “Cat” 🐈 @BFFC882A"]
               catObjectAgeInt["int age = 3"] 
               catObjectMakeSoundMethodFunctionPointer{"method makeSound(): 
-                                                   { println(“Meow”) }"}
+                                                       { println(“Meow”) }
+                                                     "}
          end
          subgraph catClass["Template class “Cat” 🐱"]
             catClassAgeInt["int age"]
             catClassMakeSoundMethodFunctionPointer{"method makeSound():
-                                                 { println(“Meow”) }"}
+                                                      { println(“Meow”) }
+                                                 "}
          end
          catClass -- "
             instantiate = allocate 
@@ -88,26 +94,31 @@
        
       ```
       ### Sophisticated Diagram of a Class and Object Instance
+      - ###### sophisticated-diagram
 
       ```mermaid
          flowchart LR
           
          catClass -- "
                 creates 
-             (instantiates)
+             (or “instantiates”)
             object in memory
       " --> catObject:::Object
          subgraph catObject["Object “Cat” 🐈 @BFFC882A"]
               catObjectAgeInt["int age = 3"] 
               catObjectMakeSoundMethodFunctionPointer{"method makeSound(): 
-                                                   calls function defined in class"}
+                                                      calls function defined 
+                                                      in class
+                                                      “Cat” 
+      "}
          end
       
          subgraph catClass["Class “Cat” 🐱"]
             catClassAgeInt["int age
                             (value is stored in object)"]
             catClassMakeSoundMethodFunctionPointer{"method makeSound():
-                                                 { println(“Meow”) }"}
+                                                 { println(“Meow”) }
+                                                 "}
          end
          catObjectMakeSoundMethodFunctionPointer -- calls --> catClassMakeSoundMethodFunctionPointer:::Object
            
@@ -124,6 +135,7 @@
          
       ```
   - ## Instantiation or "Allocating Memory" for an Object of a Certain Class <a name="instantiation"></a>
+    - ###### instantiation
     - When a new object is created from a `class` template, the `object` is called an "instance" of the `class`.
       - The special `constructor` method is called to set the initial values of the variables in the object ("initialize" its state.)
       - The `constructor` method is called when the `object` is created from the `class` template.
@@ -142,7 +154,8 @@
         - This misnomer lead to a lot of confusion for reasons that will be made clear in this document.
   - The use of the word "constructor" is a bit of a misnomer, as the memory space for the Object has been allocated
   
-  - ## Object Instance Variable Values = "State" of the Object
+  - ## Object Instance Variable Values = "State" of the Object <a name="object-instance-variable-values"></a>
+    - ###### object-instance-variable-values
     - The values of the variables ("state") of the object are often made inaccessible from outside the class (ie: `private`)
       and only accessible by the methods of the class, or the methods in the inherited subclasses of the class.
     - Methods of the class can be made `public` to be globally accessible by other classes to provide the functionality of the class.
@@ -156,6 +169,7 @@
         paradigm into the "procedural" paradigm.
 
   - ## Problem: Using Classes and Objects as "Name-Spaces/Scopes" Lead to Procedural-Style Code Implementations <a name="using-classes-and-objects-as-name-spaces"></a>
+    - ###### using-classes-and-objects-as-name-spaces
     - In COP languages, the `class` is used as a "name-space" to group together various methods and variables that
       are related to each other (known as "high cohesion") into a single class or "name-space".
         - Variables and methods can be called via a common name, like: `Person.age` or `Person.setName()`
@@ -165,6 +179,7 @@
       > https://www.youtube.com/watch?v=D0dqC_3Bch8
   
   - ## Problems Arising from Abusing `Static` Methods and Attributes <a name="problems-arising-from-abusing-static"></a>
+    - ###### problems-arising-from-abusing-static
     - Using `static` breaks the encapsulation of the object and leads to "procedural" style programming because it
         allows the data to be accessed and manipulated directly without the use of the methods of the `class`.
     - Misuse of `static` methods often lead to "collections of static methods" that simply extended the "procedural" paradigm, except the
@@ -191,6 +206,7 @@
       >   - https://www.youtube.com/watch?v=psrp3TtaYYI
 
 ## Interfaces <a name="interfaces"></a>
+###### interfaces
   - ### BIG IDEA — Can we swap out different implementations of the same named methods to allow more flexible code?
      - ### Like plugging in different electrical appliances to the same electrical outlet, the outlet and plug are the `interface` and the appliances are the different implementations.
  
@@ -297,6 +313,7 @@
       >> - https://www.youtube.com/watch?v=gV4P-fewa9M
 
 ## Inheritance <a name="inheritance"></a>
+###### inheritance
   - ### BIG IDEA - Can we create a new class that inherits all the methods and variables of another class and then add new methods or override methods in the subclass?
   
   - Inheritance is the idea that a new `class` can inherit from another `class` all of its methods and variables,
@@ -418,6 +435,7 @@
       > - Live Code Example: [How Inheritance Works in Kotlin](src/main/kotlin/inheritanceExample.kt)
    
 ## Problems Arising from the Abuse of Inheritance <a name="problems-arising-from-the-abuse-of-inheritance"></a>
+###### problems-arising-from-the-abuse-of-inheritance
   - ### BIG IDEA — The hype around reusability was so strong at the time that it was often used to justify the use of inheritance in places where it was not appropriate.
 
   - Misuse of inheritance lead to immense unnecessary complexity to fit in the "simulation" paradigm, 
@@ -436,6 +454,7 @@
         >   - https://crystal-villanueva.medium.com/the-banana-and-the-gorilla-problem-92c9a4717fd6
 
 ## Abstract Classes = The Name of a "Category or Group"  <a name="abstract-classes"></a>
+###### abstract-classes
   - ### BIG IDEA — Lets have a class that defines a general category of objects, but doesn't define the implementation details of the objects. That way we can create many different kinds of objects that all have the same "method signature," but have different implementations of the methods.
    
     - ie: Like an `abstract class Document` that has a method called `view` doesn't necessarily implement how a 
@@ -594,7 +613,8 @@
         ExcelFileObjectPrintContentMethodFunctionPointer{"method PrintContent(): 
                                            calls 
                                      function @C62F3842
-                                     in class ExcelFile"}
+                                     in class ExcelFile
+                                     "}
     end
     subgraph classExcelFile["class ExcelFile extends File"]
         ExcelFileClassAgeInt["int content"]
@@ -619,7 +639,8 @@
     subgraph abstractFile["abstract class File"]
       abstractAgeInt["abstract int content"]
       abstractPrintContentMethod{"abstract method 
-                               PrintContent()"}
+                               PrintContent()
+                               "}
     end
   
     classDef Abstract fill:#222, stroke:#0F0, stroke-width:1px, color:#fff, stroke-dasharray: 5 5
@@ -635,6 +656,7 @@
   ```
 
 ## Polymorphism <a name="polymorphism"></a>
+###### polymorphism
   - ### BIG IDEA — The idea that a method can be called on an object and the method will behave differently based on the "type" of the "object" that the "method" is called on.
   - In COP, the `interface` and `abstract class` are implementations of the idea of polymorphism.
 
@@ -655,6 +677,7 @@
     - #### MORE MAKING FANCY TERMS FOR VERY BASIC CONCEPTS THAT BARELY NEED EXPLAINING, I'VE SAID ENOUGH ALREADY.
 
 ## Controlled Visibility of Variables and Methods <a name="controlled-visibility"></a>
+###### controlled-visibility
   - ### BIG IDEA — Global mutable variables is a big problem, so lets control the visibility of the variables and 
     methods of the class to other classes and subclasses.
   - ie: Making a variable `private` means that it can only be accessed by the methods of the class and not by any other class.
@@ -670,6 +693,7 @@
 
 
 ## Allowing for "Multiple Inheritance" in C++ was a mistake, and it was removed from Java and C# for very good reasons. <a name="multiple-inheritance-removed"></a>
+###### multiple-inheritance-removed
   - Multiple Inheritance is the idea that a class can inherit from more than one class, and then have access to
     all methods and variables of the superclasses.
 
@@ -747,6 +771,7 @@
   >   - Live Code Example: [How to Achieve Multiple Inheritance in Kotlin](src/main/kotlin/multipleInheritanceExample.kt)
 
 ## Design Patterns <a name="design-patterns"></a>
+###### design-patterns
   - ### BIG IDEA — There are common problems and ways of solving them that humans have already figured out and named them.
  
   - "Design Patterns" became popular around the time of C++ due to the new complexity of the language and the

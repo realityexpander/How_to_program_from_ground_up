@@ -56,6 +56,7 @@
   - There are only a few BOOP languages, "Smalltalk" and, _incredibly_, "Javascript" are among the most popular ones.
 
 ## Banned COP Patterns in BOOP <a name="banned-patterns-in-boop"></a>
+ - ###### banned-patterns-in-boop
   - Specific COP-like "Design Patterns" are *NOT* permitted, such as:
       - Factory Pattern
       - Abstract Factory Pattern
@@ -83,6 +84,7 @@
   - Amazingly, the dreaded Singleton Pattern _is allowed_ to manage global state in BOOP, but not `static` variables or methods.
   
 ## Why is Class-Oriented Programming (COP) Bad? <a name="why-is-cop-bad"></a>
+  - ###### why-is-cop-bad
   - The main problem with COP is that it's common practices lead to fragile code that was difficult to maintain and
     understand, for similar reasons as to why "Spaghetti Code" is difficult to maintain and understand.
   
@@ -112,6 +114,7 @@
      
      ```
   - ### Back-to Object Oriented Programming Example (Kotlin): <a name="boop-example"></a>
+  - ###### boop-example
     ```Kotlin
     class Page(  // <-- the Page class constructor
        private val content: String  // <-- the "val" keyword means the variable is immutable and can only be assigned once.

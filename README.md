@@ -73,7 +73,11 @@ walk through the essential part of computing to create effective software.
   - Can we simulate real-world objects easier than with procedural or structured programming?
   - [COP Tried to Introduce a New Style of Programming, But Ended With Mixed Results](09-ClassOrientedProgramming.md#cop-tried-to-introduce)
   - [Encapsulation](09-ClassOrientedProgramming.md#encapsulation)
-    - [Using Classes and Objects as "Name-Spaces/Scopes" Lead to Procedural-Style Code Implementations](09-ClassOrientedProgramming.md#using-classes-and-objects-as-name-spaces)
+    - [Simplistic Overview of a Class and an Object Instance of the Class](09-ClassOrientedProgramming.md#simplistic-overview)
+    - [Sophisticated Overview of a Class and Object Instance](09-ClassOrientedProgramming.md#sophisticated-diagram)
+    - [Instantiation or "Allocating Memory" for an Object of a Certain Class](09-ClassOrientedProgramming.md#instantiation)
+    - [Object Instance Variable Values = "State" of the Object](09-ClassOrientedProgramming.md#object-instance-variable-values)
+    - [Problem: Using Classes and Objects as "Name-Spaces/Scopes" Lead to Procedural-Style Code Implementations](09-ClassOrientedProgramming.md#using-classes-and-objects-as-name-spaces)
     - [Problems Arising from Abusing Static Methods and Attributes](09-ClassOrientedProgramming.md#problems-arising-from-abusing-static)
   - [Interfaces](09-ClassOrientedProgramming.md#interfaces)
   - [Inheritance](09-ClassOrientedProgramming.md#inheritance)
@@ -81,7 +85,7 @@ walk through the essential part of computing to create effective software.
   - [Abstract Classes](09-ClassOrientedProgramming.md#abstract-classes)
   - [Polymorphism](09-ClassOrientedProgramming.md#polymorphism)
   - [Controlled Visibility of Variables and Methods](09-ClassOrientedProgramming.md#controlled-visibility)
-  - [Allowing for "Multiple Inheritance" in C++ was a mistake, and it was removed from Java and C# for very good reasons](multiple-inheritance-removed)
+  - [Allowing for "Multiple Inheritance" in C++ was a mistake, and it was removed from Java and C# for very good reasons](09-ClassOrientedProgramming.md#multiple-inheritance-removed)
   - [Design Patterns](09-ClassOrientedProgramming.md#design-patterns)
 - [Back-to-Object Oriented Programming](10-BackToObjectOrientedProgramming.md)
   - Can we re-visit the original principles of OOP to make softare easier to understand and maintain?
