@@ -499,25 +499,25 @@
       
     class File["abstract class File"] {
        String name  // ⬅︎ Abstract classes can have variables
-       method view(): Launch Basic Text Editor ("default" implementation)
-       method showName(): Print "File Name: " + this.name ("default" implementation")
+       open method view(): Launch(Basic_Text_Editor)  // "default" implementation
+       open method showName():  Print("File Name: " + this.name // "default" implementation"
     }
     <<abstract>> File 
       
     class Excel["class Excel extends File"] {
-       override String name // ⬅︎ Subclasses must declare abstract variables
-       override method view() Launch Excel Viewer
+       override String name // ⬅︎ Subclasses must declare abstract variables.
+       override method view(): Launch(Excel_Viewer) 
     }
     class Memo["class Memo extends File"] {
-       override String name // ⬅︎ Subclasses must declare abstract variables
-       String to  // ⬅︎ Subclasses can have additional variables
+       override String name // ⬅︎ Subclasses must declare abstract variables.
+       String to  // ⬅︎ Subclasses can have additional variables.
        String from
        String subject
-       override method view() Launch Memo Viewer
-       override method showName() Print "Memo from: " + this.from + ", to: " + this.to
+       override method view(): Launch(Memo_Viewer) 
+       override method showName(): Print "Memo from: " + this.from + ", to: " + this.to
     }
     class Photo["class Photo extends File"] {
-       override method view() Launch Photo Viewer
+       override method view() Launch(Photo_Viewer)
     }
     ```
   - Example for abstract classes in pseudo-code (similar to common COP languages):
@@ -552,7 +552,7 @@
     
         constructor Memo(String to, String from, String subject) {  // <-- the custom constructor of this class, its called to 
                                                                     //     initialize the variables of the object.
-           super("Memo to:" + to)  // <-- calls the constructor of the superclass (File)
+           super("Memo to:" + to)  // <-- calls the constructor of the superclass (File).
            this.to = to
            this.from = from
            this.subject = subject
@@ -573,7 +573,7 @@
      class Photo extends File { // <-- Photo is a subclass of Document
          override String name // <-- Subclasses must declare the abstract variables from superclass.
          
-         override method view() {  // <-- the implementation of the abstract class "view"
+         override method view() {  // <-- the implementation of the abstract class "view".
             print "View Photo: " + this.name
          } 
      }
@@ -590,9 +590,9 @@
             file.view(name)
          }
      
-         viewFile(file1)  // <-- will call the "view" method of the Excel class
-         viewFile(file2)  // <-- will call the "view" method of the Photo class 
-         viewFile(file3)  // <-- will call the "view" method of the Memo class
+         viewFile(file1)  // <-- will call the "view" method of the Excel class.
+         viewFile(file2)  // <-- will call the "view" method of the Photo class .
+         viewFile(file3)  // <-- will call the "view" method of the Memo class.
      }
      
      main()
