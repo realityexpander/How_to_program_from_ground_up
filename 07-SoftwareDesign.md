@@ -132,12 +132,14 @@
     - At the time when structured programming became popular, the concept of "Software Design" was developed to help
       people create more complex software systems with more complex requirements and coordinating work with larger 
       teams of people working together in the same codebase.
-    > - Software Design: Ep2 : 2nd Law of Software Design
-    >     - https://www.youtube.com/watch?v=fh1a74WWvJQ
-    > - Software Design: Ep3 : Conceptual Layers
-    >     - https://www.youtube.com/watch?v=8R7hoC3OuPo
-    > - Software Design: Ep4 : 3rd Law of Software Design
-    >     - https://www.youtube.com/watch?v=nCxhJ_51fjA 
+    > - Software Design: Ep1 : 1st law of Software Design (The Box)
+    >   - https://www.youtube.com/watch?v=2icF3vvsxH8
+    > - Software Design: Ep2 : 2nd Law of Software Design (The Line)
+    >   - https://www.youtube.com/watch?v=fh1a74WWvJQ
+    > - Software Design: Ep3 : Conceptual Layers 
+    >   - https://www.youtube.com/watch?v=8R7hoC3OuPo
+    > - Software Design: Ep4 : 3rd Law of Software Design 
+    >   - https://www.youtube.com/watch?v=nCxhJ_51fjA 
 
 - [Continue Reading - Class Oriented Programming](./09-ClassOrientedProgramming.md)
 - [Back to Index](README.md)
