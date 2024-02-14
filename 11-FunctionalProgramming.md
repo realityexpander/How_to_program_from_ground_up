@@ -2,9 +2,9 @@
   - ### BIG IDEA - Shared mutable state is a complex problem, especially for parallel processing task. 
 
   - ### The Functional style requires:
-    1) Calling functions will NEVER change anything outside the function being called 
+    1) Calling functions will NEVER change anything outside the function being called. 
        - ie: "pure functions." "no side effects", "no shared mutable state."
-    2) Functions passed in with certain arguments will ALWAYS return the same result (
+    2) Functions passed in with certain arguments will ALWAYS return the same result.
        - ie: "deterministic", "referentially transparent", "idempotent," "stateless," "side-effect free."
     3) Functions can be passed as arguments to other functions.
        - ie: "higher-order functions", "lambdas", "closures","first-class citizen functions", "anonymous functions", "function literals."
