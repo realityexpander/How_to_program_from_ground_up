@@ -409,8 +409,9 @@
 ## Problems Arising from the Abuse of Inheritance <a name="problems-arising-from-the-abuse-of-inheritance"></a>
   - ### BIG IDEA — The hype around reusability was so strong at the time that it was often used to justify the use of inheritance in places where it was not appropriate.
 
-  - Use of Inheritance Lead to immense & unnecessary complexity to fit in the "simulation" paradigm, as programmers tried to shove the
-    "Procedural Paradigm" into the fancy new "Class Oriented" paradigm with less than stellar results.
+  - Misuse of inheritance lead to immense unnecessary complexity to fit in the "simulation" paradigm, 
+    as programmers tried to shove the "Procedural Paradigm" into the fancy new "Class Oriented" paradigm with less 
+    than stellar results.
   - Inheritance is a usually a bad idea for many reasons, and very overused beyond its original intent.
       - The hype around reusability was so strong that it was often used to justify the use of inheritance in places
         where it was not appropriate.
@@ -426,6 +427,7 @@
 ## Abstract Classes = The Name of a "Category or Group"  <a name="abstract-classes"></a>
   - ### BIG IDEA — Lets have a class that defines a general category of objects, but doesn't define the implementation details of the objects. That way we can create many different kinds of objects that all have the same "method signature," but have different implementations of the methods.
    
+  - #### ANOTHER OVERCOMPLICATED CONCEPT
     - ie: Like an `abstract class Document` that has a method called `view` doesn't necessarily implement how a 
       document is viewed, only it's method definition. Any object that is a subtype of "Document" must have a `view` 
       method implemented.
@@ -437,7 +439,6 @@
   - #### Very similar to interfaces but can have default implementations of the methods & define variables that are 
     expected to be in the subclass.
   
-  - #### ANOTHER OVERCOMPLICATED CONCEPT
   - An `abstract class` is a template for a "concrete" (or specific) `class`, and cannot to be instantiated itself, 
     only `extend`-ed and be used as a "general" `class` to group the "specific" classes into categories or "types."
   - I like to forget the word `abstract` and replace it wih the phrase"The General Category"
