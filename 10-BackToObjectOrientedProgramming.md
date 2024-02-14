@@ -1,15 +1,16 @@
 # Back-to Object Oriented Programming Style (1980s-Present) <a name="boop"></a>
-  - ### BIG IDEA — The state of the program is immutable and is only changed by creating a new state by modifying the old state.
-  
+  - ### BIG IDEA #1 — The state of the program is immutable and is only changed by creating a totally new state by modifying the old state.
+  - ### BIG IDEA #2 - The state of the objects is private and only mutable via methods that are called on the object.  
+
   - Alan Kay Style BOOP (Back-to-Object Oriented Programming)
       - Based on the idea of "messaging" between objects, VERY poorly named "object oriented programming", admitted 
         by Alan Kay himself, the inventor of the term.
 
-      > What's Wrong With Object-Oriented Programming? Yegor Bugayenko
-      >   - https://www.youtube.com/watch?v=K_QEOtYVQ7A
+        > What's Wrong With Object-Oriented Programming? Yegor Bugayenko
+        >   - https://www.youtube.com/watch?v=K_QEOtYVQ7A
       
-      [<img src="assets/alan_kay.png" width="350"/>](assets/alan_kay.png)
- 
+        [<img src="assets/alan_kay.png" width="350"/>](assets/alan_kay.png)
+      
       > Alan Kay at OOPSLA 1997 - The computer revolution hasn't happened yet
       >   - https://www.youtube.com/watch?v=oKg1hTOQXoY
       >> ### Alan Kay:
@@ -17,7 +18,9 @@
       >> - The big idea is "messaging" 
       >> - The key in making great and growable systems is much more to have things communicate through messages and not through direct mutable state.
       
-      - ### BOOP style takes the message metaphor to mean that the state of the program is immutable and is only changed by creating a new state by modifying the old state by calling a publicly-exposed method on the object.
+      - ### BOOP style takes the message metaphor to mean that the state of the program is immutable.
+        - The state can only changed by creating a new state by modifying the old state by calling a publicly-exposed 
+          method on objects.
         - All state of the object is private and only accessible via methods that are called on the object.
   
       > Alan Kay, 2015: Power of Simplicity
@@ -32,13 +35,13 @@
       > Seminar with Alan Kay on Object Oriented Programming (VPRI 0246)
       > https://www.youtube.com/watch?v=QjJaFG63Hlo
   
-  - All state is fully retained in the Object and methods are used to "send messages" to the "object" to
+  - All state is fully retained in the `object` and methods are used to "send messages" to the `object` to
     change its state. This "messaging" metaphor stands up because internal state is not directly accessible. You
     must politely ask the object to change its state, and the object can choose to respond to the message or not.
     Unlike in COP where internal state is routinely exposed and directly manipulated via `static` methods and variables.
   - Any state that needs to be exposed is only via "messages" to the object, and the object can choose to respond to
     the message or not.
-  - No `static` methods or variables, only instance variables that are private to the object.
+  - No `static` methods or variables, only instance variables that are private to the `object`.
   - `protected` methods are allowed, but discouraged as they lead to "fragile" and "rigid" code.
   - Use of inheritance is explicitly discouraged, and prefer composition over inheritance. Exceptions for shallow
     hierarchies of 2-3 levels maximum meant to model the real world objects, not to create a "hierarchy of types."
