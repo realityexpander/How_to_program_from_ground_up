@@ -123,16 +123,23 @@
          style catObjectMakeSoundMethodFunctionPointer fill:#444, stroke:#FFF, stroke-width:1px, color:#FFF, stroke-dasharray: 5 5 
          
       ```
-  - ## Instantiation
-    - When a new object is created from a class template, the Object is called an "instance" of the class.
-    - An Object is just a structure in memory that contains the values (or "state") of the variables and pointers to
+  - ## Instantiation or "Allocating Memory" for an Object of a Certain Class <a name="instantiation"></a>
+    - When a new object is created from a `class` template, the `object` is called an "instance" of the `class`.
+      - The special `constructor` method is called to set the initial values of the variables in the object ("initialize" its state.)
+      - The `constructor` method is called when the `object` is created from the `class` template.
+      - The `constructor` method is always the same name as the `class`.
+    - An `object` is just a structure in memory that contains the values (or "state") of the variables and pointers to
       the methods of the class.
-  - A "Method" is just a normal function in the class that manipulates the variables in the object,
-      or call other methods in the object or other objects.
+      - The fact that the object only contains POINTERS to its superclass methods and NOT copies of the methods 
+        is one of the main reasons why COP languages are not truly "Object-Oriented" and are more accurately described 
+        as "Class-Oriented." The ability to change the methods of the `class` or `object` at runtime is a feature of 
+        true OOP paradigm languages like Smalltalk and JavaScript, but not in COP languages like Java and C++. 
+  - A "Method" is just a normal function that is inside a class. It can manipulate the variables of its `object`,
+      or call other methods in its `object` or call other methods in objects from other classes.
       - The process of calling a method on an object is referred to as "sending a message" to the object in COP.
-      - (THIS IS TERRIBLE WORDING! bc it's not a message! It's just calling a function!!!! THIS IS NOT MESSAGING! AAAAHH!)
-      - This misnomer lead to a lot of confusion for reasons that will be made clear in this document.
-    and the `constructor` is called to set the initial values of the variables in the object ("initialize" the state.)
+      - THIS IS TERRIBLE NAMING FOR COP! Because it not a "message" at all.  
+        - It's just calling a function!!!! THIS IS NOT MESSAGING!
+        - This misnomer lead to a lot of confusion for reasons that will be made clear in this document.
   - The use of the word "constructor" is a bit of a misnomer, as the memory space for the Object has been allocated
   
   - ## Object Instance Variable Values = "State" of the Object
@@ -427,7 +434,6 @@
 ## Abstract Classes = The Name of a "Category or Group"  <a name="abstract-classes"></a>
   - ### BIG IDEA — Lets have a class that defines a general category of objects, but doesn't define the implementation details of the objects. That way we can create many different kinds of objects that all have the same "method signature," but have different implementations of the methods.
    
-  - #### ANOTHER OVERCOMPLICATED CONCEPT
     - ie: Like an `abstract class Document` that has a method called `view` doesn't necessarily implement how a 
       document is viewed, only it's method definition. Any object that is a subtype of "Document" must have a `view` 
       method implemented.
@@ -438,6 +444,9 @@
   
   - #### Very similar to interfaces but can have default implementations of the methods & define variables that are 
     expected to be in the subclass.
+  
+  - #### ANOTHER EXAMPLE OF A SIMPLE IDEA LEADING TO OVERCOMPLICATED CODE
+    - Leading to unwieldy and hard to understand code, often used in places where it was not necessary.
   
   - An `abstract class` is a template for a "concrete" (or specific) `class`, and cannot to be instantiated itself, 
     only `extend`-ed and be used as a "general" `class` to group the "specific" classes into categories or "types."
@@ -591,6 +600,8 @@
     abstractPrintContentMethod -- expects --> ExcelFileClassPrintContentMethod:::Object
     ExcelFileClassAgeInt -- implements --> abstractAgeInt:::Abstract
   
+    note["`EXPLANATION: The ExcelFile Object @19FCA68D is an instance of the ExcelFile class, and the ExcelFile class is a subclass of the abstract File class.`"]
+    
     classExcelFile -- "instantiates 
                        object" --> ExcelFileObject:::Object
     classExcelFile -- extends --> abstractFile:::Abstract
@@ -615,14 +626,23 @@
 
 ## Polymorphism <a name="polymorphism"></a>
   - ### BIG IDEA — The idea that a method can be called on an object and the method will behave differently based on the "type" of the "object" that the "method" is called on.
-  - In COP, the `interface` and `abstract class` are implementations of the idea of Polymorphism.
+  - In COP, the `interface` and `abstract class` are implementations of the idea of polymorphism.
 
-  - Yet another overcomplicated word for a very basic, simple idea.
-  - Polymorphism is the idea that a method can be called on an object and the method will behave differently
-    based on the "type" of the "object" that the "method" is called on
-      - This is the basis for `override`ing methods in subclasses and `interfaces` and `abstract class`es
-      - In the example above, the `viewDocument` function can be called with any `Document` object and the `view` method
-        will behave differently based on the "type" of the `Document` object that is passed in
+  - #### ANOTHER EXAMPLE OF A SIMPLE IDEA WITH AN OVERCOMPLICATED NAME!
+    - Yet _another_ overcomplicated name for a very basic, exceedingly simple idea.
+    - Polymorphism is the idea that a method can be called on an object and the method will behave differently
+      based on the "type" of the "object" that the "method" is called on
+        - This is the basis for `override`ing methods in subclasses and `interfaces` and `abstract class`es
+        - In the example above, the `viewDocument` function can be called with any `Document` object and the `view` method
+          will behave differently based on the "type" of the `Document` object that is passed in
+  - ### Associated with Liskov Principle
+    - The Liskov Substitution Principle is from "Set theory" and is the idea that "objects of a superclass shall be
+      replaceable with objects of its subclasses without affecting the functionality of the program."
+    - That's it. That's the whole idea. It's just a fancy way of saying that "subclasses should work the same as
+      their superclass."
+    - There is a lot of confusion around this principle, but it's just a fancy way of saying that "subclasses should
+      work the same as their superclass."
+    - #### MORE MAKING FANCY TERMS FOR VERY BASIC CONCEPTS THAT BARELY NEED EXPLAINING, I'VE SAID ENOUGH ALREADY.
 
 ## Controlled Visibility of Variables and Methods <a name="controlled-visibility"></a>
   - ### BIG IDEA — Global mutable variables is a big problem, so lets control the visibility of the variables and 
