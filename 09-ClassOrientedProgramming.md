@@ -680,10 +680,10 @@
              method makeSound()
          "]-->|inherits| Cog???["class Cog(???) extends Cat & Dog"]
       
-         Cog??? -..-> Y((("`
+         Cog??? -..-> Y((("
          When “Cog” makes a sound, 
          (ie: method “makeSound()” is called on object Cog) 
-         Does it _Meow_ or _Bark_?`"))) 
+         Does it _Meow_ or _Bark_?"))) 
       ```
   - Example of an attempt to use "Multiple Inheritance" in C++:
     ```C++
