@@ -55,10 +55,10 @@
   - Specific COP-like "Design Patterns" are *NOT* permitted, such as:
       - Factory Pattern
       - Abstract Factory Pattern
-      - Visitor Pattern
-      - Command Pattern
+      - Adapter Pattern is strongly discouraged, and prefer composition over inheritance.
       - Builder Pattern considered too clumsy, the "Fluent" pattern is preferred 
         - "Fluent Pattern" is where an `object` is modified and returned to the caller to allow for "method chaining."
+      - Type-casting is frowned upon, and prefer the use of interfaces or composition as type-casting was only necessary for COP style implementations. 
 
     > 10 Design Patterns Explained in 10 Minutes
     > - https://www.youtube.com/watch?v=tv-_1er1mWI
