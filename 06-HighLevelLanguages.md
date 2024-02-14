@@ -11,7 +11,7 @@
   - The High-level languages allowed for more widespread adoption of computers and programming, as the languages were 
     easier to learn and use than Assembly Language.
     
-## Programming Styles
+## Programming Styles <a name="programming-styles"></a>
   - The first programming styles were direct descedants of assembly language, and worked in the same way.
   - This way of working is generally referred to as "imperative" programming, as the programmer is giving the
     computer the exact set of steps to perform to solve a problem. There is another style of programming called
@@ -196,7 +196,7 @@
       ```
     - [Click for source code to copy and paste into the BASIC playground: `proceduralProgrammerMadeLoops.bas`](assets/proceduralProgrammerMadeLoops.bas)
 
-  - ## Solution: Use High-Level Language Commands Like `FOR` to Create a Loop instead of `GOTO` and `IF` <a name="solution-declaraitive-for-loop"></a>
+  - ## Solution: Use High-Level Language Commands Like `FOR` to Create a Loop instead of `GOTO` and `IF` <a name="solution-declarative-for-loop"></a>
     - ### BIG IDEA - We can standardize common use-cases (like looping) into the language to reduce programming time, communicate intent of code to other people and minimize errors.
     
     - The `FOR` "loop" command was introduced to replace the programmer-implemented `GOTO` looping 

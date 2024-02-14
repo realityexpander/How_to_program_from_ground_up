@@ -50,9 +50,9 @@
   - How can we make programming easier and more understandable for humans?
   - [Programming Styles](06-HighLevelLanguages.md#programming-styles)
   - [Procedural Programming](06-HighLevelLanguages.md#procedural-programming)
-    - [Problem: Abusing GOTO](06-HighLevelLanguages.md#problem-abusing-goto)
+    - [Problem: Abusing GOTO](06-HighLevelLanguages.md#abusing-goto)
     - [Solution: Subroutines](06-HighLevelLanguages.md#solution-subroutines)
-    - [Problem: Naive Solutions](06-HighLevelLanguages.md#problem-naive-solutions)
+    - [Problem: Naive Solutions](06-HighLevelLanguages.md#naive-solutions)
     - [Problem: Imperative Looping](06-HighLevelLanguages.md#problem-imperative-looping)
     - [Solution: Declaritive Looping](06-HighLevelLanguages.md#solution-declaritive-for-loop)
 - [Software Design](07-SoftwareDesign.md)
