@@ -11,29 +11,29 @@
       
         [<img src="assets/alan_kay.png" width="350"/>](assets/alan_kay.png)
       
-      > Alan Kay at OOPSLA 1997 - The computer revolution hasn't happened yet
-      >   - https://www.youtube.com/watch?v=oKg1hTOQXoY
-      >> ### Alan Kay:
-      >> - "I'm sorry that I long ago coined the term "objects" for this topic because it gets many people to focus on the lesser idea. 
-      >> - The big idea is "messaging" 
-      >> - The key in making great and growable systems is much more to have things communicate through messages and not through direct mutable state.
+        > Alan Kay at OOPSLA 1997 - The computer revolution hasn't happened yet
+        >   - https://www.youtube.com/watch?v=oKg1hTOQXoY
+        >> ### Alan Kay:
+        >> - "I'm sorry that I long ago coined the term “objects” for this topic because it gets many people to focus 
+        >>   on the lesser idea. The big idea is “messaging.”" 
+        >> - The key in making great and growable systems is much more to have things communicate through _messages_ and not through direct mutable state.
       
       - ### BOOP style takes the message metaphor to mean that the state of the program is immutable.
-        - The state can only changed by creating a new state by modifying the old state by calling a publicly-exposed 
+        - The `object` state can only changed by creating a new state via modifying the old state by calling `public` 
           method on objects.
-        - All state of the object is private and only accessible via methods that are called on the object.
+        - All state of the `object` is `private` and only accessible via methods that are called on the object.
   
-      > Alan Kay, 2015: Power of Simplicity
-      >   - https://www.youtube.com/watch?v=NdSD07U5uBs
-      
-      > Rethinking CS Education | Alan Kay, CrossRoads 2015
-      >   - https://www.youtube.com/watch?v=N9c7_8Gp7gI
- 
-      > We Were So Lucky Alan Kay
-      > - https://www.youtube.com/watch?v=ktPCH_p80e4
-     
-      > Seminar with Alan Kay on Object Oriented Programming (VPRI 0246)
-      > https://www.youtube.com/watch?v=QjJaFG63Hlo
+        > Alan Kay, 2015: Power of Simplicity
+        >   - https://www.youtube.com/watch?v=NdSD07U5uBs
+        
+        > Rethinking CS Education | Alan Kay, CrossRoads 2015
+        >   - https://www.youtube.com/watch?v=N9c7_8Gp7gI
+        
+        > We Were So Lucky Alan Kay
+        > - https://www.youtube.com/watch?v=ktPCH_p80e4
+        
+        > Seminar with Alan Kay on Object Oriented Programming (VPRI 0246)
+        > - https://www.youtube.com/watch?v=QjJaFG63Hlo
   
   - All state is fully retained in the `object` and methods are used to "send messages" to the `object` to
     change its state. This "messaging" metaphor stands up because internal state is not directly accessible. You
@@ -66,7 +66,7 @@
   - Other patterns common to COP are disallowed:
     - Use of `null`
     - Use of `static` methods and variables
-    - `Get`ters and `Set`ters
+    - `Get`-ters and `Set`-ters
     - Reflection & Type Casting
     - Inheritance more than 2-3 levels deep. Prefer no inheritance and use composition instead.
     - Mutable State - All state in BOOP is immutable, and the object is expected to return a new object with the new state.
@@ -186,7 +186,8 @@
        // - As a programmer, you only see the high-level view, as the implementation details are hidden deeper 
        //   in the code, "abstracted" away in the functions.
        // - Functions are called and executed from the innermost brackets first to the outermost assignment last.
-       // - The state of the program is created in a single call to the `Application` constructor. 
+       // - The state of the program is created in a single call to the `Application` constructor.
+       // - This style is also called "composition."
        
        // Setup the App in Functional Style:
        // The code executes from the innermost function to the outermost function (step 1 to step 5.)
