@@ -15,27 +15,26 @@
 
 - ### Immutability & No Side Effects
   - Mutability means something can be changed, and immutability means it cannot be changed once it's created.
-    - Functional Programming's main idea is to avoid "side effects" and "shared mutable state" of the program.
+    - Functional Programming style's main idea is to avoid "side effects" and "shared mutable state" of the program.
     - One way is to is to make the state of the program unchangeable. Changes can only be made by creating a new state
       based on the a copy of the old state, and then returning the new state as the result of a function.
-    - BOOP style is a form of "Functional Programming" as the state of the program is immutable and passed as arguments
+    - BOOP style is a form of Functional Programming as the state of the program is immutable and passed as arguments
       to the functions, and a new state is returned as the result of the calls to the functions.
-- All functions in the core of the application return a value and have no "side effects" on any other "state" of
+- All functions in the core of the application return a value and have no side effects on any other state of
   the program.
-- It's more of a style of programming than a "paradigm" as it can be used in any language, but it's most effective
-  in languages that are designed to be "functional" from the ground up.
-- The reason for this is that the "state" of the program is "immutable" and passed as arguments to the functions,
+- It's more of a style of programming than a paradigm as it can be used in any language, but it's most effective
+  in languages that are designed to be functional from the ground up.
+- New states of the program can be created by passing in the state of the program as arguments to program functions,
   and a new state is returned as the result of the calls to the functions.
-- This makes the program easier to understand and maintain, and allows for "parallel" and "concurrent" programming
-  to be done more easily.
-- It also eliminates whole classes of bugs that are caused by "side effects" and "shared mutable state" of the program.
-- The state of the program is immutable and passed as arguments to the functions
-- A new state is returned as the result of the calls to the functions
+- This makes the program easier to understand and maintain, and allows for parallel ("concurrent") programming
+  to be done far more easily.
+- Immutability eliminates whole classes of bugs that are caused by side effects that plague COP-style programs.
 - Functions are "first-class citizens" and can be passed as arguments to other functions, just like normal variables and objects
-    - This allows customization of the functions by passing in any function as an argument to another function
+    - This allows customization of functions by passing in another function as an argument to be used in processing.
     - This allows the functions to be "composed" together to create new functions from existing functions
     - These functions are called "lambdas," "closures," "anonymous functions" or "function literals,"
-      and "higher-order functions" all interchangeably. It's all just functions!
+      and "higher-order functions" all interchangeably. 
+    - It's all just functions!
 - Examples of functional languages are "Lisp", "Clojure" and "Javascript" and "Kotlin"
 
 - Example of Functional style (Kotlin):
