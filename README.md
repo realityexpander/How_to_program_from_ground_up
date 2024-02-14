@@ -17,7 +17,7 @@ walk through the essential part of computing to create effective software.
     - [The Interchangeable Integrated Chip (IC)](03-Hardware.md#the-interchangeable-integrated-chip-ic)
       - [Why are NAND gates so special?](03-Hardware.md#nand-gates) 
     - [The Mighty Microprocessor](03-Hardware.md#the-mighty-microprocessor)
-- [Data Structures](04-DataStructures)
+- [Data Structures](04-DataStructures.md)
   - How Humans Represent Data in Binary in Computers?
   - [Numbers](04-DataStructures.md#numbers) 
   - [Characters](04-DataStructures.md#characters)

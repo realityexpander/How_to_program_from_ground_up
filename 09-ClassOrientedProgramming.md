@@ -68,18 +68,20 @@
               catObjectAgeInt["int age = 3"] 
               catObjectMakeSoundMethodFunctionPointer{"method makeSound(): 
                                                        { println(“Meow”) }
-                                                     "}
+                                                     😺"}
          end
          subgraph catClass["Template class “Cat” 🐱"]
             catClassAgeInt["int age"]
             catClassMakeSoundMethodFunctionPointer{"method makeSound():
                                                       { println(“Meow”) }
-                                                 "}
+                                                 😺"}
          end
          catClass -- "
             instantiate = allocate 
             physical memory space for 
             the data defined in the class
+            🐱➤➤🐈
+      
          " --> catObject:::Object
          
          catObjectAgeInt -- stores value of --> catClassAgeInt
@@ -93,7 +95,7 @@
          style catObjectMakeSoundMethodFunctionPointer fill:#55F, stroke:#FFF, stroke-width:3px, color:#fff 
        
       ```
-      ### Sophisticated Diagram of a Class and Object Instance
+      ### More Sophisticated Diagram of a Class and Object Instance
       - ###### sophisticated-diagram
 
       ```mermaid
@@ -110,20 +112,24 @@
                                                       calls function defined 
                                                       in class
                                                       “Cat” 
+      🐱
       "}
          end
       
          subgraph catClass["Class “Cat” 🐱"]
             catClassAgeInt["int age
-                            (value is stored in object)"]
+                            (value is stored in object)
+      ⬇︎
+      "]
             catClassMakeSoundMethodFunctionPointer{"method makeSound():
                                                  { println(“Meow”) }
-                                                 "}
+                                                 😺"}
          end
          catObjectMakeSoundMethodFunctionPointer -- calls --> catClassMakeSoundMethodFunctionPointer:::Object
            
          label["Sophisticated Diagram of 
-                Class and an Object Instance"]   
+                Class and an Object Instance
+      🐱➤➤🐈"]   
       
          style catClass fill:#444, stroke:#FFF, stroke-width:1px, color:#FFF, stroke-dasharray: 5 5
          style catClassAgeInt fill:#444, stroke:#FFF, stroke-width:1px, color:#FFF, stroke-dasharray: 5 5
