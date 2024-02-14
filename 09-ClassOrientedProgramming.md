@@ -68,20 +68,19 @@
               catObjectAgeInt["int age = 3"] 
               catObjectMakeSoundMethodFunctionPointer{"method makeSound(): 
                                                        { println(“Meow”) }
-                                                     😺"}
+                                                       😺"}
          end
          subgraph catClass["Template class “Cat” 🐱"]
             catClassAgeInt["int age"]
             catClassMakeSoundMethodFunctionPointer{"method makeSound():
-                                                      { println(“Meow”) }
-                                                 😺"}
+                                                    { println(“Meow”) }
+                                                    😺"}
          end
          catClass -- "
             instantiate = allocate 
             physical memory space for 
             the data defined in the class
             🐱➤➤🐈
-      
          " --> catObject:::Object
          
          catObjectAgeInt -- stores value of --> catClassAgeInt
@@ -105,22 +104,25 @@
                 creates 
              (or “instantiates”)
             object in memory
-      " --> catObject:::Object
+            using the class ‟Cat”
+            as a template
+            🐱➤➤🐈
+         " --> catObject:::Object
          subgraph catObject["Object “Cat” 🐈 @BFFC882A"]
               catObjectAgeInt["int age = 3"] 
               catObjectMakeSoundMethodFunctionPointer{"method makeSound(): 
                                                       calls function defined 
                                                       in class
                                                       “Cat” 
-      🐱
-      "}
+                                                      🐱
+         "}
          end
       
          subgraph catClass["Class “Cat” 🐱"]
             catClassAgeInt["int age
                             (value is stored in object)
-      ⬇︎
-      "]
+                            ⬇︎
+         "]
             catClassMakeSoundMethodFunctionPointer{"method makeSound():
                                                  { println(“Meow”) }
                                                  😺"}
@@ -129,7 +131,7 @@
            
          label["Sophisticated Diagram of 
                 Class and an Object Instance
-      🐱➤➤🐈"]   
+                🐱➤➤🐈"]   
       
          style catClass fill:#444, stroke:#FFF, stroke-width:1px, color:#FFF, stroke-dasharray: 5 5
          style catClassAgeInt fill:#444, stroke:#FFF, stroke-width:1px, color:#FFF, stroke-dasharray: 5 5

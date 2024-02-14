@@ -75,7 +75,7 @@ walk through the essential part of computing to create effective software.
   - [COP Tried to Introduce a New Style of Programming, But Ended With Mixed Results](09-ClassOrientedProgramming.md#cop-tried-to-introduce)
   - [Encapsulation](09-ClassOrientedProgramming.md#encapsulation)
     - [Simplistic Overview of a Class and an Object Instance of the Class](09-ClassOrientedProgramming.md#simplistic-overview)
-    - [Sophisticated Overview of a Class and Object Instance](09-ClassOrientedProgramming.md#sophisticated-diagram)
+    - [Sophisticated Diagram of a Class and Object Instance](09-ClassOrientedProgramming.md#sophisticated-diagram)
     - [Instantiation or "Allocating Memory" for an Object of a Certain Class](09-ClassOrientedProgramming.md#instantiation)
     - [Object Instance Variable Values = "State" of the Object](09-ClassOrientedProgramming.md#object-instance-variable-values)
     - [Problem: Using Classes and Objects as "Name-Spaces/Scopes" Lead to Procedural-Style Code Implementations](09-ClassOrientedProgramming.md#using-classes-and-objects-as-name-spaces)
