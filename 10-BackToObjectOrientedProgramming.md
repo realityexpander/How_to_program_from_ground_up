@@ -14,7 +14,7 @@
     >> - The big idea is “messaging.” 
     >> - The key in making great and growable systems is much more to have things communicate through _messages_ and not through direct mutable state.
     
-  - ### BOOP style takes the message metaphor to mean that the state of the program is immutable.
+  - ### BOOP style takes the message metaphor to mean that the state of the program is immutable except by sending a message to create a new state.
     - The `object` state can only changed by creating a new state via modifying the old state by calling `public` 
       method on objects.
     - All state of the `object` is `private` and only accessible via methods that are called on the object.
@@ -35,12 +35,12 @@
     change its state. This "messaging" metaphor stands up because internal state is not directly accessible. You
     must politely ask the object to change its state, and the object can choose to respond to the message or not.
     Unlike in COP where internal state is routinely exposed and directly manipulated via `static` methods and variables.
-  - Any state that needs to be exposed is only via "messages" to the object, and the object can choose to respond to
+  - Any state of the object is exposed only via "messages", or method calls on the object, and the object can choose to respond to
     the message or not.
   - No `static` methods or variables, only instance variables that are private to the `object`.
     - Use of `static` methods and variables is specifically disallowed as it leads to "shared mutable state" and
       "side effects" that are difficult to maintain and understand.
-      > Objects vs. Static Methods (webinar #1)
+      > Objects vs. Static Methods
       >   - https://www.youtube.com/watch?v=D0dqC_3Bch8
   - `protected` methods are allowed, but discouraged as they lead to "fragile" and "rigid" code.
   - Use of inheritance is explicitly discouraged, and prefer composition over inheritance. Exceptions for shallow
@@ -49,7 +49,7 @@
   - Use of `setters` and `getters` is specifically disallowed. Instead, the object is expected to respond to messages to change its
     state, and to respond to messages to get its state.
    
-  - There are only a few BOOP languages, "Smalltalk" and, _incredibly_, "Javascript" are among the most popular ones.
+  - There are only a few true BOOP languages, "Smalltalk," "Ruby," and, _incredibly_, "Javascript" are among the most popular ones.
 
 ## Banned COP Patterns in BOOP <a name="banned-patterns-in-boop"></a>
  - ###### banned-patterns-in-boop
@@ -66,7 +66,8 @@
    - Facade, Bridge, Proxy and Decorator Patterns are all very similar to the Adapter Pattern and are discouraged.
    - Builder Pattern considered too clumsy, the "Fluent" pattern is preferred 
      - "Fluent Pattern" is where an `object` is modified and returned to the caller to allow for "method chaining."
-   - Type-casting is frowned upon, and prefer the use of interfaces or composition as type-casting was only necessary for COP style implementations. 
+   - Type-casting is frowned upon, and prefer the use of interfaces or composition as type-casting was only necessary 
+     for COP style implementations. 
 
      > - 10 Design Patterns Explained in 10 Minutes
      >   - https://www.youtube.com/watch?v=tv-_1er1mWI

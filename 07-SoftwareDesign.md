@@ -80,6 +80,8 @@
           return -1 // -1 = value not found
       }
       
+      fun randomInt(max: Int): Int = (0..max).random() // <-- O(1) - Simple Lookup
+      
       // Algorithm: Quick Sort
       // Perform recursive quicksort - O(n log n)
       // Returns a new sorted array.
@@ -96,7 +98,7 @@
       
     
       fun main() {
-         val x: Array<Int> = Array(100) { randomInt(100) } // <-- O(n) - Fill Array x with 100 random integers
+         val x: Array<Int> = Array(100) { randomInt(100) } // <-- O(n) - Fill Array `x` with 100 random integers
          
          val a: Int = x[50] // <-- O(1) - Simple Lookup
          
