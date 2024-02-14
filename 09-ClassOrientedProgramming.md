@@ -204,6 +204,7 @@
     and variables in it to be considered a genuine subclass (or subtype) of the `interface`.
   - The `interface` is implemented by the subclass, where the methods and variables are defined by the 
     concrete implementing `class`.
+    
     ```mermaid
     ---
     title: Interface Example
@@ -282,15 +283,18 @@
     ```
     > Live Code Example: [How Interfaces Work in Kotlin](src/main/kotlin/interfaceExample.kt)
 
-      - Interfaces allow a developer to add multiple different implementations of the same named method by defining a
-        new `class` that `implement`s the superclass `interface` by defining code for the methods in the subclass
-          - This makes it easier to add new subclasses of the `interface` to the program without changing any existing code
-          - This also make it easier to write "testing" code that can be used to automatically verify the correctness of the methods
-            of the `class` by using "testing" implementations of the `interface`
-      - The `interface` is `implement`ed by a `class` and the methods are finished by the implementing `subclass`
-        according to the method signatures in the `interface`
-      - "Subclassing" is also called "Subtyping" or "Inheritance" and is the basis for Polymorphism as it allows
-        different implementations of the same named method to be used interchangeably in the program.  
+    - Interfaces allow a developer to add multiple different implementations of the same named method by defining a
+      new `class` that `implement`s the superclass `interface` by defining code for the methods in the subclass
+        - This makes it easier to add new subclasses of the `interface` to the program without changing any existing code
+        - This also make it easier to write "testing" code that can be used to automatically verify the correctness of the methods
+          of the `class` by using "testing" implementations of the `interface`
+    - The `interface` is `implement`ed by a `class` and the methods are finished by the implementing `subclass`
+      according to the method signatures in the `interface`
+    - "Subclassing" is also called "Subtyping" or "Inheritance" and is the basis for Polymorphism as it allows
+      different implementations of the same named method to be used interchangeably in the program.
+      > ### MORE OVERCOMPLICATED TERMINOLOGY THAT MAKES IT HARDER TO LEARN!
+      >> The "Liskov Substitution Principle" Code Example
+      >> - https://www.youtube.com/watch?v=gV4P-fewa9M
 
 ## Inheritance <a name="inheritance"></a>
   - ### BIG IDEA - Can we create a new class that inherits all the methods and variables of another class and then add new methods or override methods in the subclass?
@@ -447,6 +451,8 @@
   
   - #### ANOTHER EXAMPLE OF A SIMPLE IDEA LEADING TO OVERCOMPLICATED CODE
     - Leading to unwieldy and hard to understand code, often used in places where it was not necessary.
+    > Abstraction Can Make Your Code Worse
+    > - https://www.youtube.com/watch?v=rQlMtztiAoA 
   
   - An `abstract class` is a template for a "concrete" (or specific) `class`, and cannot to be instantiated itself, 
     only `extend`-ed and be used as a "general" `class` to group the "specific" classes into categories or "types."

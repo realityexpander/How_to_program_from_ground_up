@@ -126,9 +126,9 @@
         > Live Code Example: [Time Complexity Example](src/main/kotlin/timeComplexityExample.kt)
 
 ## Communicating Software Designs Visually <a name="communicating-software-designs"></a>
-  - ### Big IDEA — How can we use diagrams and drawings to communicate about software designs? 
+  - ### BIG IDEA — How can we use drawings and diagrams to visually communicate about software designs? 
   
-  - ### The Line, The Box and The Layers
+  - ### The Line, The Box and The Conceptual Layers
     - At the time when structured programming became popular, ideas around "Software Design" were developed to help
       people create more complex software systems with increasingly more complex requirements and coordinating work 
       with larger teams of people working together a shared codebase.
@@ -142,52 +142,65 @@
     >   - https://www.youtube.com/watch?v=nCxhJ_51fjA
 
 ## Some Thoughts on Common Software Production Methodologies
-  - ## Big IDEA — Are there ways to organize the work of discovering solutions and designing software that are better than others?
+  - ### BIG IDEA — Are there ways to organize the work of discovering solutions and designing software that are better than others?
 
   - ### Agile 
-    - Was soon co-opted into "Agile® Certification Business"
+    - Was soon co-opted into "Agile® Certification Business."
   - ### Scrum 
-    - What worked in car production is unlikely to have the same success in software development? Nope.
+    - What worked in car production is likely to have the same success in software development? Nope.
+    - Scrum is a "production management" methodology that was developed for managing the production of cars, and it
+      was soon co-opted into the "Agile® Certification Business" and turned into a "one-size-fits-all" process that was
+      supposed to work for all kinds of software development, and it doesn't.
   - ### SAFe 
     - Another over-complicated process that tries to "productionize" the software development process.
+    - It's a "one-size-fits-all" process that was supposed to work for all kinds of software development, and it doesn't.
   - ### Waterfall 
-    - Was never a thing, it was a straw-man argument.
-    > It's Time For Waterfall To DIE
-    > - https://www.youtube.com/watch?v=o3jDLVCpH1E
+    - Was never a thing, it was a straw-man argument. Winston Royce, the creator the term "Waterfall," made it 
+      clear on page 2 of his 1970 paper "Managing the Development of Large Software Systens" that he was not advocating f
+      or the "Waterfall" process, but was trying to make a point about how software development was being managed like
+      a manufacturing process, and it is a counter-productive way to manage the knowledge work.
+      > It's Time For Waterfall To DIE
+      > - https://www.youtube.com/watch?v=o3jDLVCpH1E
 
-  - ## The Big Problem with Applying Production Management Methodologies to Software Development
-  - The main issues with all these approaches is that they assume that software development is just another
-      manufacturing process, and that the people who are doing the work are just another kind of "resource" that
-      can be managed like a replaceable manufactuing worker on an assembly line.
-    - Software development is fundamentally knowledge work and a process of discovery. The people who are doing
-      the work are not interchangeable cogs but "knowledge workers" who are doing creative work that requires a lot of
-      thinking and discussion and failed attempts before success, and does not have predictable outcomes.
-    - The "Agile Manifesto" was written to address this problem, and to help people understand that software development
-      is a fundamentally different kind of work than manufacturing, and that the people who are doing the work are
-      fundamentally different kinds of workers than the people who work in manufacturing. This was a good thing.
-    - The problem is that the Agile movement was soon co-opted into the "Agile® Certification Business" and turned
-      into a "one-size-fits-all" process that was supposed to work for all kinds of software development, and it
-      doesn't. It's a cargo cult that doesn't work for most teams, as most teams implement the "rules" directly without
-      understanding the "spirit" of the rules, which there are no rules... just some ideas:
-  
-  - ### The 4 Values of the Agile Manifesto
-    - The Agile Manifesto was written to address the problem of trying to manage software development like a manufacturing
-      process, and to help people understand that software development is fundamentally different than manufacturing.
-      - The 4 Values of the Agile Manifesto are:
-        1. Individuals and interactions over processes and tools
-        2. Working software over comprehensive documentation
-        3. Customer collaboration over contract negotiation
-        4. Responding to change over following a plan
-         
-        - While we value the items on the right, we value the items on the left more.
+  - ## The Problem with Applying "Production Management" Methodologies to Software Development Knowledge Work
+    - The main issues with all these approaches is that they assume that software development is just another
+        manufacturing process, and that the people who are doing the work are just another kind of "resource" that
+        can be managed like a replaceable manufactuing worker on an assembly line.
+      - Software development is fundamentally knowledge work and a process of discovery. The people who are doing
+        the work are not interchangeable cogs but "knowledge workers" who are doing creative work that requires a lot of
+        thinking and discussion and failed attempts before success, and does not have predictable outcomes.
+      - The "Agile Manifesto" was written to address this problem, and to help people understand that software development
+        is a fundamentally different kind of work than manufacturing, and that the people who are doing the work are
+        fundamentally different kinds of workers than the people who work in manufacturing. This was a good thing.
+      - The problem is that the Agile movement was soon co-opted into the "Agile® Certification Business" and turned
+        into a "one-size-fits-all" process that was supposed to work for all kinds of software development, and it
+        doesn't. It's a cargo cult that doesn't work for most teams, as most teams implement the "rules" directly without
+        understanding the "spirit" of the rules, which there are no rules... just some values:
     
-    - ### The fundamental idea of Agile is "CHANGE."  
-      - How can we make software development more flexible and faster to respond to changes and refinements in the
-        requirements of software?
-      - Cumbersome processes allow managers to "monitor" using charts and graphs is a standard way for businesses
-        to manage risk in a manufacturing environment, but it's not a good way to manage risk for knowledge work.
-      - Agile was a response to the progression towards more and more cumbersome processes that were driving projects
-        to a standstill. It was a way to get back to the "heart" of software development, which is "respond to change."
+      - ### The 4 Values of the Agile Manifesto
+        - The Agile Manifesto was written to address the problem of trying to manage software development like a manufacturing
+          process, and to help people understand that software development is fundamentally different than manufacturing.
+        - The 4 Values of the Agile Manifesto are:
+          1. Individuals and interactions over processes and tools.
+          2. Working software over comprehensive documentation.
+          3. Customer collaboration over contract negotiation.
+          4. Responding to change over following a plan.
+           
+        - #### While we value the items on the right, we value the items on the left more.
+      
+      - ### The fundamental idea of Agile is "RESPONDING to CHANGE."  
+        - How can we make software development more flexible and faster to respond to changes and refinements in the
+          requirements of software?
+        - Cumbersome processes allow managers to "monitor" using charts and graphs is a standard way for businesses
+          to manage risk in a manufacturing environment, but it's not a good way to manage risk for knowledge work.
+        - Agile was a response to the progression towards more and more cumbersome processes that were driving projects
+          to a standstill. It was a way to get back to the "heart" of software development, which is "respond to change."
+        - It's primary result is working in much smaller steps, and being able to change direction quickly and easily
+          based on what is discovered taking those small steps.
+        - Each small step creates some kind of "valuable working software" that can be shown to the customer, and the 
+          customer can then give feedback on the working software, and the software can be changed based on that feedback.
+          > ### Key findings from the Agile Manifesto 
+          > - Humans rarely know what they want until they see what they don't want. 
 
 - [Continue Reading - Class Oriented Programming](./09-ClassOrientedProgramming.md)
 - [Back to Index](README.md)

@@ -95,9 +95,14 @@
      >   - https://youtu.be/Vpb7IQ2Ib_Y
      > - Magnetic Viewing Film — How it Works/Demos
      >   - https://www.youtube.com/watch?v=slVL5nbTXd4
+     > - HOW MAGNETS PRODUCE ELECTRICITY
+     >   - https://www.youtube.com/watch?v=FehUCQKKRwo
      > - Electronics Magnetic Cores I Properties 1961 US Army Training Film
      >   - https://www.youtube.com/watch?v=fQhSqoNm-qE
-## The Raucous Relay — 1835 to 1920's <a name="the-raucous-relay"></a>
+     > Magnetic Core Memory
+     >   - https://www.youtube.com/watch?v=paQ3zIsz1-8
+
+# The Raucous Relay — 1835 to 1920's <a name="the-raucous-relay"></a>
    - ### BIG IDEA — Use an electromagnet to control a switch (or multiple switches.)
    
    - The first electrical computers were made of relays (extremely slow but faster than calculating manually!)
@@ -119,6 +124,8 @@
      > - Computers built using Relays
      >   - https://youtu.be/e8DavnWmr1E
      >   - https://youtu.be/NXeBR-lbnjI
+     > - Relay Memory Circuit
+     >   - https://www.youtube.com/watch?v=UEzirsIhFp4
      > - Hexadecimal Relay Calculator
      >   - https://www.youtube.com/watch?v=OzTwg-AQJ6E
      > - Relay Calculators: Episode 3 - Relay Logic Gates, Latches and Delays
