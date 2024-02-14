@@ -10,7 +10,7 @@
     - [The Magnificent Magnet](03-Hardware#the-magnificent-electromagnet)
     - [The Raucous Relay](03-Hardware#the-raucous-relay)
     - [The Voracious Vacuum Tube](03-Hardware#the-voracious-vacuum-tube)
-    - [The Tiny Transistor](03-Hardware#the-tiny-transistor)
+    - [The Tiny Transistor](03-Hardware.md#the-tiny-transistor)
     - [The Interchangeable Integrated Chip (IC)](03-Hardware#the-interchangeable-integrated-chip-ic)
     - [The Mighty Microprocessor](03-Hardware#the-mighty-microprocessor)
 - [Data Structures](04-DataStructures)
