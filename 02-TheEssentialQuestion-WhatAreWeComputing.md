@@ -36,17 +36,16 @@
           [<img src="assets/punched_card.png" width="400">](https://en.wikipedia.org/wiki/Punched_card)
           [<img src="assets/hollerith_counter.png" width="400">](https://en.wikipedia.org/wiki/Hollerith_machine)
 
-      > - 1889 Herman Hollerith Census Machine by TMC which became IBM
-      >  - https://www.youtube.com/watch?v=9HXjLW7v-II
-
-      > PUNCHED CARD DATA PROCESSING INTRODUCTION IBM
-      > - https://www.youtube.com/watch?v=etu-cH-nkIA
+        > - 1889 Herman Hollerith Census Machine by TMC which became IBM
+        >  - https://www.youtube.com/watch?v=9HXjLW7v-II
+        > - PUNCHED CARD DATA PROCESSING INTRODUCTION IBM
+        >  - https://www.youtube.com/watch?v=etu-cH-nkIA
     
     - ## Remnants of photons hitting a piece of glass coated with a thin layer of phosphor - 1940s to 1980s
 
-      [<img src="assets/williams_tube.png" width="400">](https://en.wikipedia.org/wiki/Williams_tube)
-      [<img src="assets/williams_tube2.png" width="400">](https://en.wikipedia.org/wiki/Williams_tube)
-      [<img src="assets/williams_tube3.png" width="400">](https://ub.fnwi.uva.nl/computermuseum/williamstube.html)
+      [<img src="assets/williams_tube.png" width="200">](https://en.wikipedia.org/wiki/Williams_tube)
+      [<img src="assets/williams_tube2.png" width="300">](https://en.wikipedia.org/wiki/Williams_tube)
+      [<img src="assets/williams_tube3.png" width="300">](https://ub.fnwi.uva.nl/computermuseum/williamstube.html)
 
       > - Manchester Baby and the birth of Computer Memory
       >  - https://www.youtube.com/watch?v=SpqayTc_Gcw
@@ -70,7 +69,7 @@
 
       - [<img src="assets/10mb_hard_disk.png" width="400">](https://en.wikipedia.org/wiki/IBM_305_RAMAC)
 
-    - ## Tiny electrical charge of a capacitor (gaps between metals) in a tiny area of space - 1960s to present
+    - ## Tiny electrical charge of a capacitor (a simple gap between metal plates) in a tiny area of space - 1960s to present
         - DRAM (Dynamic Random Access Memory) Chip (10x magnification), not mechanical at all, just electrical.
 
           [<img src="assets/DRAM.png" width="400">](https://en.wikipedia.org/wiki/Dynamic_random-access_memory)
@@ -80,11 +79,11 @@
       represented with a series of logical operations.
     - By building up from the simple logic of `AND`, `OR`, and `NOT` operations, humans can create an
       arbitrarily complex sequence of logical operations.
-    - These logical operations are sequenced in time to create "State Machines" that can perform complex tasks
+    - These logical operations are sequenced in time to create ["State Machines"](https://www.youtube.com/watch?v=lffJJbqt1fk) that can perform complex tasks
       and solve complex problems. A state machine is simply a way of representing the problem that changes over time
       controlled by a series of logical operations & conditions that lead to certain states and available actions.
     - These logical operations are built up using patterns called "algorithms" grouped together in "programs" that
-      can be executed by a digital computer.
+      can be executed by any digital computer, no matter what the underlying hardware is.
 
       > ## All of this "technology" is based on human ingenuity and cleverness to exploit certain properties of naturally occurring phenomenon in a way to create some "useful human work".
       > ### The machines cannot possibly "know" anything about the problem or solution, and never will.
