@@ -322,6 +322,7 @@
       >   - https://www.youtube.com/watch?v=7zffjsXqATg
 
 ## The Mighty Microprocessor — 1971 to present <a name="the-mighty-microprocessor"></a>
+  - ###### the-mighty-microprocessor
   - ### BIG IDEA — Consolidate all the necessary components from various Integrated Chips required for a computer onto a single chip.
   
     [<img src="assets/6502.png" width="400">](https://en.wikipedia.org/wiki/MOS_Technology_6502)

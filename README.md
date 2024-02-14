@@ -5,8 +5,8 @@ walk through the essential part of computing to create effective software.
 
 ## Table of Contents
 - [Introduction](#introduction)
-- [The Essence of Computing](02-TheEssentialQuestion-WhatAreWeComputing)
-- [Hardware](03-Hardware)
+- [The Essence of Computing](02-TheEssentialQuestion-WhatAreWeComputing.md)
+- [Hardware](03-Hardware.md)
   - Using Natural Phenomenon to Represent Human Information
     - [The Wire & the Light Bulb & the Battery](03-Hardware.md#the-wire--the-battery)
     - [The Simple Switch](03-Hardware.md#the-simple-switch)
@@ -15,6 +15,7 @@ walk through the essential part of computing to create effective software.
     - [The Voracious Vacuum Tube](03-Hardware.md#the-voracious-vacuum-tube)
     - [The Tiny Transistor](03-Hardware.md.md#the-tiny-transistor)
     - [The Interchangeable Integrated Chip (IC)](03-Hardware.md#the-interchangeable-integrated-chip-ic)
+      - [Why are NAND gates so special?](03-Hardware.md#Why are NAND gates special?) 
     - [The Mighty Microprocessor](03-Hardware.md#the-mighty-microprocessor)
 - [Data Structures](04-DataStructures)
   - How Humans Represent Data in Binary in Computers?
