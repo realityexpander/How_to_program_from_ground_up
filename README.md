@@ -1,5 +1,8 @@
 # How to Program From The Bottom Up (with Minimal BS)
 
+A guide for the beginner software engineer who needs a primer overview of software development as a semi-historical
+walk through the essential part of computing to create effective software.
+
 ## Table of Contents
 - [Introduction](#introduction)
 - [The Essence of Computing](02-TheEssentialQuestion-WhatAreWeComputing)
