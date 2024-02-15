@@ -3,6 +3,13 @@
 A guide for the beginner software engineer who needs a primer overview of software development as a semi-historical
 walk through the essential part of computing to create effective software.
 
+This is not a thorough deep dive into any one topic, but a broad overview of the essential concepts and principles
+that seems to be missing from most programming tutorials and courses. My goal is to give you the context about
+why things are the way they are in computing, and how they came to be that way, and the issues and problems that
+arose from the way things are.
+
+The guide is a reference and follow along guide for my video series on YouTube: [How to Program From The Bottom Up (with Minimal BS)](https://www.youtube.com/playlist?list=XXXXXXX)
+
 ## Table of Contents
 - [Introduction](#introduction)
 - [The Essence of Computing](02-TheEssentialQuestion-WhatAreWeComputing.md)
