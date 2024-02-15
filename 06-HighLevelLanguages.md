@@ -202,7 +202,7 @@
       ```
     - [Click for source code to copy and paste into the BASIC playground: `proceduralProgrammerMadeLoops.bas`](assets/proceduralProgrammerMadeLoops.bas)
 
-  - ## Solution: Use High-Level Language Command (Like `FOR`,) to Create a "Standard" Loop instead of `GOTO` and `IF` <a name="solution-declarative-for-loop"></a>
+  - ## Solution: Use a High-Level Language Command (Like `FOR`/`NEXT`) to Create a "Standard" Loop instead of `GOTO` and `IF` <a name="solution-declarative-for-loop"></a>
     - ###### solution-declarative-for-loop
     - ### BIG IDEA - We can standardize common use-cases (like looping) into the language to reduce programming time, communicate intent of code to other people and minimize errors.
     
