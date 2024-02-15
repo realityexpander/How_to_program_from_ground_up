@@ -1,5 +1,5 @@
 # HARDWARE — We Must Have A Machine To Do The Work
-  - ### Until We All Attain Accurate Psychic Powers, there must be some kind of mechanical or electronic device to do the work.
+  - ### Until we all attain accurate psychic powers, there must be some kind of mechanical or electronic device to do the work for us.
 
 # Low Level Hardware Implementations
 
