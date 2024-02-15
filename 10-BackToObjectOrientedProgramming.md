@@ -276,7 +276,11 @@
     // Page: New Page 4 Content
     
     ```
-    > Live Code Example: [BOOP example](src/main/kotlin/boopExample.kt)   
+    > Live Code Example: [BOOP example](src/main/kotlin/boopExample.kt)
+ 
+  > Side Quest on "Declarative" Programming
+  > - Notice that some of the diagrams in this document are created using code that is "declarative" in nature.
+  > - https://www.youtube.com/watch?v=nrVIlhtoE3Y
 
 - [Continue Reading - Functional Programming](./11-FunctionalProgramming.md)
 - [Back to Index](README.md)

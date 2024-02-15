@@ -102,7 +102,8 @@
       
          label["Sophisticated Diagram of 
                 Class and an Object Instance
-                🐱➤➤🐈"]  
+                🐱➤➤🐈
+         "]   
           
          catClass -- "
                 creates 

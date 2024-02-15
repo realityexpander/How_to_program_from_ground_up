@@ -9,6 +9,11 @@ that seems to be missing from most programming tutorials and courses. My goal is
 why things are the way they are in computing, and how they came to be that way, and the issues and problems that
 arose from the way things are.
 
+I have found that it's far more imporatnt to understand the process that people went through to create the
+current solutions than to understand the mechanical details of how the solution work. Many detail about
+disadvantages and limitations is often left out of the discussion, or worse, simply not known or dismissed as
+irrelevant due to ignorance.
+
 The guide is a reference and follow along guide for my video series on YouTube: 
  - [YouTube Series - How to Program From The Bottom Up (with Minimal BS)](https://www.youtube.com/playlist?list=PLzUxWOrVXB4QHsURai1GmmhmqAUVNbfno)
 

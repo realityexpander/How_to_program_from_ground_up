@@ -88,6 +88,9 @@
   tied to any specific computer hardware or operating system. The computer manufacturer only had to create the
   compiler for their particular machine, and then the same code could be run on any machine that had a compiler
   for the language.
-
+  
+  > Procedural Programming: It’s Back? It Never Went Away - Kevlin Henney [ACCU 2018]
+  > - https://www.youtube.com/watch?v=mrY6xrWp3Gs
+ 
 - [Continue Reading - Class Oriented Programming](./09-ClassOrientedProgramming.md)
 - [Back to Index](README.md)
