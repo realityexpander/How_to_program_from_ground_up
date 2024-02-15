@@ -10,17 +10,14 @@
     cleverness and creativity of the designer. People have invented many ways to solve problems, and some of these
     are so common that they have been given names, like "sorting" and "searching" algorithms.
     > - Binary Search Algorithm - Code walk-through and Complexity Analysis
-    > - https://www.youtube.com/watch?v=LdjkZ2vQapI
+    >   - https://www.youtube.com/watch?v=LdjkZ2vQapI
     > - Animated Interactive Visualizations with pseudocode for many common data structures
-    > - https://www.cs.usfca.edu/~galles/visualization/Algorithms.html
-
-    > Quick Sort [Visual Explanation] 
+    >   - https://www.cs.usfca.edu/~galles/visualization/Algorithms.html
+    > - Quick Sort [Visual Explanation] 
     >   - https://www.youtube.com/watch?v=WprjBK0p6rw
-   
-    > 15 Sorting Algorithms in 6 Minutes
+    > - 15 Sorting Algorithms in 6 Minutes
     >   - https://www.youtube.com/watch?v=kPRA0W1kECg
-    
-    > Sorting Algorithms Explained Visually
+    > - Sorting Algorithms Explained Visually
     >   - https://www.youtube.com/watch?v=RfXt_qHDEPw
 
 ## Time Complexity - How long is this gonna take? <a name="time-complexity"></a>
@@ -207,7 +204,7 @@
         - Each small step creates some kind of "valuable working software" that can be shown to the customer, and the 
           customer can then give feedback on the working software, and the software can be changed based on that feedback.
           > ### Key findings from the Agile Manifesto 
-          > - Humans rarely know what they want until they see what they don't want. 
+          > - Humans rarely know what they want UNTIL they experience what they _don't_ want. 
 
 - [Continue Reading - Class Oriented Programming](./09-ClassOrientedProgramming.md)
 - [Back to Index](README.md)
