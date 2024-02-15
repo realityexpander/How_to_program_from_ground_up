@@ -1,4 +1,4 @@
-# THE ESSENTIAL QUESTION IN COMPUTING - What are we Representing?
+# THE ESSENTIAL QUESTION IN COMPUTING - What Are We Representing with Digital Information?
 - Everything in computing is REPRESENTING digital information "as" something _else_.
 - Kinds of representations through history:
 
