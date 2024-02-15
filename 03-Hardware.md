@@ -330,6 +330,8 @@
     - From simple NAND gate packages to a somewhat sophisticated 7-segment display using LED's.
       > - Designing a 7-segment hex decoder
       >   - https://www.youtube.com/watch?v=7zffjsXqATg
+      >> Side-quest: Why do they make the outputs on the 74HC42 (BCD-to=Decimal Driver) active low and not active high?
+      >>  - https://qr.ae/psXlGI
 
 ## The Mighty Microprocessor — 1971 to present <a name="the-mighty-microprocessor"></a>
 ###### the-mighty-microprocessor
