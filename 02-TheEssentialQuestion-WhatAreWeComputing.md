@@ -86,7 +86,7 @@
       can be executed by any digital computer, no matter what the underlying hardware is.
 
       > ## All of this "technology" is based on human ingenuity and cleverness to exploit certain properties of naturally occurring phenomenon in a way to create some "useful human work".
-      > ### The machines cannot possibly "know" anything about the problem or solution, and never will.
+      >> ### The machines cannot possibly "know" anything about the problem or solution, and NEVER WILL.
 
       ### It's just following the logical operations that humans have carefully designed to represent the problem and represent a solution.
 
