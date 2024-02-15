@@ -147,10 +147,10 @@
 ## Some Thoughts on Common Software Production Methodologies
 ##### some-thoughts-on-common-software-production-methodologies
   - ### BIG IDEA — Are there ways to organize the work of discovering solutions and designing software that are better than others?
-
-  - ### Agile 
-    - Was soon co-opted into "Agile® Certification Business."
-  - ### Scrum 
+  
+  - ### Agile
+    - Was soon co-opted into "Agile®™ Certification®™ Business."
+  - ### Scrum
     - What worked in car production is likely to have the same success in software development? Nope.
     - Scrum is a "production management" methodology that was developed for managing the production of cars, and it
       was soon co-opted into the _"Agile® Certification Business"_ and turned into a "one-size-fits-all" process that was
@@ -165,6 +165,14 @@
       a manufacturing process, and it is a counter-productive way to manage the knowledge work.
       > It's Time For Waterfall To DIE
       > - https://www.youtube.com/watch?v=o3jDLVCpH1E
+  - ## I call all of the above (and similar books and conferences) the **"Age of Conference Driven Development"**
+    - The problems around planning and organizing ever-larger teams, and increasingly complex problems became so onerous
+      that many people looked far and wide for _ANY_ solution to gain a foothold on the process and make it more
+      predictable and manageable. Unfotunately, knowledge work is FUNDAMENTALLY risky and not possible to plan
+      because its a process of DISCOVERY, not a process of manufacturing. 
+    - _We may **NEVER** find a good solution in
+      the time allotted._ This is not changeable. It's a fundamental ground-level understanding of knowledge work.
+    - ### Dealing with the fundamental risks involved with knowledge work is the core problem in planning software development.
 
   - ## The Problem with Applying "Production Management" Methodologies to Software Development Knowledge Work
     - The main issues with all these approaches is that they assume that software development is just another
