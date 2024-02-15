@@ -9,7 +9,8 @@ that seems to be missing from most programming tutorials and courses. My goal is
 why things are the way they are in computing, and how they came to be that way, and the issues and problems that
 arose from the way things are.
 
-The guide is a reference and follow along guide for my video series on YouTube: [How to Program From The Bottom Up (with Minimal BS)](https://www.youtube.com/playlist?list=XXXXXXX)
+The guide is a reference and follow along guide for my video series on YouTube: 
+ - [YouTube Series - How to Program From The Bottom Up (with Minimal BS)](https://www.youtube.com/playlist?list=PLzUxWOrVXB4QHsURai1GmmhmqAUVNbfno)
 
 ## Table of Contents
 - [Introduction](#introduction)
