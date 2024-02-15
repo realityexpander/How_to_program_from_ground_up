@@ -102,7 +102,7 @@
      >   - https://www.youtube.com/watch?v=FehUCQKKRwo
      > - Electronics Magnetic Cores I Properties 1961 US Army Training Film
      >   - https://www.youtube.com/watch?v=fQhSqoNm-qE
-     > Magnetic Core Memory
+     > - Magnetic Core Memory
      >   - https://www.youtube.com/watch?v=paQ3zIsz1-8
 
 ## The Raucous Relay — 1835 to 1920's <a name="the-raucous-relay"></a>

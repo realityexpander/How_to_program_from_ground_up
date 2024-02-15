@@ -195,7 +195,7 @@
     ```
     > Live Code Example: [How Coroutines Work in Kotlin](src/main/kotlin/coroutineExample.kt)
 
-  - ### Fixing the Coroutine race condition problem using "Atomic" updates (using `StateFlow` class) <a name="AtomicUpdatesCoroutines"></a>
+  - ### Fixing the Coroutine race condition problem using Atomic updates (using `StateFlow` class) <a name="AtomicUpdatesCoroutines"></a>
     - ###### fixing-updates-with-coroutines
     ```Kotlin
      fun main() {

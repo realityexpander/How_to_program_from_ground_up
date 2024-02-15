@@ -233,7 +233,7 @@
      
     // The result of the addition of 5 and 7 is 12, which is 0x0C in hexadecimal.
     ```
-# Assembly Language - The First Human-readable Language for Programming Computers <a name="assembly-language"></a>
+# Assembly Language - The First Human-Readable Language for Programming Computers <a name="assembly-language"></a>
 ###### assembly-language
   - ### BIG IDEA — Make the machine code easier for humans to read and write by using "mnemonics" to represent the opcodes instead of the actual hex values.
   
@@ -302,7 +302,7 @@
 
   - ## Variables <a name="variables"></a>
     - ###### variables
-    - ### BIG IDEA — "Variables" are just named values for memory locations used to store data, and easier for humans to remember and use.
+    - ### BIG IDEA — "Variables" are just named memory locations used to store data, and easier for humans to remember and use.
     
     - "Variables" are just named values for memory locations used to store data.
         - Often called "fields," "attributes," "labels," or "properties."

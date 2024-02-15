@@ -11,21 +11,21 @@
   - The main idea is to use templates (called a "`class`") to group together methods and variables that are 
     related to each other (highly cohesive) and then create `objects` from the class to simulate 
     real-world objects and interactions.
-  - Think of simulating a hospital with a `class` called "Doctor" and a `class` called "Patient" and a `class` called "Hospital"
-    - The `class` "Doctor" would have methods like "treatPatient()" and "writePrescription()" and "getPaid()"
-    - The `class` "Patient" would have methods like "getTreated()" and "payBill()" and "getPrescription()"
-    - The `class` "Hospital" would have methods like "admitPatient()" and "payDoctor()" and "payNurse()"
+  - Think of simulating a hospital with a `class` named `Doctor` and a `class` named `Patient` and a `class` named `Hospital`.
+    - The `class Doctor` would have methods like `treatPatient()` and `writePrescription()`.
+    - The `class Patient` would have methods like `getTreated()` and `payBill()` and `pickupPrescription()`.
+    - The `class Hospital` would have methods like `admitPatient()` and `assignDoctor()` and `paySalary()`.
   - Examples of Class-Oriented Programming languages are "Simula," "C++", "C#" and "Java"
   
-## COP Tried to Introduce a New Style of Programming, Resulting in Mixed Results <a name="cop-tried-to-introduce"></a>
+## COP Tried to Introduce a New Style of Programming, Resulting in Confusing Mixed Results <a name="cop-tried-to-introduce"></a>
 ###### cop-tried-to-introduce
-  - COP was a way to for most programmers to fit the "procedural" paradigm into a `class` and `object` paradigm, 
-    with mixed results.
-  - Due to the terminology and lack or effective learning resources, as well as many differing opinions about how
-    to apply the COP paradigm, many aspect were often misused, abused and misunderstood. These widespread confusion lead to 
+  - COP was a way to for most programmers to fit the procedural paradigm into a "Class and Object" paradigm, 
+    with very mixed results.
+  - Due to the new blast of terminology and lack or effective learning resources, along with many differing opinions about how
+    to apply the COP paradigm, many aspect of COP were misused and abused. This widespread confusion lead to 
     inefficiently structured programs that became increasingly difficult understand and maintain. The same problems 
-    that plagued the "procedural" paradigm were now present in the "class" and "object" paradigm, mainly due to the
-    misuse of `static` methods and data to mimic the "procedural" paradigm.
+    that plagued the Procedural paradigm were also now present in the "Class and Object" paradigm, mainly due to the
+    misuse of `static` methods and data to mimic the procedural paradigm methodologies.
   
 ## Encapsulation <a name="encapsulation"></a>
 ###### encapsulation
@@ -188,23 +188,27 @@
   
   - ## Problems Arising from Abusing `Static` Methods and Attributes <a name="problems-arising-from-abusing-static"></a>
     - ###### problems-arising-from-abusing-static
-    - Using `static` breaks the encapsulation of the object and leads to "procedural" style programming because it
-        allows the data to be accessed and manipulated directly without the use of the methods of the `class`.
-    - Misuse of `static` methods often lead to "collections of static methods" that simply extended the "procedural" paradigm, except the
-      code blocks now had a name (the name of the Class) and were grouped together instead of being globally accessible.
-    - The `static` methods were passed in data as parameters and returned data as a result, just like the "procedural" paradigm.
-        - When `static` is used this way, it completely breaks encapsulation. The objects are just bags to hold code,
-          and the data is fully exposed to anyone who wants to access it, as it is not retained as state within the object.
-    - This `static` way of programming lead to the same exact problems as the "procedural" paradigm, but with the
-      needlessly added complexity of the class and object paradigms.
+    - Using `static` breaks the encapsulation of the object and leads to Procedural style programming because it
+      allows the data to be accessed and manipulated directly without the creating an object of the `class`.
+    - Misuse of `static` keyword often lead to "collections of `static` methods" that simply extended the procedural 
+      paradigm, except the code blocks now had a name (the name of the `class`) and were grouped together instead of 
+      being globally accessible.
+    - The `static` methods are passed in the data as parameters and returned the result, just like the procedural paradigm.
+        - When `static` is used this way, it completely breaks encapsulation. 
+        - The objects are just bags to hold code (a name-space"), and the data is fully exposed to anyone who wants 
+          to access it, as it is not privately retained as state within the object. 
+    - This `static` way of programming lead to the same exact problems as the procedural paradigm, but with the
+      extra needless complexity of the "Class and Object" paradigm.
     
     - These were popularized by web frameworks such as Java's Spring Boot and Many Others.
       > - The Pain of OOP, Lecture #2: Static methods and attributes are evil
       >   - https://www.youtube.com/watch?v=lELJSj9mWbI
     
-    - One of the main problems is that `static` methods and data lead to issues with "testing" the code, as the
-      `static` methods and data are stateful and are not encapsulated in an object, so they are not
-      easily "mocked" or "stubbed" for testing purposes, ie: called with "known" data to verify the correctness of the method.
+    - One of the main problems is that `static` methods and data lead to issues with creating automated testing for 
+      the program, as the `static` methods and data are stateful and are not encapsulated in an object. This ends up
+      making the methods and data not easily "mocked" or "stubbed" for automatic testing purposes
+      - Automated testing is simply creating and calling classes with "known" data to verify the correctness of the 
+        `class` and it's methods.
     - Another side-effect of `static` methods and data is that they are not "thread-safe" and can easily lead to
       data corruption.
     - And the largest issue is that `static` is shared mutable state and is the root of all evil in programming as it
@@ -327,7 +331,8 @@
   - Inheritance is the idea that a new `class` can inherit from another `class` all of its methods and variables,
     and then add new methods or override methods in the subclass that will modify the behavior of the
     original `class`.
-  - Classes can inherit from other classes to reuse code and "state", and to create "subtypes/subclasses."
+  - Classes can inherit from other classes to reuse code and state, and to create "subtypes/subclasses" of the 
+    original class with modifications.
   - The class that is inherited from is called the "superclass" and the class that inherits is called the "subclass."
   - The "subclass" is also called a "derived class" and the "superclass" is also called a "base class."
   - "Subtyping," "Subclassing," and "Inheritance" are all the same concept, and are the basis for polymorphism and dynamic binding.
@@ -447,23 +452,23 @@
   - ### BIG IDEA — The hype around reusability was so strong at the time that it was often used to justify the use of inheritance in places where it was not appropriate.
 
   - Misuse of inheritance lead to immense unnecessary complexity to fit in the "simulation" paradigm, 
-    as programmers tried to shove the "Procedural Paradigm" into the fancy new "Class Oriented" paradigm with less 
+    as programmers tried to shove the Procedural paradigm into the fancy new "Class Oriented" paradigm with less 
     than stellar results.
   - Inheritance is a usually a bad idea for many reasons, and very overused beyond its original intent.
       - The hype around reusability was so strong that it was often used to justify the use of inheritance in places
         where it was not appropriate.
       - This lead to "fragile" and "rigid" code that was hard to understand and hard to modify, leading to a lot
         of waste and costs.
-      - Many popular ways of dealing with the "procedural approach" to COP were turned into "design patterns"
-        that were used to "fix" the problems of the "procedural approach" to `COP. Many of these ideas were just
-        hacks to fit the "procedural approach" into the "COP" paradigm.
-      - The promise of "reusability" was not fulfilled by COP languages.
+      - Many popular ways of dealing with the procedural approach to COP were turned into official sounding "design patterns"
+        that were used to "fix" the problems of the "procedural approach" to COP. Many of these ideas were just
+        common hacks to fit the "procedural approach" into the "COP" paradigm.
+      - The promise of "code reusability" was not fulfilled by COP languages.
         > - The Flaws of Inheritance
         >   - https://www.youtube.com/watch?v=hxGOiiR9ZKg
         > - Banana, Monkey, Jungle Problem
         >   - https://crystal-villanueva.medium.com/the-banana-and-the-gorilla-problem-92c9a4717fd6
 
-## Abstract Classes = The Name of a "Category or Group"  <a name="abstract-classes"></a>
+## Abstract Classes = The Name of a "General Category or Group"  <a name="abstract-classes"></a>
 ###### abstract-classes
   - ### BIG IDEA — Lets have a class that defines a general category of objects, but doesn't define the implementation details of the objects. That way we can create many different kinds of objects that all have the same "method signature," but have different implementations of the methods.
    
@@ -484,7 +489,7 @@
   
   - An `abstract class` is a template for a "concrete" (or specific) `class`, and cannot to be instantiated itself, 
     only `extend`-ed and be used as a "general" `class` to group the "specific" classes into categories or "types."
-  - I like to forget the word `abstract` and replace it wih the phrase"The General Category"
+  - I like to forget the word `abstract` and replace it wih the phrase "The General Category"
     - ie: "documents" is the general category (abstract idea) of a generic "something to structure and retain data."
   - The `abstract class` is `extend`—ed by the subclass and the subclass methods `override` the superclass methods by
     implementing the method in the subclass. 
@@ -792,12 +797,16 @@
  
   - "Design Patterns" became popular around the time of C++ due to the new complexity of the language and the
     need to solve the problems of the "procedural approach" to COP.
-  - These "patterns" were discovered along the way and shared on public forums and in many books from different
-    authors, emphasizing different ideas and approaches to the problems that arose from C++ programming.
-  - Most of these "patterns" were just hacks to fit the "procedural approach" into the "COP" paradigm.
+  - These "patterns" were discovered by programmers dealing with C++ language issues, and these common solutions were
+    shared on public forums and in many books from different authors, given in talks at software development conferences, 
+    emphasizing different ideas and approaches to particular problems that arose from C++ programming.
+  - Most of these so-called "patterns" were just hacks to fit the "procedural approach" into the "COP" paradigm.
   - Many programmers accepted these patterns as some kind of gospel, and they were often used to justify the
-    use of inheritance in places where it was not appropriate, as well as other language features.
+    use of inheritance (and other language features) in places where it was not appropriate.
   - For example,"The "Gang of Four" book is the most famous book on the subject, and it is often referred to as the "Bible."
+    - It is just a collection of ideas that worked in a particular situation and was not meant to be a "one-size-fits-all" solution.
+    - The promoters of these books and resources rarely talk about the limits of thier ideas, and programmers often
+      misunderstand the ideas and apply them in places where they are not appropriate. 
   - Although some ideas in the book are good, many of the ideas are just generally-accepted hacks to fit the "procedural
     approach" into the "COP" paradigm.
   
