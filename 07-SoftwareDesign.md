@@ -203,7 +203,7 @@
           based on what is discovered taking those small steps.
         - Each small step creates some kind of "valuable working software" that can be shown to the customer, and the 
           customer can then give feedback on the working software, and the software can be changed based on that feedback.
-          > ### Key findings from the Agile Manifesto 
+          > ### Key finding of the Agile Manifesto 
           > - Humans rarely know what they want UNTIL they experience what they _don't_ want. 
 
 - [Continue Reading - Class Oriented Programming](./09-ClassOrientedProgramming.md)
