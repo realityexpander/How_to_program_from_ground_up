@@ -231,12 +231,13 @@
   - [Another linked List image](assets/linkedList.png)
     ```mermaid
     graph TD
-    HEAD["HEAD= Start pointer"] -->|points to | A[A= some data and a pointer to node B]
+    HEAD>"HEAD= Pointer to the first node of the list"] -->|points to | A[A= some data and a pointer to node B]
     A -->|points to |B[B= some data and a pointer to node C]
     B -->|points to | C[C= some data and a pointer to node D]
     C -->|points to | D[D= some data and a pointer to node E ]
-    D -->|points to | E["E= some data and a pointer to `NULL` (the `End` node)"]
-    TAIL["TAIL= End pointer"] -->|points to | E
+    D -->|points to | E["E= some data and a pointer to ‟NULL” (the end of the list)"]
+    E -->|points to | NULL>"NULL= pointer to ‟nothing” (0), meaning the end of list."]
+    TAIL>"TAIL= pointer to the last node in the list"] -->|points to | E
 
 ## Map (or "Hash Table", "Hash Map", "Dictionary", "Associative Array") <a name="map"></a>
 ###### map
@@ -308,7 +309,7 @@
     A Left Pointer, A Right Pointer"))) -->|left pointer points to| N1(((Another Node)))
     N -->|right pointer points to| N2(((Another Node)))
     
-    X{{Example of a Node}}
+    X[Example of a Node for a Binary Tree]
     ```
 - [Another tree diagram](assets/tree.png)
   > - Tree Data Structure Summary
@@ -338,7 +339,7 @@
       G1 -->|left points to | N2>NULL]
       G1 -->|right points to | O2>NULL]
       
-      X{{Example of a Binary Tree}}
+      X[Example of a Binary Tree]
     ```
 
 - [Continue Reading - Software](./05-Software.md)
