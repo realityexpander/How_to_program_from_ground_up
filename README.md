@@ -1,4 +1,5 @@
 # How to Program From The Bottom Up (with Minimal BS)
+©2024 Chris Athanas
 
 A guide for the beginner software engineer who needs a primer overview of software development as a semi-historical
 walk through the essential part of computing to create effective software.
@@ -180,3 +181,4 @@ The guide is a reference and follow along guide for my video series on YouTube: 
 
 - [Continue Reading - The Essential Question](02-TheEssentialQuestion-WhatAreWeComputing.md)
 - [Back to Index](README.md)
+
