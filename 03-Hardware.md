@@ -171,9 +171,9 @@
        - This acts by default like a logical "NOT" gate.
    - The tube can be used to represent any other logic gate.
 
-     > - In a Minute: Vacuum Tube Diodes in 60 Seconds
+     > - In a Minute Vacuum Tube Diodes in 60 Seconds
      >   - https://www.youtube.com/watch?v=8so4qQcOAvQ
-     > - 1942 ARMY RADIO TRAINING FILM ELECTRON THEORY
+     > - 1942 ARMY RADIO TRAINING FILM ELECTRON THEORY AND THE DIODE TUBE VACUUM TUBE ELECTRONICS
      >   - https://www.youtube.com/watch?v=cIvjBKMX9jg
      > - In a Minute: Vacuum Tube Triodes in 60 Seconds
      >   - https://www.youtube.com/watch?v=frZ35Y48vSk
