@@ -145,11 +145,16 @@
     [Another pointer diagram](assets/pointer.png)
     ```mermaid
     graph TD
-    A[Address 0x00000000 has value 0x00000004] -->|pointer at 0x00000000 points to address 0x00000004| B["Address 0x00000004 has value 0x2A (or * or 42)"]
+    A[Address 0x00000000 has value 0x00000004] -->|"pointer at 0x00000000 
+      points to 
+      address 0x00000004"| B["Address 0x00000004 has value 0x2A = Integer 42 or ASCII “*”"]
   
     markdown["`
       The pointer stored at **0x00000000** has a value _0x00000004_, 
-      so it is pointing to address **0x00000004**
+      so it is pointing to address **0x00000004**.
+    
+      Said another way:
+      The pointer at 0x00000000 is pointing to value 0x2A, which is 42 or the ASCII asterisk character.
     `"]
     ```
 
@@ -316,7 +321,7 @@
   >   - https://www.youtube.com/watch?v=2gu3ACsq2jI
     ```mermaid
       graph TD
-      Y([Root]) -..->|root points to | A((("node A 
+      Y([Root Pointer]) -..->|root points to | A((("node A 
       value=50")))
       A -->|left points to | B((("node B
    value=25")))
@@ -339,7 +344,11 @@
       G1 -->|left points to | N2>NULL]
       G1 -->|right points to | O2>NULL]
       
-      X[Example of a Binary Tree]
+      X["Example of a Binary Tree
+         The Left node values are always
+         less than the parent node.
+         The Right node values are always
+         greater than the parent node."]
     ```
 
 - [Continue Reading - Software](./05-Software.md)
