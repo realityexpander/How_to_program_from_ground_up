@@ -6,6 +6,7 @@
 ## The Wire & the Battery — 1800's to present <a name="the-wire--the-battery"></a>
 ###### the-wire--the-battery
   - ### BIG IDEA — A wire can be used to represent a logical "state"
+  
   - Is electricity flowing or not flowing?
   - This is the most basic representation of a state in computing, and the underlying principle of all modern computing.
   - We are using this arrangement to represent a Boolean logic state
@@ -14,17 +15,18 @@
     - Problem: we don't really know its state until we measure it somehow (like with a voltmeter or a light bulb)
     - We can feel the wire heat up, but that's **awful inconvenient** and not very precise.
   
-  > Light a bulb with a battery and one wire
-  >  - https://www.youtube.com/watch?v=_voN5_NUQIc
-  >> Note: A light bulb is basically a wire in a vacuum that gets white hot and glows when electricity flows through it.
+    > Light a bulb with a battery and one wire
+    >  - https://www.youtube.com/watch?v=_voN5_NUQIc
+    >> **Note:** A light bulb is just a very small wire in a vacuum (so it doesn't burn up in 0.1 seconds) that gets 
+    >> white hot and glows when electricity flows through it.
 
-## The Simple Switch & Light Bulb — 1830's to present <a name="the-simple-switch">
+## The Simple Switch & Light Bulb — 1830's to present <a name="the-simple-switch"></a>
 ###### the-simple-switch
   - ### BIG IDEA — A switch can be used to represent a logic "state".
-      - This is the most basic representation of a "state" in computing
-      - Easier to manipulate for humans than a bare wire
+    - This is the most basic representation of a "state" in computing.
+    - Easier to manipulate for humans than a bare wire.
   
-        [<img src="assets/simpleSwitch.png" width="400">]()
+      [<img src="assets/simpleSwitch.png" width="400">]()
   - Add visual Feedback - Light on or off (1 or 0)
     - Even though the light has in reality many, many different states constantly
      changing over time, we can still use it to represent a single state at time: Either on or off.
@@ -85,9 +87,9 @@
    - ### BIG IDEA — An electrical current can cause mechanical actions with certain metallic materials.
      1) To physically manipulate the physical world, like a motor or a solenoid.
      2) To induce a magnetic field to represent a "state," like magnetic tape or a hard drive.
-   
-     [<img src="assets/electromagnet.png" width="450">](https://en.wikipedia.org/wiki/Electromagnet)
-     [<img src="assets/electromagnet-with-switch.png" width="450">](https://circuitdigest.com/electronic-circuits/simple-relay-switch-circuit-diagram)
+       
+        [<img src="assets/electromagnet.png" width="340">](https://en.wikipedia.org/wiki/Electromagnet)
+        [<img src="assets/electromagnet-with-switch.png" width="400">](https://circuitdigest.com/electronic-circuits/simple-relay-switch-circuit-diagram)
 
    - Metallic materials can be made to move objects by using electricity to induce a magnetic field.
    - Additionally, certain metallic materials can be "magnetized" and "polarized" using electricity to represent a "state"
@@ -147,9 +149,9 @@
      > - How Vacuum Tubes Work
      >   - https://www.youtube.com/watch?v=nA_tgIygvNo
      
-     > ### Notice:  
+     > ### Note:  
      > While the actual physical electron flow direction is from the "negative" terminal to the "positive" terminal, the "conventional" flow direction of electricity in schematics is considered to go from the "positive" terminal to the "negative" terminal.
-     >> _Yes!_  This is rather confusing at first, and you can give thanks to ding-dong Ben Franklin for this bit of technical debt we all have to deal with at the beginning of learning electronics.
+     >> #### _Yes!_  This is rather confusing at first, and you can give thanks to that ding-dong Ben Franklin for this bit of technical debt we all have to deal with at the beginning of learning electronics.
    
    - Electricity in a vacuum behaves differently than in normal atmosphere.
        - Electrons can flow freely in a vacuum. I like to think of this as the invention of "nothing."

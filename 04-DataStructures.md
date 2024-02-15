@@ -1,15 +1,18 @@
 # Data Structures
 - ### BIG IDEA — It's easier for humans to deal with names of structures that represent data in memory than hex code addresses.
 
-- "Data structures" is the overall name for the various named concepts for common ways humans have invented to 
-  represent data, and often predate modern computing.
-- They represent real world items and concepts in a way that a computer can be programmed to represent and solve a problem.
-- For example, a "list" is a common data structure for a series of "items" in a specific order.
-  - A list can be used to represent a "orders to be shipped," "to-do items" or a "names and addresses to send a letter to."
-  - Each item in the list is called an "element" or "item" or "member" of the list.
-  - Items in lists can be accessed by their "index" which is a number that represents the position of the item in
-    the list count from the beginning of the list.
+  > # "How something is arranged is 80 IQ points of the problem."
+  > ## — Alan Kay
 
+  - "Data structures" is the overall name for the various named concepts for common ways humans have invented to 
+    represent data, and often predate modern computing.
+  - They represent real world items and concepts in a way that a computer can be programmed to represent and solve a problem.
+  - For example, a "list" is a common data structure for a series of "items" in a specific order.
+    - A list can be used to represent a "orders to be shipped," "to-do items" or a "names and addresses to send a letter to."
+    - Each item in the list is called an "element" or "item" or "member" of the list.
+    - Items in lists can be accessed by their "index" which is a number that represents the position of the item in
+      the list count from the beginning of the list.
+  
   > - 100+ Computer Science Concepts Explained in less than 15 minutes
   >   - https://www.youtube.com/watch?v=-uleG_Vecis
   > - 10 Math Concepts for Programmers
@@ -311,8 +314,14 @@
     graph TD
     N((("A Node consists of: 
     A Value
-    A Left Pointer, A Right Pointer"))) -->|left pointer points to| N1(((Another Node)))
-    N -->|right pointer points to| N2(((Another Node)))
+    A Left Pointer, A Right Pointer
+    
+     🔴 ⇦ ⚪️ ⇨ 🟣"))) -->|left pointer points to| N1((("Another Node
+                                                      🟣
+                                                      ⇦⇨"))) 
+    N -->|right pointer points to| N2((("Another Node
+                                         🔴
+                                         ⇦⇨")))
     
     X[Example of a Node for a Binary Tree]
     ```
@@ -321,22 +330,29 @@
   >   - https://www.youtube.com/watch?v=2gu3ACsq2jI
     ```mermaid
       graph TD
-      Y([Root Pointer]) -..->|root points to | A((("node A 
-      value=50")))
+      Y([Root Pointer]) -..->|root points to start of tree | A((("node A 
+      value=50
+      ⇦⇨")))
       A -->|left points to | B((("node B
-   value=25")))
+   value=25
+      ⇦⇨")))
       A -->|right points to | C((("node C
-   value=75")))
+   value=75
+      ⇦⇨")))
       B -->|left points to | D((("node D
-   value=10")))
+   value=10
+      ⇦⇨")))
       B -->|right points to | E((("node E
-   value=35")))
+   value=35
+      ⇦⇨")))
       C -->|left points to | F((("node F
-   value=60")))
+   value=60
+      ⇦⇨")))
       C -->|right points to | I>NULL]
       E -->|left points to | H>NULL]
       E -->|right points to | G1((("node G
-   value=39")))
+   value=39
+      ⇦⇨")))
       D -->|left points to | J1>NULL]
       D -->|right points to | K1>NULL]
       F -->|left points to | L1>NULL]
@@ -345,9 +361,9 @@
       G1 -->|right points to | O2>NULL]
       
       X["Example of a Binary Tree
-         The Left node values are always
+         The Left ⇦ node values are always
          less than the parent node.
-         The Right node values are always
+         The Right ⇨ node values are always
          greater than the parent node."]
     ```
 

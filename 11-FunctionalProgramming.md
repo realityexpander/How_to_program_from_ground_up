@@ -73,6 +73,16 @@
   // 24
   ```
   > Live Code Example: [Functional Example](src/main/kotlin/functionalExample.kt)
- 
+
+  > ### Side Quest on "Declarative" Programming
+  > - Notice that many of the diagrams in this document are written in a language that uses pure "declarative" style programming.
+  >   - The charts are using a declarative language called "Mermaid" to create many kinds of diagrams using only text.
+  >   - Mermaid is a "Domain Specific Language" (DSL) that is used to create diagrams in a "declarative" style.
+  >   - [https://mermaid.js.org/](https://mermaid.js.org/intro/)
+  > - More on Declarative Programming:
+  >>   - 'Declarative Thinking, Declarative Practice' - Kevlin Henney [ ACCU 2016 ]
+  >>     - https://www.youtube.com/watch?v=nrVIlhtoE3Y 
+
+
 - [Continue Reading - Parallel Processing](./12-ParallelProcessing.md)  
 - [Back to Index](README.md)
