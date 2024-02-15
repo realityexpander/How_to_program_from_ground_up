@@ -1,13 +1,13 @@
 # How to Program From The Bottom Up (with Minimal BS)
 ©2024 Chris Athanas
 
-A guide for the beginner software engineer who needs a primer overview of software development as a semi-historical
-walk through the essential part of computing to create effective software.
+A guide for the anyone who wants a solid understanding of software development as a historical
+walk through the essential parts of computing leading to present day software development paradigms.
 
-This is not a thorough deep dive into any one topic, but a broad overview of the essential concepts and principles
-that seems to be missing from most programming tutorials and courses. My goal is to give you the context about
+This is not a thorough deep dive into any one topic, but a broad overview of the core concepts and principles
+that are missing from most programming tutorials and courses. My goal is to give you the context about
 why things are the way they are in computing, and how they came to be that way, and the issues and problems that
-arose from the way things are.
+arose from things being that way.
 
 I have found that it's far more imporatnt to understand the process that people went through to create the
 current solutions than to understand the mechanical details of how the solution work. Many detail about
@@ -123,7 +123,7 @@ The guide is a reference and follow along guide for my video series on YouTube:
   - How to guide for budding software engineers who need a primer overview of software development concepts 
     from the fundamentals of physical logic representation to high-level programming languages.
   - ### The goal is to have you
-  - understand more the `why` and `how` of programming, not just the `what` and `where`.
+  - Understand more the `why` and `how` of programming, not just the `what` and `where`.
     - This is my curated list of information to take you on a realistic and grounded journey of understanding
       the essential part of computing to create effective software.
     - There will be some technical details, but only enough to understand the fundamental principles, not to be an expert.
@@ -158,26 +158,26 @@ The guide is a reference and follow along guide for my video series on YouTube:
         - The arithmetic would be done by a person called a "calculator" who would perform the operations and record the results.
           - This is now done by the "Arithmetic Logic Unit" and stored in the "Registers" in the computer.
 
-    ## SOME IMPORTANT ITEMS TO KEEP IN MIND
-    - THERE IS NO MAGIC IN COMPUTING, ONLY _HUMAN_ CLEVERNESS, _HUMAN_ SYSTEMIC THINKING AND _HUMAN_ INGENUITY 
-      USED TO SOLVE _HUMAN_ PROBLEMS. 
-      - If you hear anyone say _"it's magic"_ or _"it's a black box"_ or _"it's kind of like a person,"_ 
-        they are: 
-        1) Being lazy, 
-        2) Or indicating it's not relevant at the moment,
-        3) Or (USUALLY) they don't understand the problem or the solution enough to explain it and become hand-wavy.
-    
-    - ### ITS ALWAYS JUST _HUMAN_ CLEVERNESS AND INGENUITY, THE IDEA OF REPRESENTING ONE THING AS ANOTHER, NOTHING MORE.
+  ## SOME IMPORTANT ITEMS TO KEEP IN MIND
+  - THERE IS NO MAGIC IN COMPUTING, ONLY _HUMAN_ CLEVERNESS, _HUMAN_ SYSTEMIC THINKING AND _HUMAN_ INGENUITY 
+    USED TO SOLVE _HUMAN_ PROBLEMS. 
+    - If you hear anyone say _"it's magic"_ or _"it's a black box"_ or _"it's kind of like a person,"_ 
+      they are: 
+      1) Being lazy, 
+      2) Or indicating it's not relevant at the moment,
+      3) Or (USUALLY) they don't understand the problem or the solution enough to explain it and become hand-wavy.
+  
+  - ## ITS ALWAYS JUST _HUMAN_ CLEVERNESS AND INGENUITY, THE IDEA OF REPRESENTING ONE THING AS ANOTHER, NOTHING MORE.
       
-      - The machines CAN _NEVER_ UNDERSTAND the problem or the solution in the way humans conceive of the problem.
-      - These machines are only following the logical operations that humans have carefully designed to represent 
-        the problem and a solution "space." There is no inherent "understanding" in the machine, and can never be.
-      - The only way the machine would ever know the full human context of the problem (and the solution) is if 
-        the machine ACTUALLY was a human, and then it would be a _human_, and not a machine. 
-      - Mistaking the machine for having intelligence is known as "The Eliza Effect" and is a common mistake 
-        made by people who don't understand the limits of the machine's capabilities.
+     - The machines CAN _NEVER_ UNDERSTAND the problem or the solution in the way humans conceive of the problem.
+     - These machines are only following the logical operations that humans have carefully designed to represent 
+       the problem and a solution "space." There is no inherent "understanding" in the machine, and can never be.
+     - The only way the machine would ever know the full human context of the problem (and the solution) is if 
+       the machine ACTUALLY was a human, and then it would be a _human_, and not a machine. 
+     - Mistaking the machine for having intelligence is known as "The Eliza Effect" and is a common mistake 
+       made by people who don't understand the limits of the machine's capabilities.
 
-## How to Install and Run the Samples in this Guide
+# How to Install and Run the Samples in this Guide
   - [Install IntelliJ IDEA Community Edition](https://www.jetbrains.com/idea/download/)
   - [How to clone this Project from Github to your local machine](https://www.jetbrains.com/guide/java/tips/clone-project-from-github/#:~:text=Clone%20a%20project%20from%20the%20IntelliJ%20IDEA%20welcome%20screen&text=Click%20Get%20from%20VCS%2C%20specify,into%20an%20IntelliJ%20IDEA%20project.)
   - Navigate to this `README.md` file in the project and click on the links to the sample code.
