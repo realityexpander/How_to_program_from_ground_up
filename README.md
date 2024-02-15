@@ -1,7 +1,7 @@
 # How to Program From The Bottom Up (with Minimal BS)
 ©2024 Chris Athanas
 
-A guide for the anyone who wants a solid understanding of software development as a historical
+A guide for anyone who wants a solid understanding of software development as a historical
 walk through the essential parts of computing leading to present day software development paradigms.
 
 This is not a thorough deep dive into any one topic, but a broad overview of the core concepts and principles
@@ -181,7 +181,7 @@ The guide is a reference and follow along guide for my video series on YouTube:
   - [Install IntelliJ IDEA Community Edition](https://www.jetbrains.com/idea/download/)
   - [How to clone this Project from Github to your local machine](https://www.jetbrains.com/guide/java/tips/clone-project-from-github/#:~:text=Clone%20a%20project%20from%20the%20IntelliJ%20IDEA%20welcome%20screen&text=Click%20Get%20from%20VCS%2C%20specify,into%20an%20IntelliJ%20IDEA%20project.)
   - Navigate to this `README.md` file in the project and click on the links to the sample code.
-  - In the left hand gutter, click on the green arrow to run the sample code.
+  - In the left-hand gutter, click on the green arrow to run the sample code.
     
     [<img src="assets/click-green-arrow.png">]()
 
