@@ -147,63 +147,68 @@
   - ### Fetch-Decode-Execute Cycle of the CPU — "The Dumb & Quick Work of the Machine" <a name="fetch-decode-execute"></a>
     - ###### fetch-decode-execute-cycle
     - Fetch means to get the next opcode instruction from main memory address in the PC and puts the opcode into
-     the "Instruction register (IR)" on the CPU
-    - Decode means to figure out what the opcode operation is and what the operands are (if any)
-        - "Operands" are the "arguments" to the operation. ie: the "source" and "destination" of the operation
-        - The operation may need to fetch more data from main memory or from a register to get the operands for the instruction
-        - The operation may take more than one cycle to prepare for execution
-    - Execute means to actually perform the operation
+     the "Instruction register (IR)" on the CPU.
+    - Decode means to figure out what the opcode operation is and what the operands are (if any.)
+        - "Operands" are the "arguments" to the operation. ie: the "source" and "destination" of the operation.
+        - The operation may need to fetch more data from main memory or from a register to get the operands for the instruction.
+        - The operation may take more than one cycle to prepare for execution.
+    - Execute means to actually perform the operation,
         - For example: opcode 0x6D means add the values in X & Y registers and store the result in the ACC register,
-          then set a flags register if the result is negative or had to carry a bit
-        - The operation may require more than one cycle to complete (cpu-cycle)
-        - The number of cycles is totally dependent on the specific CPU and the specific operation
-        - The operation may need to store the result back into main memory or into one or more registers
+          then set a flags register if the result is negative or had to carry a bit.
+        - The operation may require more than one cycle to complete (cpu-cycle.)
+        - The number of cycles is totally dependent on the specific CPU and the specific operation.
+        - The operation may need to store the result back into main memory or into one or more registers.
     - After the operation is complete, the program counter (PC) is updated with the address of the next instruction to
-      be executed (or with a different location in memory if a "jump" instruction is executed)
-    - The "fetch-decode-execute" cycle is the basis for all computing, and is the most important part of the CPU
+      be executed (or with a different location in memory if a "jump" instruction is executed.)
+    - The "fetch-decode-execute" cycle is the basis for all computing, and is the most important part of the CPU.
        > 8-bit CPU control logic: Part 1
        >  - https://www.youtube.com/watch?v=dXdoim96v5A
 
   - ### Registers — "The Tiny Superfast Memory Nearest to the CPU & Keeps the State of the CPU" <a name="registers"></a>
     - ###### registers
     - ### BIG IDEA — Registers are a small amount of super fast memory that is built into the CPU.
-    - Registers are a small amount of super fast memory that is built into the CPU
-    - Registers hold the current instruction (operator and operands) being executed in the "Instruction Register" (`IR`)
+    
+    - Registers are a small amount of super fast memory that is built into the CPU.
+    - Registers hold the current instruction (operator and operands) being executed in the "Instruction Register" (`IR`).
     - Registers hold address pointers to the current location in main memory in the "Program Counter" (`PC`) and
-      the "Stack Pointer" (`SP`) and the "Memory Address Register" (`MAR`)
+      the "Stack Pointer" (`SP`) and the "Memory Address Register" (`MAR`).
     - The `X` and `Y` registers are used to store the operands for the Accumulator Register (`ACC`) are used to store
       the results of the last arithmetic operation, like from an `ADD` or `SUBTRACT`.
-      - Some registers are a series of "status flags", single bits used to store the result of the last operation
-      - Status flags are used to control the "conditional jumps" in the program
-      - Flags such as "zero" or "carry" are used to indicate the results of the last operation
+      - Some registers are a series of "status flags", single bits used to store the result of the last operation.
+      - Status flags are used to control the "conditional jumps" in the program.
+      - Flags such as "zero" or "carry" are used to indicate the results of the last operation.
       - For example:
-        - if the result of the last operation was zero, then the `zero` flag is set to 1; otherwise it's set to 0
-        - if the result of the last operation was negative, then the `negative` flag is set to 1; otherwise it's set to 0
-        - if the result of the last operation had to carry a bit, then the `carry` flag is set to 1; otherwise it's set to 0
+        - if the result of the last operation was zero, then the `zero` flag is set to 1; otherwise it's set to 0.
+        - if the result of the last operation was negative, then the `negative` flag is set to 1; otherwise it's set to 0.
+        - if the result of the last operation had to carry a bit, then the `carry` flag is set to 1; otherwise it's set to 0.
 
   - ### Arithmetic Logic Unit (ALU) — "The Calculator of the CPU" <a name="alu"></a>
    - ###### alu
    - ### BIG IDEA — The ALU is the part of the CPU that performs the basic arithmetic and logical operations in one place.
-   - The ALU is the part of the CPU that performs the basic arithmetic and logical operations
-   - The ALU is used to perform the "Add" and "Subtract" operations
-     - Stores the result of the operation in the "Accumulator" register
-     - Sets the `carry` flag if the result of the operation had to "carry" a bit
-     - Sets the `negative` flag if the result of the operation was negative
-   - The ALU is used to perform the "Compare" operation, and all other logical operations operations
-     - Sets the `Zero` flag if the result of the operation was zero
-     - Sets the `Greater` flag if the result of the operation was greater than the other operand
-     - Sets the `Less` flag if the result of the operation was less than the other operand
-     - Sets the `Equal` flag if the result of the operation was equal to the other operand
-     > Learn how computers add numbers and build a 4 bit adder circuit
-     >  - https://www.youtube.com/watch?v=wvJc9CZcvBc&list=WL
+   
+   - The ALU is the part of the CPU that performs the basic arithmetic and logical operations.
+   - The ALU is used to perform the `ADD` and `SUBTRACT` and other math operations.
+     - Stores the result of the operation in the "Accumulator" register.
+     - Sets the `carry` flag if the result of the operation had to "carry" a bit.
+     - Sets the `negative` flag if the result of the operation was negative.
+   - The ALU is used to perform the "Compare" operation, and all other logical operations operations.
+     - Sets the `Zero` flag if the result of the operation was zero.
+     - Sets the `Greater` flag if the result of the operation was greater than the other operand.
+     - Sets the `Less` flag if the result of the operation was less than the other operand.
+     - Sets the `Equal` flag if the result of the operation was equal to the other operand.
+       > Learn how computers add numbers and build a 4 bit adder circuit
+       >  - https://www.youtube.com/watch?v=wvJc9CZcvBc&list=WL
 
   - ### Control Unit — "The Traffic Light of the CPU" <a name="control-unit"></a>
     - ###### control-unit
     - ### BIG IDEA — The "Control Unit" is the part of the CPU that controls the "fetch-decode-execute" cycle.
-    - The "Control Unit" is the part of the CPU that controls the "fetch-decode-execute" cycle
-    - It synchronizes the operations of the CPU with the RAM, ROM, and other parts of the computer
-    - It keeps track of the internal cpu-cycles for each instruction (different than clock cycles, as some operations may take more than one clock cycle to complete)
-    - It updates the "program counter" with the next instruction to be executed, or with a different location in memory if a `JUMP` instruction is executed.
+    
+    - The "Control Unit" is the part of the CPU that controls the "fetch-decode-execute" cycle.
+    - It synchronizes the operations of the CPU with the RAM, ROM, and other parts of the computer.
+    - It keeps track of the internal cpu-cycles for each instruction (different than clock cycles, as some operations 
+      may take more than one clock cycle to complete.)
+    - It updates the "program counter" with the next instruction to be executed, or with a different location in 
+      memory if a `JUMP` instruction is executed.
 
   - ### Example Machine Language Program (Motorola 6502 CPU) <a name="example-machine-language-program"></a>
     ```
@@ -211,22 +216,22 @@
      
     Mnemonic   Opcode & Operand Hex Codes  // Explanation
     --------   --------------------------------    
-    LDA #5     A905   // Load the value 5 into the "A" register, opcode: 0xA9 operand: 0x05
-    STA 0x0000 8D0000 // Store the value in the "A" register into memory location 0x0000, opcode: 0x8D operands: 0x00 0x00
-    LDA #7     A907   // Load the value 7 into the "A" register,  opcode: 0xA9 operand: 0x07                                            
-    STA 0x0001 8D0001 // Store the value in the "A" register into memory location 0x0001, opcode: 0x8D operands: 0x00 0x01
-    LDA 0x0000 A90000 // Load the value in memory location 0x0000 into the "A" register, opcode: 0xA9 operands: 0x00 0x00                      
-    ADC 0x0001 6D0001 // Add the value in memory location 0x0001 to the value in the "A" register, opcode: 0x6D operands: 0x00 0x01
-    STA 0x0002 8D0002 // Store the result of the addition into memory location 0x0002, opcode: 0x8D operands: 0x00 0x02
-    BRK        00     // Stops the CPU executing any more instructions, opcode: 0x00
+    LDA #5     A905   // Load the value 5 into the "A" register, opcode: 0xA9 operand: 0x05.
+    STA 0x0000 8D0000 // Store the value in the "A" register into memory location 0x0000, opcode: 0x8D operands: 0x00 0x00.
+    LDA #7     A907   // Load the value 7 into the "A" register,  opcode: 0xA9 operand: 0x07.                                          
+    STA 0x0001 8D0001 // Store the value in the "A" register into memory location 0x0001, opcode: 0x8D operands: 0x00 0x01.
+    LDA 0x0000 A90000 // Load the value in memory location 0x0000 into the "A" register, opcode: 0xA9 operands: 0x00 0x00.                      
+    ADC 0x0001 6D0001 // Add the value in memory location 0x0001 to the value in the "A" register, opcode: 0x6D operands: 0x00 0x01.
+    STA 0x0002 8D0002 // Store the result of the addition into memory location 0x0002, opcode: 0x8D operands: 0x00 0x02.
+    BRK        00     // Stops the CPU executing any more instructions, opcode: 0x00.
     ```
      
     // Memory state after the program has executed:
     0x0000: 0x05
     0x0001: 0x07
-    0x0002: 0x0C      // <-- The result of the addition of 5 and 7 = 12, which is 0x0C in hexadecimal
+    0x0002: 0x0C      // <-- The result of the addition of 5 and 7 = 12, which is 0x0C in hexadecimal.
      
-    // The result of the addition of 5 and 7 is 12, which is 0x0C in hexadecimal
+    // The result of the addition of 5 and 7 is 12, which is 0x0C in hexadecimal.
     ```
 # Assembly Language - The First Human-readable Language for Programming Computers <a name="assembly-language"></a>
 ###### assembly-language
@@ -251,13 +256,13 @@
       - ###### common-assembly-operations
       >
       > - #### Jump  `JMP`
-      >   - The "goto" statement of machine code
-      >   - Changes the program counter (PC) to point to a different location in memory
+      >   - The "goto" statement of machine code.
+      >   - Changes the program counter (PC) to point to a different location in memory.
       >   - Usually mnemonic `JMP [Label or Address]` where the operand is the label of the location in memory to jump to or a
       >     specific location in memory to jump to.
       >   - Also known a "branch" or "loop."
       >   - No limits to where the jump can go, it be anywhere in memory. If it's wrong, the machine will likely halt
-      >     or do something unexpected, also called a "crash," "hang," "freeze," "fault," or "exception"
+      >     or do something unexpected, also called a "crash," "hang," "freeze," "fault," or "exception."
       > - #### Load `LDX`
       >   - Copies a value from a location in memory into a register (a tiny bit of memory that is part of the CPU)
       >   - Usually mnemonic `LDX [ADDR]` where X is the register to load into, and the operand is the location in memory to load from.
@@ -299,11 +304,11 @@
     - ###### variables
     - ### BIG IDEA — "Variables" are just named values for memory locations used to store data, and easier for humans to remember and use.
     
-    - "Variables" are just named values for memory locations used to store data
+    - "Variables" are just named values for memory locations used to store data.
         - Often called "fields," "attributes," "labels," or "properties."
     - The data is a representation of something else, like a number or a letter, or maybe a color, or an address
       for another location in memory.
-    - Variables are a convenient way to give a name to a location in memory
+    - Variables are a convenient way to give a name to a location in memory.
     - The assembler uses to the name of the variable to access the value of the variable, instead of the
       address of the variable in memory. This is much easier for humans to remember and use.
     - The naming is solely for the convenience of the human programmer, as the machine doesn't care what the variable is

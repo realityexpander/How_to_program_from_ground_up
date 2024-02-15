@@ -458,6 +458,8 @@
         that were used to "fix" the problems of the "procedural approach" to `COP. Many of these ideas were just
         hacks to fit the "procedural approach" into the "COP" paradigm.
       - The promise of "reusability" was not fulfilled by COP languages.
+        > - The Flaws of Inheritance
+        >   - https://www.youtube.com/watch?v=hxGOiiR9ZKg
         > - Banana, Monkey, Jungle Problem
         >   - https://crystal-villanueva.medium.com/the-banana-and-the-gorilla-problem-92c9a4717fd6
 
@@ -680,13 +682,13 @@
         - In the example above, the `viewDocument` function can be called with any `Document` object and the `view` method
           will behave differently based on the "type" of the `Document` object that is passed in
   - ### Associated with Liskov Principle
-    - The Liskov Substitution Principle is from "Set theory" and is the idea that "objects of a superclass shall be
+    - #### MORE MAKING FANCY TERMS FOR VERY BASIC CONCEPTS THAT BARELY NEED EXPLAINING, I'VE SAID ENOUGH ALREADY.
+    - The "Liskov Substitution Principle" comes from "Set theory" and is the idea that "objects of a superclass shall be
       replaceable with objects of its subclasses without affecting the functionality of the program."
     - That's it. That's the whole idea. It's just a fancy way of saying that "subclasses should work the same as
       their superclass."
     - There is a lot of confusion around this principle, but it's just a fancy way of saying that "subclasses should
       work the same as their superclass."
-    - #### MORE MAKING FANCY TERMS FOR VERY BASIC CONCEPTS THAT BARELY NEED EXPLAINING, I'VE SAID ENOUGH ALREADY.
 
 ## Controlled Visibility of Variables and Methods <a name="controlled-visibility"></a>
 ###### controlled-visibility
