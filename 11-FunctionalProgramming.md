@@ -42,20 +42,21 @@
 ```mermaid
  flowchart RL
  
- subgraph "func main()"
+ subgraph main["func main()"]
     addFn(" `addFunc` = ✚{x,y -> returns x+y}`") -->|🟠 START HERE: 1. pointer to function stored in| X["variable `addFunc`"]
     multiplyFn(" `multiplyFunc` = ❌{x,y -> returns x*y}") -->|🔵 2. pointer to function stored in| Y["variable `multiplyFunc`"]
     first -.->|first points to function| addFn
     second -..->|second points to function| multiplyFn
-    subgraph " variable `result` = firstThenSecond(first=addFunc, second=multiplyFunc, a=10, b=2)"
-       subgraph firstThenSecond[" variable `firstThenSecond` = {first, second, a, b -> second(first(a, b), b)}"]
-          first("first = `✚add(a,b)`")-->|🔵 3. returns result into next function's `a` | second
-          second("second = ❌multiply(a,b)`") -->|🔵 4. returns result| D
+    subgraph result[" variable `result` = firstThenSecond(first=addFunc, second=multiplyFunc, a=10, b=2)"]
+       subgraph firstThenSecond[" 🔵 3. `firstThenSecond()` called = {first, second, a, b -> second(first(a, b), b)}"]
+          first("first() = `✚addFunc(a,b)`")-->|🔵 4. returns result into next function's `a` | second
+          second("second() = `❌multiplyFunc(a,b)`") -->|🔵 5. returns result| D
        end
-       D("returns result of `second(first(a,b))`") -->|🔵 5. returns result| E
+       D("returns result of `second(first(a,b))`") -->|🔵 6. returns result| E
     end
-    E("stores result in variable `result`") -->|🔵 6. passed to| F
-    F["print(`result`)"] -->|🔵 END 7. program ends| G
+    E("stores result in variable `result`") -->|🔵 7. `result` passed to| F
+    E --> E
+    F["print(`result`)"] -->|🔵 END 8. program ends| G
  end
  G("🖥️ main()")
  
