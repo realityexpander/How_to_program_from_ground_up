@@ -59,13 +59,12 @@
                 ❌ { x,y -> return x*y }
                      ⌺"}}
     Z["variable `firstThenSecond` = @A8C6CE7B"] ==>|🔵 3. Stores pointer to function| firstThenSecondFunc{{" func firstThenSecond(…) @A8C6CE7B =
-                 ⏩ { first, second, a, b -> 
-                 second(first(a, b), b) }
+                 ⏩ { first, second, a, b -> second(first(a, b), b) }
                  ⌺"}}
-    first -.->|first points to function| addFn
-    second -..->|second points to function| multiplyFn
-    D -...->|firstThenSecond points to function| firstThenSecondFunc
-    subgraph result[" variable `result` = firstThenSecond(first=addFunc, second=multiplyFunc, a=10, b=2)"]
+    first -.->|`first` points to function| addFn
+    second -..->|`second` points to function| multiplyFn
+    D -...->|`firstThenSecond` points to function| firstThenSecondFunc
+    subgraph result[" variable `result` = firstThenSecond(first= addFunc, second= multiplyFunc, a= 10, b= 2)"]
        subgraph firstThenSecond[" 🔵 4. firstThenSecond(…) called = {first, second, a, b -> second(first(a, b), b)}"]
           first("first(…) = `✚ addFunc(a,b)`")==>|🔵 5. returns result into `second` function's `a` | second
           second("second(…) = `❌ multiplyFunc(a,b)`") ==>|🔵 6. returns result| D
