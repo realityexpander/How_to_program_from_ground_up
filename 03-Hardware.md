@@ -341,7 +341,7 @@
 
   - Simply groups of different Integrated Chips ➜ All put on one chip.
   - Contains a CPU (Central Processing Unit) and a small amount of ultra-fast memory (called "Registers").
-  - The CPU is just a clever and somewhat complex arrangement of logic gates that can perform a series of logical operations/
+  - The CPU is just a clever and somewhat complex arrangement of logic gates that can perform a series of logical operations.
     > - An intuitive approach for understanding the CPU and RAM
     >   - https://www.youtube.com/watch?v=-IyB8hBkA9w
     > - How a CPU Works
