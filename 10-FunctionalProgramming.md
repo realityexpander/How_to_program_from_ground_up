@@ -51,11 +51,11 @@
  flowchart LR
  
  subgraph main["func main()"]
-    X["variable `addFunc` = @F8BC76FC"] -->|🟠 START HERE: 1. Stores pointer to function| addFn{{" `addFunc` @F8BC76FC =
+    X["variable `addFunc` = @F8BC76FC"] ==>|🟠 START HERE: 1. Stores pointer to function| addFn{{" `addFunc` @F8BC76FC =
            ✚ {x,y -> returns x+y} "}}
-    Y["variable `multiplyFunc`@48C6CE7B ="] -->|🔵 2. Stores pointer to function| multiplyFn{{" `multiplyFunc` @48C6CE7B = 
+    Y["variable `multiplyFunc`@48C6CE7B ="] ==>|🔵 2. Stores pointer to function| multiplyFn{{" `multiplyFunc` @48C6CE7B = 
                 ❌ {x,y -> returns x*y}"}}
-    Z["variable `firstThenSecond` @A8C6CE7B ="] -->|🔵 3. Stores pointer to function| firstThenSecondFunc{{" `firstThenSecond` @A8C6CE7B =
+    Z["variable `firstThenSecond` @A8C6CE7B ="] ==>|🔵 3. Stores pointer to function| firstThenSecondFunc{{" `firstThenSecond` @A8C6CE7B =
                  ⏩ { first, second, a, b -> 
                  second(first(a, b), b) }"}}
     first -.->|first points to function| addFn
@@ -63,14 +63,14 @@
     D -...->|firstThenSecond points to function| firstThenSecondFunc
     subgraph result[" variable `result` = firstThenSecond(first=addFunc, second=multiplyFunc, a=10, b=2)"]
        subgraph firstThenSecond[" 🔵 4. firstThenSecond(…) called = {first, second, a, b -> second(first(a, b), b)}"]
-          first("first(…) = `✚addFunc(a,b)`")-->|🔵 5. returns result into `second` function's `a` | second
-          second("second(…) = `❌multiplyFunc(a,b)`") -->|🔵 6. returns result| D
+          first("first(…) = `✚addFunc(a,b)`")==>|🔵 5. returns result into `second` function's `a` | second
+          second("second(…) = `❌multiplyFunc(a,b)`") ==>|🔵 6. returns result| D
        end
-       D("returns result of `second(first(a,b))`") -->|🔵 7. returns result| E
+       D("returns result of `second(first(a,b))`") ==>|🔵 7. returns result| E
     end
-    E("stores returned result value in variable `result`") -->|🔵 8. `result` passed to| F
+    E("stores returned result value in variable `result`") ==>|🔵 8. `result` passed to| F
     E --> E
-    F["print(`result`)"] -->|🔵 END 9. program ends| G
+    F["print(`result`)"]==>|🔵 END 9. program ends| G
  end
  G("🖥️ main()")
  
