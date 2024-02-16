@@ -185,7 +185,7 @@
 
 ## The Tiny Transistor - 1957 to present <a name="the-tiny-transistor"></a>
 ###### the-tiny-transistor
-   - ### BIG IDEA — Instead of using an electrically heated wire and vacuum to control the flow of electricity, we can use an economical semiconductor material and reduce energy and size by a factor of 100.
+   - ### BIG IDEA — Instead of using an electrically heated wire and vacuum to control the flow of electricity, we can use an economical semiconductor material and reduce energy and size by a factor of 100,000x.
    
      [<img src="assets/transistor_vs_tube.png" width="400">](https://www.youtube.com/watch?v=DXvAlwMAxiA)
    
