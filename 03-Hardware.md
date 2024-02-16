@@ -359,7 +359,8 @@
       > - How does an ALU work?
       > - Learn how computers add numbers and build a 4-bit adder circuit
       >   - https://youtu.be/wvJc9CZcvBc
-  - It May contain a small amount of "cache" memory (extremely quick memory near the CPU circuits) to speed up access to the main memory.
+  - It contains a small amount of "cache" memory (extremely quick memory near the CPU circuits) to speed up access 
+    to the main memory.
   - CPUs are where the execution of each instruction happens.
 
 ## The Configurable Computer <a name="the-configurable-computer"></a>
@@ -379,7 +380,7 @@
     >   - https://www.youtube.com/watch?v=_3cNcmli6xQ
 
   - ROM (Read-Only Memory)
-    - Used to hold the basic software to start ("boot") the computer (sometimes called "firmware")
+    - ROM is used to hold the basic software to start ("boot") the computer (sometimes called "firmware")
     - The values of each memory location are programmed, or "burned" into the ROM and usually cannot be changed.
     - Most ROMs cannot be changed
     - Some changed only once like PROMs (Programmable Read-Only Memory)
@@ -398,9 +399,9 @@
 
   - I/O (Input/Output) & Peripherals & Removable Storage & More
     - All just more variations of the same thing.
-        - All built up from the same basic logic gates and transistors, or similar technology.
-        - Even video cameras, microphones, radios and speakers are just variations of the same basic technology.
-    - Using the same principles to represent logic states and perform logical operations.
+      - All built up from the same basic logic gates and transistors, or similar technology.
+      - Even video cameras, microphones, radios and speakers are just variations of the same basic technology.
+    - I/O is just using the same principles to represent logic states and perform logical operations.
     - Often electromagnets are used to control mechanical devices or other machines.
       - The classic example is the "hard drive" which uses a spinning disk and a moving arm to read and write data.
       - The "hard drive" is a "magnetic" storage device, and uses tiny spots of "magnetized" material to represent the "state" of the data.
