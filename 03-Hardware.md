@@ -242,7 +242,7 @@
          >   - SR Latch
          >   - https://youtu.be/KM0DdEaY5sY
 
-## The Interchangeable Integrated Chip (IC) — 1960's to present <a name="the-interchangeable-integrated-chip-ic"></a>
+## The Interchangeable Integrated Chip (IC) — 1959 to present <a name="the-interchangeable-integrated-chip-ic"></a>
 ###### the-interchangeable-integrated-chip-ic
   - ### BIG IDEA — We can use photographic techniques to create thousands of transistors on a single chip and radically reduce the costs of manufacture and assembly of computing devices and increase functionality and reliability.
   
