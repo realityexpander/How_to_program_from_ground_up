@@ -1,4 +1,4 @@
-## Functional Programming 1950s-Present (FP) <a name="FunctionalProgramming"></a>
+# Functional Programming 1950s-Present (FP) <a name="FunctionalProgramming"></a>
   - ### BIG IDEA - Shared mutable state is a complex problem, especially for parallel processing tasks. 
 
   - ### The Functional style requires:
@@ -7,19 +7,27 @@
     2) Functions passed in with certain arguments will ALWAYS return the same result.
        - ie: "deterministic", "referentially transparent", "idempotent," "stateless," "side-effect free."
     3) Functions can be passed as arguments to other functions.
-       - ie: "higher-order functions", "lambdas", "closures","first-class citizen functions", "anonymous functions", "function literals."
-       - All these mean "functions!"
+       - ie: 
+         - "higher-order functions", 
+         - "lambdas", 
+         - "closures",
+         - "first-class citizen functions", 
+         - "anonymous functions", 
+         - "function literals."
+       - ### All these mean "functions!"
        
-    - #### SEE WHAT I MEAN WITH ALL THE NAMES FOR THE SAME THING?
-      - Please stop with all the names for the same old stuff!!!!!   
+    - ## SEE WHAT I MEAN WITH ALL THE NAMES FOR THE SAME THING?
+      - ### ATTENTION COMPUTER SCIENCE PEOPLE 
+      - ### Please stop with all the names for the same old stuff!!!!!   
 
-- ### Immutability & No Side Effects <a name="immutability-no-side-effects"></a>
+## Immutability & No Side Effects <a name="immutability-no-side-effects"></a>
 ###### immutability-no-side-effects
   - Mutability means something can be changed, and immutability means it cannot be changed once it's created.
     - Functional Programming style's main idea is to avoid "side effects" and "shared mutable state" of the program.
     - One way is to is to make the state of the program unchangeable. Changes can only be made by creating a new state
       based on the a copy of the old state, and then returning the new state as the result of a function.
-    - BOOP style is a form of Functional Programming as the state of the program is immutable and passed as arguments
+    - The BOOP ("Back-to Object Oriented Programming") style is a form of Functional Programming as the state of the 
+      program is immutable and passed as arguments.
       to the functions, and a new state is returned as the result of the calls to the functions.
 - All functions in the core of the application return a value and have no side effects on any other state of
   the program.
@@ -43,14 +51,16 @@
  flowchart RL
  
  subgraph main["func main()"]
-    addFn(" `addFunc` = ✚{x,y -> returns x+y}`") -->|🟠 START HERE: 1. pointer to function stored in| X["variable `addFunc`"]
-    multiplyFn(" `multiplyFunc` = ❌{x,y -> returns x*y}") -->|🔵 2. pointer to function stored in| Y["variable `multiplyFunc`"]
+    addFn{" `addFunc` @F8BC76FC = 
+           ✚{x,y -> returns x+y} "} -->|🟠 START HERE: 1. pointer to function stored in| X["variable `addFunc` = @F8BC76FC"]
+    multiplyFn{" `multiplyFunc`@48C6CE7B = 
+                ❌{x,y -> returns x*y}"} -->|🔵 2. pointer to function stored in| Y["variable `multiplyFunc` = @48C6CE7B"]
     first -.->|first points to function| addFn
     second -..->|second points to function| multiplyFn
     subgraph result[" variable `result` = firstThenSecond(first=addFunc, second=multiplyFunc, a=10, b=2)"]
-       subgraph firstThenSecond[" 🔵 3. `firstThenSecond()` called = {first, second, a, b -> second(first(a, b), b)}"]
-          first("first() = `✚addFunc(a,b)`")-->|🔵 4. returns result into next function's `a` | second
-          second("second() = `❌multiplyFunc(a,b)`") -->|🔵 5. returns result| D
+       subgraph firstThenSecond[" 🔵 3. firstThenSecond(…) called = {first, second, a, b -> second(first(a, b), b)}"]
+          first("first(…) = `✚addFunc(a,b)`")-->|🔵 4. returns result into next function's `a` | second
+          second("second(…) = `❌multiplyFunc(a,b)`") -->|🔵 5. returns result| D
        end
        D("returns result of `second(first(a,b))`") -->|🔵 6. returns result| E
     end
