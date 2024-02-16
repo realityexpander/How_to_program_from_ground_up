@@ -63,12 +63,12 @@
     D -...->|firstThenSecond points to function| firstThenSecondFunc
     subgraph result[" variable `result` = firstThenSecond(first=addFunc, second=multiplyFunc, a=10, b=2)"]
        subgraph firstThenSecond[" 🔵 4. firstThenSecond(…) called = {first, second, a, b -> second(first(a, b), b)}"]
-          first("first(…) = `✚addFunc(a,b)`")==>|🔵 5. returns result into `second` function's `a` | second
-          second("second(…) = `❌multiplyFunc(a,b)`") ==>|🔵 6. returns result| D
+          first("first(…) = `✚ addFunc(a,b)`")==>|🔵 5. returns result into `second` function's `a` | second
+          second("second(…) = `❌ multiplyFunc(a,b)`") ==>|🔵 6. returns result| D
        end
-       D("returns result of `second(first(a,b))`") ==>|🔵 7. returns result| E
+       D("returns result of `⏩ second(first(a,b), b)`") ==>|🔵 7. returns result| E
     end
-    E("stores returned result value in variable `result`") ==>|🔵 8. `result` passed to| F
+    E("stores returned result in variable `result`") ==>|🔵 8. `result` passed to| F
     E --> E
     F["print(`result`)"]==>|🔵 END 9. program ends| G
  end
