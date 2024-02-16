@@ -43,19 +43,19 @@
  flowchart RL
  
  subgraph "func main()"
-    addFn(" `addFunc` = ✚{x,y=x+y}`") -->|🟠 START 1. pointer to function stored in| X["variable `addFunc`"]
-    multiplyFn(" `multiplyFunc` = ❌{x,y=x*y}") -->|🔵 2. pointer to function stored in| Y["variable `multiplyFunc`"]
-    first -.->|first points to| addFn
-    second -..-> multiplyFn
+    addFn(" `addFunc` = ✚{x,y -> returns x+y}`") -->|🟠 START HERE: 1. pointer to function stored in| X["variable `addFunc`"]
+    multiplyFn(" `multiplyFunc` = ❌{x,y -> returns x*y}") -->|🔵 2. pointer to function stored in| Y["variable `multiplyFunc`"]
+    first -.->|first points to function| addFn
+    second -..->|second points to function| multiplyFn
     subgraph " variable `result` = firstThenSecond(first=addFunc, second=multiplyFunc, a=10, b=2)"
        subgraph firstThenSecond[" variable `firstThenSecond` = {first, second, a, b -> second(first(a, b), b)}"]
           first("first = `✚add(a,b)`")-->|🔵 3. returns result into next function's `a` | second
           second("second = ❌multiply(a,b)`") -->|🔵 4. returns result| D
        end
-       D("returns result of `firstThenSecond(a,b)`") -->|🔵 5. returns result| E
+       D("returns result of `second(first(a,b))`") -->|🔵 5. returns result| E
     end
     E("stores result in variable `result`") -->|🔵 6. passed to| F
-    F["print(result)"] -->|🔵 END 7. program ends| G
+    F["print(`result`)"] -->|🔵 END 7. program ends| G
  end
  G("🖥️ main()")
  
@@ -66,8 +66,8 @@
   - ###### functionalExample
   ```Kotlin
   fun main() {
-     val addFunc = { a: Int, b: Int -> a + b }  // <-- a lambda that takes 2 integers and returns the sum of the integers.
-     val multiplyFunc = { a: Int, b: Int -> a * b }  // <-- a lambda that takes 2 integers and returns the product of the integers.
+     val addFunc = { x: Int, y: Int -> x + y }  // <-- a lambda that takes 2 integers and returns the sum of the integers.
+     val multiplyFunc = { x: Int, y: Int -> x * y }  // <-- a lambda that takes 2 integers and returns the product of the integers.
      val firstThenSecond = {  // <-- a lambda that takes 4 arguments, 2 functions and 2 integers, and returns the result of the 2 functions. 
          first: (Int, Int) -> Int, // <-- a lambda that takes 2 integers and returns an integer, it's executed first.
          second: (Int, Int) -> Int,  // <-- a lambda that takes 2 integers and returns an integer, it's executed second.
