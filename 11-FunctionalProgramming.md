@@ -1,5 +1,5 @@
 ## Functional Programming 1950s-Present (FP) <a name="FunctionalProgramming"></a>
-  - ### BIG IDEA - Shared mutable state is a complex problem, especially for parallel processing task. 
+  - ### BIG IDEA - Shared mutable state is a complex problem, especially for parallel processing tasks. 
 
   - ### The Functional style requires:
     1) Calling functions will NEVER change anything outside the function being called. 
@@ -38,12 +38,36 @@
     - It's all just functions!
 - Examples of functional languages are "Lisp", "Clojure" and "Javascript" and "Kotlin"
 
+
+```mermaid
+ flowchart RL
+ 
+ subgraph "func main()"
+    addFn(" `addFunc` = ✚{x,y=x+y}`") -->|🟠 START 1. pointer to function stored in| X["variable `addFunc`"]
+    multiplyFn(" `multiplyFunc` = ❌{x,y=x*y}") -->|🔵 2. pointer to function stored in| Y["variable `multiplyFunc`"]
+    first -.->|first points to| addFn
+    second -..-> multiplyFn
+    subgraph " variable `result` = firstThenSecond(first=addFunc, second=multiplyFunc, a=10, b=2)"
+       subgraph firstThenSecond[" variable `firstThenSecond` = {first, second, a, b -> second(first(a, b), b)}"]
+          first("first = `✚add(a,b)`")-->|🔵 3. returns result into next function's `a` | second
+          second("second = ❌multiply(a,b)`") -->|🔵 4. returns result| D
+       end
+       D("returns result of `firstThenSecond(a,b)`") -->|🔵 5. returns result| E
+    end
+    E("stores result in variable `result`") -->|🔵 6. passed to| F
+    F["print(result)"] -->|🔵 END 7. program ends| G
+ end
+ G("🖥️ main()")
+ 
+ 
+ ```
+
 - Example of Functional style (Kotlin):
   - ###### functionalExample
   ```Kotlin
   fun main() {
-     val add = { a: Int, b: Int -> a + b }  // <-- a lambda that takes 2 integers and returns the sum of the integers.
-     val multiply = { a: Int, b: Int -> a * b }  // <-- a lambda that takes 2 integers and returns the product of the integers.
+     val addFunc = { a: Int, b: Int -> a + b }  // <-- a lambda that takes 2 integers and returns the sum of the integers.
+     val multiplyFunc = { a: Int, b: Int -> a * b }  // <-- a lambda that takes 2 integers and returns the product of the integers.
      val firstThenSecond = {  // <-- a lambda that takes 4 arguments, 2 functions and 2 integers, and returns the result of the 2 functions. 
          first: (Int, Int) -> Int, // <-- a lambda that takes 2 integers and returns an integer, it's executed first.
          second: (Int, Int) -> Int,  // <-- a lambda that takes 2 integers and returns an integer, it's executed second.
@@ -53,7 +77,7 @@
                                     //     then calls the `second` lambda with the result of `first()` and the 2nd integer (b)
      }              
      
-     val result = firstThenSecond(add, multiply, 10, 2) // <-- calls the lambda with the 2 functions and 2 integers 
+     val result = firstThenSecond(addFunc, multiplyFunc, 10, 2) // <-- calls the lambda with the 2 functions and 2 integers 
                                                         //     using the "first class citizen" variables that each 
                                                         //     contain a function as a value (also called a lambda.)
      println(result) // result will be 24
@@ -76,12 +100,12 @@
 
   > ### Side Quest on "Declarative" Programming
   > - Notice that many of the diagrams in this document are written in a language that uses pure "declarative" style programming.
-  >   - The charts are using a declarative language called "Mermaid" to create many kinds of diagrams using only text.
-  >   - Mermaid is a "Domain Specific Language" (DSL) that is used to create diagrams in a "declarative" style.
+  >- The charts are using a declarative language called "Mermaid" to create many kinds of diagrams using only text.
+  >- Mermaid is a "Domain Specific Language" (DSL) that is used to create diagrams in a "declarative" style.
   >   - [https://mermaid.js.org/](https://mermaid.js.org/intro/)
   > - More on Declarative Programming:
-  >>   - 'Declarative Thinking, Declarative Practice' - Kevlin Henney [ ACCU 2016 ]
-  >>     - https://www.youtube.com/watch?v=nrVIlhtoE3Y 
+  >> - 'Declarative Thinking, Declarative Practice' - Kevlin Henney [ ACCU 2016 ]
+  >>- https://www.youtube.com/watch?v=nrVIlhtoE3Y 
 
 
 - [Continue Reading - Parallel Processing](./12-ParallelProcessing.md)  
