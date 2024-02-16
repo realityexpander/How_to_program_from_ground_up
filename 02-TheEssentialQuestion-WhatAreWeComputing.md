@@ -47,7 +47,7 @@
       [<img src="assets/williams_tube2.png" width="300">](https://en.wikipedia.org/wiki/Williams_tube)
       [<img src="assets/williams_tube3.png" width="300">](https://ub.fnwi.uva.nl/computermuseum/williamstube.html)
       
-      > - Cathode ray tube - Maltese Cross (NCPQ)  
+      > - Cathode ray tube - Maltese Cross (NCPQ) 
       >   - https://www.youtube.com/watch?v=aT_hzeeFhgE
       > - Cathode ray tube magnetic deflection by horseshoe magnet
       >   - https://www.youtube.com/watch?v=IkcHPmuDw7A
