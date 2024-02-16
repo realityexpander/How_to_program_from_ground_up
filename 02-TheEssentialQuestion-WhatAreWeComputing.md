@@ -46,13 +46,22 @@
       [<img src="assets/williams_tube.png" width="200">](https://en.wikipedia.org/wiki/Williams_tube)
       [<img src="assets/williams_tube2.png" width="300">](https://en.wikipedia.org/wiki/Williams_tube)
       [<img src="assets/williams_tube3.png" width="300">](https://ub.fnwi.uva.nl/computermuseum/williamstube.html)
-
+      
+      > - Cathode ray tube - Maltese Cross (NCPQ)  
+      >   - https://www.youtube.com/watch?v=aT_hzeeFhgE
+      > - Cathode ray tube magnetic deflection by horseshoe magnet
+      >   - https://www.youtube.com/watch?v=IkcHPmuDw7A
+      > - Cathode rays deflection using an electromagnet perpendicular to the beam
+      >  - https://www.youtube.com/watch?v=NFeJ0XbY1J8
       > - Manchester Baby and the birth of Computer Memory
       >  - https://www.youtube.com/watch?v=SpqayTc_Gcw
 
     - ## Magnetic Phenomenon - 1950s to present
         - Electronically detectable areas on magnetizable material, or the presence of a magnetic field in a specific area
-
+        
+        > Magnetic Fields "Bending" Light Paths
+        > - https://www.youtube.com/watch?v=GpEi-jSmcoA  
+         
         - Core Memory - 1955 to 1975
 
           [<img src="assets/core_memory.png" width="400">](https://en.wikipedia.org/wiki/Core_memory)

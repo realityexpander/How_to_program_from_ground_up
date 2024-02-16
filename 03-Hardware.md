@@ -339,6 +339,11 @@
   
     [<img src="assets/6502.png" width="400">](https://en.wikipedia.org/wiki/MOS_Technology_6502)
 
+    > - Zoom Into a Microchip
+    >   - https://www.youtube.com/watch?v=Fxv3JoS1uY8&t=77s
+    > - Microscopic view of an Intel i486
+    >   - https://www.youtube.com/watch?v=U885cIhOXBM
+
   - Simply groups of different Integrated Chips ➜ All put on one chip.
   - Contains a CPU (Central Processing Unit) and a small amount of ultra-fast memory (called "Registers").
   - The CPU is just a clever and somewhat complex arrangement of logic gates that can perform a series of logical operations.
