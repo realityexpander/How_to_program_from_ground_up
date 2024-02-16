@@ -1,4 +1,5 @@
 # Functional Programming 1950s-Present (FP) <a name="FunctionalProgramming"></a>
+###### functional-programming
   - ### BIG IDEA - Shared mutable state is a complex problem, especially for parallel processing tasks. 
 
   - ### The Functional style requires:
@@ -51,13 +52,16 @@
  flowchart LR
  
  subgraph main["func main()"]
-    X["variable `addFunc` = @F8BC76FC"] ==>|🟠 START HERE: 1. Stores pointer to function| addFn{{" `addFunc` @F8BC76FC =
-           ✚ {x,y -> returns x+y} "}}
-    Y["variable `multiplyFunc`@48C6CE7B ="] ==>|🔵 2. Stores pointer to function| multiplyFn{{" `multiplyFunc` @48C6CE7B = 
-                ❌ {x,y -> returns x*y}"}}
-    Z["variable `firstThenSecond` @A8C6CE7B ="] ==>|🔵 3. Stores pointer to function| firstThenSecondFunc{{" `firstThenSecond` @A8C6CE7B =
+    X["variable `addFunc` = @F8BC76FC"] ==>|🟠 START HERE: 1. Stores pointer to function| addFn{{" func add(…) @F8BC76FC =
+           ✚ { x,y -> return x+y } 
+           ⌺"}}
+    Y["variable `multiplyFunc` = @48C6CE7B"] ==>|🔵 2. Stores pointer to function| multiplyFn{{" func multiply(…) @48C6CE7B = 
+                ❌ { x,y -> return x*y }
+                     ⌺"}}
+    Z["variable `firstThenSecond` = @A8C6CE7B"] ==>|🔵 3. Stores pointer to function| firstThenSecondFunc{{" func firstThenSecond(…) @A8C6CE7B =
                  ⏩ { first, second, a, b -> 
-                 second(first(a, b), b) }"}}
+                 second(first(a, b), b) }
+                 ⌺"}}
     first -.->|first points to function| addFn
     second -..->|second points to function| multiplyFn
     D -...->|firstThenSecond points to function| firstThenSecondFunc
