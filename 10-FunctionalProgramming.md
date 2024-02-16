@@ -151,7 +151,9 @@
   >   - [https://mermaid.js.org/](https://mermaid.js.org/intro/)
   > - More on Declarative Programming:
   >> - 'Declarative Thinking, Declarative Practice' - Kevlin Henney [ ACCU 2016 ]
-  >>- https://www.youtube.com/watch?v=nrVIlhtoE3Y 
+  >>   - https://www.youtube.com/watch?v=nrVIlhtoE3Y 
+  >> - HTML IS a Programming Language (Imperative vs Declarative) - Computerphile
+  >>  - https://www.youtube.com/watch?v=4A2mWqLUpzw
 
 
 - [Continue Reading - Parallel Processing](./12-ParallelProcessing.md)  

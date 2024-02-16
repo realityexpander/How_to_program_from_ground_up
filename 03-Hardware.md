@@ -218,6 +218,9 @@
    - It can also switch much faster and consume much less power than the vacuum tube.
    - The switching and size limits bumping up against the limits of physics on size and speed.
      small it can be made.
+     > At these small sizes, the behavior of electricity at the atomic level starts to become a factor. 
+     > - Watch electricity hit a fork in the road at half a billion frames per second
+     >   - https://www.youtube.com/watch?v=2AXv49dDQJw 
 
    - ### How to Build Complex Logic Gates from Simple Transistors
      > - How do computers remember?

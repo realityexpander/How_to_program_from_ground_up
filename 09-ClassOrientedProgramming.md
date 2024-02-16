@@ -792,6 +792,15 @@
     >   - https://www.youtube.com/watch?v=3X9Eo2vzY1I
     >   - Live Code Example: [How to Achieve Multiple Inheritance in Kotlin](src/main/kotlin/multipleInheritanceExample.kt)
 
+## C++ Was Never Meant to Be the OOP that Alan-Kay Was Referring To <a name="design-of-c-plus-plus"></a>
+###### design-of-c-plus-plus
+  - Bjarn Stroustrup, the creator of C++, has said that C++ was never meant to be the OOP that Alan-Kay was referring to.
+  - Many design decisions in C++ were made to fit the procedural paradigm into the OOP paradigm, so when programmers
+    tried to use C++ as a "pure" OOP language, they ran into many problems, as outlined in this section.
+    
+    > The Design of C++ , lecture by Bjarne Stroustrup
+    > - https://www.youtube.com/watch?v=69edOm889V4 
+
 ## Design Patterns <a name="design-patterns"></a>
 ###### design-patterns
   - ### BIG IDEA — There are common problems and ways of solving them that humans have already figured out and named them.

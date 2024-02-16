@@ -101,6 +101,7 @@ The guide is a reference and follow along guide for my video series on YouTube:
   - [Polymorphism](09-ClassOrientedProgramming.md#polymorphism)
   - [Controlled Visibility of Variables and Methods](09-ClassOrientedProgramming.md#controlled-visibility)
   - [Allowing for "Multiple Inheritance" in C++ was a mistake, and it was removed from Java and C# for very good reasons](09-ClassOrientedProgramming.md#multiple-inheritance-removed)
+  - [Design of C++](09-ClassOrientedProgramming.md#design-of-c-plus-plus)
   - [Design Patterns](09-ClassOrientedProgramming.md#design-patterns)
 - [Functional Programming](10-FunctionalProgramming.md) 1950s-Present
   - Can we structure our code in a way to have less bugs and be easier to understand?
