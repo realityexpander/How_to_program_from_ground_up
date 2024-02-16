@@ -102,15 +102,15 @@ The guide is a reference and follow along guide for my video series on YouTube:
   - [Controlled Visibility of Variables and Methods](09-ClassOrientedProgramming.md#controlled-visibility)
   - [Allowing for "Multiple Inheritance" in C++ was a mistake, and it was removed from Java and C# for very good reasons](09-ClassOrientedProgramming.md#multiple-inheritance-removed)
   - [Design Patterns](09-ClassOrientedProgramming.md#design-patterns)
-- [Back-to-Object Oriented Programming](10-BackToObjectOrientedProgramming.md) 1970s-Present
-  - Can we re-visit the original principles of OOP to make softare easier to understand and maintain?
-  - [Banned Patterns in BOOP](10-BackToObjectOrientedProgramming.md#banned-patterns-in-boop)
-  - [Why is Class-Oriented Programming (COP)](10-BackToObjectOrientedProgramming.md#why-is-cop-bad)
-  - [Back-to Object Oriented Programming Example](10-BackToObjectOrientedProgramming.md#boop-example)
-- [Functional Programming](11-FunctionalProgramming.md) 1950s-Present
+- [Functional Programming](10-FunctionalProgramming) 1950s-Present
   - Can we structure our code in a way to have less bugs and be easier to understand?
-  - [Immutability & No Side Effects](11-FunctionalProgramming.md#immutability-no-side-effects)
-  - [Functional Programming Style](11-FunctionalProgramming.md#functionalExample)
+  - [Immutability & No Side Effects](10-FunctionalProgramming#immutability-no-side-effects)
+  - [Functional Programming Style](10-FunctionalProgramming#functionalExample)
+- [Back-to-Object Oriented Programming](11-BackToObjectOrientedProgramming) 1970s-Present
+  - Can we re-visit the original principles of OOP to make softare easier to understand and maintain?
+  - [Banned Patterns in BOOP](11-BackToObjectOrientedProgramming#banned-patterns-in-boop)
+  - [Why is Class-Oriented Programming (COP)](11-BackToObjectOrientedProgramming#why-is-cop-bad)
+  - [Back-to Object Oriented Programming Example](11-BackToObjectOrientedProgramming#boop-example)
 - [Parallel Processing (also called "Concurrent" Programming)](12-ParallelProcessing.md) 1960s-Present
   - Can we make our programs run faster by doing more than one thing at a time?  
   - [Threads](12-ParallelProcessing.md#threads)
