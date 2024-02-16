@@ -143,6 +143,8 @@
     >   - https://www.youtube.com/watch?v=8R7hoC3OuPo
     > - Software Design: Ep4 : 3rd Law of Software Design 
     >   - https://www.youtube.com/watch?v=nCxhJ_51fjA
+    > - Kevlin Henney — The Case for Technical Excellence
+    >   - https://www.youtube.com/watch?v=LLEXAdO3X1o
 
 ## Some Thoughts on Common Software Production Methodologies
 ##### some-thoughts-on-common-software-production-methodologies
