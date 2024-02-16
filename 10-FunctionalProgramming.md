@@ -62,15 +62,15 @@
     second -..->|second points to function| multiplyFn
     D -...->|firstThenSecond points to function| firstThenSecondFunc
     subgraph result[" variable `result` = firstThenSecond(first=addFunc, second=multiplyFunc, a=10, b=2)"]
-       subgraph firstThenSecond[" 🔵 3. firstThenSecond(…) called = {first, second, a, b -> second(first(a, b), b)}"]
-          first("first(…) = `✚addFunc(a,b)`")-->|🔵 4. returns result into `second` function's `a` | second
-          second("second(…) = `❌multiplyFunc(a,b)`") -->|🔵 5. returns result| D
+       subgraph firstThenSecond[" 🔵 4. firstThenSecond(…) called = {first, second, a, b -> second(first(a, b), b)}"]
+          first("first(…) = `✚addFunc(a,b)`")-->|🔵 5. returns result into `second` function's `a` | second
+          second("second(…) = `❌multiplyFunc(a,b)`") -->|🔵 6. returns result| D
        end
-       D("returns result of `second(first(a,b))`") -->|🔵 6. returns result| E
+       D("returns result of `second(first(a,b))`") -->|🔵 7. returns result| E
     end
-    E("stores returned result value in variable `result`") -->|🔵 7. `result` passed to| F
+    E("stores returned result value in variable `result`") -->|🔵 8. `result` passed to| F
     E --> E
-    F["print(`result`)"] -->|🔵 END 8. program ends| G
+    F["print(`result`)"] -->|🔵 END 9. program ends| G
  end
  G("🖥️ main()")
  
@@ -86,8 +86,7 @@
      val firstThenSecond = {  // <-- a lambda that takes 4 arguments, 2 functions and 2 integers, and returns the result of the 2 functions. 
          first: (Int, Int) -> Int, // <-- a lambda that takes 2 integers and returns an integer, it's executed first.
          second: (Int, Int) -> Int,  // <-- a lambda that takes 2 integers and returns an integer, it's executed second.
-         a: Int, 
-         b: Int -> 
+         a: Int, b: Int -> 
             second(first(a, b), b)  // <-- calls the `first` lambda with the 2 integers (a & b), 
                                     //     then calls the `second` lambda with the result of `first()` and the 2nd integer (b)
      }              
