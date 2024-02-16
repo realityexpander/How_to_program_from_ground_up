@@ -47,6 +47,32 @@
     - It's all just functions!
 - Examples of functional languages are "Lisp", "Clojure" and "Javascript" and "Kotlin"
 
+```mermaid
+    flowchart TB
+    
+    note["`a Directed Acyclic Graph (DAG) represents the function call chain for the example program.`"]
+    
+    start((("🟠 1. Start here"))) ==> Z
+    
+    X[" `first` points to `add` function "] ==>|🔵 3. Calls function with x= 10, y= 2| addFn{{" func add(…) @F8BC76FC =
+           ✚ { x,y -> return x+y } 
+           ⌺"}}
+    Y[" `second` points to `multiplyFunc`"] ==>|🔵 5. Calls function with x=12, y=2| multiplyFn{{" func multiply(…) @48C6CE7B = 
+                ❌ { x,y -> return x*y }
+                     ⌺"}}
+    Z["val x = firstThenSecond(addFunc, multiplyFunc, 10, 2)"] ==>|🔵 2. Calls function with params| firstThenSecondFunc{{" func firstThenSecond(…) @A8C6CE7B =
+                 ⏩ { first, second, a, b -> second(first(a, b), b) }
+                 ⌺"}}
+    
+    firstThenSecondFunc -.-> X
+    firstThenSecondFunc -.-> Y
+    addFn ==>|🔵 4. returns result ❪12❫ into `second`
+              function's `a` parameter | firstThenSecondFunc
+    multiplyFn ==>|🔵 6. returns result ❪24❫| firstThenSecondFunc
+    firstThenSecondFunc ==>|🔵 7. returns result ❪24❫| Z
+
+```
+
 
 ```mermaid
  flowchart LR
@@ -62,16 +88,19 @@
                  ⏩ { first, second, a, b -> second(first(a, b), b) }
                  ⌺"}}
     first -.->|`first` points to function| addFn
-    second -..->|`second` points to function| multiplyFn
-    D -...->|`firstThenSecond` points to function| firstThenSecondFunc
+    second -.->|`second` points to function| multiplyFn
+    D -.....->|`firstThenSecond` points to function| firstThenSecondFunc
     subgraph result[" variable `result` = firstThenSecond(first= addFunc, second= multiplyFunc, a= 10, b= 2)"]
+       resultInner["⏩ firstThenSecond(…) = second(first(a,b), b)"] --> E
+       D("D ⏩ firstThenSecond(…)_= second(first(a,b), b)`") ==>|🔵 7. calls| first
        subgraph firstThenSecond[" 🔵 4. firstThenSecond(…) called = {first, second, a, b -> second(first(a, b), b)}"]
-          first("first(…) = `✚ addFunc(a,b)`")==>|🔵 5. returns result into `second` function's `a` | second
-          second("second(…) = `❌ multiplyFunc(a,b)`") ==>|🔵 6. returns result| D
+          first("calls first(…) = `✚ addFunc(a,b)`")==>|🔵 5. returns result into `second` function's `a` | second
+%%          second("calls second(…) = `❌ multiplyFunc(a,b)`") ==>|🔵 6. returns result| D
+          second("calls second(…) = `❌ multiplyFunc(a,b)`") ==>|🔵 6. returns result| resultInner
+          
        end
-       D("returns result of `⏩ second(first(a,b), b)`") ==>|🔵 7. returns result| E
     end
-    E("stores returned result in variable `result`") ==>|🔵 8. `result` passed to| F
+    E("E stores returned result in variable `result`") ==>|🔵 8. `result` passed to| F
     E --> E
     F["print(`result`)"]==>|🔵 END 9. program ends| G
  end
