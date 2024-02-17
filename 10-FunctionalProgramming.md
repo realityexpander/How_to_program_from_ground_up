@@ -100,14 +100,18 @@ flowchart BT
      D("⏩ firstThenSecond(…)_= second(first(a,b), b)`") ==>|🔵 5. Calls| first
      subgraph firstThenSecond[" 🔵 6. firstThenSecond(…) internal calls..."]
         first("🟡 7. Calls first(…) = `✚ addFunc(a,b)`")==>|🔵 8. Returns result into `second` function's `a` | second
-        second("calls second(…) = `❌ multiplyFunc(a,b)`") ==>|🔵 6. returns result| D
+        second("🔴 9. Calls second(…) = `❌ multiplyFunc(a,b)`") ==>|🔵 10. Returns result| resultInner
+        
+        %% Show where return to firstThenSecond
+        %% second("calls second(…) = `❌ multiplyFunc(a,b)`") ==>|🔵 6. returns result| D
      end
    end
    E("Stores returned result in variable `result`") ==>|🔵 11. Variable `result` passed to| F
    F["print(`result`)"]==>|🔵 END 12. program ends| G
 
-   first -..->|`first` points to function| addFn
-   second -...->|`second` points to function| multiplyFn
+   %% Show the function pointers for the lambda
+   %%   first -..->|`first` points to function| addFn
+   %%   second -...->|`second` points to function| multiplyFn
  end
  G("🖥️ main()")
  
