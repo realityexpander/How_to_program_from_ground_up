@@ -356,6 +356,8 @@
 - [Another tree diagram](assets/tree.png)
   > - Tree Data Structure Summary
   >   - https://www.youtube.com/watch?v=2gu3ACsq2jI
+
+  ## 🚫🔄 Notice: no cycles or loops in the graph 
     ```mermaid
       graph TD
       Y([Root Pointer]) -..->|root points to start of tree | A((("node A 
@@ -392,7 +394,12 @@
          The Left ⇦ node values are always
          less than the parent node.
          The Right ⇨ node values are always
-         greater than the parent node."]
+         greater than the parent node.
+  
+         (also known as a Directed Acyclic Graph 
+         because it has not cycles or loops in the graph.)
+         🚫🔄
+  "]
     ```
 
 ## Graph <a name="graph"></a>
