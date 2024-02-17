@@ -323,16 +323,19 @@
 
   - ```mermaid
     graph TD
-    N((("A ⚪️ Node is made of: 
-      A Value,
+    N((("
+      A ⚪️ Node contains: 
+      A Value (of some type),
       1 pointer to its left node 🔴⇦, 
       1 pointer to its right node ⇨🟣
-    "))) -->|left pointer points to| N1((("Another Node
-                                                      🟣
-                                                      ⇦⇨"))) 
-    N -->|right pointer points to| N2((("Another Node
-                                         🔴
-                                         ⇦⇨")))
+    "))) -->|left pointer points to| N1((("
+      Another Node
+      🟣
+      ⇦⇨"))) 
+    N -->|right pointer points to| N2((("
+      Another Node
+      🔴
+      ⇦⇨")))
     
     X[Example of a Node for a Binary Tree]
     ```
