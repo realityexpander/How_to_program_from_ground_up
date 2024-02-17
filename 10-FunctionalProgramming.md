@@ -112,7 +112,8 @@
 ```mermaid
 flowchart TB
 
-note["`a Directed Acyclic Graph (DAG) represents the function call chain for the example program.`"]
+note["The function call chain 
+for the Functional Example program."]
 
 start((("🟠 1. Start here"))) ==> Z
 
