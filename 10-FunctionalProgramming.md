@@ -96,17 +96,17 @@
     firstThenSecondFunc -...->|🟡 7. Calls `first`| addFn
     firstThenSecondFunc -...->|🔴 9. Calls `second`| multiplyFn
     
-    subgraph result["🔵 4. variable `result` = firstThenSecond(first= addFunc, second= multiplyFunc, a= 10, b= 2)"]
+    subgraph result["🔵 4. Variable `result` = firstThenSecond(first= addFunc, second= multiplyFunc, a= 10, b= 2)"]
        resultInner["Result of firstThenSecond(…)"] ==> E
-       D("⏩ firstThenSecond(…)_= second(first(a,b), b)`") ==>|🔵 5. calls| first
-       subgraph firstThenSecond[" 🔵 6. firstThenSecond(…) calls..."]
-          first("🟡 7. calls first(…) = `✚ addFunc(a,b)`")==>|🔵 8. returns result into `second` function's `a` | second
+       D("⏩ firstThenSecond(…)_= second(first(a,b), b)`") ==>|🔵 5. Calls| first
+       subgraph firstThenSecond[" 🔵 6. firstThenSecond(…) internal calls..."]
+          first("🟡 7. calls first(…) = `✚ addFunc(a,b)`")==>|🔵 8. Returns result into `second` function's `a` | second
 %%          second("calls second(…) = `❌ multiplyFunc(a,b)`") ==>|🔵 6. returns result| D
-          second("🔴 9. calls second(…) = `❌ multiplyFunc(a,b)`") ==>|🔵 10. returns result| resultInner
+          second("🔴 9. calls second(…) = `❌ multiplyFunc(a,b)`") ==>|🔵 10. Returns result| resultInner
           
        end
     end
-    E("Stores returned result in variable `result`") ==>|🔵 11. `result` passed to| F
+    E("Stores returned result in variable `result`") ==>|🔵 11. Variable `result` passed to| F
     F["print(`result`)"]==>|🔵 END 12. program ends| G
  end
  G("🖥️ main()")
