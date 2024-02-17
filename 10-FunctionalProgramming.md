@@ -51,22 +51,23 @@
   - ###### sideEffectsExample
   ```Kotlin
   fun main() {
-     var x = 0 // <-- a variable that will be "side-effected" or "mutated" by the lambda.
-     val add = { a: Int, b: Int ->
-           val result =  a + b + x
-           x += a  // <-- Create a "side effect" by changing the value of `x` outside the lambda.
-		 
-           result // <-- return the result of the addition.
-        } 
-  
-     print(add(1, 2))  // <-- print expected value the first time called (3).
-	
-     println(add(1, 2))  // <-- print the unexpected value the second time called (4) due to the side effect.
+     var x = 0 // <-- Defines a variable that will be "affected" or "mutated" by the lambda.
+     val add = { a: Int, b: Int -> // <-- Defines a lambda that takes two Ints and returns an Int.
+        val result =  a + b + x
+        x += a  // <-- Create a "side effect" by changing the value of `x` outside the lambda.
+     
+        result // <-- Return the result of the addition including the side effect.
+     }
+     
+     print(add(1, 2))  // <-- Print expected value the first time called (3).
+     
+     println(add(1, 2))  // <-- Print the unexpected value the second time called (4) due to the side effect.
   }
-
+  
   // Output:
-  // 3   // <-- The value of is what we expected, only the first time though.
-  // 4   // <-- This value of is not what we expected.
+  // 3   // <-- This value of is what we expected, only the first time though...
+  // 4   // <-- This value of is not what we expected due to the side effect.
+  
 
   ```
   > Live Code Example: [Side Effects Example](src/main/kotlin/sideEffectsExample.kt)
@@ -75,13 +76,13 @@
     - ###### functionalExample
   ```Kotlin
   fun main() {
-     val addFunc = { x: Int, y: Int -> x + y }  // <-- a lambda that takes 2 integers and returns the sum of the integers.
-     val multiplyFunc = { x: Int, y: Int -> x * y }  // <-- a lambda that takes 2 integers and returns the product of the integers.
-     val firstThenSecond = {  // <-- a lambda that takes 4 arguments, 2 functions and 2 integers, and returns the result of the 2 functions. 
-         first: (Int, Int) -> Int, // <-- 🟡 a lambda that takes 2 integers and returns an integer, it's executed first.
-         second: (Int, Int) -> Int,  // <-- 🔴 a lambda that takes 2 integers and returns an integer, it's executed second.
+     val addFunc = { x: Int, y: Int -> x + y }  // <-- Defines a lambda that takes 2 integers and returns the sum of the integers.
+     val multiplyFunc = { x: Int, y: Int -> x * y }  // <-- Defines a lambda that takes 2 integers and returns the product of the integers.
+     val firstThenSecond = {  // <-- Defines a lambda that takes 4 arguments, 2 functions and 2 integers, and returns the result of the 2 functions. 
+         first: (Int, Int) -> Int, // <-- 🟡 Accepts a lambda that takes 2 integers and returns an integer, it's executed first.
+         second: (Int, Int) -> Int,  // <-- 🔴 Accepts a lambda that takes 2 integers and returns an integer, it's executed second.
          a: Int, b: Int -> 
-            second(first(a, b), b)  // <-- calls the `first` lambda with the 2 integers (a & b), 
+            second(first(a, b), b)  // <-- Calls the `first` lambda with the 2 integers (a & b), 
                                     //     then calls the `second` lambda with the result of `first()` and the 2nd integer (b)
      }              
      
@@ -91,9 +92,9 @@
      println(result) // result will be 24
      
      val resultUsingAnonymousFunctions = 
-        firstThenSecond(  // <-- calls the `firstThenSecond` lambda with the 2 "anonymous functions" and 2 integers.
-           { a, b -> a + b },  // <-- an "anonymous function" that takes 2 integers and returns the sum of the integers.
-           { a, b -> a * b },  // <-- an "anonymous function" that takes 2 integers and returns the product of the integers.
+        firstThenSecond(  // <-- Calls the `firstThenSecond` lambda with the 2 "anonymous functions" and 2 integers.
+           { a, b -> a + b },  // <-- Defines an "anonymous function" that takes 2 integers and returns the sum of the integers.
+           { a, b -> a * b },  // <-- Defines an "anonymous function" that takes 2 integers and returns the product of the integers.
            10, 2
         )
      println(resultUsingAnonymousFunctions) // result will be 24 
