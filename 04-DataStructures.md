@@ -1,5 +1,5 @@
 # Data Structures
-  - ### BIG IDEA — It's easier for humans to deal with names of ways to lay out representations of data in memory ("structures") tha than just hex code addresses.
+  - ### BIG IDEA — It's easier for humans to deal with names of ways to lay out representations of data in memory ("structures") than just hex code addresses.
 
     > ## "How something is arranged is 80 IQ points of the problem."
     > — Alan Kay
@@ -47,6 +47,9 @@
     - Due to the way floating point numbers are represented, they are not exact! And will have rounding errors!
       > - Why Is This Happening?! Floating Point Approximation!
       >   - https://www.youtube.com/watch?v=2gIxbTn7GSc
+      > - https://evanw.github.io/float-toy/ 
+      > - https://bartaz.github.io/ieee754-visualization/
+      > - https://tools.timodenk.com/ieee-754-floating-point
   
 ### Characters/Letters are usually represented in ASCII (1 byte) or Unicode(1 or more bytes) <a name="characters"></a>
 ###### characters

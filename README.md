@@ -33,7 +33,8 @@ The guide is a reference and follow along guide for my video series on YouTube:
     - [The Mighty Microprocessor](03-Hardware.md#the-mighty-microprocessor)
     - [The Configurable Computer](03-Hardware.md#the-configurable-computer)
 - [Data Structures](04-DataStructures.md) Pre-history to Present Day
-  - How Humans Represent Data in Binary in Computers?
+  - How Do
+  - Humans Represent Data in Binary in Computers?
   - [Numbers](04-DataStructures.md#numbers) 
   - [Characters](04-DataStructures.md#characters)
   - ["Data Structures"](04-DataStructures.md#data-structures)
