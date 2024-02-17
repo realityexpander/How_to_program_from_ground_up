@@ -429,10 +429,10 @@
       A 🟣 Node contains: 
       A Value (of some type),
       Zero to many pointers to other nodes
-      1 pointer to its A node ⇨🟣, 
       1 pointer to its B node ⇨🟣
       1 pointer to its C node ⇨🟣
       1 pointer to its D node ⇨🟣
+      1 pointer to its E node ⇨🟣 
     "))) -->|1 pointer points to| B((("
       B Node
       🟣
