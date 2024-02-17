@@ -47,18 +47,6 @@
     - It's all just functions!
 - Examples of functional languages are "Lisp", "Clojure" and "Javascript" and "Kotlin"
 
-```mermaid
-flowchart TB
-
-    note["`a Directed Acyclic Graph (DAG) represents the function call chain for the example program.`"]
-
-    start("🟠 1. Start here") ==> Z
-
-    X["first points to add function "] ==>|"🔵 3. Calls function with x= 10, y= 2"| addFn[" func add(…) @F8BC76FC =
-               ✚ { x,y -> return x+y }
-        ⌺"]
-```
-
 
 ```mermaid
 flowchart TB
@@ -86,78 +74,44 @@ firstThenSecondFunc ==>|"🔵 7. returns result ❪24❫"| Z
 
 ```
 
-%% flowchart BT
-%% 
-%% subgraph main["func main()"]
-%%    
-%%    X["Variable `addFunc` = @F8BC76FC"] ==>|🟠 START HERE: 1. Stores pointer to function| addFn{{" func add(…) @F8BC76FC =
-%%    ✚ { x,y -> return x+y }
-%%    ⌺"}}
-%%    Y["Variable `multiplyFunc` = @48C6CE7B"] ==>|🔵 2. Stores pointer to function| multiplyFn{{" func multiply(…) @48C6CE7B = 
-%%                ❌ { x,y -> return x*y }
-%%                     ⌺"}}
-%%    Z["Variable `firstThenSecond` = @A8C6CE7B"] ==>|🔵 3. Stores pointer to function| firstThenSecondFunc{{" func firstThenSecond(…) @A8C6CE7B =
-%%      ⏩ { first, second, a, b -> second(first(a, b), b) }
-%%    ⌺"}}
-%%    
-%%%%    first -..->|`first` points to function| addFn
-%%%%    second -...->|`second` points to function| multiplyFn
-%%    D -.->|`firstThenSecond` points to function| firstThenSecondFunc
-%%    firstThenSecondFunc -...->|🟡 7. Calls `first`| addFn
-%%    firstThenSecondFunc -...->|🔴 9. Calls `second`| multiplyFn
-%%    
-%%    subgraph result["🔵 4. Variable `result` = firstThenSecond(first= addFunc, second= multiplyFunc, a= 10, b= 2)"]
-%%       resultInner["Result of firstThenSecond(…)"] ==> E
-%%       D("⏩ firstThenSecond(…)_= second(first(a,b), b)`") ==>|🔵 5. Calls| first
-%%       subgraph firstThenSecond[" 🔵 6. firstThenSecond(…) internal calls..."]
-%%          first("🟡 7. Calls first(…) = `✚ addFunc(a,b)`")==>|🔵 8. Returns result into `second` function's `a` | second
-%%%%          second("calls second(…) = `❌ multiplyFunc(a,b)`") ==>|🔵 6. returns result| D
-%%          second("🔴 9. Calls second(…) = `❌ multiplyFunc(a,b)`") ==>|🔵 10. Returns result| resultInner
-%%          
-%%       end
-%%    end
-%%    E("Stores returned result in variable `result`") ==>|🔵 11. Variable `result` passed to| F
-%%    F["print(`result`)"]==>|🔵 END 12. program ends| G
-%% end
-%% G("🖥️ main()")
-%% 
-%% 
-    ```mermaid
-    flowchart BT
-     subgraph main["func main()"]
-        X["Variable `addFunc` = @F8BC76FC"] ==>|🟠 START HERE: 1. Stores pointer to function| addFn{{" func add(…) @F8BC76FC =
-        ✚ { x,y -> return x+y }
-        ⌺"}}
+```mermaid
+flowchart BT
+ subgraph main["func main()"]
     
-       Y["Variable `multiplyFunc` = @48C6CE7B"] ==>|🔵 2. Stores pointer to function| multiplyFn{{" func multiply(…) @48C6CE7B = 
-                   ❌ { x,y -> return x*y }
-                        ⌺"}}
-       Z["Variable `firstThenSecond` = @A8C6CE7B"] ==>|🔵 3. Stores pointer to function| firstThenSecondFunc{{" func firstThenSecond(…) @A8C6CE7B =
-         ⏩ { first, second, a, b -> second(first(a, b), b) }
-       ⌺"}}
-       
-       first -..->|`first` points to function| addFn
-       second -..->|`second` points to function| multiplyFn
-       D -..->|`firstThenSecond` points to function| firstThenSecondFunc
-       firstThenSecondFunc -..->|🟡 7. Calls `first`| addFn
-       firstThenSecondFunc -....->|🔴 9. Calls `second`| multiplyFn
-       
-       subgraph result["🔵 4. Variable `result` = firstThenSecond(first= addFunc, second= multiplyFunc, a= 10, b= 2)"]
-          resultInner["Result of firstThenSecond(…)"] ==> E
-          D("⏩ firstThenSecond(…)_= second(first(a,b), b)`") ==>|🔵 5. Calls| first
-          subgraph firstThenSecond[" 🔵 6. firstThenSecond(…) internal calls..."]
-             first("🟡 7. Calls first(…) = `✚ addFunc(a,b)`")==>|🔵 8. Returns result into `second` function's `a` | second
-    %%          second("calls second(…) = `❌ multiplyFunc(a,b)`") ==>|🔵 6. returns result| D
-             second("🔴 9. Calls second(…) = `❌ multiplyFunc(a,b)`") ==>|🔵 10. Returns result| resultInner
-          end
-       end
-       E("Stores returned result in variable `result`") ==>|🔵 11. Variable `result` passed to| F
-       F["print(`result`)"]==>|🔵 END 12. program ends| G
-    end
-    G("🖥️ main()")
-    
-    ```
+   X["Variable `addFunc` = @F8BC76FC"] ==>|🟠 START HERE: 1. Stores pointer to function| addFn{{" 
+      func add(…) @F8BC76FC =
+      ✚ { x,y -> return x+y }
+      ⌺"}}
+   Y["Variable `multiplyFunc` = @48C6CE7B"] ==>|🔵 2. Stores pointer to function| multiplyFn{{" 
+      func multiply(…) @48C6CE7B = 
+      ❌ { x,y -> return x*y }
+      ⌺"}}
+   Z["Variable `firstThenSecond` = @A8C6CE7B"] ==>|🔵 3. Stores pointer to function| firstThenSecondFunc{{" 
+      func firstThenSecond(…) @A8C6CE7B =
+      ⏩ { first, second, a, b -> second(first(a, b), b) }
+      ⌺"}}
+   
+   D -.->|`firstThenSecond` points to function| firstThenSecondFunc
+   firstThenSecondFunc -...->|🟡 7. Calls `first`| addFn
+   firstThenSecondFunc -...->|🔴 9. Calls `second`| multiplyFn
+   
+   subgraph result["🔵 4. Variable `result` = firstThenSecond(first= addFunc, second= multiplyFunc, a= 10, b= 2)"]
+     resultInner["Result of firstThenSecond(…)"] ==> E
+     D("⏩ firstThenSecond(…)_= second(first(a,b), b)`") ==>|🔵 5. Calls| first
+     subgraph firstThenSecond[" 🔵 6. firstThenSecond(…) internal calls..."]
+        first("🟡 7. Calls first(…) = `✚ addFunc(a,b)`")==>|🔵 8. Returns result into `second` function's `a` | second
+        second("calls second(…) = `❌ multiplyFunc(a,b)`") ==>|🔵 6. returns result| D
+     end
+   end
+   E("Stores returned result in variable `result`") ==>|🔵 11. Variable `result` passed to| F
+   F["print(`result`)"]==>|🔵 END 12. program ends| G
 
+   first -..->|`first` points to function| addFn
+   second -...->|`second` points to function| multiplyFn
+ end
+ G("🖥️ main()")
+ 
+```
 - Example of Functional style (Kotlin):
   - ###### functionalExample
   ```Kotlin
