@@ -47,6 +47,30 @@
     - It's all just functions!
 - Examples of functional languages are "Lisp", "Clojure" and "Javascript" and "Kotlin"
 
+- Example with Side Effects (Kotlin):
+  - ###### sideEffectsExample
+  ```Kotlin
+  fun main() {
+	 var x = 0 // <-- a variable that will be "affected" or "mutated" by the lambda.
+	 val add: (Int, Int) -> Int = { a: Int, b: Int ->
+		val result =  a + b + x
+		x += a  // <-- Create a "side effect" by changing the value of `x` outside the lambda.
+		
+		result // <-- return the result of the addition.
+	 }
+
+	 print(add(1, 2))  // <-- print expected value the first time called (3).
+	
+	 println(add(1, 2))  // <-- print the unexpected value the second time called (4) due to the side effect.
+  }
+
+  // Output:
+  // 3   // <-- The value of is what we expected, only the first time though.
+  // 4   // <-- This value of is not what we expected.
+
+  ```
+  > Live Code Example: [Side Effects Example](src/main/kotlin/sideEffectsExample.kt)
+
 - Example of Functional style (Kotlin):
     - ###### functionalExample
   ```Kotlin
@@ -83,7 +107,7 @@
   ```
   > Live Code Example: [Functional Example](src/main/kotlin/functionalExample.kt)
 
-### Functio Evaluation Sequence <a name="functional-call-chain"></a>
+### Function Evaluation Sequence <a name="functional-call-chain"></a>
 ```mermaid
 flowchart TB
 
@@ -112,7 +136,7 @@ firstThenSecondFunc -.-> X
 firstThenSecondFunc -.-> Y
 
 ```
-### How Flow of Control Works in the Functional Example 
+### How Flow of Execution Travels in the Functional Example 
 
 ```mermaid
 flowchart LR
