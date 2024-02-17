@@ -350,16 +350,16 @@
   - Simply groups of different Integrated Chips ➜ All put on one chip.
   - Contains a CPU (Central Processing Unit) and a small amount of ultra-fast memory (called "Registers").
   - The CPU is just a clever and somewhat complex arrangement of logic gates that can perform a series of logical operations.
-    > - An intuitive approach for understanding the CPU and RAM
-    >   - https://www.youtube.com/watch?v=-IyB8hBkA9w
     > - How a CPU Works
     >   - https://www.youtube.com/watch?v=cNN_tTXABUA
+    > - An intuitive approach for understanding the CPU and RAM
+    >   - https://www.youtube.com/watch?v=-IyB8hBkA9w
 
   - Each part of the CPU is made of millions of the same kinds of logic gates that we've already discussed.
   - The CPU has a "clock" to synchronize the operations of the CPU.
   - It also has a "program counter" to keep track of the current instruction in memory that the CPU is executing.
   - Has an "ALU" (Arithmetic Logic Unit) to perform basic arithmetic and logical operations.
-      > - How does an ALU work?
+      > How does an ALU work?
       > - Learn how computers add numbers and build a 4-bit adder circuit
       >   - https://youtu.be/wvJc9CZcvBc
   - It contains a small amount of "cache" memory (extremely quick memory near the CPU circuits) to speed up access 
@@ -418,8 +418,6 @@
     >> Note that the CCD was invented in an "hour" due to how many other technologies had to be invented first.
 
   - Putting it all together
-    > - 1969 EDUTRONICS COMPUTER DATA PROCESSING PRINCIPLES & FILE CONCEPTS 54124
-    >   - https://www.youtube.com/watch?v=0bLQ9EQ6PdY
     > - 1970s COMPUTER DATA PROCESSING & FILE MAINTENANCE EDUCATIONAL FILM FLOWCHARTS
     >   - https://www.youtube.com/watch?v=geo8UtItSwU
 
