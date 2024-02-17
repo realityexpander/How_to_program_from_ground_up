@@ -1,8 +1,8 @@
 # Data Structures
 - ### BIG IDEA — It's easier for humans to deal with names of structures that represent data in memory than hex code addresses.
 
-  > # "How something is arranged is 80 IQ points of the problem."
-  > ## — Alan Kay
+  > ## "How something is arranged is 80 IQ points of the problem."
+  > ##  — Alan Kay
 
   - "Data structures" is the overall name for the various named concepts for common ways humans have invented to 
     represent data, and often predate modern computing.
