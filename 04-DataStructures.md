@@ -395,5 +395,78 @@
          greater than the parent node."]
     ```
 
+## Graph <a name="graph"></a>
+###### graph
+  - ### BIG IDEA - A way to represent a "network" of nodes in memory, where each node contains a value and "points to" one or MORE other nodes that are NOT necessarily direct descendants of the node.
+  
+  - Graphs are used to represent a "network" of nodes, like a social network, or a map of roads.
+  - Graphs can have loops and don'd necessarily have a "root" node.
+  - Graphs keep track of list of nodes in memory, where each node contains a value and 
+    "points to" one or MORE other nodes that are not necessarily direct descendant like in Trees.
+    - The descendants are also called "neighbors".
+    - If there are 2 children, it's called a "binary tree", if there are 3 children, it's called a "ternary tree", 
+      and so on. 
+    - Trees are a special case of a graph which have no "cycles" or "loops" in the graph.
+    - "Binary Tree" usually indicates that the contents are in a sorted order, where each node's value is greater than the value of it's node on the left, and less than the node to it's right.
+    - "Directed Acyclic Graphs" are also a kind of tree where each node points to one or more sub-nodes, but there are no "cycles" or "loops" in the graph.
+  - The node values are the same size & type and are NOT stored in a contiguous block of memory.
+  - The values are accessed by starting with a reference to the root node, which is then used to "traverse" 
+    (visit nodes) the tree to find the matching values, using "search" algorithms like "Dijkstra's Path Search Algorithm" or "A* Search Algorithm."
+  - A Graph is used to represent a "network" of nodes, like a social network, or a map of roads.
+  - A node that does not pointing to any other node is called a "leaf" or "terminal" node.
+  - A node that is not pointed to by any other node is called an "orphan" node.
+
+    ```mermaid
+    graph TD
+    A((("
+      A 🟣 Node contains: 
+      A Value (of some type),
+      Zero to many pointers to other nodes
+      1 pointer to its A node ⇨🟣, 
+      1 pointer to its B node ⇨🟣
+      1 pointer to its C node ⇨🟣
+      1 pointer to its D node ⇨🟣
+    "))) -->|1 pointer points to| B((("
+      B Node
+      🟣
+      ⇦⇨"))) 
+    A -->|1 pointer points to| C((("
+      C Node
+      🟣
+      ⇦⇨")))
+    A -->|1 pointer points to| D((("
+        D Node
+        🟣
+        ⇦⇨")))
+    A -->|1 pointer points to| E((("
+        E Node
+        🟣
+        ⇦⇨")))
+    D -->|1 pointer points to| C((("
+        C Node
+        🟣
+        ⇦⇨")))
+    E -->|1 pointer points to| B((("
+        B Node
+        🟣
+        ⇦⇨")))
+    F((("
+      F Node
+      🟣
+      ⇦⇨"))) -->|1 pointer points to| C
+    G((("
+        G Node
+        🟣
+        ⇦⇨"))) -->|1 pointer points to| B
+    F -->|1 pointer points to| D
+    H((("
+        H Node
+        🟣
+        ⇦⇨"))) -->|1 pointer points to| B
+    H -->|1 pointer points to| C
+    B -->|1 pointer points to| C
+    
+    X[Example of a Node for a Network Graph]
+
 - [Continue Reading - Software](./05-Software.md)
 - [Back to Index](README.md)
