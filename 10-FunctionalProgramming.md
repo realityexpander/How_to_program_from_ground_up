@@ -66,7 +66,8 @@
                                                         //     contain a function as a value (also called a lambda.)
      println(result) // result will be 24
      
-     val resultUsingAnonymousFunctions = firstThenSecond(  // <-- calls the `firstThenSecond` lambda with the 2 "anonymous functions" and 2 integers.
+     val resultUsingAnonymousFunctions = 
+        firstThenSecond(  // <-- calls the `firstThenSecond` lambda with the 2 "anonymous functions" and 2 integers.
            { a, b -> a + b },  // <-- an "anonymous function" that takes 2 integers and returns the sum of the integers.
            { a, b -> a * b },  // <-- an "anonymous function" that takes 2 integers and returns the product of the integers.
            10, 2
@@ -115,15 +116,15 @@ firstThenSecondFunc -.-> Y
 flowchart BT
  subgraph main["func main()"]
     
-   X["Variable `addFunc` = @F8BC76FC"] ==>|"🟠 START HERE: 1. Stores pointer to function"| addFn{{" 
+   X["val `addFunc` = @F8BC76FC"] ==>|"🟠 START HERE: 1. Stores pointer to function"| addFn{{" 
       func add(…) @F8BC76FC =
       ✚ { x,y -> return x+y }
       ⌺"}}
-   Y["Variable `multiplyFunc` = @48C6CE7B"] ==>|"🔵 2. Stores pointer to function"| multiplyFn{{" 
+   Y["val `multiplyFunc` = @48C6CE7B"] ==>|"🔵 2. Stores pointer to function"| multiplyFn{{" 
       func multiply(…) @48C6CE7B = 
       ❌ { x,y -> return x*y }
       ⌺"}}
-   Z["Variable `firstThenSecond` = @A8C6CE7B"] ==>|"🔵 3. Stores pointer to function"| firstThenSecondFunc{{" 
+   Z["val `firstThenSecond` = @A8C6CE7B"] ==>|"🔵 3. Stores pointer to function"| firstThenSecondFunc{{" 
       func firstThenSecond(…) @A8C6CE7B =
       ⏩ { first, second, a, b -> second(first(a, b), b) }
       ⌺"}}
@@ -132,12 +133,12 @@ flowchart BT
    firstThenSecondFunc -...->|"🟡 7. Calls `first`"| addFn
    firstThenSecondFunc -...->|"🔴 9. Calls `second`"| multiplyFn
    
-   subgraph result["🔵 4. Variable `result` = firstThenSecond(first= addFunc, second= multiplyFunc, a= 10, b= 2)"]
+   subgraph result["🔵 4. val `result` = firstThenSecond(first= addFunc, second= multiplyFunc, a= 10, b= 2)"]
      resultInner["Result of firstThenSecond(…)"] ==> E
-     D("⏩ firstThenSecond(…)_= second(first(a,b), b)`") ==>|"🔵 5. Calls"| first
+     D("Evaluate ⏩ firstThenSecond(…)_= second(first(a,b), b)") ==>|"🔵 5. Calls"| first
      subgraph firstThenSecond[" 🔵 6. firstThenSecond(…) internal calls..."]
-        first("🟡 7. Calls first(…) = `✚ addFunc(a,b)`")==>|"🔵 8. Returns result into `second` function's `a`"| second
-        second("🔴 9. Calls second(…) = `❌ multiplyFunc(a,b)`") ==>|"🔵 10. Returns result"| resultInner
+        first("🟡 7. Calls `first`(…) = `✚ addFunc(a,b)`")==>|"🔵 8. Returns result into `second` function's `a`"| second
+        second("🔴 9. Calls `second`(…) = `❌ multiplyFunc(a,b)`") ==>|"🔵 10. Returns result"| resultInner
         
         %% Show where return to firstThenSecond
         %% second("calls second(…) = `❌ multiplyFunc(a,b)`") ==>|🔵 6. returns result| D
