@@ -97,7 +97,7 @@
     firstThenSecondFunc -...->|🔴 9. Calls `second`| multiplyFn
     
     subgraph result["🔵 4. variable `result` = firstThenSecond(first= addFunc, second= multiplyFunc, a= 10, b= 2)"]
-       resultInner["Result of firstThenSecond(…)"] --> E
+       resultInner["Result of firstThenSecond(…)"] ==> E
        D("⏩ firstThenSecond(…)_= second(first(a,b), b)`") ==>|🔵 5. calls| first
        subgraph firstThenSecond[" 🔵 6. firstThenSecond(…) calls..."]
           first("🟡 7. calls first(…) = `✚ addFunc(a,b)`")==>|🔵 8. returns result into `second` function's `a` | second
