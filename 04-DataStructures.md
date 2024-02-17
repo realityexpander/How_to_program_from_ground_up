@@ -25,8 +25,8 @@
 ### Number (Integer or Floating Point)
   - Positive integers are represented as unsigned non-floating point numbers, ie: only positive whole numbers.
     - 1 byte (8 bits) can represent unsigned 0 to 255 (known as a `byte`, `octet`, `char`, `unsigned char` or `unsigned byte`)
-    - 2 bytes (16 bits) can represent unsigned 0 to 65535 (known as a "short", sometimes "word")
-    - 4 bytes (32 bits) can represent unsigned 0 to 4294967295 (known as an "int", sometimes "long")
+    - 2 bytes (16 bits) can represent unsigned 0 to 65535 (known as a "short", sometimes "word" as number of bytes can vary by CPU architecture.)
+    - 4 bytes (32 bits) can represent unsigned 0 to 4294967295 (known as an `int`, sometimes a `long`)
   - Negative integers are stored as "signed" binary using "2's Complement" representation.
     - They are "signed" because they can represent both positive and negative numbers ("negative sign" or "positive sign".)  
     - 2's Complement is the most common way to represent negative numbers in binary.

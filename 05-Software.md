@@ -49,6 +49,8 @@
     > My conspiracy theory of the origin of Pac-Man...
     >
     >  [<img src="assets/pacman_bytes.png" width="150">](./assets/pacman_bytes.png) ⬅  ︎🅿🅐🅒-🅼🅐🅝 eating 1 byte.
+    > 
+    > 4 bits are called a "nibble" and can represent 16 different values (0-15).  
 
   - ### Hexadecimal Counting <a name="hexadecimal-counting"></a>
   - ###### hexadecimal-counting
@@ -187,7 +189,8 @@
    - ### BIG IDEA — The ALU is the part of the CPU that performs the basic arithmetic and logical operations in one place.
    
    - The ALU is the part of the CPU that performs the basic arithmetic and logical operations.
-   - The ALU is used to perform the `ADD` and `SUBTRACT` and other math operations.
+   - The ALU is used to perform the `ADD` and `SUBTRACT` and other math operations, results are stored in the 
+     "Accumulator (ACC)" register and "flags" register are set.
      - Stores the result of the operation in the "Accumulator" register.
      - Sets the `carry` flag if the result of the operation had to "carry" a bit.
      - Sets the `negative` flag if the result of the operation was negative.
