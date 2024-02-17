@@ -330,11 +330,11 @@
       1 pointer to its right node ⇨🟣
     "))) -->|left pointer points to| N1((("
       Another Node
-      🟣
+      🔴
       ⇦⇨"))) 
     N -->|right pointer points to| N2((("
       Another Node
-      🔴
+      🟣
       ⇦⇨")))
     
     X[Example of a Node for a Binary Tree]
