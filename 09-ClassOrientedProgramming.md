@@ -122,7 +122,7 @@
       
          subgraph catClass["Class “Cat” 🐱"]
             catClassMakeSoundMethodFunctionPointer{{"
-               method makeSound():
+               method makeSound() @79B6ECA2:
                { println(“Meow”) }
                😺"}}
             catClassAgeInt["
@@ -221,7 +221,7 @@
 ## Interfaces <a name="interfaces"></a>
 ###### interfaces
   - ### BIG IDEA — Can we swap out different implementations of the same named methods to allow more flexible code?
-     - ### Like plugging in different electrical appliances to the same electrical outlet, the outlet and plug are the `interface` and the appliances are the different implementations.
+     - ### Similar to the reason we dont have appliances directly wired to our houses, allowing the ability to plug in different electrical appliances to the same kind of electrical outlet, the "outlet" and "plug" configuration are the `interface` and the appliances are the different `implement`-ations.
  
     > [<img src="assets/plugs_and_adapters.png" width="200"/>](assets/plugs_and_adapters.png)
     
