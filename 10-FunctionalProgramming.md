@@ -79,7 +79,6 @@
  
  subgraph main["func main()"]
     
-
     X["Variable `addFunc` = @F8BC76FC"] ==>|🟠 START HERE: 1. Stores pointer to function| addFn{{" func add(…) @F8BC76FC =
     ✚ { x,y -> return x+y }
     ⌺"}}
