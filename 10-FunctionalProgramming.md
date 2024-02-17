@@ -49,28 +49,28 @@
 
 
 ```mermaid
-    flowchart TB
-    
-    note["`a Directed Acyclic Graph (DAG) represents the function call chain for the example program.`"]
-    
-    start((("🟠 1. Start here"))) ==> Z
-    
-    X[" `first` points to `add` function "] ==>|🔵 3. Calls function with x= 10, y= 2| addFn{{" func add(…) @F8BC76FC =
-           ✚ { x,y -> return x+y } 
-           ⌺"}}
-    Y[" `second` points to `multiplyFunc`"] ==>|🔵 5. Calls function with x=12, y=2| multiplyFn{{" func multiply(…) @48C6CE7B = 
-                ❌ { x,y -> return x*y }
-                     ⌺"}}
-    Z["val x = firstThenSecond(addFunc, multiplyFunc, 10, 2)"] ==>|🔵 2. Calls function with params| firstThenSecondFunc{{" func firstThenSecond(…) @A8C6CE7B =
-                 ⏩ { first, second, a, b -> second(first(a, b), b) }
+flowchart TB
+
+note["`a Directed Acyclic Graph (DAG) represents the function call chain for the example program.`"]
+
+start((("🟠 1. Start here"))) ==> Z
+
+X[" `first` points to `add` function "] ==>|🔵 3. Calls function with x= 10, y= 2| addFn{{" func add(…) @F8BC76FC =
+       ✚ { x,y -> return x+y } 
+       ⌺"}}
+Y[" `second` points to `multiplyFunc`"] ==>|🔵 5. Calls function with x=12, y=2| multiplyFn{{" func multiply(…) @48C6CE7B = 
+            ❌ { x,y -> return x*y }
                  ⌺"}}
-    
-    firstThenSecondFunc -.-> X
-    firstThenSecondFunc -.-> Y
-    addFn ==>|🔵 4. returns result ❪12❫ into `second`
-              function's `a` parameter | firstThenSecondFunc
-    multiplyFn ==>|🔵 6. returns result ❪24❫| firstThenSecondFunc
-    firstThenSecondFunc ==>|🔵 7. returns result ❪24❫| Z
+Z["val x = firstThenSecond(addFunc, multiplyFunc, 10, 2)"] ==>|🔵 2. Calls function with params| firstThenSecondFunc{{" func firstThenSecond(…) @A8C6CE7B =
+             ⏩ { first, second, a, b -> second(first(a, b), b) }
+             ⌺"}}
+
+firstThenSecondFunc -.-> X
+firstThenSecondFunc -.-> Y
+addFn ==>|🔵 4. returns result ❪12❫ into `second`
+          function's `a` parameter | firstThenSecondFunc
+multiplyFn ==>|🔵 6. returns result ❪24❫| firstThenSecondFunc
+firstThenSecondFunc ==>|🔵 7. returns result ❪24❫| Z
 
 ```
 
