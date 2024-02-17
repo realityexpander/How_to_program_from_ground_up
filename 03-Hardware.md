@@ -261,6 +261,8 @@
         >   - https://www.youtube.com/watch?v=F5P5SAlEbo4
         > - Intel: The Making of a Chip with 22nm/3D Transistors | Intel
         >   - https://www.youtube.com/watch?v=d9SWNLZvA8g
+        > - Processing Integrated Circuits at Bell Labs (1979) - AT&T Archives
+        >   - https://www.youtube.com/watch?v=uLReXtpNlbw
 
     > - Robert Noyce, inventor of the first monolithic IC holding a photographic layer for an Integrated Circuit.
     > 
