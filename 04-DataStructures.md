@@ -1,5 +1,5 @@
 # Data Structures
-  - ### BIG IDEA — It's easier for humans to deal with names of structures that represent data in memory than hex code addresses.
+  - ### BIG IDEA — It's easier for humans to deal with names of ways to lay out representations of data in memory ("structures") tha than just hex code addresses.
 
     > ## "How something is arranged is 80 IQ points of the problem."
     > — Alan Kay
