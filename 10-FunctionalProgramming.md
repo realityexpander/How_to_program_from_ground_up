@@ -51,7 +51,7 @@
   - ###### sideEffectsExample
   ```Kotlin
   fun main() {
-     var x = 0 // <-- a variable that will be "affected" or "mutated" by the lambda.
+     var x = 0 // <-- a variable that will be "side-effected" or "mutated" by the lambda.
      val add = { a: Int, b: Int ->
            val result =  a + b + x
            x += a  // <-- Create a "side effect" by changing the value of `x` outside the lambda.
