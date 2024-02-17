@@ -121,8 +121,9 @@ The guide is a reference and follow along guide for my video series on YouTube:
   - [Coroutines are Much Faster Than Threads](12-ParallelProcessing.md#coroutines-vs-threads)
 
 ## Introduction
-  - How to guide for budding software engineers who need a primer overview of software development concepts 
-    from the fundamentals of physical logic representation to high-level programming languages.
+  - How to guide for anyone interested in software engineering who needs an overview of techniques and concepts 
+    used, from the fundamentals of physical logic representation to high-level programming languages.
+  
   - ### The goal is to have you:
   - Understand more the `why` and `how` of programming, not just the `what` and `where`.
     - This is my curated list of information to take you on a realistic and grounded journey of understanding
