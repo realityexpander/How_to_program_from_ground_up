@@ -368,7 +368,7 @@
 
 ## The Configurable Computer <a name="the-configurable-computer"></a>
 ###### the-configurable-computer
-  - ### BIG IDEA — Instead of putting all the functions for a task into a single computer, define for a standardized interface to connect different devices to perform a task.  
+  - ### BIG IDEA — Instead of hard-wiring all the devices for a computer, define a standardized interface to allow plugging-in lots of different devices to perform a specialized tasks.  
     
   - By arranging the basic electronic components in particular patterns to achieve a specific narrow specialized task,
     like storing data on some medium, measuring sensors, controlling a motor, displaying an image, etc.
