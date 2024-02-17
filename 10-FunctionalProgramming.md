@@ -47,6 +47,40 @@
     - It's all just functions!
 - Examples of functional languages are "Lisp", "Clojure" and "Javascript" and "Kotlin"
 
+- Example of Functional style (Kotlin):
+    - ###### functionalExample
+  ```Kotlin
+  fun main() {
+     val addFunc = { x: Int, y: Int -> x + y }  // <-- a lambda that takes 2 integers and returns the sum of the integers.
+     val multiplyFunc = { x: Int, y: Int -> x * y }  // <-- a lambda that takes 2 integers and returns the product of the integers.
+     val firstThenSecond = {  // <-- a lambda that takes 4 arguments, 2 functions and 2 integers, and returns the result of the 2 functions. 
+         first: (Int, Int) -> Int, // <-- 🟡 a lambda that takes 2 integers and returns an integer, it's executed first.
+         second: (Int, Int) -> Int,  // <-- 🔴 a lambda that takes 2 integers and returns an integer, it's executed second.
+         a: Int, b: Int -> 
+            second(first(a, b), b)  // <-- calls the `first` lambda with the 2 integers (a & b), 
+                                    //     then calls the `second` lambda with the result of `first()` and the 2nd integer (b)
+     }              
+     
+     val result = firstThenSecond(addFunc, multiplyFunc, 10, 2) // <-- 🟠 calls the lambda with the 2 functions and 2 integers 
+                                                        //     using the "first class citizen" variables that each 
+                                                        //     contain a function as a value (also called a lambda.)
+     println(result) // result will be 24
+     
+     val resultUsingAnonymousFunctions = firstThenSecond(  // <-- calls the `firstThenSecond` lambda with the 2 "anonymous functions" and 2 integers.
+           { a, b -> a + b },  // <-- an "anonymous function" that takes 2 integers and returns the sum of the integers.
+           { a, b -> a * b },  // <-- an "anonymous function" that takes 2 integers and returns the product of the integers.
+           10, 2
+        )
+     println(resultUsingAnonymousFunctions) // result will be 24 
+  }
+  
+  main()
+    
+  // Output:Add 
+  // 24
+  // 24
+  ```
+  > Live Code Example: [Functional Example](src/main/kotlin/functionalExample.kt)
 
 ```mermaid
 flowchart TB
@@ -55,22 +89,25 @@ note["`a Directed Acyclic Graph (DAG) represents the function call chain for the
 
 start((("🟠 1. Start here"))) ==> Z
 
-X[" `first` points to `add` function "] ==>|"🔵 3. Calls function with x= 10, y= 2"| addFn{{" func add(…) @F8BC76FC =
-       ✚ { x,y -> return x+y } 
-       ⌺"}}
-Y[" `second` points to `multiplyFunc`"] ==>|"🔵 5. Calls function with x=12, y=2"| multiplyFn{{" func multiply(…) @48C6CE7B = 
-            ❌ { x,y -> return x*y }
-                 ⌺"}}
-Z["val x = firstThenSecond(addFunc, multiplyFunc, 10, 2)"] ==>|"🔵 2. Calls function with params"| firstThenSecondFunc{{" func firstThenSecond(…) @A8C6CE7B =
-             ⏩ { first, second, a, b -> second(first(a, b), b) }
-             ⌺"}}
+X[" `first` points to `add` function "] ==>|"🟡 3. Calls function with x= 10, y= 2"| addFn{{" 
+   func add(…) @F8BC76FC =
+   ✚ { x,y -> return x+y } 
+   ⌺"}}
+Y[" `second` points to `multiplyFunc`"] ==>|"🔴 5. Calls function with x=12, y=2"| multiplyFn{{" 
+   func multiply(…) @48C6CE7B = 
+   ❌ { x,y -> return x*y }
+   ⌺"}}
+Z["val result = firstThenSecond(addFunc, multiplyFunc, 10, 2)"] ==>|"🔵 2. Calls function with params"| firstThenSecondFunc{{" 
+   func firstThenSecond(…) @A8C6CE7B =
+   ⏩ { first, second, a, b -> second(first(a, b), b) }
+   ⌺"}}
 
-firstThenSecondFunc -.-> X
-firstThenSecondFunc -.-> Y
 addFn ==>|"🔵 4. returns result ❪12❫ into `second`
           function's `a` parameter"| firstThenSecondFunc
 multiplyFn ==>|"🔵 6. returns result ❪24❫"| firstThenSecondFunc
 firstThenSecondFunc ==>|"🔵 7. returns result ❪24❫"| Z
+firstThenSecondFunc -.-> X
+firstThenSecondFunc -.-> Y
 
 ```
 
@@ -116,40 +153,6 @@ flowchart BT
  G("🖥️ main()")
  
 ```
-- Example of Functional style (Kotlin):
-  - ###### functionalExample
-  ```Kotlin
-  fun main() {
-     val addFunc = { x: Int, y: Int -> x + y }  // <-- a lambda that takes 2 integers and returns the sum of the integers.
-     val multiplyFunc = { x: Int, y: Int -> x * y }  // <-- a lambda that takes 2 integers and returns the product of the integers.
-     val firstThenSecond = {  // <-- a lambda that takes 4 arguments, 2 functions and 2 integers, and returns the result of the 2 functions. 
-         first: (Int, Int) -> Int, // <-- a lambda that takes 2 integers and returns an integer, it's executed first.
-         second: (Int, Int) -> Int,  // <-- a lambda that takes 2 integers and returns an integer, it's executed second.
-         a: Int, b: Int -> 
-            second(first(a, b), b)  // <-- calls the `first` lambda with the 2 integers (a & b), 
-                                    //     then calls the `second` lambda with the result of `first()` and the 2nd integer (b)
-     }              
-     
-     val result = firstThenSecond(addFunc, multiplyFunc, 10, 2) // <-- calls the lambda with the 2 functions and 2 integers 
-                                                        //     using the "first class citizen" variables that each 
-                                                        //     contain a function as a value (also called a lambda.)
-     println(result) // result will be 24
-     
-     val resultUsingAnonymousFunctions = firstThenSecond(  // <-- calls the `firstThenSecond` lambda with the 2 "anonymous functions" and 2 integers.
-           { a, b -> a + b },  // <-- an "anonymous function" that takes 2 integers and returns the sum of the integers.
-           { a, b -> a * b },  // <-- an "anonymous function" that takes 2 integers and returns the product of the integers.
-           10, 2
-        )
-     println(resultUsingAnonymousFunctions) // result will be 24 
-  }
-  
-  main()
-    
-  // Output:Add 
-  // 24
-  // 24
-  ```
-  > Live Code Example: [Functional Example](src/main/kotlin/functionalExample.kt)
 
   > ### Side Quest on "Declarative" Programming
   > - Notice that many of the diagrams in this document are written in a language that uses pure "declarative" style programming.
