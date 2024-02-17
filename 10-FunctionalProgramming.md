@@ -47,6 +47,12 @@
     - It's all just functions!
 - Examples of functional languages are "Lisp", "Clojure" and "Javascript" and "Kotlin"
 
+```mermaid
+flowchart TB
+
+    note["`a Directed Acyclic Graph (DAG) represents the function call chain for the example program.`"]
+```
+
 
 ```mermaid
 flowchart TB
