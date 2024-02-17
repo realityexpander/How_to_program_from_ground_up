@@ -93,16 +93,16 @@
 %%    first -..->|`first` points to function| addFn
 %%    second -...->|`second` points to function| multiplyFn
     D -.->|`firstThenSecond` points to function| firstThenSecondFunc
-    firstThenSecondFunc -...->|Calls `first`| addFn
-    firstThenSecondFunc -...->|Calls `second`| multiplyFn
+    firstThenSecondFunc -...->|🟡 7. Calls `first`| addFn
+    firstThenSecondFunc -...->|🔴 9. Calls `second`| multiplyFn
     
     subgraph result["🔵 4. variable `result` = firstThenSecond(first= addFunc, second= multiplyFunc, a= 10, b= 2)"]
        resultInner["Result of firstThenSecond(…)"] --> E
        D("⏩ firstThenSecond(…)_= second(first(a,b), b)`") ==>|🔵 5. calls| first
        subgraph firstThenSecond[" 🔵 6. firstThenSecond(…) calls..."]
-          first("🔵 7. calls first(…) = `✚ addFunc(a,b)`")==>|🔵 8. returns result into `second` function's `a` | second
+          first("🟡 7. calls first(…) = `✚ addFunc(a,b)`")==>|🔵 8. returns result into `second` function's `a` | second
 %%          second("calls second(…) = `❌ multiplyFunc(a,b)`") ==>|🔵 6. returns result| D
-          second("🔵 9. calls second(…) = `❌ multiplyFunc(a,b)`") ==>|🔵 10. returns result| resultInner
+          second("🔴 9. calls second(…) = `❌ multiplyFunc(a,b)`") ==>|🔵 10. returns result| resultInner
           
        end
     end
