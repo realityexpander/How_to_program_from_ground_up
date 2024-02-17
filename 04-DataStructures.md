@@ -7,16 +7,16 @@
   - "Data structures" is the overall name for the various named concepts for common ways humans have invented to 
     represent data, and often predate modern computing.
   - They represent real world items and concepts in a way that a computer can be programmed to represent and solve a problem.
-  - For example, a "list" is a common data structure for a series of "items" in a specific order.
+  - For example, a "list" is a common data structure for a series of "items" (or "elements") usually in a specific order.
     - A list can be used to represent a "orders to be shipped," "to-do items" or a "names and addresses to send a letter to."
     - Each item in the list is called an "element" or "item" or "member" of the list.
     - Items in lists can be accessed by their "index" which is a number that represents the position of the item in
       the list count from the beginning of the list.
   
-  > - 100+ Computer Science Concepts Explained in less than 15 minutes
-  >   - https://www.youtube.com/watch?v=-uleG_Vecis
-  > - 10 Math Concepts for Programmers
-  >   - https://www.youtube.com/watch?v=bOCHTHkBoAs
+    > - 100+ Computer Science Concepts Explained in less than 15 minutes
+    >   - https://www.youtube.com/watch?v=-uleG_Vecis
+    > - 10 Math Concepts for Programmers
+    >   - https://www.youtube.com/watch?v=bOCHTHkBoAs
 
 ## Numbers or Individual Characters? Or something else? <a name="numbers"></a>
 ###### numbers
