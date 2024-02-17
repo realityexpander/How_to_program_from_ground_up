@@ -229,6 +229,7 @@
   - The values are usually accessed by a "head" and "tail" which are numbers that represent the position of the first
     and last value in the queue as a memory address or an index.
   - Efficient for adding and removing items from the list, but not efficient for accessing items in the list
+    
     ![Another Queue Image](assets/queue.png)
     > - Queue Data Structure Animation
     >   - https://www.youtube.com/watch?v=ojGf3SH7n48
