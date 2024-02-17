@@ -286,5 +286,13 @@
     ```
     > Live Code Example: [BOOP example](src/main/kotlin/boopExample.kt)
 
+## More On Software Design <a name="more-on-software-design"></a>
+  - Software design is a human activity and reveals the errrors in conceptualizing our representation of the problem.
+  - There are common patterns to the errors, which lead to problems implementing the solution, and maintaining it easily.
+    > - A system is not a tree - Kevlin Henney
+    >   - https://www.youtube.com/watch?v=ARkLVvtxUZI
+    > - The Error of Our Ways • Kevlin Henney • GOTO 2016
+    >   - https://www.youtube.com/watch?v=IiGXq3yY70o
+
 - [Continue Reading - Parallel Processing](12-ParallelProcessing.md)
 - [Back to Index](README.md)

@@ -106,7 +106,7 @@ The guide is a reference and follow along guide for my video series on YouTube:
   - [Design Patterns](09-ClassOrientedProgramming.md#design-patterns)
 - [Functional Programming](10-FunctionalProgramming.md) 1950s-Present
   - Can we structure our code in a way to have less bugs and be easier to understand?
-  - [Immutability & No Side Effects](10-FunctionalProgramming#immutability-no-side-effects)
+  - [Immutability & No Side Effects](10-FunctionalProgramming.md#immutability-no-side-effects)
   - [Functional Programming Style](10-FunctionalProgramming.md#functionalExample)
 - [Back-to-Object Oriented Programming](11-BackToObjectOrientedProgramming.md) 1970s-Present
   - Can we re-visit the original principles of OOP to make softare easier to understand and maintain?

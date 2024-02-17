@@ -106,6 +106,10 @@
      >   - https://www.youtube.com/watch?v=fQhSqoNm-qE
      > - Magnetic Core Memory
      >   - https://www.youtube.com/watch?v=paQ3zIsz1-8
+     > - How do magnets affect physical objects?
+     >   - Making copper anti-gravity tube - Huge neodymium magnet vs copper tube - Lenz’s Law
+     >   - https://www.youtube.com/watch?v=TRihrPnLt78
+
 
 ## The Raucous Relay — 1835 to 1920's <a name="the-raucous-relay"></a>
 ###### the-raucous-relay
