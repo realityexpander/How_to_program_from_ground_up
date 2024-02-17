@@ -263,6 +263,10 @@
         >   - https://www.youtube.com/watch?v=d9SWNLZvA8g
         > - Processing Integrated Circuits at Bell Labs (1979) - AT&T Archives
         >   - https://www.youtube.com/watch?v=uLReXtpNlbw
+        > - The Impact of Integrated Circuits, lecture by Robert Noyce
+        >   - https://www.youtube.com/watch?v=AfxUq_QrpyY
+        > - Processing Integrated Circuits at Bell Labs (1979) - AT&T Archives
+        >   - https://www.youtube.com/watch?v=uLReXtpNlbw
 
     > - Robert Noyce, inventor of the first monolithic IC holding a photographic layer for an Integrated Circuit.
     > 
