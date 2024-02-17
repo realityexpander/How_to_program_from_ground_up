@@ -445,7 +445,7 @@
         D Node
         🟣
         ⇦⇨")))
-    A -->|1 pointer points to| E((("
+    A --->|1 pointer points to| E((("
         E Node
         🟣
         ⇦⇨")))
@@ -453,25 +453,28 @@
         C Node
         🟣
         ⇦⇨")))
-    E -->|1 pointer points to| B((("
+    E --> B((("
         B Node
         🟣
         ⇦⇨")))
     F((("
       F Node
       🟣
-      ⇦⇨"))) -->|1 pointer points to| C
+      ⇦⇨"))) --> C
     G((("
         G Node
         🟣
-        ⇦⇨"))) -->|1 pointer points to| B
-    F -->|1 pointer points to| D
+        ⇦⇨"))) --> B
+    F ---> D
     H((("
         H Node
         🟣
-        ⇦⇨"))) -->|1 pointer points to| B
-    H -->|1 pointer points to| C
-    B -->|1 pointer points to| C
+        ⇦⇨"))) ---> B
+    H --> C
+    B --> C
+    B --> G
+    H --> G
+    F --> C
     
     X[Example of a Node for a Network Graph]
 
