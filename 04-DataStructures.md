@@ -320,8 +320,9 @@
   - Special Case of a tree is a "Binary Tree" where each node only points to only two and only 2 nodes in the tree.
   - Binary Trees are often used to represent sorted lists, where each node is greater than the node to the left, 
     and less than the node to the right.
+  - Pointing to a null node is called a "leaf" node, and is the end of the tree.
 
-  - ```mermaid
+    ```mermaid
     graph TD
     N((("
       A ⚪️ Node contains: 
