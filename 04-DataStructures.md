@@ -55,7 +55,7 @@
   - ASCII is a 1 byte (8 bit) representation of the most common letters and symbols.
   - Unicode is a 1 or more bytes representation of all the letters and symbols in all the world's languages.
 
-### Need to Represent Something else?
+### Need To Represent Something else?
   - ### BIG IDEA - Bits can represent anything!
 
     > Humans live in a representation of the world, not the world itself.
@@ -76,7 +76,7 @@
   - `01010101` could represents votes of 8 people, or 8 switch settings, or some kind of status for 8 different sensors.
   - The same eight bits can represent many different things, it's just a matter of how humans want to interpret the meaning of the bits.
 
-# Common Data Structures used in Programming <a name="data-structures"></a>
+# Common Data Structures Used In Programming <a name="data-structures"></a>
 ###### data-structures
   - ### BIG IDEA — Giving names to common ways of representing data in memory makes it easier for people to communicate with each other about what the data represents.
   
@@ -322,11 +322,11 @@
 
   - ```mermaid
     graph TD
-    N((("A Node consists of: 
-    A Value
-    A Left Pointer, A Right Pointer
-    
-     🔴 ⇦ ⚪️ ⇨ 🟣"))) -->|left pointer points to| N1((("Another Node
+    N((("A ⚪️ Node is made of: 
+      A Value,
+      1 pointer to its left node 🔴⇦, 
+      1 pointer to its right node ⇨🟣
+    "))) -->|left pointer points to| N1((("Another Node
                                                       🟣
                                                       ⇦⇨"))) 
     N -->|right pointer points to| N2((("Another Node
