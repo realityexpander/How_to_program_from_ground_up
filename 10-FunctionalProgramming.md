@@ -83,9 +83,9 @@
     X["Variable `addFunc` = @F8BC76FC"] ==>|🟠 START HERE: 1. Stores pointer to function| addFn{{" func add(…) @F8BC76FC =
     ✚ { x,y -> return x+y }
     ⌺"}}
-    Y["Variable `multiplyFunc` = @48C6CE7B"] ==>|🔵 2. Stores pointer to function| multiplyFn{{" func multiply(…) @48C6CE7B = 
-                ❌ { x,y -> return x*y }
-                     ⌺"}}
+%%    Y["Variable `multiplyFunc` = @48C6CE7B"] ==>|🔵 2. Stores pointer to function| multiplyFn{{" func multiply(…) @48C6CE7B = 
+%%                ❌ { x,y -> return x*y }
+%%                     ⌺"}}
 %%    Z["Variable `firstThenSecond` = @A8C6CE7B"] ==>|🔵 3. Stores pointer to function| firstThenSecondFunc{{" func firstThenSecond(…) @A8C6CE7B =
 %%      ⏩ { first, second, a, b -> second(first(a, b), b) }
 %%    ⌺"}}
