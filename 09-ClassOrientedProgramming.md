@@ -65,23 +65,25 @@
          flowchart TB
          
          subgraph catObject["Object “Cat” 🐈 @BFFC882A"]
-              catObjectAgeInt["int age = 3"] 
-              catObjectMakeSoundMethodFunctionPointer{{"method makeSound(): 
-                                                       { println(“Meow”) }
-                                                       😺"}}
+            catObjectAgeInt["int age = 3"] 
+            catObjectMakeSoundMethodFunctionPointer{{"
+                 method makeSound(): 
+                 { println(“Meow”) }
+                 😺"}}
          end
          subgraph catClass["Class “Cat” 🐱"]
             catClassAgeInt["int age"]
-            catClassMakeSoundMethodFunctionPointer{{"method makeSound():
-                                                    { println(“Meow”) }
-                                                    😺"}}
+            catClassMakeSoundMethodFunctionPointer{{"
+               method makeSound():
+               { println(“Meow”) }
+               😺"}}
          end
          catClass -- "
             instantiate = allocate 
             physical memory space for 
             the data defined in the class
             🐱➤➤🐈
-         " --> catObject:::Object
+            " --> catObject:::Object
          
          catObjectAgeInt -- stores value of --> catClassAgeInt
          
@@ -119,12 +121,14 @@
          end
       
          subgraph catClass["Class “Cat” 🐱"]
-            catClassMakeSoundMethodFunctionPointer{{"method makeSound():
-                                                 { println(“Meow”) }
-                                                 😺"}}
-            catClassAgeInt["int age
-                            (value is stored in object)
-                            ⬇︎
+            catClassMakeSoundMethodFunctionPointer{{"
+               method makeSound():
+               { println(“Meow”) }
+               😺"}}
+            catClassAgeInt["
+               int age
+               (value is stored in object)
+               ⬇︎
             "]
          end
          catObjectMakeSoundMethodFunctionPointer -- calls --> catClassMakeSoundMethodFunctionPointer:::Object
@@ -720,19 +724,26 @@
       flowchart TD
          X["The Problem with Multiple Inheritance"]
          Animal["
-           abstract class Animal
-           expects method makeSound()
-         "] -->|inherits| Cat["🐈 Class Cat
+            abstract class Animal
+            expects method makeSound()
+         "] -->|inherits| Cat["
+            🐈 Class Cat
             method makeSound()
-         "] & Dog["🐕 Class Dog
-             method makeSound()
-         "]-->|inherits| Cog???["class Cog(???) extends Cat & Dog"]
+         "] & Dog["
+            🐕 Class Dog
+            method makeSound()
+            "]-->|inherits| Cog???["
+               class Cog(???) extends Cat & Dog
+            "]
       
          Cog??? -..-> Y((("
-         When “Cog” makes a sound, 
-         (ie: method “makeSound()” is called on object Cog) 
-         Does it “Meow” or “Bark?”
-                  🐈+🐕=⚙️???
+            When 
+            “Cog” makes a sound, 
+            (ie: method “makeSound()” is 
+             called on object Cog) 
+            
+            Does it “Meow” or “Bark?”
+            🐈+🐕 = ⚙️(???)
          "))) 
       ```
   - Example of an attempt to use "Multiple Inheritance" in C++:
