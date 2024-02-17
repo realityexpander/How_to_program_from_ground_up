@@ -80,13 +80,13 @@
  subgraph main["func main()"]
     
 
-    X["variable `addFunc` = @F8BC76FC"] ==>|🟠 START HERE: 1. Stores pointer to function| addFn{{" func add(…) @F8BC76FC =
+    X["Variable `addFunc` = @F8BC76FC"] ==>|🟠 START HERE: 1. Stores pointer to function| addFn{{" func add(…) @F8BC76FC =
     ✚ { x,y -> return x+y }
     ⌺"}}
-    Y["variable `multiplyFunc` = @48C6CE7B"] ==>|🔵 2. Stores pointer to function| multiplyFn{{" func multiply(…) @48C6CE7B = 
+    Y["Variable `multiplyFunc` = @48C6CE7B"] ==>|🔵 2. Stores pointer to function| multiplyFn{{" func multiply(…) @48C6CE7B = 
                 ❌ { x,y -> return x*y }
                      ⌺"}}
-    Z["variable `firstThenSecond` = @A8C6CE7B"] ==>|🔵 3. Stores pointer to function| firstThenSecondFunc{{" func firstThenSecond(…) @A8C6CE7B =
+    Z["Variable `firstThenSecond` = @A8C6CE7B"] ==>|🔵 3. Stores pointer to function| firstThenSecondFunc{{" func firstThenSecond(…) @A8C6CE7B =
       ⏩ { first, second, a, b -> second(first(a, b), b) }
     ⌺"}}
     
@@ -100,9 +100,9 @@
        resultInner["Result of firstThenSecond(…)"] ==> E
        D("⏩ firstThenSecond(…)_= second(first(a,b), b)`") ==>|🔵 5. Calls| first
        subgraph firstThenSecond[" 🔵 6. firstThenSecond(…) internal calls..."]
-          first("🟡 7. calls first(…) = `✚ addFunc(a,b)`")==>|🔵 8. Returns result into `second` function's `a` | second
+          first("🟡 7. Calls first(…) = `✚ addFunc(a,b)`")==>|🔵 8. Returns result into `second` function's `a` | second
 %%          second("calls second(…) = `❌ multiplyFunc(a,b)`") ==>|🔵 6. returns result| D
-          second("🔴 9. calls second(…) = `❌ multiplyFunc(a,b)`") ==>|🔵 10. Returns result| resultInner
+          second("🔴 9. Calls second(…) = `❌ multiplyFunc(a,b)`") ==>|🔵 10. Returns result| resultInner
           
        end
     end
