@@ -56,7 +56,7 @@ flowchart TB
 
     X["first points to add function "] ==>| 3. Calls function with x= 10, y= 2| addFn[" func add(…) @F8BC76FC =
                ✚ { x,y -> return x+y }
-        "]
+        ⌺"]
 ```
 
 
