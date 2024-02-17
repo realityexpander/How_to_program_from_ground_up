@@ -83,6 +83,7 @@
   ```
   > Live Code Example: [Functional Example](src/main/kotlin/functionalExample.kt)
 
+### Functio Evaluation Sequence <a name="functional-call-chain"></a>
 ```mermaid
 flowchart TB
 
@@ -111,9 +112,10 @@ firstThenSecondFunc -.-> X
 firstThenSecondFunc -.-> Y
 
 ```
+### How Flow of Control Works in the Functional Example 
 
 ```mermaid
-flowchart BT
+flowchart LR
  subgraph main["func main()"]
     
    X["val `addFunc` = @F8BC76FC"] ==>|"🟠 START HERE: 1. Stores pointer to function"| addFn{{" 
@@ -155,12 +157,13 @@ flowchart BT
  
 ```
 
-  > ### Side Quest on "Declarative" Programming
+  > ## Side Quest on "Declarative" Programming
   > - Notice that many of the diagrams in this document are written in a language that uses pure "declarative" style programming.
-  >- The charts are using a declarative language called "Mermaid" to create many kinds of diagrams using only text.
-  >- Mermaid is a "Domain Specific Language" (DSL) that is used to create diagrams in a "declarative" style.
+  > - The charts are using a declarative language called "Mermaid" to create many kinds of diagrams using only text.
+  > - This allows for more flexible and maintainable diagrams that can be created and maintained in a text file opposed to using a graphics editor.
+  > - Mermaid is a "Domain Specific Language" (DSL) that is used to create diagrams in a "declarative" style.
   >   - [https://mermaid.js.org/](https://mermaid.js.org/intro/)
-  > - More on Declarative Programming:
+  >> ### More on Declarative Programming:
   >> - 'Declarative Thinking, Declarative Practice' - Kevlin Henney [ ACCU 2016 ]
   >>   - https://www.youtube.com/watch?v=nrVIlhtoE3Y 
   >> - HTML IS a Programming Language (Imperative vs Declarative) - Computerphile
