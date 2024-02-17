@@ -66,15 +66,15 @@
          
          subgraph catObject["Object “Cat” 🐈 @BFFC882A"]
               catObjectAgeInt["int age = 3"] 
-              catObjectMakeSoundMethodFunctionPointer{"method makeSound(): 
+              catObjectMakeSoundMethodFunctionPointer{{"method makeSound(): 
                                                        { println(“Meow”) }
-                                                       😺"}
+                                                       😺"}}
          end
-         subgraph catClass["Template class “Cat” 🐱"]
+         subgraph catClass["Class “Cat” 🐱"]
             catClassAgeInt["int age"]
-            catClassMakeSoundMethodFunctionPointer{"method makeSound():
+            catClassMakeSoundMethodFunctionPointer{{"method makeSound():
                                                     { println(“Meow”) }
-                                                    😺"}
+                                                    😺"}}
          end
          catClass -- "
             instantiate = allocate 
@@ -100,39 +100,35 @@
       ```mermaid
          flowchart TB
       
-         label["Sophisticated Diagram of 
-                Class and an Object Instance
-                🐱➤➤🐈
-         "]   
-          
          catClass -- "
-                creates 
-             (or “instantiates”)
+            creates 
+            (or “instantiates”)
             a “Cat” object in memory
             using the class ‟Cat”
             as a template
             🐱➤➤🐈
-         " --> catObject:::Object
+            " --> catObject:::Object
          subgraph catObject["Object “Cat” 🐈 @BFFC882A"]
-              catObjectMakeSoundMethodFunctionPointer{"method makeSound(): 
-                                                      calls function defined 
-                                                      in class
-                                                      “Cat” 
-                                                      🐱
-         "}
-              catObjectAgeInt["int age = 3"] 
+            catObjectMakeSoundMethodFunctionPointer{{"
+               method makeSound(): 
+               calls function defined 
+               in class “Cat” 
+               🐱
+            "}}
+            catObjectAgeInt["int age = 3"] 
          end
       
          subgraph catClass["Class “Cat” 🐱"]
-            catClassMakeSoundMethodFunctionPointer{"method makeSound():
+            catClassMakeSoundMethodFunctionPointer{{"method makeSound():
                                                  { println(“Meow”) }
-                                                 😺"}
+                                                 😺"}}
             catClassAgeInt["int age
                             (value is stored in object)
                             ⬇︎
             "]
          end
          catObjectMakeSoundMethodFunctionPointer -- calls --> catClassMakeSoundMethodFunctionPointer:::Object
+      
       
          style catClass fill:#444, stroke:#FFF, stroke-width:1px, color:#FFF, stroke-dasharray: 5 5
          style catClassAgeInt fill:#444, stroke:#FFF, stroke-width:1px, color:#FFF, stroke-dasharray: 5 5
@@ -625,31 +621,32 @@
     ExcelFileObjectAgeInt -- stores value of --> ExcelFileClassAgeInt
     subgraph ExcelFileObject["[object instance ExcelFile @19FCA68D]"]
         ExcelFileObjectAgeInt["int content = 3"]
-        ExcelFileObjectPrintContentMethodFunctionPointer{"method PrintContent(): 
-                                           calls 
-                                     function @C62F3842
-                                     in class ExcelFile
-                                     🖨️
-                                     "}
+        ExcelFileObjectPrintContentMethodFunctionPointer{{"method PrintContent(): 
+           calls 
+           function @C62F3842
+           in class ExcelFile
+           🖨️
+           "}}
     end
     subgraph classExcelFile["class ExcelFile extends File"]
         ExcelFileClassAgeInt["int content"]
-        ExcelFileClassPrintContentMethod{"function @C62F3842:  
-                    method PrintContent() =
-                    { print this.content }
-                    🖨️
-                    "}
+        ExcelFileClassPrintContentMethod{{"function @C62F3842:  
+           method PrintContent() =
+           { print this.content }
+           🖨️
+           "}}
     end
     abstractAgeInt -- expects --> ExcelFileClassAgeInt
     abstractPrintContentMethod -- expects --> ExcelFileClassPrintContentMethod:::Object
     ExcelFileClassAgeInt -- implements --> abstractAgeInt:::Abstract
   
-    note["EXPLANATION: 
-          The ExcelFile Object @19FCA68D 
-          is an instance of the ExcelFile class.
-          ExcelFile class is a subclass of the 
-          abstract File class.
-          📁 ➤➤ 🗄️"]
+    note["
+       EXPLANATION: 
+       The ExcelFile Object @19FCA68D 
+       is an instance of the ExcelFile class.
+       ExcelFile class is a subclass of the 
+       abstract File class.
+       📁 ➤➤ 🗄️"]
     
     classExcelFile -- "instantiates 
                        object" --> ExcelFileObject:::Object
@@ -657,10 +654,11 @@
     ExcelFileClassPrintContentMethod -- implements --> abstractPrintContentMethod:::Abstract
     subgraph abstractFile["abstract class File"]
       abstractAgeInt["abstract int content"]
-      abstractPrintContentMethod{"abstract method 
-                               PrintContent()
-                               ⎙
-                               "}
+      abstractPrintContentMethod{{"
+         abstract method 
+         PrintContent()
+         ⎙
+         "}}
     end
   
     classDef Abstract fill:#222, stroke:#0F0, stroke-width:1px, color:#fff, stroke-dasharray: 5 5
