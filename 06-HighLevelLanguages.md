@@ -18,6 +18,15 @@
   - This way of working is generally referred to as "imperative" programming, as the programmer is giving the
     computer the exact set of steps to perform to solve a problem. There is another style of programming called
     "declarative" which we shall discuss later.
+  - The Impact of BASIC (Beginner's All-purpose Symbolic Instruction Code) on the world of programming cannot be 
+    overstated. It was the first language that was easy to learn and use, and was widely adopted by schools and 
+    hobbyists.
+    > - BASIC at 50 (Bill Gates & Paul Allen Cameos)
+    >   - https://www.youtube.com/watch?v=gxo9LVIgOiI
+    > - Birth of BASIC
+    >   - https://www.youtube.com/watch?v=WYPNjSoDrqw
+    > - BASIC: The Famous Programming Language in 100 Seconds
+    >   - https://www.youtube.com/watch?v=SrhcpOWScNM
 
 # Procedural Programming Style (1957-Present) <a name="procedural-programming"></a>
 ###### procedural-programming
