@@ -41,9 +41,13 @@
     > https://www.youtube.com/watch?v=wvJc9CZcvBc
 
   - ### 8 bits are called a "byte" and can represent 256 different values (0-255)
-      - A byte is the smallest unit of memory that can be addressed by that particlar CPU, in all my examples its 8 bits.
+      - A "word" is the smallest unit of memory that can be addressed by a particlar CPU.
+      - When microcomputers were introduced, the common thought was that 16-60 bits were the minimum needed to
+        represent the smallest chunk of data addressable by the CPU.
+      - The term "byte" was popularized during the microcomputer revolution to be in contrast with the "big metal"
+        of the mainframe computers, which used 16-60 bit "words" as the smallest unit of memory.
     > They call it a "byte" because its a play on the word "bite" and it's the smallest amount of memory that
-    > can be "eaten" by the CPU (HAR HAR HARDY HAR Computer people are soooooo funnnnnny!)
+    > can be "eaten" by a microcomputer CPU (HAR HAR HARDY HAR Computer people are soooooo funnnnnny!)
     >
     > My conspiracy theory of the origin of Pac-Man...
     >
