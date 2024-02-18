@@ -255,6 +255,9 @@
     completely dependent on the specific CPU and is usually defined by the manufacturer of the CPU.
   - The complexity of the assembly language is usually directly related to the complexity of the CPU & the number of
     different operations that the CPU can perform in it's "instruction set" of opcodes.
+    
+    > An Introduction to 6502 Assembly and low-level programming
+    > - https://codeburst.io/an-introduction-to-6502-assembly-and-low-level-programming-7c11fa6b9cb9
   
     > How a CPU Works
     >  - https://www.youtube.com/watch?v=cNN_tTXABUA
