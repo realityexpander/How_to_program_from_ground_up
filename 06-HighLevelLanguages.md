@@ -21,7 +21,7 @@
   - The Impact of BASIC (Beginner's All-purpose Symbolic Instruction Code) on the world of programming cannot be 
     overstated. It was the first language that was easy to learn and use, and was widely adopted by schools and 
     hobbyists.
-    > - BASIC at 50 (Bill Gates & Paul Allen Cameos)
+    > - BASIC at 50 (Bill Gates Cameo)
     >   - https://www.youtube.com/watch?v=gxo9LVIgOiI
     > - Birth of BASIC
     >   - https://www.youtube.com/watch?v=WYPNjSoDrqw
