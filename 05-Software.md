@@ -244,7 +244,7 @@
 ###### assembly-language
   - ### BIG IDEA — Make the machine code easier for humans to read and write by using "mnemonics" to represent the opcodes instead of the actual hex values.
   
-  - Assembly Language is a "human-readable" mnemonic representation of the "machine code" that the CPU can executes directly.
+  - Assembly Language is a "human-readable" mnemonic representation of the machine code that the CPU executes directly.
   - The mnemonics are translated into the binary opcodes by another program called an "Assembler."
   - The assembler converts and expands the mnemonics into the specific particular binary opcodes for each
     particular operation and arrangement of operands. It also calculates the memory addresses for the labels and
