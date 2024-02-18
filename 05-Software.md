@@ -256,10 +256,11 @@
   - The complexity of the assembly language is usually directly related to the complexity of the CPU & the number of
     different operations that the CPU can perform in it's "instruction set" of opcodes.
     
-    > An Introduction to 6502 Assembly and low-level programming
-    > - https://codeburst.io/an-introduction-to-6502-assembly-and-low-level-programming-7c11fa6b9cb9
-  
-    > How a CPU Works
+    > - An Introduction to 6502 Assembly and low-level programming
+    >   - https://codeburst.io/an-introduction-to-6502-assembly-and-low-level-programming-7c11fa6b9cb9
+    > - Assembly language vs. machine code — 6502 part 3
+    >   - https://www.youtube.com/watch?v=oO8_2JJV0B4
+    > - How a CPU Works
     >  - https://www.youtube.com/watch?v=cNN_tTXABUA
   
     - ### Common Assembly Language Operations (Mnemonics representing Opcodes) <a name="common-assembly-operations"></a>
