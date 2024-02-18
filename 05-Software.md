@@ -93,7 +93,7 @@
 
   - ### The CPU or MPU (Central-Processing Unit ot Micro-Processor Unit) <a name="the-cpu-mpu"></a>
     - ###### the-cpu-mpu
-    - The Micro-Procession Unit is the "brain" of the computer
+    - The MPU is the part of the computer that executes the instructions in the program.
     - Also called the CPU - Central Processing Unit
 
     >  [<img src="assets/MPU.png" width="450">](assets/MPU.png)
