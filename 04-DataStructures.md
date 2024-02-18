@@ -361,32 +361,34 @@
 
   ## 🚫🔄 Notice: no cycles or loops in the graph 
     ```mermaid
-      graph TD
+      graph TB
       Y([Root Pointer]) -..->|root points to start of tree | A((("node A 
-      value=50
-      ⇦⇨")))
+        value=50
+        ⇦⇨")))
       A -->|left points to | B((("node B
-   value=25
-      ⇦⇨")))
-      A -->|right points to | C((("node C
-   value=75
-      ⇦⇨")))
+        value=25
+        ⇦⇨")))
+      A -->|right points to| C((("node C
+        value=75
+        ⇦⇨")))
       B -->|left points to | D((("node D
-   value=10
-      ⇦⇨")))
-      B -->|right points to | E((("node E
-   value=35
-      ⇦⇨")))
+        value=10
+        ⇦⇨")))
+      B -->|right points to| E((("node E
+        value=35
+        ⇦⇨")))
       C -->|left points to | F((("node F
-   value=60
-      ⇦⇨")))
+        value=60
+        ⇦⇨")))
       C -->|right points to | I>NULL]
       E -->|left points to | H>NULL]
-      E -->|right points to | G1((("node G
-   value=39
-      ⇦⇨")))
-      D -->|left points to | J1>NULL]
-      D -->|right points to | K1>NULL]
+      D -->|left points to | G1((("node G
+        value=5
+        ⇦⇨")))
+  
+      %%      D -->|left points to | J1>NULL]
+            D -->|right points to | K1>NULL]
+      E -->|right points to| P2>NULL]
       F -->|left points to | L1>NULL]
       F -->|right points to | M2>NULL]
       G1 -->|left points to | N2>NULL]
