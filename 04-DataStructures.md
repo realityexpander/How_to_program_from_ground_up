@@ -30,7 +30,7 @@
   - Negative integers are stored as "signed" binary using "2's Complement" representation.
     - They are "signed" because they can represent both positive and negative numbers ("negative sign" or "positive sign".)  
     - 2's Complement is the most common way to represent negative numbers in binary.
-    - 2's Complement is the "complement" of the number (flipping the bits) and then adding 1.
+    - 2's Complement is a simple binary inversion with 1 extra step, or "complement" of the number ("flipping" the bits) and then adding 1.
     - 2's Complement is used to represent negative numbers in binary because it makes the addition and
       subtraction of numbers easier.
       > - Twos complement: Negative numbers in binary
@@ -47,6 +47,7 @@
     - Due to the way floating point numbers are represented, they are not exact! And will have rounding errors!
       > - Why Is This Happening?! Floating Point Approximation!
       >   - https://www.youtube.com/watch?v=2gIxbTn7GSc
+      > - https://eibx.com/interactive-visualization-of-floating-point-ieee-754/ 
       > - https://evanw.github.io/float-toy/ 
       > - https://bartaz.github.io/ieee754-visualization/
       > - https://tools.timodenk.com/ieee-754-floating-point
