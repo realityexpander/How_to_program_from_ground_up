@@ -207,7 +207,7 @@
        > Learn how computers add numbers and build a 4 bit adder circuit
        >  - https://www.youtube.com/watch?v=wvJc9CZcvBc&list=WL
 
-  - ### Control Unit — "The Traffic Light of the CPU" <a name="control-unit"></a>
+  - ### Control Unit — "The Director of the CPU" <a name="control-unit"></a>
     - ###### control-unit
     - ### BIG IDEA — The "Control Unit" is the part of the CPU that controls the "fetch-decode-execute" cycle.
     
