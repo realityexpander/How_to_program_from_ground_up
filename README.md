@@ -9,7 +9,7 @@ that are missing from most programming tutorials and courses. My goal is to give
 why things are the way they are in computing, and how they came to be that way, and the issues and problems that
 arose from things being that way.
 
-I have found that it's far more imporatnt to understand the process that people went through to create the
+I have found that it's far more important to understand the process that people went through to create the
 current solutions than to understand the mechanical details of how the solution work. Many detail about
 disadvantages and limitations is often left out of the discussion, or worse, simply not known or dismissed as
 irrelevant due to ignorance.
