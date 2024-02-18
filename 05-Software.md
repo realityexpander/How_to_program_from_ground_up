@@ -110,7 +110,7 @@
     >  - `ACC` = Accumulator — Results of the last arithmetic or logic operation.
     >  - `X` & `Y` = Registers — Used to store the input operands for output to Accumulator Register (ACC.) via the ALU (Arithmetic Logic Unit.)
 
-  - ### Clock — "The heart beat of the CPU to keep it all in sync" <a name="the-clock"></a>
+  - ### Clock — "The drum beat of the CPU to keep it all in sync" <a name="the-clock"></a>
     - ###### the-clock
     - Clock Circuit — Basically a emits a short pulse of electricity at a regular interval
         - A "pulse" or "tick" of the clock, like flashing a light to the beat.
