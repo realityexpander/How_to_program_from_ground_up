@@ -118,7 +118,9 @@
         - Sometimes the common 555-timer IC chip is used to generate a clock signal.
     - Use to synchronize the operations of the CPU and access to the RAM, ROM, and other parts of the computer.
        > Example Implementation of a clock for a CPU
-       > Astable 555 timer - 8-bit computer clock - part 1
+       > - How Does a 555 Timer Work?
+       >  - https://www.build-electronic-circuits.com/how-does-a-555-timer-work/
+       > - Astable 555 timer - 8-bit computer clock - part 1
        >  - https://www.youtube.com/watch?v=kRlSFm519Bo
    
     - Everything in the computer happens one step at a time, and the clock is the thing that makes the "steps"
