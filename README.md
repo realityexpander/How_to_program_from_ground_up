@@ -14,7 +14,7 @@ current solutions than to understand the mechanical details of how the solution 
 the disadvantages and limitations are often left out technical discussions, or worse, simply not known or dismissed as
 irrelevant due to ignorance.
 
-The guide is a reference and follow along guide for my video series on YouTube: 
+The document is a reference and follow along guide for my video series on YouTube: 
  - [YouTube Series - How to Program From The Bottom Up (with Minimal BS)](https://www.youtube.com/playlist?list=PLzUxWOrVXB4QHsURai1GmmhmqAUVNbfno)
 
 ## Table of Contents
