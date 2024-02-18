@@ -2,8 +2,7 @@
 
 ## Machine Language Code — The Operation Commands for the CPU <a name="machine-code"></a>
 ###### machine-code
-  - ### BIG IDEA - Logic gates can be built up to create a "general-purpose" machine that can execute easily changeable 
-    programs called software instead of discrete physical components. 
+  - ### BIG IDEA - Logic gates can be built up to create a "general-purpose" machine that can execute easily changeable programs called software instead of discrete physical components. 
   
   - The software can be changed, at any time, to change the behavior of the machine instead of physically creating a 
     new machine for that specific task.
