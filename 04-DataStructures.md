@@ -146,7 +146,7 @@
     - 0x00000000: 0x00  // 0x00000000 is the address, 0x00000004 is the value of this pointer (little Endian)
     - 0x00000001: 0x00  
     - 0x00000002: 0x00
-    - 0x00000002: 0x04  // This is a pointer's value is 0x00000004, so it's "pointing" to address 0x00000004
+    - 0x00000003: 0x04  // This is a pointer's value is 0x00000004, so it's "pointing" to address 0x00000004
     - 0x00000004: 0x2A  // 0x00000004 is the address, 0x2A is ACII character '*' or the integer number 42
 
   - The pointer stored at 0x00000000 has the value 0x00000004, so it's pointing to address 0x00000004.
