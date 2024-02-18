@@ -10,8 +10,8 @@ why things are the way they are in computing, and how they came to be that way, 
 arose from things being that way.
 
 I have found that it's far more important to understand the process that people went through to create the
-current solutions than to understand the mechanical details of how the solution work. Many detail about
-disadvantages and limitations is often left out of the discussion, or worse, simply not known or dismissed as
+current solutions than to understand the mechanical details of how the solution work. Many details about
+the disadvantages and limitations are often left out technical discussions, or worse, simply not known or dismissed as
 irrelevant due to ignorance.
 
 The guide is a reference and follow along guide for my video series on YouTube: 
