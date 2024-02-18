@@ -6,7 +6,7 @@
   
   - The software can be changed, at any time, to change the behavior of the machine instead of physically creating a 
     new machine for that specific task.
-  - Actually any software COULD be implemented in hardware, but the costs of doing so rarely make it practical, 
+  - ITS IMPORTANT TO KNOW THAT ANY software COULD be implemented in hardware, but the costs of doing so rarely make it practical, 
     other than a few very specialized problems like graphics cards to compute 3D graphics, crypto mining and AI training.
     > - What's an FPGA? (Field-Programmable Gate Array - Software in Hardware)
     >   - https://www.youtube.com/watch?v=iHg0mmIg0UU
