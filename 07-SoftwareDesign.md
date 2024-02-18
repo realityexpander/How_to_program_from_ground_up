@@ -9,8 +9,6 @@
   - Algorithms are just a set of instructions that are used to solve a problem or perform a task, all based on the
     cleverness and creativity of the designer. People have invented many ways to solve problems, and some of these
     are so common that they have been given names, like "sorting" and "searching" algorithms.
-    > - Lightning Talk: Algorithm? You Keep Using That Word - Kevlin Henney - ACCU 2023
-    >   - https://www.youtube.com/watch?v=U2Q3KAOSAEY
     > - Binary Search Algorithm - Code walk-through and Complexity Analysis
     >   - https://www.youtube.com/watch?v=LdjkZ2vQapI
     > - Animated Interactive Visualizations with pseudocode for many common data structures
