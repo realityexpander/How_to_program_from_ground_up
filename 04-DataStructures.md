@@ -57,6 +57,7 @@
   - ### BIG IDEA - Characters are just numbers that represent letters and symbols.
   
   - ASCII is a 1 byte (8 bit) representation of the most common letters and symbols.
+  - ASCII stands for "American Standard Code for Information Interchange" and was created in 1963.
   - Unicode is a 1 or more bytes representation of all the letters and symbols in all the world's languages.
 
 ### Need To Represent Something else?
