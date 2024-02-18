@@ -113,8 +113,8 @@
   - ### Clock — "The heart beat of the CPU to keep it all in sync" <a name="the-clock"></a>
     - ###### the-clock
     - Clock Circuit — Basically a emits a short pulse of electricity at a regular interval
-        - a "tick" of the clock, like flashing a light to the beat.
-        - Often uses a quartz crystal (XTAL in schematic) and the piezoelectric effect to keep a steady beat, like a watch.
+        - A "pulse" or "tick" of the clock, like flashing a light to the beat.
+        - Often uses a quartz crystal (`XTAL` in schematic) and the piezoelectric effect to keep a steady beat, like a watch.
         - Sometimes the common 555-timer IC chip is used to generate a clock signal.
     - Use to synchronize the operations of the CPU and access to the RAM, ROM, and other parts of the computer.
        > Example Implementation of a clock for a CPU
