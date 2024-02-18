@@ -477,7 +477,7 @@
     H --> G
     F --> C
     
-    X[⬅️ Example of a Node for a Network Graph]
+    X["⬅️ Example of a Node for a Network Graph"]
 
 - [Continue Reading - Software](./05-Software.md)
 - [Back to Index](README.md)
