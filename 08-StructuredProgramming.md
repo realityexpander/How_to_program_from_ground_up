@@ -92,5 +92,8 @@
   > Procedural Programming: It’s Back? It Never Went Away - Kevlin Henney [ACCU 2018]
   > - https://www.youtube.com/watch?v=mrY6xrWp3Gs
  
+  > Comparing C to machine language - Ben Eater
+  > - https://www.youtube.com/watch?v=yOyaJXpAYZQ
+
 - [Continue Reading - Class Oriented Programming](./09-ClassOrientedProgramming.md)
 - [Back to Index](README.md)
