@@ -45,6 +45,7 @@ This document is a reference and follow along guide for my video series on YouTu
   - [Linked List](04-DataStructures.md#linked-list)
   - [Map](04-DataStructures.md#map)
   - [Tree](04-DataStructures.md#tree)
+  - [Graph](04-DataStructures.md#graph)
 - [Software](05-Software.md) 1800s to Present Day
   - How to Represent Human Problems in a Digital Computer?
   - [Machine Code](05-Software.md#machine-code)
