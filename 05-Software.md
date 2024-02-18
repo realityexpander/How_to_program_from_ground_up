@@ -168,7 +168,9 @@
     - After the operation is complete, the program counter (PC) is updated with the address of the next instruction to
       be executed (or with a different location in memory if a "jump" instruction is executed.)
     - The "fetch-decode-execute" cycle is the basis for all computing, and is the most important part of the CPU.
-       > 8-bit CPU control logic: Part 1
+       > - How a CPU Works
+       >  - https://www.youtube.com/watch?v=cNN_tTXABUA
+       > - 8-bit CPU control logic: Part 1
        >  - https://www.youtube.com/watch?v=dXdoim96v5A
 
   - ### Registers — "The Tiny Superfast Memory Nearest to the CPU & Keeps the State of the CPU" <a name="registers"></a>
@@ -260,8 +262,6 @@
     >   - https://codeburst.io/an-introduction-to-6502-assembly-and-low-level-programming-7c11fa6b9cb9
     > - Assembly language vs. machine code — 6502 part 3
     >   - https://www.youtube.com/watch?v=oO8_2JJV0B4
-    > - How a CPU Works
-    >  - https://www.youtube.com/watch?v=cNN_tTXABUA
   
     - ### Common Assembly Language Operations (Mnemonics representing Opcodes) <a name="common-assembly-operations"></a>
       - ###### common-assembly-operations
