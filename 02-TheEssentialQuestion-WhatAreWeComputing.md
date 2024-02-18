@@ -99,5 +99,11 @@
 
       ### It's just following the logical operations that humans have carefully designed to represent the problem and represent a solution.
 
+- ## Spiral Model of Development of Techniques in Computing
+  - As knowledge and techniques in computing have developed, they have built upon each other in a spiral pattern.
+    [<img src="assets/spiral_model.png" width="400">](https://en.wikipedia.org/wiki/Spiral_model)
+  - Ideas and techniques from the past are often re-discovered and re-used in new ways.
+
+
 - [Continue Reading - Hardware](./03-Hardware.md)
 - [Back to Index](README.md)
