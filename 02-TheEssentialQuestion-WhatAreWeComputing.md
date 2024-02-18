@@ -101,9 +101,11 @@
 
 - ## Spiral Model of Development of Techniques in Computing
   - As knowledge and techniques in computing have developed, they have built upon each other in a spiral pattern.
+    
     [<img src="assets/spiral_model.png" width="400">](https://en.wikipedia.org/wiki/Spiral_model)
   - Ideas and techniques from the past are often re-discovered and re-used in new ways.
-
+    
+    [<img src="assets/spiral_of_evolution.png" width="400">](https://www.pinterest.es/pin/480196379016046799/)
 
 - [Continue Reading - Hardware](./03-Hardware.md)
 - [Back to Index](README.md)
