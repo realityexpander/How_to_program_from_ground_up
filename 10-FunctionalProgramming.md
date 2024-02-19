@@ -59,7 +59,7 @@
         result // <-- Return the result of the addition including the side effect.
      }
      
-     print(add(1, 2))  // <-- Print expected value the first time called (3).
+     println(add(1, 2))  // <-- Print expected value the first time called (3).
      
      println(add(1, 2))  // <-- Print the unexpected value the second time called (4) due to the side effect.
   }
@@ -185,8 +185,9 @@ flowchart LR
 
   > ## Side Quest on "Declarative" Programming
   > - Notice that many of the diagrams in this document are written in a language that uses pure "declarative" style programming.
-  > - The charts are using a declarative language called "Mermaid" to create many kinds of diagrams using only text.
+  > - The charts are using a declarative language called "Mermaid" to create many kinds of diagrams using only text code.
   > - This allows for more flexible and maintainable diagrams that can be created and maintained in a text file opposed to using a graphics editor.
+  > - Allows to be rendered in many different formats, including SVG, PNG, and PDF, and is responsive to different screen sizes.
   > - Mermaid is a "Domain Specific Language" (DSL) that is used to create diagrams in a "declarative" style.
   >   - [https://mermaid.js.org/](https://mermaid.js.org/intro/)
   >> ### More on Declarative Programming:
