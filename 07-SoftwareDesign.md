@@ -68,8 +68,8 @@
               val mid = (low + high) / 2  // search 1/2 of the array each loop
               val midVal = this[mid]
               when {
-                  midVal < value -> low = mid + 1
-                  midVal > value -> high = mid - 1
+                  midVal < value -> return low = mid + 1
+                  midVal > value -> return high = mid - 1
                   else -> return mid
               }
           }
