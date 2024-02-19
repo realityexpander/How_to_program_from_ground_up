@@ -222,8 +222,9 @@
         - Each small step creates some kind of "valuable working software" that can be shown to the customer, and the 
           customer can then give feedback on the working software, and the software can be changed based on that feedback.
           > ### Key finding of the Agile Manifesto 
-          > - Humans rarely know what they want UNTIL they experience what they _don't_ want, so work iteratively and 
-          >   get feedback often to make sure we are building the best known solution at the time.
+          > - Humans rarely know what they want UNTIL they experience what they _don't_ want, the solution is to work 
+              iteratively and get feedback often, integrate that feedback to make sure we are building the best 
+              _known_ solution at the time.
 
 - [Continue Reading - Class Oriented Programming](./09-ClassOrientedProgramming.md)
 - [Back to Index](README.md)
