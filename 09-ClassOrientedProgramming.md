@@ -624,66 +624,65 @@
      ```
      - Live Code Example: [How Abstract Classes Work in Kotlin](src/main/kotlin/abstractClassExample.kt)
 
-## Full Diagram of How `abstract` Classes, Extended Classes and Objects Are Stored in Memory
-
-  ```mermaid
-    flowchart LR
-  
-    ExcelFileObjectPrintContentMethodFunctionPointer -- calls --> ExcelFileClassPrintContentMethod:::Object
-    ExcelFileObjectAgeInt -- stores value of --> ExcelFileClassAgeInt
-    subgraph ExcelFileObject["[object instance ExcelFile @19FCA68D]"]
-        ExcelFileObjectAgeInt["int content = 3"]
-        ExcelFileObjectPrintContentMethodFunctionPointer{{"method PrintContent(): 
-           calls 
-           function @C62F3842
-           in class ExcelFile
-           🖨️
-           "}}
-    end
-    subgraph classExcelFile["class ExcelFile extends File"]
-        ExcelFileClassAgeInt["int content"]
-        ExcelFileClassPrintContentMethod{{"function @C62F3842:  
-           method PrintContent() =
-           { print this.content }
-           🖨️
-           "}}
-    end
-    abstractAgeInt -- expects --> ExcelFileClassAgeInt
-    abstractPrintContentMethod -- expects --> ExcelFileClassPrintContentMethod:::Object
-    ExcelFileClassAgeInt -- implements --> abstractAgeInt:::Abstract
-  
-    note["
-       EXPLANATION: 
-       The ExcelFile Object @19FCA68D 
-       is an instance of the ExcelFile class.
-       ExcelFile class is a subclass of the 
-       abstract File class.
-       📁 ➤➤ 🗄️"]
-    
-    classExcelFile -- "instantiates 
-                       object" --> ExcelFileObject:::Object
-    classExcelFile -- extends --> abstractFile:::Abstract
-    ExcelFileClassPrintContentMethod -- implements --> abstractPrintContentMethod:::Abstract
-    subgraph abstractFile["abstract class File"]
-      abstractAgeInt["abstract int content"]
-      abstractPrintContentMethod{{"
-         abstract method 
-         PrintContent()
-         ⎙
-         "}}
-    end
-  
-    classDef Abstract fill:#222, stroke:#0F0, stroke-width:1px, color:#fff, stroke-dasharray: 5 5
-    
-    classDef Class fill:#444, stroke:#00F, stroke-width:1px, color:#000, stroke-dasharray: 5 5
-    %% For nodes that are the source of a link, the style must be defined in the link, not the classDef. 
-    style classExcelFile fill:#444, stroke:#DDD, stroke-width:1px, color:#000, stroke-dasharray: 5 5
-    style ExcelFileClassAgeInt fill:#444, stroke:#DDD, stroke-width:1px, color:#FFF, stroke-dasharray: 5 5
-    
-    classDef Object fill:#55F, stroke:#FFF, stroke-width:3px, color:#fff
-    style ExcelFileObjectAgeInt fill:#55F, stroke:#FFF, stroke-width:3px, color:#fff
-    style ExcelFileObjectPrintContentMethodFunctionPointer fill:#222, stroke:#DDD, stroke-width:1px, color:#000, stroke-dasharray: 5 5
-  ```
+## Full Diagram of with `abstract` Classes, `extended` Classes and Objects, Stored in Memory
+   ```mermaid
+     flowchart LR
+   
+     ExcelFileObjectPrintContentMethodFunctionPointer -- calls --> ExcelFileClassPrintContentMethod:::Object
+     ExcelFileClassAgeInt -- stores value of --> ExcelFileObjectAgeInt 
+     subgraph ExcelFileObject["[object instance ExcelFile @19FCA68D]"]
+         ExcelFileObjectAgeInt["int content = 3"]
+         ExcelFileObjectPrintContentMethodFunctionPointer{{"method PrintContent(): 
+            calls 
+            function @C62F3842
+            in class ExcelFile
+            🖨️
+            "}}
+     end
+     subgraph classExcelFile["class ExcelFile extends File"]
+         ExcelFileClassAgeInt["int content"]
+         ExcelFileClassPrintContentMethod{{"function @C62F3842:  
+            method PrintContent() =
+            { print this.content }
+            🖨️
+            "}}
+     end
+     abstractAgeInt -- expects --> ExcelFileClassAgeInt
+     abstractPrintContentMethod -- expects --> ExcelFileClassPrintContentMethod:::Object
+     ExcelFileClassAgeInt -- implements --> abstractAgeInt:::Abstract
+   
+     note["
+        EXPLANATION: 
+        The ExcelFile Object @19FCA68D 
+        is an instance of the ExcelFile class.
+        ExcelFile class is a subclass of the 
+        abstract File class.
+        📁 ➤➤ 🗄️"]
+     
+     classExcelFile -- "instantiates 
+                        object" --> ExcelFileObject:::Object
+     classExcelFile -- extends ---> abstractFile:::Abstract
+     ExcelFileClassPrintContentMethod -- implements --> abstractPrintContentMethod:::Abstract
+     subgraph abstractFile["abstract class File"]
+       abstractAgeInt["abstract int content"]
+       abstractPrintContentMethod{{"
+          abstract method 
+          PrintContent()
+          ⎙
+          "}}
+     end
+   
+     classDef Abstract fill:#222, stroke:#0F0, stroke-width:1px, color:#fff, stroke-dasharray: 5 5
+     
+     classDef Class fill:#444, stroke:#00F, stroke-width:1px, color:#000, stroke-dasharray: 5 5
+     %% For nodes that are the source of a link, the style must be defined in the link, not the classDef. 
+     style classExcelFile fill:#444, stroke:#DDD, stroke-width:1px, color:#000, stroke-dasharray: 5 5
+     style ExcelFileClassAgeInt fill:#444, stroke:#DDD, stroke-width:1px, color:#FFF, stroke-dasharray: 5 5
+     
+     classDef Object fill:#55F, stroke:#FFF, stroke-width:3px, color:#fff
+     style ExcelFileObjectAgeInt fill:#55F, stroke:#FFF, stroke-width:3px, color:#fff
+     style ExcelFileObjectPrintContentMethodFunctionPointer fill:#222, stroke:#DDD, stroke-width:1px, color:#000, stroke-dasharray: 5 5
+   ```
 
 ## Polymorphism <a name="polymorphism"></a>
 ###### polymorphism
