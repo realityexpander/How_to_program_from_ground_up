@@ -152,7 +152,8 @@
   - ### BIG IDEA — Are there ways to organize the work of discovering solutions and designing software that are better than others?
   
   - ### Agile
-    - Was soon co-opted into "Agile®™ Certification®™ Business."
+    - Great start, good and useful concepts, but... 
+    - Widely misunderstood, misapplied, and soon co-opted into "Agile®™ Certification®™ Business."
   - ### Scrum
     - What worked in car production is likely to have the same success in software development? Nope.
     - Scrum is a "production management" methodology that was developed for managing the production of cars, and it
