@@ -49,7 +49,7 @@
   - ###### abusing-goto
       ```Text
       5 REM PROGRAM TO ADD 2 NUMBERS, PRINT RESULT <-- "REM" is a "remark" or "comment"
-      10 LET X = 10   <-- "LET" is a "statement" that assigns a value to a variable; and all variables are global and mutable.
+      10 LET X = 10   <-- "LET" is a "expression" because it assigns a value to a variable; All variables are global and mutable.
       20 LET Y = 32
       30 GOTO 100     <-- "GOTO" is a "statement" that changes the next line to execute to a different line.
       40 PRINT "Output: "; Z
