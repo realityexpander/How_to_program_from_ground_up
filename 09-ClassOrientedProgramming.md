@@ -808,7 +808,10 @@
     tried to use C++ as a "pure" OOP language, they ran into many problems, as outlined in this section.
     
     > The Design of C++ , lecture by Bjarne Stroustrup
-    > - https://www.youtube.com/watch?v=69edOm889V4 
+    > - https://www.youtube.com/watch?v=69edOm889V4
+     
+    > Kevlin Henney - Object? You Keep Using that Word - Trójmiasto JUG [30.05.2016]
+    > - https://www.youtube.com/watch?v=IA-RyzKE7oc
 
 ## Design Patterns <a name="design-patterns"></a>
 ###### design-patterns
