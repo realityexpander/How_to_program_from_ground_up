@@ -144,8 +144,6 @@
     >   - https://www.youtube.com/watch?v=8R7hoC3OuPo
     > - Software Design: Ep4 : 3rd Law of Software Design 
     >   - https://www.youtube.com/watch?v=nCxhJ_51fjA
-    > - Kevlin Henney — The Case for Technical Excellence
-    >   - https://www.youtube.com/watch?v=LLEXAdO3X1o
 
 ## Some Thoughts on Common Software Production Methodologies
 ##### some-thoughts-on-common-software-production-methodologies
@@ -154,6 +152,8 @@
   - ### Agile
     - Great start, good and useful concepts, but... 
     - Widely misunderstood, misapplied, and soon co-opted into "Agile©®™ Certification©®™ Business."
+      >  - Kevlin Henney — The Case for Technical Excellence
+      >    - https://www.youtube.com/watch?v=LLEXAdO3X1o
   
   - ### Scrum
     - Can we use what worked in Japanese car production with Japanese culture to have the same success in software development? Nope.
