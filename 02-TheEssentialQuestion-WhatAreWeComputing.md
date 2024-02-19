@@ -52,9 +52,9 @@
       > - Cathode ray tube magnetic deflection by horseshoe magnet
       >   - https://www.youtube.com/watch?v=IkcHPmuDw7A
       > - Cathode rays deflection using an electromagnet perpendicular to the beam
-      >  - https://www.youtube.com/watch?v=NFeJ0XbY1J8
+      >   - https://www.youtube.com/watch?v=NFeJ0XbY1J8
       > - Manchester Baby and the birth of Computer Memory
-      >  - https://www.youtube.com/watch?v=SpqayTc_Gcw
+      >   - https://www.youtube.com/watch?v=SpqayTc_Gcw
 
     - ## Magnetic Phenomenon - 1950s to present
         - Electronically detectable areas on magnetizable material, or the presence of a magnetic field in a specific area
