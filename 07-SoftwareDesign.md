@@ -132,7 +132,7 @@
 ##### communicating-software-designs
   - ### BIG IDEA — How can we use drawings and diagrams to visually communicate about software designs? 
   
-  - ### The Line, The Box and The Conceptual Layers
+  - ### The Box, The Line and The Conceptual Layers
     - At the time when structured programming became popular, ideas around "Software Design" were developed to help
       people create more complex software systems with increasingly more complex requirements and coordinating work 
       with larger teams of people working together a shared codebase.
