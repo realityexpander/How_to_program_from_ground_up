@@ -68,10 +68,10 @@
     >> A BIG problem in computing is that giving metaphors for concepts is that people often confuse all aspects of the metaphor with the concept that were not included in the metaphor. 
     >> - For example, the "desktop" metaphor for a computer's "desktop" is not the same as a physical desktop. 
     >> - You can't take the pencil from the drawing app and start scribbling on the "desktop" like you can with a physical desktop.
-    > ### Metaphors often break down when extended too far. 
+    > ### IMPORTANT TO KNOW THAT: Metaphors often break down when extended too far. 
     >> Therefore, it is important to know what is ACTUALLY happening, than just the metaphor of what is happening.
-    >> - ie: There is no "numbers" or "letters" in memory, just a series of "bits" (1s and 0s) that represent numbers and letters.
-    >> - There is no "add" or "subtract", its just a series of logical operations that represent "add" and "subtract" for us.
+    >> - ie: There are no _actual_ "numbers" or "letters" in memory, just a series of switches, electrical charges, or magnetic fields that we are using to represent (1s and 0s) that represent numbers and letters.
+    >> - There is no "add" or "subtract" in the machine, its just a series of logical operations done on electrical signals that represent "add" and "subtract" _for us._
   
   - Numbers and Characters are the most common things to represent in memory, but anything can be represented in memory
   - Colors, Sounds, Images, Videos, Programs, Documents, etc.
