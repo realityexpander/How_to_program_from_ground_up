@@ -26,9 +26,9 @@ fun Array<Int>.quickSort(): Array<Int> {
 	if (size < 2) return this
 	val pivot = this[randomInt(size - 1)]
 
-	val less = filter { it < pivot }.toTypedArray().quickSort()
+	val less = filter { it < pivot }.toTypedArray().quickSort() // recursive call
 	val equal = filter { it == pivot }.toTypedArray()
-	val greater = filter { it > pivot }.toTypedArray().quickSort()
+	val greater = filter { it > pivot }.toTypedArray().quickSort() // recursive call
 
 	return less + equal + greater
 }
