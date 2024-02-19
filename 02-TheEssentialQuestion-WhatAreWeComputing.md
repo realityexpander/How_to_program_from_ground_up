@@ -59,8 +59,8 @@
     - ## Magnetic Phenomenon - 1950s to present
         - Electronically detectable areas on magnetizable material, or the presence of a magnetic field in a specific area
         
-        > Magnetic Fields "Bending" Light Paths
-        > - https://www.youtube.com/watch?v=GpEi-jSmcoA  
+          > Magnetic Fields "Bending" Light Paths
+          > - https://www.youtube.com/watch?v=GpEi-jSmcoA  
          
         - Core Memory - 1955 to 1975
 
