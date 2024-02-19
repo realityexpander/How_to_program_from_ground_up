@@ -155,7 +155,7 @@
     - Great start, good and useful concepts, but... 
     - Widely misunderstood, misapplied, and soon co-opted into "Agile®™ Certification®™ Business."
   - ### Scrum
-    - What worked in car production is likely to have the same success in software development? Nope.
+    - Can we use what worked in Japanese car production with Japanese culture to have the same success in software development? Nope.
     - Scrum is a "production management" methodology that was developed for managing the production of cars, and it
       was soon co-opted into the _"Agile® Certification Business"_ and turned into a "one-size-fits-all" process that was
       supposed to work for any kind of general software development, and it doesn't.
