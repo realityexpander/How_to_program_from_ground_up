@@ -94,6 +94,7 @@
       }
       
     
+      // Start of the program
       fun main() {
          val x: Array<Int> = Array(100) { randomInt(100) } // <-- O(n) - Fill Array `x` with 100 random integers
          

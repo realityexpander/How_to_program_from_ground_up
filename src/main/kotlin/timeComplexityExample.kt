@@ -35,6 +35,7 @@ fun Array<Int>.quickSort(): Array<Int> {
 
 fun randomInt(max: Int) = (0..max).random()
 
+// Start of Program
 fun main() {
 	val x = Array(2_000) { randomInt(100) } // <-- O(n) - Fill Array `x` with 2000 random integers
 	var result: Long = 0
@@ -54,8 +55,8 @@ fun main() {
 
 	start = System.currentTimeMillis()
 	result = 0
-	for (i in 0 until x.size) { // <-- O(n)
-		for (j in 0 until x.size) { // <-- O(n^2)
+	for (i in 0 until x.size) { // <-- O(n^2)
+		for (j in 0 until x.size) { // <-- O(n)
 			result = x[i] + x[j] + result
 		}
 	}
@@ -65,9 +66,9 @@ fun main() {
 	// Notice how this one takes MUCH, MUCH longer than the previous ones.
 	start = System.currentTimeMillis()
 	result = 0
-	for (i in 0 until x.size) { // <-- O(n)
+	for (i in 0 until x.size) { // <-- O(n^3)
 		for (j in 0 until x.size) { // <-- O(n^2)
-			for (k in 0 until x.size) { // <-- O(n^3)
+			for (k in 0 until x.size) { // <-- O(n)
 				result = x[i] + x[j] + x[k] + result
 			}
 		}
