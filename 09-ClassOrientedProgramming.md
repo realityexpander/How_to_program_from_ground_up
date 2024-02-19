@@ -65,11 +65,11 @@
          flowchart TB
          
          subgraph catObject["Object “Cat” 🐈 @BFFC882A"]
-            catObjectAgeInt["int age = 3"] 
             catObjectMakeSoundMethodFunctionPointer{{"
                  method makeSound(): 
                  { println(“Meow”) }
                  😺"}}
+            catObjectAgeInt["int age = 3"] 
          end
          subgraph catClass["Class “Cat” 🐱"]
             catClassAgeInt["int age"]
@@ -78,14 +78,15 @@
                { println(“Meow”) }
                😺"}}
          end
+      
+         catClassAgeInt -- 2. stores value of --> catObjectAgeInt
          catClass -- "
-            instantiate = allocate 
-            physical memory space for 
+            1. Instantiate = allocate 
+            space in physical memory for 
             the data defined in the class
             🐱➤➤🐈
-            " --> catObject:::Object
+            " --> catObject:::Object 
          
-         catObjectAgeInt -- stores value of --> catClassAgeInt
          
          style catClass fill:#444, stroke:#FFF, stroke-width:1px, color:#FFF, stroke-dasharray: 5 5
          style catClassAgeInt fill:#444, stroke:#FFF, stroke-width:1px, color:#FFF, stroke-dasharray: 5 5
@@ -103,7 +104,7 @@
          flowchart TB
       
          catClass -- "
-            creates 
+            1. creates 
             (or “instantiates”)
             a “Cat” object in memory
             using the class ‟Cat”
@@ -127,7 +128,7 @@
                😺"}}
             catClassAgeInt["
                int age
-               (value is stored in object)
+               2. value is stored in object
                ⬇︎
             "]
          end
