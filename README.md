@@ -123,29 +123,30 @@ This document is a reference and follow along guide for my video series on YouTu
   - [Coroutines are Much Faster Than Threads](12-ParallelProcessing.md#coroutines-vs-threads)
 
 ## Introduction
-  - How to guide for anyone interested in software engineering who needs an overview of techniques and concepts 
-    used, from the fundamentals of physical logic representation to high-level programming languages.
+  - This is a "how-to" guide for anyone interested in creating software who needs an overview of techniques and concepts 
+    used, from the fundamentals of physical logic representation to high-level programming languages and 
+    the "`how`" and "`why`" of the various paradigms and methodologies used in software development.
   
-  - ### The goal is to have you:
-  - Understand more the `why` and `how` of programming, not just the `what` and `where`.
-    - This is my curated list of information to take you on a realistic and grounded journey of understanding
-      the essential part of computing to create effective software.
-    - There will be some technical details, but only enough to understand the fundamental principles, not to be an expert.
-    - I cover the areas that I had difficulty understanding when I was learning to program.
-    - This is more-or-less a historical walk through `WHY` things are the way they are in computing, and `HOW` they came to be that way.
+  - ### My Goal is to Have You:
+    - Understand more the `why` and `how` of programming, not just the `what` and `where`.
+      - This is my curated list of information to take you on a realistic and grounded journey of understanding
+        the essential part of computing to create effective software.
+      - There will be some technical details, but only enough to understand the fundamental principles, not to be an expert.
+      - I cover the areas that I had difficulty understanding when I was learning to program.
+      - This is more-or-less a historical walk through `WHY` things are the way they are in computing, and `HOW` they came to be that way.
   
-  > I have since discovered that the majority of my confusion derived from how things were presented to me. 
-  > Instructors often completely misunderstood correct application and limits of metaphors and lacked real-world 
-  > experience of the things they were teaching. Many just repeated what they were taught without understanding.
-  > When challenged about their knowledge, they would often become defensive and dismissive, and sometimes even hostile.
-    
-  > Many of the concepts are, in retrospect, full of needless jargon and unnecessary complexity. I now understand that
-  > the complexity was often used to make the instructor seem more knowledgeable and to make the subject seem more
-  > difficult than it actually is.
-      
-  > I would like to say at the outset that there is a TREMENDOUS number of technical-sounding words with all
-  > referring to the same basic core ideas. I will do my best to be as consistent as possible, and also work to 
-  > point out the multiple definitions and reduce the jargon and clarify the core meanings and ideas.
+      > I have since discovered that the majority of my confusion derived from how things were presented to me. 
+      > Instructors often completely misunderstood correct application and limits of metaphors and lacked real-world 
+      > experience of the things they were teaching. Many just repeated what they were taught without understanding.
+      > When challenged about their knowledge, they would often become defensive and dismissive, and sometimes even hostile.
+        
+      > Many of the concepts are, in retrospect, full of needless jargon and unnecessary complexity. I now understand that
+      > the complexity was often used to make the instructor seem more knowledgeable and to make the subject seem more
+      > difficult than it actually is.
+          
+      > I would like to say at the outset that there is a TREMENDOUS number of technical-sounding words with all
+      > referring to the same basic core ideas. I will do my best to be as consistent as possible, and also work to 
+      > point out the multiple definitions and reduce the jargon and clarify the core meanings and ideas.
 
 ## The Essence of Computing
   - People used to do all computing by hand, and now we use various machines to do the same thing, 

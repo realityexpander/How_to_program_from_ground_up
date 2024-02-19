@@ -153,7 +153,7 @@
   
   - ### Agile
     - Great start, good and useful concepts, but... 
-    - Widely misunderstood, misapplied, and soon co-opted into "Agile®™ Certification®™ Business."
+    - Widely misunderstood, misapplied, and soon co-opted into "Agile©®™ Certification©®™ Business."
   - ### Scrum
     - Can we use what worked in Japanese car production with Japanese culture to have the same success in software development? Nope.
     - Scrum is a "production management" methodology that was developed for managing the production of cars, and it
@@ -169,7 +169,7 @@
       a manufacturing process, and it is a counter-productive way to manage the knowledge work.
       > It's Time For Waterfall To DIE
       > - https://www.youtube.com/watch?v=o3jDLVCpH1E
-  - ## I call all of the above (and similar books and conferences) the **"Age of Conference Driven Development"**
+  - ## I call all of the above (and similar books and conferences) the **"Age of Conference©®™ Driven Development"**
     - The problems around planning and organizing ever-larger teams, and increasingly complex problems became so onerous
       that many people looked far and wide for _ANY_ solution to gain a foothold on the process and make it more
       predictable and manageable. Unfotunately, knowledge work is FUNDAMENTALLY risky and not possible to plan
