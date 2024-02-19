@@ -493,7 +493,12 @@
   
   - An `abstract class` is a template for a "concrete" (or specific) `class`, and cannot to be instantiated itself, 
     only `extend`-ed and be used as a "general" `class` to group the "specific" classes into categories or "types."
-  - I like to forget the word `abstract` and replace it wih the phrase "The General Category"
+  - I like to forget the word `abstract` and replace it wih the phrase "The General Category."
+    - I kept confusing it with the "abstract" concept in art, and "abstract" concept in philosophy.
+    - The `abstract` used in computing ONLY means the "general category" of a class of objects.
+    - Many people who attempted to explain the "abstract" keyword were likely unaware of the other meanings of the word
+      and likely confused many people who were trying to learn the concept.
+      - They could have just said what I just told you, but they didn't, and that's why I'm here to help you. 
     - ie: "documents" is the general category (abstract idea) of a generic "something to structure and retain data."
   - The `abstract class` is `extend`—ed by the subclass and the subclass methods `override` the superclass methods by
     implementing the method in the subclass. 
