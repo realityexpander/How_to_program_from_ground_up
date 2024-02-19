@@ -224,16 +224,16 @@
     ```
     Add 2 numbers and store the result in memory)
      
-    Mnemonic   Opcode & Operand Hex Codes  // Explanation
-    --------   --------------------------------    
-    LDA #5     A905   // Load the value 5 into the "A" register, opcode: 0xA9 operand: 0x05.
-    STA 0x0000 8D0000 // Store the value in the "A" register into memory location 0x0000, opcode: 0x8D operands: 0x00 0x00.
-    LDA #7     A907   // Load the value 7 into the "A" register,  opcode: 0xA9 operand: 0x07.                                          
-    STA 0x0001 8D0001 // Store the value in the "A" register into memory location 0x0001, opcode: 0x8D operands: 0x00 0x01.
-    LDA 0x0000 A90000 // Load the value in memory location 0x0000 into the "A" register, opcode: 0xA9 operands: 0x00 0x00.                      
-    ADC 0x0001 6D0001 // Add the value in memory location 0x0001 to the value in the "A" register, opcode: 0x6D operands: 0x00 0x01.
-    STA 0x0002 8D0002 // Store the result of the addition into memory location 0x0002, opcode: 0x8D operands: 0x00 0x02.
-    BRK        00     // Stops the CPU executing any more instructions, opcode: 0x00.
+    Mnemonic   Opcode & Operand Hex Codes   ; Explanation
+    --- ------ ------ ------------------------------------------------------------------------    
+    LDA #5     A905   ; Load the value 5 into the "A" register, opcode: 0xA9 operand: 0x05.
+    STA 0x0000 8D0000 ; Store the value in the "A" register into memory location 0x0000, opcode: 0x8D operands: 0x00 0x00.
+    LDA #7     A907   ; Load the value 7 into the "A" register,  opcode: 0xA9 operand: 0x07.                                          
+    STA 0x0001 8D0001 ; Store the value in the "A" register into memory location 0x0001, opcode: 0x8D operands: 0x00 0x01.
+    LDA 0x0000 A90000 ; Load the value in memory location 0x0000 into the "A" register, opcode: 0xA9 operands: 0x00 0x00.                      
+    ADC 0x0001 6D0001 ; Add the value in memory location 0x0001 to the value in the "A" register, opcode: 0x6D operands: 0x00 0x01.
+    STA 0x0002 8D0002 ; Store the result of the addition into memory location 0x0002, opcode: 0x8D operands: 0x00 0x02.
+    BRK        00     ; Stops the CPU executing any more instructions, opcode: 0x00.
      
     // Memory state after the program has executed:
     0x0000: 0x05
