@@ -1,4 +1,4 @@
-// Program to demonstrate time complexity of various algorithms.
+// Program to demonstrate the time complexity of various algorithms.
 
 // Algorithm: Binary Search
 // Performs a binary search on a sorted array - O(log n)

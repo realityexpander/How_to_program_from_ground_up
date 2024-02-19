@@ -55,7 +55,7 @@
     - If you are doing a binary search, and each time you search you are cutting the size of the array in half,
       it's O(log n)
  
-    - ```Kotlin
+      ```Kotlin
       // Program to illustrate the time complexity of various operations
       
       // Algorithm: Binary Search
