@@ -54,8 +54,8 @@
         
         // Start of program
       function main() {
-         Cat cat1 = new Cat(3)  // <-- Creates a new object of the class "Cat" and
-                                //     assigns its location to variable `cat1`, ie: "Instantiates" the class.
+         Cat cat1 = new Cat(3)  // <-- Allocates memory for a new object of the class "Cat" and
+                                //     assigns its address to variable `cat1`, ie: "Instantiates" the class.
          cat1.makeSound()  // <-- will print "Meow".
       }
       ```
@@ -290,9 +290,9 @@
     }
           
     // Start of program
-    method main() {
-       Document doc1 = new PDF()
-       Email doc2 = new Email()  
+    function main() {
+       Document doc1 = new PDF()  // <-- Creates a new object of the class "PDF" and assigns its address pointer to variable `doc1`.
+       Email doc2 = new Email()   
        Song doc3 = new Song() 
             
        function viewDocument(Document doc) {  // Note that the parameter is of type `Document` and not `PDF` or `Email` or `Song`. 
@@ -420,7 +420,7 @@
       }
       
       // Start of program
-      method main() {
+      function main() {
          Media doc0        = new Media()  // Since the `Media` class is `open` and not `abstract`, an object can be created from it.
          Media doc1        = new MP3()
          Media doc2        = new Video()
@@ -438,6 +438,8 @@
          doc3.authenticate("MySecretPassword123")  // <-- will print "Authenticated!"
          playMedia(doc3)            // <-- will print "Playing Protected MP3: MyProtectedMP3.mp3"
       }
+      
+      main()
       
       // Output:
       // Playing: MyMedia
