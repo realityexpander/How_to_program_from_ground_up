@@ -100,20 +100,20 @@
          
          val a: Int = x[50] // <-- O(1) - Simple Lookup
          
-         for (i in 0 until x.size) { // <-- O(n) - Loop over items 1 time
+         for (i in 0 until x.size) { // <-- O(n) - Single Loop over items 1 time
              println(x[i])
          }
          
-         for (i in 0 until x.size) { // <-- O(n) 
-             for (j in 0 until x.size) { // <-- O(n^2) - Double Loop over items (squared)
+         for (i in 0 until x.size) { // <-- O(n^2) - Double Loop over items (squared)
+             for (j in 0 until x.size) { // <-- O(n) 
                  println(x[i] + x[j])
              }
          }
          
          // Notice this one will take MUCH, MUCH longer than the previous ones.
-         for (i in 0 until x.size) { // <-- O(n)
+         for (i in 0 until x.size) { // <-- O(n^3)- Triple Loop over items (cubed)
              for (j in 0 until x.size) { // <-- O(n^2)
-                 for (k in 0 until x.size) { // <-- O(n^3) - Triple Loop over items (cubed)
+                 for (k in 0 until x.size) { // <-- O(n) 
                      println(x[i] + x[j] + x[k])
                  }
              }
