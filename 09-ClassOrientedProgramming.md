@@ -264,20 +264,20 @@
     ```Text
     // COP Pseudocode
       
-    interface Document {     // <-- interfaces only define the "signature" of the methods it expects to be in the subclass.
-       expects method view()  // this interface expects a method called "view", there is no implementation here.
+    interface Document {     // <-- Interfaces only define the "signature" of the methods it expects to be in the subclass.
+       expects method view()  // <-- This interface expects a method called "view", there is no implementation here.
     }  
         
     // PDF is one "concrete implementing" class of the "Document" interface.
     class PDF implements Document { // <-- PDF is a subclass of Document, and must implement the "view" method.
-       override method view() { // <-- the implementation of the interface (uses the "override" keyword) 
+       override method view() { // <-- The implementation of the interface (uses the "override" keyword) 
           print "Launch PDF Viewer"  
        } 
     }
           
     // Email is one "concrete implementing" class of the "Document" interface.
-    class Email implements Document { <-- // Email is a subclass of Document, and must implement the "view" method.
-       override method view() { // <-- the implementation of the interface (uses the "override" keyword.)
+    class Email implements Document { // <-- Email is a subclass of Document, and must implement the "view" method.
+       override method view() { // <-- The implementation of the interface (uses the "override" keyword.)
           print "Launch Email App"  
        }
     }
@@ -314,7 +314,7 @@
     > Live Code Example: [How Interfaces Work in Kotlin](src/main/kotlin/interfaceExample.kt)
 
     - Interfaces allow a developer to add multiple different implementations of the same named method by defining a
-      new `class` that `implement`s the superclass `interface` by defining code for the methods in the subclass
+      new `class` that `implement`-s the superclass `interface` by defining code for the methods in the subclass
         - This makes it easier to add new subclasses of the `interface` to the program without changing any existing code
         - This also make it easier to write "testing" code that can be used to automatically verify the correctness of the methods
           of the `class` by using "testing" implementations of the `interface`
