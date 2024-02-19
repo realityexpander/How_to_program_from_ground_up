@@ -164,11 +164,13 @@
     - It's a "one-size-fits-all" process that was supposed to work for all kinds of software development, and it doesn't.
   - ### Waterfall 
     - Was never a thing, it was a straw-man argument. Winston Royce, the creator the term "Waterfall," made it 
-      clear on page 2 of his 1970 paper "Managing the Development of Large Software Systens" that he was not advocating f
-      or the "Waterfall" process, but was trying to make a point about how software development was being managed like
-      a manufacturing process, and it is a counter-productive way to manage the knowledge work.
+      clear on **page 2** of his famous 1970 paper _"Managing the Development of Large Software Systems"_ that he was not advocating
+      for the "Waterfall" process, but was trying to make a point about how software development was being managed like
+      a manufacturing process, and it is a **_counter-productive way to manage the knowledge work._**
       > It's Time For Waterfall To DIE
       > - https://www.youtube.com/watch?v=o3jDLVCpH1E
+      - Managers never read the second page, and took it as a "best practice". _Poor Winston Royce._
+        - Note to self: _Always read the second page, or put the most important information on the first page._ 
   - ## I call all of the above (and similar books and conferences) the **"Age of Conference©®™ Driven Development"**
     - The problems around planning and organizing ever-larger teams, and increasingly complex problems became so onerous
       that many people looked far and wide for _ANY_ solution to gain a foothold on the process and make it more
