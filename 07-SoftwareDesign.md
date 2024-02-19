@@ -56,7 +56,7 @@
       it's O(log n)
  
       ```Kotlin
-      // Program to illustrate the time complexity of various operations
+      // Program in Kotlin to illustrate the time complexity of various operations
       
       // Algorithm: Binary Search
       // Perform binary search a sorted array - O(log n)
