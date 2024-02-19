@@ -93,8 +93,8 @@
     - pointers (values representing _other_ locations in memory.)
     - Some languages allow functions to be represented as a type and passed around as a variable.
     - data structures (records, objects) made up of other types.
-      > - Animated Interactive Visualizations with pseudocode for many common data structures
-      >   - https://www.cs.usfca.edu/~galles/visualization/Algorithms.html
+      > Animated Interactive Visualizations with pseudocode for many common data structures and associate algorithms
+      > - https://www.cs.usfca.edu/~galles/visualization/Algorithms.html
 
 ## Array (1D, 2D, 3D, etc.) <a name="array"></a>
 ###### array
@@ -143,7 +143,7 @@
   - Diagram:
     ``````
     - Address: Value 
-    - 0x00000000: 0x00  // 0x00000000 is the address, 0x00000004 is the value of this pointer (little Endian)
+    - 0x00000000: 0x00  // 0x00000000 is the address, 0x00000004 is the value of this pointer (Big Endian)
     - 0x00000001: 0x00  
     - 0x00000002: 0x00
     - 0x00000003: 0x04  // This is a pointer's value is 0x00000004, so it's "pointing" to address 0x00000004
@@ -151,7 +151,8 @@
 
   - The pointer stored at 0x00000000 has the value 0x00000004, so it's pointing to address 0x00000004.
   - Address 0x00000004 contains the value 0x41, which represents the character 'A' or number 65 as an unsigned byte integer.
-  - In this case, it's stored in "Little Endian" format, so the least significant bytes are stored first.
+  - In this case, it's stored in "Big Endian" format, so the most significant bytes are stored first (lowest numbered address.)
+    - "Little Endian" format stores the least significant bytes first.
   - Pointers usually have a type associated with them, so the compiler knows how long the block of memory that
     the pointer is pointing to is, and how to interpret the values in that block of memory,
     ie: long int, char, float, struct, etc.
