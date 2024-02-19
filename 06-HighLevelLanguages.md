@@ -41,7 +41,7 @@
     > Computing and Computers - Batch Processing - BBC2 - 1980
     > - https://www.youtube.com/watch?v=fAselhq0Q8g
     
-    > - Online playground to try these programs in Applesoft BASIC (1980's Apple IIe Beginner's All-purpose Symbolic Instruction Code)
+    > - Online playground to try these programs in Applesoft BASIC (from the 1980's Apple IIe)
     >   - https://www.calormen.com/jsbasic/
   - Some examples of Procedural languages are "Fortran" and "BASIC" and "COBOL."
 
