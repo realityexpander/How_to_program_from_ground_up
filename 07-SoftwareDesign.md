@@ -154,14 +154,17 @@
   - ### Agile
     - Great start, good and useful concepts, but... 
     - Widely misunderstood, misapplied, and soon co-opted into "Agile©®™ Certification©®™ Business."
+  
   - ### Scrum
     - Can we use what worked in Japanese car production with Japanese culture to have the same success in software development? Nope.
     - Scrum is a "production management" methodology that was developed for managing the production of cars, and it
       was soon co-opted into the _"Agile® Certification Business"_ and turned into a "one-size-fits-all" process that was
       supposed to work for any kind of general software development, and it doesn't.
+  
   - ### SAFe 
     - Another over-complicated process that tries to "productionize" the software development process.
     - It's a "one-size-fits-all" process that was supposed to work for all kinds of software development, and it doesn't.
+  
   - ### Waterfall 
     - Was never a thing, it was a straw-man argument. Winston Royce, the creator the term "Waterfall," made it 
       clear on **page 2** of his famous 1970 paper _"Managing the Development of Large Software Systems"_ that he was not advocating
@@ -171,14 +174,15 @@
       > - https://www.youtube.com/watch?v=o3jDLVCpH1E
       - Managers never read the second page, and took it as a "best practice". _Poor Winston Royce._
         - Note to self: _Always read the second page, or put the most important information on the first page._ 
+  
   - ## I call all of the above (and similar books and conferences) the **"Age of Conference©®™ Driven Development"**
     - The problems around planning and organizing ever-larger teams, and increasingly complex problems became so onerous
       that many people looked far and wide for _ANY_ solution to gain a foothold on the process and make it more
       predictable and manageable. Unfotunately, knowledge work is FUNDAMENTALLY risky and not possible to plan
       because its a process of DISCOVERY, not a process of manufacturing. 
-    - _We may **NEVER** find a good solution in
+    - The biggest risk to manage in software development is that we may **NEVER** find a workable solution in
       the time allotted._ This is not changeable. It's a fundamental ground-level understanding of knowledge work.
-    - ### Dealing with the fundamental risks involved with knowledge work is the core problem in planning software development.
+    - ### Dealing with the principal risks involved with knowledge work is the core problem in planning software development.
 
   - ## The Problem with Applying "Production Management" Methodologies to Software Development Knowledge Work
     - The main issues with all these approaches is that they assume that software development is just another
