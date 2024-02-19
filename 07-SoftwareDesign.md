@@ -152,8 +152,10 @@
   - ### Agile
     - Great start, good and useful concepts, but... 
     - Widely misunderstood, misapplied, and soon co-opted into "Agile©®™ Certification©®™ Business."
-      >  - Kevlin Henney — The Case for Technical Excellence
-      >    - https://www.youtube.com/watch?v=LLEXAdO3X1o
+      > - Agile Architecture Part 1 - Allen Holub
+      >   - https://www.youtube.com/watch?v=0kRCFVGpX7k&t=155s  
+      > - Kevlin Henney — The Case for Technical Excellence
+      >   - https://www.youtube.com/watch?v=LLEXAdO3X1o
   
   - ### Scrum
     - Can we use what worked in Japanese car production with Japanese culture to have the same success in software development? Nope.
