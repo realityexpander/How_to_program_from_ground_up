@@ -158,7 +158,7 @@
     - What worked in car production is likely to have the same success in software development? Nope.
     - Scrum is a "production management" methodology that was developed for managing the production of cars, and it
       was soon co-opted into the _"Agile® Certification Business"_ and turned into a "one-size-fits-all" process that was
-      supposed to work for all kinds of software development, and it doesn't.
+      supposed to work for any kind of general software development, and it doesn't.
   - ### SAFe 
     - Another over-complicated process that tries to "productionize" the software development process.
     - It's a "one-size-fits-all" process that was supposed to work for all kinds of software development, and it doesn't.
