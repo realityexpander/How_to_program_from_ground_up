@@ -35,6 +35,15 @@
     allows for larger teams to work on the same program without stepping on each other's toes.
   - This is the main reason for the "Structured Programming" approach, as it was the first time that the "state"
     of the program was structured and encapsulated into localized scopes or "code blocks"
+    
+    > Names of the scope symbols:
+    > - `{` and `}` are called "curly brackets" or "curly braces."
+    > - `(` and `)` are called "parentheses", "parens" and sometimes "round brackets."
+    > - `[` and `]` are called "square brackets" or just "brackets." (not confusing at all... 😬)
+    > - `<` and `>` are called "angle brackets" or "chevrons."
+    > - `/*` and `*/` are called "comment delimiters."
+    > - `//` is called the "comment symbol."
+
   - Example of structured language (C):
       - Note: The `//` symbols means the rest of the line is comment, it is not part of the program,
         it's just for explanation and is ignored by the compiler.
