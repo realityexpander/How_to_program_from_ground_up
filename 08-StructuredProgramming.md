@@ -1,10 +1,10 @@
 ## Structured Programming 1960s-Present <a name="structured-programming"></a>
 
-### BIG IDEA - Put different parts of a program into distinct sections, or "code blocks" or "scopes" to limit the visibility of variables and functions to other parts of the program in order to reduce cognitive load to understanding code, make modifying code easier and enabling re-use of code via libraries.
+## BIG IDEA - Put different parts of a program into distinct sections, or "code blocks" or "scopes" to limit the visibility of variables and functions to other parts of the program in order to reduce cognitive load to understanding code, make modifying code easier and enabling re-use of code via libraries.
 
 ### Scopes <a name="scopes"></a>
 ###### scopes
-- No more `GOTO` statements, ONLY subroutines and conditional branching were allowed.
+- No more `GOTO` statements, ONLY subroutines and conditional branching (`if-then-gosub`'s) are allowed.
 - "Scopes" define the visibility of variables and functions to other parts of the program.
   - Scopes are also called:
     - "code blocks"
