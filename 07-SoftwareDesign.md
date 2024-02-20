@@ -170,7 +170,7 @@
       > - Scrum is bad 2 (ie: Scrum is irrelevant)
       >   - https://www.youtube.com/watch?v=5oPg08__v78 
       > - Jim Coplien On What Agile Really Means
-      >   - https://www.youtube.com/watch?v=OFrUI3_tbGk&t=1649s  
+      >   - https://www.youtube.com/watch?v=OFrUI3_tbGk&t=838s
   
   - ### Agile
     - Great start, good and useful concepts, but... 
