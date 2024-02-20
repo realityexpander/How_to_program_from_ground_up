@@ -197,6 +197,5 @@ flowchart LR
   >>  - https://www.youtube.com/watch?v=4A2mWqLUpzw
 
 
-- [Continue Reading - Parallel Processing](./12-ParallelProcessing.md)  
 - [Continue Reading - Back-to-Object Oriented Programming](11-BackToObjectOrientedProgramming.md)  
 - [Back to Index](README.md)
