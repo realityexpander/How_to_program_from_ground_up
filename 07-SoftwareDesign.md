@@ -164,6 +164,13 @@
     - Scrum is a "production management" methodology that was developed for managing the production of cars, and it
       was soon co-opted into the _"Agile® Certification Business"_ and turned into a "one-size-fits-all" process that was
       supposed to work for any kind of general software development, and it doesn't.
+      
+      > - Scrum is bad
+      >   - https://www.youtube.com/watch?v=eTjVA4HcDWA
+      > - Scrum is bad 2 (ie: Scrum is irrelevant)
+      >   - https://www.youtube.com/watch?v=5oPg08__v78 
+      > - Jim Coplien On What Agile Really Means
+      >   - https://www.youtube.com/watch?v=OFrUI3_tbGk&t=1649s  
   
   - ### Agile
     - Great start, good and useful concepts, but... 
