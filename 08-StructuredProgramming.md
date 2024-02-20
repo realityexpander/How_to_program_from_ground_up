@@ -23,6 +23,7 @@
     - "isolated" 
     
     > JEEPERS CREEPERS! That's a lot of names for the same thing, people!
+    >> ### Humans like to give many names to things that are important and/or big problems to manage.  
 
 - The concept of scopes was introduced to limit the use of "globally mutable" variables and visibility of functions.
   - This is the origin of "encapsulation" and first introduced to limit the visibility of the "local" variables
@@ -82,7 +83,7 @@
      subgraph main_scope["main() scope"]
        y01["y=100"]
        x1["x=10"]
-       x3 --> x1
+       x3 ---> x1
        x2 --> x1
        subgraph innerScope["an inner scope"]
          x2["x"]
@@ -103,7 +104,7 @@
        printf["printf() function"]
      end
   
-     printf2["printf()"] ---> printf   
+     printf2["printf()"] ----> printf   
   ```
 
 ### Types <a name="types"></a>
