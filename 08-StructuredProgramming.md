@@ -110,10 +110,12 @@
      end
   
      subgraph stdio["stdio.h"]
-       printf["printf() function"]
+       printf{{"function printf(…) { … }"}}
      end
   
-     printf2["printf()"] ----> printf   
+     printf2{{"printf(…)"}} ----> printf:::Object
+     
+     classDef Object fill:#55F, stroke:#FFF, stroke-width:3px, color:#fff   
   ```
 
 ### Types <a name="types"></a>
