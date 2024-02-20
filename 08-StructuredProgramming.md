@@ -5,7 +5,26 @@
 ### Scopes <a name="scopes"></a>
 ###### scopes
 - No more "goto" statements, only subroutines and conditional branching were allowed.
-- The concept of "scopes" (or "code blocks") to limit the use of "globally mutable" variables and visibility of functions.
+- "Scopes" define the visibility of variables and functions to other parts of the program.
+  - "Scopes" are also called:
+    - "code blocks"
+    - "blocks" 
+    - "local"
+    - "inner"
+    - "nested"
+    - "enclosed"
+    - "contained"
+    - "limited"
+    - "restricted"
+    - "encapsulated"
+    - "private"
+    - "protected"
+    - "hidden"
+    - "isolated" 
+    
+    > JEEPERS CREEPERS! That's a lot of names for the same thing, people!
+
+- The concept of "scopes" was introduced to limit the use of "globally mutable" variables and visibility of functions.
   - This is the origin of "encapsulation" and first introduced to limit the visibility of the "local" variables
     and functions to only the "scope" or "block" that they were defined in, and to limit the "side effects" of the program.
   - Scopes have names and can be nested inside other scopes, and the "local" variables and functions are only visible
@@ -19,32 +38,65 @@
       - Note: The `//` symbols means the rest of the line is comment, it is not part of the program,
         it's just for explanation and is ignored by the compiler.
     ```C
-    int main() {  // <-- start of the program & opens scope, `int` means the function returns an integer, `main` is the name of the function
-      int y = 100;
-      int x = 10; 
-      
-      { // <-- The "open curly bracket" denotes the start of a scope or "code block" or just "block."
-        int y = 32; // Inside the brackets is "Inner" or "Local" to the scope.
-        int z = 55; // <-- Only visible to the scope it's defined in, ie: this one.
-        
-        x = x + y;  // <-- Uses the local variable `y` and variable `x` from the Outer `main` function scope. 
-      } // <-- The "close curly braket" denotes the end of the scope.
-      
-      printf("%d", x); // <-- Print the value of x as a decimal number 
-                       //     (%d means use decimal value of x, 42.)
-      printf("%c", x); // <-- Print the value of x as a character 
-                       //     ("%c means use the ASCII value of x, 42 is character '*')
+    // C program to demonstrate the use of scope in structured programming.
+    #include <stdio.h>  // <-- Include the standard input/output library.
     
-      // printf("%d", z); // <-- This line would cause a "compile error" because the variable "z" is not visible in this scope.
+    int main() {  // <-- start of the program & "opens" the scope, `int` means the function returns an integer, `main` is the name of the function.
+    int x = 10;
+    int y = 100;
+    
+    { // <-- The "open curly bracket" denotes the start of a scope. This is an "inner" or "nested"  scope.
+    int y = 32; // Inside the brackets is "Inner" or "Local" to the scope.
+    int z = 55; // <-- Only visible to the scope it's defined in, ie: this one.
+    
+        x = x + y;  // <-- Uses the local variable `y` and variable `x` from the Outer `main` function scope. 
+    
+        { // <-- another "nested" scope, or "inner" scope, or "local" scope.
+           int y = 72; // <-- This is a different `y` than the one in the `main` scope.
+           printf("%d %d\n", x, y); // <-- Print the value of y as a decimal number, ("\n" means "go to next line")
+                                //     (%d means use decimal value of x and y, 42 and 72.)
+        } // <-- The "close curly braket" denotes the end of the scope.
+    
+        printf("%d %d %d\n", x, y, z); // <-- Print the value of x, y, and z as a decimal number 
+                                     //     (%d means use decimal value of x, y, and z, 42, 32, and 55.) 
+    } // <-- The "close bracket" denotes the end of the scope.
+    
+    printf("%d %d\n", x, y); // <-- Print the value of x and y as a decimal number
+    //     (%d means use decimal value of x and y, 42 and 100.)
+    // printf("%d", z); // <-- This line would cause a "compile error" because the variable "z" is not visible in this scope.
+    
     } // <-- The "close curly braket" denotes the end of the `main` scope.
     
-    main();  // <-- Call the "main" function, runs the program
     
-    // Output: 
-    // 42
-    // *
+    // Output:
+    // 42 72
+    // 42 32 55
+    // 42 100
     ```
+  - Copy and Paste the above code into an online C compiler to see the output: https://www.onlinegdb.com/online_c_compiler
   - Live Code Example in Kotlin: [Structured Programming Example with Scopes: `structuredExample.kt`](src/main/kotlin/structuredExample.kt)
+
+  ```mermaid
+     flowchart TB
+     
+     subgraph main scope["main() scope"]
+       y01["y=100"]
+       x1["x=10"]
+       x3 --> x1
+       x2 --> x1
+       subgraph innerScope["an inner scope"]
+         x2["x"]
+         y2["y=32"]
+         z1["z=55"]
+         z2 --> z1
+         subgraph nestedScope["a nested scope"]
+           y3["y=72"]
+           x3["x"]
+           z2["z"]
+         end
+       end
+     end
+  ```
 
 ### Types <a name="types"></a>
 ##### types
@@ -55,6 +107,9 @@
   - Primitive types are the "building blocks" of all other types defined in `struct`s
   - Example of Types (C):
     ```C
+    // C program to demonstrate the use of "primitive types" and "structs" in structured programming.
+    #include <stdio.h>  // <-- Include the standard input/output library.
+    
     struct Point {  // <-- `Point` is a programmer-defined type that is made up of other types (Structure or "struct")
        int x;
        int y;
@@ -71,11 +126,10 @@
                         x, y, z, p.x, p.y, p.colorIdChar);
     }
     
-    main();
-    
-    // Output: 5 6.128000 A 10   42   G
+    // Output: 5 6.128000 A     10   42   G
      
-    ```
+    ```  
+    - Copy and Paste the above code into an online C compiler to see the output: https://www.onlinegdb.com/online_c_compiler
     - Live Code Example in Kotlin: [Types Example: `typesExample.kt`](src/main/kotlin/typesExample.kt)
 
 - This allowed easier code reuse and easier to understand "state" of the program than procedural languages
