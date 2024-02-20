@@ -6,7 +6,7 @@
 ###### scopes
 - No more `GOTO` statements, ONLY subroutines and conditional branching were allowed.
 - "Scopes" define the visibility of variables and functions to other parts of the program.
-  - "Scopes" are also called:
+  - Scopes are also called:
     - "code blocks"
     - "blocks" 
     - "local"
