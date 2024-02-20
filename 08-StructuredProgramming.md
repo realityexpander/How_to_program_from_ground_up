@@ -42,28 +42,28 @@
     #include <stdio.h>  // <-- Include the standard input/output library.
     
     int main() {  // <-- start of the program & "opens" the scope, `int` means the function returns an integer, `main` is the name of the function.
-    int x = 10;
-    int y = 100;
-    
-    { // <-- The "open curly bracket" denotes the start of a scope. This is an "inner" or "nested"  scope.
-    int y = 32; // Inside the brackets is "Inner" or "Local" to the scope.
-    int z = 55; // <-- Only visible to the scope it's defined in, ie: this one.
-    
-        x = x + y;  // <-- Uses the local variable `y` and variable `x` from the Outer `main` function scope. 
-    
-        { // <-- another "nested" scope, or "inner" scope, or "local" scope.
-           int y = 72; // <-- This is a different `y` than the one in the `main` scope.
-           printf("%d %d\n", x, y); // <-- Print the value of y as a decimal number, ("\n" means "go to next line")
-                                //     (%d means use decimal value of x and y, 42 and 72.)
-        } // <-- The "close curly braket" denotes the end of the scope.
-    
-        printf("%d %d %d\n", x, y, z); // <-- Print the value of x, y, and z as a decimal number 
-                                     //     (%d means use decimal value of x, y, and z, 42, 32, and 55.) 
-    } // <-- The "close bracket" denotes the end of the scope.
-    
-    printf("%d %d\n", x, y); // <-- Print the value of x and y as a decimal number
-    //     (%d means use decimal value of x and y, 42 and 100.)
-    // printf("%d", z); // <-- This line would cause a "compile error" because the variable "z" is not visible in this scope.
+       int x = 10;
+       int y = 100;
+       
+       { // <-- The "open curly bracket" denotes the start of a scope. This is an "inner" or "nested"  scope.
+          int y = 32; // Inside the brackets is "Inner" or "Local" to the scope.
+          int z = 55; // <-- Only visible to the scope it's defined in, ie: this one.
+          
+          x = x + y;  // <-- Uses the local variable `y` and variable `x` from the Outer `main` function scope. 
+          
+          { // <-- another "nested" scope, or "inner" scope, or "local" scope.
+             int y = 72; // <-- This is a different `y` than the one in the `main` scope.
+             printf("%d %d\n", x, y); // <-- Print the value of y as a decimal number, ("\n" means "go to next line")
+                                  //     (%d means use decimal value of x and y, 42 and 72.)
+          } // <-- The "close curly braket" denotes the end of the scope.
+          
+          printf("%d %d %d\n", x, y, z); // <-- Print the value of x, y, and z as a decimal number 
+                                            //     (%d means use decimal value of x, y, and z, 42, 32, and 55.) 
+       } // <-- The "close bracket" denotes the end of the scope.
+       
+       printf("%d %d\n", x, y); // <-- Print the value of x and y as a decimal number
+       //     (%d means use decimal value of x and y, 42 and 100.)
+       // printf("%d", z); // <-- This line would cause a "compile error" because the variable "z" is not visible in this scope.
     
     } // <-- The "close curly braket" denotes the end of the `main` scope.
     
@@ -120,7 +120,7 @@
        int x = 5; 
        float y = 6.128; 
        char z = 'A'; 
-       struct Point p = { 10, 42, 'G' };
+       struct Point p = { 10, 42, 'G' };  // <-- `p` is a variable of type `Point` that is `assigned` values of 10, 42, and 'G'
        
        printf("Output: %d %f %c   %d   %d   %c", 
                         x, y, z, p.x, p.y, p.colorIdChar);
@@ -138,7 +138,7 @@
     - Started the concept of "published interfaces" that could be imported into another program and used to
       provide the functionality of the "library."
     - These libraries were collections of functions and data structures that were related to each other for a specific task.
-- Structure languages were also much more portable and reusable than procedural languages as they were not
+- Structured languages allowed for much more portable and reusable code than procedural languages as they were not
   tied to any specific computer hardware or operating system. The computer manufacturer only had to create the
   compiler for their particular machine, and then the same code could be run on any machine that had a compiler
   for the language.
