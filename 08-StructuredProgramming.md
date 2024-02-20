@@ -166,7 +166,7 @@
  
 ### Comparing C to Machine Language <a name="c-to-machine-language"></a>
 ##### c-to-machine-language
-- C was meant to be a "high-level shorthand" for Assembly Language, which was a "high-level shorthand" for Machine Language.
+- C was meant to be a "high-level portable shorthand" for Assembly Language, which was a "high-level shorthand" for Machine Language.
 - All of the "high-level" languages are "compiled" into "machine language" by a "compiler" program.
   > Comparing C to machine language - Ben Eater
   > - https://www.youtube.com/watch?v=yOyaJXpAYZQ
