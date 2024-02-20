@@ -55,15 +55,15 @@
           { // <-- another "nested" scope, or "inner" scope, or "local" scope.
              int y = 72; // <-- This is a different `y` than the one in the `main` scope.
              printf("%d %d\n", x, y); // <-- Print the value of y as a decimal number, ("\n" means "go to next line")
-                                  //     (%d means use decimal value of x and y, 42 and 72.)
+                                      //     (%d means use decimal value of x and y, 42 and 72.)
           } // <-- The "close curly bracket" denotes the end of the scope.
           
           printf("%d %d %d\n", x, y, z); // <-- Print the value of x, y, and z as a decimal number 
-                                            //     (%d means use decimal value of x, y, and z, 42, 32, and 55.) 
+                                         //     (%d means use decimal value of x, y, and z, 42, 32, and 55.) 
        } // <-- The "close bracket" denotes the end of the scope.
        
        printf("%d %d\n", x, y); // <-- Print the value of x and y as a decimal number
-       //     (%d means use decimal value of x and y, 42 and 100.)
+                                //     (%d means use decimal value of x and y, 42 and 100.)
        // printf("%d", z); // <-- This line would cause a "compile error" because the variable "z" is not visible in this scope.
     
     } // <-- The "close curly braket" denotes the end of the `main` scope.
