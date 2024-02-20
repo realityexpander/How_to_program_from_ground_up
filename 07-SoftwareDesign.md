@@ -57,6 +57,7 @@
  
       ```Kotlin
       // Program in Kotlin to illustrate the time complexity of various operations
+      // Note: The `//` symbols means the rest of the line is comment, it is not part of the program, it's just for explanation and is ignored by the compiler.
       
       // Algorithm: Binary Search
       // Perform binary search a sorted array - O(log n)
