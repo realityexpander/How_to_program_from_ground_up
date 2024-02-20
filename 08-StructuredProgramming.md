@@ -19,7 +19,7 @@
       - Note: The `//` symbols means the rest of the line is comment, it is not part of the program,
         it's just for explanation and is ignored by the compiler.
     ```C
-    int main() {  // <-- start of the program, `int` means the function returns an integer 
+    int main() {  // <-- start of the program & opens scope, `int` means the function returns an integer, `main` is the name of the function
       int y = 100;
       int x = 10; 
       
@@ -36,7 +36,7 @@
                        //     ("%c means use the ASCII value of x, 42 is character '*')
     
       // printf("%d", z); // <-- This line would cause a "compile error" because the variable "z" is not visible in this scope.
-    }
+    } // <-- The "close curly braket" denotes the end of the `main` scope.
     
     main();  // <-- Call the "main" function, runs the program
     
