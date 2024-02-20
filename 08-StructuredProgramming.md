@@ -87,7 +87,7 @@
   - Live Code Example in Kotlin: [Structured Programming Example with Scopes: `structuredExample.kt`](src/main/kotlin/structuredExample.kt)
 
   ```mermaid
-     flowchart LR
+     flowchart RL
   
      subgraph main_scope["main() scope"]
        y01["y=100"]
@@ -118,10 +118,10 @@
 
 ### Types <a name="types"></a>
 ##### types
-- The concept of "types" (or "kinds") was introduced to define the size & intended purpose of "primitive"
-  data types
-  - Procedural languages only had a few simple types: "number" or "character" or "string of characters" or "array"
-  - Primitive types are: `int`, `long`, `float`, `char`, and `bool`
+- The concept of custom types (or "kinds") was introduced to define more complex groupings of primitives to be seen as a single type.
+  - Procedural languages only had a few primitive types: "integer," "character," "string of characters" or "array"
+  - Having "structured" types allowed for more complex data to be defined and used in the program, instead of only using the primitive types.
+  - Primitive types are: `int`, `long`, `float`, `char`, and `bool` (note the `bool` type was not introduced until later in C++ and C99.)
   - Primitive types are the "building blocks" of all other types defined in `struct`s
   - Example of Types (C):
     ```C
@@ -150,26 +150,29 @@
     - Copy and Paste the above code into an online C compiler to see the output: https://www.onlinegdb.com/online_c_compiler
     - Live Code Example in Kotlin: [Types Example: `typesExample.kt`](src/main/kotlin/typesExample.kt)
 
-- This allowed easier code reuse and easier to understand "state" of the program than procedural languages
-- This allowed libraries and "modules" to be easily produced to create standard "subroutines" and
-  "data structures" into "packages" and "system utilities" and "frameworks" to be used by other programmers
-    - Started the concept of "published interfaces" that could be imported into another program and used to
-      provide the functionality of the "library."
-    - These libraries were collections of functions and data structures that were related to each other for a specific task.
+- This allowed easier code reuse and easier to understand state of the program than procedural languages.
+- Structured programming allowed the creation of "libraries" and "modules" to be easily produced to create standard subroutines and
+  data structures into complete software packages and system utilities and frameworks to be used by other programmers.
+- This allowed for more complex programs to be created and maintained by smaller teams of programmers.
+    - C started the concept of "published interfaces" that could be imported into another program and used to
+      provide the functionality of libraries.
+    - These libraries were just collections of functions and data structures that were related to each other for a specific task.
 - Structured languages allowed for much more portable and reusable code than procedural languages as they were not
   tied to any specific computer hardware or operating system. The computer manufacturer only had to create the
   compiler for their particular machine, and then the same code could be run on any machine that had a compiler
   for the language.
-  
-  > Procedural Programming: It’s Back? It Never Went Away - Kevlin Henney [ACCU 2018]
-  > - https://www.youtube.com/watch?v=mrY6xrWp3Gs
  
 ### Comparing C to Machine Language <a name="c-to-machine-language"></a>
 ##### c-to-machine-language
-- C was meant to be a "high-level portable shorthand" for Assembly Language, which was a "high-level shorthand" for Machine Language.
-- All of the "high-level" languages are "compiled" into "machine language" by a "compiler" program.
+- C was meant to be a "high-level portable shorthand" for Assembly Language, which was a high-level shorthand for Machine Language.
+- All of high-level languages are eventually compiled into machine language by a compiler program.
   > Comparing C to machine language - Ben Eater
   > - https://www.youtube.com/watch?v=yOyaJXpAYZQ
+  
+
+### Bonus: History of Procedural to Structured Programming <a name="procedural-to-structured"></a>
+  > Procedural Programming: It’s Back? It Never Went Away - Kevlin Henney [ACCU 2018]
+  > - https://www.youtube.com/watch?v=mrY6xrWp3Gs
 
 - [Continue Reading - Class Oriented Programming](./09-ClassOrientedProgramming.md)
 - [Back to Index](README.md)
