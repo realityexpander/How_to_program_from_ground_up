@@ -4,7 +4,7 @@
 
 ### Scopes <a name="scopes"></a>
 ###### scopes
-- No more "goto" statements, only subroutines and conditional branching were allowed.
+- No more `GOTO` statements, ONLY subroutines and conditional branching were allowed.
 - "Scopes" define the visibility of variables and functions to other parts of the program.
   - "Scopes" are also called:
     - "code blocks"
@@ -24,16 +24,16 @@
     
     > JEEPERS CREEPERS! That's a lot of names for the same thing, people!
 
-- The concept of "scopes" was introduced to limit the use of "globally mutable" variables and visibility of functions.
+- The concept of scopes was introduced to limit the use of "globally mutable" variables and visibility of functions.
   - This is the origin of "encapsulation" and first introduced to limit the visibility of the "local" variables
     and functions to only the "scope" or "block" that they were defined in, and to limit the "side effects" of the program.
-  - Scopes have names and can be nested inside other scopes, and the "local" variables and functions are only visible
-    to the "scope" that they are defined in. The inner scope has access to it's outer scope as well. But the outer scope
-    does not have access to the inner scope.
-  - By reducing the area that needs to be understood. it makes the program easier to understand and maintain and
-    allowed for larger teams to work on the same program without stepping on each other's toes.
-  - This is also the reason for the "Structured Programming" paradigm, as it was the first time that the "state"
-    of the program was "structured" and "encapsulated" into "scopes" or "code blocks"
+  - Scopes have names and can be nested inside other scopes, and the local variables and functions are only visible
+    to the scope that they are defined in. The inner scope has access to it's outer scope as well. 
+    _But_ the outer scope does not have access to the inner scope.
+  - By reducing the "cognitive area" that needs to be understood. it makes the program easier to understand and maintain and
+    allows for larger teams to work on the same program without stepping on each other's toes.
+  - This is the main reason for the "Structured Programming" approach, as it was the first time that the "state"
+    of the program was structured and encapsulated into localized scopes or "code blocks"
   - Example of structured language (C):
       - Note: The `//` symbols means the rest of the line is comment, it is not part of the program,
         it's just for explanation and is ignored by the compiler.
@@ -42,7 +42,7 @@
     #include <stdio.h>  // <-- Include the standard input/output library.
     
     int main() {  // <-- start of the program & "opens" the scope, `int` means the function returns an integer, `main` is the name of the function.
-       int x = 10;
+       int x = 10; // Assigns the value of 10 to the variable `x` of type `int` (integer)
        int y = 100;
        
        { // <-- The "open curly bracket" denotes the start of a scope. This is an "inner" or "nested"  scope.
