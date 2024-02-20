@@ -144,7 +144,7 @@
                         x, y, z, p.x, p.y, p.colorIdChar);
     }
     
-    // Output: 5 6.128000 A     10   42   G
+    // Output: 5 6.128000 A   10   42   G
      
     ```  
     - Copy and Paste the above code into an online C compiler to see the output: https://www.onlinegdb.com/online_c_compiler
