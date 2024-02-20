@@ -157,7 +157,7 @@
       > - It's Time For Waterfall To DIE
       >   - https://www.youtube.com/watch?v=o3jDLVCpH1E
       > - Managers never read the second page, and took it as a "best practice". _Poor Winston Royce._
-      >   - Note to self: _Always read the second page, or put the most important information on the first page._ 
+      >   - Note to self: _Always put the most important information on the first page._ 
   
   - ### Scrum
     - Can we use what worked in Japanese car production with Japanese culture to have the same success in software development? Nope.
