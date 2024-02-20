@@ -119,7 +119,7 @@
     // C program to demonstrate the use of "primitive types" and "structs" in structured programming.
     #include <stdio.h>  // <-- Include the standard input/output library.
     
-    struct Point {  // <-- `Point` is a programmer-defined type that is made up of other types (Structure or "struct")
+    struct Point {  // <-- `Point` is a programmer-defined type that is made up of other types (Structure or "struct".)
        int x;
        int y;
        char colorIdChar;  // <-- `char` is a type that represents a single ASCII character (1 byte.)
@@ -129,7 +129,7 @@
        int x = 5; 
        float y = 6.128; 
        char z = 'A'; 
-       struct Point p = { 10, 42, 'G' };  // <-- `p` is a variable of type `Point` that is `assigned` values of 10, 42, and 'G'
+       struct Point p = { 10, 42, 'G' };  // <-- `p` is a variable of type `Point` that is `assigned` values of 10, 42, and 'G'.
        
        printf("Output: %d %f %c   %d   %d   %c", 
                         x, y, z, p.x, p.y, p.colorIdChar);
