@@ -23,7 +23,7 @@
     - "isolated" 
     
     > JEEPERS CREEPERS! That's a lot of names for the same thing, people!
-    >> ### Humans like to give many names to things that are important and/or big problems to manage.  
+    >> ### Humans like to give many names to things that are important and/or common problems to manage.  
 
 - The concept of scopes was introduced to limit the use of "globally mutable" variables and visibility of functions.
   - This is the origin of "encapsulation" and first introduced to limit the visibility of the "local" variables
