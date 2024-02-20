@@ -733,14 +733,18 @@
          Animal["
             abstract class Animal
             expects method makeSound()
+            ⬇︎
          "] -->|inherits| Cat["
             🐈 Class Cat
             method makeSound()
+            ⬇︎
          "] & Dog["
             🐕 Class Dog
             method makeSound()
+            ⬇︎
             "]-->|inherits| Cog???["
                class Cog(???) extends Cat & Dog
+               ⬇︎
             "]
       
          Cog??? -..-> Y((("
@@ -751,6 +755,7 @@
             
             Does it “Meow” or “Bark?”
             🐈+🐕 = ⚙️(???)
+            ⧗⧫⧖
          "))) 
       ```
   - Example of an attempt to use "Multiple Inheritance" in C++:
