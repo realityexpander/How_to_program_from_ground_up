@@ -56,7 +56,7 @@
              int y = 72; // <-- This is a different `y` than the one in the `main` scope.
              printf("%d %d\n", x, y); // <-- Print the value of y as a decimal number, ("\n" means "go to next line")
                                   //     (%d means use decimal value of x and y, 42 and 72.)
-          } // <-- The "close curly braket" denotes the end of the scope.
+          } // <-- The "close curly bracket" denotes the end of the scope.
           
           printf("%d %d %d\n", x, y, z); // <-- Print the value of x, y, and z as a decimal number 
                                             //     (%d means use decimal value of x, y, and z, 42, 32, and 55.) 
