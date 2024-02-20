@@ -77,9 +77,9 @@
   - Live Code Example in Kotlin: [Structured Programming Example with Scopes: `structuredExample.kt`](src/main/kotlin/structuredExample.kt)
 
   ```mermaid
-     flowchart TB
-     
-     subgraph main scope["main() scope"]
+     flowchart LR
+  
+     subgraph main_scope["main() scope"]
        y01["y=100"]
        x1["x=10"]
        x3 --> x1
@@ -95,14 +95,22 @@
            z2["z"]
          end
        end
+       
+       printf2
      end
+  
+     subgraph stdio["stdio.h"]
+       printf["printf() function"]
+     end
+  
+     printf2["printf()"] ---> printf   
   ```
 
 ### Types <a name="types"></a>
 ##### types
 - The concept of "types" (or "kinds") was introduced to define the size & intended purpose of "primitive"
   data types
-  - Procedural langauges only had a few simple types: "number" or "character" or "string of characters" or "array"
+  - Procedural languages only had a few simple types: "number" or "character" or "string of characters" or "array"
   - Primitive types are: `int`, `long`, `float`, `char`, and `bool`
   - Primitive types are the "building blocks" of all other types defined in `struct`s
   - Example of Types (C):
