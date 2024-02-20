@@ -66,7 +66,7 @@
                                 //     (%d means use decimal value of x and y, 42 and 100.)
        // printf("%d", z); // <-- This line would cause a "compile error" because the variable "z" is not visible in this scope.
     
-    } // <-- The "close curly braket" denotes the end of the `main` scope.
+    } // <-- The "close curly bracket" denotes the end of the `main` scope.
     
     
     // Output:
