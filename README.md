@@ -110,9 +110,10 @@ This document is a reference and follow along guide for my video series on YouTu
   - [Immutability & No Side Effects](10-FunctionalProgramming.md#immutability-no-side-effects)
   - [Functional Programming Style](10-FunctionalProgramming.md#functionalExample)
 - [Back-to-Object Oriented Programming](11-BackToObjectOrientedProgramming.md) 1970s-Present
-  - Can we re-visit the original principles of OOP to make softare easier to understand and maintain?
+  - Can we re-visit the original principles of OOP to make software easier to understand and maintain?
+  - [A word of caution about BOOP style](11-BackToObjectOrientedProgramming.md#boop-caution)
   - [Banned Patterns in BOOP](11-BackToObjectOrientedProgramming.md#banned-patterns-in-boop)
-  - [Why is Class-Oriented Programming (COP)](11-BackToObjectOrientedProgramming.md#why-is-cop-bad)
+  - [Why is Class-Oriented Programming (COP) so bad?](11-BackToObjectOrientedProgramming.md#why-is-cop-bad)
   - [Back-to Object Oriented Programming Example](11-BackToObjectOrientedProgramming.md#boop-example)
 - [Parallel Processing (also called "Concurrent" Programming)](12-ParallelProcessing.md) 1960s-Present
   - Can we make our programs run faster by doing more than one thing at a time?  

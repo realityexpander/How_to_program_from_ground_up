@@ -154,10 +154,10 @@
       clear on **page 2** of his famous 1970 paper _"Managing the Development of Large Software Systems"_ that he was not advocating
       for the "Waterfall" process, but was trying to make a point about how software development was being managed like
       a manufacturing process, and it is a **_counter-productive way to manage the knowledge work._**
-      > It's Time For Waterfall To DIE
-      > - https://www.youtube.com/watch?v=o3jDLVCpH1E
-      - Managers never read the second page, and took it as a "best practice". _Poor Winston Royce._
-        - Note to self: _Always read the second page, or put the most important information on the first page._ 
+      > - It's Time For Waterfall To DIE
+      >   - https://www.youtube.com/watch?v=o3jDLVCpH1E
+      > - Managers never read the second page, and took it as a "best practice". _Poor Winston Royce._
+      >   - Note to self: _Always read the second page, or put the most important information on the first page._ 
   
   - ### Agile
     - Great start, good and useful concepts, but... 
