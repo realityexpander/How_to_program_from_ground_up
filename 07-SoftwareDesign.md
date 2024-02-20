@@ -71,7 +71,7 @@
               when {
                   midVal < value -> low = mid + 1
                   midVal > value -> high = mid - 1
-                  else -> return mid // ends the recursion
+                  else -> return mid // ends the looping when the value is found
               }
           }
           
