@@ -86,7 +86,7 @@ This document is a reference and follow along guide for my video series on YouTu
   - Can we give some kind of standard way of organizing and communicating the solution to a problem? 
   - [Scopes](08-StructuredProgramming.md#scopes)
   - [Types](08-StructuredProgramming.md#types)
-- [Class Oriented Programming](09-ClassOrientedProgramming.md) 1980s-Present
+- [Class Oriented Programming (COP)](09-ClassOrientedProgramming.md) 1980s-Present
   - Can we simulate real-world objects easier than with procedural or structured programming?
   - [COP Tried to Introduce a New Style of Programming, But Ended With Mixed Results](09-ClassOrientedProgramming.md#cop-tried-to-introduce)
   - [Encapsulation](09-ClassOrientedProgramming.md#encapsulation)
@@ -105,11 +105,11 @@ This document is a reference and follow along guide for my video series on YouTu
   - [Allowing for "Multiple Inheritance" in C++ was a mistake, and it was removed from Java and C# for very good reasons](09-ClassOrientedProgramming.md#multiple-inheritance-removed)
   - [Design of C++](09-ClassOrientedProgramming.md#design-of-c-plus-plus)
   - [Design Patterns](09-ClassOrientedProgramming.md#design-patterns)
-- [Functional Programming](10-FunctionalProgramming.md) 1950s-Present
+- [Functional Programming (FP)](10-FunctionalProgramming.md) 1950s-Present
   - Can we structure our code in a way to have less bugs and be easier to understand?
   - [Immutability & No Side Effects](10-FunctionalProgramming.md#immutability-no-side-effects)
   - [Functional Programming Style](10-FunctionalProgramming.md#functionalExample)
-- [Back-to-Object Oriented Programming](11-BackToObjectOrientedProgramming.md) 1970s-Present
+- [Back-to-Object Oriented Programming (BOOP)](11-BackToObjectOrientedProgramming.md) 1970s-Present
   - Can we re-visit the original principles of OOP to make software easier to understand and maintain?
   - [A word of caution about BOOP style](11-BackToObjectOrientedProgramming.md#boop-caution)
   - [Banned Patterns in BOOP](11-BackToObjectOrientedProgramming.md#banned-patterns-in-boop)
