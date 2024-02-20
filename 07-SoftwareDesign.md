@@ -159,6 +159,12 @@
       > - Managers never read the second page, and took it as a "best practice". _Poor Winston Royce._
       >   - Note to self: _Always read the second page, or put the most important information on the first page._ 
   
+  - ### Scrum
+    - Can we use what worked in Japanese car production with Japanese culture to have the same success in software development? Nope.
+    - Scrum is a "production management" methodology that was developed for managing the production of cars, and it
+      was soon co-opted into the _"Agile® Certification Business"_ and turned into a "one-size-fits-all" process that was
+      supposed to work for any kind of general software development, and it doesn't.
+  
   - ### Agile
     - Great start, good and useful concepts, but... 
     - Widely misunderstood, misapplied, and soon co-opted into "Agile©®™ Certification©®™ Business."
@@ -166,12 +172,6 @@
       >   - https://www.youtube.com/watch?v=0kRCFVGpX7k&t=155s  
       > - Kevlin Henney — The Case for Technical Excellence
       >   - https://www.youtube.com/watch?v=LLEXAdO3X1o
-  
-  - ### Scrum
-    - Can we use what worked in Japanese car production with Japanese culture to have the same success in software development? Nope.
-    - Scrum is a "production management" methodology that was developed for managing the production of cars, and it
-      was soon co-opted into the _"Agile® Certification Business"_ and turned into a "one-size-fits-all" process that was
-      supposed to work for any kind of general software development, and it doesn't.
   
   - ### SAFe 
     - Another over-complicated process that tries to "productionize" the software development process.
