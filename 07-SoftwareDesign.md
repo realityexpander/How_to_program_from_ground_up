@@ -182,9 +182,10 @@
       that many people looked far and wide for _ANY_ solution to gain a foothold on the process and make it more
       predictable and manageable. Unfotunately, knowledge work is FUNDAMENTALLY risky and not possible to plan
       because its a process of DISCOVERY, not a process of manufacturing. 
-    - The biggest risk to manage in software development is that we may **NEVER** find a workable solution in
-      the time allotted._ This is not changeable. It's a fundamental ground-level understanding of knowledge work.
-    - ### Dealing with the principal risks involved with knowledge work is the core problem in planning software development.
+    - The biggest risk to manage in software development is that _**WE MAY NEVER FIND**_ a workable solution in
+      the time allotted. _This is not changeable. It's a fundamental limitation of all knowledge work._
+    
+    - ### Dealing with the principal risks involved with knowledge work is the core problem in all software development.
 
   - ## The Problem with Applying "Production Management" Methodologies to Software Development Knowledge Work
     - The main issues with all these approaches is that they assume that software development is just another
@@ -198,8 +199,8 @@
         fundamentally different kinds of workers than the people who work in manufacturing. This was a good thing.
       - The problem is that the Agile movement was soon co-opted into the "Agile® Certification Business" and turned
         into a "one-size-fits-all" process that was supposed to work for all kinds of software development, and it
-        doesn't. It's a cargo cult that doesn't work for most teams, as most teams implement the "rules" directly without
-        understanding the "spirit" of the rules, which there are no rules... just some values:
+        doesn't. It's a cargo cult that does not work for most teams, as most teams implement the "Rules™®©" directly without
+        understanding the spirit of the agile rules, _which there are no rules_... just some values:
     
       - ### The 4 Values of the Agile Manifesto
         - The Agile Manifesto was written to address the problem of trying to manage software development like a manufacturing
