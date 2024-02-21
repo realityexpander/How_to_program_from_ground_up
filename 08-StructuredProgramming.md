@@ -124,7 +124,7 @@
   - Procedural languages only had a few primitive types: "integer," "character," "string of characters" or "array"
   - Having "structured" types allowed for more complex data to be defined and used in the program, instead of only using the primitive types.
   - Primitive types are: `int`, `long`, `float`, `char`, and `bool` (note the `bool` type was not introduced until later in C++ and C99.)
-  - Primitive types are the "building blocks" of all other types defined in `struct`s
+  - Primitive types are the "building blocks" of all other types defined in `struct`-s
   - Example of Types (C):
     ```C
     // C program to demonstrate the use of "primitive types" and "structs" in structured programming.
