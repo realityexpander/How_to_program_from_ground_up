@@ -55,7 +55,8 @@
         CSharp{{"C#"}}
         Fortran -.->Algol68
         Smalltalk{{"Smalltalk
-                  Originator of OOP term"}} -.->|for OOP ideas|Javascript
+                  Originator of term OOP
+                  🙂"}} -.->|for OOP ideas|Javascript
         Smalltalk -.->|for OOP ideas|Ruby
         Basic -.-> |"for Interpreted & 
                     interactive
