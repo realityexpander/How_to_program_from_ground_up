@@ -62,6 +62,7 @@
                   Originator of term OOP
                   🙂"}} -.->|for OOP ideas|Javascript
         Smalltalk -.->|for OOP ideas|Ruby
+        Smalltalk -.->|for OOP ideas|HyperTalk
         Basic -.-> |"for Interpreted & 
                     interactive
                     ⚡️"|Smalltalk
@@ -70,6 +71,7 @@
                               ✨"|Smalltalk
         Kotlin{{Kotlin}}
         Ruby{{Ruby}}
+        HyperTalk{{HyperTalk}}
         Javascript{{Javascript}}
         VisualBasic{{"Visual Basic"}}
     
