@@ -19,7 +19,7 @@
   - We are always going to need people who have various tastes and understandings about humans and the world to
     create software that is useful and effective FOR HUMANS.
 
-## History Graph of Programming languages from This Document
+## History Graph of Programming languages Referenced In This Document
   ```mermaid
     graph TB
         MachineLanguage[Machine Language] -->|human readable| AssemblyLanguage
