@@ -53,7 +53,8 @@
         Smalltalk -.->|for OOP ideas|Ruby
         Basic -.-> |for Interpreted & 
                     interactive|Smalltalk
-        AssemblyLanguage-.->|for self-modifying @ runtime|Smalltalk
+        AssemblyLanguage-.->|for self-modifying 
+                             code @ runtime|Smalltalk
     
     Note["Conceptual Inheritance Graph of Selected Languages.
           
