@@ -250,7 +250,7 @@
          10 55
       ```
     - [Click for source code to copy and paste into the BASIC playground: `proceduralWithForLoop.bas`](assets/proceduralWithForLoop.bas) 
-    > ### NOTE: The process we just went through is to change code but doesn't change behavior called "Refactoring" and is a common practice in programming to make code more readable and maintainable.
+    > ### NOTE: The process we just went through "to change code but doesn't change behavior" is called "Refactoring" and is a common practice in programming to make code more readable and maintainable.
 
 - [Continue Reading - Software Design](./07-SoftwareDesign.md)
 - [Back to Index](README.md)
