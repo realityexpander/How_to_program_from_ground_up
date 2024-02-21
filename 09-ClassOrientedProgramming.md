@@ -221,6 +221,8 @@
     }
     
     class PersonManager {
+       // Note: No variables here. Just a set of `static` methods to manipulate the data of the `Person` object.
+    
        companion object {  // <-- creates a `static` set of functions that can be accessed without an instance of the `PersonManager` class.
           fun changeName(person: Person, newName: String) {
              person.name = newName
