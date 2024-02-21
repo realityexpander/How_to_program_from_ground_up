@@ -719,6 +719,7 @@
       their superclass."
     - There is a lot of confusion around this principle, but it's just a fancy way of saying that "subclasses should
       work the same as their superclass."
+    - Live Code Example: [Liskov Substitution Principle in Kotlin](src/main/kotlin/liskovSubstitutionPrincipleExample.kt)
 
 ## Controlled Visibility of Variables and Methods <a name="controlled-visibility"></a>
 ###### controlled-visibility
