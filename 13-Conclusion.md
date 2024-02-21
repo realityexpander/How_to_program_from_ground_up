@@ -27,23 +27,25 @@
         AssemblyLanguage[Assembly Language] -->|Procedural|COBOL
         AssemblyLanguage[Assembly Language] -->|Procedural|Fortran
         AssemblyLanguage[Assembly Language] -->|Structured|Algol68
-        AssemblyLanguage[Assembly Language] -->C
+        AssemblyLanguage[Assembly Language] -->|Portability|C
         COBOL["COBOL"] -->Basic
         Basic["BASIC"] ---> VisualBasic
         Fortran["Fortran"] -->Basic
-        Algol68[Algol68] -.->|for Structure|C
+        Algol68[Algol68] -.->|for data structures|C
+        Simula67["Simula67"] -->|scopes, pointers|C
         C["C"] -->Cplusplus
-        Simula67 -->|for COP ideas|Cplusplus
+        C -->Smalltalk
+        Simula67 --->|for COP ideas|Cplusplus
         Cplusplus["C++"] -->|for COP/pseudo-OOP ideas|Java
-        Smalltalk -.->|pilfered OOP term|Cplusplus
+        Smalltalk -..->|absconded OOP term 
+                        & some ideas|Cplusplus
         Java[Java] -->Kotlin
         Java -->CSharp
         CSharp["C#"]
         Fortran -->Algol68
-        Algol68 --->Smalltalk
         Smalltalk["Smalltalk
-                  Originator of OOP term"] -->|for OOP ideas|Javascript
-        Smalltalk -->|for OOP ideas|Ruby
+                  Originator of OOP term"] -.->|for OOP ideas|Javascript
+        Smalltalk -.->|for OOP ideas|Ruby
         Basic -.-> |for Interpreted|Smalltalk
         AssemblyLanguage-.->|for self-changing @ runtime|Smalltalk
     
