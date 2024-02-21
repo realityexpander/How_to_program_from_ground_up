@@ -29,20 +29,20 @@
         AssemblyLanguage{{Assembly Language}} -->|Structured|Algol68
         AssemblyLanguage{{Assembly Language}} -->|Structured|C
         AssemblyLanguage{{Assembly Language}} -->|Structured|Simula67
-        COBOL{{"COBOL"}} -.->|Easy to 
-                            Learn Syntax
-                            ⚡️️|Basic
+        COBOL{{"COBOL"}} -.->|"Easy to 
+                              Learn Syntax
+                              ⚡️️"|Basic
         Basic{{"BASIC"}} ---> VisualBasic
-        Fortran{{"Fortran"}} -.->|Evaluate 
-                                Formulas
-                                ✨|Basic
+        Fortran{{"Fortran"}} -.->|"Evaluate 
+                                  Formulas
+                                  ✨"|Basic
         Algol68{{Algol68}} -.->|"for structures, 
-                             scopes & syntax
-                             ⚡️️
-                             "|C
+                                scopes & syntax
+                                ⚡️️
+                                "|C
         Simula67{{"Simula67"}} -.->|"for pointers & 
-                                  other concepts
-                                  ✨"|C
+                                    other concepts
+                                    ✨"|C
         C{{"C"}} -->Cplusplus
         C -.->Smalltalk
         Simula67 -.->|for COP ideas|Cplusplus
@@ -57,12 +57,12 @@
         Smalltalk{{"Smalltalk
                   Originator of OOP term"}} -.->|for OOP ideas|Javascript
         Smalltalk -.->|for OOP ideas|Ruby
-        Basic -.-> |for Interpreted & 
+        Basic -.-> |"for Interpreted & 
                     interactive
-                    ⚡️|Smalltalk
-        AssemblyLanguage-.->|for self-modifying 
-                             code @ runtime
-                             ✨|Smalltalk
+                    ⚡️"|Smalltalk
+        AssemblyLanguage-.->|"for self-modifying 
+                              code @ runtime
+                              ✨"|Smalltalk
         Kotlin{{Kotlin}}
         Ruby{{Ruby}}
         Javascript{{Javascript}}
@@ -70,7 +70,8 @@
     
     Note("Conceptual Inheritance Graph of Selected Languages.
           
-          Not exhaustive, not to time scale.")
+          Not exhaustive, not to time scale.
+          ⨭⨂⨀⨁⨮")
     A("A") -.-> |means A influenced B.| B("B")
     X("X") --> |means Y descended from X.| Y("Y")
     
