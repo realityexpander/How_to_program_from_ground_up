@@ -17,7 +17,7 @@
   - Solution methods will become a bit more abstract in the future using tools like GitHub copilot, but the
     programmer will still need to know all these details to get the machine to do EXACTLY what they want it to do.
   - We are always going to need people who have various tastes and understandings about humans and the world to
-    create software that is useful and effective FOR HUMANS.
+    create software that is useful and effective FOR THOSE PARTICULAR HUMANS.
 
 ## You can only learn programming by actually programming
   > Stop Studying Programming
