@@ -194,7 +194,9 @@ flowchart LR
   >> - 'Declarative Thinking, Declarative Practice' - Kevlin Henney [ ACCU 2016 ]
   >>   - https://www.youtube.com/watch?v=nrVIlhtoE3Y 
   >> - HTML IS a Programming Language (Imperative vs Declarative) - Computerphile
-  >>  - https://www.youtube.com/watch?v=4A2mWqLUpzw
+  >>   - https://www.youtube.com/watch?v=4A2mWqLUpzw
+  >> - You Should Use Sequence Diagrams
+  >>   - https://www.youtube.com/watch?v=DaP6z2CsVhM 
 
 
 - [Continue Reading - Back-to-Object Oriented Programming](11-BackToObjectOrientedProgramming.md)  
