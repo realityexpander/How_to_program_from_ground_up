@@ -3,7 +3,7 @@
 
 data class Person(
 	var name: String = "John Doe",
-	var age: Int = 0,
+	var age: Int = 0,  // never store age like this, always calculate it from the birthdate.
 	var height: Double = 0.0,
 	var weight: Double = 0.0
 )
