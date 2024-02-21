@@ -63,7 +63,45 @@
   ``` 
   > Live Code Example: [How Threads Work in Kotlin](src/main/kotlin/threadExample.kt)
 
-- ### Fixing the threads "race condition" problem using "Atomic" updates (`synchronized` keyword) <a name="AtomicUpdates"></a>
+## Race Condition Problem Diagram <a name="RaceConditionDiagram"></a>
+###### race-condition-diagram
+- The problem with the above example is that the threads are updating the value of `x` at the same time, and the order
+  of the updates is not consistent, so the final value of `x` is not the expected value of `200`.
+- This is called a race condition, and is a common problem with threads and other parallel processing systems.
+- The problem is that the threads are not "atomic", meaning that the updates to `x` are not guaranteed to be consistent
+  and in the correct order, as the threads are running concurrently and updating `x` at the same time.
+
+  ```mermaid
+  graph TD
+      A[Thread 1] -->|Read then Update x| B[Shared Variable x]
+      C[Thread 2] -->|Read then Update x| B
+  ```
+  - More explicitly:
+  ```mermaid
+     sequenceDiagram
+         autonumber
+         participant Thread 1
+         participant Shared variable `x`
+         participant Thread 2
+           Note right of Shared variable `x`: `x` value starts at 0.
+         Shared variable `x`->>Thread 1: Read `x` (0).
+         Shared variable `x`->>Thread 2: Read `x` (0).
+         Thread 1->>Shared variable `x`: Calculate new value & set `x` (1) .
+         Note right of Shared variable `x`: `x` value is set to 1.
+         Thread 2->>Shared variable `x`: Calculate new value & set `x` (1).
+         Note right of Shared variable `x`: `x` value is set to 1 AGAIN - WRONG!
+  
+         Note right of Shared variable `x`: `x` value should be 2, but is 1 due to race condition.
+         Note right of Thread 1: Sometimes the sequence of updates are correct...
+         Shared variable `x`->>Thread 1: Read `x` (1).
+         Thread 1->>Shared variable `x`: Calculate new value & set `x` (2).
+         Shared variable `x`->>Thread 2: Read `x` (2).
+         Thread 2->>Shared variable `x`: Calculate new value & set `x` (3).
+         Note right of Shared variable `x`: `x` in this case updated correctly to 3.
+         Note right of Shared variable `x`: It's random and unpredictable when the updates will be correct.
+
+  ```
+## Fixing the threads "race condition" problem using "Atomic" updates (`synchronized` keyword) <a name="AtomicUpdates"></a>
 ###### atomic-updates
   ```Kotlin
   fun main() {
@@ -126,6 +164,28 @@
   ```
   > Live Code Example: [How to Threads Work in Kotlin](src/main/kotlin/threadExample.kt)
 
+  - Atomic Update Diagram:
+  ```mermaid
+    sequenceDiagram
+        autonumber
+        participant Thread 1
+        participant Shared variable `x`
+        participant Thread 2
+            Note left of Shared variable `x`: `x` value starts at 0.
+        critical Atomic update block 
+          Shared variable `x`->>Thread 1: Read `x` (0).
+          Thread 1->>Shared variable `x`: Calculate new value & set `x` (1).
+        end 
+        Note left of Shared variable `x`: `x` value is set to 1.
+        critical Atomic update block 
+          Shared variable `x`->>Thread 2: Read `x` (1).
+          Thread 2->>Shared variable `x`: Calculate new value & set `x` (2).
+        end
+        Note right of Shared variable `x`: `x` value is set to 2.
+        Note right of Shared variable `x`: `x` value is updated correctly due to "atomic" updates.
+  
+  ```
+  
 ## Coroutines <a name="Coroutines"></a>
 ###### coroutines
   - ### BIG IDEA - Is there a way to simulate parallel execution and avoid the complexity and overhead of threads?

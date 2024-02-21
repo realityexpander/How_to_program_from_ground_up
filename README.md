@@ -121,6 +121,7 @@ This document is a reference and follow along guide for my video series on YouTu
 - [Parallel Processing (also called "Concurrent" Programming)](12-ParallelProcessing.md) 1960s-Present
   - Can we make our programs run faster by doing more than one thing at a time?  
   - [Threads](12-ParallelProcessing.md#threads)
+  - [Race Condition Diagram](12-ParallelProcessing.md#race-condition-diagram)
   - [Fixing the threads "race condition" problem using "Atomic" updates](12-ParallelProcessing.md#atomic-updates)
   - [Coroutines](12-ParallelProcessing.md#coroutines)
   - [Fixing the Coroutine race condition problem using "Atomic" updates](12-ParallelProcessing.md#fixing-updates-with-coroutines)
