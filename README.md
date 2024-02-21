@@ -1,6 +1,6 @@
 [<img src="assets/title.png" width="450">](https://www.youtube.com/playlist?list=PLzUxWOrVXB4QHsURai1GmmhmqAUVNbfno)
 
-# How to Program From The Bottom Up (with Minimal BS)
+# How to Program From The Ground Up (with Minimal BS)
 ©2024 Chris Athanas
 
 A guide for anyone who wants a solid understanding of software development as a historical
