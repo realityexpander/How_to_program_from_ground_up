@@ -30,20 +30,26 @@
         AssemblyLanguage{{Assembly Language}} -->|Structured|C
         AssemblyLanguage{{Assembly Language}} -->|Structured|Simula67
         COBOL{{"COBOL"}} -.->|Easy to 
-                            Learn Syntax|Basic
+                            Learn Syntax
+                            ⚡️️|Basic
         Basic{{"BASIC"}} ---> VisualBasic
         Fortran{{"Fortran"}} -.->|Evaluate 
-                                Formulas|Basic
+                                Formulas
+                                ✨|Basic
         Algol68{{Algol68}} -.->|"for structures, 
-                             scopes & syntax"|C
+                             scopes & syntax
+                             ⚡️️
+                             "|C
         Simula67{{"Simula67"}} -.->|"for pointers & 
-                                  other concepts"|C
+                                  other concepts
+                                  ✨"|C
         C{{"C"}} -->Cplusplus
         C -.->Smalltalk
         Simula67 -.->|for COP ideas|Cplusplus
         Cplusplus{{"C++"}} -->|for COP/pseudo-OOP ideas|Java
-        Smalltalk -..->|"absconded OOP term 
-                        & some ideas"|Cplusplus
+        Smalltalk -..->|"absconded OOP term 🫤 
+                        & some ideas
+                        🤔🤨🧐"|Cplusplus
         Java{{Java}} -->Kotlin
         Java -->CSharp
         CSharp{{"C#"}}
@@ -52,9 +58,11 @@
                   Originator of OOP term"}} -.->|for OOP ideas|Javascript
         Smalltalk -.->|for OOP ideas|Ruby
         Basic -.-> |for Interpreted & 
-                    interactive|Smalltalk
+                    interactive
+                    ⚡️|Smalltalk
         AssemblyLanguage-.->|for self-modifying 
-                             code @ runtime|Smalltalk
+                             code @ runtime
+                             ✨|Smalltalk
         Kotlin{{Kotlin}}
         Ruby{{Ruby}}
         Javascript{{Javascript}}
