@@ -172,12 +172,12 @@
         participant Shared variable `x`
         participant Thread 2
             Note left of Shared variable `x`: `x` value starts at 0.
-        critical Atomic update block 
+        critical `synchronized` Atomic update block 
           Shared variable `x`->>Thread 1: Read `x` (0).
           Thread 1->>Shared variable `x`: Calculate new value & set `x` (1).
         end 
         Note left of Shared variable `x`: `x` value is set to 1.
-        critical Atomic update block 
+        critical `synchronized` Atomic update block 
           Shared variable `x`->>Thread 2: Read `x` (1).
           Thread 2->>Shared variable `x`: Calculate new value & set `x` (2).
         end
@@ -265,7 +265,7 @@
            
         val job1 = GlobalScope.launch { // <-- `job1` is immediately started ("launched") to run in the main thread (GlobalScope).
            for (i in 1..NUMBER_OF_CYCLES) {
-              x.update { it + 1}  // <-- `update` tells the execution to wait here until the updating lock is released.
+              x.update { it + 1 }  // <-- `update` tells the execution to wait here until the updating lock is released, like the `synchronized` block.
               println("Coroutine 1: i=$i, x=${x.value}")
               delay(10.milliseconds)
            }
@@ -273,7 +273,7 @@
            
         val job2 = GlobalScope.launch { // <-- `job2` is immediately started ("launched") to run in the main thread (GlobalScope).
            for (i in 1..NUMBER_OF_CYCLES) {
-              x.update { it + 1}  // <-- `update` tells the execution to wait here until the updating lock is released.
+              x.update { it + 1 }  // <-- `update` tells the execution to wait here until the updating lock is released, like the `synchronized` block.
               println("Coroutine 2: i=$i, x=${x.value}")
               delay(10.milliseconds)
            }

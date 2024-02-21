@@ -19,6 +19,10 @@
   - We are always going to need people who have various tastes and understandings about humans and the world to
     create software that is useful and effective FOR HUMANS.
 
+## You can only learn programming by actually programming
+  > Stop Studying Programming
+  > - https://www.youtube.com/watch?v=QMbx0dTWJIQ  
+
 ## History Graph of Programming languages Referenced In This Document
   ```mermaid
     graph TB
