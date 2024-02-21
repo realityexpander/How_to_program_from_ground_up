@@ -27,15 +27,17 @@
         AssemblyLanguage[Assembly Language] -->|Procedural|COBOL
         AssemblyLanguage[Assembly Language] -->|Procedural|Fortran
         AssemblyLanguage[Assembly Language] -->|Structured|Algol68
-        AssemblyLanguage[Assembly Language] -->|Portability|C
+        AssemblyLanguage[Assembly Language] -->|Structured|C
         COBOL["COBOL"] -->Basic
         Basic["BASIC"] ---> VisualBasic
         Fortran["Fortran"] -->Basic
-        Algol68[Algol68] -.->|for data structures|C
-        Simula67["Simula67"] -->|scopes, pointers|C
+        Algol68[Algol68] -.->|for structures, 
+                             scopes & syntax|C
+        Simula67["Simula67"] -.->|pointers & 
+                                  other concepts|C
         C["C"] -->Cplusplus
-        C -->Smalltalk
-        Simula67 --->|for COP ideas|Cplusplus
+        C -.->Smalltalk
+        Simula67 -->|for COP ideas|Cplusplus
         Cplusplus["C++"] -->|for COP/pseudo-OOP ideas|Java
         Smalltalk -..->|absconded OOP term 
                         & some ideas|Cplusplus
@@ -51,7 +53,10 @@
     
     Note["Conceptual Inheritance Graph of Selected Languages.
           
-          Not Exhaustive, not to time scale."]
+          Not exhaustive, not to time scale."]
+    A -.-> |means A influenced B.| B
+    X --> |means X descended from Y.| Y
+    
   ```
 
 - [Back to Index](README.md)
