@@ -223,19 +223,19 @@
     class PersonManager {
        companion object {  // <-- creates a `static` set of functions that can be accessed without an instance of the `PersonManager` class.
           fun changeName(person: Person, newName: String) {
-               person.name = newName
+             person.name = newName
           }
     
           fun changeAge(person: Person, newAge: Int) {
-               person.age = newAge
+             person.age = newAge
           }
     
           fun changeHeight(person: Person, newHeight: Double) {
-               person.height = newHeight
+             person.height = newHeight
           }
           
           fun changeWeight(person: Person, newWeight: Double) {
-               person.weight = newWeight
+             person.weight = newWeight
           }
        }
     }
@@ -251,7 +251,7 @@
        person.weight = 150.0
        person.printPerson()   
      
-       // COP Using the `static` methods of the `PersonManager` class to manipulate the data of the `Person` object.
+       // COP style using the `static` methods of the `PersonManager` class to manipulate the data of the `Person` object.
        PersonManager.changeName(person, "Jane Doe")
        PersonManager.changeAge(person, 25)
        PersonManager.changeHeight(person, 5.5)
