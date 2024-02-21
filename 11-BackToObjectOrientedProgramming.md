@@ -52,13 +52,13 @@
   - There are only a few true BOOP languages, "Smalltalk," "Ruby," and, _incredibly_, "Javascript" are among the most popular ones.
 
 ###### boop-caution
-> ## A Word Of Caution: BOOP patterns may get you in trouble with your boss, as they are not widely known, understood or accepted. 
+> ## A Word Of Caution: BOOP patterns may get you in trouble with your boss, as the patterns are not widely known, understood or accepted. 
 >  - Although these patterns are slowly seeping into some areas of software development, like "Compose" from JetBrains,
 >    these ideas are not known or understood by most software developers, and very few libraries use BOOP patterns.
 >> ### A quote from Yegor's Blog Post from a fellow developer about Yehor's BOOP patterns: 
 >> ## “Recently I have seen the first part of your lecture called “Pain of OOP” and was very intrigued by the average age of the visitors. How do you think, will it be hard for them to find a job when the courses are over? Won’t that leave a “footprint” in their minds that almost everything they will see as junior software engineers will be totally against what you taught them? Or do they have to accept that as it is, taking into account that, as juniors, they will have no right to even propose changes to the architecture?”
 >  - Here is the blog post cautioning you about introducing these patterns (_EO is Yegor's term for BOOP_):
->    - [EO the Career Killer Blog Post by Yegor Bugaykeno](https://www.yegor256.com/2020/05/13/career-killer.html)
+>    - [EO the Career Killer Blog Post by Yegor Bugayenko](https://www.yegor256.com/2020/05/13/career-killer.html)
 
 ## Banned COP Patterns in BOOP <a name="banned-patterns-in-boop"></a>
  - ###### banned-patterns-in-boop
@@ -68,7 +68,7 @@
    > - What's Wrong With Object-Oriented Programming? Yegor Bugayenko
    >   - https://www.youtube.com/watch?v=K_QEOtYVQ7A
   
- - ### Specific COP-like "Design Patterns" are *NOT* permitted, such as:
+ - ### Specific COP-like "Design Patterns" are *NOT* permitted in BOOP, such as:
    - Factory Pattern
    - Abstract Factory Pattern
    - Adapter Pattern is strongly discouraged, and prefer composition over inheritance.
