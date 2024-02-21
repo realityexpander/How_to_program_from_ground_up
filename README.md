@@ -17,7 +17,7 @@ the disadvantages and limitations are often left out technical discussions, or w
 irrelevant due to ignorance.
 
 This document is a reference and follow along guide for my video series on YouTube: 
- - [YouTube Series - How to Program From The Bottom Up (with Minimal BS)](https://www.youtube.com/playlist?list=PLzUxWOrVXB4QHsURai1GmmhmqAUVNbfno)
+ - [YouTube Series - How to Program From The Ground Up (with Minimal BS)](https://www.youtube.com/playlist?list=PLzUxWOrVXB4QHsURai1GmmhmqAUVNbfno)
 
 ## Table of Contents
 - [Introduction](#introduction)
