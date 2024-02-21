@@ -92,6 +92,7 @@ This document is a reference and follow along guide for my video series on YouTu
 - [Class Oriented Programming (COP)](09-ClassOrientedProgramming.md) 1980s-Present
   - Can we simulate real-world objects easier than with procedural or structured programming?
   - [COP Tried to Introduce a New Style of Programming, But Ended With Mixed Results](09-ClassOrientedProgramming.md#cop-tried-to-introduce)
+  - [Design of C++](09-ClassOrientedProgramming.md#design-of-c-plus-plus)
   - [Encapsulation](09-ClassOrientedProgramming.md#encapsulation)
     - [Simplistic Overview of a Class and an Object Instance of the Class](09-ClassOrientedProgramming.md#simplistic-overview)
     - [Sophisticated Diagram of a Class and Object Instance](09-ClassOrientedProgramming.md#sophisticated-diagram)
@@ -106,7 +107,6 @@ This document is a reference and follow along guide for my video series on YouTu
   - [Polymorphism](09-ClassOrientedProgramming.md#polymorphism)
   - [Controlled Visibility of Variables and Methods](09-ClassOrientedProgramming.md#controlled-visibility)
   - [Allowing for "Multiple Inheritance" in C++ was a mistake, and it was removed from Java and C# for very good reasons](09-ClassOrientedProgramming.md#multiple-inheritance-removed)
-  - [Design of C++](09-ClassOrientedProgramming.md#design-of-c-plus-plus)
   - [Design Patterns](09-ClassOrientedProgramming.md#design-patterns)
 - [Functional Programming (FP)](10-FunctionalProgramming.md) 1950s-Present
   - Can we structure our code in a way to have less bugs and be easier to understand?

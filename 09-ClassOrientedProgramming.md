@@ -2,6 +2,7 @@
   - ### BIG IDEA — We can simulate real-world objects and their interactions with each other by using "classes" and "objects" in our code.
   
   - Usually misnamed "Object Oriented Programming (OOP)," as "Objects" are _not_ the main focus of the paradigm, "Classes" are!
+  - A "Class" is just a structure in memory that contains the values (or "state") of the variables and pointers to the functions of the class.
   - COP is Based on "Simula 67," a language specifically designed to simulate real-world systems. 
   - The creator gave "head nods" to "Smalltalk" but took a different and more "procedural" approach to the class 
     and object concepts explored in Smalltalk, primarily to use more practical aspect of the ideas for the needs of the time.
