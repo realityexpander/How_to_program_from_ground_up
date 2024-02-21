@@ -4,7 +4,7 @@
     > [<img src="assets/bjarne2.png" width="300">](https://en.wikiquote.org/wiki/Bjarne_Stroustrup)
     > 
     > Bjarne Stroustrup, the creator of C++, said that C++ _**was never meant to be the OOP**_ that Alan-Kay was referring to.
-    >> Originator of several poorly understood ideas which still haunt and confuse people to this day, but were appropriate for his use-case at the time, and still is for many lower-level of performance-intensive applications.
+    >> Originator of several poorly applied ideas which still haunt and confuse people to this day, but were appropriate for his use-case at the time, and still is for many lower-level of performance-intensive applications.
     >> - My main beef is that the "OOP" that was popularized by C++ and Java is not the "OOP" that Alan-Kay was referring to and many ideas are not compatible. 
 
   - Usually misnamed "Object Oriented Programming (OOP)," as "Objects" are _not_ the main focus of the paradigm, "Classes" are!
@@ -30,10 +30,10 @@
   - COP was a way to for most programmers to fit the procedural paradigm into a "Class and Object" paradigm, 
     with very mixed results.
   - Due to the new blast of terminology and lack or effective learning resources, along with many differing opinions about how
-    to apply the COP paradigm, many aspects of COP were misused and abused. This widespread confusion lead to 
-    inefficiently structured programs that became increasingly difficult understand and maintain. The same problems 
-    that plagued the Procedural paradigm were also now present in the "Class and Object" paradigm, mainly due to the
-    misuse of `static` methods and data to mimic the procedural paradigm methodologies.
+    to apply the COP paradigm, many aspects of COP were misused and abused. 
+  
+    > - This widespread confusion lead to inefficiently structured programs that became increasingly difficult understand and maintain. 
+    > - The same problems that plagued the Procedural paradigm were also now present in the "Class and Object" paradigm, mainly due to the misuse of `static` methods and publicly mutable data used to mimic the procedural paradigm methods.
 
 ## C++ Was Never Meant to Be the OOP that Alan-Kay Was Referring To <a name="design-of-c-plus-plus"></a>
 ###### design-of-c-plus-plus
