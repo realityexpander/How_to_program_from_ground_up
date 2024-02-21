@@ -179,7 +179,7 @@
       - THIS IS TERRIBLE NAMING FOR COP! Because it not a "message" at all.  
         - It's just calling a function!!!! THIS IS NOT MESSAGING!
         - This misnomer lead to a lot of confusion for reasons that will be made clear in this document.
-  - The use of the word "constructor" is a bit of a misnomer, as the memory space for the Object has been allocated
+  - The use of the word "constructor" is a bit of a misnomer, as the memory space for the Object has already been allocated, its only purpose is to initialize the state of the object.
   
   - ## Object Instance Variable Values = "State" of the Object <a name="object-instance-variable-values"></a>
     - ###### object-instance-variable-values
