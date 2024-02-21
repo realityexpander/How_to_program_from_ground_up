@@ -54,8 +54,8 @@
       class Cat {
          int age
          
-         constructor Cat(int age) {
-            this.age = age
+         constructor Cat(int age) {  // <-- Called when a new object is created (allocated in memory) from the class
+            this.age = age // <-- "this" refers to the object that is being created
          }
          
          method makeSound() {
