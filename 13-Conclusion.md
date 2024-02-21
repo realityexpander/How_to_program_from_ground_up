@@ -19,4 +19,37 @@
   - We are always going to need people who have various tastes and understandings about humans and the world to
     create software that is useful and effective FOR HUMANS.
 
+## History Graph of Programming languages from This Document
+  ```mermaid
+    graph TB
+        MachineLanguage[Machine Language] -->|human readable| AssemblyLanguage
+        AssemblyLanguage[Assembly Language] -.->|for GOTOs|Basic
+        AssemblyLanguage[Assembly Language] -->|Procedural|COBOL
+        AssemblyLanguage[Assembly Language] -->|Procedural|Fortran
+        AssemblyLanguage[Assembly Language] -->|Structured|Algol68
+        AssemblyLanguage[Assembly Language] -->C
+        COBOL["COBOL"] -->Basic
+        Basic["BASIC"] ---> VisualBasic
+        Fortran["Fortran"] -->Basic
+        Algol68[Algol68] -.->|for Structure|C
+        C["C"] -->Cplusplus
+        Simula67 -->|for COP ideas|Cplusplus
+        Cplusplus["C++"] -->|for COP/pseudo-OOP ideas|Java
+        Smalltalk -.->|pilfered OOP term|Cplusplus
+        Java[Java] -->Kotlin
+        Java -->CSharp
+        CSharp["C#"]
+        Fortran -->Algol68
+        Algol68 --->Smalltalk
+        Smalltalk["Smalltalk
+                  Originator of OOP term"] -->|for OOP ideas|Javascript
+        Smalltalk -->|for OOP ideas|Ruby
+        Basic -.-> |for Interpreted|Smalltalk
+        AssemblyLanguage-.->|for self-changing @ runtime|Smalltalk
+    
+    Note["Conceptual Inheritance Graph of Selected Languages.
+          
+          Not Exhaustive, not to time scale."]
+  ```
+
 - [Back to Index](README.md)
