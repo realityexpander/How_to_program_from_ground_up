@@ -1,3 +1,5 @@
+[<img src="assets/title.png" width="450">](https://www.youtube.com/playlist?list=PLzUxWOrVXB4QHsURai1GmmhmqAUVNbfno)
+
 # How to Program From The Bottom Up (with Minimal BS)
 ©2024 Chris Athanas
 
