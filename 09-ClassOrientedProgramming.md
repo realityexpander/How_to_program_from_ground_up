@@ -822,7 +822,7 @@
     >   - https://www.youtube.com/watch?v=3X9Eo2vzY1I
     >   - Live Code Example: [How to Achieve Multiple Inheritance in Kotlin](src/main/kotlin/multipleInheritanceExample.kt)
 
-## More Thoughts on Object Oriented Programming <a name="some-thoughts-on-object-oriented-programming"></a>
+## More Thoughts on Class Oriented Programming <a name="some-thoughts-on-object-oriented-programming"></a>
   > Kevlin Henney - Object? You Keep Using that Word - Trójmiasto JUG [30.05.2016]
   > - https://www.youtube.com/watch?v=IA-RyzKE7oc
 
