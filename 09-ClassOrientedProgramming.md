@@ -1,6 +1,12 @@
 # Class Oriented Programming Style (COP) 1970s-Present <a name="class-oriented-programming"></a>
   - ### BIG IDEA — We can simulate real-world objects and their interactions with each other by using "classes" and "objects" in our code.
   
+    > [<img src="assets/bjarne2.png" width="300">](https://en.wikiquote.org/wiki/Bjarne_Stroustrup)
+    > 
+    > Bjarne Stroustrup, the creator of C++, said that C++ _**was never meant to be the OOP**_ that Alan-Kay was referring to.
+    >> Originator of several poorly understood ideas which still haunt and confuse people to this day, but were appropriate for his use-case at the time, and still is for many lower-level of performance-intensive applications.
+    >> - My main beef is that the "OOP" that was popularized by C++ and Java is not the "OOP" that Alan-Kay was referring to and many ideas are not compatible. 
+
   - Usually misnamed "Object Oriented Programming (OOP)," as "Objects" are _not_ the main focus of the paradigm, "Classes" are!
   - A "Class" is just a template for a structure in memory (an "Object") that contains the values ("state") of the 
     variables and pointers to the methods (just functions) of the class.
