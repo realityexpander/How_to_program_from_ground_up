@@ -123,6 +123,7 @@ This document is a reference and follow along guide for my video series on YouTu
   - [Threads](12-ParallelProcessing.md#threads)
   - [Race Condition Diagram](12-ParallelProcessing.md#race-condition-diagram)
   - [Fixing the threads "race condition" problem using "Atomic" updates](12-ParallelProcessing.md#atomic-updates)
+  - [Fixing the Race Condition Diagram](12-ParallelProcessing.md#atomic-updates-diagram)
   - [Coroutines](12-ParallelProcessing.md#coroutines)
   - [Fixing the Coroutine race condition problem using "Atomic" updates](12-ParallelProcessing.md#fixing-updates-with-coroutines)
   - [Coroutines are Much Faster Than Threads](12-ParallelProcessing.md#coroutines-vs-threads)

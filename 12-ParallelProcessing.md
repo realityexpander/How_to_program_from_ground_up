@@ -163,7 +163,7 @@
   
   ```
   > Live Code Example: [How to Threads Work in Kotlin](src/main/kotlin/threadExample.kt)
-
+###### atomic-updates-diagram
   - Atomic Update Diagram:
   ```mermaid
     sequenceDiagram
