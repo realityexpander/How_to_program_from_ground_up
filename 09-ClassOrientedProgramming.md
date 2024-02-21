@@ -208,6 +208,7 @@
     ```Kotlin
     // Kotlin Example of Using a Class as a "Name-Space" to Group Together Methods
     // - Using COP style mashed together with Procedural style.
+    
     data class Person(
        var name: String = "John Doe",
        var age: Int = 0, // never store age like this, always calculate it from the birthdate.
@@ -243,19 +244,19 @@
     fun main() {
        val person = Person("John Doe", 30, 6.0, 200.0)
        
-	   // Using the `static` methods of the `PersonManager` class to manipulate the data of the `Person` object.
-	   PersonManager.changeName(person, "Jane Doe")
-	   PersonManager.changeAge(person, 25)
-	   PersonManager.changeHeight(person, 5.5)
-	   PersonManager.changeWeight(person, 150.0)
-	   PersonManager.printPerson(person)
+       // Using the `static` methods of the `PersonManager` class to manipulate the data of the `Person` object.
+       PersonManager.changeName(person, "Jane Doe")
+       PersonManager.changeAge(person, 25)
+       PersonManager.changeHeight(person, 5.5)
+       PersonManager.changeWeight(person, 150.0)
+       PersonManager.printPerson(person)
        
-	   // or worse, directly accessing the data: (yes its super fast! but...)
-	   person.name = "Jane Doe"
-	   person.age = 25
-	   person.height = 5.5
-	   person.weight = 150.0
-	   PersonManager.printPerson(person)
+       // or worse, directly accessing the data: (yes its super fast! but...)
+       person.name = "Jane Doe"
+       person.age = 25
+       person.height = 5.5
+       person.weight = 150.0
+       PersonManager.printPerson(person)
     }
     
     // Output:
