@@ -52,17 +52,17 @@ class PersonManager {
 
 // This class is used as a "name-space" to group together methods that operate on the `Person` class.
 class PersonManager2 {
-	fun changeName(person: Person, s: String) {
-		person.name = s
+	fun changeName(person: Person, newName: String) {
+		person.name = newName
 	}
-	fun changeAge(person: Person, i: Int) {
-		person.age = i
+	fun changeAge(person: Person, newAge: Int) {
+		person.age = newAge
 	}
-	fun changeHeight(person: Person, d: Double) {
-		person.height = d
+	fun changeHeight(person: Person, newHeight: Double) {
+		person.height = newHeight
 	}
-	fun changeWeight(person: Person, d: Double) {
-		person.weight = d
+	fun changeWeight(person: Person, newWeight: Double) {
+		person.weight = newWeight
 	}
 	fun printPerson(person: Person) {
 		println("Name: ${person.name}, Age: ${person.age}, Height: ${person.height}, Weight: ${person.weight}")
