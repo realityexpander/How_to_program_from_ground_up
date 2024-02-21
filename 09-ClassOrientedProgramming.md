@@ -204,7 +204,67 @@
         - This use of `static` functions is a primary indication of the COP paradigm is being followed.
       > Objects vs. Static Methods
       > - https://www.youtube.com/watch?v=D0dqC_3Bch8
-  
+    
+    ```Kotlin
+    // Kotlin Example of Using a Class as a "Name-Space" to Group Together Methods
+    // - Using COP style mashed together with Procedural style.
+    data class Person(
+       var name: String = "John Doe",
+       var age: Int = 0,
+       var height: Double = 0.0,
+       var weight: Double = 0.0
+    )
+    
+    class PersonManager {
+       companion object { // <-- creates a `static` set of functions that can be accessed without an instance of the `PersonManager` class.
+          fun printPerson(person: Person) {
+             println("Name: ${person.name}, Age: ${person.age}, Height: ${person.height}, Weight: ${person.weight}")
+          }
+    
+          fun changeName(person: Person, newName: String) {
+               person.name = newName
+          }
+    
+          fun changeAge(person: Person, newAge: Int) {
+               person.age = newAge
+          }
+    
+          fun changeHeight(person: Person, newHeight: Double) {
+               person.height = newHeight
+          }
+          
+          fun changeWeight(person: Person, newWeight: Double) {
+               person.weight = newWeight
+          }
+       }
+    }
+    
+    // Start of Program
+    fun main() {
+       val person = Person("John Doe", 30, 6.0, 200.0)
+       
+	   // Using the `static` methods of the `PersonManager` class to manipulate the data of the `Person` object.
+	   PersonManager.changeName(person, "Jane Doe")
+	   PersonManager.changeAge(person, 25)
+	   PersonManager.changeHeight(person, 5.5)
+	   PersonManager.changeWeight(person, 150.0)
+	   PersonManager.printPerson(person)
+       
+	   // or worse, directly accessing the data: (yes its super fast! but...)
+	   person.name = "Jane Doe"
+	   person.age = 25
+	   person.height = 5.5
+	   person.weight = 150.0
+	   PersonManager.printPerson(person)
+    }
+    
+    // Output:
+    // Name: Jane Doe, Age: 25, Height: 5.5, Weight: 150.0
+    // Name: Jane Doe, Age: 25, Height: 5.5, Weight: 150.0
+    ```
+    - Live Code Example: [Using Classes as Name-Spaces in Kotlin](src/main/kotlin/usingClassesAsNameSpaces.kt) 
+    - We shall cover the solution to this in the BOOP section of this document.
+
   - ## Problems Arising from Abusing `Static` Methods and Attributes <a name="problems-arising-from-abusing-static"></a>
     - ###### problems-arising-from-abusing-static
     - Using `static` breaks the encapsulation of the object and leads to Procedural style programming because it
