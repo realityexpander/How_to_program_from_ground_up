@@ -63,7 +63,7 @@
          }
       }
         
-        // Start of program
+      // Start of program
       function main() {
          Cat cat1 = new Cat(3)  // <-- Allocates memory for a new object of the class "Cat" and
                                 //     assigns its address to variable `cat1`, ie: "Instantiates" the class.
