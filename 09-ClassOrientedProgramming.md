@@ -22,7 +22,7 @@
   - COP was a way to for most programmers to fit the procedural paradigm into a "Class and Object" paradigm, 
     with very mixed results.
   - Due to the new blast of terminology and lack or effective learning resources, along with many differing opinions about how
-    to apply the COP paradigm, many aspect of COP were misused and abused. This widespread confusion lead to 
+    to apply the COP paradigm, many aspects of COP were misused and abused. This widespread confusion lead to 
     inefficiently structured programs that became increasingly difficult understand and maintain. The same problems 
     that plagued the Procedural paradigm were also now present in the "Class and Object" paradigm, mainly due to the
     misuse of `static` methods and data to mimic the procedural paradigm methodologies.
