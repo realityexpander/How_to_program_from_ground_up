@@ -28,28 +28,32 @@
         AssemblyLanguage[Assembly Language] -->|Procedural|Fortran
         AssemblyLanguage[Assembly Language] -->|Structured|Algol68
         AssemblyLanguage[Assembly Language] -->|Structured|C
-        COBOL["COBOL"] -->Basic
+        AssemblyLanguage[Assembly Language] -->|Structured|Simula67
+        COBOL["COBOL"] -.->|Easy to 
+                            Learn Syntax|Basic
         Basic["BASIC"] ---> VisualBasic
-        Fortran["Fortran"] -->Basic
-        Algol68[Algol68] -.->|for structures, 
-                             scopes & syntax|C
-        Simula67["Simula67"] -.->|pointers & 
-                                  other concepts|C
+        Fortran["Fortran"] -.->|Evaluate 
+                                Formulas|Basic
+        Algol68[Algol68] -.->|"for structures, 
+                             scopes & syntax"|C
+        Simula67["Simula67"] -.->|"for pointers & 
+                                  other concepts"|C
         C["C"] -->Cplusplus
         C -.->Smalltalk
-        Simula67 -->|for COP ideas|Cplusplus
+        Simula67 -.->|for COP ideas|Cplusplus
         Cplusplus["C++"] -->|for COP/pseudo-OOP ideas|Java
-        Smalltalk -..->|absconded OOP term 
-                        & some ideas|Cplusplus
+        Smalltalk -..->|"absconded OOP term 
+                        & some ideas"|Cplusplus
         Java[Java] -->Kotlin
         Java -->CSharp
         CSharp["C#"]
-        Fortran -->Algol68
+        Fortran -.->Algol68
         Smalltalk["Smalltalk
                   Originator of OOP term"] -.->|for OOP ideas|Javascript
         Smalltalk -.->|for OOP ideas|Ruby
-        Basic -.-> |for Interpreted|Smalltalk
-        AssemblyLanguage-.->|for self-changing @ runtime|Smalltalk
+        Basic -.-> |for Interpreted & 
+                    interactive|Smalltalk
+        AssemblyLanguage-.->|for self-modifying @ runtime|Smalltalk
     
     Note["Conceptual Inheritance Graph of Selected Languages.
           
