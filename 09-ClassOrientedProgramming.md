@@ -361,7 +361,10 @@
     Media <|-- Video : extends
     MP3 <|-- ProtectedMP3 : extends      
       
-    Media: expects method play()*
+    class Media {
+       String name
+       open method play()
+    }
     class MP3 {
        override method play()
     }
@@ -369,8 +372,8 @@
        override method play()
     }
     class ProtectedMP3 {
-       private String password
-       private Boolean isAuthenticated
+       private String password*
+       private Boolean isAuthenticated*
       
        override method play()
        method authenticate(password)
@@ -381,17 +384,17 @@
       ```Text
       // COP pseudo-code
         
-      open class Media {   // <-- the "base class" or "superclass", `open` means it can be subclasses (extended/inherited)
+      open class Media {   // <-- the "base class" or "superclass", `open` means it can be subclasses (extended/inherited.)
          // Note: there is no visible constructor, so the default constructor will be used -> Media(), which takes no parameters and does not initialize any variables.
-         String name = ""  // <-- the "state" of the object is stored in the variables of the class
+         String name = ""  // <-- the "state" of the object is stored in the variables of the class.
            
-         open method play() { 
-            print "Playing: " + this.name 
+         open method play() { // <-- `open` means that the method can be overridden in a subclass.
+            print "Playing Unknown Media: " + this.name  // <-- Default implementation of the method. 
          } 
       }  
       
       open class MP3 extends Media {   // <-- the "subclass" or "derived class"; it `extends` (inherits) from the superclass (Media).
-         // NOTICE: No constructor is defined, so the default constructor in the superclass will be used -> Media()
+         // NOTICE: No constructor is defined, so the default constructor in the superclass will be used -> Media().
       
          override method play() { 
             print "Playing MP3: " + this.name 
@@ -399,20 +402,20 @@
       }
       
       class Video extends Media { 
-         // NOTICE: No constructor is defined, so the default constructor in the superclass will be used -> Media()
+         // NOTICE: No constructor is defined, so the default constructor in the superclass will be used -> Media().
          
          override method play() { 
             print "Playing Video: " + this.name 
          } 
       }
       
-      class ProtectedMP3 extends MP3 {  // note: "Concrete Class" MP3 must be declared as `open` in order to be subclassed
+      class ProtectedMP3 extends MP3 {  // note: "Concrete Class" MP3 must be declared as `open` in order to be subclassed.
          String password
          Boolean authenticated = false
       
-         constructor ProtectedMP3(String name, String password) {  // <-- the constructor of this class, its called to initialize the object
-            super(name)  // <-- calls the constructor of the superclass (MP3)
-            this.password = password    // Sets the password for the password protected MP3
+         constructor ProtectedMP3(String name, String password) {  // <-- the constructor of this class, its called to initialize the object.
+            super(name)  // <-- calls the constructor of the superclass (MP3).
+            this.password = password    // Sets the password for the password protected MP3.
          }
       
          method authenticate(String password) {
@@ -435,19 +438,19 @@
          Media doc0        = new Media()  // Since the `Media` class is `open` and not `abstract`, an object can be created from it.
          Media doc1        = new MP3()
          Media doc2        = new Video()
-         ProtectedMP3 doc3 = new ProtectedMP3("MyProtectedMP3.mp3", "MySecretPassword123")  // note that the `ProtectedMP3` type is required to call the `authenticate` method
+         ProtectedMP3 doc3 = new ProtectedMP3("MyProtectedMP3.mp3", "MySecretPassword123")  // note that the `ProtectedMP3` type is required to call the `authenticate` method.
       
-         function playMedia(Media media) {  // Note that the parameter is of type `Media` and not `MP3` or `Video` or `ProtectedMP3`
+         function playMedia(Media media) {  // Note that the parameter is of type `Media` and not `MP3` or `Video` or `ProtectedMP3`.
             media.play()
          }
       
-         playMedia(doc0)            // <-- will print "Playing: MyMedia"
-         playMedia(doc)             // <-- will print "Playing MP3: MyMP3.mp3"
-         playMedia(doc2)            // <-- will print "Playing Video: MyVideo.mp4"
+         playMedia(doc0)            // <-- will print "Playing: MyMedia".
+         playMedia(doc)             // <-- will print "Playing MP3: MyMP3.mp3".
+         playMedia(doc2)            // <-- will print "Playing Video: MyVideo.mp4".
       
-         playMedia(doc3)            // <-- will print "Not Authenticated!"
-         doc3.authenticate("MySecretPassword123")  // <-- will print "Authenticated!"
-         playMedia(doc3)            // <-- will print "Playing Protected MP3: MyProtectedMP3.mp3"
+         playMedia(doc3)            // <-- will print "Not Authenticated!".
+         doc3.authenticate("MySecretPassword123")  // <-- will print "Authenticated!".
+         playMedia(doc3)            // <-- will print "Playing Protected MP3: MyProtectedMP3.mp3".
       }
       
       main()
@@ -525,9 +528,9 @@
     File <|-- Photo : extends
       
     class File["abstract class File"] {
-       String name  // ⬅︎ Abstract classes can have variables
-       open method view(): Launch(Basic_Text_Editor)  // "default" implementation
-       open method showName():  Print("File Name: " + this.name // "default" implementation"
+       String name  // ⬅︎ Abstract classes can have variables.
+       open method view(): Launch(Basic_Text_Editor)  // "default" implementation.
+       open method showName():  Print("File Name: " + this.name // "default" implementation".
     }
     <<abstract>> File 
       
@@ -671,7 +674,8 @@
         📁 ➤➤ 🗄️"]
      
      classExcelFile -- "instantiates 
-                        object" --> ExcelFileObject:::Object
+                        object
+                        ⬇️" --> ExcelFileObject:::Object
      classExcelFile -- extends ---> abstractFile:::Abstract
      ExcelFileClassPrintContentMethod -- implements --> abstractPrintContentMethod:::Abstract
      subgraph abstractFile["abstract class File"]
