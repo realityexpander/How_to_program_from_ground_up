@@ -11,8 +11,8 @@
   - A "Class" is just a template for a structure in memory (an "Object") that contains the values ("state") of the 
     variables and pointers to the methods (just functions) of the class.
   - COP is Based on "Simula 67," a language specifically designed to simulate real-world systems. 
-  - The creator gave "head nods" to "Smalltalk" but took a different and more "procedural" approach to the class 
-    and object concepts explored in Smalltalk, primarily to use more practical aspect of the ideas for the needs of the time.
+  - The creator gave "head nods" to "Smalltalk" but took a different and more Structured-style approach to the class 
+    and object concepts explored in Simula, primarily to use more practical aspect of the ideas for the needs of the time.
   - The practical hardware limitations outweighed the theoretical purity of OOP, and shortcuts were made for the sake of
     performance and practicality, such as use of `static` functions to manipulate data directly instead of calling 
     methods on objects to manipulate the data indirectly.
