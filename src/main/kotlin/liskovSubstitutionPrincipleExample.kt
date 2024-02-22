@@ -29,23 +29,24 @@ fun main() {
 	val circle = Circle(10.0f)
 	// val someShape = Shape() // <-- This will not compile because Shape is an interface and cannot be instantiated.
 
-	// Can call area() method on all shapes
+	// Can call `area()` method on any subclass of `Shape`:
 	println("Rectangle area: ${rectangle.area()}")
 	println("Square area: ${square.area()}")
 	println("Circle area: ${circle.area()}")
 
-	// Can use a list of Shapes
-	val listOfShapes: List<Shape> = listOf(rectangle, square, circle) // <-- Allocates a list of Shapes and adds the shapes to it.
-	listOfShapes.forEach { shape ->
+	// Can create a `Shape`-s list that accepts any subclass of Shape:
+	val shapes: List<Shape> = listOf(rectangle, square, circle) // <-- Allocates a list of Shapes and adds the shapes to it.
+	shapes.forEach { shape ->
 		println("Area for shape ${shape.name}: ${shape.area()}")
 	}
 
-	// Can't have a Circle in a list that only accepts Rectangles
-	// val listOfRectangles: List<Rectangle> = listOf(rectangle, square, circle) // <-- This will NOT compile.
+	// Can't have a Circle in a list that only accepts Rectangles:
+	// val rectangles: List<Rectangle> = listOf(rectangle, circle) // <-- This will NOT compile.
 
+	// Can't add a Rectangle to a list of Circles:
 	val circle2 = Circle(20.0f)
-	val listOfCircles: List<Circle> = listOf(circle, circle2) // <-- This will compile.
-	// listOfCircles.add(Rectangle(10f, 20f)) // <-- This will NOT compile.
+	val circles: List<Circle> = listOf(circle, circle2) // <-- This will compile.
+	// circles.add(Rectangle(10f, 20f)) // <-- This will NOT compile.
 }
 
 
