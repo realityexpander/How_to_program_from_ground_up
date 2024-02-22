@@ -238,7 +238,7 @@
     }
     ```
     
-    - ```mermaid
+    ```mermaid
        flowchart TB
     
        PersonManager -- "
@@ -283,7 +283,7 @@
     
        style PersonManager fill:#444, stroke:#FFF, stroke-width:1px, color:#FFF, stroke-dasharray: 5 5 
        classDef Object fill:#55F, stroke:#FFF, stroke-width:3px, color:#fff
-
+    ```
     
     ```Kotlin
     // Kotlin Example of Using a Class as a "Name-Space" to Group Together Methods
