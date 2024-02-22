@@ -58,10 +58,6 @@ fun main() {
    val doc1: Media = MP3("MyMP3")
    val doc2: Media = Video("MyVideo")
    
-   // Note: `doc3` is of type `ProtectedMP3` and not `MP3` or `Media` because we want to access the `authenticate` method,
-   //       which is not available in the `Media` class or the `MP3` class.
-   val doc3: ProtectedMP3 = ProtectedMP3("MyProtectedMP3", "MySecretPassword123")
-   
    fun playMedia(media: Media) {  // Note that the parameter is of type `Media` and not `MP3` or `Video` or `ProtectedMP3`
       media.play()
    }
@@ -69,7 +65,12 @@ fun main() {
    playMedia(doc0)  // <-- will print "Playing: MyMedia"
    playMedia(doc1)  // <-- will print "Playing MP3: MyMP3.mp3"
    playMedia(doc2)  // <-- will print "Playing Video: MyVideo.mp4"
-   
+
+
+   // Note: `doc3` is of type `ProtectedMP3` and not `MP3` or `Media` because we want to access the `authenticate` method,
+   //       which is not available in the `Media` class or the `MP3` class.
+   val doc3: ProtectedMP3 = ProtectedMP3("MyProtectedMP3", "MySecretPassword123")
+
    playMedia(doc3)  // <-- will print "Not Authenticated! Submit password to authenticate."
    doc3.authenticate("MySecretPassword123")  // <-- will print "Authenticated!"
    playMedia(doc3)  // <-- will print "Playing Protected MP3: MyProtectedMP3.mp3"
