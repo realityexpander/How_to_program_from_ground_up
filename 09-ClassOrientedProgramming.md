@@ -524,18 +524,18 @@
        open method play() print "Playing Unknown Media: " + this.name
     }
     class MP3["class MP3 extends Media"] {
-       constructor MP3(String name) -> super(name + ".mp3")
+       constructor MP3(String name) --> super(name + ".mp3")
        override method play() print "Playing MP3: " + this.name
     }
     class Video["class Video extends Media"] {
-       constructor Video(String name) -> super(name + ".mp4")
+       constructor Video(String name) --> super(name + ".mp4")
        override method play() print "Playing Video: " + this.name
     }
     class ProtectedMP3["class ProtectedMP3 extends MP3"] {
        private String password*
        private Boolean isAuthenticated*
        
-       constructor ProtectedMP3(String name, String password) -> super(name)
+       constructor ProtectedMP3(String name, String password) --> super(name)
        override method play(): if(this.isAuthenticated == true) then print "Playing Protected MP3: " + this.name else print "Not Authenticated!"
        method authenticate(password) if(this.password == password) then this.isAuthenticated = true
     }
