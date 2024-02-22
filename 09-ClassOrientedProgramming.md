@@ -714,7 +714,7 @@
     class Excel["class Excel extends File"] {
        override String name // <- Subclasses must declare abstract variables.
     
-       constructor Excel(String name) -> super(name)
+       constructor Excel(String name) --> super(name)
     
        override method view(): print("View Excel: " + this.name) 
     }
