@@ -304,10 +304,10 @@
   - ### BIG IDEA — Can we swap out different implementations of the same named methods to allow more flexible code?
      - ### Similar to the reason we dont have appliances directly wired to our houses, allowing the ability to plug in different electrical appliances to the same kind of electrical outlet, the "outlet" and "plug" configuration are the `interface` and the appliances are the different `implement`-ations.
  
-     >  [<img src="assets/electrical_outlet.png" width="140"/>](assets/electrical_outlet.png)
-        [<img src="assets/tv_with_plug.png" width="150"/>](assets/tv_with_plug.png)
-        [<img src="assets/toaster.png" width="200"/>](assets/toaster.png)
-        [<img src="assets/plugs_and_adapters.png" width="150"/>](assets/plugs_and_adapters.png)
+       >  [<img src="assets/electrical_outlet.png" width="140"/>](assets/electrical_outlet.png)
+          [<img src="assets/tv_with_plug.png" width="150"/>](assets/tv_with_plug.png)
+          [<img src="assets/toaster.png" width="200"/>](assets/toaster.png)
+          [<img src="assets/plugs_and_adapters.png" width="150"/>](assets/plugs_and_adapters.png)
     
     - ie: Can we have a method called `view` that runs different code depending on the `type` of the `object`?
   
