@@ -518,7 +518,7 @@
          }
       
          playMedia(doc0)            // <-- will print "Playing: MyMedia".
-         playMedia(doc)             // <-- will print "Playing MP3: MyMP3.mp3".
+         playMedia(doc1)            // <-- will print "Playing MP3: MyMP3.mp3".
          playMedia(doc2)            // <-- will print "Playing Video: MyVideo.mp4".
       
          playMedia(doc3)            // <-- will print "Not Authenticated!".
@@ -602,8 +602,8 @@
       
     class File["abstract class File"] {
        String name  // ⬅︎ Abstract classes can have variables.
-       open method view(): Launch(Basic_Text_Editor)  // "default" implementation.
-       open method showName():  Print("File Name: " + this.name // "default" implementation".
+       open method view() // NO "default" implementation.
+       open method showName():  print("File Name: " + this.name) // default implementation.
     }
     <<abstract>> File 
       
@@ -616,8 +616,9 @@
        String to  // ⬅︎ Subclasses can have additional variables.
        String from
        String subject
+       
        override method view(): Launch(Memo_Viewer) 
-       override method showName(): Print "Memo from: " + this.from + ", to: " + this.to
+       override method showName(): print("Memo from: " + this.from + ", to: " + this.to)
     }
     class Photo["class Photo extends File"] {
        override method view() Launch(Photo_Viewer)
@@ -633,9 +634,10 @@
         constructor File(String name) {  // <-- Abstract classes can have "default" constructors.
            this.name = name
         }
+    
         abstract method view()  // Expects a method called "view" and has no default implementation.
         abstract method showName() {  // Expects a method called "showName" and has a default implementation.
-           print "File Name: " + this.name // <-- The "default implementation" for any subclass that doesn't override the method.
+           print "File Name: " + this.name // <-- The default implementation for any subclass that doesn't override the method.
         } 
      }  
      
