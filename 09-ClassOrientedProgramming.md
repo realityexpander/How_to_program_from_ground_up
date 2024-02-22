@@ -504,6 +504,7 @@
     original class with modifications.
   - The class that is inherited from is called the "superclass" and the class that inherits is called the "subclass."
   - The "subclass" is also called a "derived class" and the "superclass" is also called a "base class."
+  - NEVER MEANT FOR "CODE-RE-USE"! It was meant to create "subtypes" of the original class with modifications.
   - "Subtyping," "Subclassing," and "Inheritance" are all the same concept, and the basis for "polymorphism."
 
     ```mermaid
