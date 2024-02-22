@@ -39,3 +39,8 @@ fun main() {
    viewDocument(doc2)  // <-- will print "Launch Email App"
    viewDocument(doc3)  // <-- will print "Launch Music Player"
 }
+
+// Output:
+// Launch PDF Viewer
+// Launch Email App
+// Launch Music Player
