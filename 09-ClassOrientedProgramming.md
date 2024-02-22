@@ -630,13 +630,13 @@
       
     ---
     classDiagram
-    direction LR
+    direction TB
     File <|-- Excel : extends
     File <|-- Memo : extends
     File <|-- Photo : extends
       
     class File["abstract class File"] {
-       String name  // ⬅︎ Abstract classes can have variables.
+       String name  // ⬅︎ Abstract classes can have variables, and are "abstract" and "open" by default, meaning they must be defined and overridden in the subclass.
        open method view() // NO "default" implementation.
        open method showName():  print("File Name: " + this.name) // default implementation.
     }
