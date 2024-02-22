@@ -307,19 +307,19 @@
        // Note: No variables here. Just a set of `static` methods to manipulate the data of the `Person` object.
     
        companion object {  // <-- creates a `static` set of functions that can be accessed without an instance/object of the `PersonManager` class.
-          fun changeName(person: Person, newName: String) {  // ✍️
+          fun changeName(person: Person, newName: String) {  // only modifies the data of the `Person` object.
              person.name = newName
           }
     
-          fun changeAge(person: Person, newAge: Int) {  // ✍️
+          fun changeAge(person: Person, newAge: Int) {  // only modifies the data of the `Person` object.
              person.age = newAge
           }
     
-          fun changeHeight(person: Person, newHeight: Double) {  // ✍️
+          fun changeHeight(person: Person, newHeight: Double) {  // only modifies the data of the `Person` object.
              person.height = newHeight
           }
           
-          fun changeWeight(person: Person, newWeight: Double) { // ✍️
+          fun changeWeight(person: Person, newWeight: Double) { // only modifies the data of the `Person` object.
              person.weight = newWeight
           }
        }
