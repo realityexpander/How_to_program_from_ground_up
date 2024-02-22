@@ -537,7 +537,7 @@
        
        constructor ProtectedMP3(String name, String password) --> super(name)
        override method play(): if(this.isAuthenticated == true) then print "Playing Protected MP3: " + this.name else print "Not Authenticated!"
-       method authenticate(password) if(this.password == password) then this.isAuthenticated = true
+       method authenticate(password) if(this.password == password) then ⟪ this.isAuthenticated = true ⟫ 
     }
     ```
 
