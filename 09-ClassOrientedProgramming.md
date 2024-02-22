@@ -518,21 +518,21 @@
     MP3 <|-- ProtectedMP3 : extends      
       
     class Media {
-       String name
-       open method play()
+       protected String name*
+       open method play() print "Playing Unknown Media: " + this.name
     }
     class MP3 {
-       override method play()
+       override method play() print "Playing MP3: " + this.name
     }
     class Video {
-       override method play()
+       override method play() print "Playing Video: " + this.name
     }
     class ProtectedMP3 {
        private String password*
        private Boolean isAuthenticated*
       
-       override method play()
-       method authenticate(password)
+       override method play(): if(this.isAuthenticated == true) then print "Playing Protected MP3: " + this.name else print "Not Authenticated!"
+       method authenticate(password) if(this.password == password) then this.isAuthenticated = true
     }
     ```
 
