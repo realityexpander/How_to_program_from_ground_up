@@ -719,7 +719,7 @@
        override method view(): print("View Excel: " + this.name) 
     }
     class Memo["class Memo extends File"] {
-       override String name // <-- Subclasses must declare abstract variables.
+       override String name // <- Subclasses must declare abstract variables.
        String to  // <- Subclasses can have additional variables.
        String from
        String subject
