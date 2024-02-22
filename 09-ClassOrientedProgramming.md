@@ -404,9 +404,10 @@
       according to the method signatures in the `interface`
     - "Subclassing" is also called "Subtyping" or "Inheritance" and is the basis for Polymorphism as it allows
       different implementations of the same named method to be used interchangeably in the program.
-      > ### MORE OVERCOMPLICATED TERMINOLOGY THAT MAKES IT HARDER TO LEARN!
-      >> The "Liskov Substitution Principle" Code Example
+      > ### ⚠️ MORE OVERCOMPLICATED TERMINOLOGY THAT MAKES IT HARDER TO LEARN! 
+      >> The **"Liskov Substitution Principle"** Explained in 2 Minutes
       >> - https://www.youtube.com/watch?v=gV4P-fewa9M
+      >> - Live Code Example in Kotlin: [Liskov Substitution Principle Example](src/main/kotlin/liskovSubstitutionPrincipleExample.kt)
 
 ## Inheritance <a name="inheritance"></a>
 ###### inheritance
