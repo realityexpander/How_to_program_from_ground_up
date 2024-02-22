@@ -395,7 +395,7 @@
     - ie: Can we have a method called `view` that runs different code depending on the `type` of the `object`?
   
   - An `interface` is an "agreement" or "expectation" (also called "contract") that the class will have certain defined methods & 
-    variables in any subclass that `implements` the `interface`.
+    variables in any subclass that `implement`-sim the `interface`.
   - It's a way to tell the compiler _AND_ the programmer that the implementing `class` must have certain methods 
     and variables in it to be considered a genuine subclass (or subtype) of the `interface`.
   - The `interface` is implemented by the subclass, where the methods and variables are defined by the 

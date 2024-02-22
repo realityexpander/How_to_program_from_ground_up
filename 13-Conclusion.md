@@ -40,7 +40,7 @@
         Fortran{{"Fortran"}} -.->|"Evaluate 
                                   Formulas
                                   ✨"|Basic
-        Algol68{{Algol68}} -.->|"for structures, 
+        Algol68{{Algol60, Algol68}} -.->|"for structures, 
                                 scopes & syntax
                                 ⚡️️
                                 "|C
