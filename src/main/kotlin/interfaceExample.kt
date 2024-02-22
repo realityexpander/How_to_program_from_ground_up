@@ -1,5 +1,3 @@
-package org.example
-
 interface Document {     // <-- interfaces only define the "signature" of the functions it expects to be in the subclass
    fun view()  // this interface expects a function called "view"
 }
