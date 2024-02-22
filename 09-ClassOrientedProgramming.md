@@ -410,9 +410,9 @@
 ###### inheritance
   - ### BIG IDEA - Can we create a new class that inherits all the methods and variables of another class and then add new methods or override methods in the subclass?
   
-  - Inheritance is the idea that a new `class` can inherit from another `class` all of its methods and variables,
-    and then add new methods or override methods in the subclass that will modify the behavior of the
-    original `class`.
+  - Inheritance is the idea that a new `class` can copy from another `class` all of its methods and variables,
+    and then add new methods or override existing methods in the subclass that can modify the behavior of the
+    original parent (super) `class`.
   - Classes can inherit from other classes to reuse code and state, and to create "subtypes/subclasses" of the 
     original class with modifications.
   - The class that is inherited from is called the "superclass" and the class that inherits is called the "subclass."

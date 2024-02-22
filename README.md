@@ -3,7 +3,7 @@
 # How to Program From The Ground Up (with Minimal BS)
 ©2024 Chris Athanas
 
-A guide for anyone who wants a solid understanding of software development as a semi-historical
+A follow-along guide for anyone who wants a solid understanding of software development as a semi-historical
 walk through the essential parts of computing leading to present day software development paradigms.
 
 This is not a thorough deep dive into any one topic, but a broad overview of the core concepts and principles
