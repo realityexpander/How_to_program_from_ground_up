@@ -609,7 +609,7 @@
       
     class Excel["class Excel extends File"] {
        override String name // ⬅︎ Subclasses must declare abstract variables.
-       override method view(): Launch(Excel_Viewer) 
+       override method view(): `Launch(Excel_Viewer) 
     }
     class Memo["class Memo extends File"] {
        override String name // ⬅︎ Subclasses must declare abstract variables.
@@ -776,24 +776,22 @@
 
 ## Polymorphism <a name="polymorphism"></a>
 ###### polymorphism
-  - ### BIG IDEA — The idea that a method can be called on an object and the method will behave differently based on the `class` of the object that is called.
-  - In COP, the `interface` and `abstract class` are implementations of the idea of polymorphism.
+  - ### BIG IDEA — A method can be called on an object and the method will behave differently based on the `class` of the object.
+  - In COP, the `interface`-s and `abstract class`-s are implementations of the idea of polymorphism.
 
-  - #### ANOTHER EXAMPLE OF A SIMPLE IDEA WITH AN OVERCOMPLICATED NAME!
+  - #### ⚠️ ANOTHER EXAMPLE OF A SIMPLE IDEA WITH AN OVERCOMPLICATED NAME!
     - Yet _another_ overcomplicated name for a very basic, exceedingly simple idea.
     - Polymorphism is the idea that a method can be called on an object and the method will behave differently
       based on the "type" of the "object" that the "method" is called on
-        - This is the basis for `override`ing methods in subclasses and `interfaces` and `abstract class`es
-        - In the example above, the `viewDocument` function can be called with any `Document` object and the `view` method
-          will behave differently based on the "type" of the `Document` object that is passed in
+        - This is the basis for `override`-ing methods in subclasses and `interfaces` and `abstract class`-es
+        - In the example above, the `view()` function can be called with any `Document` object and the `view` method
+          will behave differently based on the type of the `Document` object that is passed in
   - ### Associated with Liskov Principle
     - #### MORE MAKING FANCY TERMS FOR VERY BASIC CONCEPTS THAT BARELY NEED EXPLAINING, I'VE SAID ENOUGH ALREADY.
     - The "Liskov Substitution Principle" comes from "Set theory" and is the idea that "objects of a superclass shall be
       replaceable with objects of its subclasses without affecting the functionality of the program."
-    - That's it. That's the whole idea. It's just a fancy way of saying that "subclasses should work the same as
-      their superclass."
-    - There is a lot of confusion around this principle, but it's just a fancy way of saying that "subclasses should
-      work the same as their superclass."
+    - That's it. That's the whole idea. 
+    - It's just a fancy way of saying that "subclasses should work the same as their superclass."
     - Live Code Example: [Liskov Substitution Principle in Kotlin](src/main/kotlin/liskovSubstitutionPrincipleExample.kt)
 
 ## Controlled Visibility of Variables and Methods <a name="controlled-visibility"></a>
