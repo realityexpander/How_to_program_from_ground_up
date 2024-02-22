@@ -267,7 +267,10 @@
     
        subgraph PersonManager["Class “PersonManager” 🙇‍"]
           note["Note: This is not an object instance, 
-                this only contains function pointers to static methods."]
+                it only contains function pointers to static methods.
+                
+                Is this OO💩?
+          "]
           PersonManagerClassChangeAgeMethodFunctionPointer{{"
              static method changeAge(Person p, int newAge) @DEAD2BC8:
              { p.age = newAge }
