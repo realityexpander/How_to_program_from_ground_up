@@ -323,21 +323,21 @@
     ---
     classDiagram
     direction TB 
-    Document <|-- PDF : implements
-    Document <|-- Email : implements
-    Document <|-- Song : implements
+    Document <|-- PDF : implements & inherits
+    Document <|-- Email : implements & inherits
+    Document <|-- Song : implements & inherits
      
     class Document["interface Document"] { 
        expects method view()* [No implementation here!]
     }
     <<interface>> Document
-    class PDF["Class PDF"] { 
+    class PDF["class PDF"] { 
         override method view() Launch PDF Viewer 
     }
-    class Email["Class Email"] {
+    class Email["class Email"] {
         override method view() Launch Email App
     }
-    class Song["Class Song"] {
+    class Song["class Song"] {
         override method view() Launch Music Player
     }
     
