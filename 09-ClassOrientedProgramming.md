@@ -730,7 +730,7 @@
        override method showName(): print("Memo from: " + this.from + ", to: " + this.to)
     }
     class Photo["class Photo extends File"] {
-       override String name // <- Subclasses must declare abstract variables.
+       override String name // <-- Subclasses must declare abstract variables.
     
          constructor Photo(String name) --> super(name)
        
