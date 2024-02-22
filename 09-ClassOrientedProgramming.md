@@ -504,7 +504,7 @@
     original class with modifications.
   - The class that is inherited from is called the "superclass" and the class that inherits is called the "subclass."
   - The "subclass" is also called a "derived class" and the "superclass" is also called a "base class."
-  - "Subtyping," "Subclassing," and "Inheritance" are all the same concept, and are the basis for polymorphism and dynamic binding.
+  - "Subtyping," "Subclassing," and "Inheritance" are all the same concept, and the basis for "polymorphism."
 
     ```mermaid
     ---
@@ -603,7 +603,6 @@
          Media doc0        = new Media("MyMedia")  // Since the `Media` class is `open` and not `abstract`, an object can be created from it.
          Media doc1        = new MP3("MyMP3")
          Media doc2        = new Video("MyVideo")
-         ProtectedMP3 doc3 = new ProtectedMP3("MyProtectedMP3", "MySecretPassword123")  // note that the `ProtectedMP3` type is required to call the `authenticate` method.
       
          function playMedia(Media media) {  // Note that the parameter is of type `Media` and not `MP3` or `Video` or `ProtectedMP3`.
             media.play()
@@ -613,8 +612,9 @@
          playMedia(doc1)            // <-- prints "Playing MP3: MyMP3.mp3".
          playMedia(doc2)            // <-- prints "Playing Video: MyVideo.mp4".
       
-         playMedia(doc3)            // <-- prints "Not Authenticated.".
-         doc3.authenticate("MySecretPassword123")  // <-- prints "Authenticated!".
+         ProtectedMP3 doc3 = new ProtectedMP3("MyProtectedMP3", "MySecretPassword123")  // note that the `ProtectedMP3` type is required to call the `authenticate` method.
+         playMedia(doc3)            // <-- prints "Not Authenticated!".
+         doc3.authenticate("MySecretPassword123")  // <-- prints "Authenticated.".
          playMedia(doc3)            // <-- prints "Playing Protected MP3: MyProtectedMP3.mp3".
       }
       
