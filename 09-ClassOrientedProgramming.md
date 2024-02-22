@@ -702,24 +702,24 @@
     File <|-- Photo : extends
       
     class File["abstract class File"] {
-       abstract open String name  // <- Abstract classes can have variables, and are "abstract" and "open" by default, meaning they must be defined and overridden in the subclass.
+       abstract open String name  // Abstract classes can have variables, and are "abstract" and "open" by default, meaning they must be defined and overridden in the subclass.
        
        constructor File(String name) this.name = name // ⬅︎ Abstract classes can have "default" constructors.
         
        open method view() // NO "default" implementation.
-       open method showName(): print("File Name: " + this.name) // default implementation.
+       open method showName(): print("File Name: " + this.name) // The default implementation.
     }
     <<abstract>> File 
       
     class Excel["class Excel extends File"] {
-       override String name // <- Subclasses must declare abstract variables.
+       override String name // Subclasses must declare abstract variables.
     
        constructor Excel(String name) --> super(name)
     
        override method view(): print("View Excel: " + this.name) 
     }
     class Memo["class Memo extends File"] {
-       override String name // <- Subclasses must declare abstract variables.
+       override String name //  Subclasses must declare abstract variables.
        String to  // <- Subclasses can have additional variables.
        String from
        String subject
@@ -730,7 +730,7 @@
        override method showName(): print("Memo from: " + this.from + ", to: " + this.to)
     }
     class Photo["class Photo extends File"] {
-       override String name // <- Subclasses must declare abstract variables.
+       override String name // Subclasses must declare abstract variables.
     
        constructor Photo(String name) -> super(name)
        
