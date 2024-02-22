@@ -3,7 +3,7 @@
   
     > [<img src="assets/bjarne2.png" width="300">](https://en.wikiquote.org/wiki/Bjarne_Stroustrup)
     > 
-    > Bjarne Stroustrup, the creator of C++, said that C++ _**was never meant to be the OOP**_ that Alan-Kay was referring to.
+    > Bjarne Stroustrup, the creator of C++, said that C++ _**was never meant to be the OOP (Object Oriented Programming)**_ that Alan-Kay was referring to.
     >> Originator of several poorly applied ideas which still haunt and confuse people to this day, but were appropriate for his use-case at the time, and still is for many lower-level of performance-intensive applications.
     >> - My main beef is that the "OOP" that was popularized by C++ and Java is not the "OOP" that Alan-Kay was referring to and many ideas are not compatible.
 
