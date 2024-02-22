@@ -35,13 +35,17 @@ fun main() {
 	println("Circle area: ${circle.area()}")
 
 	// Can use a list of Shapes
-	val listOfShapes: List<Shape> = listOf(rectangle, square, circle) // <-- Allocates a list of Shapes and adds the shapes to it
-	listOfShapes.forEach {
-		println("Area for shape ${it.name}: ${it.area()}")
+	val listOfShapes: List<Shape> = listOf(rectangle, square, circle) // <-- Allocates a list of Shapes and adds the shapes to it.
+	listOfShapes.forEach { shape ->
+		println("Area for shape ${shape.name}: ${shape.area()}")
 	}
 
 	// Can't have a Circle in a list that only accepts Rectangles
-	// val listOfRectangles: List<Rectangle> = listOf(rectangle, square, circle) // <-- This will not compile
+	// val listOfRectangles: List<Rectangle> = listOf(rectangle, square, circle) // <-- This will NOT compile.
+
+	val circle2 = Circle(20.0f)
+	val listOfCircles: List<Circle> = listOf(circle, circle2) // <-- This will compile.
+	// listOfCircles.add(Rectangle(10f, 20f)) // <-- This will NOT compile.
 }
 
 
