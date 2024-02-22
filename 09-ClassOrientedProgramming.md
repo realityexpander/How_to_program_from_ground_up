@@ -541,16 +541,22 @@
       // COP pseudo-code
         
       open class Media {   // <-- the "base class" or "superclass", `open` means it can be subclasses (extended/inherited.)
-         // Note: there is no visible constructor, so the default constructor will be used -> Media(), which takes no parameters and does not initialize any variables.
-         String name = ""  // <-- the "state" of the object is stored in the variables of the class.
-           
+         protected String name = ""  // // <-- the `name` property is protected, so it can be accessed by subclasses, and it's private to other classes.
+      
+         constructor Media(String name) {  // <-- Constructor is called to initialize the object variables.
+            this.name = name  // <-- Sets the name variable in the object just created (allocated in memory).
+         }     
+      
          open method play() { // <-- `open` means that the method can be overridden in a subclass.
             print "Playing Unknown Media: " + this.name  // <-- Default implementation of the method. 
          } 
       }  
       
       open class MP3 extends Media {   // <-- the "subclass" or "derived class"; it `extends` (inherits) from the superclass (Media).
-         // NOTICE: No constructor is defined, so the default constructor in the superclass will be used -> Media().
+      
+         constructor MP3(String name) {  // <-- the constructor of this class, its called to initialize the object.
+            super(name + ".mp3")  // <-- calls the constructor of the superclass (Media).
+         }
       
          override method play() { 
             print "Playing MP3: " + this.name 
@@ -558,8 +564,11 @@
       }
       
       class Video extends Media { 
-         // NOTICE: No constructor is defined, so the default constructor in the superclass will be used -> Media().
          
+         constructor Video(String name) {  // <-- the constructor of this class, its called to initialize the object.
+            super(name + ".mp4")  // <-- calls the constructor of the superclass (Media).
+         }
+      
          override method play() { 
             print "Playing Video: " + this.name 
          } 
@@ -577,7 +586,7 @@
          method authenticate(String password) {
             if (this.password == password) {
                this.authenticated = true
-               print "Authenticated!"
+               print "Authenticated."
             }
          } 
          override method play() {
@@ -591,32 +600,32 @@
       
       // Start of program
       function main() {
-         Media doc0        = new Media()  // Since the `Media` class is `open` and not `abstract`, an object can be created from it.
-         Media doc1        = new MP3()
-         Media doc2        = new Video()
-         ProtectedMP3 doc3 = new ProtectedMP3("MyProtectedMP3.mp3", "MySecretPassword123")  // note that the `ProtectedMP3` type is required to call the `authenticate` method.
+         Media doc0        = new Media("MyMedia")  // Since the `Media` class is `open` and not `abstract`, an object can be created from it.
+         Media doc1        = new MP3("MyMP3")
+         Media doc2        = new Video("MyVideo")
+         ProtectedMP3 doc3 = new ProtectedMP3("MyProtectedMP3", "MySecretPassword123")  // note that the `ProtectedMP3` type is required to call the `authenticate` method.
       
          function playMedia(Media media) {  // Note that the parameter is of type `Media` and not `MP3` or `Video` or `ProtectedMP3`.
             media.play()
          }
       
-         playMedia(doc0)            // <-- will print "Playing: MyMedia".
-         playMedia(doc1)            // <-- will print "Playing MP3: MyMP3.mp3".
-         playMedia(doc2)            // <-- will print "Playing Video: MyVideo.mp4".
+         playMedia(doc0)            // <-- prints "Playing Unknown Media: MyMedia".
+         playMedia(doc1)            // <-- prints "Playing MP3: MyMP3.mp3".
+         playMedia(doc2)            // <-- prints "Playing Video: MyVideo.mp4".
       
-         playMedia(doc3)            // <-- will print "Not Authenticated!".
-         doc3.authenticate("MySecretPassword123")  // <-- will print "Authenticated!".
-         playMedia(doc3)            // <-- will print "Playing Protected MP3: MyProtectedMP3.mp3".
+         playMedia(doc3)            // <-- prints "Not Authenticated.".
+         doc3.authenticate("MySecretPassword123")  // <-- prints "Authenticated!".
+         playMedia(doc3)            // <-- prints "Playing Protected MP3: MyProtectedMP3.mp3".
       }
       
       main()
       
       // Output:
-      // Playing: MyMedia
+      // Playing Unknown Media: MyMedia
       // Playing MP3: MyMP3.mp3
       // Playing Video: MyVideo.mp4
       // Not Authenticated!
-      // Authenticated!
+      // Authenticated.
       // Playing Protected MP3: MyProtectedMP3.mp3
        ```
       > - Live Code Example: [How Inheritance Works in Kotlin](src/main/kotlin/inheritanceExample.kt)
