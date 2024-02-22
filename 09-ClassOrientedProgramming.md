@@ -536,7 +536,7 @@
     }
     ```
 
-    - ### Example of inheritance (in pseudocode, and is similar to common COP languages):
+    ### Example of Inheritance (in pseudocode, and is similar to common COP languages):
       ```Text
       // COP pseudo-code
         
