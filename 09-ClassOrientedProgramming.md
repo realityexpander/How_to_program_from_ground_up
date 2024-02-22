@@ -794,7 +794,7 @@
     - It's just a fancy way of saying that "subclasses should work the same as their superclass."
     - Live Code Example: [Liskov Substitution Principle in Kotlin](src/main/kotlin/liskovSubstitutionPrincipleExample.kt)
 
-## Controlled Visibility of Variables and Methods <a name="controlled-visibility"></a>
+## Controlled Scope of Visibility of Variables and Methods <a name="controlled-visibility"></a>
 ###### controlled-visibility
   - ### BIG IDEA — Global mutable variables is a big problem, so lets control the visibility of the variables and 
     methods of the class to other classes and subclasses.
