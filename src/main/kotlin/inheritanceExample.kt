@@ -24,9 +24,8 @@ open class MP3(
 
 class Video(
    name: String
-): Media(name) {
-   // NOTICE: No constructor is defined, so the `default constructor` in the superclass will be used `Media(name)`
-   
+): Media(name) { // NOTICE: No constructor is defined, so the `default constructor` in the superclass will be used `Media(name)`
+
    override fun play() {
       println("Playing Video: " + this.name)
    }
@@ -35,7 +34,7 @@ class Video(
 class ProtectedMP3(
    name: String,
    private val password: String
-): MP3(name) {
+): MP3(name) {  // NOTICE: No constructor is defined, so the `default constructor` in the superclass will be used `Media(name)`
    private var authenticated: Boolean = false
    
    fun authenticate(password: String) {
@@ -74,6 +73,12 @@ fun main() {
    playMedia(doc3)  // <-- will print "Not Authenticated! Submit password to authenticate."
    doc3.authenticate("MySecretPassword123")  // <-- will print "Authenticated!"
    playMedia(doc3)  // <-- will print "Playing Protected MP3: MyProtectedMP3.mp3"
+
+
+   // Bonus type-casting
+   val doc4: Media = ProtectedMP3("MyOtherProtectedMP3", "password2")
+   // doc4.authenticate("password2")  // <-- will not compile, because `doc4` is of type `Media` and not `ProtectedMP3`.
+   (doc4 as ProtectedMP3).authenticate("password2")  // <-- will print "Authenticated."
 }
 
 // Output:
@@ -83,3 +88,4 @@ fun main() {
 // Not Authenticated! Submit password to authenticate.
 // Authenticated.
 // Playing Protected MP3: MyProtectedMP3
+// Authenticated.
