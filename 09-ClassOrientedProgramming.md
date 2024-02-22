@@ -251,14 +251,14 @@
           " --> Person2:::Object 
       
       
-       subgraph Person["Object “Person”  🧍@BFFC882A"]
+       subgraph Person["Object “Person”  🧍@CAFE882A"]
           personObjectAgeInt["int age = 3"]:::Object
           personObjectNameString["String name = “John Doe”"]:::Object 
           
           HasNoMethods["NO METHODS HERE"]
        end
       
-       subgraph Person2["Object “Person”  🧍@BFFC882A"]
+       subgraph Person2["Object “Person”  🧍@45F7BABE"]
           personObjectAgeInt2["int age = 32"]:::Object
           personObjectNameString2["String name = “Jim Jones”"]:::Object 
           
@@ -269,11 +269,11 @@
           note["Note: This is not an object instance, 
                 this only contains function pointers to static methods."]
           PersonManagerClassChangeAgeMethodFunctionPointer{{"
-             static method changeAge(Person p, int newAge) @87EF2BC8:
+             static method changeAge(Person p, int newAge) @DEAD2BC8:
              { p.age = newAge }
              ✍️"}}:::Object
           PersonManagerClassChangeNameMethodFunctionPointer{{"
-             static method changeName(Person p, String newName) @87EF2BC8:
+             static method changeName(Person p, String newName) @2DCABEEF:
              { p.name = newName }
              ✍️"}}:::Object
           
@@ -289,7 +289,7 @@
     // Kotlin Example of Using a Class as a "Name-Space" to Group Together Methods
     // - Using COP style mashed together with Procedural style.
     
-    data class Person(
+    data class Person(  // 🧍
        var name: String = "John Doe",
        var age: Int = 0,  // never store age like this, always calculate it from the birthdate.
        var height: Double = 0.0,
@@ -300,23 +300,23 @@
        }
     }
     
-    class PersonManager {
+    class PersonManager {  // 🙇‍
        // Note: No variables here. Just a set of `static` methods to manipulate the data of the `Person` object.
     
        companion object {  // <-- creates a `static` set of functions that can be accessed without an instance/object of the `PersonManager` class.
-          fun changeName(person: Person, newName: String) {
+          fun changeName(person: Person, newName: String) {  // ✍️
              person.name = newName
           }
     
-          fun changeAge(person: Person, newAge: Int) {
+          fun changeAge(person: Person, newAge: Int) {  // ✍️
              person.age = newAge
           }
     
-          fun changeHeight(person: Person, newHeight: Double) {
+          fun changeHeight(person: Person, newHeight: Double) {  // ✍️
              person.height = newHeight
           }
           
-          fun changeWeight(person: Person, newWeight: Double) {
+          fun changeWeight(person: Person, newWeight: Double) { // ✍️
              person.weight = newWeight
           }
        }
