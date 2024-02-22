@@ -1,3 +1,4 @@
+// Kotlin example of inheritance and polymorphism
 
 open class Media() {  // <-- the "base class" or "superclass", `open` means it can be subclasses (extended/inherited)
    protected var name: String = "Untitled"  // <-- the `name` property is protected, so it can be accessed by subclasses, and not from outside the class.
