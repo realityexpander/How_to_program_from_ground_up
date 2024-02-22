@@ -702,7 +702,7 @@
     File <|-- Photo : extends
       
     class File["abstract class File"] {
-       abstract open String name  // <-- Abstract classes can have variables, and are "abstract" and "open" by default, meaning they must be defined and overridden in the subclass.
+       abstract open String name  // <- Abstract classes can have variables, and are "abstract" and "open" by default, meaning they must be defined and overridden in the subclass.
        
        constructor File(String name) this.name = name // ⬅︎ Abstract classes can have "default" constructors.
         
