@@ -651,10 +651,14 @@
         that were used to "fix" the problems of the "procedural approach" to COP. Many of these ideas were just
         common hacks to fit the "procedural approach" into the "COP" paradigm.
       - The promise of "code reusability" was not fulfilled by COP languages.
+        > - The Design of C++ , lecture by Bjarne Stroustrup (section about re-use)
+        >   - https://youtu.be/69edOm889V4?si=JEwAkYjnK1wjzmDF&t=708
+        > - Inheritance vs. Subtyping (webinar #24)
+        >   - https://www.youtube.com/watch?v=DjrA7_Uymok
+        > - The Pain of OOP, Lecture #8: Inheritance [object oriented programming crash course]
+        >   - https://www.youtube.com/watch?v=m0OEOoGgIuM
         > - The Flaws of Inheritance
         >   - https://www.youtube.com/watch?v=hxGOiiR9ZKg
-        > - Banana, Monkey, Jungle Problem
-        >   - https://crystal-villanueva.medium.com/the-banana-and-the-gorilla-problem-92c9a4717fd6
 
 ## Abstract Classes = The Name of a "General Category or Group"  <a name="abstract-classes"></a>
 ###### abstract-classes
