@@ -215,7 +215,7 @@
     classDiagram
     direction TB 
   
-    PersonManager <|-- Person : uses
+    Person <|-- PersonManager: Only contains static methods to modify the data of `Person` objects.
     
     class PersonManager["class PersonManager"] {
        data NO DATA HERE // ⬅︎ No data here, just a set of `static` methods to manipulate the `Person` objects. 
@@ -237,6 +237,53 @@
        method NO METHODS HERE()  // ⬅︎ No methods here, just the data for a `Person` object.
     }
     ```
+    
+    - ```mermaid
+       flowchart TB
+    
+       PersonManager -- "
+          1. Only changes data in `Person` objects
+          ✍️ only writes/reads ->🧍
+          " --> Person:::Object
+       PersonManager -- "
+          2. Only changes data in `Person` objects
+          ✍️ only writes/reads ->🧍
+          " --> Person2:::Object 
+      
+      
+       subgraph Person["Object “Person”  🧍@BFFC882A"]
+          personObjectAgeInt["int age = 3"]:::Object
+          personObjectNameString["String name = “John Doe”"]:::Object 
+          
+          HasNoMethods["NO METHODS HERE"]
+       end
+      
+       subgraph Person2["Object “Person”  🧍@BFFC882A"]
+          personObjectAgeInt2["int age = 32"]:::Object
+          personObjectNameString2["String name = “Jim Jones”"]:::Object 
+          
+          HasNoMethods2["NO METHODS HERE"]
+       end
+    
+       subgraph PersonManager["Class “PersonManager” 🙇‍"]
+          note["Note: This is not an object instance, 
+                this only contains function pointers to static methods."]
+          PersonManagerClassChangeAgeMethodFunctionPointer{{"
+             static method changeAge(Person p, int newAge) @87EF2BC8:
+             { p.age = newAge }
+             ✍️"}}:::Object
+          PersonManagerClassChangeNameMethodFunctionPointer{{"
+             static method changeName(Person p, String newName) @87EF2BC8:
+             { p.name = newName }
+             ✍️"}}:::Object
+          
+          HasNoData["NO DATA HERE"]
+       end
+    
+    
+       style PersonManager fill:#444, stroke:#FFF, stroke-width:1px, color:#FFF, stroke-dasharray: 5 5 
+       classDef Object fill:#55F, stroke:#FFF, stroke-width:3px, color:#fff
+
     
     ```Kotlin
     // Kotlin Example of Using a Class as a "Name-Space" to Group Together Methods
