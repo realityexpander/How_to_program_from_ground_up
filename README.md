@@ -100,7 +100,7 @@ This document is a reference and follow along guide for my video series on YouTu
     - [Object Instance Variable Values = "State" of the Object](09-ClassOrientedProgramming.md#object-instance-variable-values)
     - [Problem: Using Classes and Objects as "Name-Spaces/Scopes" Lead to Procedural-Style Code Implementations](09-ClassOrientedProgramming.md#using-classes-and-objects-as-name-spaces)
     - [Problems Arising from Abusing Static Methods and Attributes](09-ClassOrientedProgramming.md#problems-arising-from-abusing-static)
-    - [Diagram of A Class Used as a Name-Space for Static Method](09-ClassOrientedProgramming.md#static-methods)
+    - [Diagram of A Class Used as a "Name-Space" for Static Methods](09-ClassOrientedProgramming.md#static-methods)
   - [Interfaces](09-ClassOrientedProgramming.md#interfaces)
   - [Inheritance](09-ClassOrientedProgramming.md#inheritance)
     - [Problems Arising from the Abuse of Inheritance](09-ClassOrientedProgramming.md#problems-arising-from-the-abuse-of-inheritance)
