@@ -205,40 +205,38 @@
         - This use of `static` functions is a primary indication of the COP paradigm is being followed.
       > Objects vs. Static Methods
       > - https://www.youtube.com/watch?v=D0dqC_3Bch8
-
-    - ###### static-methods
-      - Diagram of the `class` `PersonManager` used as a "name-space" to dump a collection of `static` methods to manipulate the data of `Person` objects:
+    ###### static-methods
+    - Diagram of the `class` `PersonManager` used as a "name-space" to dump a collection of `static` methods to manipulate the data of `Person` objects:
     
-        ```mermaid
-        ---
-        title: The `PersonManager` class is a "name-space" for a grouping of static methods that manipulate the data of the `Person` objects.
-        ---
-        classDiagram
-        direction TB 
-      
-        Person <|-- PersonManager : uses it's static methods to manipulate the data of the `Person` object.
-       
-        class PersonManager["class PersonManager"] {
-           data NO DATA HERE // ⬅︎ No data here, just a set of `static` methods to manipulate the `Person` objects. 
-        
-           static method changeName(Person person, String newName)
-           static method changeAge(Person person, int newAge)
-           static method changeHeight(Person person, double newHeight)
-           static method changeWeight(Person person, double newWeight)
-           static method changeAddress(Person person, String newAddress)
-        }
-        
-        class Person["class Person"] { 
-           String name
-           int age
-           double height
-           double weight
-           String address
-      
-           method NO METHODS HERE()  // ⬅︎ No methods here, just the data for a `Person` object.
-        }
-      
-        ```
+    ```mermaid
+    ---
+    title: The `PersonManager` class is a "name-space" for a grouping of static methods that manipulate the data of the `Person` objects.
+    ---
+    classDiagram
+    direction TB 
+  
+    PersonManager <|-- Person : uses
+    
+    class PersonManager["class PersonManager"] {
+       data NO DATA HERE // ⬅︎ No data here, just a set of `static` methods to manipulate the `Person` objects. 
+    
+       static method changeName(Person person, String newName)
+       static method changeAge(Person person, int newAge)
+       static method changeHeight(Person person, double newHeight)
+       static method changeWeight(Person person, double newWeight)
+       static method changeAddress(Person person, String newAddress)
+    }
+    
+    class Person["class Person"] { 
+       String name
+       int age
+       double height
+       double weight
+       String address
+    
+       method NO METHODS HERE()  // ⬅︎ No methods here, just the data for a `Person` object.
+    }
+    ```
     
     ```Kotlin
     // Kotlin Example of Using a Class as a "Name-Space" to Group Together Methods
