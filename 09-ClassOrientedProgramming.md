@@ -5,7 +5,7 @@
     > 
     > Bjarne Stroustrup, the creator of C++, said that C++ _**was never meant to be the OOP**_ that Alan-Kay was referring to.
     >> Originator of several poorly applied ideas which still haunt and confuse people to this day, but were appropriate for his use-case at the time, and still is for many lower-level of performance-intensive applications.
-    >> - My main beef is that the "OOP" that was popularized by C++ and Java is not the "OOP" that Alan-Kay was referring to and many ideas are not compatible. 
+    >> - My main beef is that the "OOP" that was popularized by C++ and Java is not the "OOP" that Alan-Kay was referring to and many ideas are not compatible.
 
   - Usually misnamed "Object Oriented Programming (OOP)," as "Objects" are _not_ the main focus of the paradigm, "Classes" are!
   - A "Class" is just a template for a structure in memory (an "Object") that contains the values ("state") of the 
@@ -176,8 +176,9 @@
   - A "Method" is just a normal function that is inside a class. It can manipulate the variables of its `object`,
       or call other methods in its `object` or call other methods in objects from other classes.
       - The process of calling a method on an object is referred to as "sending a message" to the object in COP.
-      - THIS IS TERRIBLE NAMING FOR COP! Because it not a "message" at all.  
-        - It's just calling a function!!!! THIS IS NOT MESSAGING!
+      - ⚠️ THIS IS TERRIBLE NAMING! Because it not a "message" at all.  
+        - It's just calling a _function!!!!_ THIS IS NOT MESSAGING!
+        - "Messaging" implies that something is "sent" to the object and the object can decide what to do with the message.
         - This misnomer lead to a lot of confusion for reasons that will be made clear in this document.
   - The use of the word "constructor" is a bit of a misnomer, as the memory space for the Object has already been allocated, its only purpose is to initialize the state of the object.
   
@@ -204,6 +205,40 @@
         - This use of `static` functions is a primary indication of the COP paradigm is being followed.
       > Objects vs. Static Methods
       > - https://www.youtube.com/watch?v=D0dqC_3Bch8
+
+    - ###### static-methods
+      - Diagram of the `class` `PersonManager` used as a "name-space" to dump a collection of `static` methods to manipulate the data of `Person` objects:
+    
+        ```mermaid
+        ---
+        title: The `PersonManager` class is a "name-space" for a grouping of static methods that manipulate the data of the `Person` objects.
+        ---
+        classDiagram
+        direction TB 
+      
+        Person <|-- PersonManager : uses it's static methods to manipulate the data of the `Person` object.
+       
+        class PersonManager["class PersonManager"] {
+           data NO DATA HERE // <-- No data here, just a set of `static` methods to manipulate the `Person` objects. 
+        
+           static method changeName(Person person, String newName)
+           static method changeAge(Person person, int newAge)
+           static method changeHeight(Person person, double newHeight)
+           static method changeWeight(Person person, double newWeight)
+           static method changeAddress(Person person, String newAddress)
+        }
+        
+        class Person["class Person"] { 
+           String name
+           int age
+           double height
+           double weight
+           String address
+      
+           method NO METHODS HERE()  // <-- No methods here, just the data for a `Person` object.
+        }
+      
+        ```
     
     ```Kotlin
     // Kotlin Example of Using a Class as a "Name-Space" to Group Together Methods
@@ -223,7 +258,7 @@
     class PersonManager {
        // Note: No variables here. Just a set of `static` methods to manipulate the data of the `Person` object.
     
-       companion object {  // <-- creates a `static` set of functions that can be accessed without an instance of the `PersonManager` class.
+       companion object {  // <-- creates a `static` set of functions that can be accessed without an instance/object of the `PersonManager` class.
           fun changeName(person: Person, newName: String) {
              person.name = newName
           }
@@ -925,6 +960,12 @@
   - Although some ideas in the book are good, many of the ideas are just generally-accepted hacks to fit the "procedural
     approach" into the "COP" paradigm.
   
+    > - Design Patterns and Anti-Patterns, Love and Hate - Yegor Bugayenko
+    >   - https://www.yegor256.com/2016/02/03/design-patterns-and-anti-patterns.html
+    > - SSD 6/16: Patterns, Anti-Patterns, and Refactoring [software design crash course] - Yegor Bugayenko
+    >   - https://www.youtube.com/watch?v=LrTBIcFhawI
+    
+
   - ### Many of the problems in COP could have been avoided by exploring what the originator of the term "Object Oriented", Alan Kay, originally meant by the term "Object Oriented."
  
 - [Continue Reading - Functional Programming](10-FunctionalProgramming.md)
