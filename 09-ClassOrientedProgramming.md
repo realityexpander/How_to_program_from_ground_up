@@ -219,7 +219,7 @@
         Person <|-- PersonManager : uses it's static methods to manipulate the data of the `Person` object.
        
         class PersonManager["class PersonManager"] {
-           data NO DATA HERE // <-- No data here, just a set of `static` methods to manipulate the `Person` objects. 
+           data NO DATA HERE // ⬅︎ No data here, just a set of `static` methods to manipulate the `Person` objects. 
         
            static method changeName(Person person, String newName)
            static method changeAge(Person person, int newAge)
@@ -235,7 +235,7 @@
            double weight
            String address
       
-           method NO METHODS HERE()  // <-- No methods here, just the data for a `Person` object.
+           method NO METHODS HERE()  // ⬅︎ No methods here, just the data for a `Person` object.
         }
       
         ```
