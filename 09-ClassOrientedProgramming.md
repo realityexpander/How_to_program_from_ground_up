@@ -301,7 +301,7 @@
 
 ## Interfaces <a name="interfaces"></a>
 ###### interfaces
-  - ### BIG IDEA — Can we swap out different implementations of the same named methods to allow more flexible code?
+  - ### BIG IDEA — Can we swap out different implementations of the behavior of methods with the same names to allow for more flexible code?
      - ### Similar to the reason we dont have appliances directly wired to our houses, allowing the ability to plug in different electrical appliances to the same kind of electrical outlet, the "outlet" and "plug" configuration are the `interface` and the appliances are the different `implement`-ations.
  
        >  [<img src="assets/electrical_outlet.png" width="140"/>](assets/electrical_outlet.png)
