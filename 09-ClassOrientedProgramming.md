@@ -682,6 +682,8 @@
     - ie: `function view(String name)` is the function signature, and it expects a `String` parameter and returns nothing.
     - ie: `method view(): String` is the method signature, and it expects no parameters and returns a `String`.
  
+  - ## Very similar concept as `interface`, additionally `abstract classes` can have "default" implementations of the methods, as well as define variables that are expected to be in the subclass.
+  - 
   - ### Some Examples:
     - An `abstract class Document` that has a method defined named `view`, and doesn't implement how a 
       document is viewed, only it's "definition." 
@@ -697,7 +699,6 @@
     - The `abstract class` is `extend`—ed by the subclass and the subclass methods `override` the superclass methods by
       implementing the method in any subclass.
   
-  - ## Very similar concept as `interface`, additionally `abstract classes` can have "default" implementations of the methods, as well as define variables that are expected to be in the subclass.
     - ### ONE MORE EXAMPLE OF A SIMPLE IDEA LEADING TO OVER-COMPLICATED CODE
     - Leading to unwieldy and hard to understand code, often used in places where it was not necessary.
         > - Object-Oriented Programming - Brian Will
