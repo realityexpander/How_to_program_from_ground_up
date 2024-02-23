@@ -670,9 +670,9 @@
     - ie: Like an `abstract class Document` that has a method called `view` doesn't necessarily implement how a 
       document is viewed, only it's method definition. Any object that is a subtype of "Document" must have a `view` 
       method implemented.
-    - You can't create a generic `Document` object, BUT you can create a `PDF` or `Excel` or `Text` object that is 
+    - You can't create a generic `Document` object, BUT you can create a `PDF` or `ExcelDoc` or `Text` object that is 
       is a subclass of the `abstract class Document` class, as they will require a `view` method to be implemented.
-    - The `Document` class is an `abstract class` and the `class PDF`,`class Excel,` and `class Text` are the 
+    - The `Document` class is an `abstract class` and the `class PDF`,`class ExcelDoc,` and `class Text` are the 
       "concrete classes."
   
   - #### Very similar to interfaces but can have default implementations of the methods & define variables that are expected to be in the subclass.
@@ -700,7 +700,7 @@
     ---
     classDiagram
     direction TB
-    File <|-- Excel : extends
+    File <|-- ExcelDoc : extends
     File <|-- Memo : extends
     File <|-- Photo : extends
       
@@ -714,12 +714,12 @@
     }
     <<abstract>> File 
       
-    class Excel["class Excel extends File"] {
+    class ExcelDoc["class ExcelDoc extends File"] {
        override String name // Subclasses must declare abstract variables.
     
-       constructor Excel(String name) --> super(name)
+       constructor ExcelDoc(String name) --> super(name)
     
-       override method view(): print("View Excel: " + this.name) 
+       override method view(): print("View ExcelDoc: " + this.name) 
     }
     class Memo["class Memo extends File"] {
        override String name //  Subclasses must declare abstract variables.
@@ -757,12 +757,20 @@
         } 
      }  
      
-     class Excel extends File {  // <-- Excel is a subclass of File.
+     class ExcelDoc extends File {  // <-- ExcelDoc is a subclass of File.
         override String name // <-- Subclasses must declare the abstract variables from superclass.
     
         override method view() { // <-- the implementation of the abstract class "view".
-           print "View Excel: " + this.name  
+           print "View ExcelDoc: " + this.name  
         } 
+     }
+    
+     class Photo extends File { // <-- Photo is a subclass of Document
+         override String name // <-- Subclasses must declare the abstract variables from superclass.
+         
+         override method view() {  // <-- the implementation of the abstract class "view".
+            print "View Photo: " + this.name
+         } 
      }
      
      class Memo extends File { // <-- Memo is a subclass of File.
@@ -791,27 +799,19 @@
         } 
      }
      
-     class Photo extends File { // <-- Photo is a subclass of Document
-         override String name // <-- Subclasses must declare the abstract variables from superclass.
-         
-         override method view() {  // <-- the implementation of the abstract class "view".
-            print "View Photo: " + this.name
-         } 
-     }
-     
      // Start of program
      function main() {
-         // File doc0 = new File("MyFile.txt")  // Since the `File` class is `abstract`, an object cannot be created from it, 
+         // File file0 = new File("MyFile.txt")  // Since the `File` class is `abstract`, an object cannot be created from it, 
                                                 // and attempting this will result in a compiler error.
-         File file1 = new Excel("MyExcel.xls")
+         File file1 = new ExcelDoc("MyExcel.xls")
          File file2 = new Photo("MyPhoto.jpg")
-         Memo file3 = new Memo(to="Chris", from="Bob", subject="Meeting")
+         Memo file3 = new Memo(to="Chris", from="Bob", subject="Meeting") // note: correct type is used so that the `showName` method can be called.
      
-         function viewFile(File file)  // Note that the parameter `doc` is of type `File` and not `Excel` or `Photo` or `Memo`.
+         function viewFile(File file)  // Note that the parameter `doc` is of type `File` and not `ExcelDoc` or `Photo` or `Memo`.
             file.view(name)
          }
      
-         viewFile(file1)  // <-- will call the "view" method of the Excel class.
+         viewFile(file1)  // <-- will call the "view" method of the ExcelDoc class.
          viewFile(file2)  // <-- will call the "view" method of the Photo class .
          viewFile(file3)  // <-- will call the "view" method of the Memo class.
      }
@@ -819,7 +819,7 @@
      main()
     
      // Output:
-     // View Excel: MyExcel.xls
+     // View ExcelDoc: MyExcel.xls
      // View Photo: MyPhoto.jpg
      // File Name: Memo to: Chris
      // View Memo: from= Bob, to= Chris, subject= Meeting
@@ -833,42 +833,42 @@
    ```mermaid
      flowchart LR
    
-     ExcelFileObjectPrintContentMethodFunctionPointer -- calls --> ExcelFileClassPrintContentMethod:::Object
-     ExcelFileClassAgeInt -- stores value of --> ExcelFileObjectAgeInt 
-     subgraph ExcelFileObject["[object instance ExcelFile @19FCA68D]"]
-         ExcelFileObjectAgeInt["int content = 3"]
-         ExcelFileObjectPrintContentMethodFunctionPointer{{"method PrintContent(): 
+     ExcelDocObjectPrintContentMethodFunctionPointer -- calls --> ExcelDocClassPrintContentMethod:::Object
+     ExcelDocClassAgeInt -- stores value of --> ExcelDocObjectAgeInt 
+     subgraph ExcelDocObject["[object instance ExcelDoc @19CAFE42]"]
+         ExcelDocObjectAgeInt["int content = 3"]
+         ExcelDocObjectPrintContentMethodFunctionPointer{{"method PrintContent(): 
             calls 
-            function @C62F3842
+            function @4269BEEF
             in class ExcelFile
             🖨️
             "}}
      end
-     subgraph classExcelFile["class ExcelFile extends File"]
-         ExcelFileClassAgeInt["int content"]
-         ExcelFileClassPrintContentMethod{{"function @C62F3842:  
+     subgraph classExcelDoc["class ExcelDoc extends File"]
+         ExcelDocClassAgeInt["int content"]
+         ExcelDocClassPrintContentMethod{{"function @4269BEEF:  
             method PrintContent() =
             { print this.content }
             🖨️
             "}}
      end
-     abstractAgeInt -- expects --> ExcelFileClassAgeInt
-     abstractPrintContentMethod -- expects --> ExcelFileClassPrintContentMethod:::Object
-     ExcelFileClassAgeInt -- implements --> abstractAgeInt:::Abstract
+     abstractAgeInt -.- expects -.-> ExcelDocClassAgeInt
+     abstractPrintContentMethod -.- expects2{{"expects"}} -.-> ExcelDocClassPrintContentMethod:::Object
+     ExcelDocClassAgeInt -- implements --> abstractAgeInt:::Abstract
    
      note["
         EXPLANATION: 
-        The ExcelFile Object @19FCA68D 
-        is an instance of the ExcelFile class.
-        ExcelFile class is a subclass of the 
-        abstract File class.
+        The ExcelDoc Object @19CAFE42 
+        is an instance of the ExcelDoc class.
+        ExcelDoc class is a subclass of the 
+        abstract class File.
         📁 ➤➤ 🗄️"]
      
-     classExcelFile -- "instantiates 
+     classExcelDoc -- "instantiates 
                         object
-                        ⬇️" --> ExcelFileObject:::Object
-     classExcelFile -- extends ---> abstractFile:::Abstract
-     ExcelFileClassPrintContentMethod -- implements --> abstractPrintContentMethod:::Abstract
+                        ⬇️" --> ExcelDocObject:::Object
+     classExcelDoc -- extends --> abstractFile:::Abstract
+     ExcelDocClassPrintContentMethod -- implements --> abstractPrintContentMethod:::Abstract
      subgraph abstractFile["abstract class File"]
        abstractAgeInt["abstract int content"]
        abstractPrintContentMethod{{"
@@ -882,12 +882,12 @@
      
      classDef Class fill:#444, stroke:#00F, stroke-width:1px, color:#000, stroke-dasharray: 5 5
      %% For nodes that are the source of a link, the style must be defined in the link, not the classDef. 
-     style classExcelFile fill:#444, stroke:#DDD, stroke-width:1px, color:#000, stroke-dasharray: 5 5
-     style ExcelFileClassAgeInt fill:#444, stroke:#DDD, stroke-width:1px, color:#FFF, stroke-dasharray: 5 5
+     style classExcelDoc fill:#444, stroke:#DDD, stroke-width:1px, color:#000, stroke-dasharray: 5 5
+     style ExcelDocClassAgeInt fill:#444, stroke:#DDD, stroke-width:1px, color:#FFF, stroke-dasharray: 5 5
      
      classDef Object fill:#55F, stroke:#FFF, stroke-width:3px, color:#fff
-     style ExcelFileObjectAgeInt fill:#55F, stroke:#FFF, stroke-width:3px, color:#fff
-     style ExcelFileObjectPrintContentMethodFunctionPointer fill:#222, stroke:#DDD, stroke-width:1px, color:#000, stroke-dasharray: 5 5
+     style ExcelDocObjectAgeInt fill:#55F, stroke:#FFF, stroke-width:3px, color:#fff
+     style ExcelDocObjectPrintContentMethodFunctionPointer fill:#222, stroke:#DDD, stroke-width:1px, color:#000, stroke-dasharray: 5 5
    ```
 
 ## Polymorphism <a name="polymorphism"></a>

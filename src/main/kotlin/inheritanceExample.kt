@@ -15,7 +15,6 @@ open class Media() {  // <-- the "base class" or "superclass", `open` means it c
 open class MP3(
    name: String
 ): Media(name) {   // <-- the "subclass" or "derived class"; it `extends` (inherits) from the superclass (Media),
-
    // NOTICE: No constructor is defined, so the `default constructor` in the superclass will be used `Media(name)`
 
    override fun play() {
@@ -36,16 +35,17 @@ class ProtectedMP3(
    name: String,
    private val password: String
 ): MP3(name) {  // NOTICE: No constructor is defined, so the `default constructor` in the superclass will be used `Media(name)`
-   private var authenticated: Boolean = false
+   private var isAuthenticated: Boolean = false
    
    fun authenticate(password: String) {
       if (this.password == password) {
-         this.authenticated = true
+         this.isAuthenticated = true
          println("Authenticated.")
       }
    }
+
    override fun play() {
-      if (this.authenticated == true) {
+      if (this.isAuthenticated == true) {
          println("Playing Protected MP3: " + this.name)
       } else {
          println("Not Authenticated! Submit password to authenticate.")

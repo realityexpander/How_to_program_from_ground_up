@@ -7,11 +7,11 @@ abstract class File(
    }
 }
 
-class Excel(
+class ExcelDoc(
    fileName: String
-): File(fileName) {  // <-- Excel is a subclass of File, also called a "type" of File.
+): File(fileName) {  // <-- ExcelDoc is a subclass of File, also called a "type" of File.
    override fun view() { // <-- the implementation of the abstract class "view".
-      println("View Excel: " + this.fileName)
+      println("View ExcelDoc: " + this.fileName)
    }
 }
 
@@ -54,17 +54,17 @@ class Memo(
 fun main() {
    // val file0: File = File("MyFile") // <-- Since the `File` class is `abstract`, an object
                                        // cannot be created from it. this will cause a compiler error.
-   val file1: File = Excel("MyExcel.xls")
+   val file1: File = ExcelDoc("MyExcel.xls")
    val file2: Photo = Photo("MyPhoto.jpg")
    val file3: Memo = Memo(to="Chris", from="Bob", subject="Meeting") // <-- `file3` is of type `Memo` and not
                                                                      // `File` because we want to access the
                                                                      // `send` method.
    
-   fun viewFile(file: File) {  // <-- Parameter `file` is type `File` and not `Excel` or `Photo` or `Memo`.
+   fun viewFile(file: File) {  // <-- Parameter `file` is type `File` and not `ExcelDoc` or `Photo` or `Memo`.
       file.view()
    }
    
-   viewFile(file1)  // <-- will call the "view" fun of the Excel class
+   viewFile(file1)  // <-- will call the "view" fun of the ExcelDoc class
    viewFile(file2)  // <-- will call the "view" fun of the Memo class
    viewFile(file3)  // <-- will call the "view" fun of the Photo class
 
@@ -73,7 +73,7 @@ fun main() {
 }
 
 // Output:
-//   View Excel: MyExcel.xls
+//   View ExcelDoc: MyExcel.xls
 //   View Photo: MyPhoto.jpg
 //   File Name: TEMPORARY_FILE_NAME.memo
 //   View Memo: from= Bob, to= Chris, subject= Meeting
