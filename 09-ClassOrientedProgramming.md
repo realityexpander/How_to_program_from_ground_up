@@ -934,7 +934,7 @@
   - ### BIG IDEA — A method can be called on an object and the method will behave differently based on the `class` of the object.
   - In COP, the `interface`-s and `abstract class`-s are implementations of the idea of polymorphism.
 
-  - #### ⚠️ ANOTHER EXAMPLE OF A SIMPLE IDEA WITH AN OVERCOMPLICATED NAME!
+  - ### ⚠️ ANOTHER EXAMPLE OF A SIMPLE IDEA WITH A RIDICULOUSLY OVERCOMPLICATED NAME!
     - Yet _another_ overcomplicated name for a very basic, exceedingly simple idea.
     - Polymorphism is the idea that a method can be called on an object and the method will behave differently
       based on the "type" of the "object" that the "method" is called on
