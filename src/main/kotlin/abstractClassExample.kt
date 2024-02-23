@@ -54,7 +54,7 @@ class Memo(
                                                   //     Design problems already creeping in....
    }
 
-   fun send() {
+   fun send() { // <-- A new function that is not part of the abstract class.
       println("Sending Memo: from= " + this.from + ", to= " + this.to + ", subject= " + this.subject)
    }
 }
@@ -73,14 +73,14 @@ fun main() {
       file.view()
    }
    
-   viewFile(file1)  // <-- will call the "view" fun of the ExcelDoc class
-   viewFile(file2)  // <-- will call the "view" fun of the Memo class
-   viewFile(file3)  // <-- will call the "view" fun of the Photo class
+   viewFile(file1)  // <-- Calls the "view" fun of the ExcelDoc class
+   viewFile(file2)  // <-- Calls the "view" fun of the Memo class
+   viewFile(file3)  // <-- Calls the "view" fun of the Photo class
 
    println()        // <-- Just to separate the output of the `viewFile` calls from the `showName` and `send` calls.
-   file1.showName() // <-- will call the "showName" fun of the ExcelDoc class.
-   file3.showName() // <-- will call the "showName" fun of the Memo class, notice the design flaw here?
-   file3.send()     // <-- will call the "send" function of the Memo class.
+   file1.showName() // <-- Calls the "showName" fun of the ExcelDoc class.
+   file3.showName() // <-- Calls the "showName" fun of the Memo class, notice the design flaw here?
+   file3.send()     // <-- Calls the "send" function of the Memo class.
 }
 
 // Output:
