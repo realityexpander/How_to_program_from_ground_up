@@ -663,9 +663,9 @@
         > - The Flaws of Inheritance
         >   - https://www.youtube.com/watch?v=hxGOiiR9ZKg
 
-## Abstract Classes = The Name of a "General Category or Group"  <a name="abstract-classes"></a>
+## Abstract Classes = The Name of a "General Category or Grouping"  <a name="abstract-classes"></a>
 ###### abstract-classes
-  - ### BIG IDEA — Can we use the `class` as way to define a general category of objects, but doesn't necessarily define the implementation details of the objects? 
+  - ### BIG IDEA — Can we use a `class` as way to define a general category of objects, but doesn't necessarily define the implementation details of the objects? 
   - ### That way we can create many different kinds of objects with the same "method signature," but have different implementations of the methods.
 
   - ## ⚠️ Confusing Terminology Alert!
@@ -676,7 +676,11 @@
       - Many people who attempted to explain the "abstract" keyword were likely unaware of the other meanings of the word
         and confused many people due to ignorance of the other meanings of the word.
       - They could have just said what I just told you, but they didn't, and that's why I'm here to help you. 🙂
-
+  - ### Method signature: `method name` + `parameter types` + `return type`
+    - ie: `method view()` is the method signature, and it expects no parameters and returns nothing.
+    - ie: `method view(String name)` is the method signature, and it expects a `String` parameter and returns nothing.
+    - ie: `method view(): String` is the method signature, and it expects no parameters and returns a `String`.
+ 
   - ### Some Examples:
     - An `abstract class Document` that has a method defined named `view`, and doesn't implement how a 
       document is viewed, only it's "definition." 
