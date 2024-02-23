@@ -677,10 +677,10 @@
   
   - #### Very similar to interfaces but can have default implementations of the methods & define variables that are expected to be in the subclass.
   
-  - #### ANOTHER EXAMPLE OF A SIMPLE IDEA LEADING TO OVERCOMPLICATED CODE
+  - #### ONE MORE EXAMPLE OF A SIMPLE IDEA LEADING TO OVERCOMPLICATED CODE
     - Leading to unwieldy and hard to understand code, often used in places where it was not necessary.
-    > Abstraction Can Make Your Code Worse
-    > - https://www.youtube.com/watch?v=rQlMtztiAoA 
+      > Abstraction Can Make Your Code Worse
+      > - https://www.youtube.com/watch?v=rQlMtztiAoA 
   
   - An `abstract class` is a template for a "concrete" (or specific) `class`, and cannot to be instantiated itself, 
     only `extend`-ed and be used as a "general" `class` to group the "specific" classes into categories or "types."
@@ -897,7 +897,7 @@
   - ### BIG IDEA — A method can be called on an object and the method will behave differently based on the `class` of the object.
   - In COP, the `interface`-s and `abstract class`-s are implementations of the idea of polymorphism.
 
-  - #### ⚠️ ANOTHER EXAMPLE OF A SIMPLE IDEA WITH AN OVERCOMPLICATED NAME!
+  - #### ⚠️ ANOTHER EXAMPLE OF A SIMPLE IDEA WITH AN OVER-COMPLICATED NAME!
     - Yet _another_ overcomplicated name for a very basic, exceedingly simple idea.
     - Polymorphism is the idea that a method can be called on an object and the method will behave differently
       based on the "type" of the "object" that the "method" is called on
@@ -910,7 +910,8 @@
     - That's it. That's the whole idea. 
     - It's just a fancy way of saying that "subclasses should work the same as their superclass."
     - Live Code Example: [Liskov Substitution Principle in Kotlin](src/main/kotlin/liskovSubstitutionPrincipleExample.kt)
-    - #### 🛑 POLYMORPHISM IS A GREAT EXAMPLE OF MAKING FANCY TERMS FOR VERY BASIC CONCEPTS THAT BARELY NEED EXPLAINING, I'VE SAID ENOUGH ALREADY.
+    - #### 🛑 POLYMORPHISM IS A GREAT EXAMPLE OF USING FANCY SOUNDING TERMS FOR VERY BASIC CONCEPTS THAT BARELY NEED EXPLAINING, I'VE SAID ENOUGH ALREADY.
+      - ### 🫤 A lot of dick-swinging contests around words among the aspy-addled crowd. Please someone tell them they are being assholes when they suggest a new word for something super basic!
 
 ## Controlled Scope of Visibility of Variables and Methods <a name="controlled-visibility"></a>
 ###### controlled-visibility
@@ -1012,7 +1013,7 @@
     
        // Solution - you have to pick:
        // cog.Dog::makeSound(); // <-- You have to tell the compiler which one, which adds confusion.
-       // cog.Cat::makeSound(); // <-- Make sure you remember pick the right one!
+       // cog.Cat::makeSound(); // <-- Requires intimate knowledge of internal details everytime you use diamond inheritance.
     }
     
     // THIS IS *NOT* THE OUTPUT:
@@ -1048,10 +1049,11 @@
  
   - "Design Patterns" became popular around the time of C++ due to the new complexity of the language and the
     need to solve the problems of the "procedural approach" to COP.
-  - These "patterns" were discovered by programmers dealing with C++ language issues, and these common solutions were
-    shared on public forums and in many books from different authors, given in talks at software development conferences, 
-    emphasizing different ideas and approaches to particular problems that arose from C++ programming.
-  - Most of these so-called "patterns" were just hacks to fit the "procedural approach" into the "COP" paradigm.
+  - These "patterns" were discovered by programmers dealing with C++ language design limitations, and these common solutions were
+    shared on public forums and then copied into many books from different authors. The solutions were given in talks 
+    at software development conferences, emphasizing different ideas and approaches to particular problems that arose 
+    from C++ programming, not necessarily the OOP paradigm.
+  - Most of these so-called "patterns" were just _common hacks_ to fit the procedural approach into the COP paradigm.
   - Many programmers accepted these patterns as some kind of gospel, and they were often used to justify the
     use of inheritance (and other language features) in places where it was not appropriate.
   - For example, **"The "Gang of Four"** book is the most famous book on the subject, and it is often touted to as the "Bible" for OOP programming, especially in C++.
