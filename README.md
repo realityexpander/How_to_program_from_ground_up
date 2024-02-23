@@ -113,7 +113,7 @@ This document is a reference and follow along guide for my video series on YouTu
   - Can we structure our code in a way to have less bugs and be easier to understand?
   - [Immutability & No Side Effects](10-FunctionalProgramming.md#immutability-no-side-effects)
   - [Functional Programming Style](10-FunctionalProgramming.md#functionalExample)
-- [Back-to-Object Oriented Programming (BOOP)](11-BackToObjectOrientedProgramming.md) 1970s-Present
+- [Back-to Object Oriented Programming (BOOP)](11-BackToObjectOrientedProgramming.md) 1970s-Present
   - Can we re-visit the original principles of OOP to make software easier to understand and maintain?
   - [A word of caution about BOOP style](11-BackToObjectOrientedProgramming.md#boop-caution)
   - [Banned Patterns in BOOP](11-BackToObjectOrientedProgramming.md#banned-patterns-in-boop)
