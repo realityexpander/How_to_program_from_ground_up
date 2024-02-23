@@ -44,8 +44,8 @@
                                 scopes & syntax
                                 ⚡️️
                                 "|C
-        BCPL{{"BCPL"}} -->|"for many 
-                             concepts
+        BCPL{{"BCPL"}} -->|"for types, structures 
+                            low-level compilation
                             ✨"|C
         BCPL --> Algol68
         BCPL --> Simula67
