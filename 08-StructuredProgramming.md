@@ -173,8 +173,10 @@
   
 
 ### Bonus: History of Procedural to Structured Programming <a name="procedural-to-structured"></a>
-  > Procedural Programming: It’s Back? It Never Went Away - Kevlin Henney [ACCU 2018]
-  > - https://www.youtube.com/watch?v=mrY6xrWp3Gs
+  > - Procedural Programming: It’s Back? It Never Went Away - Kevlin Henney [ACCU 2018]
+  >   - https://www.youtube.com/watch?v=mrY6xrWp3Gs
+  > - History and Spirit of C - Olve Maudal
+  >   - https://www.youtube.com/watch?v=xGVRF-Y--hI 
 
 - [Continue Reading - Class Oriented Programming](./09-ClassOrientedProgramming.md)
 - [Back to Index](README.md)

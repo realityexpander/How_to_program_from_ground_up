@@ -925,6 +925,15 @@
   - Encouraged to use getters and setters to control the access to the variables of the class (which has since
     been shown to be a bad idea due to misuse and overuse of the pattern)
 
+## Some thoughts on Software Complexity <a name="some-thoughts-on-software-complexity"></a>
+###### some-thoughts-on-software-complexity
+  - ### BIG IDEA — There are 2 kinds of complexity: "essential" and "accidental" complexity.
+  - "Essential" complexity is the complexity that is inherent in the problem that the software is trying to solve.
+  - "Accidental" complexity is the complexity that is added to the software by the programmers and the tools that
+    they use to solve the problem.
+
+    > Th.e cmplxty (The Complexity) - Jonathan Crossland
+    > - https://www.youtube.com/watch?v=SVyaKFOxZlU
 
 ## Allowing for "Multiple Inheritance" in C++ was a mistake, and it was removed from Java and C# for very good reasons. <a name="multiple-inheritance-removed"></a>
 ###### multiple-inheritance-removed
@@ -1025,9 +1034,11 @@
     >   - https://www.youtube.com/watch?v=3X9Eo2vzY1I
     >   - Live Code Example: [How to Achieve Multiple Inheritance in Kotlin](src/main/kotlin/multipleInheritanceExample.kt)
 
-## More Thoughts on Class Oriented Programming <a name="some-thoughts-on-object-oriented-programming"></a>
-  > Kevlin Henney - Object? You Keep Using that Word - Trójmiasto JUG [30.05.2016]
-  > - https://www.youtube.com/watch?v=IA-RyzKE7oc
+## More Thoughts on Class Oriented Programming & Design <a name="some-thoughts-on-object-oriented-programming"></a>
+  > - Kevlin Henney - Object? You Keep Using that Word - Trójmiasto JUG [30.05.2016]
+  >   - https://www.youtube.com/watch?v=IA-RyzKE7oc
+  > - What the BDUF (Big-Design Up-Front) - Jonathan Crossland
+  >   - https://www.youtube.com/watch?v=Z-9wXpfVjac 
 
 ## Design Patterns <a name="design-patterns"></a>
 ###### design-patterns

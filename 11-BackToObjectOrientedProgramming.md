@@ -117,7 +117,7 @@
               B("📄 Page 2 Content") -->|enclosed in| D
               C("📄 Page 3 Content") -->|enclosed in| D
            end
-            D("📑 List of Pages") -->|enclosed in| E(Book)
+           D("📑 List of Pages") -->|enclosed in| E(Book)
         end
         E("📖 Book") -->|enclosed in| F("🖥️ Application")
      end
