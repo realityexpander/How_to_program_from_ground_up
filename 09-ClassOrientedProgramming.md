@@ -682,7 +682,7 @@
     - ie: `function view(String name)` is the function signature, and it expects a `String` parameter and returns nothing.
     - ie: `method view(): String` is the method signature, and it expects no parameters and returns a `String`.
  
-  - ## `abstract class` is very similar concept as `interface`, additionally `abstract classes` can have "default" implementations of the methods, as well as define variables that are expected to be in the subclass.
+  - ## An `abstract class` is very similar concept as `interface`, additionally `abstract classes` can have "default" implementations of the methods, as well as define variables that are expected to be in the subclass.
   
   - ### Some Examples:
     - An `abstract class Document` that has a method defined named `view`, and doesn't implement how a 
