@@ -32,8 +32,7 @@
         AssemblyLanguage{{Assembly Language}} -->|Procedural|Fortran
         AssemblyLanguage{{Assembly Language}} -->|Structured|Algol68
         AssemblyLanguage{{Assembly Language}} -->|Structured|C
-%%        AssemblyLanguage{{Assembly Language}} -->|Structured|Simula67
-        AssemblyLanguage{{Assembly Language}} -->|Structured|BCPL
+        AssemblyLanguage{{Assembly Language}} -->|Structured + low-level|BCPL
         COBOL{{"COBOL"}} -.->|"Easy to 
                               Learn Syntax
                               ⚡️️"|Basic
