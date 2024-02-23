@@ -667,8 +667,18 @@
 ###### abstract-classes
   - ### BIG IDEA — Can we use the `class` as way to define a general category of objects, but doesn't necessarily define the implementation details of the objects? 
   - ### That way we can create many different kinds of objects with the same "method signature," but have different implementations of the methods.
-   
-    - For example: An `abstract class Document` that has a method defined named `view`, and doesn't implement how a 
+
+  - ## ⚠️ Confusing Terminology Alert!
+  - I suggest forgetting the word `abstract` and substitute the phrase "The General Category."
+      - I often kept confusing it with the "abstract" concept in art, and "abstract" concept in philosophy, and other
+        meanings of the word.
+      - The `abstract` term used in computing **_ONLY_** means the **"general category"** of something.
+      - Many people who attempted to explain the "abstract" keyword were likely unaware of the other meanings of the word
+        and confused many people due to ignorance of the other meanings of the word.
+      - They could have just said what I just told you, but they didn't, and that's why I'm here to help you. 🙂
+
+  - ### Some Examples:
+    - An `abstract class Document` that has a method defined named `view`, and doesn't implement how a 
       document is viewed, only it's "definition." 
     - Any object that is a subtype of "Document" must have the `view` method implemented.
     - You can't create a generic `Document` object, BUT you can create a `PDF` or `ExcelDoc` or `Memo` object that is 
@@ -676,30 +686,20 @@
     - The `Document` class is an `abstract class` and the `class PDF`,`class ExcelDoc,` and `class Memo` are the 
       _"concrete classes" 
       - also called "implementing classes" or "implementations" of the `Document` class.
-  - An `abstract class` is a template for a _"concrete"_ `class`, and cannot to be instantiated itself,
-    only `extend`-ed and be used as a "general" type to group the "specific" implementing sub-classes.
-  - ie: `Document` is the general category (`abstract` idea) of a generic "something to structure and retain data."
-  - The `abstract class` is `extend`—ed by the subclass and the subclass methods `override` the superclass methods by
-    implementing the method in the subclass.
+    - An `abstract class` is a template for a _"concrete"_ `class`, and cannot to be instantiated itself,
+      only `extend`-ed and be used as a "general" type to group the "specific" implementing sub-classes.
+    - ie: `Document` is the general category (`abstract` idea) of a generic "something to structure and retain data."
+    - The `abstract class` is `extend`—ed by the subclass and the subclass methods `override` the superclass methods by
+      implementing the method in the subclass.
   
-  - ## Very similar to interfaces but can have default implementations of the methods & define variables that are expected to be in the subclass.
+  - ## Very similar idea as interfaces, and `absract classes` can have "default" implementations of the methods, as well as define variables that are expected to be in the subclass.
     - ### ONE MORE EXAMPLE OF A SIMPLE IDEA LEADING TO OVERCOMPLICATED CODE
-      - Leading to unwieldy and hard to understand code, often used in places where it was not necessary.
+    - Leading to unwieldy and hard to understand code, often used in places where it was not necessary.
         > - Object-Oriented Programming - Brian Will
         >   - https://www.youtube.com/watch?v=lbXsrHGhBAU 
         > - Abstraction Can Make Your Code Worse
         >   - https://www.youtube.com/watch?v=rQlMtztiAoA 
 
-  - ## ⚠️ Confusing Terminology Alert!
-    - I suggest forgetting the word `abstract` and substitute the phrase "The General Category."
-      - I often kept confusing it with the "abstract" concept in art, and "abstract" concept in philosophy, and other 
-        meanings of the word.
-      - The `abstract` term used in computing **_ONLY_** means the **"general category"** of something.
-      - Many people who attempted to explain the "abstract" keyword were likely unaware of the other meanings of the word
-        and confused many people due to ignorance of the other meanings of the word.
-      - They could have just said what I just told you, but they didn't, and that's why I'm here to help you. 🙂 
-    
-  
   - ### Example of `abstract` `class` diagram:
     ```mermaid
     ---
