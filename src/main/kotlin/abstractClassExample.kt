@@ -77,13 +77,14 @@ fun main() {
    viewFile(file2)  // <-- will call the "view" fun of the Memo class
    viewFile(file3)  // <-- will call the "view" fun of the Photo class
 
-   println() // <-- Just to separate the output of the `viewFile` calls from the `showName` and `send` calls.
-   file3.showName()  // <-- will call the "showName" fun of the Memo class
-   file3.send()  // <-- will call the "send" fun of the Memo class
+   println()        // <-- Just to separate the output of the `viewFile` calls from the `showName` and `send` calls.
+   file1.showName() // <-- will call the "showName" fun of the ExcelDoc class.
+   file3.showName() // <-- will call the "showName" fun of the Memo class, notice the design flaw here?
+   file3.send()     // <-- will call the "send" function of the Memo class.
 }
 
 // Output:
-//   Viewing ExcelDoc: MyExcel.xls
+//   Viewing ExcelDoc: MyExcelDoc.xls
 //   Viewing Photo: MyPhoto.jpg
 //   File Name: Memo-Chris|Bob|Meeting.memo
 //   Viewing Memo: from= Bob, to= Chris, subject= Meeting
