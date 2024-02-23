@@ -47,7 +47,7 @@
     hierarchies of 2-3 levels maximum meant to model the real world objects, not to create a "hierarchy of types."
   - Use of interfaces is limited to Classes that require testing, and are not automatically added for every class.
   - Use of `setters` and `getters` is specifically disallowed. Instead, the object is expected to respond to messages to change its
-    state, and to respond to messages to get its state.
+    state, and to respond to messages to reveal (transfer) its state.
    
   - There are only a few true BOOP languages, "Smalltalk," "Ruby," and, _incredibly_, "Javascript" are among the most popular ones.
 
@@ -178,7 +178,7 @@
     fun main() {
        // Setup the App in the familiar Imperative Style:
        // Create the list of Page objects
-       val pages = listOf(  // <-- the "val" keyword means the variable is immutable and can only be assigned once.
+       val pages = listOf(  // <-- the "val" keyword means the variable is immutable and can be assigned only once.
           Page("Page 1 Content"),
           Page("Page 2 Content"),
           Page("Page 3 Content")
