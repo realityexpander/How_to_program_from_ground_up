@@ -708,39 +708,39 @@
     File <|-- Photo : extends
       
     class File["abstract class File"] {
-       abstract open String name  // Abstract classes can have variables, and are "abstract" and "open" by default, meaning they must be defined and overridden in the subclass.
+       abstract open String fileName  // Abstract classes can have variables, and are "abstract" and "open" by default, meaning they must be defined and overridden in the subclass.
        
-       constructor File(String name) this.name = name // Abstract classes can have "default" constructors.
+       constructor File(String fileName) this.fileName = fileName // Abstract classes can have "default" constructors.
         
        abstract method view() // default implementations of methods are optional.
-       open method showName(): print("File Name: " + this.name) // The default implementation.
+       open method showName(): print("File Name: " + this.fileName) // The default implementation.
     }
     <<abstract>> File 
       
     class ExcelDoc["class ExcelDoc extends File"] {
-       override String name // Subclasses must declare abstract variables.
+       override String fileName // Subclasses must declare abstract variables.
     
        constructor ExcelDoc(String name) --> super(name)
     
-       override method view(): print("View ExcelDoc: " + this.name) 
+       override method view(): print("View ExcelDoc: " + this.fileName) 
+    }
+    class Photo["class Photo extends File"] {
+       override String fileName // Subclasses must declare abstract variables.
+    
+       constructor Photo(String name) -> super(name)
+       
+       override method view(): print("View Photo: " + this.fileName)
     }
     class Memo["class Memo extends File"] {
-       override String name //  Subclasses must declare abstract variables.
+       override String fileName //  Subclasses must declare abstract variables.
        String to  // <- Subclasses can have additional variables.
        String from
        String subject
     
-       constructor Memo(String to, String from, String subject) --> super("Memo to:" + to)
+       constructor Memo(String to, String from, String subject) --> super("Memo-" + to +"|"+ from +"|"+ subject + ".memo")
        
        override method view(): print("View Memo: from= " + this.from + ", to= " + this.to + ", subject= " + this.subject) 
        override method showName(): print("Memo from: " + this.from + ", to: " + this.to)
-    }
-    class Photo["class Photo extends File"] {
-       override String name // Subclasses must declare abstract variables.
-    
-       constructor Photo(String name) -> super(name)
-       
-       override method view(): print("View Photo: " + this.name)
     }
     ```
   - Example for `abstract` `class`-es in pseudo-code (similar to common COP languages):
