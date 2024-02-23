@@ -2,7 +2,7 @@
 // Also shows the beginning of a design flaw in the `Memo` class inheriting from the `File` class.
 
 abstract class File(
-   val fileName: String
+   val fileName: String  // <-- The primary constructor of the abstract class, initializes property `fileName`.
 ) {
    abstract fun view()      // Expects a fun called "view" and has no default implementation.
    open fun showName() {    // Expects a fun called "showName" and has a default implementation.

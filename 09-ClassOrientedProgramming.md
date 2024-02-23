@@ -745,36 +745,36 @@
      // COP pseudo-code
      
      abstract class File { 
-        abstract String name // <-- Abstract classes can have variables.
+        abstract String fileName // <-- Abstract classes can have variables.
         
-        constructor File(String name) {  // <-- Abstract classes can have "default" constructors.
-           this.name = name
+        constructor File(String fileName) {  // <-- Abstract classes can have "default" constructors.
+           this.fileName = fileName
         }
     
         abstract method view()  // Expects a method called "view" and has no default implementation.
         abstract method showName() {  // Expects a method called "showName" and has a default implementation.
-           print "File Name: " + this.name // <-- The default implementation for any subclass that doesn't override the method.
+           print "File Name: " + this.fileName // <-- The default implementation for any subclass that doesn't override the method.
         } 
      }  
      
      class ExcelDoc extends File {  // <-- ExcelDoc is a subclass of File.
-        override String name // <-- Subclasses must declare the abstract variables from superclass.
+        override String fileName // <-- Subclasses must declare the abstract variables from superclass.
     
         override method view() { // <-- the implementation of the abstract class "view".
-           print "Viewing ExcelDoc: " + this.name  
+           print "Viewing ExcelDoc: " + this.fileName  
         } 
      }
     
      class Photo extends File { // <-- Photo is a subclass of Document
-         override String name // <-- Subclasses must declare the abstract variables from superclass.
+         override String fileName // <-- Subclasses must declare the abstract variables from superclass.
          
          override method view() {  // <-- the implementation of the abstract class "view".
-            print "Viewing Photo: " + this.name
+            print "Viewing Photo: " + this.fileName
          } 
      }
      
      class Memo extends File { // <-- Memo is a subclass of File.
-        override String name // <-- Subclasses must declare the abstract variables from superclass.
+        override String fileName // <-- Subclasses must declare the abstract variables from superclass.
         String to
         String from
         String subject
@@ -789,15 +789,16 @@
         }
        
         override method view() {  // <-- The implementation of the abstract method "view".
-           super.showName()       // <-- Calls the "default implementation" of the abstract superclass.
+           super.showName()       // <-- Calls the "default implementation" of the abstract superclass. (this is just to show how it's done.)
                                   //     Note: Calls to the `super` class are not required, but can be used to call any 
                                   //           methods of the superclass.
          
            print "Viewing Memo: from= " + this.from + ", to= " + this.to + ", subject= " + this.subject 
         }
         override method showName() { // <-- overrides the "default implementation" of the abstract superclass.
-           print "Memo from: " + this.from + ", to: " + this.to  // <-- shows contents of the memo, not just the name... 
-                                                                 //     Design problems already creeping in....
+           print "Memo from: " + this.from + ", to: " + this.to  // <-- NOTE: Shows addressee names of the memo, 
+                                                                 //     **NOT** the filename... 
+                                                                 //     & design problems are already creeping in!
         } 
      }
      
