@@ -131,14 +131,14 @@
        private val content: String  // <-- the "val" keyword means the variable is immutable and can only be assigned once.
     ) {
       fun view() {
-         println("Page: $content")
+         println("Page: ${inspectContent()}") 
       }
       
       fun updateContent(newContent: String): Page {
          return Page(newContent)  // <-- the "updateContent" method is expected to return a new object with the new state.
       }
       
-      fun inspectContent(): String {
+      fun inspectContent(): String {  // <-- allows access to the private state of the object, only via a method call.
          return content
       }
     }

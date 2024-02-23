@@ -4,7 +4,7 @@ class Page(  // <-- the "Page" class constructor, the "val" keyword means the va
 	private val content: String // <-- content is only accessible by calling the `inspectContent` method.
 ) {
 	fun view() {
-		println("Page: $content")
+		println("Page: ${inspectContent()}")
 	}
 
 	fun updateContent(newContent: String): Page {
