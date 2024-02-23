@@ -686,7 +686,7 @@
     only `extend`-ed and be used as a "general" `class` to group the "specific" classes into categories or "types."
   - I like to forget the word `abstract` and replace it wih the phrase "The General Category."
     - I kept confusing it with the "abstract" concept in art, and "abstract" concept in philosophy.
-    - The `abstract` used in computing ONLY means the "general category of a thing".
+    - The `abstract` term used in computing ONLY means the "general category" of something.
     - Many people who attempted to explain the "abstract" keyword were likely unaware of the other meanings of the word
       and confused many people due to ignorance of the other meanings of the word.
       - They could have just said what I just told you, but they didn't, and that's why I'm here to help you. 
@@ -833,11 +833,11 @@
    ```mermaid
      flowchart LR
    
-     ExcelDocObjectPrintContentMethodFunctionPointer -- calls --> ExcelDocClassPrintContentMethod:::Object
+     ExcelDocObjectViewMethodFunctionPointer -- calls --> ExcelDocClassViewMethod:::Object
      ExcelDocClassAgeInt -- stores value of --> ExcelDocObjectAgeInt 
      subgraph ExcelDocObject["[object instance ExcelDoc @19CAFE42]"]
          ExcelDocObjectAgeInt["int content = 3"]
-         ExcelDocObjectPrintContentMethodFunctionPointer{{"method PrintContent(): 
+         ExcelDocObjectViewMethodFunctionPointer{{"method View(): 
             calls 
             function @4269BEEF
             in class ExcelFile
@@ -846,14 +846,14 @@
      end
      subgraph classExcelDoc["class ExcelDoc extends File"]
          ExcelDocClassAgeInt["int content"]
-         ExcelDocClassPrintContentMethod{{"function @4269BEEF:  
-            method PrintContent() =
+         ExcelDocClassViewMethod{{"function @4269BEEF:  
+            method View() =
             { print this.content }
             🖨️
             "}}
      end
      abstractAgeInt -.- expects -.-> ExcelDocClassAgeInt
-     abstractPrintContentMethod -.- expects2{{"expects"}} -.-> ExcelDocClassPrintContentMethod:::Object
+     abstractViewMethod -.- expects2{{"expects"}} -.-> ExcelDocClassViewMethod:::Object
      ExcelDocClassAgeInt -- implements --> abstractAgeInt:::Abstract
    
      note["
@@ -868,12 +868,12 @@
                         object
                         ⬇️" --> ExcelDocObject:::Object
      classExcelDoc -- extends --> abstractFile:::Abstract
-     ExcelDocClassPrintContentMethod -- implements --> abstractPrintContentMethod:::Abstract
+     ExcelDocClassViewMethod -- implements --> abstractViewMethod:::Abstract
      subgraph abstractFile["abstract class File"]
        abstractAgeInt["abstract int content"]
-       abstractPrintContentMethod{{"
+       abstractViewMethod{{"
           abstract method 
-          PrintContent()
+          View()
           ⎙
           "}}
      end
@@ -887,7 +887,7 @@
      
      classDef Object fill:#55F, stroke:#FFF, stroke-width:3px, color:#fff
      style ExcelDocObjectAgeInt fill:#55F, stroke:#FFF, stroke-width:3px, color:#fff
-     style ExcelDocObjectPrintContentMethodFunctionPointer fill:#222, stroke:#DDD, stroke-width:1px, color:#000, stroke-dasharray: 5 5
+     style ExcelDocObjectViewMethodFunctionPointer fill:#222, stroke:#DDD, stroke-width:1px, color:#000, stroke-dasharray: 5 5
    ```
 
 ## Polymorphism <a name="polymorphism"></a>
