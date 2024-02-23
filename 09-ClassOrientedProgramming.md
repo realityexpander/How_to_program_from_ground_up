@@ -855,16 +855,18 @@
      ExcelDocObject:::Object
      subgraph ExcelDocObject["[object instance ExcelDoc @19CAFE42]"]
          ExcelDocObjectAgeInt["String name = 'MyExcelDoc.xls'"]
-         ExcelDocObjectViewMethodFunctionPointer{{"method View(): 
+         ExcelDocObjectViewMethodFunctionPointer{{"
+            method View(): 
             calls 
             function @4269BEEF
             in class ExcelDoc
             🖨️
             "}}
-         ExcelDocObjectShowNameMethodFunctionPointer{{"method showName(): 
+         ExcelDocObjectShowNameMethodFunctionPointer{{"
+            method showName(): 
             calls 
             function @844221FF
-            in class ExcelDoc
+            in abstract class File
             🖨️
             "}}   
      end
@@ -873,7 +875,8 @@
      ExcelDocObjectShowNameMethodFunctionPointer:::Abstract
      
      subgraph classExcelDoc["class ExcelDoc extends File"]
-         ExcelDocClassViewMethod{{"function @4269BEEF:  
+         ExcelDocClassViewMethod{{"
+            function @4269BEEF:  
             method View() =
             { print this.fileName }
             🖨️
