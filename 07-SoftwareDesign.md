@@ -182,7 +182,7 @@
       >   - https://www.youtube.com/watch?v=LLEXAdO3X1o
   
   - ### SAFe 
-    - Another over-complicated process that tries to "productionize" the software development process.
+    - Another overcomplicated process that tries to "productionize" the software development process.
     - It's a "one-size-fits-all" process that was supposed to work for all kinds of software development, and it doesn't.
   
   - ## I call all of the above (and supporting hyped-books and hyped-conferences) the **"Age of Conference©®™ Driven Development"**

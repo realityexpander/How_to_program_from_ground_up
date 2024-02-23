@@ -697,7 +697,7 @@
     - The `abstract class` is `extend`—ed by the subclass and the subclass methods `override` the superclass methods by
       implementing the method in any subclass.
   
-    - ### ONE MORE EXAMPLE OF A SIMPLE IDEA LEADING TO OVER-COMPLICATED CODE
+    - ### ONE MORE EXAMPLE OF A SIMPLE IDEA LEADING TO OVERCOMPLICATED CODE
     - Leading to unwieldy and hard to understand code, often used in places where it was not necessary.
         > - Object-Oriented Programming - Brian Will
         >   - https://www.youtube.com/watch?v=lbXsrHGhBAU 
@@ -934,7 +934,7 @@
   - ### BIG IDEA — A method can be called on an object and the method will behave differently based on the `class` of the object.
   - In COP, the `interface`-s and `abstract class`-s are implementations of the idea of polymorphism.
 
-  - #### ⚠️ ANOTHER EXAMPLE OF A SIMPLE IDEA WITH AN OVER-COMPLICATED NAME!
+  - #### ⚠️ ANOTHER EXAMPLE OF A SIMPLE IDEA WITH AN OVERCOMPLICATED NAME!
     - Yet _another_ overcomplicated name for a very basic, exceedingly simple idea.
     - Polymorphism is the idea that a method can be called on an object and the method will behave differently
       based on the "type" of the "object" that the "method" is called on
