@@ -27,14 +27,19 @@ class Photo(
 }
 
 class Memo(
-   fileName: String = "TEMPORARY_FILE_NAME.memo", // <-- Default value for the parameter "filename" if not provided.
-   val to: String,
-   val from: String,
-   val subject: String
+   fileName: String,
+   private val to: String,
+   private val from: String,
+   private val subject: String
 ): File(fileName) { // <-- Memo is a subclass of File.
-   constructor(to: String): this(to=to, from="Unknown", subject="No Subject")  // <-- Secondary constructor.
-   constructor(to: String, from: String): this(to=to, from=from, subject="No Subject")  // <-- Another secondary constructor.
-   
+
+   constructor(to: String, from: String, subject: String): this( // <-- Secondary constructor.
+         "Memo-$to|$from|$subject.memo",
+         to,
+         from,
+         subject
+      )
+
    override fun view() {   // <-- The implementation of the abstract class "view".
       super.showName()     // <-- Calls the "default implementation" of the abstract superclass.
                            //     Calls to the superclass are not required, but often used to call any
@@ -44,11 +49,11 @@ class Memo(
    }
    
    override fun showName() { // <-- overrides the "default implementation" of the abstract superclass.
-      // Displays name of who the memo is "to" & "from"
-      println("Memo: ${this.to} to ${this.from}") // <-- Shows contents of the memo, *NOT* just the file name...
+                             // Displays name of who the memo is "to" & "from"
+      println("Memo: ${this.to} to ${this.from}") // <-- Shows addressees of the memo, *NOT* just the file name...
                                                   //     Design problems already creeping in....
    }
-   
+
    fun send() {
       println("Sending Memo: from= " + this.from + ", to= " + this.to + ", subject= " + this.subject)
    }
@@ -72,14 +77,16 @@ fun main() {
    viewFile(file2)  // <-- will call the "view" fun of the Memo class
    viewFile(file3)  // <-- will call the "view" fun of the Photo class
 
+   println() // <-- Just to separate the output of the `viewFile` calls from the `showName` and `send` calls.
    file3.showName()  // <-- will call the "showName" fun of the Memo class
    file3.send()  // <-- will call the "send" fun of the Memo class
 }
 
 // Output:
-//   View ExcelDoc: MyExcel.xls
-//   View Photo: MyPhoto.jpg
-//   File Name: TEMPORARY_FILE_NAME.memo
-//   View Memo: from= Bob, to= Chris, subject= Meeting
+//   Viewing ExcelDoc: MyExcel.xls
+//   Viewing Photo: MyPhoto.jpg
+//   File Name: Memo-Chris|Bob|Meeting.memo
+//   Viewing Memo: from= Bob, to= Chris, subject= Meeting
+//
 //   Memo: Chris to Bob
 //   Sending Memo: from= Bob, to= Chris, subject= Meeting

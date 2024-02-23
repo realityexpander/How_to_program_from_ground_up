@@ -821,12 +821,10 @@
      main()
     
      // Output:
-     // View ExcelDoc: MyExcelDoc.xls
-     // View Photo: MyPhoto.jpg
-     // File Name: Memo to: Chris
-     // View Memo: from= Bob, to= Chris, subject= Meeting
-     // Memo from: Chris to: Bob
-     // Sending Memo: from= Bob, to= Chris, subject= Meeting
+     // Viewing ExcelDoc: MyExcelDoc.xls
+     // Viewing Photo: MyPhoto.jpg
+     // File Name: Memo-Chris|Bob|Meeting.memo
+     // Memo from: Bob, to: Chris
     
      ```
      - Live Code Example: [How Abstract Classes Work in Kotlin](src/main/kotlin/abstractClassExample.kt)
