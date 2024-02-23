@@ -976,14 +976,14 @@
     class Cat : public Animal {  // <-- Cat inherits from Animal.
        public:
           void makeSound() {
-            cout << "Meow" << endl;
-         }
+          cout << "Meow" << endl;
+       }
     };
     
     class Dog : public Animal { // <-- Dog inherits from Animal.
        public:
           void makeSound() {
-            cout << "Bark" << endl;
+             cout << "Bark" << endl;
           }
     };
     
@@ -992,19 +992,26 @@
     };
     
     int main() {
-       Cog c;  // <-- Create a new Cog object.
+       Cog cog;  // <-- Create a new Cog object.
        
-       c.makeSound(); // <-- What will this print? "Meow" or "Bark"???
+       cog.makeSound(); // <-- What will this print? "Meow" or "Bark"??? (compile error)
+                                         
+    
+       // Solution - you have to pick:
+       // cog.Dog::makeSound(); // <-- You have to tell the compiler which one, which adds confusion.
+       // cog.Cat::makeSound(); // <-- Make sure you remember pick the right one!
     }
     
     // THIS IS *NOT* THE OUTPUT:
     // Does the Cog "Meow" or "Bark"???
     
      ```
-  - In C++, calling `Cog`'s `makeSound()` method will print `Meow`, _BUT_ in Python, calling
+  - In C++, calling `Cog`'s `makeSound()` method give a compiler error, _BUT_ in Python, calling
     `Cog`'s `makeSound()` will print `Bark`!
+    > Copy and paste the code into a C++ compiler and see for yourself: https://www.onlinegdb.com/online_c++_compiler
+  
   - This behavior is _completely arbitrary_ and up to the designers of the language to decide which
-    method will be called, and it's _not_ consistent across different languages!
+    method will be called, and it's _not_ consistent across different languages.
   - It's also up to you to remember these kinds of details, as you are likely to be working in multiple
     languages in the same day. Furthermore, it's quite easy to forget which language you are working in which lead to weird bugs.
   - UGH!
