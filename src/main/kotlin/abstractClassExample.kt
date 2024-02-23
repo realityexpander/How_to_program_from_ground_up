@@ -80,7 +80,7 @@ fun main() {
    println()        // <-- Just to separate the output of the `viewFile` calls from the `showName` and `send` calls.
    file1.showName() // <-- Calls the "showName" fun of the ExcelDoc class.
    file3.showName() // <-- Calls the "showName" fun of the Memo class, notice the design flaw here?
-   file3.send()     // <-- Calls the "send" function of the Memo class.
+   file3.send()     // <-- Calls the "send" function of the Memo class, not part of the abstract class.
 }
 
 // Output:
