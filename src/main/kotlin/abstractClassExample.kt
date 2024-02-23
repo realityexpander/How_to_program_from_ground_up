@@ -89,5 +89,5 @@ fun main() {
 //   File Name: Memo-Chris|Bob|Meeting.memo
 //   Viewing Memo: from= Bob, to= Chris, subject= Meeting
 //
+//   File Name: MyExcelDoc.xls
 //   Memo: Chris to Bob
-//   Sending Memo: from= Bob, to= Chris, subject= Meeting
