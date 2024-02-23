@@ -836,7 +836,7 @@
      ExcelDocObjectViewMethodFunctionPointer -- calls --> ExcelDocClassViewMethod:::Object
      ExcelDocClassAgeInt -- stores value of --> ExcelDocObjectAgeInt 
      subgraph ExcelDocObject["[object instance ExcelDoc @19CAFE42]"]
-         ExcelDocObjectAgeInt["int content = 3"]
+         ExcelDocObjectAgeInt["String name = 'MyExcelDoc.xls'"]
          ExcelDocObjectViewMethodFunctionPointer{{"method View(): 
             calls 
             function @4269BEEF
@@ -845,10 +845,10 @@
             "}}
      end
      subgraph classExcelDoc["class ExcelDoc extends File"]
-         ExcelDocClassAgeInt["int content"]
+         ExcelDocClassAgeInt["String name"]
          ExcelDocClassViewMethod{{"function @4269BEEF:  
             method View() =
-            { print this.content }
+            { print this.name }
             🖨️
             "}}
      end
@@ -870,7 +870,7 @@
      classExcelDoc -- extends --> abstractFile:::Abstract
      ExcelDocClassViewMethod -- implements --> abstractViewMethod:::Abstract
      subgraph abstractFile["abstract class File"]
-       abstractAgeInt["abstract int content"]
+       abstractAgeInt["abstract String name"]
        abstractViewMethod{{"
           abstract method 
           View()
@@ -900,8 +900,8 @@
     - Polymorphism is the idea that a method can be called on an object and the method will behave differently
       based on the "type" of the "object" that the "method" is called on
         - This is the basis for `override`-ing methods in subclasses and `interfaces` and `abstract class`-es
-        - In the example above, the `view()` function can be called with any `Document` object and the `view` method
-          will behave differently based on the type of the `Document` object that is passed in
+        - In the example above, the `view()` method can be called with any `Document` object and the `view` method
+          will behave differently based on the type of the `Document` object that is passed in.
   - ### Associated with Liskov Principle
     - The "Liskov Substitution Principle" comes from "Set theory" and is the idea that "objects of a superclass shall be
       replaceable with objects of its subclasses without affecting the functionality of the program."
@@ -1052,16 +1052,19 @@
   - Most of these so-called "patterns" were just hacks to fit the "procedural approach" into the "COP" paradigm.
   - Many programmers accepted these patterns as some kind of gospel, and they were often used to justify the
     use of inheritance (and other language features) in places where it was not appropriate.
-  - For example,"The "Gang of Four" book is the most famous book on the subject, and it is often referred to as the "Bible."
-    - It is just a collection of ideas that worked in a particular situation and was not meant to be a "one-size-fits-all" solution.
-    - The promoters of these books and resources rarely talk about the limits of thier ideas, and programmers often
-      misunderstand the ideas and apply them in places where they are not appropriate. 
-  - Although some ideas in the book are good, many of the ideas are just generally-accepted hacks to fit the "procedural
-    approach" into the "COP" paradigm.
+  - For example, **"The "Gang of Four"** book is the most famous book on the subject, and it is often touted to as the "Bible" for OOP programming, especially in C++.
+    - Upon closer inspection and research, it turns out to simply be a collection of ideas and implementations that 
+      worked in a _particular situation_ and was not meant to be a "one-size-fits-all" solution to the myriad of problems
+      attempting to apply the "procedural approach" to the "COP" paradigm.
+    - The promoters (shills?) of these books and resources rarely talk about the limits of their ideas, and programmers often
+      misunderstood and misapplied the ideas and used them in places where they are not appropriate, and counterproductive. 
+  - Although some ideas in the book are useful, many of the ideas are just "generally-accepted" hacks to fit the "procedural
+    approach" into the "COP" paradigm. And due to the lack of programmers needing to adapt to a different paradigm, they
+    saw these "design patterns" as the "one-size-fits-all" solution to their complex problems.
   
     > - Design Patterns and Anti-Patterns, Love and Hate - Yegor Bugayenko
     >   - https://www.yegor256.com/2016/02/03/design-patterns-and-anti-patterns.html
-    > - SSD 6/16: Patterns, Anti-Patterns, and Refactoring [software design crash course] - Yegor Bugayenko
+    > - Patterns, Anti-Patterns, and Refactoring - Yegor Bugayenko
     >   - https://www.youtube.com/watch?v=LrTBIcFhawI
     
 
