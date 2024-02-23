@@ -698,7 +698,7 @@
       implementing the method in any subclass.
   
   - ## Very similar concept as `interface`, additionally `abstract classes` can have "default" implementations of the methods, as well as define variables that are expected to be in the subclass.
-    - ### ONE MORE EXAMPLE OF A SIMPLE IDEA LEADING TO OVERCOMPLICATED CODE
+    - ### ONE MORE EXAMPLE OF A SIMPLE IDEA LEADING TO OVER-COMPLICATED CODE
     - Leading to unwieldy and hard to understand code, often used in places where it was not necessary.
         > - Object-Oriented Programming - Brian Will
         >   - https://www.youtube.com/watch?v=lbXsrHGhBAU 
