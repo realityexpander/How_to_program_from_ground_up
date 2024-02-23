@@ -829,7 +829,7 @@
      ```
      - Live Code Example: [How Abstract Classes Work in Kotlin](src/main/kotlin/abstractClassExample.kt)
 
-## Full Diagram of with `abstract` Classes, `extended` Classes and Objects, Stored in Memory
+## Full Diagram of `abstract` Classes, `extended` Classes and Objects, Stored in Memory
    ```mermaid
      flowchart LR
    
