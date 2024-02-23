@@ -665,7 +665,8 @@
 
 ## Abstract Classes = The Name of a "General Category or Group"  <a name="abstract-classes"></a>
 ###### abstract-classes
-  - ### BIG IDEA — Lets have a class that defines a general category of objects, but doesn't necessarily define the implementation details of the objects. That way we can create many different kinds of objects that all have the same "method signature," but have different implementations of the methods.
+  - ### BIG IDEA — Can we use the `class` as way to define a general category of objects, but doesn't necessarily define the implementation details of the objects? 
+  - ### That way we can create many different kinds of objects with the same "method signature," but have different implementations of the methods.
    
     - ie: Like an `abstract class Document` that has a method called `view` doesn't necessarily implement how a 
       document is viewed, only it's method definition. Any object that is a subtype of "Document" must have a `view` 
