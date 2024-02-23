@@ -845,7 +845,7 @@
      ```
      - Live Code Example: [How Abstract Classes Work in Kotlin](src/main/kotlin/abstractClassExample.kt)
 
-## Full Diagram of `abstract` Classes, `extended` Classes and Objects, Stored in Memory
+## Full COP Diagram of `abstract` Classes, `extended` Classes and Objects, Stored in Memory
    ```mermaid
      flowchart TB
    
@@ -860,14 +860,14 @@
             calls 
             function @4269BEEF
             in class ExcelDoc
-            🖨️
+            👈
             "}}
          ExcelDocObjectShowNameMethodFunctionPointer{{"
             method showName(): 
             calls 
             function @844221FF
             in abstract class File
-            🖨️
+            👈
             "}}   
      end
      ExcelDocObjectShowNameMethodFunctionPointer -- calls --> abstractShowNameMethod
@@ -904,7 +904,7 @@
        abstractShowNameMethod{{"function @844221FF
                                 method showName() =
                                { print ''File: ''  + this.fileName }
-                               ⎙
+                               🖨️
                              "}}:::Object
 
        abstractViewMethod{{"
