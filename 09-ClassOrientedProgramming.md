@@ -626,8 +626,6 @@
          playMedia(doc3)            // <-- prints "Playing Protected MP3: MyProtectedMP3.mp3".
       }
       
-      main()
-      
       // Output:
       // Playing Unknown Media: MyMedia
       // Playing MP3: MyMP3.mp3
@@ -836,9 +834,7 @@
          file1.showName()  // <-- will call the "showName" method of the ExcelDoc class. Note: outputs the file name.
          file3.showName()  // <-- will call the "showName" method of the Memo class. Note: outputs the addressee names.
      }
-     
-     main()
-    
+
      // Output:
      // Viewing ExcelDoc: MyExcelDoc.xls
      // Viewing Photo: MyPhoto.jpg

@@ -27,7 +27,7 @@
   ```mermaid
     graph TB
         MachineLanguage{{Machine Language}} -->|human readable| AssemblyLanguage
-        AssemblyLanguage{{Assembly Language}} -.->|for GOTOs|Basic
+        AssemblyLanguage{{Assembly Language}} -.->|Procedural & Interpreted|Basic
         AssemblyLanguage{{Assembly Language}} -->|Procedural|COBOL
         AssemblyLanguage{{Assembly Language}} -->|Procedural|Fortran
         AssemblyLanguage{{Assembly Language}} -->|Structured|Algol68
