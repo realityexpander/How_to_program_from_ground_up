@@ -847,30 +847,40 @@
 
 ## Full Diagram of `abstract` Classes, `extended` Classes and Objects, Stored in Memory
    ```mermaid
-     flowchart LR
+     flowchart TB
    
-     ExcelDocObjectViewMethodFunctionPointer -- calls --> ExcelDocClassViewMethod:::Object
+     ExcelDocObjectViewMethodFunctionPointer -- calls --> ExcelDocClassViewMethod
      ExcelDocClassAgeInt -- stores value of --> ExcelDocObjectAgeInt 
+     
+     ExcelDocObject:::Object
      subgraph ExcelDocObject["[object instance ExcelDoc @19CAFE42]"]
          ExcelDocObjectAgeInt["String name = 'MyExcelDoc.xls'"]
          ExcelDocObjectViewMethodFunctionPointer{{"method View(): 
             calls 
             function @4269BEEF
-            in class ExcelFile
+            in class ExcelDoc
             🖨️
             "}}
+         ExcelDocObjectShowNameMethodFunctionPointer{{"method showName(): 
+            calls 
+            function @844221FF
+            in class ExcelDoc
+            🖨️
+            "}}   
      end
+     ExcelDocObjectShowNameMethodFunctionPointer -- calls --> abstractShowNameMethod
+     
      subgraph classExcelDoc["class ExcelDoc extends File"]
-         ExcelDocClassAgeInt["String name"]
          ExcelDocClassViewMethod{{"function @4269BEEF:  
             method View() =
-            { print this.name }
+            { print this.fileName }
             🖨️
             "}}
+         ExcelDocClassAgeInt["String fileName"]
      end
      abstractAgeInt -.- expects -.-> ExcelDocClassAgeInt
      abstractViewMethod -.- expects2{{"expects"}} -.-> ExcelDocClassViewMethod:::Object
-     ExcelDocClassAgeInt -- implements --> abstractAgeInt:::Abstract
+     ExcelDocClassAgeInt -- implements ---> abstractAgeInt:::Abstract
    
      note["
         EXPLANATION: 
@@ -880,18 +890,23 @@
         abstract class File.
         📁 ➤➤ 🗄️"]
      
-     classExcelDoc -- "instantiates 
-                        object
-                        ⬇️" --> ExcelDocObject:::Object
-     classExcelDoc -- extends --> abstractFile:::Abstract
+     classExcelDoc --- instantiates ---> ExcelDocObject
+     classExcelDoc --- extends --> abstractFile:::Abstract
      ExcelDocClassViewMethod -- implements --> abstractViewMethod:::Abstract
+     
      subgraph abstractFile["abstract class File"]
-       abstractAgeInt["abstract String name"]
+       abstractAgeInt["abstract String fileName"]
+       abstractShowNameMethod{{"function @844221FFshowName() =
+                               { print this.fileName }
+                               ⎙
+                             "}}:::Object
+
        abstractViewMethod{{"
           abstract method 
           View()
           ⎙
           "}}
+          
      end
    
      classDef Abstract fill:#222, stroke:#0F0, stroke-width:1px, color:#fff, stroke-dasharray: 5 5

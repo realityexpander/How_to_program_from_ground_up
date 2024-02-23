@@ -1,5 +1,5 @@
 // Kotlin example of an abstract class and inheritance, secondary constructors, and default parameter values.
-// Also shows the beginning of a design flaw in the `Memo` class inheriting from the `File` class.
+// Also shows the beginning of a design flaw in the `Memo` class inherited from the `File` class.
 
 abstract class File(
    val fileName: String  // <-- The primary constructor of the abstract class, initializes property `fileName`.
