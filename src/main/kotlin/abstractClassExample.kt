@@ -63,7 +63,7 @@ class Memo(
 fun main() {
    // val file0: File = File("MyFile") // <-- Since the `File` class is `abstract`, an object
                                        // cannot be created from it. this will cause a compiler error.
-   val file1: File = ExcelDoc("MyExcel.xls")
+   val file1: File = ExcelDoc("MyExcelDoc.xls")
    val file2: Photo = Photo("MyPhoto.jpg")
    val file3: Memo = Memo(to="Chris", from="Bob", subject="Meeting") // <-- `file3` is of type `Memo` and not
                                                                      // `File` because we want to access the
