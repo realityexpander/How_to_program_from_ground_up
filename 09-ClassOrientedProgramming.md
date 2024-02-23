@@ -869,6 +869,8 @@
             "}}   
      end
      ExcelDocObjectShowNameMethodFunctionPointer -- calls --> abstractShowNameMethod
+     ExcelDocObjectViewMethodFunctionPointer:::Abstract
+     ExcelDocObjectShowNameMethodFunctionPointer:::Abstract
      
      subgraph classExcelDoc["class ExcelDoc extends File"]
          ExcelDocClassViewMethod{{"function @4269BEEF:  
