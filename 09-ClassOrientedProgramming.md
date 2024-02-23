@@ -743,7 +743,7 @@
        override method view(): print("View Photo: " + this.name)
     }
     ```
-  - Example for abstract classes in pseudo-code (similar to common COP languages):
+  - Example for `abstract` `class`-es in pseudo-code (similar to common COP languages):
     ```Text
      // COP pseudo-code
      
