@@ -669,7 +669,7 @@
   - ### That way we can create many different kinds of objects with the same "method signature," but have different implementations of the methods.
 
   - ## ⚠️ Confusing Terminology Alert!
-  - I suggest forgetting the word `abstract` and substitute the phrase "The General Category."
+  - I suggest forgetting the word `abstract` and substitute the phrase **_"The General Category."_**
       - When I was learning this stuff, I kept confusing it with the "abstract" concept in art, and "abstract" concept in philosophy, and other
         meanings of the word. People also seemed to use it in many different ways, and it was very confusing.
       - The `abstract` term used in computing **_ONLY_** means the **"general category"** of something.
