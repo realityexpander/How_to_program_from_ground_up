@@ -820,9 +820,8 @@
          viewFile(file3)  // <-- will call the "view" method of the Memo class.
     
          println() // <-- just to add a blank line to the output.
-         file1.showName()  // <-- will call the "showName" method of the ExcelDoc class. Note that its the filename.
-         file3.showName()  // <-- will call the "showName" method of the Memo class. Note that its the addressee names.
-         
+         file1.showName()  // <-- will call the "showName" method of the ExcelDoc class. Note: outputs the file name.
+         file3.showName()  // <-- will call the "showName" method of the Memo class. Note: outputs the addressee names.
      }
      
      main()
