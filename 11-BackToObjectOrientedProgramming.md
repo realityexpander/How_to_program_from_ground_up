@@ -52,7 +52,7 @@
   - There are only a few true BOOP languages, "Smalltalk," "Ruby," and, _incredibly_, "Javascript" are among the most popular ones.
 
 ###### boop-caution
-> ## A Word Of Caution: BOOP patterns may get you in trouble with your boss, as the patterns are not widely known, understood or accepted. 
+> ## ⚠️ A Word Of Caution: BOOP patterns may get you in trouble with your boss, as the patterns are not widely known, understood or accepted. 
 >  - Although these patterns are slowly seeping into some areas of software development, like "Compose" from JetBrains,
 >    these ideas are not known or understood by most software developers, and very few libraries use BOOP patterns.
 >> ### A quote from Yegor's Blog Post from a fellow developer about Yehor's BOOP patterns: 
