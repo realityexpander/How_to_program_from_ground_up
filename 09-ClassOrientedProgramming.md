@@ -878,7 +878,7 @@
          ExcelDocClassViewMethod{{"
             function @4269BEEF:  
             method View() =
-            { print this.fileName }
+            { print ''Viewing ExcelDoc: '' + this.fileName  }
             🖨️
             "}}
          ExcelDocClassAgeInt["String fileName"]
@@ -903,7 +903,7 @@
        abstractAgeInt["abstract String fileName"]
        abstractShowNameMethod{{"function @844221FF
                                 showName() =
-                               { print this.fileName }
+                               { print ''File: ''  + this.fileName }
                                ⎙
                              "}}:::Object
 
