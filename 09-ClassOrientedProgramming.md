@@ -617,6 +617,8 @@
          playMedia(doc0)            // <-- prints "Playing Unknown Media: MyMedia".
          playMedia(doc1)            // <-- prints "Playing MP3: MyMP3.mp3".
          playMedia(doc2)            // <-- prints "Playing Video: MyVideo.mp4".
+    
+         // println(doc0.name)  // <-- will not compile because `name` is `protected` and cannot be accessed from outside the class.
       
          ProtectedMP3 doc3 = new ProtectedMP3("MyProtectedMP3", "MySecretPassword123")  // note that the `ProtectedMP3` type is required to call the `authenticate` method.
          playMedia(doc3)            // <-- prints "Not Authenticated!".
