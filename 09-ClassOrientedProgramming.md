@@ -686,9 +686,9 @@
     only `extend`-ed and be used as a "general" `class` to group the "specific" classes into categories or "types."
   - I like to forget the word `abstract` and replace it wih the phrase "The General Category."
     - I kept confusing it with the "abstract" concept in art, and "abstract" concept in philosophy.
-    - The `abstract` used in computing ONLY means the "general category" of a class of objects.
+    - The `abstract` used in computing ONLY means the "general category of a thing".
     - Many people who attempted to explain the "abstract" keyword were likely unaware of the other meanings of the word
-      and likely confused many people who were trying to learn the concept.
+      and confused many people due to ignorance of the other meanings of the word.
       - They could have just said what I just told you, but they didn't, and that's why I'm here to help you. 
     - ie: "documents" is the general category (abstract idea) of a generic "something to structure and retain data."
   - The `abstract class` is `extend`—ed by the subclass and the subclass methods `override` the superclass methods by
@@ -803,7 +803,7 @@
      function main() {
          // File file0 = new File("MyFile.txt")  // Since the `File` class is `abstract`, an object cannot be created from it, 
                                                 // and attempting this will result in a compiler error.
-         File file1 = new ExcelDoc("MyExcel.xls")
+         File file1 = new ExcelDoc("MyExcelDoc.xls")
          File file2 = new Photo("MyPhoto.jpg")
          Memo file3 = new Memo(to="Chris", from="Bob", subject="Meeting") // note: correct type is used so that the `showName` method can be called.
      
@@ -819,7 +819,7 @@
      main()
     
      // Output:
-     // View ExcelDoc: MyExcel.xls
+     // View ExcelDoc: MyExcelDoc.xls
      // View Photo: MyPhoto.jpg
      // File Name: Memo to: Chris
      // View Memo: from= Bob, to= Chris, subject= Meeting
@@ -903,12 +903,12 @@
         - In the example above, the `view()` function can be called with any `Document` object and the `view` method
           will behave differently based on the type of the `Document` object that is passed in
   - ### Associated with Liskov Principle
-    - #### MORE MAKING FANCY TERMS FOR VERY BASIC CONCEPTS THAT BARELY NEED EXPLAINING, I'VE SAID ENOUGH ALREADY.
     - The "Liskov Substitution Principle" comes from "Set theory" and is the idea that "objects of a superclass shall be
       replaceable with objects of its subclasses without affecting the functionality of the program."
     - That's it. That's the whole idea. 
     - It's just a fancy way of saying that "subclasses should work the same as their superclass."
     - Live Code Example: [Liskov Substitution Principle in Kotlin](src/main/kotlin/liskovSubstitutionPrincipleExample.kt)
+    - #### 🛑 POLYMORPHISM IS A GREAT EXAMPLE OF MAKING FANCY TERMS FOR VERY BASIC CONCEPTS THAT BARELY NEED EXPLAINING, I'VE SAID ENOUGH ALREADY.
 
 ## Controlled Scope of Visibility of Variables and Methods <a name="controlled-visibility"></a>
 ###### controlled-visibility
@@ -996,7 +996,7 @@
     int main() {
        Cog cog;  // <-- Create a new Cog object.
        
-       cog.makeSound(); // <-- What will this print? "Meow" or "Bark"??? (compile error)
+       cog.makeSound(); // <-- What will this print? "Meow" or "Bark"??? (Will result in a compile error!)
                                          
     
        // Solution - you have to pick:
