@@ -684,15 +684,15 @@
     - You can't create a generic `Document` object, BUT you can create a `PDF` or `ExcelDoc` or `Memo` object that is 
       is a subclass of the `abstract class Document` class, and they will require a `view` method to be implemented.
     - The `Document` class is an `abstract class` and the `class PDF`,`class ExcelDoc,` and `class Memo` are the 
-      _"concrete classes" 
+      _"concrete classes."_ 
       - also called "implementing classes" or "implementations" of the `Document` class.
     - An `abstract class` is a template for a _"concrete"_ `class`, and cannot to be instantiated itself,
       only `extend`-ed and be used as a "general" type to group the "specific" implementing sub-classes.
     - ie: `Document` is the general category (`abstract` idea) of a generic "something to structure and retain data."
     - The `abstract class` is `extend`—ed by the subclass and the subclass methods `override` the superclass methods by
-      implementing the method in the subclass.
+      implementing the method in any subclass.
   
-  - ## Very similar idea as interfaces, and `absract classes` can have "default" implementations of the methods, as well as define variables that are expected to be in the subclass.
+  - ## Very similar concept as `interface`, additionally `abstract classes` can have "default" implementations of the methods, as well as define variables that are expected to be in the subclass.
     - ### ONE MORE EXAMPLE OF A SIMPLE IDEA LEADING TO OVERCOMPLICATED CODE
     - Leading to unwieldy and hard to understand code, often used in places where it was not necessary.
         > - Object-Oriented Programming - Brian Will
