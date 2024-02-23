@@ -196,7 +196,7 @@
       - This was not the original intent of the Class and Object use-cases, but it was a way to fit the COP
         paradigm into the "procedural" paradigm.
 
-  - ## Problem: Using Classes and Objects as "Name-Spaces/Scopes" Lead to Procedural-Style Code Implementations <a name="using-classes-and-objects-as-name-spaces"></a>
+  - ## Problem: Using Classes and Objects as "Name-Spaces/Scopes" Leads to Procedural-Style Code Implementations <a name="using-classes-and-objects-as-name-spaces"></a>
     - ###### using-classes-and-objects-as-name-spaces
     - In COP languages, the `class` is used as a "name-space" to group together various methods and variables that
       are related to each other (known as "high cohesion") into a single class or "name-space".
