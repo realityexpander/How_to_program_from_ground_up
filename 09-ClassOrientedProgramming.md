@@ -761,7 +761,7 @@
         override String name // <-- Subclasses must declare the abstract variables from superclass.
     
         override method view() { // <-- the implementation of the abstract class "view".
-           print "View ExcelDoc: " + this.name  
+           print "Viewing ExcelDoc: " + this.name  
         } 
      }
     
@@ -769,7 +769,7 @@
          override String name // <-- Subclasses must declare the abstract variables from superclass.
          
          override method view() {  // <-- the implementation of the abstract class "view".
-            print "View Photo: " + this.name
+            print "Viewing Photo: " + this.name
          } 
      }
      
@@ -781,21 +781,23 @@
     
         constructor Memo(String to, String from, String subject) {  // <-- the custom constructor of this class, its called to 
                                                                     //     initialize the variables of the object.
-           super("Memo to:" + to)  // <-- calls the constructor of the superclass (File).
+           super("Memo-" + to +"|"+ from +"|"+ subject + ".memo")   // <-- calls the constructor of the superclass (File).
+           
            this.to = to
            this.from = from
            this.subject = subject
         }
        
         override method view() {  // <-- The implementation of the abstract method "view".
-           super.showName(to)     // <-- Calls the "default implementation" of the abstract superclass.
-                                  // Note: Calls to the super class are not required, but can be used to call any 
-                                  // implementations of the superclass.
+           super.showName()       // <-- Calls the "default implementation" of the abstract superclass.
+                                  //     Note: Calls to the `super` class are not required, but can be used to call any 
+                                  //           methods of the superclass.
          
-           print "View Memo: from= " + this.from + ", to= " + this.to + ", subject= " + this.subject 
+           print "Viewing Memo: from= " + this.from + ", to= " + this.to + ", subject= " + this.subject 
         }
         override method showName() { // <-- overrides the "default implementation" of the abstract superclass.
-           print "Memo from: " + this.from + ", to: " + this.to
+           print "Memo from: " + this.from + ", to: " + this.to  // <-- shows contents of the memo, not just the name... 
+                                                                 //     Design problems already creeping in....
         } 
      }
      
