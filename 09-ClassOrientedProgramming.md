@@ -670,8 +670,8 @@
 
   - ## ⚠️ Confusing Terminology Alert!
   - I suggest forgetting the word `abstract` and substitute the phrase "The General Category."
-      - I often kept confusing it with the "abstract" concept in art, and "abstract" concept in philosophy, and other
-        meanings of the word.
+      - When I was learning this stuff, I kept confusing it with the "abstract" concept in art, and "abstract" concept in philosophy, and other
+        meanings of the word. People also seemed to use it in many different ways, and it was very confusing.
       - The `abstract` term used in computing **_ONLY_** means the **"general category"** of something.
       - Many people who attempted to explain the "abstract" keyword were likely unaware of the other meanings of the word
         and confused many people due to ignorance of the other meanings of the word.
