@@ -269,9 +269,7 @@
                    // Page: Page 3 Content
                    // Page: New Page 4 Content
     }
-    
-    main()
-  
+
     // Output:
     // Application Viewing: MyBook.txt
     // Book: MyDocument.txt, # of Pages: 3
