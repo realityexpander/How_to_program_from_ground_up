@@ -676,7 +676,8 @@
       - Many people who attempted to explain the "abstract" keyword were likely unaware of the other meanings of the word
         and confused many people due to ignorance of the other meanings of the word.
       - They could have just said what I just told you, but they didn't, and that's why I'm here to help you. 🙂
-  - ### Method "signature" / "definition": `method name` + `parameter types` + `return type`
+  
+  - ### Function "signature" / "definition" / "type": `function name` + `parameter types` + `return type`
     - ie: `method view()` is the method signature, and it expects no parameters and returns nothing.
     - ie: `function view(String name)` is the function signature, and it expects a `String` parameter and returns nothing.
     - ie: `method view(): String` is the method signature, and it expects no parameters and returns a `String`.
