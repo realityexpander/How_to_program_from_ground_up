@@ -722,7 +722,7 @@
        constructor File(String fileName) this.fileName = fileName // Abstract classes can have "default" constructors.
         
        abstract method view() // default implementations of methods are optional.
-       open method showName(): print("File Name: " + this.fileName) // The default implementation.
+       open method showName(): print("File Name: " + this.fileName) // A default implementation.
     }
     <<abstract>> File 
       
