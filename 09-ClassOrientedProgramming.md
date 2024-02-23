@@ -652,7 +652,7 @@
         that were used to "fix" the problems of the "procedural approach" to COP. Many of these ideas were just
         common hacks to fit the "procedural approach" into the "COP" paradigm.
       - The promise of "code reusability" was not fulfilled by COP languages.
-        > - The Design of C++ , lecture by Bjarne Stroustrup (section about re-use)
+        > - The Design of C++ , lecture by Bjarne Stroustrup (section about code re-use)
         >   - https://youtu.be/69edOm889V4?si=JEwAkYjnK1wjzmDF&t=708
         > - Inheritance vs. Subtyping (webinar #24)
         >   - https://www.youtube.com/watch?v=DjrA7_Uymok
