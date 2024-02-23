@@ -709,7 +709,7 @@
        
        constructor File(String name) this.name = name // ⬅︎ Abstract classes can have "default" constructors.
         
-       open method view() // NO "default" implementation.
+       abstract method view() // default implementations of methods are optional.
        open method showName(): print("File Name: " + this.name) // The default implementation.
     }
     <<abstract>> File 
@@ -787,7 +787,7 @@
            this.subject = subject
         }
        
-        override method view() {  // <-- the implementation of the abstract class "view".
+        override method view() {  // <-- The implementation of the abstract method "view".
            super.showName(to)     // <-- Calls the "default implementation" of the abstract superclass.
                                   // Note: Calls to the super class are not required, but can be used to call any 
                                   // implementations of the superclass.
