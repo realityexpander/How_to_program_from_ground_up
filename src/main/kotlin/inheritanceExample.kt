@@ -67,6 +67,7 @@ fun main() {
    playMedia(doc1)  // <-- will print "Playing MP3: MyMP3.mp3"
    playMedia(doc2)  // <-- will print "Playing Video: MyVideo.mp4"
 
+   // println(doc0.name)  // <-- will not compile because `name` is `protected` and cannot be accessed from outside the class.
 
    // Note: `doc3` is of type `ProtectedMP3` and not `MP3` or `Media` because we want to access the `authenticate` method,
    //       which is not available in the `Media` class or the `MP3` class.
