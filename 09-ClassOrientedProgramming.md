@@ -902,7 +902,7 @@
      subgraph abstractFile["abstract class File"]
        abstractAgeInt["abstract String fileName"]
        abstractShowNameMethod{{"function @844221FF
-                                showName() =
+                                method showName() =
                                { print ''File: ''  + this.fileName }
                                ⎙
                              "}}:::Object
