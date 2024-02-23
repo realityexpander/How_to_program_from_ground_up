@@ -707,7 +707,7 @@
     class File["abstract class File"] {
        abstract open String name  // Abstract classes can have variables, and are "abstract" and "open" by default, meaning they must be defined and overridden in the subclass.
        
-       constructor File(String name) this.name = name // ⬅︎ Abstract classes can have "default" constructors.
+       constructor File(String name) this.name = name // Abstract classes can have "default" constructors.
         
        abstract method view() // default implementations of methods are optional.
        open method showName(): print("File Name: " + this.name) // The default implementation.
