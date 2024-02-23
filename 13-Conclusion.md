@@ -32,7 +32,8 @@
         AssemblyLanguage{{Assembly Language}} -->|Procedural|Fortran
         AssemblyLanguage{{Assembly Language}} -->|Structured|Algol68
         AssemblyLanguage{{Assembly Language}} -->|Structured|C
-        AssemblyLanguage{{Assembly Language}} -->|Structured|Simula67
+%%        AssemblyLanguage{{Assembly Language}} -->|Structured|Simula67
+        AssemblyLanguage{{Assembly Language}} -->|Structured|BCPL
         COBOL{{"COBOL"}} -.->|"Easy to 
                               Learn Syntax
                               ⚡️️"|Basic
@@ -44,9 +45,15 @@
                                 scopes & syntax
                                 ⚡️️
                                 "|C
+        BCPL{{"BCPL"}} -->|"for many 
+                             concepts
+                            ✨"|C
+        BCPL --> Algol68
+        BCPL --> Simula67
         Simula67{{"Simula67"}} -.->|"for pointers & 
                                     other concepts
                                     ✨"|C
+        
         C{{"C"}} -->Cplusplus
         C -.->Smalltalk
         Simula67 -.->|for COP ideas|Cplusplus
