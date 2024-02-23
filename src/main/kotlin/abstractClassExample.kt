@@ -1,3 +1,6 @@
+// Kotlin example of an abstract class and inheritance, secondary constructors, and default parameter values.
+// Also shows the beginning of a design flaw in the `Memo` class inheriting from the `File` class.
+
 abstract class File(
    val fileName: String
 ) {
@@ -11,7 +14,7 @@ class ExcelDoc(
    fileName: String
 ): File(fileName) {  // <-- ExcelDoc is a subclass of File, also called a "type" of File.
    override fun view() { // <-- the implementation of the abstract class "view".
-      println("View ExcelDoc: " + this.fileName)
+      println("Viewing ExcelDoc: " + this.fileName)
    }
 }
 
@@ -19,7 +22,7 @@ class Photo(
    fileName: String
 ): File(fileName) { // <-- Photo is a subclass of File, also called a "type" of File.
    override fun view() { // <-- the implementation of the abstract class "view".
-      println("View Photo: " + this.fileName)
+      println("Viewing Photo: " + this.fileName)
    }
 }
 
@@ -37,12 +40,13 @@ class Memo(
                            //     Calls to the superclass are not required, but often used to call any
                            //     implementations of the superclass. This is a way to reuse code functionality.
       
-      println("View Memo: from= " + this.from + ", to= " + this.to + ", subject= " + this.subject)
+      println("Viewing Memo: from= " + this.from + ", to= " + this.to + ", subject= " + this.subject)
    }
    
    override fun showName() { // <-- overrides the "default implementation" of the abstract superclass.
       // Displays name of who the memo is "to" & "from"
-      println("Memo: ${this.to} to ${this.from}") // <-- different from the "default implementation" of the superclass.
+      println("Memo: ${this.to} to ${this.from}") // <-- Shows contents of the memo, *NOT* just the file name...
+                                                  //     Design problems already creeping in....
    }
    
    fun send() {
