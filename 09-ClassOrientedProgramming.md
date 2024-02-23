@@ -789,7 +789,7 @@
         }
        
         override method view() {  // <-- The implementation of the abstract method "view".
-           super.showName()       // <-- Calls the "default implementation" of the abstract superclass. (this is just to show how it's done.)
+           super.showName()       // <-- Calls the "default implementation" of the abstract superclass. (This is just to show how it's done.)
                                   //     Note: Calls to the `super` class are not required, but can be used to call any 
                                   //           methods of the superclass.
          
@@ -817,6 +817,11 @@
          viewFile(file1)  // <-- will call the "view" method of the ExcelDoc class.
          viewFile(file2)  // <-- will call the "view" method of the Photo class .
          viewFile(file3)  // <-- will call the "view" method of the Memo class.
+    
+         println() // <-- just to add a blank line to the output.
+         file1.showName()  // <-- will call the "showName" method of the ExcelDoc class. Note that its the filename.
+         file3.showName()  // <-- will call the "showName" method of the Memo class. Note that its the addressee names.
+         
      }
      
      main()
@@ -825,6 +830,9 @@
      // Viewing ExcelDoc: MyExcelDoc.xls
      // Viewing Photo: MyPhoto.jpg
      // File Name: Memo-Chris|Bob|Meeting.memo
+     // Viewing Memo: from= Bob, to= Chris, subject= Meeting
+     //
+     // File Name: MyExcelDoc.xls
      // Memo from: Bob, to: Chris
     
      ```
