@@ -8,17 +8,20 @@
     >> - My main beef is that the "OOP" that was popularized by C++ and Java is not the "OOP" that Alan-Kay was referring to and many ideas are not compatible.
 
   - Usually misnamed "Object Oriented Programming (OOP)," as "Objects" are _not_ the main focus of the paradigm, "Classes" are!
-  - A "Class" is just a template for a structure in memory (an "Object") that contains the values ("state") of the 
+  - The main idea in COP is to use templates (called a "`class`") to group together functions and variables that are 
+    related to each other (highly cohesive) and then create `objects` from the class to simulate 
+    real-world objects and interactions.
+  - A `class` is a template for a structure in memory (called an "Object") that contains the values ("state") of the 
     variables and pointers to the methods (just functions) of the class.
-  - COP is Based on "Simula 67," a language specifically designed to simulate real-world systems. 
+    - Just like the `struct` in C, but:
+      - Adding functions that can access the data in the `struct`,
+      - The data is `private` and only accessible by the functions inside the `struct` (or expressly marked as `public`.)
+  - COP is Based on ["Simula 67"](13-Conclusion.md), a language specifically designed to simulate real-world systems. 
   - The creator gave "head nods" to "Smalltalk" but took a different and more Structured-style approach to the class 
     and object concepts explored in Simula, primarily to use more practical aspect of the ideas for the needs of the time.
   - The practical hardware limitations outweighed the theoretical purity of OOP, and shortcuts were made for the sake of
     performance and practicality, such as use of `static` functions to manipulate data directly instead of calling 
     methods on objects to manipulate the data indirectly.
-  - The main idea is to use templates (called a "`class`") to group together methods and variables that are 
-    related to each other (highly cohesive) and then create `objects` from the class to simulate 
-    real-world objects and interactions.
   - Think of simulating a hospital with a `class` named `Doctor` and a `class` named `Patient` and a `class` named `Hospital`.
     - The `class Doctor` would have methods like `treatPatient()` and `writePrescription()`.
     - The `class Patient` would have methods like `getTreated()` and `payBill()` and `pickupPrescription()`.
@@ -957,7 +960,7 @@
     - It's just a fancy way of saying that "subclasses should work the same as their superclass."
     - Live Code Example: [Liskov Substitution Principle in Kotlin](src/main/kotlin/liskovSubstitutionPrincipleExample.kt)
     - #### 🛑 "POLYMORPHISM" IS A GREAT EXAMPLE OF USING FANCY SOUNDING TERMS FOR VERY BASIC CONCEPTS THAT BARELY NEED EXPLAINING, I'VE SAID ENOUGH ALREADY.
-      - ### 🫤 A lot of dick-swinging contests around words among the aspy-addled crowd. Please someone tell them they are being assholes when they suggest a new word for something super basic!
+      - ### 🫤 A lot of dick-swinging contests around words among the aspy-addled crowd. Please someone tell them they are being assholes when they suggest a fancy new word for something super basic!
 
 ## Controlled Scope of Visibility of Variables and Methods <a name="controlled-visibility"></a>
 ###### controlled-visibility
@@ -971,8 +974,10 @@
     other class.
   - Making a variable `protected` means that it can only be accessed by the methods of the class and any subclass
     of the class.
-  - Encouraged to use getters and setters to control the access to the variables of the class (which has since
-    been shown to be a bad idea due to misuse and overuse of the pattern)
+  - COP encouraged to use getters and setters to control the access to the variables of the class (which has since
+    been shown to be a bad idea due to misuse and overuse of the pattern.) It was again using procedural ideas in a
+    class oriented paradigm.
+  - Live Code Example: [Controlled Visibility in Kotlin](src/main/kotlin/controlledVisibilityExample.kt)
 
 ## Allowing for "Multiple Inheritance" in C++ was a mistake, and it was removed from Java and C# for very good reasons. <a name="multiple-inheritance-removed"></a>
 ###### multiple-inheritance-removed
