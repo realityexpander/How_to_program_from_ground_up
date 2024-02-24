@@ -963,7 +963,7 @@
     - It's just a fancy way of saying that "subclasses should work the same as their superclass."
     - Live Code Example: [Liskov Substitution Principle in Kotlin](src/main/kotlin/liskovSubstitutionPrincipleExample.kt)
     - #### 🛑 "POLYMORPHISM" IS A GREAT EXAMPLE OF USING IMPORTANT SOUNDING TERMS FOR EXTREMELY BASIC CONCEPTS THAT BARELY NEED EXPLAINING, I'VE SAID ENOUGH ALREADY.
-      - ### 🫤 A lot of dick-swinging contests around words among the aspy-addled crowd. Please someone tell them they are being assholes when they suggest a fancy new word for something super basic!
+      - ### 🫤 There seems to be a lot of dick-swinging contests around words among the aspy-addled crowd. Please someone tell them they are being assholes when they suggest a fancy new word for something super basic!
 
 ## Controlled Scope of Visibility of Variables and Methods <a name="controlled-visibility"></a>
 ###### controlled-visibility
