@@ -1,7 +1,7 @@
 // Kotlin example of controlled visibility and inheritance using COP style.
 // This example shows how to control the visibility of properties and methods in a class hierarchy.
 
-abstract class Publication(
+open class Publication(
 	public val fileName: String,
 	private var content: String
 ) {
@@ -57,7 +57,8 @@ class Magazine(
 	}
 }
 
-class SomeOtherClass {
+
+class SomeOtherClass {  // <-- This class is **NOT** a subclass of `Publication` or `Magazine`.
 
 	// ⬇︎-- This method is public, so it can be called from anywhere.
 	fun tryToDoStuffToPublication(publication: Publication) {
@@ -90,8 +91,6 @@ class SomeOtherClass {
 		magazine.viewContent()
 	}
 }
-
-
 
 // Start of program
 fun main() {
