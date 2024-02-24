@@ -45,7 +45,7 @@ fun main() {
 
 	// Can't add a Rectangle to a list of Circles:
 	val circle2 = Circle(20.0f)
-	val circles: List<Circle> = listOf(circle, circle2) // <-- This will compile.
+	val circles: MutableList<Circle> = mutableListOf(circle, circle2) // <-- This will compile.
 	// circles.add(Rectangle(10f, 20f)) // <-- This will NOT compile.
 }
 
