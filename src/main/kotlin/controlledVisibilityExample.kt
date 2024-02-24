@@ -47,7 +47,13 @@ class Magazine(
 		println("Updating: ${this.fileName}")
 
 		// ⬇︎-- The `lastUpdatedBy` property is private, so it can only be accessed from within the `Magazine` class.
-		lastUpdatedByName = updatedByName
+		this.lastUpdatedByName = updatedByName
+
+		// ⬇︎-- This line will not compile, as `numTimesUpdated` is private to class Publication.
+		// super.numTimesUpdated = 0
+
+		// ⬇︎-- This line will not compile, as `incrementTimesUpdated` is private to class Publication.
+		// super.incrementTimesUpdated()
 
 		// ⬇︎-- This line will not compile, as `numTimesUpdated` is private to class Publication.
 		// println("times updated=${this.numTimesUpdated} times")
@@ -67,13 +73,20 @@ class SomeOtherClass {  // <-- IMPORTANT NOTE: This class is **NOT** a subclass 
 		// ⬇︎-- This line will not compile, as `content` is private to class Publication.
 		// publication.content = "New Content"
 
-		// publication.updateContent("New Content") // <-- This line will not compile, as `updateContent` is protected inside class Publication.
+		// ⬇︎-- This line will not compile, as `updateContent` is protected inside class Publication.
+		// publication.updateContent("New Content")
 
-		// ⬇︎-- This line will not compile, as `lastUpdatedByName` is private to class Magazine.
-		// println(publication.lastUpdatedByName)
+		// ⬇︎-- This line will not compile, as `incrementTimesViewed` is private to class Publication.
+		// publication.incrementTimesViewed()
+
+		// ⬇︎-- This line will not compile, as `numTimesUpdated` is private to class Publication.
+		// println(publication.numTimesUpdated)
 
 		// ⬇︎-- This line will not compile, as `numTimesViewed` is private to class Publication.
 		// println(publication.numTimesViewed)
+
+		// ⬇︎-- This line will compile, as `fileName` is public, and the type of `publication` is `Publication`.
+		println("File name: ${publication.fileName}")
 	}
 
 	// ⬇︎-- This method is public, so it can be called from anywhere.
@@ -84,7 +97,7 @@ class SomeOtherClass {  // <-- IMPORTANT NOTE: This class is **NOT** a subclass 
 		// magazine.content = "New Content"
 
 		// ⬇︎-- This line will not compile, as `updateContent` is protected inside class Publication.
-		// magazine.updateContent("New Content")
+		// magazine.updateContent("More Updated Content")
 
 		// ⬇︎-- Now `update` works, as the `update` method is public, and the type of `magazine` is `Magazine`.
 		magazine.update("More Updated Content", "Jim")
