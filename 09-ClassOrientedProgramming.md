@@ -663,8 +663,8 @@
 
 ## Abstract Classes = The Name of a "General Category or Grouping"  <a name="abstract-classes"></a>
 ###### abstract-classes
-  - ### BIG IDEA — Can we use a `class` as way to define a general category of objects, but doesn't necessarily define the implementation details of the objects? 
-  - ### That way we can create many different kinds of objects with the same "method signature," but have different implementations of the methods.
+  - ### BIG IDEA — Can we use a `class` as way to define a general category of things, and optionally define the default implementation details in the general `class`? 
+    - ### That way we can create many different kinds of objects with the same "method signature," but have different implementations of the methods.
 
   - ## ⚠️ Confusing Terminology Alert!
   - I suggest forgetting the word `abstract` and substitute the phrase **_"The General Category."_**
@@ -672,10 +672,12 @@
         meanings of the word. People also seemed to use it in many different ways, and it was very confusing.
       - The `abstract` term used in computing **_ONLY_** means the **"general category"** of something.
       - Many people who attempted to explain the "abstract" keyword were likely unaware of the other meanings of the word
-        and confused many people due to ignorance of the other meanings of the word.
+        and confused many people due to ignorance.
       - They could have just said what I just told you, but they didn't, and that's why I'm here to help you. 🙂
   
-  - ### Function "signature" / "definition" / "type": `function name` + `parameter types` + `return type`
+  - ### "Function signature" = `function name` + `parameter types` + `return type`
+      - Also called "method signature" in the context of a `class`.
+      - Its the _"definition"_ of the method, and not the _"implementation"_ of the method.
     - ie: `method view()` is the method signature, and it expects no parameters and returns nothing.
     - ie: `function view(String name)` is the function signature, and it expects a `String` parameter and returns nothing.
     - ie: `method view(): String` is the method signature, and it expects no parameters and returns a `String`.
@@ -684,7 +686,14 @@
   
   - ### Some Examples:
     - An `abstract class Document` that has a method defined named `view`, and doesn't implement how a 
-      document is viewed, only it's "definition." 
+      document is viewed, only it's function signature.
+      - Attempting to instantiate a `Document` object will result in a compile-time error, as it doesn't make sense to have a "general" document.
+        - Programmer: JUST MAKE A BOOK! 
+        - computer: What kind of book?
+        - Programmer: JUST MAKE ONE!
+        - computer: 🤔 Which one?
+        - Programmer: 🤬 ANY BOOK!
+        - computer: 🤔 🤷‍ 💣 💥
     - Any object that is a subtype of "Document" must have the `view` method implemented.
     - You can't create a generic `Document` object, BUT you can create a `PDF` or `ExcelDoc` or `Memo` object that is 
       is a subclass of the `abstract class Document` class, and they will require a `view` method to be implemented.
@@ -692,7 +701,7 @@
       _"concrete classes."_ 
       - also called "implementing classes" or "implementations" of the `Document` class.
     - An `abstract class` is a template for a _"concrete"_ `class`, and cannot to be instantiated itself,
-      only `extend`-ed and be used as a "general" type to group the "specific" implementing sub-classes.
+      only `extend`-ed and be used as a "general" type to group together the implementing sub-classes into a common type.
     - ie: `Document` is the general category (`abstract` idea) of a generic "something to structure and retain data."
     - The `abstract class` is `extend`—ed by the subclass and the subclass methods `override` the superclass methods by
       implementing the method in any subclass.
@@ -947,7 +956,7 @@
     - That's it. That's the whole idea. 
     - It's just a fancy way of saying that "subclasses should work the same as their superclass."
     - Live Code Example: [Liskov Substitution Principle in Kotlin](src/main/kotlin/liskovSubstitutionPrincipleExample.kt)
-    - #### 🛑 POLYMORPHISM IS A GREAT EXAMPLE OF USING FANCY SOUNDING TERMS FOR VERY BASIC CONCEPTS THAT BARELY NEED EXPLAINING, I'VE SAID ENOUGH ALREADY.
+    - #### 🛑 "POLYMORPHISM" IS A GREAT EXAMPLE OF USING FANCY SOUNDING TERMS FOR VERY BASIC CONCEPTS THAT BARELY NEED EXPLAINING, I'VE SAID ENOUGH ALREADY.
       - ### 🫤 A lot of dick-swinging contests around words among the aspy-addled crowd. Please someone tell them they are being assholes when they suggest a new word for something super basic!
 
 ## Controlled Scope of Visibility of Variables and Methods <a name="controlled-visibility"></a>

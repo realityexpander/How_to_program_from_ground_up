@@ -135,7 +135,7 @@ This document is a reference and follow along guide for my video series on YouTu
     the "`how`" and "`why`" of the various paradigms and methodologies used in software development.
   
   - ### My Goal is to Have You:
-    - Understand more the `why` and `how` of programming, not just the `what` and `where`.
+    - Understand more the `why` and `how` of programming, not just the `what` and mechanical explanations.
       - This is my curated list of information to take you on a realistic and grounded journey of understanding
         the essential part of computing to create effective software.
       - There will be some technical details, but only enough to understand the fundamental principles, not to be an expert.

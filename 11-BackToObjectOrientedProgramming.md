@@ -2,7 +2,7 @@
   - ### BIG IDEA #1 — The state of the program is immutable and is only changed by creating a totally new state by modifying the old state.
   - ### BIG IDEA #2 - The state of the objects is private and only mutable via methods that are called on the object.  
 
-## Alan Kay Style BOOP (The _Original_ Object Oriented Programming)
+## Alan Kay Style OOP (The **_Original_** Object Oriented Programming)
   - Based on the idea of "messaging" between objects, VERY poorly named "object oriented programming", admitted 
     by Alan Kay himself, the inventor of the term.
     
