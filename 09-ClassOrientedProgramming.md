@@ -691,23 +691,24 @@
     - An `abstract class Document` that has a method defined named `view`, and doesn't implement how a 
       document is viewed, only it's function signature.
       - Attempting to instantiate a `Document` object will result in a compile-time error, as it doesn't make sense to have a "general" document.
-        - Programmer: JUST MAKE A BOOK! 
-        - computer: What kind of book?
+        - Programmer: JUST MAKE A DOCUMENT! 
+        - computer: What kind of document?
         - Programmer: JUST MAKE ONE!
         - computer: 🤔 Which one?
-        - Programmer: 🤬 ANY BOOK!
+        - Programmer: 🤬 ANY DOCUMENT! JUST MAKE IT!
         - computer: 🤔 🤷‍ 💣 💥
-    - Any object that is a subtype of "Document" must have the `view` method implemented.
-    - You can't create a generic `Document` object, BUT you can create a `PDF` or `ExcelDoc` or `Memo` object that is 
-      is a subclass of the `abstract class Document` class, and they will require a `view` method to be implemented.
     - The `Document` class is an `abstract class` and the `class PDF`,`class ExcelDoc,` and `class Memo` are the 
-      _"concrete classes."_ 
+      _"concrete classes." 
+    - You can't create a generic `Document` object, BUT you can create a `PDF` or `ExcelDoc` or `Memo` object that is 
+      is a subclass of the `abstract class Document` class.
+    - Any object that is a subtype of "Document" must have the `view` method implemented, as it is the 
+      "expectation" (or "contract") of the `abstract class Document`.
       - also called "implementing classes" or "implementations" of the `Document` class.
-    - An `abstract class` is a template for a _"concrete"_ `class`, and cannot to be instantiated itself,
+    - An `abstract class` is a template for a _"concrete"_ `class`, and cannot to be instantiated,
       only `extend`-ed and be used as a "general" type to group together the implementing sub-classes into a common type.
-    - ie: `Document` is the general category (`abstract` idea) of a generic "something to structure and retain data."
+    - ie: `Document` is the general category of a "thing to structure and retain some kind of data."
     - The `abstract class` is `extend`—ed by the subclass and the subclass methods `override` the superclass methods by
-      implementing the method in any subclass.
+      implementing the method in the subclass(es).
   
     - ### ONE MORE EXAMPLE OF A SIMPLE IDEA LEADING TO OVERCOMPLICATED CODE
     - Leading to unwieldy and hard to understand code, often used in places where it was not necessary.
