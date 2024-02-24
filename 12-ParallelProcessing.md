@@ -66,7 +66,10 @@
 ## Race Condition Problem Diagram <a name="RaceConditionDiagram"></a>
 ###### race-condition-diagram
 - ### BIG IDEA - The problem with the above example is that the threads are updating the value of `x` at the same time, and the order of the updates is not consistent, so the final value of `x` is not the expected value of `200`.
-
+  
+  > What Software Architecture Should Look Like  (Discussions about race conditions at 11:23)
+  > - https://youtu.be/ElMnHDSFaCw?si=j5hmYrezRtTGaRj9&t=683
+  
 - The problem with the above example is that the threads are updating the value of `x` at the same time, and the order
   of the updates is not consistent, so the final value of `x` is not the expected value of `200`.
 - This is called a race condition, and is a common problem with threads and other parallel processing systems.
