@@ -58,7 +58,7 @@ class Magazine(
 }
 
 
-class SomeOtherClass {  // <-- This class is **NOT** a subclass of `Publication` or `Magazine`.
+class SomeOtherClass {  // <-- IMPORTANT NOTE: This class is **NOT** a subclass of `Publication` or `Magazine`.
 
 	// ⬇︎-- This method is public, so it can be called from anywhere.
 	fun tryToDoStuffToPublication(publication: Publication) {
