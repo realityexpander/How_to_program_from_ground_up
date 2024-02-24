@@ -674,7 +674,7 @@
       - When I was learning about the `abstract` programming concept, I kept confusing it with the "abstract" concept in art, and "abstract" concept in philosophy, and other
         meanings of the word. People also seemed to use it in many different ways, and it was very confusing.
       - The `abstract` term used in computing **_ONLY_** MEANS THE  **"GENERAL CATEGORY"** of something. 
-      - ##### And NEVER the artistic, or philosophical meaning of the word, unless the speaker **_specifically_** points out that particular connection. Otherwise, just replace it with the phrase _"general category."_
+      - ##### And NEVER the artistic, or philosophical meaning of the word, unless the speaker **_specifically_** points out that particular connection. Otherwise, just replace it with the phrase _"the general category."_
       - Many people who attempted to explain the "abstract" keyword were likely unaware of the other meanings of the word
         and confused many people due to ignorance.
       - They could have just said what I just told you, but they didn't, and that's why I'm here to help you. 🙂
