@@ -967,11 +967,9 @@
 
 ## Controlled Scope of Visibility of Variables and Methods <a name="controlled-visibility"></a>
 ###### controlled-visibility
-  - ### BIG IDEA — Global mutable variables is a big problem, so lets control the visibility of the variables and 
-    methods of the class to other classes and subclasses.
-  - ie: Making a variable `private` means that it can only be accessed by the methods of the class and not by any other class.
-
-  - Use of explicit `private` and `protected` and `public` to control the visibility of the variables and methods
+  - ### BIG IDEA — Global mutable variables is a big problem, so lets control the visibility of the variables and methods of the class to other classes and subclasses.
+  
+  - Use of explicit `private` and `protected` and `public` keywords to declare the visibility of the variables and methods.
     of the class.
   - Making a variable `private` means that it can only be accessed by the methods of the class and not by any
     other class.
