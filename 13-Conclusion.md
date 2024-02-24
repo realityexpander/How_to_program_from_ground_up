@@ -34,8 +34,8 @@
         AssemblyLanguage{{Assembly Language}} -->|Procedural|COBOL
         AssemblyLanguage{{Assembly Language}} -->|Procedural|Fortran
         AssemblyLanguage{{Assembly Language}} -->|Structured|Algol68
-        AssemblyLanguage{{Assembly Language}} -->|Structured|C
         AssemblyLanguage{{Assembly Language}} -->|Structured + low-level|BCPL
+        AssemblyLanguage{{Assembly Language}} -->|Structured|C
         AssemblyLanguage{{Assembly Language}} -->|List-oriented|Lisp
         
         COBOL{{"COBOL"}} -.->|"Easy to 
@@ -52,8 +52,9 @@
         BCPL{{"BCPL"}} -->|"for types, structures 
                             low-level compilation
                             ✨"|C
-        BCPL --> Algol68
+        Algol68 --> BCPL 
         BCPL --> Simula67
+        Algol68 --> Simula67
         Simula67{{"Simula67"}} -.->|"for pointers & 
                                     other concepts
                                     ✨"|C
@@ -73,7 +74,8 @@
                   Originator of term OOP
                   🙂"}} -.->|for OOP ideas|Javascript
         Smalltalk -.->|for OOP ideas|Ruby
-        Smalltalk -.->|for OOP ideas|HyperTalk
+        Smalltalk -.->|encapsulation
+                       messaging|HyperTalk
         Basic -.-> |"for Interpreted & 
                     interactive
                     ⚡️"|Smalltalk
@@ -90,6 +92,7 @@
         VisualBasic{{"Visual Basic"}}
     
     Note("Conceptual Inheritance Graph of Selected Languages.
+          OOP Ideas = classes, inheritance, polymorphism.
           
           Not exhaustive, not to time scale.
           ⨭⨂⨀⨁⨮")

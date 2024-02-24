@@ -340,16 +340,16 @@
        person.printPerson()   
      
        // COP style using the `static` methods of the `PersonManager` class to manipulate the data of the `Person` object.
-       PersonManager.changeName(person, "Jane Doe")
-       PersonManager.changeAge(person, 25)
-       PersonManager.changeHeight(person, 5.5)
-       PersonManager.changeWeight(person, 150.0)
+       PersonManager.changeName(person, "Chris Day")
+       PersonManager.changeAge(person, 35)
+       PersonManager.changeHeight(person, 6.5)
+       PersonManager.changeWeight(person, 180.0)
        person.printPerson()
     }
     
     // Output:
     // Name: Jane Doe, Age: 25, Height: 5.5, Weight: 150.0
-    // Name: Jane Doe, Age: 25, Height: 5.5, Weight: 150.0
+    // Name: Chris Day, Age: 35, Height: 6.5, Weight: 180.0
     ```
     - Live Code Example: [Using Classes as Name-Spaces in Kotlin](src/main/kotlin/usingClassesAsNameSpaces.kt) 
     - We shall cover the solution to this in the BOOP section of this document.

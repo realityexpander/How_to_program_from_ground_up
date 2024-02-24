@@ -65,6 +65,8 @@
 
 ## Race Condition Problem Diagram <a name="RaceConditionDiagram"></a>
 ###### race-condition-diagram
+- ### BIG IDEA - The problem with the above example is that the threads are updating the value of `x` at the same time, and the order of the updates is not consistent, so the final value of `x` is not the expected value of `200`.
+
 - The problem with the above example is that the threads are updating the value of `x` at the same time, and the order
   of the updates is not consistent, so the final value of `x` is not the expected value of `200`.
 - This is called a race condition, and is a common problem with threads and other parallel processing systems.
@@ -101,8 +103,11 @@
          Note right of Shared variable `x`: It's random and unpredictable when the updates will be correct.
 
   ```
-## Fixing the threads "race condition" problem using "Atomic" updates (`synchronized` keyword) <a name="AtomicUpdates"></a>
+## Fixing the threads "race condition" problem by using "Atomic" updates (the `synchronized` keyword) <a name="AtomicUpdates"></a>
 ###### atomic-updates
+- ### BIG IDEA - Is there a way to make the updates to `x` "atomic" so that the threads don't update `x` at the same time?-
+  [<img src="assets/race-condition-quote.png" width="500"/>](assets/race-condition-quote.png)
+
   ```Kotlin
   fun main() {
      var x = 0
@@ -191,6 +196,8 @@
   - ### BIG IDEA - Is there a way to simulate parallel execution and avoid the complexity and overhead of threads?
   
   - Coroutines are another way to run multiple processes at the same time, just like threads.
+  - Swapping threads in and out of the CPU is relatively resource-heavy, and can be challenging to manage and debug.
+    - [<img src = "assets/thread-time-diagram.png" width="500"/>](assets/thread-time-diagram.png)
   - Coroutines always run on one or more threads, so threads are still used to run the coroutines, but abstracted away.
   - Coroutines are relatively resource-light and simplify the management of where parts of the program are running, so
     you can have many more coroutines running at the same time than you can have threads. 
