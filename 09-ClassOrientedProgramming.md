@@ -691,13 +691,14 @@
   - ### Some Examples:
     - An `abstract class File` that has a single method defined named `view`, and does NOT implement how a 
       `view`, it only includes it's function signature, just like an interface.
-      - Attempting to instantiate a `File` object will result in a compile-time error, as it does not make sense to have a "general" document.
-        - Programmer: JUST MAKE A FILE! 
-        - computer: What kind of file?
-        - Programmer: JUST MAKE ONE!
-        - computer: 🤔 Which one?
-        - Programmer: 🤬 ANY FILE! JUST MAKE IT!
-        - computer: 🤔 🤷‍ 💣 💥
+      - Attempting to instantiate a `File` object will result in a compile-time error, as it does not make logical realistic sense to have a "general" concept of "file" as an _actual_ object. 
+        - It's a concept and can't have an object. _I'm being pedantic because this is an important distinction, as this is not a technical limitation, this is a logical limitation._
+          > - Programmer: JUST MAKE A FILE! 
+          > - computer: What kind of file?
+          > - Programmer: IDK, JUST MAKE ONE!
+          > - computer: 🤔 Which one, though?
+          > - Programmer: 🤬 THE CONCEPT OF "FILE!" — JUST INSTANTIATE THE CONCEPT!
+          > - computer: 🤔 🤷‍ 💣 💥 _...not logically possible._
     - The `File` class is an `abstract class` and the `class Photo`,`class ExcelDoc` and `class Memo` are the 
       _"concrete classes." 
     - You can't create a generic `File` object, BUT you can create a `Photo` or `ExcelDoc` or `Memo` object that is 
