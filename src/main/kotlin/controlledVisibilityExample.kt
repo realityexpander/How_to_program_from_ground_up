@@ -5,8 +5,8 @@ abstract class Publication(
 	public val fileName: String,
 	private var content: String
 ) {
-	private var numTimesUpdated = 0    // Only this "Publication" class can access this property.
 	protected var numTimesViewed = 0 // This property can be accessed by any subclass of "Publication".
+	private var numTimesUpdated = 0    // Only this "Publication" class can access this property.
 
 	// ⬇︎-- This method is public, so it can be called from anywhere.
 	fun viewContent() {
