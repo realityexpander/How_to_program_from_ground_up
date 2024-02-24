@@ -23,16 +23,18 @@
   > Stop Studying Programming
   > - https://www.youtube.com/watch?v=QMbx0dTWJIQ  
 
-## History Graph of Programming languages Referenced In This Document
+## History Graph of Selected Programming languages Referenced In This Document
   ```mermaid
     graph TB
-        MachineLanguage{{Machine Language}} -->|human readable| AssemblyLanguage
+        MachineLanguage{{Machine Language}} -->|human readable mnemonics| AssemblyLanguage
         AssemblyLanguage{{Assembly Language}} -.->|Procedural & Interpreted|Basic
         AssemblyLanguage{{Assembly Language}} -->|Procedural|COBOL
         AssemblyLanguage{{Assembly Language}} -->|Procedural|Fortran
         AssemblyLanguage{{Assembly Language}} -->|Structured|Algol68
         AssemblyLanguage{{Assembly Language}} -->|Structured|C
         AssemblyLanguage{{Assembly Language}} -->|Structured + low-level|BCPL
+        AssemblyLanguage{{Assembly Language}} -->|List-oriented|Lisp
+        
         COBOL{{"COBOL"}} -.->|"Easy to 
                               Learn Syntax
                               ⚡️️"|Basic
@@ -52,7 +54,7 @@
         Simula67{{"Simula67"}} -.->|"for pointers & 
                                     other concepts
                                     ✨"|C
-        
+        Simula67 -.->|for OOP ideas|Smalltalk
         C{{"C"}} -->Cplusplus
         C -.->Smalltalk
         Simula67 -.->|for COP ideas|Cplusplus
@@ -75,6 +77,9 @@
         AssemblyLanguage-.->|"for self-modifying 
                               code @ runtime
                               ✨"|Smalltalk
+        
+        Lisp{{"Lisp"}} -.->|internal syntax|Javascript
+        Java--->|for syntax|Javascript
         Kotlin{{Kotlin}}
         Ruby{{Ruby}}
         HyperTalk{{HyperTalk}}
