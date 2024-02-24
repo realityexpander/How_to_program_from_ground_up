@@ -52,9 +52,9 @@
         BCPL{{"BCPL"}} -->|"for types, structures 
                             low-level compilation
                             ✨"|C
-%%        Algol68 --> BCPL 
-%%        BCPL --> Simula67
-%%        Algol68 --> Simula67
+        Algol68 --> BCPL 
+        BCPL --> Simula67
+        Algol68 --> Simula67
         Simula67{{"Simula67"}} -.->|"for pointers & 
                                     other concepts
                                     ✨"|C
