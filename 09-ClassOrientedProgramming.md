@@ -671,7 +671,7 @@
 
   - ## ⚠️ Confusing Terminology Alert!
   - I suggest forgetting the word `abstract` and substitute the phrase **_"The General Category."_**
-      - When I was learning about `abstract` programming concept, I kept confusing it with the "abstract" concept in art, and "abstract" concept in philosophy, and other
+      - When I was learning about the `abstract` programming concept, I kept confusing it with the "abstract" concept in art, and "abstract" concept in philosophy, and other
         meanings of the word. People also seemed to use it in many different ways, and it was very confusing.
       - The `abstract` term used in computing **_ONLY_** MEANS THE  **"GENERAL CATEGORY"** of something. 
       - ##### And NEVER the artistic, or philosophical meaning of the word, unless the speaker _specifically_ points out that particular connection. Otherwise, just replace with the phrase _"general category."_
@@ -693,11 +693,11 @@
       `view`, it only includes it's function signature, just like an interface.
       - Attempting to instantiate a `File` object will result in a compile-time error, as it does not make logical realistic sense to have a "general" concept of "file" as an _actual_ object. 
         - It's a concept and can't have an object. _I'm being pedantic because this is an important distinction, as this is not a technical limitation, this is a logical limitation._
-          > - Programmer: JUST MAKE A FILE! 
+          > - Programmer: CREATE A CONCEPTUAL `FILE`! 
           > - computer: What kind of file?
-          > - Programmer: IDK, JUST MAKE ONE!
+          > - Programmer: IDK, JUST MAKE ONE! ...and make sure it's only the idea of a `FILE`!
           > - computer: 🤔 Which one, though?
-          > - Programmer: 🤬 THE CONCEPT OF "FILE!" — JUST INSTANTIATE THE CONCEPT!
+          > - Programmer: 🤬 THE CONCEPT OF "FILE!" — SIMPLY INSTANTIATE THE CONCEPT!
           > - computer: 🤔 🤷‍ 💣 💥 _...not logically possible._
     - The `File` class is an `abstract class` and the `class Photo`,`class ExcelDoc` and `class Memo` are the 
       _"concrete classes." 
