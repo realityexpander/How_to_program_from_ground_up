@@ -24,6 +24,9 @@
   > - https://www.youtube.com/watch?v=QMbx0dTWJIQ  
 
 ## History Graph of Selected Programming languages Referenced In This Document
+  > Keynote session: The History of Programming - Mark Rendle [DevCon 2016]
+  > - https://youtu.be/Tr9E_vzKRVo
+ 
   ```mermaid
     graph TB
         MachineLanguage{{Machine Language}} -->|human readable mnemonics| AssemblyLanguage
