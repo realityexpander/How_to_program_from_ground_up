@@ -947,7 +947,7 @@
 ## Polymorphism <a name="polymorphism"></a>
 ###### polymorphism
   - ### BIG IDEA — A method can be called on an object and the method will behave differently based on the `class` of the object.
-    - #### In COP, the `interface`-s and `abstract class`-s are implementations of the idea of polymorphism.
+    - #### In COP, the `interface`-s and `abstract class`-s are direct usage of the idea of polymorphism.
 
   - ### ⚠️ ANOTHER EXAMPLE OF A EXCEEDINGLY OBVIOUS IDEA WITH A RIDICULOUSLY OVERCOMPLICATED NAME!
     - Yet _another_ overcomplicated name for a very basic, exceedingly simple idea.
