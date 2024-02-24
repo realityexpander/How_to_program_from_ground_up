@@ -980,7 +980,7 @@
     class oriented paradigm.
   - Live Code Example: [Controlled Visibility in Kotlin](src/main/kotlin/controlledVisibilityExample.kt)
 
-## Allowing for "Multiple Inheritance" in C++ was a mistake, and it was removed from Java and C# for very good reasons. <a name="multiple-inheritance-removed"></a>
+## Allowing for "Multiple Inheritance" in C++ was a mistake, and it was removed from Java, Kotlin and C# for very good reasons. <a name="multiple-inheritance-removed"></a>
 ###### multiple-inheritance-removed
   - Multiple Inheritance is the idea that a class can inherit from more than one class, and then have access to
     all methods and variables of the superclasses.
