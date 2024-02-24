@@ -76,7 +76,7 @@ class SomeOtherClass {  // <-- IMPORTANT NOTE: This class is **NOT** a subclass 
 		// ⬇︎-- This line will not compile, as `updateContent` is protected inside class Publication.
 		// publication.updateContent("New Content")
 
-		// ⬇︎-- This line will not compile, as `incrementTimesViewed` is private to class Publication.
+		// ⬇︎-- This line will not compile, as `incrementTimesViewed()` is private to class Publication.
 		// publication.incrementTimesViewed()
 
 		// ⬇︎-- This line will not compile, as `numTimesUpdated` is private to class Publication.
@@ -98,6 +98,9 @@ class SomeOtherClass {  // <-- IMPORTANT NOTE: This class is **NOT** a subclass 
 
 		// ⬇︎-- This line will not compile, as `updateContent` is protected inside class Publication.
 		// magazine.updateContent("More Updated Content")
+
+		// ⬇︎-- This line will not compile, as `incrementTimesViewed()` is private to class Publication
+		// magazine.incrementTimesViewed()
 
 		// ⬇︎-- Now `update` works, as the `update` method is public, and the type of `magazine` is `Magazine`.
 		magazine.update("More Updated Content", "Jim")
