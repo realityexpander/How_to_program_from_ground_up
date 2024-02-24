@@ -91,13 +91,13 @@
         Javascript{{Javascript}}
         VisualBasic{{"Visual Basic"}}
     
+    X("X") ---> |means Y descended from X.| Y("Y")
+    A("A") -..-> |means A influenced B.| B("B")
     Note("Conceptual Inheritance Graph of Selected Languages.
           OOP Ideas = classes, inheritance, polymorphism.
           
           Not exhaustive, not to time scale.
           ⨭⨂⨀⨁⨮")
-    A("A") -.-> |means A influenced B.| B("B")
-    X("X") --> |means Y descended from X.| Y("Y")
     
   ```
 
