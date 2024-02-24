@@ -688,25 +688,25 @@
   - ## An `abstract class` is very similar concept as `interface`, additionally `abstract class`-es can have "default" implementations of their methods, as well as declare variables that are expected to be in the subclass.
   
   - ### Some Examples:
-    - An `abstract class Document` that has a method defined named `view`, and doesn't implement how a 
-      document is viewed, only it's function signature.
-      - Attempting to instantiate a `Document` object will result in a compile-time error, as it doesn't make sense to have a "general" document.
-        - Programmer: JUST MAKE A DOCUMENT! 
-        - computer: What kind of document?
+    - An `abstract class File` that has a single method defined named `view`, and does NOT implement how a 
+      `view`, it only includes it's function signature, just like an interface.
+      - Attempting to instantiate a `File` object will result in a compile-time error, as it does not make sense to have a "general" document.
+        - Programmer: JUST MAKE A FILE! 
+        - computer: What kind of file?
         - Programmer: JUST MAKE ONE!
         - computer: 🤔 Which one?
-        - Programmer: 🤬 ANY DOCUMENT! JUST MAKE IT!
+        - Programmer: 🤬 ANY FILE! JUST MAKE IT!
         - computer: 🤔 🤷‍ 💣 💥
-    - The `Document` class is an `abstract class` and the `class PDF`,`class ExcelDoc,` and `class Memo` are the 
+    - The `File` class is an `abstract class` and the `class Photo`,`class ExcelDoc` and `class Memo` are the 
       _"concrete classes." 
-    - You can't create a generic `Document` object, BUT you can create a `PDF` or `ExcelDoc` or `Memo` object that is 
-      is a subclass of the `abstract class Document` class.
+    - You can't create a generic `File` object, BUT you can create a `Photo` or `ExcelDoc` or `Memo` object that is 
+      is a subclass of the `abstract class File` class.
     - Any object that is a subtype of "Document" must have the `view` method implemented, as it is the 
-      "expectation" (or "contract") of the `abstract class Document`.
-      - also called "implementing classes" or "implementations" of the `Document` class.
+      "expectation" (or "contract") of the `abstract class File`.
+      - also called "implementing classes" or "implementations" of the `File` class.
     - An `abstract class` is a template for a _"concrete"_ `class`, and cannot to be instantiated,
       only `extend`-ed and be used as a "general" type to group together the implementing sub-classes into a common type.
-    - ie: `Document` is the general category of a "thing to structure and retain some kind of data."
+    - ie: `File` is the general category of a "thing to structure and retain some kind of data."
     - The `abstract class` is `extend`—ed by the subclass and the subclass methods `override` the superclass methods by
       implementing the method in the subclass(es).
   
@@ -717,7 +717,7 @@
         > - Abstraction Can Make Your Code Worse
         >   - https://www.youtube.com/watch?v=rQlMtztiAoA 
 
-  - ### Example of `abstract` `class` diagram:
+  - ### Example of `abstract class` diagram:
     ```mermaid
     ---
     title: Abstract Class Example Diagram
