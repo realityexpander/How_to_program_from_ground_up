@@ -664,7 +664,7 @@
         > - The Flaws of Inheritance
         >   - https://www.youtube.com/watch?v=hxGOiiR9ZKg
 
-# `abstract class` = The Name of a "General Category or Grouping"  <a name="abstract-classes"></a>
+# `abstract class` = The Name of a "General Category" or "Group"  <a name="abstract-classes"></a>
 ###### abstract-classes
   - ### BIG IDEA — Can we use a `class` as way to define a general category of things, and optionally define the default implementation details in the general `class`? 
     - ### That way we can create many different kinds of objects with the same "method signature," but have different implementations of the methods.
