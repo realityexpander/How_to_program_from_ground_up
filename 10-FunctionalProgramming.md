@@ -19,10 +19,14 @@
          - "function literals."
        - ### All these mean "functions!"
        
-    - ## ⚠️ WORD OVER-DEFINITION ALERT! 
+    - ## ⚠️ EXCESSIVE WORD-INVENTIONS FOR THE SAME DEFINITION!!!
       > SEE WHAT I MEAN WITH ALL THE NAMES FOR THE SAME THING?
       - ### 🛑 ATTENTION COMPUTER SCIENCE PEOPLE:
-        ### 🤨 Please stop with all the names for the same exact stuff!!!!! I know you gotta make sales, but come on!   
+        ### 🤨 Please stop with all the names for the same exact stuff!!!!! I know you gotta make sales, but come on!
+        
+        > YOU MAY HAVE A MEDICAL CONDITION
+        > - **_"Sesquipedalianism"_** refers to the tendency to use long words or create unnecessarily complex words when simpler ones would suffice, often resulting in verbose or convoluted language. It can also describe the habit of inventing new words or phrases for concepts that already have well-established terms. 
+        > - _This behavior is often seen as pretentious or pedantic._ 
   
 ## Immutability & No Side Effects <a name="immutability-no-side-effects"></a>
 ###### immutability-no-side-effects
