@@ -1097,7 +1097,7 @@
   > - Naming things in Code - CodeAesthetic
   >   - https://www.youtube.com/watch?v=-J3wNP6u5YU
 
-## Software "Design Patterns" (not the Art, Architectural, Fashion or any other kind of design) <a name="design-patterns"></a>
+## Software "Design Patterns" (not associated with the Art, Architectural, Fashion or any other kind of Design Pattern set of ideas) <a name="design-patterns"></a>
 ###### design-patterns
   - ### BIG IDEA — There are common problems and ways of solving them that humans have already figured out and named them.
  
