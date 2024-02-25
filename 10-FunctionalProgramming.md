@@ -2,6 +2,8 @@
 ###### functional-programming
   - ### BIG IDEA - Shared mutable state is a complex problem, especially for parallel processing tasks. 
 
+    > [<img src="assets/functional-chart-annotated.png" width="450">](assets/functional-chart-annotated.png)
+
   - ### The Functional style requires:
     1) Calling functions will NEVER change anything outside the function being called. 
        - ie: "pure functions." "no side effects", "no shared mutable state."
@@ -17,10 +19,11 @@
          - "function literals."
        - ### All these mean "functions!"
        
-    - ## SEE WHAT I MEAN WITH ALL THE NAMES FOR THE SAME THING?
-      - ### ATTENTION COMPUTER SCIENCE PEOPLE 
-      - ### Please stop with all the names for the same old stuff!!!!!   
-
+    - ## ⚠️ WORD OVER-DEFINITION ALERT! 
+      > SEE WHAT I MEAN WITH ALL THE NAMES FOR THE SAME THING?
+      - ### 🛑 ATTENTION COMPUTER SCIENCE PEOPLE:
+        ### 🤨 Please stop with all the names for the same exact stuff!!!!! I know you gotta make sales, but come on!   
+  
 ## Immutability & No Side Effects <a name="immutability-no-side-effects"></a>
 ###### immutability-no-side-effects
   - Mutability means something can be changed, and immutability means it cannot be changed once it's created.
@@ -30,6 +33,8 @@
     - The BOOP ("Back-to Object Oriented Programming") style is a form of Functional Programming as the state of the 
       program is immutable and passed as arguments.
       to the functions, and a new state is returned as the result of the calls to the functions.
+  > [<img src="assets/functional-programming.png" width="550">](assets/functional-programming.png)
+
 - All functions in the core of the application return a value and have no side effects on any other state of
   the program.
 - It's more of a style of programming than a paradigm as it can be used in any language, but it's most effective
