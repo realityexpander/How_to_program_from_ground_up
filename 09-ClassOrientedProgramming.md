@@ -1101,9 +1101,11 @@
 ###### design-patterns
   - ### BIG IDEA — There are common problems and ways of solving them that humans have already figured out and named them.
  
-  - "Design Patterns" became popular around the time of C++ due to the new complexity of the language and the
+  - "Design Patterns" became popular around the time of C++ due to the new complexity of the language features and the
     need to solve the problems of the "procedural approach" to COP.
-  - These "patterns" were discovered by programmers dealing with C++ language design limitations, and these common solutions were
+    - ### 🧐🏦📢 DON'T FORGET THE AT&T HYPE WAVE AROUND C++
+  
+  - These "patterns" were discovered by programmers dealing with C++ language design limitations, and these various solutions were
     shared on public forums and then copied into many books from different authors. The solutions were given in talks 
     at software development conferences, emphasizing different ideas and approaches to particular problems that arose 
     from C++ programming, not necessarily the OOP paradigm.
