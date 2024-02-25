@@ -1,6 +1,7 @@
 package org.example
 
 // Multiple inheritance Example
+// Kotlin allows interfaces to have default implementations for functions.
 
 interface Add1 {
    abstract val a: Int
