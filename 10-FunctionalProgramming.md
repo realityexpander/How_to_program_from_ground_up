@@ -8,7 +8,14 @@
     1) Calling functions will NEVER change anything outside the function being called. 
        - ie: "pure functions." "no side effects", "no shared mutable state."
     2) Functions passed in with certain arguments will ALWAYS return the same result.
-       - ie: "deterministic", "referentially transparent", "idempotent," "stateless," "side-effect free."
+       - ie: "deterministic", 
+       - "referentially transparent", 
+       - "idempotent," 
+       - "stateless," 
+       - "side-effect free,"
+       - "pure,"
+       - "no shared mutable state."
+       - ### All these mean "functions!" that don't change anything outside of themselves.
     3) Functions can be passed as arguments to other functions.
        - ie: 
          - "higher-order functions", 
