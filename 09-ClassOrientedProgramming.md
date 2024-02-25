@@ -1103,12 +1103,12 @@
  
   - "Design Patterns" became popular around the time of C++ due to the new complexity of the language features and the
     need to solve the problems of the "procedural approach" to COP.
-    - ### ⚠️ 📢 DON'T FORGET THE AT&T HYPE WAVE AROUND C++ AT THE TIME PROMOTED TO SOLVE THE PROBLEMS OF THE "PROCEDURAL APPROACH" DROVE MUCH OF THIS AD-HOC ACTIVITY.
   
   - These "patterns" were discovered by programmers dealing with C++ language design limitations, and these various solutions were
     shared on public forums and then copied into many books from different authors. The solutions were given in talks 
     at software development conferences, emphasizing different ideas and approaches to particular problems that arose 
     from C++ programming, not necessarily the OOP paradigm.
+    - ### ⚠️ 📢 DON'T FORGET THE AT&T HYPE WAVE AROUND C++ WAS PROMOTED TO SOLVE THE PROBLEMS OF THE "PROCEDURAL APPROACH", AND IT DROVE MUCH OF THIS AD-HOC "PATTERNS" ACTIVITY.
   - Most of these so-called "patterns" were just _common hacks_ to fit the procedural approach into the COP paradigm.
   - Many programmers accepted these patterns as some kind of gospel, and they were often used to justify the
     use of inheritance (and other language features) in places where it was not appropriate.
