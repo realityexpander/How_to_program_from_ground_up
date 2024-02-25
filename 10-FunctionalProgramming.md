@@ -5,31 +5,39 @@
     > [<img src="assets/functional-chart-updated.png" width="650">](assets/functional-chart-updated.png)
 
   - ### The Functional style requires:
-    1) Calling functions will NEVER change anything outside the function being called. 
-       - ie: "pure functions." "no side effects", "no shared mutable state."
-    2) Functions passed in with certain arguments will ALWAYS return the same result.
-       - ie: "deterministic", 
-       - "referentially transparent", 
-       - "idempotent," 
-       - "stateless," 
+    1) Calling functions will NEVER change anything outside the function being called.
+       - ie: "pure functions," 
+       - "no side effects", 
        - "side-effect free,"
-       - "pure,"
        - "no shared mutable state."
-       - ### All these mean "functions!" that don't change anything outside of themselves.
+       - ### All these phrases mean "'functions' that don't change anything outside of themselves."
+       
+       - _They don't seem to count the "program counter" or "stack pointer" as "state" though..._
+    
+    2) Functions passed in with the same values will ALWAYS return the same value as a result.
+     - ie: "deterministic", 
+     - "referentially transparent", 
+     - "idempotent," 
+     - "stateless," 
+     - "pure,"
+     - "no shared mutable state."
+       
+     - ### All these phrases mean "'functions' that don't change anything outside of themselves."
+    
     3) Functions can be passed as arguments to other functions.
-       - ie: 
-         - "higher-order functions", 
-         - "lambdas", 
-         - "closures",
-         - "first-class citizen functions", 
-         - "anonymous functions", 
-         - "function literals."
-       - ### All these mean "functions!"
+     - ie: "higher-order functions", 
+       - "lambdas", 
+       - "closures",
+       - "first-class citizen functions", 
+       - "anonymous functions", 
+       - "function literals."
+       
+     - ### All these mean "functions!"
        
     - ## ⚠️ EXCESSIVE WORD-INVENTIONS FOR THE SAME DEFINITION!!!
       > SEE WHAT I MEAN WITH ALL THE NAMES FOR THE SAME THING?
-      - ### 🛑 ATTENTION COMPUTER SCIENCE PEOPLE:
-        ### 🤨 Please stop with all the names for the same exact stuff!!!!! I know you gotta make sales, but come on!
+    - ### 🛑 ATTENTION COMPUTER SCIENCE PEOPLE:
+      ### 🤨 Please stop with all the names for the same exact stuff!!!!! I know you gotta make sales, but come on!
         
         > YOU MAY HAVE A MEDICAL CONDITION
         > - **_"Sesquipedalianism"_** refers to the tendency to use long words or create unnecessarily complex words when simpler ones would suffice, often resulting in verbose or convoluted language. It can also describe the habit of inventing new words or phrases for concepts that already have well-established terms. 

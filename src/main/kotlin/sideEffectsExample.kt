@@ -14,4 +14,4 @@ fun main() {
 
 // Output:
 // 3   // <-- This value of is what we expected, only the first time though...
-// 4   // <-- This value of is not what we expected due to the side effect.
+// 4   // <-- This value of is **NOT** what we expected due to the "side effect."
