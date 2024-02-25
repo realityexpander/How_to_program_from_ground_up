@@ -74,7 +74,7 @@
     - It's all just functions!
 - Examples of functional languages are "Lisp", "Clojure" and "Javascript" and "Kotlin"
 
-- Example with Side Effects (Kotlin):
+### Code Example with Side Effects (Kotlin):
   - ###### sideEffectsExample
   ```Kotlin
   fun main() {
@@ -99,7 +99,7 @@
   ```
   > Live Code Example: [Side Effects Example](src/main/kotlin/sideEffectsExample.kt)
 
-- Example of Functional style (Kotlin):
+### Code Example of Functional style (Kotlin):
     - ###### functionalExample
   ```Kotlin
   fun main() {
