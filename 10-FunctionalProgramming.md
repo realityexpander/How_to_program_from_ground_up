@@ -10,32 +10,32 @@
        - "no side effects", 
        - "side-effect free,"
        - "no shared mutable state."
-       - ### All these phrases mean "'functions' that don't change anything outside of themselves."
-       
        - _They don't seem to count the "program counter" or "stack pointer" as "state" though..._
     
+       - ### All these phrases mean "'functions' that don't change anything outside of themselves."
+    
     2) Functions passed in with the same values will ALWAYS return the same value as a result.
-     - ie: "deterministic", 
-     - "referentially transparent", 
-     - "idempotent," 
-     - "stateless," 
-     - "pure,"
-     - "no shared mutable state."
-       
-     - ### All these phrases mean "'functions' that don't change anything outside of themselves."
+       - ie: "deterministic", 
+       - "referentially transparent", 
+       - "idempotent," 
+       - "stateless," 
+       - "pure,"
+       - "no shared mutable state."
+         
+       - ### All these phrases mean "'functions' that don't change anything outside of themselves."
     
     3) Functions can be passed as arguments to other functions.
-     - ie: "higher-order functions", 
-       - "lambdas", 
-       - "closures",
-       - "first-class citizen functions", 
-       - "anonymous functions", 
-       - "function literals."
-       
-     - ### All these mean "functions!"
+       - ie: "higher-order functions", 
+         - "lambdas", 
+         - "closures",
+         - "first-class citizen functions", 
+         - "anonymous functions", 
+         - "function literals."
+         
+       - ### All these mean "functions!"
        
     - ## ⚠️ EXCESSIVE WORD-INVENTIONS FOR THE SAME DEFINITION!!!
-      > SEE WHAT I MEAN WITH ALL THE NAMES FOR THE SAME THING?
+      > SEE WHAT I MEAN WITH ALL THE NAMES FOR THE SAME THING? 😐🤪🤨😳😒?
     - ### 🛑 ATTENTION COMPUTER SCIENCE PEOPLE:
       ### 🤨 Please stop with all the names for the same exact stuff!!!!! I know you gotta make sales, but come on!
         
