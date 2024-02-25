@@ -1108,7 +1108,7 @@
     shared on public forums and then copied into many books from different authors. The solutions were given in talks 
     at software development conferences, emphasizing different ideas and approaches to particular problems that arose 
     from C++ programming, not necessarily the OOP paradigm.
-    - ### ⚠️ 📢 DON'T FORGET THE AT&T HYPE WAVE AROUND C++ WAS PROMOTED TO SOLVE THE PROBLEMS OF THE "PROCEDURAL APPROACH", AND IT DROVE MUCH OF THIS AD-HOC "PATTERNS" ACTIVITY.
+    - ### ⚠️ 📢 DON'T FORGET THE AT&T HYPE WAVE AROUND C++, IT WAS PROMOTED TO SOLVE THE PROBLEMS OF THE "PROCEDURAL APPROACH", AND IT DROVE MUCH OF THIS AD-HOC "PATTERNS" ACTIVITY.
   - Most of these so-called "patterns" were just _common hacks_ to fit the procedural approach into the COP paradigm.
   - Many programmers accepted these patterns as some kind of gospel, and they were often used to justify the
     use of inheritance (and other language features) in places where it was not appropriate.
