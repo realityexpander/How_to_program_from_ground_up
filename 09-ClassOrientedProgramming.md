@@ -1110,7 +1110,7 @@
     - ## ⚠️ SALES CYCLE ALERT!
        >- ### 📢  DON'T FORGET ABOUT THE INTENSE AT&T HYPE AROUND C++, IT WAS PROMOTED TO SOLVE THE PROBLEMS OF THE "PROCEDURAL APPROACH", AND IT DROVE MUCH OF THIS AD-HOC "PATTERNS" ACTIVITY.
   
-  - Most of these so-called "patterns" were just _common hacks_ to fit the procedural approach into the COP paradigm.
+  - Most of these so-called "software patterns" were just _common hacks_ to fit the procedural approach into the COP paradigm.
   - Many programmers accepted these patterns as some kind of gospel, and they were often used to justify the
     use of inheritance (and other language features) in places where it was not appropriate.
   - For example, **"The "Gang of Four"** book is the most famous book on the subject, and it is often touted to as the "Bible" for OOP programming, especially in C++.
