@@ -2,7 +2,7 @@
 ###### functional-programming
   - ### BIG IDEA - Shared mutable state is a complex problem, especially for parallel processing tasks. 
 
-    > [<img src="assets/functional-chart-annotated.png" width="450">](assets/functional-chart-annotated.png)
+    > [<img src="assets/functional-chart-annotated.png" width="450">](assets/functional-chart-annotated-old.png)
 
   - ### The Functional style requires:
     1) Calling functions will NEVER change anything outside the function being called. 
@@ -33,7 +33,7 @@
     - The BOOP ("Back-to Object Oriented Programming") style is a form of Functional Programming as the state of the 
       program is immutable and passed as arguments.
       to the functions, and a new state is returned as the result of the calls to the functions.
-  > [<img src="assets/functional-programming.png" width="550">](assets/functional-programming.png)
+      > [<img src="assets/functional-programming.png" width="550">](assets/functional-programming.png)
 
 - All functions in the core of the application return a value and have no side effects on any other state of
   the program.
