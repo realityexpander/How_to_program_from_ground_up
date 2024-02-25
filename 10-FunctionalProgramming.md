@@ -2,7 +2,7 @@
 ###### functional-programming
   - ### BIG IDEA - Shared mutable state is a complex problem, especially for parallel processing tasks. 
 
-    > [<img src="assets/functional-chart-annotated.png" width="650">](assets/functional-chart-annotated-old.png)
+    > [<img src="assets/functional-chart-updated.png" width="650">](assets/functional-chart-updated.png)
 
   - ### The Functional style requires:
     1) Calling functions will NEVER change anything outside the function being called. 
