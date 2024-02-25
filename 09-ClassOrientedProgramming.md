@@ -1117,7 +1117,8 @@
       worked in a _particular situation_ and was not meant to be a "one-size-fits-all" solution to the myriad of problems
       attempting to apply the "procedural approach" to the "COP" paradigm.
     - The promoters (shills?) of these books and resources rarely talk about the limits of their ideas, and programmers often
-      misunderstood and misapplied the ideas and used them in places where they are not appropriate, and counterproductive. 
+      misunderstood and misapplied the ideas where they are not appropriate. Many of these became counterproductive as 
+      programmers tried to use as many patterns as possible in their code. 
   - Although some ideas in the book are useful, many of the ideas are just "generally-accepted" hacks to fit the "procedural
     approach" into the "COP" paradigm. And due to the lack of programmers needing to adapt to a different paradigm, they
     saw these "design patterns" as the "one-size-fits-all" solution to their complex problems.
