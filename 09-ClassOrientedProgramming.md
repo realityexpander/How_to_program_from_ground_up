@@ -1089,7 +1089,7 @@
   > Th.e cmplxty (The Complexity) - Jonathan Crossland
   > - https://www.youtube.com/watch?v=SVyaKFOxZlU
 
-## More Thoughts on Class Oriented Programming & Design <a name="some-thoughts-on-object-oriented-programming"></a>
+## More Thoughts on Class Oriented Programming & Software Design <a name="some-thoughts-on-object-oriented-programming"></a>
   > - Kevlin Henney - Object? You Keep Using that Word - Trójmiasto JUG [30.05.2016]
   >   - https://www.youtube.com/watch?v=IA-RyzKE7oc
   > - What the BDUF (Big-Design Up-Front) - Jonathan Crossland
