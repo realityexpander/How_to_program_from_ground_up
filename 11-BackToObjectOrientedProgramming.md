@@ -10,7 +10,7 @@
     > - Alan Kay at OOPSLA 1997 - The computer revolution hasn't happened yet
     >   - https://www.youtube.com/watch?v=oKg1hTOQXoY
     >> ### Alan Kay:
-    >> - **"I'm sorry that I long ago coined the term “objects” for this topic because it gets many people to focus on the lesser idea."** 
+    >> - ### **"I'm sorry that I long ago coined the term “objects” for this topic because it gets many people to focus on the lesser idea."** 
     >> - The big idea is “messaging.” 
     >> - The key in making great and growable systems is much more to have things communicate through _messages_ and not through direct mutable state.
     
