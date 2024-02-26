@@ -71,10 +71,14 @@
  - ### Specific COP-like "Design Patterns" are *NOT* permitted in BOOP, such as:
    - Factory Pattern
    - Abstract Factory Pattern
-   - Adapter Pattern is strongly discouraged, and prefer composition over inheritance.
-   - Facade, Bridge, Proxy and Decorator Patterns are all very similar to the Adapter Pattern and are discouraged.
+   - Adapter Pattern is OK in when used as encapsulation, as BOOP prefers composition over inheritance.
+   - Facade, Bridge, Proxy and Decorator Patterns are all very similar to the Adapter Pattern and conditionally accepted in BOOP.
    - Builder Pattern considered too clumsy, the "Fluent" pattern is preferred 
      - "Fluent Pattern" is where an `object` is modified and returned to the caller to allow for "method chaining."
+     - Builder pattern is discouraged since it encourages us to create and use big, complex objects. 
+     - If you need a builder, there is already something wrong in your code. 
+     - Refactor it so any object is easy to create through its constructors.
+     - "Default parameters" make builders obsolete in Kotlin.
    - Type-casting is frowned upon, and prefer the use of interfaces or composition as type-casting was only necessary 
      for COP style implementations. 
 
