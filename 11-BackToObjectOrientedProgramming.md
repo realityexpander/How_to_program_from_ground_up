@@ -90,7 +90,7 @@
      > - Patterns, Anti-Patterns, and Refactoring - Yegor Bugayenko
      >   - https://www.youtube.com/watch?v=LrTBIcFhawI
  
- - ### Other BOOP disallowed patterns common in COP:
+ - ### Other BOOP Disallowed Patterns That Are Common In COP:
    - Use of `null`-s to define the state of the object.
    - Use of `static` methods and variables.
    - `Get`-ters and `Set`-ters.
@@ -291,6 +291,8 @@
     
     ```
     > Live Code Example: [BOOP example](src/main/kotlin/boopExample.kt)
+    
+    > BOOP Ktor Back-end example code style guide: [Ktor Example](https://github.com/realityexpander/ktor-web-app-server/blob/main/src/main/kotlin/LIBRARY_README.md) 
 
 ## More On Software Design <a name="more-on-software-design"></a>
   - Software design is a human activity and reveals the errrors in conceptualizing our representation of the problem.
