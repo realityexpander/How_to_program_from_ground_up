@@ -1,3 +1,5 @@
+// Kotlin program to show how to use higher-order functions and lambdas to avoid side effects.
+
 fun main() {
 	val addFun = { x: Int, y: Int -> x + y }  // <-- a lambda that takes 2 integers and returns the sum of the integers.
 	val multiplyFun = { x: Int, y: Int -> x * y }  // <-- a lambda that takes 2 integers and returns the product of the integers.
