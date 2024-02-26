@@ -244,15 +244,10 @@
     ```mermaid
        flowchart TB
     
-       PersonManager -- "
+       PersonManager -.-> |"
           1. Only changes data in `Person` objects
           ✍️ only writes/reads ->🧍
-          " --> Person:::Object
-       PersonManager -- "
-          2. Only changes data in `Person` objects
-          ✍️ only writes/reads ->🧍
-          " --> Person2:::Object 
-      
+          "| Person2:::Object 
       
        subgraph Person["Object “Person”  🧍@CAFE882A"]
           personObjectAgeInt["int age = 3"]:::Object
@@ -284,8 +279,12 @@
              ✍️"}}:::Object
           
           HasNoData["NO DATA HERE"]
-       end
+       end 
     
+        PersonManager -.->|"
+           2. Only changes data in `Person` objects
+           ✍️ only writes/reads ->🧍
+           "| Person:::Object
     
        style PersonManager fill:#444, stroke:#FFF, stroke-width:1px, color:#FFF, stroke-dasharray: 5 5 
        classDef Object fill:#55F, stroke:#FFF, stroke-width:3px, color:#fff
@@ -1092,10 +1091,16 @@
 ## More Thoughts on Class Oriented Programming & Software Design <a name="some-thoughts-on-object-oriented-programming"></a>
   > - Kevlin Henney - Object? You Keep Using that Word - Trójmiasto JUG [30.05.2016]
   >   - https://www.youtube.com/watch?v=IA-RyzKE7oc
-  > - What the BDUF (Big-Design Up-Front) - Jonathan Crossland
-  >   - https://www.youtube.com/watch?v=Z-9wXpfVjac
   > - Naming things in Code - CodeAesthetic
   >   - https://www.youtube.com/watch?v=-J3wNP6u5YU
+  
+  > [<img src="assets/BDUF.png" width="450">](assets/BDUF.png)
+  >
+  > [<img src="assets/BDUF2.png" width="450">](assets/BDUF2.png)
+  >
+  > [<img src="assets/trash-driven-dev.png" width="450">](assets/trash-driven-dev.png) (ie: Trash Driven Development, throw it away and start over.)
+  > - What the BDUF (Big-Design Up-Front) - Jonathan Crossland
+  >   - https://www.youtube.com/watch?v=Z-9wXpfVjac
 
 ## Software "Design Patterns" (not associated with the Art, Architectural, Fashion or any other kind of Design Pattern set of ideas) <a name="design-patterns"></a>
 ###### design-patterns

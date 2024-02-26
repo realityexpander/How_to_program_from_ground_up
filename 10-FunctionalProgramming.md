@@ -50,22 +50,27 @@
 ###### immutability-no-side-effects
   - Mutability means something can be changed, and immutability means it cannot be changed once it's created.
     - Functional Programming style's main idea is to avoid "side effects" and "shared mutable state" of the program.
-    - One way is to is to make the state of the program unchangeable. Changes can only be made by creating a new state
-      based on the a copy of the old state, and then returning the new state as the result of a function.
+    - One way is to is to make the state of the program read-only. 
+    - Changes can only be made by calling a function to create a new state based on the a copy of the old state, 
+      and then returning the new program state as the result.
     - The BOOP ("Back-to Object Oriented Programming") style is a form of Functional Programming as the state of the 
       program is immutable and passed as arguments.
       to the functions, and a new state is returned as the result of the calls to the functions.
       > [<img src="assets/functional-programming.png" width="550">](assets/functional-programming.png)
 
-- All functions in the core of the application return a value and have no side effects on any other state of
-  the program.
 - It's more of a style of programming than a paradigm as it can be used in any language, but it's most effective
   in languages that are designed to be functional from the ground up.
 - New states of the program can be created by passing in the state of the program as arguments to program functions,
   and a new state is returned as the result of the calls to the functions.
 - This makes the program easier to understand and maintain, and allows for parallel ("concurrent") programming
   to be done far more easily.
-- Immutability eliminates whole classes of bugs that are caused by side effects that plague COP-style programs.
+  
+  > ### ❤️😍💓 _Immutability eliminates whole classes of bugs that are caused by side effects that plague COP-style programs._
+  >
+  > #### Remember the banking example from the Procedural Programming section?
+  > - Where the bank computer manager talks about only making copies of the data and not changing the original data?
+  > - https://youtu.be/fAselhq0Q8g?si=3t_GnlWiybu3Bvg6&t=1032
+
 - Functions are "first-class citizens" and can be passed as arguments to other functions, just like normal variables and objects
     - This allows customization of functions by passing in another function as an argument to be used in processing.
     - This allows the functions to be "composed" together to create new functions from existing functions
@@ -74,9 +79,10 @@
     - It's all just functions!
 - Examples of functional languages are "Lisp", "Clojure" and "Javascript" and "Kotlin"
 
-### Code Example with Side Effects (Kotlin):
+### Code Example demonstrating Side Effects (Kotlin):
   - ###### sideEffectsExample
   ```Kotlin
+  // Kotlin code to demonstrate side effects, pedantically.
   fun main() {
      var x = 0 // <-- Defines a variable that will be "affected" or "mutated" by the lambda.
      val add = { a: Int, b: Int -> // <-- Defines a lambda that takes two Ints and returns an Int.
