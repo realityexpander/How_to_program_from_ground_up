@@ -5,19 +5,19 @@
     > [<img src="assets/functional-chart-updated.png" width="650">](assets/functional-chart-updated.png)
 
   - ### The Functional style requires:
-    1) Calling functions will NEVER change anything outside the function being called.
+    1) #### Calling functions will NEVER change anything outside the function being called.
        - ie: "pure functions," 
        - "no side effects," 
        - "side-effect free,"
        - "no shared mutable state."
     
-       - ### All these phrases mean "A 'function' that doesn't change anything outside of it's scope."
+       - ### All these phrases mean "A function that doesn't change any program state outside of it's own scope."
     
        - _They don't seem to count the "program counter" or "stack pointer" as "state" though..._
        - They mean the "state" of the program's data, not necessarily the "state" of the program's execution.
        ####
     
-    2) Functions passed in with the same values will ALWAYS return the same value as a result.
+    2) #### Functions passed in with the same values will ALWAYS return the same value as a result.
        - ie: "deterministic", 
        - "referentially transparent", 
        - "idempotent," 
@@ -25,9 +25,9 @@
        - "pure,"
        - "no shared mutable state."
          
-       - ### All these phrases mean "A 'function' that doesn't change anything outside of it's scope."
+       - ### All these phrases mean "A function that doesn't change anything outside of it's own scope, and always returns the same result for the same input."
     
-    3) Functions can be passed as arguments to other functions.
+    3) #### Functions can be passed as arguments to other functions.
        - ie: "higher-order functions," 
        - "lambdas", 
        - "closures",
@@ -35,7 +35,7 @@
        - "anonymous functions", 
        - "function literals."
          
-       - ### All these mean "functions can be passed as arguments to other functions."
+       - ### All these mean "functions can be passed as arguments to other functions, just like any other variable."
        
     > ## ⚠️ EXCESSIVE WORD-INVENTION-FOR-THE-SAME-DEFINITION ALERT!!!
     >  > SEE WHAT I MEAN WITH ALL THE NAMES FOR THE SAME THING? 😐🤪🤨😳😒?
