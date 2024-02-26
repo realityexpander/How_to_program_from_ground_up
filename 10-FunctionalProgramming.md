@@ -146,7 +146,9 @@
 flowchart TB
 
 note["The function call chain 
-for the Functional Example program."]
+for the Functional Example program.
+◇❖◇
+"]
 
 start((("🟠 1. Start here"))) ==> Z
 
