@@ -132,7 +132,7 @@ This document is a reference and follow along guide for my video series on YouTu
   - [Paradigms](13-Conclusion.md#paradigms-are-just-different-styles-to-structure-and-organize-software) 
   - [Programming is Always a Human Activity](13-Conclusion.md#programming-will-always-be-a-human-activity---ai-cannot-solve-everything-and-requires-human-guidance)
   - [You can only learn programming by actually programming](13-Conclusion.md#you-can-only-learn-programming-by-actually-programming)
-  - [Computer Langauge Influence Map](13-Conclusion.md#history-graph-of-selected-programming-languages-referenced-in-this-document) 
+  - [Computer Language Inheritance and Influence Map](13-Conclusion.md#history-graph-of-selected-programming-languages-referenced-in-this-document) 
 
 ## Introduction
   - This is a "how-to" guide for anyone interested in creating software who needs an overview of techniques and concepts 
