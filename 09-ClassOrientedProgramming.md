@@ -1094,11 +1094,12 @@
   > - Naming things in Code - CodeAesthetic
   >   - https://www.youtube.com/watch?v=-J3wNP6u5YU
   
-  > [<img src="assets/BDUF.png" width="450">](assets/BDUF.png)
+  > [<img src="assets/BDUF.png" width="400">](assets/BDUF.png)
+  > [<img src="assets/trash-driven-dev.png" width="400">](assets/trash-driven-dev.png) 
+  > [<img src="assets/BDUF2.png" width="550">](assets/BDUF2.png)
   >
-  > [<img src="assets/BDUF2.png" width="450">](assets/BDUF2.png)
+  >   - ie: Trash Driven Development, plan on throwing it away and start over at least twice.
   >
-  > [<img src="assets/trash-driven-dev.png" width="450">](assets/trash-driven-dev.png) (ie: Trash Driven Development, throw it away and start over.)
   > - What the BDUF (Big-Design Up-Front) - Jonathan Crossland
   >   - https://www.youtube.com/watch?v=Z-9wXpfVjac
 
