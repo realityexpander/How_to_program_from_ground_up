@@ -176,6 +176,7 @@
   - ### Agile
     - Great start, good and useful concepts, but... 
     - Widely misunderstood, misapplied, and soon co-opted into "Agile©®™ Certification©®™ Business."
+      > [<img src="assets/agile-tm-r-c.png" width="350"/>](assets/agile-tm-r-c.png)
       > - Agile Architecture Part 1 - Allen Holub
       >   - https://www.youtube.com/watch?v=0kRCFVGpX7k&t=155s  
       > - Kevlin Henney — The Case for Technical Excellence
@@ -221,6 +222,14 @@
            
         - #### While we value the items on the right, we value the items on the left more.
       
+      - ### We Live Inside Our Experiences and Beliefs, Which Build Our Reality
+        > [<img src="assets/pyramid_of_results.png" width="650"/>](assets/pyramid_of_results.png)
+          [<img src="assets/new_compassionate_dev.png" width="650"/>](assets/new_compassionate_dev.png)
+          [<img src="assets/motivational_debt.png" width="350"/>](assets/motivational_debt.png)
+          [<img src="assets/break_thrus.png" width="350"/>](assets/break_thrus.png)
+          [<img src="assets/computer_speed_miscommunicate.png" width="350"/>](assets/computer_speed_miscommunicate.png)
+          [<img src="assets/programs_for_people.png" width="350"/>](assets/programs_for_people.png)
+
       - ### The fundamental idea of Agile is "RESPONDING to CHANGE."  
         - How can we make software development more flexible and faster to respond to changes and refinements in the
           requirements of software?
