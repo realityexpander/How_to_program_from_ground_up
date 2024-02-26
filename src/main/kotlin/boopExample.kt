@@ -1,9 +1,13 @@
 // BOOP Programming Example (Back-to Object Oriented Programming, Alan Kay's original vision of OOP)
 
+interface CanView {
+	fun view()
+}
+
 final class Page(  // <-- the "Page" class constructor, the "val" keyword means the variable is immutable.
 	private val content: String // <-- content is only accessible by calling the `inspectContent` method.
-) {
-	fun view() {
+): CanView {
+	override fun view() {
 		println("Page: ${inspectContent()}")
 	}
 
@@ -19,8 +23,8 @@ final class Page(  // <-- the "Page" class constructor, the "val" keyword means 
 final class Book(
 	val title: String,  // <-- Its OK to access the title directly, as it's primitive, immutable and cannot be modified.
 	private val pages: List<Page>
-) {
-	fun view() {
+): CanView {
+	override fun view() {
 		println("Book: $title, # of Pages: ${pages.size}")
 		pages.forEach { it.view() }  // <-- The "forEach" method is a higher order function that takes a lambda function
                                    // `it` refers to the current element in the list, the `page` object.
@@ -37,8 +41,8 @@ final class Book(
 
 final class Application(
 	val book: Book  // <-- The "Application" class, the "val" keyword means the variable is immutable.
-) {
-	fun view() {
+): CanView {
+	override fun view() {
 		println("Application Viewing: ${book.title}")
 		book.view()
 	}
