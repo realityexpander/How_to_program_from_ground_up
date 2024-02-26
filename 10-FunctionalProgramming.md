@@ -1,4 +1,4 @@
-# Functional Programming 1950s-Present (FP) <a name="FunctionalProgramming"></a>
+# Functional Programming (FP) 1950s-Present <a name="FunctionalProgramming"></a>
 ###### functional-programming
   - ### BIG IDEA - Shared mutable state is a complex problem, especially for parallel processing tasks. 
 
