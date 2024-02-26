@@ -14,9 +14,9 @@
     >> - The big idea is “messaging.” 
     >> - The key in making great and growable systems is much more to have things communicate through _messages_ and not through direct mutable state.
     
-  - ### BOOP style takes the message metaphor to mean that the state of the program is immutable except by sending a message to create a new state.
+  - ### BOOP style takes the "message" metaphor to mean that the state of the program is immutable except by sending a message to an object to create a new state.
     - The `object` state can only changed by creating a new state via modifying the old state by calling `public` 
-      method on objects.
+      methods on objects.
     - The state of the `object` is `private` and only accessible via methods that are called on the object.
   
       > - Alan Kay, 2015: Power of Simplicity
@@ -35,17 +35,18 @@
     change its state. This "messaging" metaphor stands up because internal state is not directly accessible. You
     must politely ask the object to change its state, and the object can choose to respond to the message or not.
     Unlike in COP where internal state is routinely exposed and directly manipulated via `static` methods and variables.
-  - Any state of the object is exposed only via "messages", or method calls on the object, and the object can choose to respond to
-    the message or not.
-  - No `static` methods or variables, only instance variables that are private to the `object`.
-    - Use of `static` methods and variables is specifically disallowed as it leads to "shared mutable state" and
-      "side effects" that are difficult to maintain and understand.
+  - State of the object is exposed only via "messages" (method calls to the objects `public` methods,) and the object 
+    can _choose_ to respond to the message or not.
+  - No `static` methods or variables, only `private` instance variables inside the `object`.
+    - Use of `static` methods and variables is specifically disallowed as it leads to dreaded "shared mutable state" and
+      "side effects" that are difficult to maintain and understand as program complexity grows.
       > Objects vs. Static Methods - Yegor Bugayenko
       >   - https://www.youtube.com/watch?v=D0dqC_3Bch8
+  
   - `protected` methods are allowed, but discouraged as they lead to "fragile" and "rigid" code.
   - Use of inheritance is explicitly discouraged, and prefer composition over inheritance. Exceptions for shallow
     hierarchies of 2-3 levels maximum meant to model the real world objects, not to create a "hierarchy of types."
-  - Use of interfaces is limited to Classes that require testing, and are not automatically added for every class.
+  - Use of `interface`-s is limited to Classes that require testing, and are not automatically added for every class.
   - Use of `setters` and `getters` is specifically disallowed. Instead, the object is expected to respond to messages to change its
     state, and to respond to messages to reveal (transfer) its state.
    
