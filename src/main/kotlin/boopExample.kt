@@ -90,11 +90,11 @@ fun main() {
 		)
 	)
 	app.view()  // <-- will print the same as the imperative style:
-					// Application Viewing: MyBook.txt
-					// Book: MyBook.txt, # of Pages: 3
-					// Page: Page 1 Content
-					// Page: Page 2 Content
-					// Page: Page 3 Content
+					//	Application Viewing: MyBookTitle.txt
+					//	Book: MyBookTitle.txt, # of Pages: 3
+					//	Page: Page 1 Content
+					//	Page: Page 2 Content
+					//	Page: Page 3 Content
 
 	// app.book = Book("UpdatedBook.txt", emptyList())  // <-- will not compile, as the variable `book` is immutable
 	                                                    //     and cannot be modified. It can only be replaced.
@@ -120,12 +120,13 @@ fun main() {
          .updatePages(newPages)  // <-- Creates a new book with the updated pages and the same title.
    )
 
+	println()  // <-- prints an empty line to separate the two views.
 	app.view()  // <-- will print:
-	// Application Viewing: UpdatedBook.txt
-	// Book: UpdatedBook.txt, # of Pages: 3
-	// Page: Page 1 Content
-	// Page: Page 3 Content
-	// Page: New Page 4 Content
+	//	Application Viewing: UpdatedBookTitle.txt
+   //	Book: UpdatedBookTitle.txt, # of Pages: 3
+   //	Page: Page 1 Content
+   //	Page: Page 3 Content
+   //	Page: New Page 4 Content
 }
 
 // Output:
@@ -134,6 +135,7 @@ fun main() {
 //	Page: Page 1 Content
 //	Page: Page 2 Content
 //	Page: Page 3 Content
+//
 //	Application Viewing: UpdatedBookTitle.txt
 //	Book: UpdatedBookTitle.txt, # of Pages: 3
 //	Page: Page 1 Content
