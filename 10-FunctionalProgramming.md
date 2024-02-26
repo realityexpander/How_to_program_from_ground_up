@@ -7,7 +7,7 @@
   - ### The Functional style requires:
     1) Calling functions will NEVER change anything outside the function being called.
        - ie: "pure functions," 
-       - "no side effects", 
+       - "no side effects," 
        - "side-effect free,"
        - "no shared mutable state."
     
@@ -28,10 +28,10 @@
        - ### All these phrases mean "A 'function' that doesn't change anything outside of it's scope."
     
     3) Functions can be passed as arguments to other functions.
-       - ie: "higher-order functions", 
+       - ie: "higher-order functions," 
        - "lambdas", 
        - "closures",
-       - "first-class citizen functions", 
+       - "first-class citizen functions," 
        - "anonymous functions", 
        - "function literals."
          
