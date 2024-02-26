@@ -80,7 +80,7 @@
 - Examples of functional languages are "Lisp", "Clojure" and "Javascript" and "Kotlin"
 
 ### Code Example demonstrating Side Effects (Kotlin):
-  - ###### sideEffectsExample
+###### sideEffectsExample
   ```Kotlin
   // Kotlin code to demonstrate side effects, pedantically.
   fun main() {
@@ -106,7 +106,7 @@
   > Live Code Example: [Side Effects Example](src/main/kotlin/sideEffectsExample.kt)
 
 ### Code Example of Functional style (Kotlin):
-    - ###### functionalExample
+###### functionalExample
   ```Kotlin
   fun main() {
      val addFunc = { x: Int, y: Int -> x + y }  // <-- Defines a lambda that takes 2 integers and returns the sum of the integers.
@@ -141,7 +141,7 @@
   ```
   > Live Code Example: [Functional Example](src/main/kotlin/functionalExample.kt)
 
-### Function Evaluation Sequence <a name="functional-call-chain"></a>
+## Function Evaluation Sequence <a name="functional-call-chain"></a>
 ```mermaid
 flowchart TB
 
@@ -156,7 +156,7 @@ X[" `first` points to `add` function "] ==>|"🟡 3. Calls function with x= 10, 
    ⌺"}}
 Y[" `second` points to `multiplyFunc`"] ==>|"🔴 5. Calls function with x=12, y=2"| multiplyFn{{" 
    func multiply(…) @48C6CE7B = 
-   ❌ { x,y -> return x*y }
+   ╳ { x,y -> return x*y }
    ⌺"}}
 Z["val result = firstThenSecond(addFunc, multiplyFunc, 10, 2)"] ==>|"🔵 2. Calls function with params"| firstThenSecondFunc{{" 
    func firstThenSecond(…) @A8C6CE7B =
@@ -183,7 +183,7 @@ flowchart LR
       ⌺"}}
    Y["val `multiplyFunc` = @48C6CE7B"] ==>|"🔵 2. Stores pointer to function"| multiplyFn{{" 
       func multiply(…) @48C6CE7B = 
-      ❌ { x,y -> return x*y }
+      ╳ { x,y -> return x*y }
       ⌺"}}
    Z["val `firstThenSecond` = @A8C6CE7B"] ==>|"🔵 3. Stores pointer to function"| firstThenSecondFunc{{" 
       func firstThenSecond(…) @A8C6CE7B =
@@ -199,10 +199,10 @@ flowchart LR
      D("Evaluate ⏩ firstThenSecond(…)_= second(first(a,b), b)") ==>|"🔵 5. Calls"| first
      subgraph firstThenSecond[" 🔵 6. firstThenSecond(…) internal calls..."]
         first("🟡 7. Calls `first`(…) = `✚ addFunc(a,b)`")==>|"🔵 8. Returns result into `second` function's `a`"| second
-        second("🔴 9. Calls `second`(…) = `❌ multiplyFunc(a,b)`") ==>|"🔵 10. Returns result"| resultInner
+        second("🔴 9. Calls `second`(…) = `╳ multiplyFunc(a,b)`") ==>|"🔵 10. Returns result"| resultInner
         
         %% Show where return to firstThenSecond
-        %% second("calls second(…) = `❌ multiplyFunc(a,b)`") ==>|🔵 6. returns result| D
+        %% second("calls second(…) = `╳ multiplyFunc(a,b)`") ==>|🔵 6. returns result| D
      end
    end
    E("Stores returned result in variable `result`") ==>|"🔵 11. Variable `result` passed to"| F
@@ -216,12 +216,13 @@ flowchart LR
  
 ```
 
-  > ## Side Quest on "Declarative" Programming
-  > - Notice that many of the diagrams in this document are written in a language that uses pure "declarative" style programming.
-  > - The charts are using a declarative language called "Mermaid" to create many kinds of diagrams using only text code.
+# Side Quest on "Declarative" Programming
+  > - Notice that many of the diagrams in this document are written in a language that uses "declarative" style programming.
+  > - Mermaid is a "Domain Specific Language" (DSL) used to create the diagrams in a declarative style using only human-readable text code.
   > - This allows for more flexible and maintainable diagrams that can be created and maintained in a text file opposed to using a graphics editor.
   > - Allows to be rendered in many different formats, including SVG, PNG, and PDF, and is responsive to different screen sizes.
-  > - Mermaid is a "Domain Specific Language" (DSL) that is used to create diagrams in a "declarative" style.
+  > - ### I can change the diagram layout and style by changing the code, and the diagram will update automatically, avoiding the need to manually redraw the diagram in a graphics editor.
+  > 
   >   - [https://mermaid.js.org/](https://mermaid.js.org/intro/)
   >> ### More on Declarative Programming:
   >> - 'Declarative Thinking, Declarative Practice' - Kevlin Henney [ ACCU 2016 ]
