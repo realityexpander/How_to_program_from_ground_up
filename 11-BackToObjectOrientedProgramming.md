@@ -15,7 +15,7 @@
     >> - The big idea is “messaging.” 
     >> - The key in making great and growable systems is much more to have things communicate through _messages_ and not through direct mutable state.
     
-  - ### BOOP style takes the "message" metaphor to mean that the state of the program is immutable except by sending a message to an object to create a new state.
+  - ### BOOP style takes the "message" metaphor to mean that the state of the program is immutable except by sending messages to an program objects in order to create a new state.
     - The `object` state can only changed by creating a new state via modifying the old state by calling `public` 
       methods on objects.
     - The state of the `object` is `private` and only accessible via methods that are called on the object.
