@@ -17,7 +17,7 @@
   - ### BOOP style takes the message metaphor to mean that the state of the program is immutable except by sending a message to create a new state.
     - The `object` state can only changed by creating a new state via modifying the old state by calling `public` 
       method on objects.
-    - All state of the `object` is `private` and only accessible via methods that are called on the object.
+    - The state of the `object` is `private` and only accessible via methods that are called on the object.
   
       > - Alan Kay, 2015: Power of Simplicity
       >   - https://www.youtube.com/watch?v=NdSD07U5uBs
@@ -66,7 +66,7 @@
    > - [Yegor Bugayenko, Author of Elegant Objects](https://www.yegor256.com/about-me.html)
    > - BOOP is my name for the style of programming that Yegor Bugayenko describes in his book "Elegant Objects."
    > - What's Wrong With Object-Oriented Programming? Yegor Bugayenko
-   >   - https://www.youtube.com/watch?v=K_QEOtYVQ7A
+   >   - https://www.youtube.com/watch?v=GMrjuuczZkQ
   
  - ### Specific COP-like "Design Patterns" are *NOT* permitted in BOOP, such as:
    - Factory Pattern
