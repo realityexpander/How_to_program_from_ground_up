@@ -176,7 +176,7 @@
   - ### Agile
     - Great start, good and useful concepts, but... 
     - Widely misunderstood, misapplied, and soon co-opted into "Agile©®™ Certification©®™ Business."
-      > [<img src="assets/agile-tm-r-c.png" width="350"/>](assets/agile-tm-r-c.png)
+      > [<img src="assets/agile-tm-r-c.png" width="550"/>](assets/agile-tm-r-c.png)
       > - Agile Architecture Part 1 - Allen Holub
       >   - https://www.youtube.com/watch?v=0kRCFVGpX7k&t=155s  
       > - Kevlin Henney — The Case for Technical Excellence
