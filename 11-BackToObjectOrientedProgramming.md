@@ -46,8 +46,8 @@
   - `protected` methods are allowed, but discouraged as they lead to "fragile" and "rigid" code.
   - Use of inheritance is explicitly discouraged, and prefer composition over inheritance. Exceptions for shallow
     hierarchies of 2-3 levels maximum meant to model the real world objects, not to create a "hierarchy of types."
-  - Use of `interface`-s is limited to Classes that require testing, and are not automatically added for every class.
-  - Use of `setters` and `getters` is specifically disallowed. Instead, the object is expected to respond to messages to change its
+  - Use of `interface`-s is limited to `class`-es that require individual testing, and are not automatically added for every `class` without thinking.
+  - Use of `set`-ters and `get`-ters is specifically disallowed. Instead, the object is expected to respond to messages to change its
     state, and to respond to messages to reveal (transfer) its state.
    
   - There are only a few true BOOP languages, "Smalltalk," "Ruby," and, _incredibly_, "Javascript" are among the most popular ones.
