@@ -1,6 +1,6 @@
 // BOOP Programming Example (Back-to Object Oriented Programming, Alan Kay's original vision of OOP)
 
-class Page(  // <-- the "Page" class constructor, the "val" keyword means the variable is immutable.
+final class Page(  // <-- the "Page" class constructor, the "val" keyword means the variable is immutable.
 	private val content: String // <-- content is only accessible by calling the `inspectContent` method.
 ) {
 	fun view() {
@@ -16,7 +16,7 @@ class Page(  // <-- the "Page" class constructor, the "val" keyword means the va
 	}
 }
 
-class Book(
+final class Book(
 	val title: String,  // <-- Its OK to access the title directly, as it's primitive, immutable and cannot be modified.
 	private val pages: List<Page>
 ) {
@@ -35,7 +35,7 @@ class Book(
 	}
 }
 
-class Application(
+final class Application(
 	val book: Book  // <-- The "Application" class, the "val" keyword means the variable is immutable.
 ) {
 	fun view() {
@@ -81,7 +81,7 @@ fun main() {
 	// Setup the App in Functional Style:
 	app = Application(
 		Book(
-			title = "MyBook.txt",
+			title = "MyBookTitle.txt",
 			pages = listOf(
 				Page("Page 1 Content"),
 				Page("Page 2 Content"),
@@ -116,7 +116,7 @@ fun main() {
 
    app = app.updateBook(
       app.book // <-- Using the `book` from the current state of the application.
-         .updateTitle("UpdatedBook.txt") // <-- Creates a new book with the updated name and the same pages.
+         .updateTitle("UpdatedBookTitle.txt") // <-- Creates a new book with the updated name and the same pages.
          .updatePages(newPages)  // <-- Creates a new book with the updated pages and the same title.
    )
 
@@ -129,13 +129,13 @@ fun main() {
 }
 
 // Output:
-//	Application Viewing: MyBook.txt
-//	Book: MyBook.txt, # of Pages: 3
+//	Application Viewing: MyBookTitle.txt
+//	Book: MyBookTitle.txt, # of Pages: 3
 //	Page: Page 1 Content
 //	Page: Page 2 Content
 //	Page: Page 3 Content
-//	Application Viewing: UpdatedBook.txt
-//	Book: UpdatedBook.txt, # of Pages: 3
+//	Application Viewing: UpdatedBookTitle.txt
+//	Book: UpdatedBookTitle.txt, # of Pages: 3
 //	Page: Page 1 Content
 //	Page: Page 3 Content
 //	Page: New Page 4 Content
