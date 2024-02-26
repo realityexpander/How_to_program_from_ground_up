@@ -90,11 +90,11 @@
      > - Patterns, Anti-Patterns, and Refactoring - Yegor Bugayenko
      >   - https://www.youtube.com/watch?v=LrTBIcFhawI
  
- - ### Other disallowed patterns common in COP:
-   - Use of `null`
-   - Use of `static` methods and variables
-   - `Get`-ters and `Set`-ters
-   - Reflection & Type Casting
+ - ### Other BOOp disallowed patterns common in COP:
+   - Use of `null`-s to define the state of the object.
+   - Use of `static` methods and variables.
+   - `Get`-ters and `Set`-ters.
+   - Reflection & Type Casting.
    - Inheritance more than 2-3 levels deep. Prefer no inheritance and use composition instead.
    - Mutable State - All state in BOOP is immutable, and the object is expected to return a new object with the new state.
    - Classes ending with -er that mutate data passed in without retaining state internal to the object.

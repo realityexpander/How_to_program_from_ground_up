@@ -73,9 +73,9 @@
   > - Where the bank computer manager talks about only making copies of the data and not changing the original data?
   > - https://youtu.be/fAselhq0Q8g?si=3t_GnlWiybu3Bvg6&t=1032
 
-- Functions are "first-class citizens" and can be passed as arguments to other functions, just like normal variables and objects
+- Functions are "first-class citizens" and can be passed as arguments to other functions, just like normal variables and objects.
     - This allows customization of functions by passing in another function as an argument to be used in processing.
-    - This allows the functions to be "composed" together to create new functions from existing functions
+    - This allows the functions to be "composed" together to create new functions from existing functions.
     - These functions are called "lambdas," "closures," "anonymous functions" or "function literals,"
       and "higher-order functions" all interchangeably. 
     - It's all just functions!
