@@ -9,6 +9,7 @@ private const val NUMBER_OF_CYCLES = 100 // may need 200 to guarantee the proble
 
 fun main() {
 	coroutineWithUpdateProblem()
+
 	fixedCoroutineUpdateProblemWithAtomicUpdates()
 }
 

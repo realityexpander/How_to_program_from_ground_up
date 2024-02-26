@@ -3,6 +3,8 @@ import java.util.concurrent.atomic.AtomicInteger
 import kotlin.time.Duration.Companion.milliseconds
 import kotlin.time.ExperimentalTime
 
+const val numParallelTasks = 100_000
+
 fun main() {
 	runBlocking { // <-- `runBlocking` creates a coroutine context and runs the code inside it.
 		threadVsCoroutinesPerformanceDifference()
@@ -13,9 +15,9 @@ fun main() {
 @OptIn(DelicateCoroutinesApi::class, ExperimentalTime::class)
 suspend fun threadVsCoroutinesPerformanceDifference() {  // <-- `suspend` keyword means this function can be called from a coroutine.
 	val counter = AtomicInteger(0)
-	val numParallelTasks = 100_000
 
 	println("\nThread vs Coroutines Performance Difference:")
+	println("----------------------------------------------")
 
 	// Using coroutines
 	println("Coroutines running...")
@@ -46,7 +48,7 @@ suspend fun threadVsCoroutinesPerformanceDifference() {  // <-- `suspend` keywor
 	startTime = System.currentTimeMillis()
 	threadList.forEach(Thread::start)  // <-- `start` starts running the task in a new thread.
 	threadList.forEach(Thread::join) // <-- `join` waits for the thread to finish.
-	println("\nThreads result: ${counter.get()}")
+	println("Threads result: ${counter.get()}")
 	println("Time taken: ${System.currentTimeMillis() - startTime}ms")
 }
 

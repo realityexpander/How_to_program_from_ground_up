@@ -90,7 +90,7 @@
      > - Patterns, Anti-Patterns, and Refactoring - Yegor Bugayenko
      >   - https://www.youtube.com/watch?v=LrTBIcFhawI
  
- - ### Other BOOP Disallowed Patterns That Are Common In COP:
+ - ### Other Common COP Disallowed Patterns:
    - Use of `null`-s to define the state of the object.
    - Use of `static` methods and variables.
    - `Get`-ters and `Set`-ters.
@@ -106,11 +106,11 @@
   - The main problem with COP is that it's common practices lead to fragile code that was difficult to maintain and
     understand, for similar reasons as to why "Spaghetti Code" is difficult to maintain and understand.
   
-  > The Pain of OOP, Lecture #3: Getters and naked data - Yegor Bugayenko
-  > - https://www.youtube.com/watch?v=2YyVmIQQ23w
-
-  > The Pain of OOP, Lecture #5: -ER Suffix is Evil - Yegor Bugayenko
-  > - https://www.youtube.com/watch?v=6GMiosTLUTc 
+    > The Pain of OOP, Lecture #3: Getters and naked data - Yegor Bugayenko
+    > - https://www.youtube.com/watch?v=2YyVmIQQ23w
+    
+    > The Pain of OOP, Lecture #5: -ER Suffix is Evil - Yegor Bugayenko
+    > - https://www.youtube.com/watch?v=6GMiosTLUTc 
   
   - Example of BOOP in Kotlin:
   
