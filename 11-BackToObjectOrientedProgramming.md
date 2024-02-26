@@ -79,6 +79,9 @@
      - If you need a builder, there is already something wrong in your code. 
      - Refactor it so any object is easy to create through its constructors.
      - "Default parameters" make builders obsolete in Kotlin.
+   - "Marker" interfaces are discouraged. 
+     - An interface with no methods, like `Serializable` or `Cloneable`, is called a "marker" interface.
+     - Useful for system & library level notations, but not use in application level code.
    - Type-casting is frowned upon, and prefer the use of interfaces or composition as type-casting was only necessary 
      for COP style implementations. 
 
