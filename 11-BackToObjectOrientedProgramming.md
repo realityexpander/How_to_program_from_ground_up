@@ -99,7 +99,7 @@
    - Mutable State - All state in BOOP is immutable, and the object is expected to return a new object with the new state.
    - Classes ending with -er that mutate data passed in without retaining state internal to the object.
      - Like `Manager`, `Controller`, `Handler`, `Processor`, `Updater`, `Setter`, `Getter`, `Modifier`, `Changer`, etc.
- - Amazingly, the dreaded Singleton Pattern _is allowed_ to manage global state in BOOP, but not `static` variables or methods.
+ - Amazingly, the dreaded Singleton Pattern _is allowed_ to manage global immutable state in BOOP, but no `static` variables, functions or methods.
   
 ## Why is Class-Oriented Programming (COP) Bad? <a name="why-is-cop-bad"></a>
   - ###### why-is-cop-bad
