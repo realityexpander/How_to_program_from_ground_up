@@ -90,7 +90,7 @@
      > - Patterns, Anti-Patterns, and Refactoring - Yegor Bugayenko
      >   - https://www.youtube.com/watch?v=LrTBIcFhawI
  
- - ### Other BOOp disallowed patterns common in COP:
+ - ### Other BOOP disallowed patterns common in COP:
    - Use of `null`-s to define the state of the object.
    - Use of `static` methods and variables.
    - `Get`-ters and `Set`-ters.
