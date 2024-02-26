@@ -1,3 +1,5 @@
+// Kotlin program to pedantically demonstrate the concept of "side effects."
+
 fun main() {
 	var x = 0 // <-- Defines a variable that will be "affected" or "mutated" by the lambda.
 	val add = { a: Int, b: Int -> // <-- Defines a lambda that takes two Ints and returns an Int.
