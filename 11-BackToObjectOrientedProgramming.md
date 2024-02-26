@@ -25,7 +25,7 @@
       > - Rethinking CS Education | Alan Kay, CrossRoads 2015
       >   - https://www.youtube.com/watch?v=N9c7_8Gp7gI
       >
-      > - We Were So Lucky Alan Kay
+      > - We Were So Lucky - Alan Kay
       >   - https://www.youtube.com/watch?v=ktPCH_p80e4
       >
       > - Seminar with Alan Kay on Object Oriented Programming (VPRI 0246)
@@ -40,7 +40,7 @@
   - No `static` methods or variables, only instance variables that are private to the `object`.
     - Use of `static` methods and variables is specifically disallowed as it leads to "shared mutable state" and
       "side effects" that are difficult to maintain and understand.
-      > Objects vs. Static Methods
+      > Objects vs. Static Methods - Yegor Bugayenko
       >   - https://www.youtube.com/watch?v=D0dqC_3Bch8
   - `protected` methods are allowed, but discouraged as they lead to "fragile" and "rigid" code.
   - Use of inheritance is explicitly discouraged, and prefer composition over inheritance. Exceptions for shallow
