@@ -11,6 +11,23 @@
   - Paradigms are not dogma, and should not be followed blindly, but should be used as a guide to help
     structure and organization the program to be easiest to understand and change.
  
+## You can only learn programming by actually programming
+  - The best way to learn programming is to actually program. You can read all the books and watch all the videos
+    you want, but you will not learn programming until you actually start solving problems.
+  - Doing "code katas" and "coding challenges" are a great way to practice programming and learn new programming
+    languages and paradigms.
+  - But after you know the mechanics, the bigger challenge is to learn how to structure and organize the state and
+    behavior of the software to be easiest to understand and change.
+  - This is a life-long learning process, and how to arrange ideas and concepts to make them easier to understand
+    and change is a skill that takes time and practice to develop, and only comes with experience and practice.
+
+    > ## Stop Studying Programming
+    > - https://www.youtube.com/watch?v=QMbx0dTWJIQ
+    > 
+    > BEWARE THE TUTORIAL TAR-PIT
+    > - Always code-along with the tutorial, and change it afterwards to make sure you understand it.
+    > - If you just watch, it's going to be a waste of time.
+
 ## Programming Will Always Be a Human Activity - AI Cannot Possibly Solve Everything and Requires Human Guidance
   - Solution methods will become a bit more abstract in the future using tools like GitHub copilot, but the
     programmer will still need to know all these details to get the machine to do EXACTLY what they want it to do.
@@ -26,9 +43,6 @@
     > - Coder Takes - Golden Handcuffs & Side Hustle Dreams 
     >   - https://youtu.be/9Avfwdk8wfE 
 
-## You can only learn programming by actually programming
-  > Stop Studying Programming
-  > - https://www.youtube.com/watch?v=QMbx0dTWJIQ  
 
 ## History Graph of Selected Programming languages Referenced In This Document
   > Keynote session: The History of Programming - Mark Rendle [DevCon 2016]
