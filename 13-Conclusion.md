@@ -26,7 +26,9 @@
     > 
     > BEWARE THE TUTORIAL TAR-PIT
     > - Always code-along with the tutorial, and change it afterwards to make sure you understand it.
-    > - If you just watch, it's going to be a waste of time.
+    > - If you just watch, it **_WILL BE_** a **_COMPLETE_** waste of time, even though you _**THINK**_ you understand it.
+    > 
+    > [<img src="assets/tutorial-tar-pits.png" width="40%">](https://www.youtube.com/watch?v=QMbx0dTWJIQ)
 
 ## Programming Will Always Be a Human Activity - AI Cannot Possibly Solve Everything and Requires Human Guidance
   - Solution methods will become a bit more abstract in the future using tools like GitHub copilot, but the
