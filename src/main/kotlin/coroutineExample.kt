@@ -7,9 +7,9 @@ import kotlin.time.ExperimentalTime
 private const val NUMBER_OF_CYCLES = 100 // may need 200 to guarantee the problem will occur.
 
 fun main() {
-	coroutineWithUpdateProblem()
+	//coroutineWithUpdateProblem()
 
-	//fixedCoroutineUpdateProblemWithAtomicUpdates()
+	fixedCoroutineUpdateProblemWithAtomicUpdates()
 }
 
 @OptIn(DelicateCoroutinesApi::class, ExperimentalTime::class)
@@ -18,14 +18,14 @@ fun coroutineWithUpdateProblem() {
 
 	val job1 = GlobalScope.launch {
 		for (i in 1..NUMBER_OF_CYCLES) {
-			x++
+			x=x+1
 			println("Coroutine 1: $i, x=$x")
 			delay(10.milliseconds)
 		}
 	}
 	val job2 = GlobalScope.launch {
 		for (i in 1..NUMBER_OF_CYCLES) {
-			x++
+			x=x+1
 			println("Coroutine 2: $i, x=$x")
 			delay(10.milliseconds)
 		}
@@ -74,7 +74,9 @@ fun fixedCoroutineUpdateProblemWithAtomicUpdates() {
 
 	val job1 = GlobalScope.launch {
 		for (i in 1..NUMBER_OF_CYCLES) {
-			x.update { it + 1}
+			x.update { x ->
+				x + 1
+			}
 			println("Coroutine 1: i=$i, x=${x.value}")
 			delay(10.milliseconds)
 		}
@@ -82,7 +84,9 @@ fun fixedCoroutineUpdateProblemWithAtomicUpdates() {
 
 	val job2 = GlobalScope.launch {
 		for (i in 1..NUMBER_OF_CYCLES) {
-			x.update { it + 1}
+			x.update { x ->
+				x + 1
+			}
 			println("Coroutine 2: i=$i, x=${x.value}")
 			delay(10.milliseconds)
 		}

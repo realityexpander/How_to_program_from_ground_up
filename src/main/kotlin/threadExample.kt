@@ -3,7 +3,7 @@ private const val NUMBER_OF_CYCLES = 100
 fun main() {
 	threadsWithUpdateProblem()
 
-	//fixedThreadUpdateProblemWithAtomicUpdates()
+	fixedThreadUpdateProblemWithAtomicUpdates()
 }
 
 fun threadsWithUpdateProblem() {
@@ -65,7 +65,7 @@ fun fixedThreadUpdateProblemWithAtomicUpdates() {
 		for (i in 1..NUMBER_OF_CYCLES) {
 			synchronized(lock) {  // <-- `synchronized` tells the execution to wait here until the lock is released.
 				// the update is locked here, so the other thread can't update `x` until the current thread is done.
-				x++
+				x=x+1
 				println("Thread 1: i=$i, x=$x")
 			} // <-- The lock is released here at the end of the synchronized block.
 			Thread.sleep(10) // milliseconds
@@ -74,7 +74,7 @@ fun fixedThreadUpdateProblemWithAtomicUpdates() {
 	val thread2 = Thread {
 		for (i in 1..NUMBER_OF_CYCLES) {
 			synchronized(lock) {
-				x++
+				x=x+1
 				println("Thread 2: i=$i, x=$x")
 			}
 			Thread.sleep(10) // milliseconds
