@@ -118,7 +118,8 @@
                   🙂"}} -.->|for OOP ideas|Javascript
         Smalltalk -.->|for OOP ideas|Ruby
         Smalltalk -.->|"encapsulation
-                       messaging"|HyperTalk
+                       messaging
+                       🙂"|HyperTalk
         Basic -.-> |"for Interpreted & 
                     interactive
                     ⚡️"|Smalltalk
