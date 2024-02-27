@@ -131,10 +131,11 @@ Check out the discussion group: https://twitter.com/i/communities/17597538662190
   - [Fixing the Coroutine race condition problem using "Atomic" updates](12-ParallelProcessing.md#fixing-updates-with-coroutines)
   - [Coroutines are Much Faster Than Threads](12-ParallelProcessing.md#coroutines-vs-threads)
 - [Conclusion](13-Conclusion.md)
-  - [Paradigms](13-Conclusion.md#paradigms-are-just-different-styles-to-structure-and-organize-software) 
-  - [Programming is Always a Human Activity](13-Conclusion.md#programming-will-always-be-a-human-activity---ai-cannot-solve-everything-and-requires-human-guidance)
-  - [You can only learn programming by actually programming](13-Conclusion.md#you-can-only-learn-programming-by-actually-programming)
-  - [Computer Language Inheritance and Influence Map](13-Conclusion.md#history-graph-of-selected-programming-languages-referenced-in-this-document) 
+  - [Paradigms](13-Conclusion.md#paradigms) 
+  - [You Can Only Learn Programming By Actually Programming](13-Conclusion.md#learning_programming)
+  - [Quit Looking for Short-Cuts](13-Conclusion.md#short-cuts)
+  - [Programming is Always a Human Activity](13-Conclusion.md#programming-is-human)
+  - [Computer Language Inheritance and Influence Map](13-Conclusion.md#history-graph) 
 
 ## Introduction
   - This is a "how-to" guide for anyone interested in creating software who needs an overview of techniques and concepts 

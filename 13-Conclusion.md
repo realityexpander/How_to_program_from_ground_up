@@ -1,6 +1,7 @@
 # Conclusion
 
 ## Programming Paradigms are Just Different Styles to Structure and Organize Software
+###### paradigms
   - The different paradigms are not better or worse than each other, they are just different styles to structure the
     state and behavior of software to provide a solution.
   - Paradigms are not independent, Different paradigms can be combined to create a program that is easier to understand and maintain.
@@ -12,6 +13,7 @@
     structure and organization the program to be easiest to understand and change.
  
 ## You Can Only Learn Programming By Actually Programming
+###### learning_programming
   - The best way to learn programming that I've found is to copy physically (actual typing) other programs and change them. 
   - ### You can read all the books and watch all the videos you want, but you will not learn programming until you actually start solving problems, and seeing how other people solve them is a great start.
   - ## IT IS **_VERY IMPORTANT_**  THAT YOU TRY TO CHANGE THE CODE AFTER YOU HAVE COPIED IT. _THIS IS CRITICAL._
@@ -34,11 +36,13 @@
     > [<img src="assets/tutorial-tar-pits.png" width="40%">](https://www.youtube.com/watch?v=QMbx0dTWJIQ)
 
 # <font color="red"> QUIT LOOKING FOR SHORT-CUTS </font>
+###### short-cuts
   - The biggest problem I've seen with people trying to learn programming is that they are looking for a short-cut.
   - QUIT IT AND GET IN THERE AND START TYPING AND CHANGING CODE.
   - All developers must pay the same price to learn programming, and that price is time and effort.
 
 ## Programming Will Always Be a Human Activity - AI Cannot Possibly Solve Everything and Requires Human Guidance
+###### programming-is-human
   - Solution methods will become a bit more abstract in the future using tools like GitHub copilot, but the
     programmer will still need to know all these details to get the machine to do EXACTLY what they want it to do.
   - We are always going to need people who have various tastes and understandings about humans and the world to
@@ -55,6 +59,7 @@
 
 
 ## History Graph of Selected Programming languages Referenced In This Document
+###### history-graph
   > Keynote session: The History of Programming - Mark Rendle [DevCon 2016]
   > - https://youtu.be/Tr9E_vzKRVo
  
