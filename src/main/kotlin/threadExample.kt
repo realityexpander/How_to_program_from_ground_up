@@ -3,7 +3,7 @@ private const val NUMBER_OF_CYCLES = 100
 fun main() {
 	threadsWithUpdateProblem()
 
-	fixedThreadUpdateProblemWithAtomicUpdates()
+	//fixedThreadUpdateProblemWithAtomicUpdates()
 }
 
 fun threadsWithUpdateProblem() {
