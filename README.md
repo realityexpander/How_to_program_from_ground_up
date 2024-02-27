@@ -19,7 +19,9 @@ irrelevant due to ignorance.
 This document is a reference and follow along guide for my video series on YouTube: 
  - [YouTube Series - How to Program From The Ground Up (with Minimal BS)](https://www.youtube.com/playlist?list=PLzUxWOrVXB4QHsURai1GmmhmqAUVNbfno)
 
-## Table of Contents
+Check out the discussion group: https://github.com/realityexpander/How_to_program_from_ground_up/discussions
+
+# Table of Contents
 - [Introduction](#introduction)
 - [The Essence of Computing](02-TheEssentialQuestion-WhatAreWeComputing.md) Pre-history to Present Day
 - [Hardware](03-Hardware.md) 1700s to Present Day
