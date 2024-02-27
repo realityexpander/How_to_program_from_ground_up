@@ -19,7 +19,7 @@
   - But after you know the mechanics, the bigger challenge is to learn how to structure and organize the state and
     behavior of the software to be easiest to understand and change.
   - This is a life-long learning process, and how to arrange ideas and concepts to make them easier to understand
-    and change is a skill that takes time and practice to develop, and only comes with experience and practice.
+    and change is a skill that takes time and practice to develop, and only comes with experience and some luck.
 
     > ## Stop Studying Programming
     > - https://www.youtube.com/watch?v=QMbx0dTWJIQ
