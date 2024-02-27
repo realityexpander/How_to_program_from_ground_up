@@ -3,7 +3,7 @@
 ## Programming Paradigms are Just Different Styles to Structure and Organize Software
   - The different paradigms are not better or worse than each other, they are just different styles to structure the
     state and behavior of software to provide a solution.
-  - Paradigms are not independent, Different paradigms can be combined together to create a program that is easier to understand and maintain.
+  - Paradigms are not independent, Different paradigms can be combined to create a program that is easier to understand and maintain.
   - Paradigms are not frozen and are constantly evolving as new ideas are added to the software development
     methods to make creating software easier and more effective.
   - Each paradigm has their own trade-offs and costs that must be considered when
@@ -25,12 +25,18 @@
     > # Stop Studying Programming
     > - https://www.youtube.com/watch?v=QMbx0dTWJIQ
     > 
-    > ### BEWARE THE TUTORIAL TAR-PIT
-    > - Always code-along with the tutorial, and change it afterwards to make sure you understand.
-    > - Learn how to save your projects to github, it's not hard, and you will be able to track your progress.
+    > ### BEWARE THE PROGRAMMING
+    > TUTORIAL TAR-PITS
+    > - Always code-along with the tutorial, and change it afterward to make sure you understand.
+    > - Learn how to save your projects to gitHub, it's not hard, and you will be able to track your progress.
     > - If you just watch, it **_WILL BE_** a **_COMPLETE_** waste of time, even though you _**THINK**_ you understand it.
     > 
     > [<img src="assets/tutorial-tar-pits.png" width="40%">](https://www.youtube.com/watch?v=QMbx0dTWJIQ)
+
+# <font color="red"> QUIT LOOKING FOR SHORT-CUTS </font>
+  - The biggest problem I've seen with people trying to learn programming is that they are looking for a short-cut.
+  - QUIT IT AND GET IN THERE AND START TYPING AND CHANGING CODE.
+  - All developers must pay the same price to learn programming, and that price is time and effort.
 
 ## Programming Will Always Be a Human Activity - AI Cannot Possibly Solve Everything and Requires Human Guidance
   - Solution methods will become a bit more abstract in the future using tools like GitHub copilot, but the
@@ -63,7 +69,7 @@
         AssemblyLanguage{{Assembly Language}} -->|Structured|C
         AssemblyLanguage{{Assembly Language}} -->|List-oriented|Lisp
         
-        COBOL{{"COBOL"}} -.->|"Easy to 
+        COBOL{{"COBOL"}} -.->|"Easy to
                               Learn Syntax
                               ⚡️️"|Basic
         Basic{{"BASIC"}} ---> VisualBasic
