@@ -12,8 +12,9 @@
     structure and organization the program to be easiest to understand and change.
  
 ## You Can Only Learn Programming By Actually Programming
-  - The best way to learn programming is to actually program. You can read all the books and watch all the videos
-    you want, but you will not learn programming until you actually start solving problems.
+  - The best way to learn programming that I've found is to copy physically (actual typing) other programs and change them. 
+  - ### You can read all the books and watch all the videos you want, but you will not learn programming until you actually start solving problems, and seeing how other people solve them is a great start.
+  - ## IT IS **_VERY IMPORTANT_**  THAT YOU TRY TO CHANGE THE CODE AFTER YOU HAVE COPIED IT. _THIS IS CRITICAL._
   - Doing "code katas" and "coding challenges" are a great way to practice programming and learn new programming
     languages and paradigms.
   - But after you know the mechanics, the bigger challenge is to learn how to structure and organize the state and
