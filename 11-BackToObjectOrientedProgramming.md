@@ -294,8 +294,8 @@
     ```
     > Live Code Example: [BOOP example](src/main/kotlin/boopExample.kt)
     
-    > ### BOOP Ktor Back-end code style guide: [Ktor Example](https://github.com/realityexpander/ktor-web-app-server/blob/main/src/main/kotlin/LIBRARY_README.md)
-    > ### BOOP KMP code style guide for cross-platform Kotlin Mobile App "Fred's Roadtrip Storyteller": [KMP Project Example](https://github.com/realityexpander/FredsRoadtripStoryteller/blob/main/raw_assets/CodeStyle.md)
+    > ### BOOP Ktor Back-end code style guide: [Ktor Web Server BOOP Code Style Guide](https://github.com/realityexpander/ktor-web-app-server/blob/main/src/main/kotlin/LIBRARY_README.md)
+    > ### BOOP KMP code style guide for cross-platform Kotlin Mobile App "Fred's Roadtrip Storyteller": [KMP App BOOP Code Style Guide](https://github.com/realityexpander/FredsRoadtripStoryteller/blob/main/raw_assets/CodeStyle.md)
 
 ## More On Software Design <a name="more-on-software-design"></a>
   - Software design is a human activity and reveals the errrors in conceptualizing our representation of the problem.
