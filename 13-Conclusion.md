@@ -19,6 +19,13 @@
 
   - ### A personal story about the Eliza effect is only availble in the video.
 
+    > - What to do about the AI?
+    >   - https://youtu.be/bdTFfkDp9Gc
+    > - Coder Takes - The Truth About Web Dev Jobs vs CS Degrees vs Boot-camps vs Self Taught
+    >   - https://youtu.be/UTehRqykJrw
+    > - Coder Takes - Golden Handcuffs & Side Hustle Dreams 
+    >   - https://youtu.be/9Avfwdk8wfE 
+
 ## You can only learn programming by actually programming
   > Stop Studying Programming
   > - https://www.youtube.com/watch?v=QMbx0dTWJIQ  
