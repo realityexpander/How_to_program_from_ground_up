@@ -15,7 +15,7 @@
     >> - The big idea is “messaging.” 
     >> - The key in making great and growable systems is much more to have things communicate through _messages_ and not through direct mutable state.
     
-  - ### BOOP style takes the "message" metaphor to mean that the state of the program is immutable except by sending messages to an program objects in order to create a new state.
+  - ### BOOP style takes the "message" metaphor to mean that the state of the program is immutable except by sending messages to program objects in order to create a new state.
     - The `object` state can only changed by creating a new state via modifying the old state by calling `public` 
       methods on objects.
     - The state of the `object` is `private` and only accessible via methods that are called on the object.
@@ -45,8 +45,8 @@
       >   - https://www.youtube.com/watch?v=D0dqC_3Bch8
   
   - `protected` methods are allowed, but discouraged as they lead to "fragile" and "rigid" code.
-  - Use of inheritance is explicitly discouraged, and prefer composition over inheritance. Exceptions for shallow
-    hierarchies of 2-3 levels maximum meant to model the real world objects, not to create a "hierarchy of types."
+  - Use of inheritance is explicitly discouraged, and prefer composition over inheritance. 
+    - Exceptions for shallow hierarchies of 2-3 levels maximum meant to model the real world objects, not to create a "hierarchy of types to `extend` functionality."
   - Use of `interface`-s is limited to `class`-es that require individual testing, and are not automatically added for every `class` without thinking.
   - Use of `set`-ters and `get`-ters is specifically disallowed. Instead, the object is expected to respond to messages to change its
     state, and to respond to messages to reveal (transfer) its state.
@@ -71,11 +71,11 @@
    >   - https://www.youtube.com/watch?v=GMrjuuczZkQ
   
  - ### Specific COP-like "Design Patterns" are *NOT* permitted in BOOP, such as:
-   - Factory Pattern
-   - Abstract Factory Pattern
+   - Factory Pattern.
+   - Abstract Factory Pattern.
    - Adapter Pattern is OK in when used as encapsulation, as BOOP prefers composition over inheritance.
    - Facade, Bridge, Proxy and Decorator Patterns are all very similar to the Adapter Pattern and conditionally accepted in BOOP.
-   - Builder Pattern considered too clumsy, the "Fluent" pattern is preferred 
+   - Builder Pattern considered too clumsy, the "Fluent" pattern is preferred: 
      - "Fluent Pattern" is where an `object` is modified and returned to the caller to allow for "method chaining."
      - Builder pattern is discouraged since it encourages us to create and use big, complex objects. 
      - If you need a builder, there is already something wrong in your code. 
