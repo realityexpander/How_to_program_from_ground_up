@@ -3,14 +3,13 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.update
 import kotlin.time.Duration.Companion.milliseconds
 import kotlin.time.ExperimentalTime
-import java.util.concurrent.atomic.AtomicInteger
 
 private const val NUMBER_OF_CYCLES = 100 // may need 200 to guarantee the problem will occur.
 
 fun main() {
 	coroutineWithUpdateProblem()
 
-	fixedCoroutineUpdateProblemWithAtomicUpdates()
+	//fixedCoroutineUpdateProblemWithAtomicUpdates()
 }
 
 @OptIn(DelicateCoroutinesApi::class, ExperimentalTime::class)

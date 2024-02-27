@@ -1,6 +1,3 @@
-import kotlinx.coroutines.DelicateCoroutinesApi
-import kotlin.time.ExperimentalTime
-
 private const val NUMBER_OF_CYCLES = 100
 
 fun main() {
@@ -9,7 +6,6 @@ fun main() {
 	fixedThreadUpdateProblemWithAtomicUpdates()
 }
 
-@OptIn(DelicateCoroutinesApi::class, ExperimentalTime::class)
 fun threadsWithUpdateProblem() {
 	var x = 0
 
