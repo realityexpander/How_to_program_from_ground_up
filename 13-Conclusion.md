@@ -7,7 +7,7 @@
   - Paradigms are not independent, Different paradigms can be combined to create a program that is easier to understand and maintain.
   - Paradigms are not frozen and are constantly evolving as new ideas are added to the software development
     methods to make creating software easier and more effective.
-  - Each paradigm has its own benefits, costs, and costs that must be considered when
+  - Each paradigm has its own benefits, costs, and trade-offs that must be considered when
     choosing which paradigm is appropriate for a particular problem. 
     ### <font style="color: yellow;"> Often, the best solution is the simplest one.</font>
   - Paradigms are not dogma, and should not be followed blindly, but should be used as a guide to help
