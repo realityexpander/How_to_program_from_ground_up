@@ -1,6 +1,6 @@
 // BOOP Programming Example (Back-to Object Oriented Programming, Alan Kay's original vision of OOP)
 
-interface CanView {
+interface CanView {  // <-- This means that any class that implements this interface must have a `view` method.
 	fun view()
 }
 
@@ -126,11 +126,11 @@ fun main() {
 
 	println()  // <-- prints an empty line to separate the two views.
 	app.view()  // <-- will print:
-	//	Application Viewing: UpdatedBookTitle.txt
-   //	Book: UpdatedBookTitle.txt, # of Pages: 3
-   //	Page: Page 1 Content
-   //	Page: Page 3 Content
-   //	Page: New Page 4 Content
+					//	Application Viewing: UpdatedBookTitle.txt
+					//	Book: UpdatedBookTitle.txt, # of Pages: 3
+					//	Page: Page 1 Content
+					//	Page: Page 3 Content
+					//	Page: New Page 4 Content
 }
 
 // Output:
