@@ -11,7 +11,7 @@
   - Paradigms are not dogma, and should not be followed blindly, but should be used as a guide to help
     structure and organization the program to be easiest to understand and change.
  
-## You can only learn programming by actually programming
+## You Can Only Learn Programming By Actually Programming
   - The best way to learn programming is to actually program. You can read all the books and watch all the videos
     you want, but you will not learn programming until you actually start solving problems.
   - Doing "code katas" and "coding challenges" are a great way to practice programming and learn new programming
@@ -21,11 +21,12 @@
   - This is a life-long learning process, and how to arrange ideas and concepts to make them easier to understand
     and change is a skill that takes time and practice to develop, and only comes with experience and some luck.
 
-    > ## Stop Studying Programming
+    > # Stop Studying Programming
     > - https://www.youtube.com/watch?v=QMbx0dTWJIQ
     > 
-    > BEWARE THE TUTORIAL TAR-PIT
+    > ### BEWARE THE TUTORIAL TAR-PIT
     > - Always code-along with the tutorial, and change it afterwards to make sure you understand.
+    > - Learn how to save your projects to github, it's not hard, and you will be able to track your progress.
     > - If you just watch, it **_WILL BE_** a **_COMPLETE_** waste of time, even though you _**THINK**_ you understand it.
     > 
     > [<img src="assets/tutorial-tar-pits.png" width="40%">](https://www.youtube.com/watch?v=QMbx0dTWJIQ)
