@@ -304,6 +304,8 @@
     >   - https://www.youtube.com/watch?v=ARkLVvtxUZI
     > - The Error of Our Ways • Kevlin Henney • GOTO 2016
     >   - https://www.youtube.com/watch?v=IiGXq3yY70o
+    > - CppCon 2019: Kate Gregory “Naming is Hard: Let's Do Better”
+    >   - https://www.youtube.com/watch?v=MBRoCdtZOYg
 
 - [Continue Reading - Parallel Processing](12-ParallelProcessing.md)
 - [Back to Index](README.md)
