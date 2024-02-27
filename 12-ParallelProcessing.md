@@ -22,7 +22,7 @@
      }
      val thread2 = Thread {
         for (i in 1..NUMBER_OF_CYCLES) {
-           x++  x++  // <-- `x++` is not an "atomic" operation, it performs multiple operations to read, calculate, and write `x`.
+           x++  // <-- `x++` is not an "atomic" operation, it performs multiple operations to read, calculate, and write `x`.
            println("Thread 2: i=$i, x=$x")
            Thread.sleep(10) // milliseconds
         }
@@ -126,7 +126,7 @@
         for (i in 1..NUMBER_OF_CYCLES) {
            synchronized(lock) {  // <-- `synchronized` tells the execution to wait here until the lock is released.
               // This block is "locked" so another thread can't update `x` until the current thread is finished.
-              x++ x++  // <-- `x++` is not an "atomic" operation, it performs multiple operations to read, calculate, and write `x`.
+              x++  // <-- `x++` is not an "atomic" operation, it performs multiple operations to read, calculate, and write `x`.
               println("Thread 1: i=$i, x=$x")
            } // <-- The lock is released here at the end of the synchronized block.
               Thread.sleep(10) // milliseconds
@@ -135,7 +135,7 @@
      val thread2 = Thread {
         for (i in 1..NUMBER_OF_CYCLES) {
            synchronized(lock) {
-              x++ x++  // <-- `x++` is not an "atomic" operation, it performs multiple operations to read, calculate, and write `x`.
+              x++  // <-- `x++` is not an "atomic" operation, it performs multiple operations to read, calculate, and write `x`.
               println("Thread 2: i=$i, x=$x")
            }
            Thread.sleep(10) // milliseconds
