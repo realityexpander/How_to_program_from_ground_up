@@ -40,6 +40,8 @@
   - QUIT IT AND GET IN THERE AND START TYPING AND CHANGING CODE.
   - All developers must pay the same price to learn programming, and that price is time and effort.
 
+    [<img src="assets/things-to-know.png" width="40%">](assets/things-to-know.png)
+
 ## Programming Will Always Be a Human Activity - AI Cannot Possibly Solve Everything and Requires Human Guidance
 ###### programming-is-human
   - Solution methods will become a bit more abstract in the future using tools like GitHub copilot, but the
