@@ -219,14 +219,14 @@
        
        val job1 = GlobalScope.launch {  // <-- `job1` is immediately started ("launched") to run in the main thread (GlobalScope).
           for (i in 1..NUMBER_OF_CYCLES) {
-             x++
+             x = x + 1
              println("Coroutine 1: $i, x=$x")
              delay(10.milliseconds)
           }
        }
        val job2 = GlobalScope.launch {  // <-- `job2` is immediately started ("launched") to run in the main thread (GlobalScope).
           for (i in 1..NUMBER_OF_CYCLES) {
-             x++
+             x = x + 1
              println("Coroutine 2: $i, x=$x")
              delay(10.milliseconds)
           }
@@ -278,7 +278,9 @@
            
         val job1 = GlobalScope.launch { // <-- `job1` is immediately started ("launched") to run in the main thread (GlobalScope).
            for (i in 1..NUMBER_OF_CYCLES) {
-              x.update { it + 1 }  // <-- `update` tells the execution to wait here until the updating lock is released, like the `synchronized` block.
+              x.update { x -> // <-- `update` tells the execution to wait here until the updating lock is released, like the `synchronized` block. 
+                 x + 1 
+              }  
               println("Coroutine 1: i=$i, x=${x.value}")
               delay(10.milliseconds)
            }
@@ -286,7 +288,9 @@
            
         val job2 = GlobalScope.launch { // <-- `job2` is immediately started ("launched") to run in the main thread (GlobalScope).
            for (i in 1..NUMBER_OF_CYCLES) {
-              x.update { it + 1 }  // <-- `update` tells the execution to wait here until the updating lock is released, like the `synchronized` block.
+              x.update { x -> // <-- `update` tells the execution to wait here until the updating lock is released, like the `synchronized` block. 
+                 x + 1 
+              }
               println("Coroutine 2: i=$i, x=${x.value}")
               delay(10.milliseconds)
            }
