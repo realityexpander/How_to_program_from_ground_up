@@ -58,6 +58,13 @@
     > - Coder Takes - Golden Handcuffs & Side Hustle Dreams 
     >   - https://youtu.be/9Avfwdk8wfE 
 
+## My Favorite Book on Learning Kotlin
+  - Big Nerds Ranch Guide to Kotlin Programming (2nd Edition) 
+  - https://www.informit.com/store/kotlin-programming-the-big-nerd-ranch-guide-9780136891055
+    
+    [<img src="assets/kotlin-book.png" width="200">](assets/kotlin-book.png)
+
+    >###### [DNOT CICLK TIHS LNIK FOR BOOK](https://libgen.rs/search.php?req=Kotlin+Programming%3A+The+Big+Nerd+Ranch+Guide&open=0&res=25&view=simple&phrase=1&column=def)
 
 ## History Graph of Selected Programming languages Referenced In This Document
 ###### history-graph
