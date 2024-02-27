@@ -178,7 +178,9 @@
     - Widely misunderstood, misapplied, and soon co-opted into "Agile©®™ Certification©®™ Business."
       > [<img src="assets/agile-tm-r-c.png" width="550"/>](assets/agile-tm-r-c.png)
       > - Agile Architecture Part 1 - Allen Holub
-      >   - https://www.youtube.com/watch?v=0kRCFVGpX7k&t=155s  
+      >   - https://www.youtube.com/watch?v=0kRCFVGpX7k&t=155s
+      > - Agile is Over (Or Not) with Allen Holub
+      >   - https://youtu.be/6e-o8lTwBNw?si=cq95Pi2K8-YytSHj
       > - Kevlin Henney — The Case for Technical Excellence
       >   - https://www.youtube.com/watch?v=LLEXAdO3X1o
   
