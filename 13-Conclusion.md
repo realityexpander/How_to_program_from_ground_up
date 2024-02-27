@@ -1,6 +1,6 @@
 # Conclusion
 
-## Paradigms are Just Different Styles to Structure and Organize Software
+## Programming Paradigms are Just Different Styles to Structure and Organize Software
   - The different paradigms are not better or worse than each other, they are just different styles to structure the
     state and behavior of software to provide a solution.
   - Paradigms are not independent, Different paradigms can be combined together to create a program that is easier to understand and maintain.
