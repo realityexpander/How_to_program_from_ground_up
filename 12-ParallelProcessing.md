@@ -109,6 +109,9 @@
 ## Fixing the threads "race condition" problem by using "Atomic" updates (the `synchronized` keyword) <a name="AtomicUpdates"></a>
 ###### atomic-updates
 - ### BIG IDEA - Is there a way to make the updates to `x` "atomic" so that the threads don't update `x` at the same time?-
+  
+  - #### The PV acronym in Dijkstra's Algorithm represents the operations associated with semaphore usage: "P" for acquiring or "waiting" on the semaphore (Produce), and "V" for releasing or "signaling" the semaphore (Consume).
+
   [<img src="assets/race-condition-quote.png" width="500"/>](assets/race-condition-quote.png)
 
   ```Kotlin
