@@ -17,7 +17,7 @@
   - We are always going to need people who have various tastes and understandings about humans and the world to
     create software that is useful and effective FOR THOSE PARTICULAR HUMANS.
 
-  - ### A personal story about the Eliza effect is only availble in the video.
+  - ### A personal story about the Eliza effect is only available in the video.
 
     > - What to do about the AI?
     >   - https://youtu.be/bdTFfkDp9Gc
