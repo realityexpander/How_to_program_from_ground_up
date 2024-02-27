@@ -232,7 +232,7 @@
           }
        }
        
-       runBlocking {
+       runBlocking {  // <-- `runBlocking` tells the main thread to wait here until the coroutines are finished.
           job1.join()  // <-- `join` tells the main thread to wait here until `job1` is finished.
           job2.join()  // <-- `join` tells the main thread to wait here until `job2` is finished.
        }
@@ -296,7 +296,7 @@
            }
         }
            
-        runBlocking {
+        runBlocking {  // <-- `runBlocking` tells the main thread to wait here until the coroutines are finished.
            job1.join()  // <-- `join` tells the main thread to wait here until `job1` is finished.
            job2.join()  // <-- `join` tells the main thread to wait here until `job2` is finished.
         }
