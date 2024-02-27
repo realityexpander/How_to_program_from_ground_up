@@ -27,8 +27,7 @@
     > # Stop Studying Programming
     > - https://www.youtube.com/watch?v=QMbx0dTWJIQ
     > 
-    > ### BEWARE THE PROGRAMMING
-    > TUTORIAL TAR-PITS
+    > ### BEWARE THE PROGRAMMING TUTORIAL TAR-PITS
     > - Always code-along with the tutorial, and change it afterward to make sure you understand.
     > - Learn how to save your projects to gitHub, it's not hard, and you will be able to track your progress.
     > >  ### <span style="color: red; ">If you ONLY just watch, it <span style="font-weight: bold;"> WILL BE A COMPLETE </span> waste of time, even though you _**THINK**_ you understand it. </span>
