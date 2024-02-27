@@ -9,7 +9,7 @@
     methods to make creating software easier and more effective.
   - Each paradigm has its own benefits, costs, and costs that must be considered when
     choosing which paradigm is appropriate for a particular problem. 
-    - ### <font style="color: yellow;"> Often, the best solution is the simplest one.</font>
+    ### <font style="color: yellow;"> Often, the best solution is the simplest one.</font>
   - Paradigms are not dogma, and should not be followed blindly, but should be used as a guide to help
     structure and organization the program to be easiest to understand and change.
  
