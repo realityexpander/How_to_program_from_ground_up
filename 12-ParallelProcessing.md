@@ -7,7 +7,7 @@
 - Threads are relatively resource-heavy, as each thread requires its own "stack" and "heap" to run, and can be
   challenging to manage and debug when there are many threads running at the same time and sharing mutable state.
 
-- Example Threads in Kotlin (has a race condition problem):
+- Example of Threads in Kotlin (NOTE: Has a race condition problem):
   ```Kotlin
   fun main() {
      var x = 0
