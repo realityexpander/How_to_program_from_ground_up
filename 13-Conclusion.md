@@ -25,7 +25,7 @@
     > - https://www.youtube.com/watch?v=QMbx0dTWJIQ
     > 
     > BEWARE THE TUTORIAL TAR-PIT
-    > - Always code-along with the tutorial, and change it afterwards to make sure you understand it.
+    > - Always code-along with the tutorial, and change it afterwards to make sure you understand.
     > - If you just watch, it **_WILL BE_** a **_COMPLETE_** waste of time, even though you _**THINK**_ you understand it.
     > 
     > [<img src="assets/tutorial-tar-pits.png" width="40%">](https://www.youtube.com/watch?v=QMbx0dTWJIQ)
