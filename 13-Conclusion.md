@@ -50,8 +50,6 @@
   - We are always going to need people who have various tastes and understandings about humans and the world to
     create software that is useful and effective FOR THOSE PARTICULAR HUMANS.
 
-  - ### My personal story about the Eliza effect is only available in the video for this section.
-
     > - What to do about the AI?
     >   - https://youtu.be/bdTFfkDp9Gc
     > - Coder Takes - The Truth About Web Dev Jobs vs CS Degrees vs Boot-camps vs Self Taught
