@@ -58,6 +58,7 @@
     >   - https://youtu.be/9Avfwdk8wfE 
 
 ## My Favorite Book on Learning Kotlin
+  - ### <span style="color: green; ">  I prefer learning how to program a new language using a book. It's usually much more thought out than videos. It also forces you to read and write. Physical copies are the preferred mode, as you can write notes on the pages, and you DEFINITELY SHOULD DO THAT. </span>
   - Big Nerds Ranch Guide to Kotlin Programming (2nd Edition) 
   - https://www.informit.com/store/kotlin-programming-the-big-nerd-ranch-guide-9780136891055
     
