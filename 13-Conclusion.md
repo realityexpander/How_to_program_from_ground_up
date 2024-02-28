@@ -15,7 +15,7 @@
  
 ## You Can Only Learn Programming By Actually Programming
 ###### learning_programming
-  - The best way to learn programming that I've found is to copy physically (actual typing) other programs and change them. 
+  - The best way to learn programming that I've found is to physically copy (actual typing) other programs and change them. 
   - ### You can read all the books and watch all the videos you want, but you will not learn programming until you actually start solving problems, and seeing how other people solve them is a great start.
   - ## IT IS **_VERY IMPORTANT_**  THAT YOU TRY TO CHANGE THE CODE AFTER YOU HAVE COPIED IT. _THIS IS CRITICAL._
   - Doing "code katas" and "coding challenges" are a great way to practice programming and learn new programming
@@ -58,7 +58,7 @@
     >   - https://youtu.be/9Avfwdk8wfE 
 
 ## My Favorite Book on Learning Kotlin
-  - ### <span style="color: yellow; ">  I prefer learning how to program a new language using a book. It's usually much more thought out than videos. It also forces you to read and write. Physical copies are the preferred mode, as you can write notes on the pages, and IT IS TOTALLY OK AND RECOMMENDED THAT YOU DO THAT. </span>
+  - ### <span style="color: yellow; ">  I prefer learning how to program a new language using a book. They are usually much more thought out than videos. It also forces you to read and write. Physical copies are the preferred mode, as you can write notes on the pages, and IT IS TOTALLY OK AND RECOMMENDED THAT YOU DO THAT. </span>
   - Big Nerds Ranch Guide to Kotlin Programming (2nd Edition) 
   - https://www.informit.com/store/kotlin-programming-the-big-nerd-ranch-guide-9780136891055
     
