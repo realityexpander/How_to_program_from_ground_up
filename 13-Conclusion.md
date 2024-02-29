@@ -30,7 +30,7 @@
     > 
     > ### BEWARE THE PROGRAMMING TUTORIAL TAR-PITS
     > - Always code-along with the tutorial, and change it afterward to make sure you understand.
-    > - Learn how to save your projects to gitHub, it's not hard, and you will be able to track your progress.
+    > - Learn how to save your projects to GitHub, it's not hard, and you will be able to track your progress.
     > >  ### <span style="color: red; ">If you ONLY just watch, it <span style="font-weight: bold;"> WILL BE A COMPLETE </span> waste of time, even though you _**THINK**_ you understand it. </span>
     > >
     > > [<img src="assets/tutorial-tar-pits.png" width="40%">](https://www.youtube.com/watch?v=QMbx0dTWJIQ)

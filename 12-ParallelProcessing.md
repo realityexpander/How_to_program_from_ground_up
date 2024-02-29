@@ -103,7 +103,8 @@
          Shared variable `x`->>Thread 2: Read `x` (2).
          Thread 2->>Shared variable `x`: Calculate new value & set `x` (3).
          Note right of Shared variable `x`: `x` in this case updated correctly to 3.
-         Note right of Shared variable `x`: It's random and unpredictable when the updates will be correct.
+         Note right of Shared variable `x`: It's random and unpredictable when
+         Note right of Shared variable `x`: the updates will be correct.
 
   ```
 ## Fixing the threads "race condition" problem by using "Atomic" updates (the `synchronized` keyword) <a name="AtomicUpdates"></a>
@@ -193,7 +194,8 @@
           Thread 2->>Shared variable `x`: Calculate new value & set `x` (2).
         end
         Note right of Shared variable `x`: `x` value is set to 2.
-        Note right of Shared variable `x`: `x` value is updated correctly due to "atomic" updates.
+        Note right of Shared variable `x`: `x` value is updated correctly
+        Note right of Shared variable `x`:  due to "atomic" updates.
   
   ```
   

@@ -137,7 +137,7 @@
   
   main()
     
-  // Output:Add 
+  // Output:
   // 24
   // 24
   ```
