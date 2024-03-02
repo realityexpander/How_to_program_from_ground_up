@@ -1,7 +1,7 @@
 # Class Oriented Programming Style (COP) 1970s-Present <a name="class-oriented-programming"></a>
   - ### BIG IDEA — We can simulate real-world objects and their interactions with each other by using "classes" and "objects" in our code.
   
-    > [<img src="assets/bjarne2.png" width="300">](https://en.wikiquote.org/wiki/Bjarne_Stroustrup)
+    > [<img src="assets/bjarne2.png" width="350">](https://en.wikiquote.org/wiki/Bjarne_Stroustrup) _Bjarne, do you eat on that desk where your feet are?_
     > 
     > Bjarne Stroustrup, the creator of C++, said that C++ _**was never meant to be the OOP (Object Oriented Programming)**_ that Alan-Kay was referring to.
     >> Originator of several poorly applied ideas which still haunt and confuse people to this day, but were appropriate for his use-case at the time, and still is for many lower-level of performance-intensive applications.
