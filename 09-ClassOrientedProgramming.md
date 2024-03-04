@@ -497,7 +497,7 @@
 
 ## Inheritance <a name="inheritance"></a>
 ###### inheritance
-  - ### BIG IDEA - Can we create a new class that inherits all the methods and variables of another class and then add new methods or override methods in the subclass?
+  - ### BIG IDEA - Can we create a new class that includes all the methods and variables of another class and then add new methods or override methods in the subclass?
   
   - Inheritance is the idea that a new `class` can copy from another `class` all of its methods and variables,
     and then add new methods or override existing methods in the subclass that can modify the behavior of the
