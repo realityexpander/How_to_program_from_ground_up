@@ -95,7 +95,7 @@
     > - `CLOCK` = Clock Circuit. Sets the coordinating "heartbeat" for the computer. 
     > - `I/O BUS` = Input/Output Bus. The "highway" for data to come into and out of the computer.
 
-  - ### The CPU or MPU (Central-Processing Unit ot Micro-Processor Unit) <a name="the-cpu-mpu"></a>
+  - ### The CPU or MPU (Central-Processing Unit or Micro-Processor Unit) <a name="the-cpu-mpu"></a>
     - ###### the-cpu-mpu
     - The MPU is the part of the computer that executes the instructions in the program.
     - Also called the CPU - Central Processing Unit
