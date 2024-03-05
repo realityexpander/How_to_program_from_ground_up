@@ -7,7 +7,7 @@
   - Based on the idea of "messaging" between objects, VERY poorly named "object oriented programming", admitted 
     by Alan Kay himself, the inventor of the term.
     
-    > [<img src="assets/alan_kay.png" width="320"/>](assets/alan_kay.png)
+    > [<img src="assets/alan_kay.png" width="320"/>](assets/alan_kay.png) _"I'm sorry."—Alan Kay_
     > - Alan Kay at OOPSLA 1997 - The computer revolution hasn't happened yet
     >   - https://www.youtube.com/watch?v=oKg1hTOQXoY
     >> ### Alan Kay:
