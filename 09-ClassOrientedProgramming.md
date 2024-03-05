@@ -981,6 +981,7 @@
 
 ## Allowing for "Multiple Inheritance" in C++ was a mistake, and it was removed from Java, Kotlin and C# for very good reasons. <a name="multiple-inheritance-removed"></a>
 ###### multiple-inheritance-removed
+  - ### BIG IDEA — Multiple Inheritance was promoted as a way to have more complex and flexible use of class hierarchies, but ended up being a source of immense confusion and complexity.
   - Multiple Inheritance is the idea that a class can inherit from more than one class, and then have access to
     all methods and variables of the superclasses.
 
