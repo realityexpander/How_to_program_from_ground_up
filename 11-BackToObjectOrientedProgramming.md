@@ -1,5 +1,5 @@
 # BOOP Style (Back-to Object Oriented Programming) 1980s-Present  <a name="boop"></a>
-  - ## Can we re-visit the original principles of OOP to make software easier to understand and maintain?
+  ## Can we re-visit the original principles of OOP to make software easier to understand and maintain?
   - ### BIG IDEA #1 — The state of the program is immutable and is only changed by creating a totally new state by modifying the old state.
   - ### BIG IDEA #2 - The state of the objects is private and only mutable via methods that are called on the object.  
 
