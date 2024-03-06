@@ -212,7 +212,7 @@
   - Coroutines are built-in to the Kotlin language, and are a first-class citizen. Use of coroutines is built-into
     the standard libraries and leveraged by the language itself. 
     
-  - ### Example Coroutines in Kotlin (has a race condition problem):
+  - ### Example Coroutines in Kotlin <span style="color:red;">(has a race condition problem):</span>
     ```Kotlin
     import kotlinx.coroutines.*  // <-- import the `kotlinx.coroutines` library to use coroutines.
     
