@@ -5,7 +5,7 @@
 
 ## The Wire & the Battery — 1800's to present <a name="the-wire--the-battery"></a>
 ###### the-wire--the-battery
-  - ### BIG IDEA — A wire can be used to represent a logical "state"
+  - ### BIG IDEA — A wire and battery can be used to represent a logical "state"
   
   - Is electricity flowing or not flowing?
   - This is the most basic representation of a state in computing, and the underlying principle of all modern computing.
@@ -22,7 +22,7 @@
 
 ## The Simple Switch & Light Bulb — 1830's to present <a name="the-simple-switch"></a>
 ###### the-simple-switch
-  - ### BIG IDEA — A switch can be used to represent a logic "state".
+  - ### BIG IDEA — Adding a switch can be used to represent a changeable logic "state".
     - This is the most basic representation of a "state" in computing.
     - Easier to manipulate for humans than a bare wire.
   
