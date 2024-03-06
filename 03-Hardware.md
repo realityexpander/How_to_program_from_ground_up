@@ -366,6 +366,7 @@
     >   - https://www.youtube.com/watch?v=-IyB8hBkA9w
 
     > [<img src="assets/4004_simu_part.gif" width="400">](https://pixeljoint.com/pixelart/130104.htm)
+    > ![4004_simu_part](assets/4004_simu_part.gif)
 
   - Each part of the CPU is made of millions of the same kinds of logic gates that we've already discussed.
   - The CPU has a "clock" to synchronize the operations of the CPU.
