@@ -365,6 +365,8 @@
     > - An intuitive approach for understanding the CPU and RAM
     >   - https://www.youtube.com/watch?v=-IyB8hBkA9w
 
+    > [<img src="assets/4004_simu_part.gif" width="400">](https://pixeljoint.com/pixelart/130104.htm)
+
   - Each part of the CPU is made of millions of the same kinds of logic gates that we've already discussed.
   - The CPU has a "clock" to synchronize the operations of the CPU.
   - It also has a "program counter" to keep track of the current instruction in memory that the CPU is executing.
