@@ -174,19 +174,25 @@
        address 0x00000004
        🟩 0x00000000 ➡️ 0x00000004
        "| B["
-         Address 0x00000004 has value 0x2A 
+         Address 0x00000004 has
+         value 0x2A 
          Integer 42 or ASCII “*”
          🟩 ➡️ 42 or *️⃣
        "]
   
     note["`
-      The pointer stored at **0x00000000** has a value _0x00000004_, 
-      so it is pointing to address **0x00000004**.
-    
+      The pointer stored
+      at **0x00000000**
+      has a value _0x00000004_, 
+      so it is pointing to
+      address **0x00000004**.
+      ◇
       Said another way:
-      The pointer at 0x00000000 is pointing to value 0x2A, 
-      which is 42 
-      or the ASCII asterisk character *
+      The pointer at 0x00000000
+      is pointing to value 0x2A, 
+      which is an integer 42 
+      or the ASCII asterisk
+      character *
       🟩 ➡️ 42 or *️⃣
     `"]
     ```
