@@ -228,7 +228,6 @@
         > [<img src="assets/pyramid_of_results.png" width="650"/>](assets/pyramid_of_results.png)
           [<img src="assets/new_compassionate_dev.png" width="650"/>](assets/new_compassionate_dev.png)
           [<img src="assets/motivational_debt.png" width="350"/>](assets/motivational_debt.png)
-          [<img src="assets/break_thrus.png" width="350"/>](assets/break_thrus.png)
           [<img src="assets/computer_speed_miscommunicate.png" width="350"/>](assets/computer_speed_miscommunicate.png)
           [<img src="assets/programs_for_people.png" width="350"/>](assets/programs_for_people.png)
 

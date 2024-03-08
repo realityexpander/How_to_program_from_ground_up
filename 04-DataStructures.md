@@ -97,6 +97,8 @@
     - data structures (records, objects) made up of other types.
       > Animated Interactive Visualizations with pseudocode for many common data structures and associate algorithms
       > - https://www.cs.usfca.edu/~galles/visualization/Algorithms.html
+    
+      > [<img src="assets/break_thrus.png" width="450"/>](assets/break_thrus.png)
 
 ## Array (1D, 2D, 3D, etc.) <a name="array"></a>
 ###### array
