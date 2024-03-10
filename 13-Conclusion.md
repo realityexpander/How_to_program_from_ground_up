@@ -66,6 +66,8 @@
 
     >###### [DONT CICLK TIHS LNIK](https://libgen.rs/search.php?req=Kotlin+Programming%3A+The+Big+Nerd+Ranch+Guide&open=0&res=25&view=simple&phrase=1&column=def)
 
+> # $\textcolor{yellow}{Please\ consider\ giving\ me\ a\ STAR\ as\ THANKS!\ ⭐️ 🤩\}$  
+
 ## History Graph of Selected Programming languages Referenced In This Document
 ###### history-graph
   > Keynote session: The History of Programming - Mark Rendle [DevCon 2016]
