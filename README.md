@@ -16,6 +16,8 @@ current solutions than to understand the mechanical details of how the solution 
 the disadvantages and limitations are often left out technical discussions, or worse, simply not known or dismissed as
 irrelevant due to ignorance.
 
+> ### $\textcolor{yellow}{Please\ consider\ giving\ me\ a\ STAR\ as\ THANKS!\ ⭐️ 🤩\}$  
+
 This document is a reference and follow along guide for my video series on YouTube: 
  - [YouTube Series - How to Program From The Ground Up (with Minimal BS)](https://www.youtube.com/playlist?list=PLzUxWOrVXB4QHsURai1GmmhmqAUVNbfno)
 
