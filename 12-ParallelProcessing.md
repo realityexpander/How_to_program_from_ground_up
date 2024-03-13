@@ -1,6 +1,14 @@
 # Parallel Processing (Concurrent Programming) <a name="ParallelProcessing"></a>
   - ### BIG IDEA - It would be useful if we could do more than one thing at the same time on the same computer.
 
+## Difference between Parallel and Concurrent:
+[<img src="assets/ParallelProgramming/VennDiagramParallelConcurrent.png" width="500"/>](assets/ParallelProgramming/VennDiagramParallelConcurrent.png)
+
+[<img src="assets/ParallelProgramming/2Options.png" width="500"/>](assets/ParallelProgramming/2Options.png)
+
+[<img src="assets/ParallelProgramming/sequential-concurrent-parallel.png" width="500"/>](assets/ParallelProgramming/sequential-concurrent-parallel.png)
+
+
 ## Threads <a name="Threads"></a>
 ###### threads
 - Threads are a way to run multiple "processes" at the same time, and are used to create "parallel" (or "concurrent") programs.
@@ -336,10 +344,6 @@
     time.
     
     > Live Code Example: [Coroutines vs Threads 100,000 tasks time comparison](src/main/kotlin/coroutineVsThreadExample.kt)
-
-## Difference between Parallel and Concurrent
-
-
-
+    
 - [Continue Reading - Conclusion](./13-Conclusion.md)
 - [Back to Index](README.md)
