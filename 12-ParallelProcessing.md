@@ -336,6 +336,10 @@
     time.
     
     > Live Code Example: [Coroutines vs Threads 100,000 tasks time comparison](src/main/kotlin/coroutineVsThreadExample.kt)
-    
+
+## Difference between Parallel and Concurrent
+
+
+
 - [Continue Reading - Conclusion](./13-Conclusion.md)
 - [Back to Index](README.md)
