@@ -93,7 +93,9 @@
     > - `MPU` = Micro-Processor Unit. Where the execution of programs occurs.
     > - `XTAL` = Crystal Oscillator for the clock. 
     > - `CLOCK` = Clock Circuit. Sets the coordinating "heartbeat" for the computer. 
-    > - `I/O BUS` = Input/Output Bus. The "highway" for data to come into and out of the computer.
+    > - `Data Bus` = Input/Output Bus. The "highway" for data to come into and out of the MPU/CPU.
+    > - `Address Bus` = Controls which memory address is being accessed.
+    > - `Control Bus/Lines` = Various controls for different parts of the computer.
 
   - ### The CPU or MPU (Central-Processing Unit or Micro-Processor Unit) <a name="the-cpu-mpu"></a>
     - ###### the-cpu-mpu
