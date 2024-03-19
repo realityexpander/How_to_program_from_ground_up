@@ -291,6 +291,10 @@
     > - Close up of silicon wafer wired to package
     > 
     >   [<img src="assets/chip-wired-to-package.png" width="400">](https://en.wikipedia.org/wiki/Robert_Noyce)
+    >
+    > - Single Transistor under an electron microscope
+    > 
+    >   [<img src="assets/transistor-electron-microscope.png" width="400">]()
     > 
     > - Inverter Gate and NAND gate under 50x microscope
     > 
