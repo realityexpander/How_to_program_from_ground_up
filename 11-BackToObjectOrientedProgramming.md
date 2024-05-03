@@ -204,7 +204,7 @@
                                    // state is immutable.
     
        app.view()  // <-- will print:
-                   // Application Viewing: MyBook.txtimp
+                   // Application Viewing: MyBook.txt
                    // Book: MyBook.txt, # of Pages: 3
                    // Page: Page 1 Content
                    // Page: Page 2 Content
