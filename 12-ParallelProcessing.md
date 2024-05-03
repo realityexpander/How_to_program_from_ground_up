@@ -138,7 +138,7 @@
               x++  // <-- `x++` is not an "atomic" operation, it performs multiple operations to read, calculate, and write `x`.
               println("Thread 1: i=$i, x=$x")
            } // <-- The lock is released here at the end of the synchronized block.
-              Thread.sleep(10) // milliseconds
+           Thread.sleep(10) // milliseconds
         }
      }
      val thread2 = Thread {
