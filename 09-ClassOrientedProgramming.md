@@ -357,7 +357,7 @@
     - ###### problems-arising-from-abusing-static
     - Using `static` breaks the encapsulation of the object and leads to Procedural style programming because it
       allows the data to be accessed and manipulated directly without the creating an object of the `class`.
-    - Misuse of `static` keyword often lead to "collections of `static` methods" that simply extended the procedural 
+    - Misuse of `static` keyword often lead to "collections of `static` methods" that simply continued the procedural 
       paradigm, except the code blocks now had a name (the name of the `class`) and were grouped together instead of 
       being globally accessible.
     - The `static` methods are passed in the data as parameters and returned the result, just like the procedural paradigm.
