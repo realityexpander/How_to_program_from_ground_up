@@ -126,9 +126,9 @@ Check out the discussion group: https://twitter.com/i/communities/17597538662190
 - [Parallel Processing (also called "Concurrent" Programming)](12-ParallelProcessing.md) 1960s-Present
   - Can we make our programs run faster by doing more than one thing at a time?  
   - [Threads](12-ParallelProcessing.md#threads)
-  - [Race Condition Diagram](12-ParallelProcessing.md#race-condition-diagram)
+  - [Race Condition - Diagram](12-ParallelProcessing.md#race-condition-diagram)
   - [Fixing the threads "race condition" problem using "Atomic" updates](12-ParallelProcessing.md#atomic-updates)
-  - [Fixing the Race Condition Diagram](12-ParallelProcessing.md#atomic-updates-diagram)
+  - [Fixing the Race Condition - Diagram](12-ParallelProcessing.md#atomic-updates-diagram)
   - [Coroutines](12-ParallelProcessing.md#coroutines)
   - [Fixing the Coroutine race condition problem using "Atomic" updates](12-ParallelProcessing.md#fixing-updates-with-coroutines)
   - [Coroutines are Much Faster Than Threads](12-ParallelProcessing.md#coroutines-vs-threads)
