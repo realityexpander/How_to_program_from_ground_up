@@ -168,10 +168,10 @@
 ##### c-to-assembly-language
 - C was meant to be a "high-level portable shorthand" for Assembly Language, which was a high-level shorthand for Machine Language.
 - All of high-level languages are eventually compiled into machine language by a compiler program.
-  > Comparing C to machine language - Ben Eater
-  > - https://www.youtube.com/watch?v=yOyaJXpAYZQ
-  > How computer processors run conditions and loops
-  > - https://www.youtube.com/watch?v=Ui6QyzcD3_E
+  > - Comparing C to machine language - Ben Eater
+  >   - https://www.youtube.com/watch?v=yOyaJXpAYZQ
+  > - How computer processors run conditions and loops
+  >   - https://www.youtube.com/watch?v=Ui6QyzcD3_E
   
 
 ### Bonus: History of Procedural to Structured Programming <a name="procedural-to-structured"></a>
