@@ -64,7 +64,7 @@
     
     [<img src="assets/kotlin-book.png" width="200">](assets/kotlin-book.png)
 
-    >###### [DONT CICLK TIHS LNIK](https://libgen.rs/search.php?req=Kotlin+Programming%3A+The+Big+Nerd+Ranch+Guide&open=0&res=25&view=simple&phrase=1&column=def)
+    >###### [DONT CICLK TIHS LNIK](https://libgen.is/book/index.php?md5=EACC909D4C5A81DAD454C283064E1034)
 
 > # $\textcolor{yellow}{Please\ consider\ giving\ me\ a\ STAR\ as\ THANKS!\ ⭐️ 🤩\}$  
 
