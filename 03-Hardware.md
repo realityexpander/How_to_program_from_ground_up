@@ -370,6 +370,8 @@
     >   - https://www.youtube.com/watch?v=cNN_tTXABUA
     > - An intuitive approach for understanding the CPU and RAM
     >   - https://www.youtube.com/watch?v=-IyB8hBkA9w
+    > - Watch electricity hit a fork in the road at half a billion frames per second
+    >   - https://www.youtube.com/watch?v=2AXv49dDQJw  
 
     > [<img src="assets/4004_simu_part.gif" width="400">](https://pixeljoint.com/pixelart/130104.htm)
 
